@@ -3,38 +3,43 @@
 #include <thread>
 #include "db.hpp"
 
-void hammerDB(CoarseGrainedDB *db, int nthreads, int nkeys) {
-  std::thread threads[nthreads];
+using namespace std;
 
+ void log(std::string msg) {
+  cout << msg << endl;
+}
+
+void hammerDB(DB *db, int nthreads, int nkeys) {
+  thread threads[nthreads];
   
-  
-  std::cout << "Starting Benchmark!" << std::endl;
-  auto start_time = std::chrono::high_resolution_clock::now();
+  cout << "Starting Benchmark!" << endl;
+  auto start_time = chrono::high_resolution_clock::now();
 
   for (int i = 0; i < nthreads; ++i) {
-    threads[i] = std::thread([=]() {
-	std::string thread_name = "foo";
+    threads[i] = thread([=]() {
 	for (int times = 0; times < nkeys; ++times) {
-	  db->put("foo", thread_name);
+	  db->put(to_string(i), to_string(times));
 	}
     });
   }
-  
+
   for (int i = 0; i < nthreads; ++i) {
     threads[i].join();
   }
-  auto end_time = std::chrono::high_resolution_clock::now();
-
   
-  std::cout << "Finishing Benchmark!" << std::endl;
-  std::cout << "Total Duration: " << std::chrono::duration_cast<std::chrono::microseconds>(end_time - start_time).count() << " us" << std::endl;
+  auto end_time = chrono::high_resolution_clock::now();
+
+  auto timeMicros = chrono::duration_cast<chrono::microseconds>(end_time - start_time).count();
+
+  cout << "Finishing Benchmark!" << endl;
+  cout << "Total Duration: " << timeMicros << " us" << endl;
   
 }
 
 int main(void) {
-  CoarseGrainedDB *db = new CoarseGrainedDB;
-  hammerDB(db, 100, 100000);
-  std::cout << db->get(std::string("foo")) <<  std::endl;
+  DB *db = new CoarseGrainedDB;
+  hammerDB(db, 20, 1000);
+  cout << db->get(string("foo")) <<  endl;
   return 0;
 }
 
