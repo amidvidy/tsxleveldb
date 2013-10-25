@@ -13,3 +13,11 @@ void CoarseGrainedDB::put(std::string key, std::string value) {
   storage[key] = value;
   mutex.unlock();
 }
+
+std::size_t CoarseGrainedDB::size() {
+  size_t size;
+  mutex.lock();
+  size = storage.size();
+  mutex.unlock();
+  return size;
+}
