@@ -44,11 +44,11 @@ void hammerDB(DB *db, int nthreads, int nkeys) {
 
   string DELIM = "\t";
   
-  cout << "thread_id" << DELIM << "start_time" << DELIM << "end_time" << DELIM << "duration" << endl;
+  cout << "thread_id" << DELIM << "start_time(us)" << DELIM << "end_time(us)" << DELIM << "duration(ms)" << endl;
 
   for (int i = 0; i < nthreads; ++i) {
 
-    auto duration = chrono::duration_cast<chrono::microseconds>(tends[i] - tstarts[i]).count();
+    auto duration = chrono::duration_cast<chrono::milliseconds>(tends[i] - tstarts[i]).count();
     auto tstart = chrono::duration_cast<chrono::microseconds>(tstarts[i] - start_time).count();
     auto tend = chrono::duration_cast<chrono::microseconds>(tends[i] - start_time).count();
 
@@ -68,7 +68,7 @@ void dbStats(DB *db) {
 
 int main(void) {
   DB *db = new CoarseGrainedDB;
-  hammerDB(db, 10, 100000);
+  hammerDB(db, 8, 100000);
   dbStats(db);
   return 0;
 }
