@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <thread>
+#include <iomanip>
 #include <ctime>
 #include "db.hpp"
 
@@ -18,7 +19,8 @@ void hammerDB(DB *db, int nthreads, int nkeys) {
   timer::time_point tstarts[nthreads];
   timer::time_point tends[nthreads];
   
-  cout << "Starting Benchmark!" << endl;
+  log("Starting Benchmark!");
+
   timer::time_point start_time = timer::now();
 
   for (int thread_id = 0; thread_id < nthreads; ++thread_id) {
@@ -39,37 +41,50 @@ void hammerDB(DB *db, int nthreads, int nkeys) {
 
   auto timeMicros = chrono::duration_cast<chrono::microseconds>(end_time - start_time).count();
   
-  cout << "Finishing Benchmark!" << endl;
-  cout << "Total Duration: " << timeMicros << " us" << endl;
+  log("Finishing Benchmark!");
+  log(string("Total Duration: ")+to_string(timeMicros)+string(" us"));
 
-  string DELIM = "\t";
+  auto DELIM = setw(20);
   
-  cout << "thread_id" << DELIM << "start_time(us)" << DELIM << "end_time(us)" << DELIM << "duration(ms)" << endl;
+  cout << "tid" << DELIM;
+  cout << "start time(us)" << DELIM;
+  cout << "end time(us)" << DELIM;
+  cout << "duration(ms)" << DELIM;
+  cout << "avg per write(us)" << endl;
 
   for (int i = 0; i < nthreads; ++i) {
 
     auto duration = chrono::duration_cast<chrono::milliseconds>(tends[i] - tstarts[i]).count();
     auto tstart = chrono::duration_cast<chrono::microseconds>(tstarts[i] - start_time).count();
     auto tend = chrono::duration_cast<chrono::microseconds>(tends[i] - start_time).count();
+    auto avg = chrono::duration_cast<chrono::microseconds>(tends[i] - tstarts[i]).count() / nkeys;
 
-    cout << i << DELIM << DELIM;
-    cout << tstart << DELIM << DELIM;
-    cout << tend << DELIM << DELIM;
-    cout << duration << endl;
+    cout << i << DELIM;
+
+    cout << tstart << DELIM;
+    cout << tend << DELIM;
+    cout << duration << DELIM;
+    cout << avg << endl;
   }
 }
 
 void timeStats(timer::time_point *start_times, timer::time_point *end_times, int nthreads) {
 }
 
-void dbStats(DB *db) {
+void dbStats(DB *db, int nthreads) {
   cout << "DB size = " << db->size() << endl;
+  // TODO refactor
+  CoarseGrainedDB *db2 = static_cast<CoarseGrainedDB*>(db);
+  long waitTime = db2->waitTime();
+  cout << "Time spent waiting to acquire lock (total) = " << waitTime << " us" << endl;
+  cout << "Waiting time per thread = " << waitTime / nthreads << " us" << endl;
 }
 
 int main(void) {
   DB *db = new CoarseGrainedDB;
-  hammerDB(db, 8, 100000);
-  dbStats(db);
+  int nthreads = 8;
+  hammerDB(db, nthreads, 100000);
+  dbStats(db, nthreads);
   return 0;
 }
 

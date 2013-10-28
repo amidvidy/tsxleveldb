@@ -1,23 +1,37 @@
 #include <iostream>
+#include <chrono>
 #include "db.hpp"
 
 std::string CoarseGrainedDB::get(std::string key) {
-  mutex.lock();
+  this->lock();
   std::string value = storage[key];
-  mutex.unlock();
+  this->unlock();
   return value;
 }
 
 void CoarseGrainedDB::put(std::string key, std::string value) {
-  mutex.lock();
+  this->lock();
   storage[key] = value;
-  mutex.unlock();
+  this->unlock();
 }
 
 std::size_t CoarseGrainedDB::size() {
   size_t size;
-  mutex.lock();
+  this->lock();
   size = storage.size();
-  mutex.unlock();
+  this->unlock();
   return size;
 }
+
+void CoarseGrainedDB::lock() {
+  auto start = std::chrono::high_resolution_clock::now();
+  mutex.lock();
+  _waitTime += std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::high_resolution_clock::now() - start);
+}
+
+void CoarseGrainedDB::unlock() {
+  mutex.unlock();
+}
+
+
+
