@@ -25,6 +25,7 @@ std::size_t CoarseGrainedDB::size() {
 
 void CoarseGrainedDB::lock() {
   auto start = std::chrono::high_resolution_clock::now();
+  ++_nextTxId;
   mutex.lock();
   _waitTime += std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::high_resolution_clock::now() - start);
 }

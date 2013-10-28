@@ -26,9 +26,11 @@ public:
   void put(std::string key, std::string value) override;
   std::size_t size() override;
   long waitTime() { return _waitTime.count(); };
+  long getLockCount() { return _nextTxId - 1L; } 
 private:
   void lock();
   void unlock();
+  std::atomic<long> _nextTxId = 0;
   std::mutex mutex;
   std::chrono::microseconds _waitTime = 
     std::chrono::microseconds(0);
