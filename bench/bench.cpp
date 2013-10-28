@@ -27,7 +27,8 @@ void hammerDB(DB *db, int nthreads, int nkeys) {
     threads[thread_id] = thread([thread_id, nkeys, &tstarts, &tends, db]() {
 	tstarts[thread_id] = timer::now();
 	for (int times = 0; times < nkeys; ++times) {
-	  db->put(to_string(thread_id + times), to_string(thread_id));
+	  string gets = (times > 0) ? db->get(to_string(thread_id + times)) : to_string(thread_id);
+	  db->put(to_string(thread_id + times), to_string(thread_id) + gets);
 	}
         tends[thread_id] = timer::now();
     });
@@ -76,14 +77,17 @@ void dbStats(DB *db, int nthreads) {
   // TODO refactor
   CoarseGrainedDB *db2 = static_cast<CoarseGrainedDB*>(db);
   long waitTime = db2->waitTime();
+  long lockCount = db2->getLockCount();
   cout << "Time spent waiting to acquire lock (total) = " << waitTime << " us" << endl;
+  cout << "Total lock acquisitions = " << lockCount << endl;
+  cout << "Time spnt waiting to acquire lock (average) = " << waitTime / (double)lockCount << " us" << endl;
   cout << "Waiting time per thread = " << waitTime / nthreads << " us" << endl;
 }
 
 int main(void) {
   DB *db = new CoarseGrainedDB;
   int nthreads = 8;
-  hammerDB(db, nthreads, 100000);
+  hammerDB(db, nthreads, 10000);
   dbStats(db, nthreads);
   return 0;
 }
