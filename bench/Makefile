@@ -10,7 +10,7 @@ db.o: db.cpp db.hpp
 	$(CC) $(CFLAGS) -c db.cpp 
 
 bench: bench.o db.o
-	$(CC) bench.o db.o -o bench -lpthread
+	$(CC) bench.o db.o -o bench -lpthread -ltbb
 
 run: bench
 	./bench
