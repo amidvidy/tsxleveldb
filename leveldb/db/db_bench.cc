@@ -17,6 +17,7 @@
 #include "util/mutexlock.h"
 #include "util/random.h"
 #include "util/testutil.h"
+#include <pthread.h>
 
 // Comma-separated list of operations to run in the specified order
 //   Actual benchmarks:
@@ -35,6 +36,8 @@
 //      seekrandom    -- N random seeks
 //      crc32c        -- repeated crc32c of 4K of data
 //      acquireload   -- load N*1000 times
+//      asyncwrites   -- measure latency (multiple concurrent async writes)
+//      syncwrites    -- measure latency (multiple concurrent sync writes)
 //   Meta operations:
 //      compact     -- Compact the entire DB
 //      stats       -- Print DB stats
@@ -58,6 +61,8 @@ static const char* FLAGS_benchmarks =
     "snappycomp,"
     "snappyuncomp,"
     "acquireload,"
+    //"asyncwrites,"
+    "syncwrites,"
     ;
 
 // Number of key/values to place in database
@@ -503,6 +508,12 @@ class Benchmark {
         PrintStats("leveldb.stats");
       } else if (name == Slice("sstables")) {
         PrintStats("leveldb.sstables");
+      } else if (name == Slice("asyncwrites")) {
+        fresh_db = true;
+        method = &Benchmark::MeasureAsyncWrites;
+      } else if (name == Slice("syncwrites")) {
+        fresh_db = true;
+        method = &Benchmark::MeasureSyncWrites;
       } else {
         if (name != Slice()) {  // No error message for empty name
           fprintf(stderr, "unknown benchmark '%s'\n", name.ToString().c_str());
@@ -704,6 +715,57 @@ class Benchmark {
 
   void WriteSeq(ThreadState* thread) {
     DoWrite(thread, true);
+  }
+
+  void MeasureAsyncWrites(ThreadState* thread) {
+    // All contents of the database are stored in a filesystem directory
+    leveldb::DB* db;
+    leveldb::Options options;
+    options.create_if_missing = true;
+    leveldb::Status status = leveldb::DB::Open(options, "/tmp/testdb", &db);
+
+    // Set number of concurrent threads
+    FLAGS_threads = 20;
+    int nkeys = 100;
+
+    std::string key1 = "key";
+    std::string value1 = "value";
+
+    Status s;
+    // Write multiple times to the database
+    for (int i = 0; i < nkeys; ++i) {
+      s = db->Put(leveldb::WriteOptions(), key1, value1);
+    }
+
+    // Close the database
+    delete db;
+  }
+
+  void MeasureSyncWrites(ThreadState* thread) {
+    // All contents of the database are stored in a filesystem directory
+    leveldb::DB* db;
+    leveldb::Options options;
+    options.create_if_missing = true;
+    leveldb::Status status = leveldb::DB::Open(options, "/tmp/testdb", &db);
+
+    // Set number of concurrent threads
+    FLAGS_threads = 20;
+    int nkeys = 100;
+
+    std::string key1 = "key";
+    std::string value1 = "value";
+
+    Status s;
+    // Write multiple times to the database
+    for (int i = 0; i < nkeys; ++i) {
+      leveldb::WriteOptions write_options;
+    write_options.sync = true;
+
+      s = db->Put(write_options, key1, value1);
+    }
+
+    // Close the database
+    delete db;
   }
 
   void WriteRandom(ThreadState* thread) {
