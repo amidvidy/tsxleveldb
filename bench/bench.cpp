@@ -27,7 +27,7 @@ void hammerDB(DB *db, int nthreads, int nkeys) {
     threads[thread_id] = thread([thread_id, nkeys, &tstarts, &tends, db]() {
 	tstarts[thread_id] = timer::now();
 	for (int times = 0; times < nkeys; ++times) {
-	  string gets = (times > 0) ? db->get(to_string(thread_id + times)) : to_string(thread_id);
+	  string gets =  db->get(to_string(thread_id + times));
 	  db->put(to_string(thread_id + times), to_string(thread_id) + gets);
 	}
         tends[thread_id] = timer::now();
