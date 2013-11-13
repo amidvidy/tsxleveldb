@@ -34,5 +34,25 @@ void CoarseGrainedDB::unlock() {
   mutex.unlock();
 }
 
+std::string FineGrainedDB::get(std::string key) {
+  tbbmap::const_accessor a;
+  bool success = storage.find(a, key);
+  if (storage.find(a, key)) {
+    return a->second;
+  } else {
+    return std::string("");
+  }
+}
+
+void FineGrainedDB::put(std::string key, std::string value) {
+  tbbmap::accessor a;
+  
+  storage.insert(a, key);
+  a->second = value;
+}
+
+size_t FineGrainedDB::size() {
+  return storage.size();
+}
 
 

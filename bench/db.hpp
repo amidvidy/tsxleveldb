@@ -11,15 +11,7 @@ public:
   virtual std::string get(std::string key) = 0;
   virtual void put(std::string key, std::string value) = 0;
   virtual std::size_t size() = 0;
-/*
-TODO: figure out lock_ref as well as how to make an enum of lock types
-protected:
-  virtual lock_ref lock(std::string key) = 0;
-  virtual lock_ref lockr(std::string low, std::string high) = 0;
-  */
 };
-
-
 
 class CoarseGrainedDB : public DB {
 public:
@@ -56,15 +48,16 @@ class StringHash {
   }
 };
 
-typedef tbb::concurrent_hash_map<std::string, std::string, StringHash> TBBMap;
+typedef tbb::concurrent_hash_map<std::string, std::string, StringHash> tbbmap;
 
 class FineGrainedDB : public DB {
 public:
   FineGrainedDB() = default;
   std::string get(std::string key) override;
   void put(std::string key, std::string value) override;
+  std::size_t size() override;
 private:
-  TBBMap storage;
+  tbbmap storage;
 };
 
 class LockElidedDB : public DB {
