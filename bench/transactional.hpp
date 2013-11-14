@@ -1,10 +1,12 @@
-#include <mutex>
+#include "tbb/spin_rw_mutex.h"
+
+typedef tbb::spin_rw_mutex_v3 spinlock_t;
 
 class TransactionalScope {
 public:
-  TransactionalScope(std::mutex *fallback);
+  TransactionalScope(spinlock_t *fallback);
   ~TransactionalScope();
 private:
-  std::mutex *mutex;
+  spinlock_t *spinlock;
   int lockstate;
 };

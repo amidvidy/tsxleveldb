@@ -1,7 +1,8 @@
 #include <emmintrin.h>
-
 #include "concurrent_counter.hpp"
 #include "transactional.hpp"
+
+namespace counter {
 
 void IncorrectConcurrentCounter::increment(std::size_t index) {
   int current = storage[index];
@@ -13,8 +14,8 @@ int IncorrectConcurrentCounter::get(std::size_t index) {
 }
 
 ConcurrentCounter::ConcurrentCounter(std::size_t size) {
-  // parens ensure array elements are initialized to 0
   sz = size;
+  // parens ensure array elements are initialized to 0
   storage = new int[size]();
 }
 
@@ -35,46 +36,46 @@ int ConcurrentCounter::total() {
 }
 
 void CoarseConcurrentCounter::increment(std::size_t index) {
-  std::lock_guard<std::mutex> lock(mutex);
+  std::lock_guard<spinlock_t> lock(spinlock);
   int current = storage[index];
   storage[index] = current + 1;
 }
 
 int CoarseConcurrentCounter::get(std::size_t index) {
-  std::lock_guard<std::mutex> lock(mutex);
+  std::lock_guard<spinlock_t> lock(spinlock);
   return storage[index];
 }
 
 void FineConcurrentCounter::increment(std::size_t index) {
-  std::lock_guard<std::mutex> lock(mutices[index]);
+  std::lock_guard<spinlock_t> lock(spinlocks[index]);
   int current = storage[index];
   storage[index] = current + 1;
 }
 
 int FineConcurrentCounter::get(std::size_t index) {
-  std::lock_guard<std::mutex> lock(mutices[index]);
+  std::lock_guard<spinlock_t> lock(spinlocks[index]);
   return storage[index];
 }
 
 void RTMCoarseConcurrentCounter::increment(std::size_t index) {
-  TransactionalScope xact(&mutex);
+  TransactionalScope xact(&spinlock);
   int current = storage[index];
   storage[index] = current + 1;
 }
 
 int RTMCoarseConcurrentCounter::get(std::size_t index) {
-  TransactionalScope xact(&mutex);
+  TransactionalScope xact(&spinlock);
   return storage[index];
 }
 
 void RTMFineConcurrentCounter::increment(std::size_t index) {
-  TransactionalScope xact(&mutices[index]);
+  TransactionalScope xact(&spinlocks[index]);
   int current = storage[index];
   storage[index] = current + 1;
 }
 
 int RTMFineConcurrentCounter::get(std::size_t index) {
-  TransactionalScope xact(&mutices[index]);
+  TransactionalScope xact(&spinlocks[index]);
   return storage[index];
 }
 
@@ -93,4 +94,4 @@ int RTMConcurrentCounter::get(std::size_t index) {
   return ret;
 }
 
-
+} // namespace counter {

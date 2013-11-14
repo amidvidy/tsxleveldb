@@ -8,7 +8,7 @@
 
 typedef std::chrono::high_resolution_clock timer;
 
-long hammerArray(ConcurrentCounter *arr, int nthreads, int nwrites) {
+long hammerArray(counter::ConcurrentCounter *arr, int nthreads, int nwrites) {
   std::thread threads[nthreads];
 
   timer::time_point start_time = timer::now();
@@ -43,13 +43,13 @@ int main(void) {
   int nthreads = 8, nwrites = 1000000;
 
   // Initialize all impls for testing
-  std::map<std::string, ConcurrentCounter*> impls;
-  impls[std::string("incorrect")] = new IncorrectConcurrentCounter(num_elements);
-  impls[std::string("coarse")] = new CoarseConcurrentCounter(num_elements);
-  impls[std::string("fine")] = new CoarseConcurrentCounter(num_elements);
+  std::map<std::string, counter::ConcurrentCounter*> impls;
+  impls[std::string("nosync")] = new counter::IncorrectConcurrentCounter(num_elements);
+  impls[std::string("coarse")] = new counter::CoarseConcurrentCounter(num_elements);
+  impls[std::string("fine")] = new counter::CoarseConcurrentCounter(num_elements);
   //impls[std::string("rtm_coarse")] = new RTMCoarseConcurrentCounter(num_elements);
   //impls[std::string("rtm_fine")] = new RTMFineConcurrentCounter(num_elements);
-  impls[std::string("rtm")] = new RTMConcurrentCounter(num_elements);
+  impls[std::string("rtm")] = new counter::RTMConcurrentCounter(num_elements);
 
   // run benchmarks on each array and print output
   for (auto& impl : impls) {

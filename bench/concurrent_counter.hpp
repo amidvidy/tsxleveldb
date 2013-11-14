@@ -1,5 +1,10 @@
 #include <array>
 #include <mutex>
+#include "tbb/spin_rw_mutex.h"
+
+namespace counter {
+
+typedef tbb::spin_rw_mutex_v3 spinlock_t;
 
 class ConcurrentCounter {
 public:
@@ -27,21 +32,22 @@ public:
   void increment(std::size_t index) override;
   int get(std::size_t index) override;
 protected:
-  std::mutex mutex;
+  spinlock_t spinlock;
 };
 
 class FineConcurrentCounter : public ConcurrentCounter {
 public:
   FineConcurrentCounter(std::size_t size) : ConcurrentCounter(size) {
-    mutices = new std::mutex[size];
+    spinlocks = new spinlock_t[size];
   }
   ~FineConcurrentCounter() {
-    delete mutices;
+    delete spinlocks;
   }
   void increment(std::size_t index) override;
   int get(std::size_t index) override;
 protected:
-  std::mutex *mutices;
+  //std::mutex *mutices;
+  spinlock_t *spinlocks;
 };
 
 class RTMCoarseConcurrentCounter : public CoarseConcurrentCounter {
@@ -64,3 +70,5 @@ public:
   void increment(std::size_t index) override;
   int get(std::size_t index) override;
 };
+
+} // namespace counter

@@ -1,21 +1,27 @@
 #include "transactional.hpp"
 #include <iostream>
 #include <emmintrin.h>
+#include "tbb/spin_rw_mutex.h"
 
-TransactionalScope::TransactionalScope(std::mutex *fallback) {
-  mutex = fallback;
+
+// todo refactor into types header
+typedef tbb::spin_rw_mutex_v3 spinlock_t;
+
+TransactionalScope::TransactionalScope(spinlock_t *fallback_mutex) {
   unsigned int xact_status;
   
+  spinlock = fallback_mutex;
+  
   if (xact_status = _xbegin()) {
-    if (mutex->try_lock()) {
+    if (spinlock->try_lock()) {
       // terrible, terrible hack
-      mutex->unlock();
+      spinlock->unlock();
       return;
     } else {
       _xabort(1);
     }
   } else { 
-    mutex->lock();
+    spinlock->lock();
   }
 }
 
@@ -23,6 +29,6 @@ TransactionalScope::~TransactionalScope() {
   if (_xtest()) {
     _xend();
   } else {
-    mutex->unlock();
+    spinlock->unlock();
   }
 }

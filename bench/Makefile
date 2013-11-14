@@ -4,7 +4,7 @@ CFLAGS=-Wall -std=c++11 -g -O2
 all: bench
 
 concurrent_counter.o: concurrent_counter.cpp
-	$(CC) $(CFLAGS) -c concurrent_counter.cpp
+	$(CC) $(CFLAGS) -c concurrent_counter.cpp -ltbb
 
 transactional.o: transactional.cpp
 	$(CC) $(CFLAGS) -c transactional.cpp
