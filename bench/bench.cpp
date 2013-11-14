@@ -39,16 +39,17 @@ long hammerArray(ConcurrentCounter *arr, int nthreads, int nwrites) {
 }
 
 int main(void) {
-  std::size_t num_elements = 100;
-  int nthreads = 30, nwrites = 1000000;
+  std::size_t num_elements = 10000;
+  int nthreads = 8, nwrites = 1000000;
 
   // Initialize all impls for testing
   std::map<std::string, ConcurrentCounter*> impls;
   impls[std::string("incorrect")] = new IncorrectConcurrentCounter(num_elements);
   impls[std::string("coarse")] = new CoarseConcurrentCounter(num_elements);
   impls[std::string("fine")] = new CoarseConcurrentCounter(num_elements);
-  impls[std::string("rtm_coarse")] = new RTMCoarseConcurrentCounter(num_elements);
-  impls[std::string("rtm_fine")] = new RTMFineConcurrentCounter(num_elements);
+  //impls[std::string("rtm_coarse")] = new RTMCoarseConcurrentCounter(num_elements);
+  //impls[std::string("rtm_fine")] = new RTMFineConcurrentCounter(num_elements);
+  impls[std::string("rtm")] = new RTMConcurrentCounter(num_elements);
 
   // run benchmarks on each array and print output
   for (auto& impl : impls) {

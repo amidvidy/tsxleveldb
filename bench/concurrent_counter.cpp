@@ -1,3 +1,5 @@
+#include <emmintrin.h>
+
 #include "concurrent_counter.hpp"
 #include "transactional.hpp"
 
@@ -75,3 +77,20 @@ int RTMFineConcurrentCounter::get(std::size_t index) {
   TransactionalScope xact(&mutices[index]);
   return storage[index];
 }
+
+void RTMConcurrentCounter::increment(std::size_t index) {
+  while (_xbegin() != -1) ;
+  int current = storage[index];
+  storage[index] = current + 1;
+  _xend();
+}
+
+int RTMConcurrentCounter::get(std::size_t index) {
+  int ret = -1;
+  while (_xbegin() != -1) ;
+  ret = storage[index];
+  _xend();
+  return ret;
+}
+
+

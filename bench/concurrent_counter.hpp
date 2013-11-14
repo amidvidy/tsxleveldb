@@ -57,3 +57,10 @@ public:
   void increment(std::size_t index) override;
   int get(std::size_t index) override;
 };
+
+class RTMConcurrentCounter : public ConcurrentCounter {
+public:
+  RTMConcurrentCounter(std::size_t size) : ConcurrentCounter(size) {}
+  void increment(std::size_t index) override;
+  int get(std::size_t index) override;
+};
