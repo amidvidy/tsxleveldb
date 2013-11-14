@@ -47,6 +47,8 @@ int main(void) {
   impls[std::string("incorrect")] = new IncorrectConcurrentCounter(num_elements);
   impls[std::string("coarse")] = new CoarseConcurrentCounter(num_elements);
   impls[std::string("fine")] = new CoarseConcurrentCounter(num_elements);
+  impls[std::string("rtm_coarse")] = new RTMCoarseConcurrentCounter(num_elements);
+  impls[std::string("rtm_fine")] = new RTMFineConcurrentCounter(num_elements);
 
   // run benchmarks on each array and print output
   for (auto& impl : impls) {

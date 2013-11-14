@@ -26,7 +26,7 @@ public:
   CoarseConcurrentCounter(std::size_t size) : ConcurrentCounter(size) {}
   void increment(std::size_t index) override;
   int get(std::size_t index) override;
-private:
+protected:
   std::mutex mutex;
 };
 
@@ -40,6 +40,20 @@ public:
   }
   void increment(std::size_t index) override;
   int get(std::size_t index) override;
-private:
+protected:
   std::mutex *mutices;
+};
+
+class RTMCoarseConcurrentCounter : public CoarseConcurrentCounter {
+public:
+  RTMCoarseConcurrentCounter(std::size_t size) : CoarseConcurrentCounter(size) {}
+  void increment(std::size_t index) override;
+  int get(std::size_t index) override;
+};
+
+class RTMFineConcurrentCounter : public FineConcurrentCounter {
+public:
+  RTMFineConcurrentCounter(std::size_t size) : FineConcurrentCounter(size) {}
+  void increment(std::size_t index) override;
+  int get(std::size_t index) override;
 };

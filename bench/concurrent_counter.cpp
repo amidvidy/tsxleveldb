@@ -1,4 +1,5 @@
 #include "concurrent_counter.hpp"
+#include "transactional.hpp"
 
 void IncorrectConcurrentCounter::increment(std::size_t index) {
   int current = storage[index];
@@ -50,5 +51,27 @@ void FineConcurrentCounter::increment(std::size_t index) {
 
 int FineConcurrentCounter::get(std::size_t index) {
   std::lock_guard<std::mutex> lock(mutices[index]);
+  return storage[index];
+}
+
+void RTMCoarseConcurrentCounter::increment(std::size_t index) {
+  TransactionalScope xact(&mutex);
+  int current = storage[index];
+  storage[index] = current + 1;
+}
+
+int RTMCoarseConcurrentCounter::get(std::size_t index) {
+  TransactionalScope xact(&mutex);
+  return storage[index];
+}
+
+void RTMFineConcurrentCounter::increment(std::size_t index) {
+  TransactionalScope xact(&mutices[index]);
+  int current = storage[index];
+  storage[index] = current + 1;
+}
+
+int RTMFineConcurrentCounter::get(std::size_t index) {
+  TransactionalScope xact(&mutices[index]);
   return storage[index];
 }

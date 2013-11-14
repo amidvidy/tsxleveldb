@@ -12,11 +12,8 @@ transactional.o: transactional.cpp
 bench.o: bench.cpp 
 	$(CC) $(CFLAGS) -c bench.cpp
 
-db.o: db.cpp db.hpp
-	$(CC) $(CFLAGS) -c db.cpp 
-
-bench: bench.o db.o transactional.o concurrent_counter.o
-	$(CC) bench.o db.o transactional.o concurrent_counter.o -o bench -lpthread -ltbb
+bench: bench.o transactional.o concurrent_counter.o
+	$(CC) bench.o transactional.o concurrent_counter.o -o bench -lpthread -ltbb
 
 run: bench
 	./bench
