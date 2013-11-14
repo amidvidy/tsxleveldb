@@ -39,7 +39,7 @@ long hammerArray(counter::ConcurrentCounter *arr, int nthreads, int nwrites) {
 }
 
 int main(void) {
-  std::size_t num_elements = 10000;
+  std::size_t num_elements = 1000;
   int nthreads = 8, nwrites = 1000000;
 
   // Initialize all impls for testing
@@ -58,12 +58,12 @@ int main(void) {
     int total_expected = nthreads * nwrites;
 
     // i should really be using the std::chrono time conversions but this code is low priority
-    auto avg = run_time / total_recorded;
+    auto avg = run_time / (double)total_recorded;
 
     int missing = total_recorded - total_expected;
     std::cout << "Implementation: " << impl.first << std::endl;
-    std::cout << "Elapsed Time (ms): " << run_time * 0.001d << std::endl;
-    std::cout << "Avg (us): " << avg << std::endl;
+    std::cout << "Elapsed Time (ms): " << (double)run_time * 0.001 << std::endl;
+    std::cout << "Avg (ns): " << avg * 1000 << std::endl;
     std::cout << "Total = " << total_recorded << "\tExpected = " << total_expected << std::endl;
     std::cout << ((total_recorded == total_expected) ? 
 		  "All writes were recorded." : 
