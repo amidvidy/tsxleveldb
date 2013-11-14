@@ -47,8 +47,8 @@ int main(void) {
   impls[std::string("nosync")] = new counter::IncorrectConcurrentCounter(num_elements);
   impls[std::string("coarse")] = new counter::CoarseConcurrentCounter(num_elements);
   impls[std::string("fine")] = new counter::CoarseConcurrentCounter(num_elements);
-  //impls[std::string("rtm_coarse")] = new counter::RTMCoarseConcurrentCounter(num_elements);
-  //impls[std::string("rtm_fine")] = new counter::RTMFineConcurrentCounter(num_elements);
+  impls[std::string("rtm_coarse")] = new counter::RTMCoarseConcurrentCounter(num_elements);
+  impls[std::string("rtm_fine")] = new counter::RTMFineConcurrentCounter(num_elements);
   impls[std::string("rtm")] = new counter::RTMConcurrentCounter(num_elements);
 
   // run benchmarks on each array and print output
