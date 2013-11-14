@@ -56,15 +56,21 @@ int main(void) {
     auto run_time = hammerArray(impl.second, nthreads, nwrites);
     int total_recorded = impl.second->total();
     int total_expected = nthreads * nwrites;
-    std::cout << "Implementation: " << impl.first << std::endl;
-    std::cout << "Elapsed Time (micros): " << run_time << std::endl;
-    std::cout << "Total = " << total_recorded << "\tExpected = " << total_expected << std::endl;
-    if (total_recorded == total_expected) {
-      std::cout << "All Writes Recorded" << std::endl;
-    } else {
-      std::cout << "Missing Writes!" << std::endl;
-    }
 
+    // i should really be using the std::chrono time conversions but this code is low priority
+    auto avg = run_time / total_recorded;
+
+    int missing = total_recorded - total_expected;
+    std::cout << "Implementation: " << impl.first << std::endl;
+    std::cout << "Elapsed Time (ms): " << run_time * 0.001d << std::endl;
+    std::cout << "Avg (us): " << avg << std::endl;
+    std::cout << "Total = " << total_recorded << "\tExpected = " << total_expected << std::endl;
+    std::cout << ((total_recorded == total_expected) ? 
+		  "All writes were recorded." : 
+                     ((missing<0) ?
+		      (std::string("There were ") + std::to_string(-missing) + std::string(" missing writes!")) :
+		      (std::string("There were ") + std::to_string(missing) + std::string(" writes that should NOT have occured. This should never happen.")))) << std::endl;
   }
+
 
 }
