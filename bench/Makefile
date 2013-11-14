@@ -1,5 +1,5 @@
 CC=icc
-CFLAGS=-Wall -std=c++11 -g -O2
+CFLAGS=-Wall -std=c++11 -g
 
 all: bench
 

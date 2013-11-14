@@ -80,7 +80,9 @@ int RTMFineConcurrentCounter::get(std::size_t index) {
 }
 
 void RTMConcurrentCounter::increment(std::size_t index) {
-  while (_xbegin() != -1) ;
+  do { 
+    _xbegin();
+  } while (!_xtest());
   int current = storage[index];
   storage[index] = current + 1;
   _xend();
@@ -88,7 +90,9 @@ void RTMConcurrentCounter::increment(std::size_t index) {
 
 int RTMConcurrentCounter::get(std::size_t index) {
   int ret = -1;
-  while (_xbegin() != -1) ;
+  do {
+    _xbegin();
+  } while (!_xtest());
   ret = storage[index];
   _xend();
   return ret;
