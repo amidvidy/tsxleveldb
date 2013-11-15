@@ -1,0 +1,91 @@
+\hypertarget{classleveldb_1_1_filter_policy}{\section{leveldb\-:\-:Filter\-Policy Class Reference}
+\label{classleveldb_1_1_filter_policy}\index{leveldb\-::\-Filter\-Policy@{leveldb\-::\-Filter\-Policy}}
+}
+
+
+{\ttfamily \#include $<$filter\-\_\-policy.\-h$>$}
+
+
+
+Inheritance diagram for leveldb\-:\-:Filter\-Policy\-:
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classleveldb_1_1_filter_policy_a4134b35d7dd640c7c6f182bf7305f158}{$\sim$\-Filter\-Policy} ()
+\item 
+virtual const char $\ast$ \hyperlink{classleveldb_1_1_filter_policy_afd5e951892a2e740f186c0658913ea1b}{Name} () const =0
+\item 
+virtual void \hyperlink{classleveldb_1_1_filter_policy_a355e9797e16dd16b93d19056781126b2}{Create\-Filter} (const \hyperlink{classleveldb_1_1_slice}{Slice} $\ast$keys, int n, std\-::string $\ast$dst) const =0
+\item 
+virtual bool \hyperlink{classleveldb_1_1_filter_policy_a6f8ba10ea25e0b4b8d0a6607c361c718}{Key\-May\-Match} (const \hyperlink{classleveldb_1_1_slice}{Slice} \&key, const \hyperlink{classleveldb_1_1_slice}{Slice} \&filter) const =0
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classleveldb_1_1_filter_policy_a4134b35d7dd640c7c6f182bf7305f158}{\index{leveldb\-::\-Filter\-Policy@{leveldb\-::\-Filter\-Policy}!$\sim$\-Filter\-Policy@{$\sim$\-Filter\-Policy}}
+\index{$\sim$\-Filter\-Policy@{$\sim$\-Filter\-Policy}!leveldb::FilterPolicy@{leveldb\-::\-Filter\-Policy}}
+\subsubsection[{$\sim$\-Filter\-Policy}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::\-Filter\-Policy\-::$\sim$\-Filter\-Policy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classleveldb_1_1_filter_policy_a4134b35d7dd640c7c6f182bf7305f158}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classleveldb_1_1_filter_policy_a355e9797e16dd16b93d19056781126b2}{\index{leveldb\-::\-Filter\-Policy@{leveldb\-::\-Filter\-Policy}!Create\-Filter@{Create\-Filter}}
+\index{Create\-Filter@{Create\-Filter}!leveldb::FilterPolicy@{leveldb\-::\-Filter\-Policy}}
+\subsubsection[{Create\-Filter}]{\setlength{\rightskip}{0pt plus 5cm}virtual void leveldb\-::\-Filter\-Policy\-::\-Create\-Filter (
+\begin{DoxyParamCaption}
+\item[{const {\bf Slice} $\ast$}]{keys, }
+\item[{int}]{n, }
+\item[{std\-::string $\ast$}]{dst}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classleveldb_1_1_filter_policy_a355e9797e16dd16b93d19056781126b2}
+
+
+Implemented in \hyperlink{classleveldb_1_1_internal_filter_policy_a1c7c7b7eecdfb872e35708793d82ab40}{leveldb\-::\-Internal\-Filter\-Policy}, \hyperlink{structleveldb__filterpolicy__t_a8b5b77b6a8d1c526905c7eb57d78558b}{leveldb\-\_\-filterpolicy\-\_\-t}, and \hyperlink{classleveldb_1_1_test_hash_filter_ad6d9fc5e8008a1a2bd3d22d21cef6645}{leveldb\-::\-Test\-Hash\-Filter}.
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_filter_policy_a6f8ba10ea25e0b4b8d0a6607c361c718}{\index{leveldb\-::\-Filter\-Policy@{leveldb\-::\-Filter\-Policy}!Key\-May\-Match@{Key\-May\-Match}}
+\index{Key\-May\-Match@{Key\-May\-Match}!leveldb::FilterPolicy@{leveldb\-::\-Filter\-Policy}}
+\subsubsection[{Key\-May\-Match}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool leveldb\-::\-Filter\-Policy\-::\-Key\-May\-Match (
+\begin{DoxyParamCaption}
+\item[{const {\bf Slice} \&}]{key, }
+\item[{const {\bf Slice} \&}]{filter}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classleveldb_1_1_filter_policy_a6f8ba10ea25e0b4b8d0a6607c361c718}
+
+
+Implemented in \hyperlink{classleveldb_1_1_internal_filter_policy_a42dc5124aa139c68bec2efa7417a7373}{leveldb\-::\-Internal\-Filter\-Policy}, \hyperlink{structleveldb__filterpolicy__t_aa3006a26cac563bb5115d27d83b6865f}{leveldb\-\_\-filterpolicy\-\_\-t}, and \hyperlink{classleveldb_1_1_test_hash_filter_ace8fcf2f1ac682fb958ddd38c53efe08}{leveldb\-::\-Test\-Hash\-Filter}.
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_filter_policy_afd5e951892a2e740f186c0658913ea1b}{\index{leveldb\-::\-Filter\-Policy@{leveldb\-::\-Filter\-Policy}!Name@{Name}}
+\index{Name@{Name}!leveldb::FilterPolicy@{leveldb\-::\-Filter\-Policy}}
+\subsubsection[{Name}]{\setlength{\rightskip}{0pt plus 5cm}virtual const char$\ast$ leveldb\-::\-Filter\-Policy\-::\-Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classleveldb_1_1_filter_policy_afd5e951892a2e740f186c0658913ea1b}
+
+
+Implemented in \hyperlink{classleveldb_1_1_internal_filter_policy_ab7f6002d74ba6a2838e1fc826e2095fc}{leveldb\-::\-Internal\-Filter\-Policy}, \hyperlink{structleveldb__filterpolicy__t_a2d2e4bed02de91075ce921005c851a3e}{leveldb\-\_\-filterpolicy\-\_\-t}, and \hyperlink{classleveldb_1_1_test_hash_filter_a07700084322049647b7c788aa53d8269}{leveldb\-::\-Test\-Hash\-Filter}.
+
+
+
+Here is the caller graph for this function\-:
+
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/leveldb/\hyperlink{filter__policy_8h}{filter\-\_\-policy.\-h}\item 
+util/\hyperlink{filter__policy_8cc}{filter\-\_\-policy.\-cc}\end{DoxyCompactItemize}

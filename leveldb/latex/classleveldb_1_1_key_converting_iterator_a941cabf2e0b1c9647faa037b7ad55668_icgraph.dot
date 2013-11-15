@@ -1,0 +1,9 @@
+digraph "leveldb::KeyConvertingIterator::Valid"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="leveldb::KeyConvertingIterator\l::Valid",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="leveldb::KeyConvertingIterator::key",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_key_converting_iterator.html#a46402aaa27d57c5b2bee4f560c2dc04b"];
+}

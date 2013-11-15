@@ -1,0 +1,137 @@
+\hypertarget{db__bench__tree__db_8cc}{\section{doc/bench/db\-\_\-bench\-\_\-tree\-\_\-db.cc File Reference}
+\label{db__bench__tree__db_8cc}\index{doc/bench/db\-\_\-bench\-\_\-tree\-\_\-db.\-cc@{doc/bench/db\-\_\-bench\-\_\-tree\-\_\-db.\-cc}}
+}
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include $<$kcpolydb.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}util/histogram.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}util/random.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}util/testutil.\-h\char`\"{}}\\*
+Include dependency graph for db\-\_\-bench\-\_\-tree\-\_\-db.\-cc\-:
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classleveldb_1_1_benchmark}{leveldb\-::\-Benchmark}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespaceleveldb}{leveldb}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{db__bench__tree__db_8cc_a25749057fc0632ab67dd97cd3315a892}{D\-B\-Synchronize} (kyotocabinet\-::\-Tree\-D\-B $\ast$\hyperlink{db__iter_8cc_a800a4b7944923551d5251c8a5ab7e12d}{db\-\_\-})
+\item 
+int \hyperlink{db__bench__tree__db_8cc_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static const char $\ast$ \hyperlink{db__bench__tree__db_8cc_a3550bf7381fc474fbe3eb4f125f6b21e}{F\-L\-A\-G\-S\-\_\-benchmarks}
+\item 
+static int \hyperlink{db__bench__tree__db_8cc_ad2595e4eeeb1fd3e6701d620b24acc28}{F\-L\-A\-G\-S\-\_\-num} = 1000000
+\item 
+static int \hyperlink{db__bench__tree__db_8cc_a94a7f17f843ac974030ac98221dd4386}{F\-L\-A\-G\-S\-\_\-reads} = -\/1
+\item 
+static int \hyperlink{db__bench__tree__db_8cc_a1c81a5b326761a915415d2f5f9051391}{F\-L\-A\-G\-S\-\_\-value\-\_\-size} = 100
+\item 
+static double \hyperlink{db__bench__tree__db_8cc_a8b27739d3dc2cd27e1f2f3fc36a65d5d}{F\-L\-A\-G\-S\-\_\-compression\-\_\-ratio} = 0.\-5
+\item 
+static bool \hyperlink{db__bench__tree__db_8cc_a7acbc6eedc4082fdceba621e526cd118}{F\-L\-A\-G\-S\-\_\-histogram} = false
+\item 
+static int \hyperlink{db__bench__tree__db_8cc_a55ea4cf9c4cbf7d51487c585348943f2}{F\-L\-A\-G\-S\-\_\-cache\-\_\-size} = 4194304
+\item 
+static int \hyperlink{db__bench__tree__db_8cc_a503db8cb34136af1ca2d698484bbe916}{F\-L\-A\-G\-S\-\_\-page\-\_\-size} = 1024
+\item 
+static bool \hyperlink{db__bench__tree__db_8cc_aca4621a83def233825c050b2facad546}{F\-L\-A\-G\-S\-\_\-use\-\_\-existing\-\_\-db} = false
+\item 
+static bool \hyperlink{db__bench__tree__db_8cc_a9ffa70c4039a0f7bfb1618f661ed5685}{F\-L\-A\-G\-S\-\_\-compression} = true
+\item 
+static const char $\ast$ \hyperlink{db__bench__tree__db_8cc_a21c1d10f038cee434b8e0f8d0e78932a}{F\-L\-A\-G\-S\-\_\-db} = N\-U\-L\-L
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{db__bench__tree__db_8cc_a25749057fc0632ab67dd97cd3315a892}{\index{db\-\_\-bench\-\_\-tree\-\_\-db.\-cc@{db\-\_\-bench\-\_\-tree\-\_\-db.\-cc}!D\-B\-Synchronize@{D\-B\-Synchronize}}
+\index{D\-B\-Synchronize@{D\-B\-Synchronize}!db_bench_tree_db.cc@{db\-\_\-bench\-\_\-tree\-\_\-db.\-cc}}
+\subsubsection[{D\-B\-Synchronize}]{\setlength{\rightskip}{0pt plus 5cm}static void D\-B\-Synchronize (
+\begin{DoxyParamCaption}
+\item[{kyotocabinet\-::\-Tree\-D\-B $\ast$}]{db\-\_\-}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{db__bench__tree__db_8cc_a25749057fc0632ab67dd97cd3315a892}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{db__bench__tree__db_8cc_a3c04138a5bfe5d72780bb7e82a18e627}{\index{db\-\_\-bench\-\_\-tree\-\_\-db.\-cc@{db\-\_\-bench\-\_\-tree\-\_\-db.\-cc}!main@{main}}
+\index{main@{main}!db_bench_tree_db.cc@{db\-\_\-bench\-\_\-tree\-\_\-db.\-cc}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}}\label{db__bench__tree__db_8cc_a3c04138a5bfe5d72780bb7e82a18e627}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{db__bench__tree__db_8cc_ad89985b46f05e1611048282ca9abac3d}{\index{db\-\_\-bench\-\_\-tree\-\_\-db.\-cc@{db\-\_\-bench\-\_\-tree\-\_\-db.\-cc}!data\-\_\-@{data\-\_\-}}
+\index{data\-\_\-@{data\-\_\-}!db_bench_tree_db.cc@{db\-\_\-bench\-\_\-tree\-\_\-db.\-cc}}
+\subsubsection[{data\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string data\-\_\-}}\label{db__bench__tree__db_8cc_ad89985b46f05e1611048282ca9abac3d}
+\hypertarget{db__bench__tree__db_8cc_a3550bf7381fc474fbe3eb4f125f6b21e}{\index{db\-\_\-bench\-\_\-tree\-\_\-db.\-cc@{db\-\_\-bench\-\_\-tree\-\_\-db.\-cc}!F\-L\-A\-G\-S\-\_\-benchmarks@{F\-L\-A\-G\-S\-\_\-benchmarks}}
+\index{F\-L\-A\-G\-S\-\_\-benchmarks@{F\-L\-A\-G\-S\-\_\-benchmarks}!db_bench_tree_db.cc@{db\-\_\-bench\-\_\-tree\-\_\-db.\-cc}}
+\subsubsection[{F\-L\-A\-G\-S\-\_\-benchmarks}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ F\-L\-A\-G\-S\-\_\-benchmarks\hspace{0.3cm}{\ttfamily [static]}}}\label{db__bench__tree__db_8cc_a3550bf7381fc474fbe3eb4f125f6b21e}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+=
+    \textcolor{stringliteral}{"fillseq,"}
+    \textcolor{stringliteral}{"fillseqsync,"}
+    \textcolor{stringliteral}{"fillrandsync,"}
+    \textcolor{stringliteral}{"fillrandom,"}
+    \textcolor{stringliteral}{"overwrite,"}
+    \textcolor{stringliteral}{"readrandom,"}
+    \textcolor{stringliteral}{"readseq,"}
+    \textcolor{stringliteral}{"fillrand100K,"}
+    \textcolor{stringliteral}{"fillseq100K,"}
+    \textcolor{stringliteral}{"readseq100K,"}
+    \textcolor{stringliteral}{"readrand100K,"}
+\end{DoxyCode}
+\hypertarget{db__bench__tree__db_8cc_a55ea4cf9c4cbf7d51487c585348943f2}{\index{db\-\_\-bench\-\_\-tree\-\_\-db.\-cc@{db\-\_\-bench\-\_\-tree\-\_\-db.\-cc}!F\-L\-A\-G\-S\-\_\-cache\-\_\-size@{F\-L\-A\-G\-S\-\_\-cache\-\_\-size}}
+\index{F\-L\-A\-G\-S\-\_\-cache\-\_\-size@{F\-L\-A\-G\-S\-\_\-cache\-\_\-size}!db_bench_tree_db.cc@{db\-\_\-bench\-\_\-tree\-\_\-db.\-cc}}
+\subsubsection[{F\-L\-A\-G\-S\-\_\-cache\-\_\-size}]{\setlength{\rightskip}{0pt plus 5cm}int F\-L\-A\-G\-S\-\_\-cache\-\_\-size = 4194304\hspace{0.3cm}{\ttfamily [static]}}}\label{db__bench__tree__db_8cc_a55ea4cf9c4cbf7d51487c585348943f2}
+\hypertarget{db__bench__tree__db_8cc_a9ffa70c4039a0f7bfb1618f661ed5685}{\index{db\-\_\-bench\-\_\-tree\-\_\-db.\-cc@{db\-\_\-bench\-\_\-tree\-\_\-db.\-cc}!F\-L\-A\-G\-S\-\_\-compression@{F\-L\-A\-G\-S\-\_\-compression}}
+\index{F\-L\-A\-G\-S\-\_\-compression@{F\-L\-A\-G\-S\-\_\-compression}!db_bench_tree_db.cc@{db\-\_\-bench\-\_\-tree\-\_\-db.\-cc}}
+\subsubsection[{F\-L\-A\-G\-S\-\_\-compression}]{\setlength{\rightskip}{0pt plus 5cm}bool F\-L\-A\-G\-S\-\_\-compression = true\hspace{0.3cm}{\ttfamily [static]}}}\label{db__bench__tree__db_8cc_a9ffa70c4039a0f7bfb1618f661ed5685}
+\hypertarget{db__bench__tree__db_8cc_a8b27739d3dc2cd27e1f2f3fc36a65d5d}{\index{db\-\_\-bench\-\_\-tree\-\_\-db.\-cc@{db\-\_\-bench\-\_\-tree\-\_\-db.\-cc}!F\-L\-A\-G\-S\-\_\-compression\-\_\-ratio@{F\-L\-A\-G\-S\-\_\-compression\-\_\-ratio}}
+\index{F\-L\-A\-G\-S\-\_\-compression\-\_\-ratio@{F\-L\-A\-G\-S\-\_\-compression\-\_\-ratio}!db_bench_tree_db.cc@{db\-\_\-bench\-\_\-tree\-\_\-db.\-cc}}
+\subsubsection[{F\-L\-A\-G\-S\-\_\-compression\-\_\-ratio}]{\setlength{\rightskip}{0pt plus 5cm}double F\-L\-A\-G\-S\-\_\-compression\-\_\-ratio = 0.\-5\hspace{0.3cm}{\ttfamily [static]}}}\label{db__bench__tree__db_8cc_a8b27739d3dc2cd27e1f2f3fc36a65d5d}
+\hypertarget{db__bench__tree__db_8cc_a21c1d10f038cee434b8e0f8d0e78932a}{\index{db\-\_\-bench\-\_\-tree\-\_\-db.\-cc@{db\-\_\-bench\-\_\-tree\-\_\-db.\-cc}!F\-L\-A\-G\-S\-\_\-db@{F\-L\-A\-G\-S\-\_\-db}}
+\index{F\-L\-A\-G\-S\-\_\-db@{F\-L\-A\-G\-S\-\_\-db}!db_bench_tree_db.cc@{db\-\_\-bench\-\_\-tree\-\_\-db.\-cc}}
+\subsubsection[{F\-L\-A\-G\-S\-\_\-db}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ F\-L\-A\-G\-S\-\_\-db = N\-U\-L\-L\hspace{0.3cm}{\ttfamily [static]}}}\label{db__bench__tree__db_8cc_a21c1d10f038cee434b8e0f8d0e78932a}
+\hypertarget{db__bench__tree__db_8cc_a7acbc6eedc4082fdceba621e526cd118}{\index{db\-\_\-bench\-\_\-tree\-\_\-db.\-cc@{db\-\_\-bench\-\_\-tree\-\_\-db.\-cc}!F\-L\-A\-G\-S\-\_\-histogram@{F\-L\-A\-G\-S\-\_\-histogram}}
+\index{F\-L\-A\-G\-S\-\_\-histogram@{F\-L\-A\-G\-S\-\_\-histogram}!db_bench_tree_db.cc@{db\-\_\-bench\-\_\-tree\-\_\-db.\-cc}}
+\subsubsection[{F\-L\-A\-G\-S\-\_\-histogram}]{\setlength{\rightskip}{0pt plus 5cm}bool F\-L\-A\-G\-S\-\_\-histogram = false\hspace{0.3cm}{\ttfamily [static]}}}\label{db__bench__tree__db_8cc_a7acbc6eedc4082fdceba621e526cd118}
+\hypertarget{db__bench__tree__db_8cc_ad2595e4eeeb1fd3e6701d620b24acc28}{\index{db\-\_\-bench\-\_\-tree\-\_\-db.\-cc@{db\-\_\-bench\-\_\-tree\-\_\-db.\-cc}!F\-L\-A\-G\-S\-\_\-num@{F\-L\-A\-G\-S\-\_\-num}}
+\index{F\-L\-A\-G\-S\-\_\-num@{F\-L\-A\-G\-S\-\_\-num}!db_bench_tree_db.cc@{db\-\_\-bench\-\_\-tree\-\_\-db.\-cc}}
+\subsubsection[{F\-L\-A\-G\-S\-\_\-num}]{\setlength{\rightskip}{0pt plus 5cm}int F\-L\-A\-G\-S\-\_\-num = 1000000\hspace{0.3cm}{\ttfamily [static]}}}\label{db__bench__tree__db_8cc_ad2595e4eeeb1fd3e6701d620b24acc28}
+\hypertarget{db__bench__tree__db_8cc_a503db8cb34136af1ca2d698484bbe916}{\index{db\-\_\-bench\-\_\-tree\-\_\-db.\-cc@{db\-\_\-bench\-\_\-tree\-\_\-db.\-cc}!F\-L\-A\-G\-S\-\_\-page\-\_\-size@{F\-L\-A\-G\-S\-\_\-page\-\_\-size}}
+\index{F\-L\-A\-G\-S\-\_\-page\-\_\-size@{F\-L\-A\-G\-S\-\_\-page\-\_\-size}!db_bench_tree_db.cc@{db\-\_\-bench\-\_\-tree\-\_\-db.\-cc}}
+\subsubsection[{F\-L\-A\-G\-S\-\_\-page\-\_\-size}]{\setlength{\rightskip}{0pt plus 5cm}int F\-L\-A\-G\-S\-\_\-page\-\_\-size = 1024\hspace{0.3cm}{\ttfamily [static]}}}\label{db__bench__tree__db_8cc_a503db8cb34136af1ca2d698484bbe916}
+\hypertarget{db__bench__tree__db_8cc_a94a7f17f843ac974030ac98221dd4386}{\index{db\-\_\-bench\-\_\-tree\-\_\-db.\-cc@{db\-\_\-bench\-\_\-tree\-\_\-db.\-cc}!F\-L\-A\-G\-S\-\_\-reads@{F\-L\-A\-G\-S\-\_\-reads}}
+\index{F\-L\-A\-G\-S\-\_\-reads@{F\-L\-A\-G\-S\-\_\-reads}!db_bench_tree_db.cc@{db\-\_\-bench\-\_\-tree\-\_\-db.\-cc}}
+\subsubsection[{F\-L\-A\-G\-S\-\_\-reads}]{\setlength{\rightskip}{0pt plus 5cm}int F\-L\-A\-G\-S\-\_\-reads = -\/1\hspace{0.3cm}{\ttfamily [static]}}}\label{db__bench__tree__db_8cc_a94a7f17f843ac974030ac98221dd4386}
+\hypertarget{db__bench__tree__db_8cc_aca4621a83def233825c050b2facad546}{\index{db\-\_\-bench\-\_\-tree\-\_\-db.\-cc@{db\-\_\-bench\-\_\-tree\-\_\-db.\-cc}!F\-L\-A\-G\-S\-\_\-use\-\_\-existing\-\_\-db@{F\-L\-A\-G\-S\-\_\-use\-\_\-existing\-\_\-db}}
+\index{F\-L\-A\-G\-S\-\_\-use\-\_\-existing\-\_\-db@{F\-L\-A\-G\-S\-\_\-use\-\_\-existing\-\_\-db}!db_bench_tree_db.cc@{db\-\_\-bench\-\_\-tree\-\_\-db.\-cc}}
+\subsubsection[{F\-L\-A\-G\-S\-\_\-use\-\_\-existing\-\_\-db}]{\setlength{\rightskip}{0pt plus 5cm}bool F\-L\-A\-G\-S\-\_\-use\-\_\-existing\-\_\-db = false\hspace{0.3cm}{\ttfamily [static]}}}\label{db__bench__tree__db_8cc_aca4621a83def233825c050b2facad546}
+\hypertarget{db__bench__tree__db_8cc_a1c81a5b326761a915415d2f5f9051391}{\index{db\-\_\-bench\-\_\-tree\-\_\-db.\-cc@{db\-\_\-bench\-\_\-tree\-\_\-db.\-cc}!F\-L\-A\-G\-S\-\_\-value\-\_\-size@{F\-L\-A\-G\-S\-\_\-value\-\_\-size}}
+\index{F\-L\-A\-G\-S\-\_\-value\-\_\-size@{F\-L\-A\-G\-S\-\_\-value\-\_\-size}!db_bench_tree_db.cc@{db\-\_\-bench\-\_\-tree\-\_\-db.\-cc}}
+\subsubsection[{F\-L\-A\-G\-S\-\_\-value\-\_\-size}]{\setlength{\rightskip}{0pt plus 5cm}int F\-L\-A\-G\-S\-\_\-value\-\_\-size = 100\hspace{0.3cm}{\ttfamily [static]}}}\label{db__bench__tree__db_8cc_a1c81a5b326761a915415d2f5f9051391}
+\hypertarget{db__bench__tree__db_8cc_a74404be11bd9401ffe90696e5baa8d0a}{\index{db\-\_\-bench\-\_\-tree\-\_\-db.\-cc@{db\-\_\-bench\-\_\-tree\-\_\-db.\-cc}!pos\-\_\-@{pos\-\_\-}}
+\index{pos\-\_\-@{pos\-\_\-}!db_bench_tree_db.cc@{db\-\_\-bench\-\_\-tree\-\_\-db.\-cc}}
+\subsubsection[{pos\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int pos\-\_\-}}\label{db__bench__tree__db_8cc_a74404be11bd9401ffe90696e5baa8d0a}

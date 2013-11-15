@@ -1,0 +1,91 @@
+\hypertarget{classleveldb_1_1_filter_block_reader}{\section{leveldb\-:\-:Filter\-Block\-Reader Class Reference}
+\label{classleveldb_1_1_filter_block_reader}\index{leveldb\-::\-Filter\-Block\-Reader@{leveldb\-::\-Filter\-Block\-Reader}}
+}
+
+
+{\ttfamily \#include $<$filter\-\_\-block.\-h$>$}
+
+
+
+Collaboration diagram for leveldb\-:\-:Filter\-Block\-Reader\-:
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classleveldb_1_1_filter_block_reader_a02e9203af5314959ad99057f0020c406}{Filter\-Block\-Reader} (const \hyperlink{classleveldb_1_1_filter_policy}{Filter\-Policy} $\ast$policy, const \hyperlink{classleveldb_1_1_slice}{Slice} \&contents)
+\item 
+bool \hyperlink{classleveldb_1_1_filter_block_reader_a2c1c0cd8311b99fd92d3548b7aa240d0}{Key\-May\-Match} (\hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} block\-\_\-offset, const \hyperlink{classleveldb_1_1_slice}{Slice} \&key)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{classleveldb_1_1_filter_policy}{Filter\-Policy} $\ast$ \hyperlink{classleveldb_1_1_filter_block_reader_a4010e6ad3e0aff23a10260eae3669cdd}{policy\-\_\-}
+\item 
+const char $\ast$ \hyperlink{classleveldb_1_1_filter_block_reader_a8bbb336aa6b2a278e276aae0420e9376}{data\-\_\-}
+\item 
+const char $\ast$ \hyperlink{classleveldb_1_1_filter_block_reader_a64ae9da0d51b09f6d6c23723f486e0e0}{offset\-\_\-}
+\item 
+size\-\_\-t \hyperlink{classleveldb_1_1_filter_block_reader_a6805c65b69099abe85ec0863bdaf9842}{num\-\_\-}
+\item 
+size\-\_\-t \hyperlink{classleveldb_1_1_filter_block_reader_a973563cd3780b9be717a8b60096ed232}{base\-\_\-lg\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classleveldb_1_1_filter_block_reader_a02e9203af5314959ad99057f0020c406}{\index{leveldb\-::\-Filter\-Block\-Reader@{leveldb\-::\-Filter\-Block\-Reader}!Filter\-Block\-Reader@{Filter\-Block\-Reader}}
+\index{Filter\-Block\-Reader@{Filter\-Block\-Reader}!leveldb::FilterBlockReader@{leveldb\-::\-Filter\-Block\-Reader}}
+\subsubsection[{Filter\-Block\-Reader}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::\-Filter\-Block\-Reader\-::\-Filter\-Block\-Reader (
+\begin{DoxyParamCaption}
+\item[{const {\bf Filter\-Policy} $\ast$}]{policy, }
+\item[{const {\bf Slice} \&}]{contents}
+\end{DoxyParamCaption}
+)}}\label{classleveldb_1_1_filter_block_reader_a02e9203af5314959ad99057f0020c406}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classleveldb_1_1_filter_block_reader_a2c1c0cd8311b99fd92d3548b7aa240d0}{\index{leveldb\-::\-Filter\-Block\-Reader@{leveldb\-::\-Filter\-Block\-Reader}!Key\-May\-Match@{Key\-May\-Match}}
+\index{Key\-May\-Match@{Key\-May\-Match}!leveldb::FilterBlockReader@{leveldb\-::\-Filter\-Block\-Reader}}
+\subsubsection[{Key\-May\-Match}]{\setlength{\rightskip}{0pt plus 5cm}bool leveldb\-::\-Filter\-Block\-Reader\-::\-Key\-May\-Match (
+\begin{DoxyParamCaption}
+\item[{{\bf uint64\-\_\-t}}]{block\-\_\-offset, }
+\item[{const {\bf Slice} \&}]{key}
+\end{DoxyParamCaption}
+)}}\label{classleveldb_1_1_filter_block_reader_a2c1c0cd8311b99fd92d3548b7aa240d0}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classleveldb_1_1_filter_block_reader_a973563cd3780b9be717a8b60096ed232}{\index{leveldb\-::\-Filter\-Block\-Reader@{leveldb\-::\-Filter\-Block\-Reader}!base\-\_\-lg\-\_\-@{base\-\_\-lg\-\_\-}}
+\index{base\-\_\-lg\-\_\-@{base\-\_\-lg\-\_\-}!leveldb::FilterBlockReader@{leveldb\-::\-Filter\-Block\-Reader}}
+\subsubsection[{base\-\_\-lg\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t leveldb\-::\-Filter\-Block\-Reader\-::base\-\_\-lg\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_filter_block_reader_a973563cd3780b9be717a8b60096ed232}
+\hypertarget{classleveldb_1_1_filter_block_reader_a8bbb336aa6b2a278e276aae0420e9376}{\index{leveldb\-::\-Filter\-Block\-Reader@{leveldb\-::\-Filter\-Block\-Reader}!data\-\_\-@{data\-\_\-}}
+\index{data\-\_\-@{data\-\_\-}!leveldb::FilterBlockReader@{leveldb\-::\-Filter\-Block\-Reader}}
+\subsubsection[{data\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ leveldb\-::\-Filter\-Block\-Reader\-::data\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_filter_block_reader_a8bbb336aa6b2a278e276aae0420e9376}
+\hypertarget{classleveldb_1_1_filter_block_reader_a6805c65b69099abe85ec0863bdaf9842}{\index{leveldb\-::\-Filter\-Block\-Reader@{leveldb\-::\-Filter\-Block\-Reader}!num\-\_\-@{num\-\_\-}}
+\index{num\-\_\-@{num\-\_\-}!leveldb::FilterBlockReader@{leveldb\-::\-Filter\-Block\-Reader}}
+\subsubsection[{num\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t leveldb\-::\-Filter\-Block\-Reader\-::num\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_filter_block_reader_a6805c65b69099abe85ec0863bdaf9842}
+\hypertarget{classleveldb_1_1_filter_block_reader_a64ae9da0d51b09f6d6c23723f486e0e0}{\index{leveldb\-::\-Filter\-Block\-Reader@{leveldb\-::\-Filter\-Block\-Reader}!offset\-\_\-@{offset\-\_\-}}
+\index{offset\-\_\-@{offset\-\_\-}!leveldb::FilterBlockReader@{leveldb\-::\-Filter\-Block\-Reader}}
+\subsubsection[{offset\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ leveldb\-::\-Filter\-Block\-Reader\-::offset\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_filter_block_reader_a64ae9da0d51b09f6d6c23723f486e0e0}
+\hypertarget{classleveldb_1_1_filter_block_reader_a4010e6ad3e0aff23a10260eae3669cdd}{\index{leveldb\-::\-Filter\-Block\-Reader@{leveldb\-::\-Filter\-Block\-Reader}!policy\-\_\-@{policy\-\_\-}}
+\index{policy\-\_\-@{policy\-\_\-}!leveldb::FilterBlockReader@{leveldb\-::\-Filter\-Block\-Reader}}
+\subsubsection[{policy\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Filter\-Policy}$\ast$ leveldb\-::\-Filter\-Block\-Reader\-::policy\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_filter_block_reader_a4010e6ad3e0aff23a10260eae3669cdd}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+table/\hyperlink{filter__block_8h}{filter\-\_\-block.\-h}\item 
+table/\hyperlink{filter__block_8cc}{filter\-\_\-block.\-cc}\end{DoxyCompactItemize}

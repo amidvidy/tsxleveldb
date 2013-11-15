@@ -1,0 +1,188 @@
+\hypertarget{db__bench__sqlite3_8cc}{\section{doc/bench/db\-\_\-bench\-\_\-sqlite3.cc File Reference}
+\label{db__bench__sqlite3_8cc}\index{doc/bench/db\-\_\-bench\-\_\-sqlite3.\-cc@{doc/bench/db\-\_\-bench\-\_\-sqlite3.\-cc}}
+}
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include $<$sqlite3.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}util/histogram.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}util/random.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}util/testutil.\-h\char`\"{}}\\*
+Include dependency graph for db\-\_\-bench\-\_\-sqlite3.\-cc\-:
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classleveldb_1_1_benchmark}{leveldb\-::\-Benchmark}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespaceleveldb}{leveldb}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{db__bench__sqlite3_8cc_abed121d99f38f880c926c864ac37749d}{Exec\-Error\-Check} (int status, char $\ast$err\-\_\-msg)
+\item 
+static void \hyperlink{db__bench__sqlite3_8cc_a495a6a73e04595d9d13374570f6b2ca4}{Step\-Error\-Check} (int status)
+\item 
+static void \hyperlink{db__bench__sqlite3_8cc_a0bde971cd24b0905524e51367c63e128}{Error\-Check} (int status)
+\item 
+static void \hyperlink{db__bench__sqlite3_8cc_aa77559a3d0155873ab4523e59f9fdd70}{Wal\-Checkpoint} (sqlite3 $\ast$\hyperlink{db__iter_8cc_a800a4b7944923551d5251c8a5ab7e12d}{db\-\_\-})
+\item 
+int \hyperlink{db__bench__sqlite3_8cc_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static const char $\ast$ \hyperlink{db__bench__sqlite3_8cc_a3550bf7381fc474fbe3eb4f125f6b21e}{F\-L\-A\-G\-S\-\_\-benchmarks}
+\item 
+static int \hyperlink{db__bench__sqlite3_8cc_ad2595e4eeeb1fd3e6701d620b24acc28}{F\-L\-A\-G\-S\-\_\-num} = 1000000
+\item 
+static int \hyperlink{db__bench__sqlite3_8cc_a94a7f17f843ac974030ac98221dd4386}{F\-L\-A\-G\-S\-\_\-reads} = -\/1
+\item 
+static int \hyperlink{db__bench__sqlite3_8cc_a1c81a5b326761a915415d2f5f9051391}{F\-L\-A\-G\-S\-\_\-value\-\_\-size} = 100
+\item 
+static bool \hyperlink{db__bench__sqlite3_8cc_a7acbc6eedc4082fdceba621e526cd118}{F\-L\-A\-G\-S\-\_\-histogram} = false
+\item 
+static double \hyperlink{db__bench__sqlite3_8cc_a8b27739d3dc2cd27e1f2f3fc36a65d5d}{F\-L\-A\-G\-S\-\_\-compression\-\_\-ratio} = 0.\-5
+\item 
+static int \hyperlink{db__bench__sqlite3_8cc_a503db8cb34136af1ca2d698484bbe916}{F\-L\-A\-G\-S\-\_\-page\-\_\-size} = 1024
+\item 
+static int \hyperlink{db__bench__sqlite3_8cc_a0c51fa209484793bb07ddf5a7a7bf48b}{F\-L\-A\-G\-S\-\_\-num\-\_\-pages} = 4096
+\item 
+static bool \hyperlink{db__bench__sqlite3_8cc_aca4621a83def233825c050b2facad546}{F\-L\-A\-G\-S\-\_\-use\-\_\-existing\-\_\-db} = false
+\item 
+static bool \hyperlink{db__bench__sqlite3_8cc_a33e5a5cd7e9a82eb245c4c2cb5a1d1d8}{F\-L\-A\-G\-S\-\_\-transaction} = true
+\item 
+static bool \hyperlink{db__bench__sqlite3_8cc_a2cbf4d7c38e43fd0cd0c9a50bba6efce}{F\-L\-A\-G\-S\-\_\-\-W\-A\-L\-\_\-enabled} = true
+\item 
+static const char $\ast$ \hyperlink{db__bench__sqlite3_8cc_a21c1d10f038cee434b8e0f8d0e78932a}{F\-L\-A\-G\-S\-\_\-db} = N\-U\-L\-L
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{db__bench__sqlite3_8cc_a0bde971cd24b0905524e51367c63e128}{\index{db\-\_\-bench\-\_\-sqlite3.\-cc@{db\-\_\-bench\-\_\-sqlite3.\-cc}!Error\-Check@{Error\-Check}}
+\index{Error\-Check@{Error\-Check}!db_bench_sqlite3.cc@{db\-\_\-bench\-\_\-sqlite3.\-cc}}
+\subsubsection[{Error\-Check}]{\setlength{\rightskip}{0pt plus 5cm}static void Error\-Check (
+\begin{DoxyParamCaption}
+\item[{int}]{status}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{db__bench__sqlite3_8cc_a0bde971cd24b0905524e51367c63e128}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{db__bench__sqlite3_8cc_abed121d99f38f880c926c864ac37749d}{\index{db\-\_\-bench\-\_\-sqlite3.\-cc@{db\-\_\-bench\-\_\-sqlite3.\-cc}!Exec\-Error\-Check@{Exec\-Error\-Check}}
+\index{Exec\-Error\-Check@{Exec\-Error\-Check}!db_bench_sqlite3.cc@{db\-\_\-bench\-\_\-sqlite3.\-cc}}
+\subsubsection[{Exec\-Error\-Check}]{\setlength{\rightskip}{0pt plus 5cm}static void Exec\-Error\-Check (
+\begin{DoxyParamCaption}
+\item[{int}]{status, }
+\item[{char $\ast$}]{err\-\_\-msg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{db__bench__sqlite3_8cc_abed121d99f38f880c926c864ac37749d}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{db__bench__sqlite3_8cc_a3c04138a5bfe5d72780bb7e82a18e627}{\index{db\-\_\-bench\-\_\-sqlite3.\-cc@{db\-\_\-bench\-\_\-sqlite3.\-cc}!main@{main}}
+\index{main@{main}!db_bench_sqlite3.cc@{db\-\_\-bench\-\_\-sqlite3.\-cc}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}}\label{db__bench__sqlite3_8cc_a3c04138a5bfe5d72780bb7e82a18e627}
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{db__bench__sqlite3_8cc_a495a6a73e04595d9d13374570f6b2ca4}{\index{db\-\_\-bench\-\_\-sqlite3.\-cc@{db\-\_\-bench\-\_\-sqlite3.\-cc}!Step\-Error\-Check@{Step\-Error\-Check}}
+\index{Step\-Error\-Check@{Step\-Error\-Check}!db_bench_sqlite3.cc@{db\-\_\-bench\-\_\-sqlite3.\-cc}}
+\subsubsection[{Step\-Error\-Check}]{\setlength{\rightskip}{0pt plus 5cm}static void Step\-Error\-Check (
+\begin{DoxyParamCaption}
+\item[{int}]{status}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{db__bench__sqlite3_8cc_a495a6a73e04595d9d13374570f6b2ca4}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{db__bench__sqlite3_8cc_aa77559a3d0155873ab4523e59f9fdd70}{\index{db\-\_\-bench\-\_\-sqlite3.\-cc@{db\-\_\-bench\-\_\-sqlite3.\-cc}!Wal\-Checkpoint@{Wal\-Checkpoint}}
+\index{Wal\-Checkpoint@{Wal\-Checkpoint}!db_bench_sqlite3.cc@{db\-\_\-bench\-\_\-sqlite3.\-cc}}
+\subsubsection[{Wal\-Checkpoint}]{\setlength{\rightskip}{0pt plus 5cm}static void Wal\-Checkpoint (
+\begin{DoxyParamCaption}
+\item[{sqlite3 $\ast$}]{db\-\_\-}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{db__bench__sqlite3_8cc_aa77559a3d0155873ab4523e59f9fdd70}
+
+
+Here is the caller graph for this function\-:
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{db__bench__sqlite3_8cc_ad89985b46f05e1611048282ca9abac3d}{\index{db\-\_\-bench\-\_\-sqlite3.\-cc@{db\-\_\-bench\-\_\-sqlite3.\-cc}!data\-\_\-@{data\-\_\-}}
+\index{data\-\_\-@{data\-\_\-}!db_bench_sqlite3.cc@{db\-\_\-bench\-\_\-sqlite3.\-cc}}
+\subsubsection[{data\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string data\-\_\-}}\label{db__bench__sqlite3_8cc_ad89985b46f05e1611048282ca9abac3d}
+\hypertarget{db__bench__sqlite3_8cc_a3550bf7381fc474fbe3eb4f125f6b21e}{\index{db\-\_\-bench\-\_\-sqlite3.\-cc@{db\-\_\-bench\-\_\-sqlite3.\-cc}!F\-L\-A\-G\-S\-\_\-benchmarks@{F\-L\-A\-G\-S\-\_\-benchmarks}}
+\index{F\-L\-A\-G\-S\-\_\-benchmarks@{F\-L\-A\-G\-S\-\_\-benchmarks}!db_bench_sqlite3.cc@{db\-\_\-bench\-\_\-sqlite3.\-cc}}
+\subsubsection[{F\-L\-A\-G\-S\-\_\-benchmarks}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ F\-L\-A\-G\-S\-\_\-benchmarks\hspace{0.3cm}{\ttfamily [static]}}}\label{db__bench__sqlite3_8cc_a3550bf7381fc474fbe3eb4f125f6b21e}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+=
+    \textcolor{stringliteral}{"fillseq,"}
+    \textcolor{stringliteral}{"fillseqsync,"}
+    \textcolor{stringliteral}{"fillseqbatch,"}
+    \textcolor{stringliteral}{"fillrandom,"}
+    \textcolor{stringliteral}{"fillrandsync,"}
+    \textcolor{stringliteral}{"fillrandbatch,"}
+    \textcolor{stringliteral}{"overwrite,"}
+    \textcolor{stringliteral}{"overwritebatch,"}
+    \textcolor{stringliteral}{"readrandom,"}
+    \textcolor{stringliteral}{"readseq,"}
+    \textcolor{stringliteral}{"fillrand100K,"}
+    \textcolor{stringliteral}{"fillseq100K,"}
+    \textcolor{stringliteral}{"readseq,"}
+    \textcolor{stringliteral}{"readrand100K,"}
+\end{DoxyCode}
+\hypertarget{db__bench__sqlite3_8cc_a8b27739d3dc2cd27e1f2f3fc36a65d5d}{\index{db\-\_\-bench\-\_\-sqlite3.\-cc@{db\-\_\-bench\-\_\-sqlite3.\-cc}!F\-L\-A\-G\-S\-\_\-compression\-\_\-ratio@{F\-L\-A\-G\-S\-\_\-compression\-\_\-ratio}}
+\index{F\-L\-A\-G\-S\-\_\-compression\-\_\-ratio@{F\-L\-A\-G\-S\-\_\-compression\-\_\-ratio}!db_bench_sqlite3.cc@{db\-\_\-bench\-\_\-sqlite3.\-cc}}
+\subsubsection[{F\-L\-A\-G\-S\-\_\-compression\-\_\-ratio}]{\setlength{\rightskip}{0pt plus 5cm}double F\-L\-A\-G\-S\-\_\-compression\-\_\-ratio = 0.\-5\hspace{0.3cm}{\ttfamily [static]}}}\label{db__bench__sqlite3_8cc_a8b27739d3dc2cd27e1f2f3fc36a65d5d}
+\hypertarget{db__bench__sqlite3_8cc_a21c1d10f038cee434b8e0f8d0e78932a}{\index{db\-\_\-bench\-\_\-sqlite3.\-cc@{db\-\_\-bench\-\_\-sqlite3.\-cc}!F\-L\-A\-G\-S\-\_\-db@{F\-L\-A\-G\-S\-\_\-db}}
+\index{F\-L\-A\-G\-S\-\_\-db@{F\-L\-A\-G\-S\-\_\-db}!db_bench_sqlite3.cc@{db\-\_\-bench\-\_\-sqlite3.\-cc}}
+\subsubsection[{F\-L\-A\-G\-S\-\_\-db}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ F\-L\-A\-G\-S\-\_\-db = N\-U\-L\-L\hspace{0.3cm}{\ttfamily [static]}}}\label{db__bench__sqlite3_8cc_a21c1d10f038cee434b8e0f8d0e78932a}
+\hypertarget{db__bench__sqlite3_8cc_a7acbc6eedc4082fdceba621e526cd118}{\index{db\-\_\-bench\-\_\-sqlite3.\-cc@{db\-\_\-bench\-\_\-sqlite3.\-cc}!F\-L\-A\-G\-S\-\_\-histogram@{F\-L\-A\-G\-S\-\_\-histogram}}
+\index{F\-L\-A\-G\-S\-\_\-histogram@{F\-L\-A\-G\-S\-\_\-histogram}!db_bench_sqlite3.cc@{db\-\_\-bench\-\_\-sqlite3.\-cc}}
+\subsubsection[{F\-L\-A\-G\-S\-\_\-histogram}]{\setlength{\rightskip}{0pt plus 5cm}bool F\-L\-A\-G\-S\-\_\-histogram = false\hspace{0.3cm}{\ttfamily [static]}}}\label{db__bench__sqlite3_8cc_a7acbc6eedc4082fdceba621e526cd118}
+\hypertarget{db__bench__sqlite3_8cc_ad2595e4eeeb1fd3e6701d620b24acc28}{\index{db\-\_\-bench\-\_\-sqlite3.\-cc@{db\-\_\-bench\-\_\-sqlite3.\-cc}!F\-L\-A\-G\-S\-\_\-num@{F\-L\-A\-G\-S\-\_\-num}}
+\index{F\-L\-A\-G\-S\-\_\-num@{F\-L\-A\-G\-S\-\_\-num}!db_bench_sqlite3.cc@{db\-\_\-bench\-\_\-sqlite3.\-cc}}
+\subsubsection[{F\-L\-A\-G\-S\-\_\-num}]{\setlength{\rightskip}{0pt plus 5cm}int F\-L\-A\-G\-S\-\_\-num = 1000000\hspace{0.3cm}{\ttfamily [static]}}}\label{db__bench__sqlite3_8cc_ad2595e4eeeb1fd3e6701d620b24acc28}
+\hypertarget{db__bench__sqlite3_8cc_a0c51fa209484793bb07ddf5a7a7bf48b}{\index{db\-\_\-bench\-\_\-sqlite3.\-cc@{db\-\_\-bench\-\_\-sqlite3.\-cc}!F\-L\-A\-G\-S\-\_\-num\-\_\-pages@{F\-L\-A\-G\-S\-\_\-num\-\_\-pages}}
+\index{F\-L\-A\-G\-S\-\_\-num\-\_\-pages@{F\-L\-A\-G\-S\-\_\-num\-\_\-pages}!db_bench_sqlite3.cc@{db\-\_\-bench\-\_\-sqlite3.\-cc}}
+\subsubsection[{F\-L\-A\-G\-S\-\_\-num\-\_\-pages}]{\setlength{\rightskip}{0pt plus 5cm}int F\-L\-A\-G\-S\-\_\-num\-\_\-pages = 4096\hspace{0.3cm}{\ttfamily [static]}}}\label{db__bench__sqlite3_8cc_a0c51fa209484793bb07ddf5a7a7bf48b}
+\hypertarget{db__bench__sqlite3_8cc_a503db8cb34136af1ca2d698484bbe916}{\index{db\-\_\-bench\-\_\-sqlite3.\-cc@{db\-\_\-bench\-\_\-sqlite3.\-cc}!F\-L\-A\-G\-S\-\_\-page\-\_\-size@{F\-L\-A\-G\-S\-\_\-page\-\_\-size}}
+\index{F\-L\-A\-G\-S\-\_\-page\-\_\-size@{F\-L\-A\-G\-S\-\_\-page\-\_\-size}!db_bench_sqlite3.cc@{db\-\_\-bench\-\_\-sqlite3.\-cc}}
+\subsubsection[{F\-L\-A\-G\-S\-\_\-page\-\_\-size}]{\setlength{\rightskip}{0pt plus 5cm}int F\-L\-A\-G\-S\-\_\-page\-\_\-size = 1024\hspace{0.3cm}{\ttfamily [static]}}}\label{db__bench__sqlite3_8cc_a503db8cb34136af1ca2d698484bbe916}
+\hypertarget{db__bench__sqlite3_8cc_a94a7f17f843ac974030ac98221dd4386}{\index{db\-\_\-bench\-\_\-sqlite3.\-cc@{db\-\_\-bench\-\_\-sqlite3.\-cc}!F\-L\-A\-G\-S\-\_\-reads@{F\-L\-A\-G\-S\-\_\-reads}}
+\index{F\-L\-A\-G\-S\-\_\-reads@{F\-L\-A\-G\-S\-\_\-reads}!db_bench_sqlite3.cc@{db\-\_\-bench\-\_\-sqlite3.\-cc}}
+\subsubsection[{F\-L\-A\-G\-S\-\_\-reads}]{\setlength{\rightskip}{0pt plus 5cm}int F\-L\-A\-G\-S\-\_\-reads = -\/1\hspace{0.3cm}{\ttfamily [static]}}}\label{db__bench__sqlite3_8cc_a94a7f17f843ac974030ac98221dd4386}
+\hypertarget{db__bench__sqlite3_8cc_a33e5a5cd7e9a82eb245c4c2cb5a1d1d8}{\index{db\-\_\-bench\-\_\-sqlite3.\-cc@{db\-\_\-bench\-\_\-sqlite3.\-cc}!F\-L\-A\-G\-S\-\_\-transaction@{F\-L\-A\-G\-S\-\_\-transaction}}
+\index{F\-L\-A\-G\-S\-\_\-transaction@{F\-L\-A\-G\-S\-\_\-transaction}!db_bench_sqlite3.cc@{db\-\_\-bench\-\_\-sqlite3.\-cc}}
+\subsubsection[{F\-L\-A\-G\-S\-\_\-transaction}]{\setlength{\rightskip}{0pt plus 5cm}bool F\-L\-A\-G\-S\-\_\-transaction = true\hspace{0.3cm}{\ttfamily [static]}}}\label{db__bench__sqlite3_8cc_a33e5a5cd7e9a82eb245c4c2cb5a1d1d8}
+\hypertarget{db__bench__sqlite3_8cc_aca4621a83def233825c050b2facad546}{\index{db\-\_\-bench\-\_\-sqlite3.\-cc@{db\-\_\-bench\-\_\-sqlite3.\-cc}!F\-L\-A\-G\-S\-\_\-use\-\_\-existing\-\_\-db@{F\-L\-A\-G\-S\-\_\-use\-\_\-existing\-\_\-db}}
+\index{F\-L\-A\-G\-S\-\_\-use\-\_\-existing\-\_\-db@{F\-L\-A\-G\-S\-\_\-use\-\_\-existing\-\_\-db}!db_bench_sqlite3.cc@{db\-\_\-bench\-\_\-sqlite3.\-cc}}
+\subsubsection[{F\-L\-A\-G\-S\-\_\-use\-\_\-existing\-\_\-db}]{\setlength{\rightskip}{0pt plus 5cm}bool F\-L\-A\-G\-S\-\_\-use\-\_\-existing\-\_\-db = false\hspace{0.3cm}{\ttfamily [static]}}}\label{db__bench__sqlite3_8cc_aca4621a83def233825c050b2facad546}
+\hypertarget{db__bench__sqlite3_8cc_a1c81a5b326761a915415d2f5f9051391}{\index{db\-\_\-bench\-\_\-sqlite3.\-cc@{db\-\_\-bench\-\_\-sqlite3.\-cc}!F\-L\-A\-G\-S\-\_\-value\-\_\-size@{F\-L\-A\-G\-S\-\_\-value\-\_\-size}}
+\index{F\-L\-A\-G\-S\-\_\-value\-\_\-size@{F\-L\-A\-G\-S\-\_\-value\-\_\-size}!db_bench_sqlite3.cc@{db\-\_\-bench\-\_\-sqlite3.\-cc}}
+\subsubsection[{F\-L\-A\-G\-S\-\_\-value\-\_\-size}]{\setlength{\rightskip}{0pt plus 5cm}int F\-L\-A\-G\-S\-\_\-value\-\_\-size = 100\hspace{0.3cm}{\ttfamily [static]}}}\label{db__bench__sqlite3_8cc_a1c81a5b326761a915415d2f5f9051391}
+\hypertarget{db__bench__sqlite3_8cc_a2cbf4d7c38e43fd0cd0c9a50bba6efce}{\index{db\-\_\-bench\-\_\-sqlite3.\-cc@{db\-\_\-bench\-\_\-sqlite3.\-cc}!F\-L\-A\-G\-S\-\_\-\-W\-A\-L\-\_\-enabled@{F\-L\-A\-G\-S\-\_\-\-W\-A\-L\-\_\-enabled}}
+\index{F\-L\-A\-G\-S\-\_\-\-W\-A\-L\-\_\-enabled@{F\-L\-A\-G\-S\-\_\-\-W\-A\-L\-\_\-enabled}!db_bench_sqlite3.cc@{db\-\_\-bench\-\_\-sqlite3.\-cc}}
+\subsubsection[{F\-L\-A\-G\-S\-\_\-\-W\-A\-L\-\_\-enabled}]{\setlength{\rightskip}{0pt plus 5cm}bool F\-L\-A\-G\-S\-\_\-\-W\-A\-L\-\_\-enabled = true\hspace{0.3cm}{\ttfamily [static]}}}\label{db__bench__sqlite3_8cc_a2cbf4d7c38e43fd0cd0c9a50bba6efce}
+\hypertarget{db__bench__sqlite3_8cc_a74404be11bd9401ffe90696e5baa8d0a}{\index{db\-\_\-bench\-\_\-sqlite3.\-cc@{db\-\_\-bench\-\_\-sqlite3.\-cc}!pos\-\_\-@{pos\-\_\-}}
+\index{pos\-\_\-@{pos\-\_\-}!db_bench_sqlite3.cc@{db\-\_\-bench\-\_\-sqlite3.\-cc}}
+\subsubsection[{pos\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int pos\-\_\-}}\label{db__bench__sqlite3_8cc_a74404be11bd9401ffe90696e5baa8d0a}

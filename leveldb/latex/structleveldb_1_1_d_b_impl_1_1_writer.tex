@@ -1,0 +1,57 @@
+\hypertarget{structleveldb_1_1_d_b_impl_1_1_writer}{\section{leveldb\-:\-:D\-B\-Impl\-:\-:Writer Struct Reference}
+\label{structleveldb_1_1_d_b_impl_1_1_writer}\index{leveldb\-::\-D\-B\-Impl\-::\-Writer@{leveldb\-::\-D\-B\-Impl\-::\-Writer}}
+}
+
+
+Collaboration diagram for leveldb\-:\-:D\-B\-Impl\-:\-:Writer\-:
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structleveldb_1_1_d_b_impl_1_1_writer_a7dfb43a804e1ded7a2a85b3bc756ea93}{Writer} (\hyperlink{classleveldb_1_1port_1_1_mutex}{port\-::\-Mutex} $\ast$\hyperlink{db__impl_8cc_a900dad9ea326bf70a183d88a8ab50a13}{mu})
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classleveldb_1_1_status}{Status} \hyperlink{structleveldb_1_1_d_b_impl_1_1_writer_af3b0436a99d2679c0e0ac9f6e1fefa37}{status}
+\item 
+\hyperlink{classleveldb_1_1_write_batch}{Write\-Batch} $\ast$ \hyperlink{structleveldb_1_1_d_b_impl_1_1_writer_ada051134318411635892f0a7d17cb7c0}{batch}
+\item 
+bool \hyperlink{structleveldb_1_1_d_b_impl_1_1_writer_acb39717e1fa61127f262b474e18ec9f6}{sync}
+\item 
+bool \hyperlink{structleveldb_1_1_d_b_impl_1_1_writer_afc6025afd873f82252cb563687bd3106}{done}
+\item 
+\hyperlink{classleveldb_1_1port_1_1_cond_var}{port\-::\-Cond\-Var} \hyperlink{structleveldb_1_1_d_b_impl_1_1_writer_aacb835eedc44855a7c223fca024c5ac4}{cv}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{structleveldb_1_1_d_b_impl_1_1_writer_a7dfb43a804e1ded7a2a85b3bc756ea93}{\index{leveldb\-::\-D\-B\-Impl\-::\-Writer@{leveldb\-::\-D\-B\-Impl\-::\-Writer}!Writer@{Writer}}
+\index{Writer@{Writer}!leveldb::DBImpl::Writer@{leveldb\-::\-D\-B\-Impl\-::\-Writer}}
+\subsubsection[{Writer}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::\-D\-B\-Impl\-::\-Writer\-::\-Writer (
+\begin{DoxyParamCaption}
+\item[{{\bf port\-::\-Mutex} $\ast$}]{mu}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}}\label{structleveldb_1_1_d_b_impl_1_1_writer_a7dfb43a804e1ded7a2a85b3bc756ea93}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{structleveldb_1_1_d_b_impl_1_1_writer_ada051134318411635892f0a7d17cb7c0}{\index{leveldb\-::\-D\-B\-Impl\-::\-Writer@{leveldb\-::\-D\-B\-Impl\-::\-Writer}!batch@{batch}}
+\index{batch@{batch}!leveldb::DBImpl::Writer@{leveldb\-::\-D\-B\-Impl\-::\-Writer}}
+\subsubsection[{batch}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Write\-Batch}$\ast$ leveldb\-::\-D\-B\-Impl\-::\-Writer\-::batch}}\label{structleveldb_1_1_d_b_impl_1_1_writer_ada051134318411635892f0a7d17cb7c0}
+\hypertarget{structleveldb_1_1_d_b_impl_1_1_writer_aacb835eedc44855a7c223fca024c5ac4}{\index{leveldb\-::\-D\-B\-Impl\-::\-Writer@{leveldb\-::\-D\-B\-Impl\-::\-Writer}!cv@{cv}}
+\index{cv@{cv}!leveldb::DBImpl::Writer@{leveldb\-::\-D\-B\-Impl\-::\-Writer}}
+\subsubsection[{cv}]{\setlength{\rightskip}{0pt plus 5cm}{\bf port\-::\-Cond\-Var} leveldb\-::\-D\-B\-Impl\-::\-Writer\-::cv}}\label{structleveldb_1_1_d_b_impl_1_1_writer_aacb835eedc44855a7c223fca024c5ac4}
+\hypertarget{structleveldb_1_1_d_b_impl_1_1_writer_afc6025afd873f82252cb563687bd3106}{\index{leveldb\-::\-D\-B\-Impl\-::\-Writer@{leveldb\-::\-D\-B\-Impl\-::\-Writer}!done@{done}}
+\index{done@{done}!leveldb::DBImpl::Writer@{leveldb\-::\-D\-B\-Impl\-::\-Writer}}
+\subsubsection[{done}]{\setlength{\rightskip}{0pt plus 5cm}bool leveldb\-::\-D\-B\-Impl\-::\-Writer\-::done}}\label{structleveldb_1_1_d_b_impl_1_1_writer_afc6025afd873f82252cb563687bd3106}
+\hypertarget{structleveldb_1_1_d_b_impl_1_1_writer_af3b0436a99d2679c0e0ac9f6e1fefa37}{\index{leveldb\-::\-D\-B\-Impl\-::\-Writer@{leveldb\-::\-D\-B\-Impl\-::\-Writer}!status@{status}}
+\index{status@{status}!leveldb::DBImpl::Writer@{leveldb\-::\-D\-B\-Impl\-::\-Writer}}
+\subsubsection[{status}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Status} leveldb\-::\-D\-B\-Impl\-::\-Writer\-::status}}\label{structleveldb_1_1_d_b_impl_1_1_writer_af3b0436a99d2679c0e0ac9f6e1fefa37}
+\hypertarget{structleveldb_1_1_d_b_impl_1_1_writer_acb39717e1fa61127f262b474e18ec9f6}{\index{leveldb\-::\-D\-B\-Impl\-::\-Writer@{leveldb\-::\-D\-B\-Impl\-::\-Writer}!sync@{sync}}
+\index{sync@{sync}!leveldb::DBImpl::Writer@{leveldb\-::\-D\-B\-Impl\-::\-Writer}}
+\subsubsection[{sync}]{\setlength{\rightskip}{0pt plus 5cm}bool leveldb\-::\-D\-B\-Impl\-::\-Writer\-::sync}}\label{structleveldb_1_1_d_b_impl_1_1_writer_acb39717e1fa61127f262b474e18ec9f6}
+
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+db/\hyperlink{db__impl_8cc}{db\-\_\-impl.\-cc}\end{DoxyCompactItemize}

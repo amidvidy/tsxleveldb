@@ -1,0 +1,374 @@
+\hypertarget{classleveldb_1_1_version}{\section{leveldb\-:\-:Version Class Reference}
+\label{classleveldb_1_1_version}\index{leveldb\-::\-Version@{leveldb\-::\-Version}}
+}
+
+
+{\ttfamily \#include $<$version\-\_\-set.\-h$>$}
+
+
+
+Collaboration diagram for leveldb\-:\-:Version\-:
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structleveldb_1_1_version_1_1_get_stats}{Get\-Stats}
+\item 
+class \hyperlink{classleveldb_1_1_version_1_1_level_file_num_iterator}{Level\-File\-Num\-Iterator}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classleveldb_1_1_version_a035a0fa5bfe7ab84a711b1138b0b9a3d}{Add\-Iterators} (const \hyperlink{structleveldb_1_1_read_options}{Read\-Options} \&, std\-::vector$<$ \hyperlink{classleveldb_1_1_iterator}{Iterator} $\ast$ $>$ $\ast$iters)
+\item 
+\hyperlink{classleveldb_1_1_status}{Status} \hyperlink{classleveldb_1_1_version_a42c439d4a2a767fe281c7a75d4255038}{Get} (const \hyperlink{structleveldb_1_1_read_options}{Read\-Options} \&, const \hyperlink{classleveldb_1_1_lookup_key}{Lookup\-Key} \&key, std\-::string $\ast$val, \hyperlink{structleveldb_1_1_version_1_1_get_stats}{Get\-Stats} $\ast$\hyperlink{db__bench_8cc_a5925d216740c89f43482df806fd14e8c}{stats})
+\item 
+bool \hyperlink{classleveldb_1_1_version_a7e5b8451deb7c4b9006fd9d5ccfc2cef}{Update\-Stats} (const \hyperlink{structleveldb_1_1_version_1_1_get_stats}{Get\-Stats} \&\hyperlink{db__bench_8cc_a5925d216740c89f43482df806fd14e8c}{stats})
+\item 
+bool \hyperlink{classleveldb_1_1_version_a8b9e51b3d0503fe5868f656356557ded}{Record\-Read\-Sample} (\hyperlink{classleveldb_1_1_slice}{Slice} key)
+\item 
+void \hyperlink{classleveldb_1_1_version_ad237b446c7f7d9e63c4b7c162d6f0064}{Ref} ()
+\item 
+void \hyperlink{classleveldb_1_1_version_a3f623697f625d4740d5b273c0bf6223a}{Unref} ()
+\item 
+void \hyperlink{classleveldb_1_1_version_afd86dffba7ce5229778bddd546517392}{Get\-Overlapping\-Inputs} (int level, const \hyperlink{classleveldb_1_1_internal_key}{Internal\-Key} $\ast$begin, const \hyperlink{classleveldb_1_1_internal_key}{Internal\-Key} $\ast$end, std\-::vector$<$ \hyperlink{structleveldb_1_1_file_meta_data}{File\-Meta\-Data} $\ast$ $>$ $\ast$inputs)
+\item 
+bool \hyperlink{classleveldb_1_1_version_a7945e88b8a4f2f7b6f3201cb3d791f1e}{Overlap\-In\-Level} (int level, const \hyperlink{classleveldb_1_1_slice}{Slice} $\ast$smallest\-\_\-user\-\_\-key, const \hyperlink{classleveldb_1_1_slice}{Slice} $\ast$largest\-\_\-user\-\_\-key)
+\item 
+int \hyperlink{classleveldb_1_1_version_ac3b623319110ed2a9491723dd4675431}{Pick\-Level\-For\-Mem\-Table\-Output} (const \hyperlink{classleveldb_1_1_slice}{Slice} \&smallest\-\_\-user\-\_\-key, const \hyperlink{classleveldb_1_1_slice}{Slice} \&largest\-\_\-user\-\_\-key)
+\item 
+int \hyperlink{classleveldb_1_1_version_a0995beaa980f4d338cd9aa75c1e9795c}{Num\-Files} (int level) const 
+\item 
+std\-::string \hyperlink{classleveldb_1_1_version_a83d35444c8e7c617a3a70e4c9050ce08}{Debug\-String} () const 
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classleveldb_1_1_iterator}{Iterator} $\ast$ \hyperlink{classleveldb_1_1_version_a3dbfd700f06c4e31d28a6c494d6345c9}{New\-Concatenating\-Iterator} (const \hyperlink{structleveldb_1_1_read_options}{Read\-Options} \&, int level) const 
+\item 
+void \hyperlink{classleveldb_1_1_version_af41eeda28ad10412b2f380e920798b2c}{For\-Each\-Overlapping} (\hyperlink{classleveldb_1_1_slice}{Slice} \hyperlink{version__set_8cc_afced2118ae0bf03db7c7e75a21cfd004}{user\-\_\-key}, \hyperlink{classleveldb_1_1_slice}{Slice} internal\-\_\-key, void $\ast$\hyperlink{env__posix_8cc_a9ce2ec4812a92cb6ab39f6e81e9173a9}{arg}, bool($\ast$\hyperlink{testharness_8cc_a0a8271b25a6a647b48a0be0bc49c9409}{func})(void $\ast$, int, \hyperlink{structleveldb_1_1_file_meta_data}{File\-Meta\-Data} $\ast$))
+\item 
+\hyperlink{classleveldb_1_1_version_a8b08a6273383b1d02f8e3e5023e015ee}{Version} (\hyperlink{classleveldb_1_1_version_set}{Version\-Set} $\ast$vset)
+\item 
+\hyperlink{classleveldb_1_1_version_ade39983be24e04a74882f810fd5b61c9}{$\sim$\-Version} ()
+\item 
+\hyperlink{classleveldb_1_1_version_a5a1a40f16c843b73c46c8a6f7710d742}{Version} (const \hyperlink{classleveldb_1_1_version}{Version} \&)
+\item 
+void \hyperlink{classleveldb_1_1_version_af0d9bd79b1cdcadcf2511601de1c92a9}{operator=} (const \hyperlink{classleveldb_1_1_version}{Version} \&)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classleveldb_1_1_version_set}{Version\-Set} $\ast$ \hyperlink{classleveldb_1_1_version_ab27cb3e1215e4b948fbee011203098b4}{vset\-\_\-}
+\item 
+\hyperlink{classleveldb_1_1_version}{Version} $\ast$ \hyperlink{classleveldb_1_1_version_acd5135c980959de4ebb23e73269848f4}{next\-\_\-}
+\item 
+\hyperlink{classleveldb_1_1_version}{Version} $\ast$ \hyperlink{classleveldb_1_1_version_a78f5343161662289e86f9d53c5995833}{prev\-\_\-}
+\item 
+int \hyperlink{classleveldb_1_1_version_aa59ecbf976d0d28966892c93c8d8c634}{refs\-\_\-}
+\item 
+std\-::vector$<$ \hyperlink{structleveldb_1_1_file_meta_data}{File\-Meta\-Data} $\ast$ $>$ \hyperlink{classleveldb_1_1_version_a5ca95bbe4ddd4770c70405e4fa39616f}{files\-\_\-} \mbox{[}\hyperlink{namespaceleveldb_1_1config_ab6017947ae68898c606643bddc0f5b9c}{config\-::k\-Num\-Levels}\mbox{]}
+\item 
+\hyperlink{structleveldb_1_1_file_meta_data}{File\-Meta\-Data} $\ast$ \hyperlink{classleveldb_1_1_version_a2a5c6635d4043415889d2bff1251eabd}{file\-\_\-to\-\_\-compact\-\_\-}
+\item 
+int \hyperlink{classleveldb_1_1_version_ad141df0d8723b154c4dc7fe283529636}{file\-\_\-to\-\_\-compact\-\_\-level\-\_\-}
+\item 
+double \hyperlink{classleveldb_1_1_version_ab7194e4f85adf9ca5e933db556bbd572}{compaction\-\_\-score\-\_\-}
+\item 
+int \hyperlink{classleveldb_1_1_version_ac2edc27f49f9da2c35890e8ec7ada2c1}{compaction\-\_\-level\-\_\-}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classleveldb_1_1_version_a9372e882b35d27c78356228e4b758917}{Compaction}
+\item 
+class \hyperlink{classleveldb_1_1_version_a1827cd1b4d6e9e3c378ce37ca3cce635}{Version\-Set}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classleveldb_1_1_version_a8b08a6273383b1d02f8e3e5023e015ee}{\index{leveldb\-::\-Version@{leveldb\-::\-Version}!Version@{Version}}
+\index{Version@{Version}!leveldb::Version@{leveldb\-::\-Version}}
+\subsubsection[{Version}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::\-Version\-::\-Version (
+\begin{DoxyParamCaption}
+\item[{{\bf Version\-Set} $\ast$}]{vset}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}, {\ttfamily [private]}}}\label{classleveldb_1_1_version_a8b08a6273383b1d02f8e3e5023e015ee}
+\hypertarget{classleveldb_1_1_version_ade39983be24e04a74882f810fd5b61c9}{\index{leveldb\-::\-Version@{leveldb\-::\-Version}!$\sim$\-Version@{$\sim$\-Version}}
+\index{$\sim$\-Version@{$\sim$\-Version}!leveldb::Version@{leveldb\-::\-Version}}
+\subsubsection[{$\sim$\-Version}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::\-Version\-::$\sim$\-Version (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_version_ade39983be24e04a74882f810fd5b61c9}
+\hypertarget{classleveldb_1_1_version_a5a1a40f16c843b73c46c8a6f7710d742}{\index{leveldb\-::\-Version@{leveldb\-::\-Version}!Version@{Version}}
+\index{Version@{Version}!leveldb::Version@{leveldb\-::\-Version}}
+\subsubsection[{Version}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::\-Version\-::\-Version (
+\begin{DoxyParamCaption}
+\item[{const {\bf Version} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_version_a5a1a40f16c843b73c46c8a6f7710d742}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classleveldb_1_1_version_a035a0fa5bfe7ab84a711b1138b0b9a3d}{\index{leveldb\-::\-Version@{leveldb\-::\-Version}!Add\-Iterators@{Add\-Iterators}}
+\index{Add\-Iterators@{Add\-Iterators}!leveldb::Version@{leveldb\-::\-Version}}
+\subsubsection[{Add\-Iterators}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-Version\-::\-Add\-Iterators (
+\begin{DoxyParamCaption}
+\item[{const {\bf Read\-Options} \&}]{options, }
+\item[{std\-::vector$<$ {\bf Iterator} $\ast$ $>$ $\ast$}]{iters}
+\end{DoxyParamCaption}
+)}}\label{classleveldb_1_1_version_a035a0fa5bfe7ab84a711b1138b0b9a3d}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_version_a83d35444c8e7c617a3a70e4c9050ce08}{\index{leveldb\-::\-Version@{leveldb\-::\-Version}!Debug\-String@{Debug\-String}}
+\index{Debug\-String@{Debug\-String}!leveldb::Version@{leveldb\-::\-Version}}
+\subsubsection[{Debug\-String}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string leveldb\-::\-Version\-::\-Debug\-String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classleveldb_1_1_version_a83d35444c8e7c617a3a70e4c9050ce08}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_version_af41eeda28ad10412b2f380e920798b2c}{\index{leveldb\-::\-Version@{leveldb\-::\-Version}!For\-Each\-Overlapping@{For\-Each\-Overlapping}}
+\index{For\-Each\-Overlapping@{For\-Each\-Overlapping}!leveldb::Version@{leveldb\-::\-Version}}
+\subsubsection[{For\-Each\-Overlapping}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-Version\-::\-For\-Each\-Overlapping (
+\begin{DoxyParamCaption}
+\item[{{\bf Slice}}]{user\-\_\-key, }
+\item[{{\bf Slice}}]{internal\-\_\-key, }
+\item[{void $\ast$}]{arg, }
+\item[{bool($\ast$)(void $\ast$, int, {\bf File\-Meta\-Data} $\ast$)}]{func}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_version_af41eeda28ad10412b2f380e920798b2c}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_version_a42c439d4a2a767fe281c7a75d4255038}{\index{leveldb\-::\-Version@{leveldb\-::\-Version}!Get@{Get}}
+\index{Get@{Get}!leveldb::Version@{leveldb\-::\-Version}}
+\subsubsection[{Get}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Status} leveldb\-::\-Version\-::\-Get (
+\begin{DoxyParamCaption}
+\item[{const {\bf Read\-Options} \&}]{options, }
+\item[{const {\bf Lookup\-Key} \&}]{key, }
+\item[{std\-::string $\ast$}]{val, }
+\item[{{\bf Get\-Stats} $\ast$}]{stats}
+\end{DoxyParamCaption}
+)}}\label{classleveldb_1_1_version_a42c439d4a2a767fe281c7a75d4255038}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_version_afd86dffba7ce5229778bddd546517392}{\index{leveldb\-::\-Version@{leveldb\-::\-Version}!Get\-Overlapping\-Inputs@{Get\-Overlapping\-Inputs}}
+\index{Get\-Overlapping\-Inputs@{Get\-Overlapping\-Inputs}!leveldb::Version@{leveldb\-::\-Version}}
+\subsubsection[{Get\-Overlapping\-Inputs}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-Version\-::\-Get\-Overlapping\-Inputs (
+\begin{DoxyParamCaption}
+\item[{int}]{level, }
+\item[{const {\bf Internal\-Key} $\ast$}]{begin, }
+\item[{const {\bf Internal\-Key} $\ast$}]{end, }
+\item[{std\-::vector$<$ {\bf File\-Meta\-Data} $\ast$ $>$ $\ast$}]{inputs}
+\end{DoxyParamCaption}
+)}}\label{classleveldb_1_1_version_afd86dffba7ce5229778bddd546517392}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_version_a3dbfd700f06c4e31d28a6c494d6345c9}{\index{leveldb\-::\-Version@{leveldb\-::\-Version}!New\-Concatenating\-Iterator@{New\-Concatenating\-Iterator}}
+\index{New\-Concatenating\-Iterator@{New\-Concatenating\-Iterator}!leveldb::Version@{leveldb\-::\-Version}}
+\subsubsection[{New\-Concatenating\-Iterator}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Iterator} $\ast$ leveldb\-::\-Version\-::\-New\-Concatenating\-Iterator (
+\begin{DoxyParamCaption}
+\item[{const {\bf Read\-Options} \&}]{options, }
+\item[{int}]{level}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_version_a3dbfd700f06c4e31d28a6c494d6345c9}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_version_a0995beaa980f4d338cd9aa75c1e9795c}{\index{leveldb\-::\-Version@{leveldb\-::\-Version}!Num\-Files@{Num\-Files}}
+\index{Num\-Files@{Num\-Files}!leveldb::Version@{leveldb\-::\-Version}}
+\subsubsection[{Num\-Files}]{\setlength{\rightskip}{0pt plus 5cm}int leveldb\-::\-Version\-::\-Num\-Files (
+\begin{DoxyParamCaption}
+\item[{int}]{level}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_version_a0995beaa980f4d338cd9aa75c1e9795c}
+\hypertarget{classleveldb_1_1_version_af0d9bd79b1cdcadcf2511601de1c92a9}{\index{leveldb\-::\-Version@{leveldb\-::\-Version}!operator=@{operator=}}
+\index{operator=@{operator=}!leveldb::Version@{leveldb\-::\-Version}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-Version\-::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Version} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_version_af0d9bd79b1cdcadcf2511601de1c92a9}
+\hypertarget{classleveldb_1_1_version_a7945e88b8a4f2f7b6f3201cb3d791f1e}{\index{leveldb\-::\-Version@{leveldb\-::\-Version}!Overlap\-In\-Level@{Overlap\-In\-Level}}
+\index{Overlap\-In\-Level@{Overlap\-In\-Level}!leveldb::Version@{leveldb\-::\-Version}}
+\subsubsection[{Overlap\-In\-Level}]{\setlength{\rightskip}{0pt plus 5cm}bool leveldb\-::\-Version\-::\-Overlap\-In\-Level (
+\begin{DoxyParamCaption}
+\item[{int}]{level, }
+\item[{const {\bf Slice} $\ast$}]{smallest\-\_\-user\-\_\-key, }
+\item[{const {\bf Slice} $\ast$}]{largest\-\_\-user\-\_\-key}
+\end{DoxyParamCaption}
+)}}\label{classleveldb_1_1_version_a7945e88b8a4f2f7b6f3201cb3d791f1e}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_version_ac3b623319110ed2a9491723dd4675431}{\index{leveldb\-::\-Version@{leveldb\-::\-Version}!Pick\-Level\-For\-Mem\-Table\-Output@{Pick\-Level\-For\-Mem\-Table\-Output}}
+\index{Pick\-Level\-For\-Mem\-Table\-Output@{Pick\-Level\-For\-Mem\-Table\-Output}!leveldb::Version@{leveldb\-::\-Version}}
+\subsubsection[{Pick\-Level\-For\-Mem\-Table\-Output}]{\setlength{\rightskip}{0pt plus 5cm}int leveldb\-::\-Version\-::\-Pick\-Level\-For\-Mem\-Table\-Output (
+\begin{DoxyParamCaption}
+\item[{const {\bf Slice} \&}]{smallest\-\_\-user\-\_\-key, }
+\item[{const {\bf Slice} \&}]{largest\-\_\-user\-\_\-key}
+\end{DoxyParamCaption}
+)}}\label{classleveldb_1_1_version_ac3b623319110ed2a9491723dd4675431}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_version_a8b9e51b3d0503fe5868f656356557ded}{\index{leveldb\-::\-Version@{leveldb\-::\-Version}!Record\-Read\-Sample@{Record\-Read\-Sample}}
+\index{Record\-Read\-Sample@{Record\-Read\-Sample}!leveldb::Version@{leveldb\-::\-Version}}
+\subsubsection[{Record\-Read\-Sample}]{\setlength{\rightskip}{0pt plus 5cm}bool leveldb\-::\-Version\-::\-Record\-Read\-Sample (
+\begin{DoxyParamCaption}
+\item[{{\bf Slice}}]{key}
+\end{DoxyParamCaption}
+)}}\label{classleveldb_1_1_version_a8b9e51b3d0503fe5868f656356557ded}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_version_ad237b446c7f7d9e63c4b7c162d6f0064}{\index{leveldb\-::\-Version@{leveldb\-::\-Version}!Ref@{Ref}}
+\index{Ref@{Ref}!leveldb::Version@{leveldb\-::\-Version}}
+\subsubsection[{Ref}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-Version\-::\-Ref (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classleveldb_1_1_version_ad237b446c7f7d9e63c4b7c162d6f0064}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_version_a3f623697f625d4740d5b273c0bf6223a}{\index{leveldb\-::\-Version@{leveldb\-::\-Version}!Unref@{Unref}}
+\index{Unref@{Unref}!leveldb::Version@{leveldb\-::\-Version}}
+\subsubsection[{Unref}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-Version\-::\-Unref (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classleveldb_1_1_version_a3f623697f625d4740d5b273c0bf6223a}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_version_a7e5b8451deb7c4b9006fd9d5ccfc2cef}{\index{leveldb\-::\-Version@{leveldb\-::\-Version}!Update\-Stats@{Update\-Stats}}
+\index{Update\-Stats@{Update\-Stats}!leveldb::Version@{leveldb\-::\-Version}}
+\subsubsection[{Update\-Stats}]{\setlength{\rightskip}{0pt plus 5cm}bool leveldb\-::\-Version\-::\-Update\-Stats (
+\begin{DoxyParamCaption}
+\item[{const {\bf Get\-Stats} \&}]{stats}
+\end{DoxyParamCaption}
+)}}\label{classleveldb_1_1_version_a7e5b8451deb7c4b9006fd9d5ccfc2cef}
+
+
+Here is the caller graph for this function\-:
+
+
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classleveldb_1_1_version_a9372e882b35d27c78356228e4b758917}{\index{leveldb\-::\-Version@{leveldb\-::\-Version}!Compaction@{Compaction}}
+\index{Compaction@{Compaction}!leveldb::Version@{leveldb\-::\-Version}}
+\subsubsection[{Compaction}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Compaction}\hspace{0.3cm}{\ttfamily [friend]}}}\label{classleveldb_1_1_version_a9372e882b35d27c78356228e4b758917}
+\hypertarget{classleveldb_1_1_version_a1827cd1b4d6e9e3c378ce37ca3cce635}{\index{leveldb\-::\-Version@{leveldb\-::\-Version}!Version\-Set@{Version\-Set}}
+\index{Version\-Set@{Version\-Set}!leveldb::Version@{leveldb\-::\-Version}}
+\subsubsection[{Version\-Set}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Version\-Set}\hspace{0.3cm}{\ttfamily [friend]}}}\label{classleveldb_1_1_version_a1827cd1b4d6e9e3c378ce37ca3cce635}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classleveldb_1_1_version_ac2edc27f49f9da2c35890e8ec7ada2c1}{\index{leveldb\-::\-Version@{leveldb\-::\-Version}!compaction\-\_\-level\-\_\-@{compaction\-\_\-level\-\_\-}}
+\index{compaction\-\_\-level\-\_\-@{compaction\-\_\-level\-\_\-}!leveldb::Version@{leveldb\-::\-Version}}
+\subsubsection[{compaction\-\_\-level\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int leveldb\-::\-Version\-::compaction\-\_\-level\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_version_ac2edc27f49f9da2c35890e8ec7ada2c1}
+\hypertarget{classleveldb_1_1_version_ab7194e4f85adf9ca5e933db556bbd572}{\index{leveldb\-::\-Version@{leveldb\-::\-Version}!compaction\-\_\-score\-\_\-@{compaction\-\_\-score\-\_\-}}
+\index{compaction\-\_\-score\-\_\-@{compaction\-\_\-score\-\_\-}!leveldb::Version@{leveldb\-::\-Version}}
+\subsubsection[{compaction\-\_\-score\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}double leveldb\-::\-Version\-::compaction\-\_\-score\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_version_ab7194e4f85adf9ca5e933db556bbd572}
+\hypertarget{classleveldb_1_1_version_a2a5c6635d4043415889d2bff1251eabd}{\index{leveldb\-::\-Version@{leveldb\-::\-Version}!file\-\_\-to\-\_\-compact\-\_\-@{file\-\_\-to\-\_\-compact\-\_\-}}
+\index{file\-\_\-to\-\_\-compact\-\_\-@{file\-\_\-to\-\_\-compact\-\_\-}!leveldb::Version@{leveldb\-::\-Version}}
+\subsubsection[{file\-\_\-to\-\_\-compact\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf File\-Meta\-Data}$\ast$ leveldb\-::\-Version\-::file\-\_\-to\-\_\-compact\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_version_a2a5c6635d4043415889d2bff1251eabd}
+\hypertarget{classleveldb_1_1_version_ad141df0d8723b154c4dc7fe283529636}{\index{leveldb\-::\-Version@{leveldb\-::\-Version}!file\-\_\-to\-\_\-compact\-\_\-level\-\_\-@{file\-\_\-to\-\_\-compact\-\_\-level\-\_\-}}
+\index{file\-\_\-to\-\_\-compact\-\_\-level\-\_\-@{file\-\_\-to\-\_\-compact\-\_\-level\-\_\-}!leveldb::Version@{leveldb\-::\-Version}}
+\subsubsection[{file\-\_\-to\-\_\-compact\-\_\-level\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int leveldb\-::\-Version\-::file\-\_\-to\-\_\-compact\-\_\-level\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_version_ad141df0d8723b154c4dc7fe283529636}
+\hypertarget{classleveldb_1_1_version_a5ca95bbe4ddd4770c70405e4fa39616f}{\index{leveldb\-::\-Version@{leveldb\-::\-Version}!files\-\_\-@{files\-\_\-}}
+\index{files\-\_\-@{files\-\_\-}!leveldb::Version@{leveldb\-::\-Version}}
+\subsubsection[{files\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<${\bf File\-Meta\-Data}$\ast$$>$ leveldb\-::\-Version\-::files\-\_\-\mbox{[}{\bf config\-::k\-Num\-Levels}\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_version_a5ca95bbe4ddd4770c70405e4fa39616f}
+\hypertarget{classleveldb_1_1_version_acd5135c980959de4ebb23e73269848f4}{\index{leveldb\-::\-Version@{leveldb\-::\-Version}!next\-\_\-@{next\-\_\-}}
+\index{next\-\_\-@{next\-\_\-}!leveldb::Version@{leveldb\-::\-Version}}
+\subsubsection[{next\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Version}$\ast$ leveldb\-::\-Version\-::next\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_version_acd5135c980959de4ebb23e73269848f4}
+\hypertarget{classleveldb_1_1_version_a78f5343161662289e86f9d53c5995833}{\index{leveldb\-::\-Version@{leveldb\-::\-Version}!prev\-\_\-@{prev\-\_\-}}
+\index{prev\-\_\-@{prev\-\_\-}!leveldb::Version@{leveldb\-::\-Version}}
+\subsubsection[{prev\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Version}$\ast$ leveldb\-::\-Version\-::prev\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_version_a78f5343161662289e86f9d53c5995833}
+\hypertarget{classleveldb_1_1_version_aa59ecbf976d0d28966892c93c8d8c634}{\index{leveldb\-::\-Version@{leveldb\-::\-Version}!refs\-\_\-@{refs\-\_\-}}
+\index{refs\-\_\-@{refs\-\_\-}!leveldb::Version@{leveldb\-::\-Version}}
+\subsubsection[{refs\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int leveldb\-::\-Version\-::refs\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_version_aa59ecbf976d0d28966892c93c8d8c634}
+\hypertarget{classleveldb_1_1_version_ab27cb3e1215e4b948fbee011203098b4}{\index{leveldb\-::\-Version@{leveldb\-::\-Version}!vset\-\_\-@{vset\-\_\-}}
+\index{vset\-\_\-@{vset\-\_\-}!leveldb::Version@{leveldb\-::\-Version}}
+\subsubsection[{vset\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Version\-Set}$\ast$ leveldb\-::\-Version\-::vset\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_version_ab27cb3e1215e4b948fbee011203098b4}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+db/\hyperlink{version__set_8h}{version\-\_\-set.\-h}\item 
+db/\hyperlink{version__set_8cc}{version\-\_\-set.\-cc}\end{DoxyCompactItemize}

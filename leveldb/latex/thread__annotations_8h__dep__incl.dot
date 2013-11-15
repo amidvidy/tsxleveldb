@@ -1,0 +1,48 @@
+digraph "port/thread_annotations.h"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="port/thread_annotations.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="db/db_impl.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db__impl_8h.html"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="db/autocompact_test.cc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$autocompact__test_8cc.html"];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="db/corruption_test.cc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$corruption__test_8cc.html"];
+  Node2 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="db/db_bench.cc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db__bench_8cc.html"];
+  Node2 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="db/db_impl.cc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db__impl_8cc.html"];
+  Node2 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="db/db_iter.cc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db__iter_8cc.html"];
+  Node2 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="db/db_test.cc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db__test_8cc.html"];
+  Node2 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="db/repair.cc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$repair_8cc.html"];
+  Node2 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="helpers/memenv/memenv\l_test.cc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$memenv__test_8cc.html"];
+  Node1 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="db/version_set.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$version__set_8h.html"];
+  Node11 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node11 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node11 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node11 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node11 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="db/version_edit.cc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$version__edit_8cc.html"];
+  Node11 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node13 [label="db/version_set.cc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$version__set_8cc.html"];
+  Node11 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node14 [label="db/version_set_test.cc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$version__set__test_8cc.html"];
+  Node1 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node15 [label="util/mutexlock.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$mutexlock_8h.html"];
+  Node15 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node15 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node15 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node15 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node15 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node16 [label="helpers/memenv/memenv.cc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$memenv_8cc.html"];
+  Node15 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node17 [label="util/cache.cc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$cache_8cc.html"];
+  Node15 -> Node18 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node18 [label="util/env_posix.cc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$env__posix_8cc.html"];
+}

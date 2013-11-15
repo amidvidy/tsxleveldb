@@ -1,0 +1,191 @@
+\hypertarget{classleveldb_1_1_model_d_b_1_1_model_iter}{\section{leveldb\-:\-:Model\-D\-B\-:\-:Model\-Iter Class Reference}
+\label{classleveldb_1_1_model_d_b_1_1_model_iter}\index{leveldb\-::\-Model\-D\-B\-::\-Model\-Iter@{leveldb\-::\-Model\-D\-B\-::\-Model\-Iter}}
+}
+
+
+Inheritance diagram for leveldb\-:\-:Model\-D\-B\-:\-:Model\-Iter\-:
+
+
+Collaboration diagram for leveldb\-:\-:Model\-D\-B\-:\-:Model\-Iter\-:
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classleveldb_1_1_model_d_b_1_1_model_iter_a8ce3cac545f29fd55cbc0328bf3dbe26}{Model\-Iter} (const \hyperlink{namespaceleveldb_aac1e50450147be263e08252c6700f7a7}{K\-V\-Map} $\ast$map, bool owned)
+\item 
+\hyperlink{classleveldb_1_1_model_d_b_1_1_model_iter_a3920ed0781aebe21dfccef855ff31946}{$\sim$\-Model\-Iter} ()
+\item 
+virtual bool \hyperlink{classleveldb_1_1_model_d_b_1_1_model_iter_a645d712995a2926a2699a6274fdd8c96}{Valid} () const 
+\item 
+virtual void \hyperlink{classleveldb_1_1_model_d_b_1_1_model_iter_ac3f3118f2aa6df676e40ad848929965f}{Seek\-To\-First} ()
+\item 
+virtual void \hyperlink{classleveldb_1_1_model_d_b_1_1_model_iter_a73f54e91a379f3584aaa1ad99f435c5f}{Seek\-To\-Last} ()
+\item 
+virtual void \hyperlink{classleveldb_1_1_model_d_b_1_1_model_iter_ab581a60c36582a06a835bcaf766dc124}{Seek} (const \hyperlink{classleveldb_1_1_slice}{Slice} \&k)
+\item 
+virtual void \hyperlink{classleveldb_1_1_model_d_b_1_1_model_iter_ae6c95ecf39787bc465ac7482fe7cf6fa}{Next} ()
+\item 
+virtual void \hyperlink{classleveldb_1_1_model_d_b_1_1_model_iter_acf667aa8d5e11d6acc16134959e43c40}{Prev} ()
+\item 
+virtual \hyperlink{classleveldb_1_1_slice}{Slice} \hyperlink{classleveldb_1_1_model_d_b_1_1_model_iter_a53ff9e91d51bc5bcab4585758a103749}{key} () const 
+\item 
+virtual \hyperlink{classleveldb_1_1_slice}{Slice} \hyperlink{classleveldb_1_1_model_d_b_1_1_model_iter_ad18eafbd733612fbe9f002b56334d871}{value} () const 
+\item 
+virtual \hyperlink{classleveldb_1_1_status}{Status} \hyperlink{classleveldb_1_1_model_d_b_1_1_model_iter_a4798d61aefbd89c93ca7ac753b695a11}{status} () const 
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{namespaceleveldb_aac1e50450147be263e08252c6700f7a7}{K\-V\-Map} $\ast$const \hyperlink{classleveldb_1_1_model_d_b_1_1_model_iter_aa50a4687f4db3ec38d01b7901c4e7fa0}{map\-\_\-}
+\item 
+const bool \hyperlink{classleveldb_1_1_model_d_b_1_1_model_iter_af5a4dd226cf3421411b622f9a9709c61}{owned\-\_\-}
+\item 
+K\-V\-Map\-::const\-\_\-iterator \hyperlink{classleveldb_1_1_model_d_b_1_1_model_iter_a8eef8d86a26c6b3c85a9498eb42e1075}{iter\-\_\-}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classleveldb_1_1_model_d_b_1_1_model_iter_a8ce3cac545f29fd55cbc0328bf3dbe26}{\index{leveldb\-::\-Model\-D\-B\-::\-Model\-Iter@{leveldb\-::\-Model\-D\-B\-::\-Model\-Iter}!Model\-Iter@{Model\-Iter}}
+\index{Model\-Iter@{Model\-Iter}!leveldb::ModelDB::ModelIter@{leveldb\-::\-Model\-D\-B\-::\-Model\-Iter}}
+\subsubsection[{Model\-Iter}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::\-Model\-D\-B\-::\-Model\-Iter\-::\-Model\-Iter (
+\begin{DoxyParamCaption}
+\item[{const {\bf K\-V\-Map} $\ast$}]{map, }
+\item[{bool}]{owned}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_model_d_b_1_1_model_iter_a8ce3cac545f29fd55cbc0328bf3dbe26}
+\hypertarget{classleveldb_1_1_model_d_b_1_1_model_iter_a3920ed0781aebe21dfccef855ff31946}{\index{leveldb\-::\-Model\-D\-B\-::\-Model\-Iter@{leveldb\-::\-Model\-D\-B\-::\-Model\-Iter}!$\sim$\-Model\-Iter@{$\sim$\-Model\-Iter}}
+\index{$\sim$\-Model\-Iter@{$\sim$\-Model\-Iter}!leveldb::ModelDB::ModelIter@{leveldb\-::\-Model\-D\-B\-::\-Model\-Iter}}
+\subsubsection[{$\sim$\-Model\-Iter}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::\-Model\-D\-B\-::\-Model\-Iter\-::$\sim$\-Model\-Iter (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_model_d_b_1_1_model_iter_a3920ed0781aebe21dfccef855ff31946}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classleveldb_1_1_model_d_b_1_1_model_iter_a53ff9e91d51bc5bcab4585758a103749}{\index{leveldb\-::\-Model\-D\-B\-::\-Model\-Iter@{leveldb\-::\-Model\-D\-B\-::\-Model\-Iter}!key@{key}}
+\index{key@{key}!leveldb::ModelDB::ModelIter@{leveldb\-::\-Model\-D\-B\-::\-Model\-Iter}}
+\subsubsection[{key}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Slice} leveldb\-::\-Model\-D\-B\-::\-Model\-Iter\-::key (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classleveldb_1_1_model_d_b_1_1_model_iter_a53ff9e91d51bc5bcab4585758a103749}
+
+
+Implements \hyperlink{classleveldb_1_1_iterator_ad17feced6e24a1b21db5ae6940c1f220}{leveldb\-::\-Iterator}.
+
+\hypertarget{classleveldb_1_1_model_d_b_1_1_model_iter_ae6c95ecf39787bc465ac7482fe7cf6fa}{\index{leveldb\-::\-Model\-D\-B\-::\-Model\-Iter@{leveldb\-::\-Model\-D\-B\-::\-Model\-Iter}!Next@{Next}}
+\index{Next@{Next}!leveldb::ModelDB::ModelIter@{leveldb\-::\-Model\-D\-B\-::\-Model\-Iter}}
+\subsubsection[{Next}]{\setlength{\rightskip}{0pt plus 5cm}virtual void leveldb\-::\-Model\-D\-B\-::\-Model\-Iter\-::\-Next (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classleveldb_1_1_model_d_b_1_1_model_iter_ae6c95ecf39787bc465ac7482fe7cf6fa}
+
+
+Implements \hyperlink{classleveldb_1_1_iterator_aea54a5ca7eb942eb15770820529410e7}{leveldb\-::\-Iterator}.
+
+\hypertarget{classleveldb_1_1_model_d_b_1_1_model_iter_acf667aa8d5e11d6acc16134959e43c40}{\index{leveldb\-::\-Model\-D\-B\-::\-Model\-Iter@{leveldb\-::\-Model\-D\-B\-::\-Model\-Iter}!Prev@{Prev}}
+\index{Prev@{Prev}!leveldb::ModelDB::ModelIter@{leveldb\-::\-Model\-D\-B\-::\-Model\-Iter}}
+\subsubsection[{Prev}]{\setlength{\rightskip}{0pt plus 5cm}virtual void leveldb\-::\-Model\-D\-B\-::\-Model\-Iter\-::\-Prev (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classleveldb_1_1_model_d_b_1_1_model_iter_acf667aa8d5e11d6acc16134959e43c40}
+
+
+Implements \hyperlink{classleveldb_1_1_iterator_a28798d802a203788587dc6adc5bc729e}{leveldb\-::\-Iterator}.
+
+\hypertarget{classleveldb_1_1_model_d_b_1_1_model_iter_ab581a60c36582a06a835bcaf766dc124}{\index{leveldb\-::\-Model\-D\-B\-::\-Model\-Iter@{leveldb\-::\-Model\-D\-B\-::\-Model\-Iter}!Seek@{Seek}}
+\index{Seek@{Seek}!leveldb::ModelDB::ModelIter@{leveldb\-::\-Model\-D\-B\-::\-Model\-Iter}}
+\subsubsection[{Seek}]{\setlength{\rightskip}{0pt plus 5cm}virtual void leveldb\-::\-Model\-D\-B\-::\-Model\-Iter\-::\-Seek (
+\begin{DoxyParamCaption}
+\item[{const {\bf Slice} \&}]{k}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classleveldb_1_1_model_d_b_1_1_model_iter_ab581a60c36582a06a835bcaf766dc124}
+
+
+Implements \hyperlink{classleveldb_1_1_iterator_a97a556e97ded60c677fbf4de7321ec44}{leveldb\-::\-Iterator}.
+
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_model_d_b_1_1_model_iter_ac3f3118f2aa6df676e40ad848929965f}{\index{leveldb\-::\-Model\-D\-B\-::\-Model\-Iter@{leveldb\-::\-Model\-D\-B\-::\-Model\-Iter}!Seek\-To\-First@{Seek\-To\-First}}
+\index{Seek\-To\-First@{Seek\-To\-First}!leveldb::ModelDB::ModelIter@{leveldb\-::\-Model\-D\-B\-::\-Model\-Iter}}
+\subsubsection[{Seek\-To\-First}]{\setlength{\rightskip}{0pt plus 5cm}virtual void leveldb\-::\-Model\-D\-B\-::\-Model\-Iter\-::\-Seek\-To\-First (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classleveldb_1_1_model_d_b_1_1_model_iter_ac3f3118f2aa6df676e40ad848929965f}
+
+
+Implements \hyperlink{classleveldb_1_1_iterator_a3594967cf26ddf1d37c7b886bb48627e}{leveldb\-::\-Iterator}.
+
+\hypertarget{classleveldb_1_1_model_d_b_1_1_model_iter_a73f54e91a379f3584aaa1ad99f435c5f}{\index{leveldb\-::\-Model\-D\-B\-::\-Model\-Iter@{leveldb\-::\-Model\-D\-B\-::\-Model\-Iter}!Seek\-To\-Last@{Seek\-To\-Last}}
+\index{Seek\-To\-Last@{Seek\-To\-Last}!leveldb::ModelDB::ModelIter@{leveldb\-::\-Model\-D\-B\-::\-Model\-Iter}}
+\subsubsection[{Seek\-To\-Last}]{\setlength{\rightskip}{0pt plus 5cm}virtual void leveldb\-::\-Model\-D\-B\-::\-Model\-Iter\-::\-Seek\-To\-Last (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classleveldb_1_1_model_d_b_1_1_model_iter_a73f54e91a379f3584aaa1ad99f435c5f}
+
+
+Implements \hyperlink{classleveldb_1_1_iterator_a8ad637f0a759e6d94cca6c5b4db440d3}{leveldb\-::\-Iterator}.
+
+\hypertarget{classleveldb_1_1_model_d_b_1_1_model_iter_a4798d61aefbd89c93ca7ac753b695a11}{\index{leveldb\-::\-Model\-D\-B\-::\-Model\-Iter@{leveldb\-::\-Model\-D\-B\-::\-Model\-Iter}!status@{status}}
+\index{status@{status}!leveldb::ModelDB::ModelIter@{leveldb\-::\-Model\-D\-B\-::\-Model\-Iter}}
+\subsubsection[{status}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Status} leveldb\-::\-Model\-D\-B\-::\-Model\-Iter\-::status (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classleveldb_1_1_model_d_b_1_1_model_iter_a4798d61aefbd89c93ca7ac753b695a11}
+
+
+Implements \hyperlink{classleveldb_1_1_iterator_ac84f34623a031b7eeb23409320f76376}{leveldb\-::\-Iterator}.
+
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_model_d_b_1_1_model_iter_a645d712995a2926a2699a6274fdd8c96}{\index{leveldb\-::\-Model\-D\-B\-::\-Model\-Iter@{leveldb\-::\-Model\-D\-B\-::\-Model\-Iter}!Valid@{Valid}}
+\index{Valid@{Valid}!leveldb::ModelDB::ModelIter@{leveldb\-::\-Model\-D\-B\-::\-Model\-Iter}}
+\subsubsection[{Valid}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool leveldb\-::\-Model\-D\-B\-::\-Model\-Iter\-::\-Valid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classleveldb_1_1_model_d_b_1_1_model_iter_a645d712995a2926a2699a6274fdd8c96}
+
+
+Implements \hyperlink{classleveldb_1_1_iterator_a38614978bfa0586327b8e237bcb46012}{leveldb\-::\-Iterator}.
+
+\hypertarget{classleveldb_1_1_model_d_b_1_1_model_iter_ad18eafbd733612fbe9f002b56334d871}{\index{leveldb\-::\-Model\-D\-B\-::\-Model\-Iter@{leveldb\-::\-Model\-D\-B\-::\-Model\-Iter}!value@{value}}
+\index{value@{value}!leveldb::ModelDB::ModelIter@{leveldb\-::\-Model\-D\-B\-::\-Model\-Iter}}
+\subsubsection[{value}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Slice} leveldb\-::\-Model\-D\-B\-::\-Model\-Iter\-::value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classleveldb_1_1_model_d_b_1_1_model_iter_ad18eafbd733612fbe9f002b56334d871}
+
+
+Implements \hyperlink{classleveldb_1_1_iterator_a613ac2e965518aad7a064c64c72bcf7c}{leveldb\-::\-Iterator}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classleveldb_1_1_model_d_b_1_1_model_iter_a8eef8d86a26c6b3c85a9498eb42e1075}{\index{leveldb\-::\-Model\-D\-B\-::\-Model\-Iter@{leveldb\-::\-Model\-D\-B\-::\-Model\-Iter}!iter\-\_\-@{iter\-\_\-}}
+\index{iter\-\_\-@{iter\-\_\-}!leveldb::ModelDB::ModelIter@{leveldb\-::\-Model\-D\-B\-::\-Model\-Iter}}
+\subsubsection[{iter\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}K\-V\-Map\-::const\-\_\-iterator leveldb\-::\-Model\-D\-B\-::\-Model\-Iter\-::iter\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_model_d_b_1_1_model_iter_a8eef8d86a26c6b3c85a9498eb42e1075}
+\hypertarget{classleveldb_1_1_model_d_b_1_1_model_iter_aa50a4687f4db3ec38d01b7901c4e7fa0}{\index{leveldb\-::\-Model\-D\-B\-::\-Model\-Iter@{leveldb\-::\-Model\-D\-B\-::\-Model\-Iter}!map\-\_\-@{map\-\_\-}}
+\index{map\-\_\-@{map\-\_\-}!leveldb::ModelDB::ModelIter@{leveldb\-::\-Model\-D\-B\-::\-Model\-Iter}}
+\subsubsection[{map\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf K\-V\-Map}$\ast$ const leveldb\-::\-Model\-D\-B\-::\-Model\-Iter\-::map\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_model_d_b_1_1_model_iter_aa50a4687f4db3ec38d01b7901c4e7fa0}
+\hypertarget{classleveldb_1_1_model_d_b_1_1_model_iter_af5a4dd226cf3421411b622f9a9709c61}{\index{leveldb\-::\-Model\-D\-B\-::\-Model\-Iter@{leveldb\-::\-Model\-D\-B\-::\-Model\-Iter}!owned\-\_\-@{owned\-\_\-}}
+\index{owned\-\_\-@{owned\-\_\-}!leveldb::ModelDB::ModelIter@{leveldb\-::\-Model\-D\-B\-::\-Model\-Iter}}
+\subsubsection[{owned\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}const bool leveldb\-::\-Model\-D\-B\-::\-Model\-Iter\-::owned\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_model_d_b_1_1_model_iter_af5a4dd226cf3421411b622f9a9709c61}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+db/\hyperlink{db__test_8cc}{db\-\_\-test.\-cc}\end{DoxyCompactItemize}

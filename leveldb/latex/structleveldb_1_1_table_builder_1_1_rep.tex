@@ -1,0 +1,103 @@
+\hypertarget{structleveldb_1_1_table_builder_1_1_rep}{\section{leveldb\-:\-:Table\-Builder\-:\-:Rep Struct Reference}
+\label{structleveldb_1_1_table_builder_1_1_rep}\index{leveldb\-::\-Table\-Builder\-::\-Rep@{leveldb\-::\-Table\-Builder\-::\-Rep}}
+}
+
+
+Collaboration diagram for leveldb\-:\-:Table\-Builder\-:\-:Rep\-:
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structleveldb_1_1_table_builder_1_1_rep_a9d68c60c57e7336aa1fd10fc9f32213e}{Rep} (const \hyperlink{structleveldb_1_1_options}{Options} \&opt, \hyperlink{classleveldb_1_1_writable_file}{Writable\-File} $\ast$f)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structleveldb_1_1_options}{Options} \hyperlink{structleveldb_1_1_table_builder_1_1_rep_a0ca1914136ea4c451b026b4f1913fe36}{options}
+\item 
+\hyperlink{structleveldb_1_1_options}{Options} \hyperlink{structleveldb_1_1_table_builder_1_1_rep_a3ae22fe880ca1b98c3a7e24c1ec72c98}{index\-\_\-block\-\_\-options}
+\item 
+\hyperlink{classleveldb_1_1_writable_file}{Writable\-File} $\ast$ \hyperlink{structleveldb_1_1_table_builder_1_1_rep_a3c33014db181b382785784cf0864f92b}{file}
+\item 
+\hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} \hyperlink{structleveldb_1_1_table_builder_1_1_rep_a308abc45d45b23d05a0764f6fc501c40}{offset}
+\item 
+\hyperlink{classleveldb_1_1_status}{Status} \hyperlink{structleveldb_1_1_table_builder_1_1_rep_a8345f0a97587121457fb180a1fb081dd}{status}
+\item 
+\hyperlink{classleveldb_1_1_block_builder}{Block\-Builder} \hyperlink{structleveldb_1_1_table_builder_1_1_rep_a6bef8b1271d88ec2d38aa7a0f9ae8a24}{data\-\_\-block}
+\item 
+\hyperlink{classleveldb_1_1_block_builder}{Block\-Builder} \hyperlink{structleveldb_1_1_table_builder_1_1_rep_a7d5740122ca84239cb009d513cf14681}{index\-\_\-block}
+\item 
+std\-::string \hyperlink{structleveldb_1_1_table_builder_1_1_rep_a5a071831c7e42011a40b04cb60cdfa09}{last\-\_\-key}
+\item 
+\hyperlink{stdint_8h_adec1df1b8b51cb32b77e5b86fff46471}{int64\-\_\-t} \hyperlink{structleveldb_1_1_table_builder_1_1_rep_a89f93baffb3ca5c8239796dc1a57777a}{num\-\_\-entries}
+\item 
+bool \hyperlink{structleveldb_1_1_table_builder_1_1_rep_a5324550d58b999bcea173b1c21060138}{closed}
+\item 
+\hyperlink{classleveldb_1_1_filter_block_builder}{Filter\-Block\-Builder} $\ast$ \hyperlink{structleveldb_1_1_table_builder_1_1_rep_aad1620ca746b7287a819880be083ec6b}{filter\-\_\-block}
+\item 
+bool \hyperlink{structleveldb_1_1_table_builder_1_1_rep_a56e14221a2e29941a37d208f99770c20}{pending\-\_\-index\-\_\-entry}
+\item 
+\hyperlink{classleveldb_1_1_block_handle}{Block\-Handle} \hyperlink{structleveldb_1_1_table_builder_1_1_rep_abf3b47f6f2b7407399c7134ac65f7225}{pending\-\_\-handle}
+\item 
+std\-::string \hyperlink{structleveldb_1_1_table_builder_1_1_rep_ae299e513afc71a8474c303b25aaadb08}{compressed\-\_\-output}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{structleveldb_1_1_table_builder_1_1_rep_a9d68c60c57e7336aa1fd10fc9f32213e}{\index{leveldb\-::\-Table\-Builder\-::\-Rep@{leveldb\-::\-Table\-Builder\-::\-Rep}!Rep@{Rep}}
+\index{Rep@{Rep}!leveldb::TableBuilder::Rep@{leveldb\-::\-Table\-Builder\-::\-Rep}}
+\subsubsection[{Rep}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::\-Table\-Builder\-::\-Rep\-::\-Rep (
+\begin{DoxyParamCaption}
+\item[{const {\bf Options} \&}]{opt, }
+\item[{{\bf Writable\-File} $\ast$}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structleveldb_1_1_table_builder_1_1_rep_a9d68c60c57e7336aa1fd10fc9f32213e}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{structleveldb_1_1_table_builder_1_1_rep_a5324550d58b999bcea173b1c21060138}{\index{leveldb\-::\-Table\-Builder\-::\-Rep@{leveldb\-::\-Table\-Builder\-::\-Rep}!closed@{closed}}
+\index{closed@{closed}!leveldb::TableBuilder::Rep@{leveldb\-::\-Table\-Builder\-::\-Rep}}
+\subsubsection[{closed}]{\setlength{\rightskip}{0pt plus 5cm}bool leveldb\-::\-Table\-Builder\-::\-Rep\-::closed}}\label{structleveldb_1_1_table_builder_1_1_rep_a5324550d58b999bcea173b1c21060138}
+\hypertarget{structleveldb_1_1_table_builder_1_1_rep_ae299e513afc71a8474c303b25aaadb08}{\index{leveldb\-::\-Table\-Builder\-::\-Rep@{leveldb\-::\-Table\-Builder\-::\-Rep}!compressed\-\_\-output@{compressed\-\_\-output}}
+\index{compressed\-\_\-output@{compressed\-\_\-output}!leveldb::TableBuilder::Rep@{leveldb\-::\-Table\-Builder\-::\-Rep}}
+\subsubsection[{compressed\-\_\-output}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string leveldb\-::\-Table\-Builder\-::\-Rep\-::compressed\-\_\-output}}\label{structleveldb_1_1_table_builder_1_1_rep_ae299e513afc71a8474c303b25aaadb08}
+\hypertarget{structleveldb_1_1_table_builder_1_1_rep_a6bef8b1271d88ec2d38aa7a0f9ae8a24}{\index{leveldb\-::\-Table\-Builder\-::\-Rep@{leveldb\-::\-Table\-Builder\-::\-Rep}!data\-\_\-block@{data\-\_\-block}}
+\index{data\-\_\-block@{data\-\_\-block}!leveldb::TableBuilder::Rep@{leveldb\-::\-Table\-Builder\-::\-Rep}}
+\subsubsection[{data\-\_\-block}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Block\-Builder} leveldb\-::\-Table\-Builder\-::\-Rep\-::data\-\_\-block}}\label{structleveldb_1_1_table_builder_1_1_rep_a6bef8b1271d88ec2d38aa7a0f9ae8a24}
+\hypertarget{structleveldb_1_1_table_builder_1_1_rep_a3c33014db181b382785784cf0864f92b}{\index{leveldb\-::\-Table\-Builder\-::\-Rep@{leveldb\-::\-Table\-Builder\-::\-Rep}!file@{file}}
+\index{file@{file}!leveldb::TableBuilder::Rep@{leveldb\-::\-Table\-Builder\-::\-Rep}}
+\subsubsection[{file}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Writable\-File}$\ast$ leveldb\-::\-Table\-Builder\-::\-Rep\-::file}}\label{structleveldb_1_1_table_builder_1_1_rep_a3c33014db181b382785784cf0864f92b}
+\hypertarget{structleveldb_1_1_table_builder_1_1_rep_aad1620ca746b7287a819880be083ec6b}{\index{leveldb\-::\-Table\-Builder\-::\-Rep@{leveldb\-::\-Table\-Builder\-::\-Rep}!filter\-\_\-block@{filter\-\_\-block}}
+\index{filter\-\_\-block@{filter\-\_\-block}!leveldb::TableBuilder::Rep@{leveldb\-::\-Table\-Builder\-::\-Rep}}
+\subsubsection[{filter\-\_\-block}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Filter\-Block\-Builder}$\ast$ leveldb\-::\-Table\-Builder\-::\-Rep\-::filter\-\_\-block}}\label{structleveldb_1_1_table_builder_1_1_rep_aad1620ca746b7287a819880be083ec6b}
+\hypertarget{structleveldb_1_1_table_builder_1_1_rep_a7d5740122ca84239cb009d513cf14681}{\index{leveldb\-::\-Table\-Builder\-::\-Rep@{leveldb\-::\-Table\-Builder\-::\-Rep}!index\-\_\-block@{index\-\_\-block}}
+\index{index\-\_\-block@{index\-\_\-block}!leveldb::TableBuilder::Rep@{leveldb\-::\-Table\-Builder\-::\-Rep}}
+\subsubsection[{index\-\_\-block}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Block\-Builder} leveldb\-::\-Table\-Builder\-::\-Rep\-::index\-\_\-block}}\label{structleveldb_1_1_table_builder_1_1_rep_a7d5740122ca84239cb009d513cf14681}
+\hypertarget{structleveldb_1_1_table_builder_1_1_rep_a3ae22fe880ca1b98c3a7e24c1ec72c98}{\index{leveldb\-::\-Table\-Builder\-::\-Rep@{leveldb\-::\-Table\-Builder\-::\-Rep}!index\-\_\-block\-\_\-options@{index\-\_\-block\-\_\-options}}
+\index{index\-\_\-block\-\_\-options@{index\-\_\-block\-\_\-options}!leveldb::TableBuilder::Rep@{leveldb\-::\-Table\-Builder\-::\-Rep}}
+\subsubsection[{index\-\_\-block\-\_\-options}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Options} leveldb\-::\-Table\-Builder\-::\-Rep\-::index\-\_\-block\-\_\-options}}\label{structleveldb_1_1_table_builder_1_1_rep_a3ae22fe880ca1b98c3a7e24c1ec72c98}
+\hypertarget{structleveldb_1_1_table_builder_1_1_rep_a5a071831c7e42011a40b04cb60cdfa09}{\index{leveldb\-::\-Table\-Builder\-::\-Rep@{leveldb\-::\-Table\-Builder\-::\-Rep}!last\-\_\-key@{last\-\_\-key}}
+\index{last\-\_\-key@{last\-\_\-key}!leveldb::TableBuilder::Rep@{leveldb\-::\-Table\-Builder\-::\-Rep}}
+\subsubsection[{last\-\_\-key}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string leveldb\-::\-Table\-Builder\-::\-Rep\-::last\-\_\-key}}\label{structleveldb_1_1_table_builder_1_1_rep_a5a071831c7e42011a40b04cb60cdfa09}
+\hypertarget{structleveldb_1_1_table_builder_1_1_rep_a89f93baffb3ca5c8239796dc1a57777a}{\index{leveldb\-::\-Table\-Builder\-::\-Rep@{leveldb\-::\-Table\-Builder\-::\-Rep}!num\-\_\-entries@{num\-\_\-entries}}
+\index{num\-\_\-entries@{num\-\_\-entries}!leveldb::TableBuilder::Rep@{leveldb\-::\-Table\-Builder\-::\-Rep}}
+\subsubsection[{num\-\_\-entries}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int64\-\_\-t} leveldb\-::\-Table\-Builder\-::\-Rep\-::num\-\_\-entries}}\label{structleveldb_1_1_table_builder_1_1_rep_a89f93baffb3ca5c8239796dc1a57777a}
+\hypertarget{structleveldb_1_1_table_builder_1_1_rep_a308abc45d45b23d05a0764f6fc501c40}{\index{leveldb\-::\-Table\-Builder\-::\-Rep@{leveldb\-::\-Table\-Builder\-::\-Rep}!offset@{offset}}
+\index{offset@{offset}!leveldb::TableBuilder::Rep@{leveldb\-::\-Table\-Builder\-::\-Rep}}
+\subsubsection[{offset}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint64\-\_\-t} leveldb\-::\-Table\-Builder\-::\-Rep\-::offset}}\label{structleveldb_1_1_table_builder_1_1_rep_a308abc45d45b23d05a0764f6fc501c40}
+\hypertarget{structleveldb_1_1_table_builder_1_1_rep_a0ca1914136ea4c451b026b4f1913fe36}{\index{leveldb\-::\-Table\-Builder\-::\-Rep@{leveldb\-::\-Table\-Builder\-::\-Rep}!options@{options}}
+\index{options@{options}!leveldb::TableBuilder::Rep@{leveldb\-::\-Table\-Builder\-::\-Rep}}
+\subsubsection[{options}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Options} leveldb\-::\-Table\-Builder\-::\-Rep\-::options}}\label{structleveldb_1_1_table_builder_1_1_rep_a0ca1914136ea4c451b026b4f1913fe36}
+\hypertarget{structleveldb_1_1_table_builder_1_1_rep_abf3b47f6f2b7407399c7134ac65f7225}{\index{leveldb\-::\-Table\-Builder\-::\-Rep@{leveldb\-::\-Table\-Builder\-::\-Rep}!pending\-\_\-handle@{pending\-\_\-handle}}
+\index{pending\-\_\-handle@{pending\-\_\-handle}!leveldb::TableBuilder::Rep@{leveldb\-::\-Table\-Builder\-::\-Rep}}
+\subsubsection[{pending\-\_\-handle}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Block\-Handle} leveldb\-::\-Table\-Builder\-::\-Rep\-::pending\-\_\-handle}}\label{structleveldb_1_1_table_builder_1_1_rep_abf3b47f6f2b7407399c7134ac65f7225}
+\hypertarget{structleveldb_1_1_table_builder_1_1_rep_a56e14221a2e29941a37d208f99770c20}{\index{leveldb\-::\-Table\-Builder\-::\-Rep@{leveldb\-::\-Table\-Builder\-::\-Rep}!pending\-\_\-index\-\_\-entry@{pending\-\_\-index\-\_\-entry}}
+\index{pending\-\_\-index\-\_\-entry@{pending\-\_\-index\-\_\-entry}!leveldb::TableBuilder::Rep@{leveldb\-::\-Table\-Builder\-::\-Rep}}
+\subsubsection[{pending\-\_\-index\-\_\-entry}]{\setlength{\rightskip}{0pt plus 5cm}bool leveldb\-::\-Table\-Builder\-::\-Rep\-::pending\-\_\-index\-\_\-entry}}\label{structleveldb_1_1_table_builder_1_1_rep_a56e14221a2e29941a37d208f99770c20}
+\hypertarget{structleveldb_1_1_table_builder_1_1_rep_a8345f0a97587121457fb180a1fb081dd}{\index{leveldb\-::\-Table\-Builder\-::\-Rep@{leveldb\-::\-Table\-Builder\-::\-Rep}!status@{status}}
+\index{status@{status}!leveldb::TableBuilder::Rep@{leveldb\-::\-Table\-Builder\-::\-Rep}}
+\subsubsection[{status}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Status} leveldb\-::\-Table\-Builder\-::\-Rep\-::status}}\label{structleveldb_1_1_table_builder_1_1_rep_a8345f0a97587121457fb180a1fb081dd}
+
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+table/\hyperlink{table__builder_8cc}{table\-\_\-builder.\-cc}\end{DoxyCompactItemize}

@@ -1,0 +1,172 @@
+\hypertarget{classleveldb_1_1port_1_1_cond_var}{\section{leveldb\-:\-:port\-:\-:Cond\-Var Class Reference}
+\label{classleveldb_1_1port_1_1_cond_var}\index{leveldb\-::port\-::\-Cond\-Var@{leveldb\-::port\-::\-Cond\-Var}}
+}
+
+
+{\ttfamily \#include $<$port\-\_\-example.\-h$>$}
+
+
+
+Collaboration diagram for leveldb\-:\-:port\-:\-:Cond\-Var\-:
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classleveldb_1_1port_1_1_cond_var_abb23c74c7b58298a20d4cfd6a0c5839a}{Cond\-Var} (\hyperlink{classleveldb_1_1port_1_1_mutex}{Mutex} $\ast$\hyperlink{db__impl_8cc_a900dad9ea326bf70a183d88a8ab50a13}{mu})
+\item 
+\hyperlink{classleveldb_1_1port_1_1_cond_var_abf5e80198afeeccf1ee1b9af848d0cf6}{$\sim$\-Cond\-Var} ()
+\item 
+void \hyperlink{classleveldb_1_1port_1_1_cond_var_a9e9855595a3f3a3ccf47949696065597}{Wait} ()
+\item 
+void \hyperlink{classleveldb_1_1port_1_1_cond_var_ac36a2038b058b24886741c99e4a7d7d4}{Signal} ()
+\item 
+void \hyperlink{classleveldb_1_1port_1_1_cond_var_a516114902b0ac99e541d74f182faa7b4}{Signall\-All} ()
+\item 
+\hyperlink{classleveldb_1_1port_1_1_cond_var_abb23c74c7b58298a20d4cfd6a0c5839a}{Cond\-Var} (\hyperlink{classleveldb_1_1port_1_1_mutex}{Mutex} $\ast$\hyperlink{db__impl_8cc_a900dad9ea326bf70a183d88a8ab50a13}{mu})
+\item 
+\hyperlink{classleveldb_1_1port_1_1_cond_var_abf5e80198afeeccf1ee1b9af848d0cf6}{$\sim$\-Cond\-Var} ()
+\item 
+void \hyperlink{classleveldb_1_1port_1_1_cond_var_a9e9855595a3f3a3ccf47949696065597}{Wait} ()
+\item 
+void \hyperlink{classleveldb_1_1port_1_1_cond_var_ac36a2038b058b24886741c99e4a7d7d4}{Signal} ()
+\item 
+void \hyperlink{classleveldb_1_1port_1_1_cond_var_ad7725662f3c1bc542100c41081d1428a}{Signal\-All} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+pthread\-\_\-cond\-\_\-t \hyperlink{classleveldb_1_1port_1_1_cond_var_a371cf7e27428abc9552a569e027589b0}{cv\-\_\-}
+\item 
+\hyperlink{classleveldb_1_1port_1_1_mutex}{Mutex} $\ast$ \hyperlink{classleveldb_1_1port_1_1_cond_var_a55f10ea05ab190e8790979cd8583430b}{mu\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classleveldb_1_1port_1_1_cond_var_abb23c74c7b58298a20d4cfd6a0c5839a}{\index{leveldb\-::port\-::\-Cond\-Var@{leveldb\-::port\-::\-Cond\-Var}!Cond\-Var@{Cond\-Var}}
+\index{Cond\-Var@{Cond\-Var}!leveldb::port::CondVar@{leveldb\-::port\-::\-Cond\-Var}}
+\subsubsection[{Cond\-Var}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::port\-::\-Cond\-Var\-::\-Cond\-Var (
+\begin{DoxyParamCaption}
+\item[{{\bf Mutex} $\ast$}]{mu}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}}\label{classleveldb_1_1port_1_1_cond_var_abb23c74c7b58298a20d4cfd6a0c5839a}
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1port_1_1_cond_var_abf5e80198afeeccf1ee1b9af848d0cf6}{\index{leveldb\-::port\-::\-Cond\-Var@{leveldb\-::port\-::\-Cond\-Var}!$\sim$\-Cond\-Var@{$\sim$\-Cond\-Var}}
+\index{$\sim$\-Cond\-Var@{$\sim$\-Cond\-Var}!leveldb::port::CondVar@{leveldb\-::port\-::\-Cond\-Var}}
+\subsubsection[{$\sim$\-Cond\-Var}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::port\-::\-Cond\-Var\-::$\sim$\-Cond\-Var (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classleveldb_1_1port_1_1_cond_var_abf5e80198afeeccf1ee1b9af848d0cf6}
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1port_1_1_cond_var_abb23c74c7b58298a20d4cfd6a0c5839a}{\index{leveldb\-::port\-::\-Cond\-Var@{leveldb\-::port\-::\-Cond\-Var}!Cond\-Var@{Cond\-Var}}
+\index{Cond\-Var@{Cond\-Var}!leveldb::port::CondVar@{leveldb\-::port\-::\-Cond\-Var}}
+\subsubsection[{Cond\-Var}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::port\-::\-Cond\-Var\-::\-Cond\-Var (
+\begin{DoxyParamCaption}
+\item[{{\bf Mutex} $\ast$}]{mu}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}}\label{classleveldb_1_1port_1_1_cond_var_abb23c74c7b58298a20d4cfd6a0c5839a}
+\hypertarget{classleveldb_1_1port_1_1_cond_var_abf5e80198afeeccf1ee1b9af848d0cf6}{\index{leveldb\-::port\-::\-Cond\-Var@{leveldb\-::port\-::\-Cond\-Var}!$\sim$\-Cond\-Var@{$\sim$\-Cond\-Var}}
+\index{$\sim$\-Cond\-Var@{$\sim$\-Cond\-Var}!leveldb::port::CondVar@{leveldb\-::port\-::\-Cond\-Var}}
+\subsubsection[{$\sim$\-Cond\-Var}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::port\-::\-Cond\-Var\-::$\sim$\-Cond\-Var (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classleveldb_1_1port_1_1_cond_var_abf5e80198afeeccf1ee1b9af848d0cf6}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classleveldb_1_1port_1_1_cond_var_ac36a2038b058b24886741c99e4a7d7d4}{\index{leveldb\-::port\-::\-Cond\-Var@{leveldb\-::port\-::\-Cond\-Var}!Signal@{Signal}}
+\index{Signal@{Signal}!leveldb::port::CondVar@{leveldb\-::port\-::\-Cond\-Var}}
+\subsubsection[{Signal}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::port\-::\-Cond\-Var\-::\-Signal (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classleveldb_1_1port_1_1_cond_var_ac36a2038b058b24886741c99e4a7d7d4}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1port_1_1_cond_var_ac36a2038b058b24886741c99e4a7d7d4}{\index{leveldb\-::port\-::\-Cond\-Var@{leveldb\-::port\-::\-Cond\-Var}!Signal@{Signal}}
+\index{Signal@{Signal}!leveldb::port::CondVar@{leveldb\-::port\-::\-Cond\-Var}}
+\subsubsection[{Signal}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::port\-::\-Cond\-Var\-::\-Signal (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classleveldb_1_1port_1_1_cond_var_ac36a2038b058b24886741c99e4a7d7d4}
+\hypertarget{classleveldb_1_1port_1_1_cond_var_ad7725662f3c1bc542100c41081d1428a}{\index{leveldb\-::port\-::\-Cond\-Var@{leveldb\-::port\-::\-Cond\-Var}!Signal\-All@{Signal\-All}}
+\index{Signal\-All@{Signal\-All}!leveldb::port::CondVar@{leveldb\-::port\-::\-Cond\-Var}}
+\subsubsection[{Signal\-All}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::port\-::\-Cond\-Var\-::\-Signal\-All (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classleveldb_1_1port_1_1_cond_var_ad7725662f3c1bc542100c41081d1428a}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1port_1_1_cond_var_a516114902b0ac99e541d74f182faa7b4}{\index{leveldb\-::port\-::\-Cond\-Var@{leveldb\-::port\-::\-Cond\-Var}!Signall\-All@{Signall\-All}}
+\index{Signall\-All@{Signall\-All}!leveldb::port::CondVar@{leveldb\-::port\-::\-Cond\-Var}}
+\subsubsection[{Signall\-All}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::port\-::\-Cond\-Var\-::\-Signall\-All (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classleveldb_1_1port_1_1_cond_var_a516114902b0ac99e541d74f182faa7b4}
+\hypertarget{classleveldb_1_1port_1_1_cond_var_a9e9855595a3f3a3ccf47949696065597}{\index{leveldb\-::port\-::\-Cond\-Var@{leveldb\-::port\-::\-Cond\-Var}!Wait@{Wait}}
+\index{Wait@{Wait}!leveldb::port::CondVar@{leveldb\-::port\-::\-Cond\-Var}}
+\subsubsection[{Wait}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::port\-::\-Cond\-Var\-::\-Wait (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classleveldb_1_1port_1_1_cond_var_a9e9855595a3f3a3ccf47949696065597}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1port_1_1_cond_var_a9e9855595a3f3a3ccf47949696065597}{\index{leveldb\-::port\-::\-Cond\-Var@{leveldb\-::port\-::\-Cond\-Var}!Wait@{Wait}}
+\index{Wait@{Wait}!leveldb::port::CondVar@{leveldb\-::port\-::\-Cond\-Var}}
+\subsubsection[{Wait}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::port\-::\-Cond\-Var\-::\-Wait (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classleveldb_1_1port_1_1_cond_var_a9e9855595a3f3a3ccf47949696065597}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classleveldb_1_1port_1_1_cond_var_a371cf7e27428abc9552a569e027589b0}{\index{leveldb\-::port\-::\-Cond\-Var@{leveldb\-::port\-::\-Cond\-Var}!cv\-\_\-@{cv\-\_\-}}
+\index{cv\-\_\-@{cv\-\_\-}!leveldb::port::CondVar@{leveldb\-::port\-::\-Cond\-Var}}
+\subsubsection[{cv\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}pthread\-\_\-cond\-\_\-t leveldb\-::port\-::\-Cond\-Var\-::cv\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1port_1_1_cond_var_a371cf7e27428abc9552a569e027589b0}
+\hypertarget{classleveldb_1_1port_1_1_cond_var_a55f10ea05ab190e8790979cd8583430b}{\index{leveldb\-::port\-::\-Cond\-Var@{leveldb\-::port\-::\-Cond\-Var}!mu\-\_\-@{mu\-\_\-}}
+\index{mu\-\_\-@{mu\-\_\-}!leveldb::port::CondVar@{leveldb\-::port\-::\-Cond\-Var}}
+\subsubsection[{mu\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Mutex}$\ast$ leveldb\-::port\-::\-Cond\-Var\-::mu\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1port_1_1_cond_var_a55f10ea05ab190e8790979cd8583430b}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+port/\hyperlink{port__example_8h}{port\-\_\-example.\-h}\item 
+port/\hyperlink{port__posix_8h}{port\-\_\-posix.\-h}\item 
+port/\hyperlink{port__posix_8cc}{port\-\_\-posix.\-cc}\end{DoxyCompactItemize}

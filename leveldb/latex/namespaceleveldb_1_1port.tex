@@ -1,0 +1,154 @@
+\hypertarget{namespaceleveldb_1_1port}{\section{leveldb\-:\-:port Namespace Reference}
+\label{namespaceleveldb_1_1port}\index{leveldb\-::port@{leveldb\-::port}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classleveldb_1_1port_1_1_mutex}{Mutex}
+\item 
+class \hyperlink{classleveldb_1_1port_1_1_cond_var}{Cond\-Var}
+\item 
+class \hyperlink{classleveldb_1_1port_1_1_atomic_pointer}{Atomic\-Pointer}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef intptr\-\_\-t \hyperlink{namespaceleveldb_1_1port_a80651a8fb458d9b7b3c1f492f9abd055}{Once\-Type}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{namespaceleveldb_1_1port_a1493e91d494e6f0ea086a743a562e983}{Init\-Once} (\hyperlink{namespaceleveldb_1_1port_a80651a8fb458d9b7b3c1f492f9abd055}{port\-::\-Once\-Type} $\ast$, void($\ast$initializer)())
+\item 
+bool \hyperlink{namespaceleveldb_1_1port_ae6e60ac8eb298c7eef3bb70ded8c809f}{Snappy\-\_\-\-Compress} (const char $\ast$input, size\-\_\-t input\-\_\-length, std\-::string $\ast$output)
+\item 
+bool \hyperlink{namespaceleveldb_1_1port_aad536a786dfc1df63d14c6b74178a73b}{Snappy\-\_\-\-Get\-Uncompressed\-Length} (const char $\ast$input, size\-\_\-t length, size\-\_\-t $\ast$result)
+\item 
+bool \hyperlink{namespaceleveldb_1_1port_ab6f0c4381b00450e06d3000a8cb48a55}{Snappy\-\_\-\-Uncompress} (const char $\ast$input\-\_\-data, size\-\_\-t input\-\_\-length, char $\ast$output)
+\item 
+bool \hyperlink{namespaceleveldb_1_1port_a1686423180e60af953153121c615f5fe}{Get\-Heap\-Profile} (void($\ast$\hyperlink{testharness_8cc_a0a8271b25a6a647b48a0be0bc49c9409}{func})(void $\ast$, const char $\ast$, int), void $\ast$\hyperlink{env__posix_8cc_a9ce2ec4812a92cb6ab39f6e81e9173a9}{arg})
+\item 
+static void \hyperlink{namespaceleveldb_1_1port_a614e0b6f0b21d697fe4001dbe3d8798b}{Pthread\-Call} (const char $\ast$label, int result)
+\item 
+bool \hyperlink{namespaceleveldb_1_1port_a64d0eafc3cfb484000e6afb5cbcc9d87}{Snappy\-\_\-\-Compress} (const char $\ast$input, size\-\_\-t length,\-::std\-::string $\ast$output)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static const bool \hyperlink{namespaceleveldb_1_1port_a1d2c52a3c3be0edb6562c9494b85bfec}{k\-Little\-Endian} = true
+\item 
+static const bool \hyperlink{namespaceleveldb_1_1port_a1d2c52a3c3be0edb6562c9494b85bfec}{k\-Little\-Endian} = \hyperlink{port__posix_8h_a70cdc2961c4e178e613d23a851e57f5d}{P\-L\-A\-T\-F\-O\-R\-M\-\_\-\-I\-S\-\_\-\-L\-I\-T\-T\-L\-E\-\_\-\-E\-N\-D\-I\-A\-N}
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{namespaceleveldb_1_1port_a80651a8fb458d9b7b3c1f492f9abd055}{\index{leveldb\-::port@{leveldb\-::port}!Once\-Type@{Once\-Type}}
+\index{Once\-Type@{Once\-Type}!leveldb::port@{leveldb\-::port}}
+\subsubsection[{Once\-Type}]{\setlength{\rightskip}{0pt plus 5cm}typedef pthread\-\_\-once\-\_\-t {\bf leveldb\-::port\-::\-Once\-Type}}}\label{namespaceleveldb_1_1port_a80651a8fb458d9b7b3c1f492f9abd055}
+
+
+\subsection{Function Documentation}
+\hypertarget{namespaceleveldb_1_1port_a1686423180e60af953153121c615f5fe}{\index{leveldb\-::port@{leveldb\-::port}!Get\-Heap\-Profile@{Get\-Heap\-Profile}}
+\index{Get\-Heap\-Profile@{Get\-Heap\-Profile}!leveldb::port@{leveldb\-::port}}
+\subsubsection[{Get\-Heap\-Profile}]{\setlength{\rightskip}{0pt plus 5cm}bool leveldb\-::port\-::\-Get\-Heap\-Profile (
+\begin{DoxyParamCaption}
+\item[{void($\ast$)(void $\ast$, const char $\ast$, int)}]{func, }
+\item[{void $\ast$}]{arg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{namespaceleveldb_1_1port_a1686423180e60af953153121c615f5fe}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{namespaceleveldb_1_1port_a1493e91d494e6f0ea086a743a562e983}{\index{leveldb\-::port@{leveldb\-::port}!Init\-Once@{Init\-Once}}
+\index{Init\-Once@{Init\-Once}!leveldb::port@{leveldb\-::port}}
+\subsubsection[{Init\-Once}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::port\-::\-Init\-Once (
+\begin{DoxyParamCaption}
+\item[{port\-::\-Once\-Type $\ast$}]{, }
+\item[{void($\ast$)()}]{initializer}
+\end{DoxyParamCaption}
+)}}\label{namespaceleveldb_1_1port_a1493e91d494e6f0ea086a743a562e983}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{namespaceleveldb_1_1port_a614e0b6f0b21d697fe4001dbe3d8798b}{\index{leveldb\-::port@{leveldb\-::port}!Pthread\-Call@{Pthread\-Call}}
+\index{Pthread\-Call@{Pthread\-Call}!leveldb::port@{leveldb\-::port}}
+\subsubsection[{Pthread\-Call}]{\setlength{\rightskip}{0pt plus 5cm}static void leveldb\-::port\-::\-Pthread\-Call (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{label, }
+\item[{int}]{result}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{namespaceleveldb_1_1port_a614e0b6f0b21d697fe4001dbe3d8798b}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{namespaceleveldb_1_1port_ae6e60ac8eb298c7eef3bb70ded8c809f}{\index{leveldb\-::port@{leveldb\-::port}!Snappy\-\_\-\-Compress@{Snappy\-\_\-\-Compress}}
+\index{Snappy\-\_\-\-Compress@{Snappy\-\_\-\-Compress}!leveldb::port@{leveldb\-::port}}
+\subsubsection[{Snappy\-\_\-\-Compress}]{\setlength{\rightskip}{0pt plus 5cm}bool leveldb\-::port\-::\-Snappy\-\_\-\-Compress (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{input, }
+\item[{size\-\_\-t}]{input\-\_\-length, }
+\item[{std\-::string $\ast$}]{output}
+\end{DoxyParamCaption}
+)}}\label{namespaceleveldb_1_1port_ae6e60ac8eb298c7eef3bb70ded8c809f}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{namespaceleveldb_1_1port_a64d0eafc3cfb484000e6afb5cbcc9d87}{\index{leveldb\-::port@{leveldb\-::port}!Snappy\-\_\-\-Compress@{Snappy\-\_\-\-Compress}}
+\index{Snappy\-\_\-\-Compress@{Snappy\-\_\-\-Compress}!leveldb::port@{leveldb\-::port}}
+\subsubsection[{Snappy\-\_\-\-Compress}]{\setlength{\rightskip}{0pt plus 5cm}bool leveldb\-::port\-::\-Snappy\-\_\-\-Compress (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{input, }
+\item[{size\-\_\-t}]{length, }
+\item[{\-::std\-::string $\ast$}]{output}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{namespaceleveldb_1_1port_a64d0eafc3cfb484000e6afb5cbcc9d87}
+\hypertarget{namespaceleveldb_1_1port_aad536a786dfc1df63d14c6b74178a73b}{\index{leveldb\-::port@{leveldb\-::port}!Snappy\-\_\-\-Get\-Uncompressed\-Length@{Snappy\-\_\-\-Get\-Uncompressed\-Length}}
+\index{Snappy\-\_\-\-Get\-Uncompressed\-Length@{Snappy\-\_\-\-Get\-Uncompressed\-Length}!leveldb::port@{leveldb\-::port}}
+\subsubsection[{Snappy\-\_\-\-Get\-Uncompressed\-Length}]{\setlength{\rightskip}{0pt plus 5cm}bool leveldb\-::port\-::\-Snappy\-\_\-\-Get\-Uncompressed\-Length (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{input, }
+\item[{size\-\_\-t}]{length, }
+\item[{size\-\_\-t $\ast$}]{result}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{namespaceleveldb_1_1port_aad536a786dfc1df63d14c6b74178a73b}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{namespaceleveldb_1_1port_ab6f0c4381b00450e06d3000a8cb48a55}{\index{leveldb\-::port@{leveldb\-::port}!Snappy\-\_\-\-Uncompress@{Snappy\-\_\-\-Uncompress}}
+\index{Snappy\-\_\-\-Uncompress@{Snappy\-\_\-\-Uncompress}!leveldb::port@{leveldb\-::port}}
+\subsubsection[{Snappy\-\_\-\-Uncompress}]{\setlength{\rightskip}{0pt plus 5cm}bool leveldb\-::port\-::\-Snappy\-\_\-\-Uncompress (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{input\-\_\-data, }
+\item[{size\-\_\-t}]{input\-\_\-length, }
+\item[{char $\ast$}]{output}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{namespaceleveldb_1_1port_ab6f0c4381b00450e06d3000a8cb48a55}
+
+
+Here is the caller graph for this function\-:
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{namespaceleveldb_1_1port_a1d2c52a3c3be0edb6562c9494b85bfec}{\index{leveldb\-::port@{leveldb\-::port}!k\-Little\-Endian@{k\-Little\-Endian}}
+\index{k\-Little\-Endian@{k\-Little\-Endian}!leveldb::port@{leveldb\-::port}}
+\subsubsection[{k\-Little\-Endian}]{\setlength{\rightskip}{0pt plus 5cm}const bool leveldb\-::port\-::k\-Little\-Endian = true\hspace{0.3cm}{\ttfamily [static]}}}\label{namespaceleveldb_1_1port_a1d2c52a3c3be0edb6562c9494b85bfec}
+\hypertarget{namespaceleveldb_1_1port_a1d2c52a3c3be0edb6562c9494b85bfec}{\index{leveldb\-::port@{leveldb\-::port}!k\-Little\-Endian@{k\-Little\-Endian}}
+\index{k\-Little\-Endian@{k\-Little\-Endian}!leveldb::port@{leveldb\-::port}}
+\subsubsection[{k\-Little\-Endian}]{\setlength{\rightskip}{0pt plus 5cm}const bool leveldb\-::port\-::k\-Little\-Endian = {\bf P\-L\-A\-T\-F\-O\-R\-M\-\_\-\-I\-S\-\_\-\-L\-I\-T\-T\-L\-E\-\_\-\-E\-N\-D\-I\-A\-N}\hspace{0.3cm}{\ttfamily [static]}}}\label{namespaceleveldb_1_1port_a1d2c52a3c3be0edb6562c9494b85bfec}

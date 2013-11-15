@@ -1,0 +1,53 @@
+\hypertarget{port__example_8h}{\section{port/port\-\_\-example.h File Reference}
+\label{port__example_8h}\index{port/port\-\_\-example.\-h@{port/port\-\_\-example.\-h}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classleveldb_1_1port_1_1_mutex}{leveldb\-::port\-::\-Mutex}
+\item 
+class \hyperlink{classleveldb_1_1port_1_1_cond_var}{leveldb\-::port\-::\-Cond\-Var}
+\item 
+class \hyperlink{classleveldb_1_1port_1_1_atomic_pointer}{leveldb\-::port\-::\-Atomic\-Pointer}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespaceleveldb}{leveldb}
+\item 
+\hyperlink{namespaceleveldb_1_1port}{leveldb\-::port}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{port__example_8h_aa0f16c685b4ebb93ccc49f5ae36e1c9d}{L\-E\-V\-E\-L\-D\-B\-\_\-\-O\-N\-C\-E\-\_\-\-I\-N\-I\-T}~0
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef intptr\-\_\-t \hyperlink{namespaceleveldb_1_1port_a80651a8fb458d9b7b3c1f492f9abd055}{leveldb\-::port\-::\-Once\-Type}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{namespaceleveldb_1_1port_a1493e91d494e6f0ea086a743a562e983}{leveldb\-::port\-::\-Init\-Once} (port\-::\-Once\-Type $\ast$, void($\ast$initializer)())
+\item 
+bool \hyperlink{namespaceleveldb_1_1port_ae6e60ac8eb298c7eef3bb70ded8c809f}{leveldb\-::port\-::\-Snappy\-\_\-\-Compress} (const char $\ast$input, size\-\_\-t input\-\_\-length, std\-::string $\ast$output)
+\item 
+bool \hyperlink{namespaceleveldb_1_1port_aad536a786dfc1df63d14c6b74178a73b}{leveldb\-::port\-::\-Snappy\-\_\-\-Get\-Uncompressed\-Length} (const char $\ast$input, size\-\_\-t length, size\-\_\-t $\ast$result)
+\item 
+bool \hyperlink{namespaceleveldb_1_1port_ab6f0c4381b00450e06d3000a8cb48a55}{leveldb\-::port\-::\-Snappy\-\_\-\-Uncompress} (const char $\ast$input\-\_\-data, size\-\_\-t input\-\_\-length, char $\ast$output)
+\item 
+bool \hyperlink{namespaceleveldb_1_1port_a1686423180e60af953153121c615f5fe}{leveldb\-::port\-::\-Get\-Heap\-Profile} (void($\ast$\hyperlink{testharness_8cc_a0a8271b25a6a647b48a0be0bc49c9409}{func})(void $\ast$, const char $\ast$, int), void $\ast$\hyperlink{env__posix_8cc_a9ce2ec4812a92cb6ab39f6e81e9173a9}{arg})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static const bool \hyperlink{namespaceleveldb_1_1port_a1d2c52a3c3be0edb6562c9494b85bfec}{leveldb\-::port\-::k\-Little\-Endian} = true
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{port__example_8h_aa0f16c685b4ebb93ccc49f5ae36e1c9d}{\index{port\-\_\-example.\-h@{port\-\_\-example.\-h}!L\-E\-V\-E\-L\-D\-B\-\_\-\-O\-N\-C\-E\-\_\-\-I\-N\-I\-T@{L\-E\-V\-E\-L\-D\-B\-\_\-\-O\-N\-C\-E\-\_\-\-I\-N\-I\-T}}
+\index{L\-E\-V\-E\-L\-D\-B\-\_\-\-O\-N\-C\-E\-\_\-\-I\-N\-I\-T@{L\-E\-V\-E\-L\-D\-B\-\_\-\-O\-N\-C\-E\-\_\-\-I\-N\-I\-T}!port_example.h@{port\-\_\-example.\-h}}
+\subsubsection[{L\-E\-V\-E\-L\-D\-B\-\_\-\-O\-N\-C\-E\-\_\-\-I\-N\-I\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-E\-V\-E\-L\-D\-B\-\_\-\-O\-N\-C\-E\-\_\-\-I\-N\-I\-T~0}}\label{port__example_8h_aa0f16c685b4ebb93ccc49f5ae36e1c9d}

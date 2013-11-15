@@ -1,0 +1,183 @@
+\hypertarget{namespaceleveldb_1_1crc32c}{\section{leveldb\-:\-:crc32c Namespace Reference}
+\label{namespaceleveldb_1_1crc32c}\index{leveldb\-::crc32c@{leveldb\-::crc32c}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classleveldb_1_1crc32c_1_1_c_r_c}{C\-R\-C}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{stdint_8h_a435d1572bf3f880d55459d9805097f62}{uint32\-\_\-t} \hyperlink{namespaceleveldb_1_1crc32c_a45e9ab8064b6960bef8f04eaa34fc957}{L\-E\-\_\-\-L\-O\-A\-D32} (const \hyperlink{stdint_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\-\_\-t} $\ast$p)
+\item 
+\hyperlink{stdint_8h_a435d1572bf3f880d55459d9805097f62}{uint32\-\_\-t} \hyperlink{namespaceleveldb_1_1crc32c_ac42fd0618afe635356d722fd29f5ff10}{Extend} (\hyperlink{stdint_8h_a435d1572bf3f880d55459d9805097f62}{uint32\-\_\-t} crc, const char $\ast$buf, size\-\_\-t size)
+\item 
+\hyperlink{stdint_8h_a435d1572bf3f880d55459d9805097f62}{uint32\-\_\-t} \hyperlink{namespaceleveldb_1_1crc32c_ac004d1e3d8c75b033c162e5ae0a5cc2c}{Value} (const char $\ast$data, size\-\_\-t n)
+\item 
+\hyperlink{stdint_8h_a435d1572bf3f880d55459d9805097f62}{uint32\-\_\-t} \hyperlink{namespaceleveldb_1_1crc32c_a3790e1e939714a29609e46383aafd6cf}{Mask} (\hyperlink{stdint_8h_a435d1572bf3f880d55459d9805097f62}{uint32\-\_\-t} crc)
+\item 
+\hyperlink{stdint_8h_a435d1572bf3f880d55459d9805097f62}{uint32\-\_\-t} \hyperlink{namespaceleveldb_1_1crc32c_aef7889069ea26dd145509fff4c4e6b66}{Unmask} (\hyperlink{stdint_8h_a435d1572bf3f880d55459d9805097f62}{uint32\-\_\-t} masked\-\_\-crc)
+\item 
+\hyperlink{namespaceleveldb_1_1crc32c_a2ef79d6b85c2866295c1573ea6e62a52}{T\-E\-S\-T} (\hyperlink{classleveldb_1_1crc32c_1_1_c_r_c}{C\-R\-C}, Standard\-Results)
+\item 
+\hyperlink{namespaceleveldb_1_1crc32c_aeca842cf29e5136e1594dd5e0a714d7f}{T\-E\-S\-T} (\hyperlink{classleveldb_1_1crc32c_1_1_c_r_c}{C\-R\-C}, Values)
+\item 
+\hyperlink{namespaceleveldb_1_1crc32c_aec2f6fd8802f5c6473281a2400301fa4}{T\-E\-S\-T} (\hyperlink{classleveldb_1_1crc32c_1_1_c_r_c}{C\-R\-C}, \hyperlink{namespaceleveldb_1_1crc32c_ac42fd0618afe635356d722fd29f5ff10}{Extend})
+\item 
+\hyperlink{namespaceleveldb_1_1crc32c_aeae3dd6a190a86fb295e1232715e2b23}{T\-E\-S\-T} (\hyperlink{classleveldb_1_1crc32c_1_1_c_r_c}{C\-R\-C}, \hyperlink{namespaceleveldb_1_1crc32c_a3790e1e939714a29609e46383aafd6cf}{Mask})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static const \hyperlink{stdint_8h_a435d1572bf3f880d55459d9805097f62}{uint32\-\_\-t} \hyperlink{namespaceleveldb_1_1crc32c_ade0c8f1e2098799a8924d05b30411817}{table0\-\_\-} \mbox{[}256\mbox{]}
+\item 
+static const \hyperlink{stdint_8h_a435d1572bf3f880d55459d9805097f62}{uint32\-\_\-t} \hyperlink{namespaceleveldb_1_1crc32c_af456bfb794e6108a828e5d3a2a58700c}{table1\-\_\-} \mbox{[}256\mbox{]}
+\item 
+static const \hyperlink{stdint_8h_a435d1572bf3f880d55459d9805097f62}{uint32\-\_\-t} \hyperlink{namespaceleveldb_1_1crc32c_af5be8e058bd89cbd43972aa986910599}{table2\-\_\-} \mbox{[}256\mbox{]}
+\item 
+static const \hyperlink{stdint_8h_a435d1572bf3f880d55459d9805097f62}{uint32\-\_\-t} \hyperlink{namespaceleveldb_1_1crc32c_a212c50cb25082d3d84471483d26ac2f5}{table3\-\_\-} \mbox{[}256\mbox{]}
+\item 
+static const \hyperlink{stdint_8h_a435d1572bf3f880d55459d9805097f62}{uint32\-\_\-t} \hyperlink{namespaceleveldb_1_1crc32c_ae1bd49dbeac3e469a5a4347989f2e8b3}{k\-Mask\-Delta} = 0xa282ead8ul
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{namespaceleveldb_1_1crc32c_ac42fd0618afe635356d722fd29f5ff10}{\index{leveldb\-::crc32c@{leveldb\-::crc32c}!Extend@{Extend}}
+\index{Extend@{Extend}!leveldb::crc32c@{leveldb\-::crc32c}}
+\subsubsection[{Extend}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint32\-\_\-t} leveldb\-::crc32c\-::\-Extend (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\-\_\-t}}]{crc, }
+\item[{const char $\ast$}]{buf, }
+\item[{size\-\_\-t}]{size}
+\end{DoxyParamCaption}
+)}}\label{namespaceleveldb_1_1crc32c_ac42fd0618afe635356d722fd29f5ff10}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{namespaceleveldb_1_1crc32c_a45e9ab8064b6960bef8f04eaa34fc957}{\index{leveldb\-::crc32c@{leveldb\-::crc32c}!L\-E\-\_\-\-L\-O\-A\-D32@{L\-E\-\_\-\-L\-O\-A\-D32}}
+\index{L\-E\-\_\-\-L\-O\-A\-D32@{L\-E\-\_\-\-L\-O\-A\-D32}!leveldb::crc32c@{leveldb\-::crc32c}}
+\subsubsection[{L\-E\-\_\-\-L\-O\-A\-D32}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf uint32\-\_\-t} leveldb\-::crc32c\-::\-L\-E\-\_\-\-L\-O\-A\-D32 (
+\begin{DoxyParamCaption}
+\item[{const {\bf uint8\-\_\-t} $\ast$}]{p}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{namespaceleveldb_1_1crc32c_a45e9ab8064b6960bef8f04eaa34fc957}
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{namespaceleveldb_1_1crc32c_a3790e1e939714a29609e46383aafd6cf}{\index{leveldb\-::crc32c@{leveldb\-::crc32c}!Mask@{Mask}}
+\index{Mask@{Mask}!leveldb::crc32c@{leveldb\-::crc32c}}
+\subsubsection[{Mask}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint32\-\_\-t} leveldb\-::crc32c\-::\-Mask (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\-\_\-t}}]{crc}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{namespaceleveldb_1_1crc32c_a3790e1e939714a29609e46383aafd6cf}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{namespaceleveldb_1_1crc32c_a2ef79d6b85c2866295c1573ea6e62a52}{\index{leveldb\-::crc32c@{leveldb\-::crc32c}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!leveldb::crc32c@{leveldb\-::crc32c}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::crc32c\-::\-T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{C\-R\-C}]{, }
+\item[{Standard\-Results}]{}
+\end{DoxyParamCaption}
+)}}\label{namespaceleveldb_1_1crc32c_a2ef79d6b85c2866295c1573ea6e62a52}
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{namespaceleveldb_1_1crc32c_aeca842cf29e5136e1594dd5e0a714d7f}{\index{leveldb\-::crc32c@{leveldb\-::crc32c}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!leveldb::crc32c@{leveldb\-::crc32c}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::crc32c\-::\-T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{C\-R\-C}]{, }
+\item[{Values}]{}
+\end{DoxyParamCaption}
+)}}\label{namespaceleveldb_1_1crc32c_aeca842cf29e5136e1594dd5e0a714d7f}
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{namespaceleveldb_1_1crc32c_aec2f6fd8802f5c6473281a2400301fa4}{\index{leveldb\-::crc32c@{leveldb\-::crc32c}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!leveldb::crc32c@{leveldb\-::crc32c}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::crc32c\-::\-T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{C\-R\-C}]{, }
+\item[{Extend}]{}
+\end{DoxyParamCaption}
+)}}\label{namespaceleveldb_1_1crc32c_aec2f6fd8802f5c6473281a2400301fa4}
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{namespaceleveldb_1_1crc32c_aeae3dd6a190a86fb295e1232715e2b23}{\index{leveldb\-::crc32c@{leveldb\-::crc32c}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!leveldb::crc32c@{leveldb\-::crc32c}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::crc32c\-::\-T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{C\-R\-C}]{, }
+\item[{Mask}]{}
+\end{DoxyParamCaption}
+)}}\label{namespaceleveldb_1_1crc32c_aeae3dd6a190a86fb295e1232715e2b23}
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{namespaceleveldb_1_1crc32c_aef7889069ea26dd145509fff4c4e6b66}{\index{leveldb\-::crc32c@{leveldb\-::crc32c}!Unmask@{Unmask}}
+\index{Unmask@{Unmask}!leveldb::crc32c@{leveldb\-::crc32c}}
+\subsubsection[{Unmask}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint32\-\_\-t} leveldb\-::crc32c\-::\-Unmask (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\-\_\-t}}]{masked\-\_\-crc}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{namespaceleveldb_1_1crc32c_aef7889069ea26dd145509fff4c4e6b66}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{namespaceleveldb_1_1crc32c_ac004d1e3d8c75b033c162e5ae0a5cc2c}{\index{leveldb\-::crc32c@{leveldb\-::crc32c}!Value@{Value}}
+\index{Value@{Value}!leveldb::crc32c@{leveldb\-::crc32c}}
+\subsubsection[{Value}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint32\-\_\-t} leveldb\-::crc32c\-::\-Value (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{data, }
+\item[{size\-\_\-t}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{namespaceleveldb_1_1crc32c_ac004d1e3d8c75b033c162e5ae0a5cc2c}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{namespaceleveldb_1_1crc32c_ae1bd49dbeac3e469a5a4347989f2e8b3}{\index{leveldb\-::crc32c@{leveldb\-::crc32c}!k\-Mask\-Delta@{k\-Mask\-Delta}}
+\index{k\-Mask\-Delta@{k\-Mask\-Delta}!leveldb::crc32c@{leveldb\-::crc32c}}
+\subsubsection[{k\-Mask\-Delta}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf uint32\-\_\-t} leveldb\-::crc32c\-::k\-Mask\-Delta = 0xa282ead8ul\hspace{0.3cm}{\ttfamily [static]}}}\label{namespaceleveldb_1_1crc32c_ae1bd49dbeac3e469a5a4347989f2e8b3}
+\hypertarget{namespaceleveldb_1_1crc32c_ade0c8f1e2098799a8924d05b30411817}{\index{leveldb\-::crc32c@{leveldb\-::crc32c}!table0\-\_\-@{table0\-\_\-}}
+\index{table0\-\_\-@{table0\-\_\-}!leveldb::crc32c@{leveldb\-::crc32c}}
+\subsubsection[{table0\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf uint32\-\_\-t} leveldb\-::crc32c\-::table0\-\_\-\mbox{[}256\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}}\label{namespaceleveldb_1_1crc32c_ade0c8f1e2098799a8924d05b30411817}
+\hypertarget{namespaceleveldb_1_1crc32c_af456bfb794e6108a828e5d3a2a58700c}{\index{leveldb\-::crc32c@{leveldb\-::crc32c}!table1\-\_\-@{table1\-\_\-}}
+\index{table1\-\_\-@{table1\-\_\-}!leveldb::crc32c@{leveldb\-::crc32c}}
+\subsubsection[{table1\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf uint32\-\_\-t} leveldb\-::crc32c\-::table1\-\_\-\mbox{[}256\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}}\label{namespaceleveldb_1_1crc32c_af456bfb794e6108a828e5d3a2a58700c}
+\hypertarget{namespaceleveldb_1_1crc32c_af5be8e058bd89cbd43972aa986910599}{\index{leveldb\-::crc32c@{leveldb\-::crc32c}!table2\-\_\-@{table2\-\_\-}}
+\index{table2\-\_\-@{table2\-\_\-}!leveldb::crc32c@{leveldb\-::crc32c}}
+\subsubsection[{table2\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf uint32\-\_\-t} leveldb\-::crc32c\-::table2\-\_\-\mbox{[}256\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}}\label{namespaceleveldb_1_1crc32c_af5be8e058bd89cbd43972aa986910599}
+\hypertarget{namespaceleveldb_1_1crc32c_a212c50cb25082d3d84471483d26ac2f5}{\index{leveldb\-::crc32c@{leveldb\-::crc32c}!table3\-\_\-@{table3\-\_\-}}
+\index{table3\-\_\-@{table3\-\_\-}!leveldb::crc32c@{leveldb\-::crc32c}}
+\subsubsection[{table3\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf uint32\-\_\-t} leveldb\-::crc32c\-::table3\-\_\-\mbox{[}256\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}}\label{namespaceleveldb_1_1crc32c_a212c50cb25082d3d84471483d26ac2f5}

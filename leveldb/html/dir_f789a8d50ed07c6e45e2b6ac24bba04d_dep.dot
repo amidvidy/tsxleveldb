@@ -1,0 +1,11 @@
+digraph "include/leveldb" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_d44c64559bbebec7f509842c48db8b23 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="include" fontname="Helvetica", fontsize="10", URL="dir_d44c64559bbebec7f509842c48db8b23.html"]
+  dir_f789a8d50ed07c6e45e2b6ac24bba04d [shape=box, label="leveldb", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_f789a8d50ed07c6e45e2b6ac24bba04d.html"];
+  }
+  dir_651562d8bf6cfd3e81eff5b570d7df50 [shape=box label="port" fillcolor="white" style="filled" color="red" URL="dir_651562d8bf6cfd3e81eff5b570d7df50.html"];
+  dir_f789a8d50ed07c6e45e2b6ac24bba04d->dir_651562d8bf6cfd3e81eff5b570d7df50 [headlabel="6", labeldistance=1.5 headhref="dir_000006_000008.html"];
+}

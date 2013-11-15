@@ -1,0 +1,40 @@
+digraph "leveldb::Block::Iter::Prev"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="leveldb::Block::Iter\l::Prev",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="leveldb::Block::Iter\l::Valid",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_block_1_1_iter.html#ac4be155bfc93e1d2b90cfd670f22c1ba"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="leveldb::Block::Iter\l::GetRestartPoint",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_block_1_1_iter.html#a80e1396336c859c53790cad6c3cdd543"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="leveldb::DecodeFixed32",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceleveldb.html#adae574304f9d1ed3e95742167cd449a9"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="leveldb::Block::Iter\l::SeekToRestartPoint",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_block_1_1_iter.html#a356a5cae58d7f0f816fa366acf0722f5"];
+  Node5 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="leveldb::Block::Iter\l::ParseNextKey",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_block_1_1_iter.html#abb8c89f7256e79148d942ddbc4351775"];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="leveldb::Block::Iter\l::NextEntryOffset",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_block_1_1_iter.html#a31bd42263cb99405a0d8fe7cc317fe16"];
+  Node7 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="leveldb::Slice::data",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_slice.html#aa64861043d9deee6889461bf0593cf73"];
+  Node7 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="leveldb::Slice::size",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_slice.html#a947d3173f04f8a30553e89046daf91d5"];
+  Node6 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="leveldb::DecodeEntry",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceleveldb.html#a924f4e20853c0748f98e8f93f6a93ab9"];
+  Node10 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="leveldb::GetVarint32Ptr",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceleveldb.html#addd01473dddfbc70ba64956fe6fac20c"];
+  Node11 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="leveldb::GetVarint32PtrFallback",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceleveldb.html#abc68f00e57333a27e9ee4fb8d5033905"];
+  Node6 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="leveldb::Block::Iter\l::CorruptionError",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_block_1_1_iter.html#ad8eff43010a2d3e0f30945ede9286521"];
+  Node13 -> Node14 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="leveldb::Status::Corruption",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_status.html#a755b1ee5b0029cf9ea1128f1cdff5855"];
+  Node14 -> Node15 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="leveldb::Status::Status",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_status.html#a941ec793179e81df3032a612cfe5039f"];
+  Node13 -> Node16 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="leveldb::Slice::clear",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_slice.html#ab9b6e340e8a483a5cf713f6be17709e3"];
+  Node6 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

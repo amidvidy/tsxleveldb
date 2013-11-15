@@ -1,0 +1,13 @@
+digraph "leveldb::log::BigString"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="leveldb::log::BigString",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="leveldb::log::RandomSkewed\lString",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceleveldb_1_1log.html#a4f28769ffa840923fea43c6825a6a0e2"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="leveldb::log::TEST",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceleveldb_1_1log.html#a52d33034be964c0d0e40efdf4b423452"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="leveldb::log::TEST",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceleveldb_1_1log.html#ac15e5779ff43d83522727b8cc44882a2"];
+}

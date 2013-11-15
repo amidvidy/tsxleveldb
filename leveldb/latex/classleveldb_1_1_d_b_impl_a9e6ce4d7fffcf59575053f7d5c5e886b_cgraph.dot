@@ -1,0 +1,15 @@
+digraph "leveldb::DBImpl::BuildBatchGroup"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="leveldb::DBImpl::BuildBatch\lGroup",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="leveldb::WriteBatchInternal\l::ByteSize",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_write_batch_internal.html#adad424f13cc3e3ed4a2eacb88eaa39df"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="leveldb::WriteBatchInternal\l::Count",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_write_batch_internal.html#a5270ca4567dbae1524005ad14e0698e3"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="leveldb::DecodeFixed32",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceleveldb.html#adae574304f9d1ed3e95742167cd449a9"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="leveldb::WriteBatchInternal\l::Append",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_write_batch_internal.html#ac83c9a45a815c16ad8602b99b752b4bc"];
+}

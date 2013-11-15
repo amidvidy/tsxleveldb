@@ -1,0 +1,144 @@
+\hypertarget{classleveldb_1_1_write_batch}{\section{leveldb\-:\-:Write\-Batch Class Reference}
+\label{classleveldb_1_1_write_batch}\index{leveldb\-::\-Write\-Batch@{leveldb\-::\-Write\-Batch}}
+}
+
+
+{\ttfamily \#include $<$write\-\_\-batch.\-h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classleveldb_1_1_write_batch_1_1_handler}{Handler}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classleveldb_1_1_write_batch_a5287eda973cfd100149a034c871dcc44}{Write\-Batch} ()
+\item 
+\hyperlink{classleveldb_1_1_write_batch_a5bc7decc31279f2457839b30ad8daca5}{$\sim$\-Write\-Batch} ()
+\item 
+void \hyperlink{classleveldb_1_1_write_batch_a30770379143a7ccb4ede18ddf0e45bf3}{Put} (const \hyperlink{classleveldb_1_1_slice}{Slice} \&key, const \hyperlink{classleveldb_1_1_slice}{Slice} \&\hyperlink{cache_8cc_a0f61d63b009d0880a89c843bd50d8d76}{value})
+\item 
+void \hyperlink{classleveldb_1_1_write_batch_a473da7f94483dab253cc36b7b231ce53}{Delete} (const \hyperlink{classleveldb_1_1_slice}{Slice} \&key)
+\item 
+void \hyperlink{classleveldb_1_1_write_batch_afd5058344dc9be113919a5110129006f}{Clear} ()
+\item 
+\hyperlink{classleveldb_1_1_status}{Status} \hyperlink{classleveldb_1_1_write_batch_ac6cb5a360bb095f4e9a6e817c4322a9d}{Iterate} (\hyperlink{classleveldb_1_1_write_batch_1_1_handler}{Handler} $\ast$handler) const 
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\-::string \hyperlink{classleveldb_1_1_write_batch_acb95a84f553a7dfa89f27a0500060837}{rep\-\_\-}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classleveldb_1_1_write_batch_a0c491f15816190f8235ccd1367d5ae5f}{Write\-Batch\-Internal}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classleveldb_1_1_write_batch_a5287eda973cfd100149a034c871dcc44}{\index{leveldb\-::\-Write\-Batch@{leveldb\-::\-Write\-Batch}!Write\-Batch@{Write\-Batch}}
+\index{Write\-Batch@{Write\-Batch}!leveldb::WriteBatch@{leveldb\-::\-Write\-Batch}}
+\subsubsection[{Write\-Batch}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::\-Write\-Batch\-::\-Write\-Batch (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classleveldb_1_1_write_batch_a5287eda973cfd100149a034c871dcc44}
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_write_batch_a5bc7decc31279f2457839b30ad8daca5}{\index{leveldb\-::\-Write\-Batch@{leveldb\-::\-Write\-Batch}!$\sim$\-Write\-Batch@{$\sim$\-Write\-Batch}}
+\index{$\sim$\-Write\-Batch@{$\sim$\-Write\-Batch}!leveldb::WriteBatch@{leveldb\-::\-Write\-Batch}}
+\subsubsection[{$\sim$\-Write\-Batch}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::\-Write\-Batch\-::$\sim$\-Write\-Batch (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classleveldb_1_1_write_batch_a5bc7decc31279f2457839b30ad8daca5}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classleveldb_1_1_write_batch_afd5058344dc9be113919a5110129006f}{\index{leveldb\-::\-Write\-Batch@{leveldb\-::\-Write\-Batch}!Clear@{Clear}}
+\index{Clear@{Clear}!leveldb::WriteBatch@{leveldb\-::\-Write\-Batch}}
+\subsubsection[{Clear}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-Write\-Batch\-::\-Clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classleveldb_1_1_write_batch_afd5058344dc9be113919a5110129006f}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_write_batch_a473da7f94483dab253cc36b7b231ce53}{\index{leveldb\-::\-Write\-Batch@{leveldb\-::\-Write\-Batch}!Delete@{Delete}}
+\index{Delete@{Delete}!leveldb::WriteBatch@{leveldb\-::\-Write\-Batch}}
+\subsubsection[{Delete}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-Write\-Batch\-::\-Delete (
+\begin{DoxyParamCaption}
+\item[{const {\bf Slice} \&}]{key}
+\end{DoxyParamCaption}
+)}}\label{classleveldb_1_1_write_batch_a473da7f94483dab253cc36b7b231ce53}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_write_batch_ac6cb5a360bb095f4e9a6e817c4322a9d}{\index{leveldb\-::\-Write\-Batch@{leveldb\-::\-Write\-Batch}!Iterate@{Iterate}}
+\index{Iterate@{Iterate}!leveldb::WriteBatch@{leveldb\-::\-Write\-Batch}}
+\subsubsection[{Iterate}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Status} leveldb\-::\-Write\-Batch\-::\-Iterate (
+\begin{DoxyParamCaption}
+\item[{{\bf Handler} $\ast$}]{handler}
+\end{DoxyParamCaption}
+) const}}\label{classleveldb_1_1_write_batch_ac6cb5a360bb095f4e9a6e817c4322a9d}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_write_batch_a30770379143a7ccb4ede18ddf0e45bf3}{\index{leveldb\-::\-Write\-Batch@{leveldb\-::\-Write\-Batch}!Put@{Put}}
+\index{Put@{Put}!leveldb::WriteBatch@{leveldb\-::\-Write\-Batch}}
+\subsubsection[{Put}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-Write\-Batch\-::\-Put (
+\begin{DoxyParamCaption}
+\item[{const {\bf Slice} \&}]{key, }
+\item[{const {\bf Slice} \&}]{value}
+\end{DoxyParamCaption}
+)}}\label{classleveldb_1_1_write_batch_a30770379143a7ccb4ede18ddf0e45bf3}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classleveldb_1_1_write_batch_a0c491f15816190f8235ccd1367d5ae5f}{\index{leveldb\-::\-Write\-Batch@{leveldb\-::\-Write\-Batch}!Write\-Batch\-Internal@{Write\-Batch\-Internal}}
+\index{Write\-Batch\-Internal@{Write\-Batch\-Internal}!leveldb::WriteBatch@{leveldb\-::\-Write\-Batch}}
+\subsubsection[{Write\-Batch\-Internal}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Write\-Batch\-Internal}\hspace{0.3cm}{\ttfamily [friend]}}}\label{classleveldb_1_1_write_batch_a0c491f15816190f8235ccd1367d5ae5f}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classleveldb_1_1_write_batch_acb95a84f553a7dfa89f27a0500060837}{\index{leveldb\-::\-Write\-Batch@{leveldb\-::\-Write\-Batch}!rep\-\_\-@{rep\-\_\-}}
+\index{rep\-\_\-@{rep\-\_\-}!leveldb::WriteBatch@{leveldb\-::\-Write\-Batch}}
+\subsubsection[{rep\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string leveldb\-::\-Write\-Batch\-::rep\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_write_batch_acb95a84f553a7dfa89f27a0500060837}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/leveldb/\hyperlink{write__batch_8h}{write\-\_\-batch.\-h}\item 
+db/\hyperlink{write__batch_8cc}{write\-\_\-batch.\-cc}\end{DoxyCompactItemize}

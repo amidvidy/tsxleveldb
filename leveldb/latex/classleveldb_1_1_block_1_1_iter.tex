@@ -1,0 +1,362 @@
+\hypertarget{classleveldb_1_1_block_1_1_iter}{\section{leveldb\-:\-:Block\-:\-:Iter Class Reference}
+\label{classleveldb_1_1_block_1_1_iter}\index{leveldb\-::\-Block\-::\-Iter@{leveldb\-::\-Block\-::\-Iter}}
+}
+
+
+Inheritance diagram for leveldb\-:\-:Block\-:\-:Iter\-:
+
+
+Collaboration diagram for leveldb\-:\-:Block\-:\-:Iter\-:
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classleveldb_1_1_block_1_1_iter_a31b124ec1fc5750b31b182dc44282588}{Iter} (const \hyperlink{structleveldb_1_1_comparator}{Comparator} $\ast$comparator, const char $\ast$data, \hyperlink{stdint_8h_a435d1572bf3f880d55459d9805097f62}{uint32\-\_\-t} restarts, \hyperlink{stdint_8h_a435d1572bf3f880d55459d9805097f62}{uint32\-\_\-t} num\-\_\-restarts)
+\item 
+virtual bool \hyperlink{classleveldb_1_1_block_1_1_iter_ac4be155bfc93e1d2b90cfd670f22c1ba}{Valid} () const 
+\item 
+virtual \hyperlink{classleveldb_1_1_status}{Status} \hyperlink{classleveldb_1_1_block_1_1_iter_a39f400b72dc79931145600a702b71c61}{status} () const 
+\item 
+virtual \hyperlink{classleveldb_1_1_slice}{Slice} \hyperlink{classleveldb_1_1_block_1_1_iter_a1378d5e1fb17638427fd0a0f7fc7a010}{key} () const 
+\item 
+virtual \hyperlink{classleveldb_1_1_slice}{Slice} \hyperlink{classleveldb_1_1_block_1_1_iter_afb28e69efec54ca9306fc504e139bf3f}{value} () const 
+\item 
+virtual void \hyperlink{classleveldb_1_1_block_1_1_iter_a27dacbefa903333a5ad003ccd3e424b6}{Next} ()
+\item 
+virtual void \hyperlink{classleveldb_1_1_block_1_1_iter_a096747ff77d5090579fe4cd4e464a3c9}{Prev} ()
+\item 
+virtual void \hyperlink{classleveldb_1_1_block_1_1_iter_a3dcefc0609937b33c046ac7fafb52ad7}{Seek} (const \hyperlink{classleveldb_1_1_slice}{Slice} \&target)
+\item 
+virtual void \hyperlink{classleveldb_1_1_block_1_1_iter_aecc19bb6d8a219e7fb8e695fb5b57bd3}{Seek\-To\-First} ()
+\item 
+virtual void \hyperlink{classleveldb_1_1_block_1_1_iter_a3007d98d17a03138c629fc2b2eb56204}{Seek\-To\-Last} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classleveldb_1_1_block_1_1_iter_a62e08ca268db6be5bca9a1648f6f854e}{Compare} (const \hyperlink{classleveldb_1_1_slice}{Slice} \&a, const \hyperlink{classleveldb_1_1_slice}{Slice} \&b) const 
+\item 
+\hyperlink{stdint_8h_a435d1572bf3f880d55459d9805097f62}{uint32\-\_\-t} \hyperlink{classleveldb_1_1_block_1_1_iter_a31bd42263cb99405a0d8fe7cc317fe16}{Next\-Entry\-Offset} () const 
+\item 
+\hyperlink{stdint_8h_a435d1572bf3f880d55459d9805097f62}{uint32\-\_\-t} \hyperlink{classleveldb_1_1_block_1_1_iter_a80e1396336c859c53790cad6c3cdd543}{Get\-Restart\-Point} (\hyperlink{stdint_8h_a435d1572bf3f880d55459d9805097f62}{uint32\-\_\-t} index)
+\item 
+void \hyperlink{classleveldb_1_1_block_1_1_iter_a356a5cae58d7f0f816fa366acf0722f5}{Seek\-To\-Restart\-Point} (\hyperlink{stdint_8h_a435d1572bf3f880d55459d9805097f62}{uint32\-\_\-t} index)
+\item 
+void \hyperlink{classleveldb_1_1_block_1_1_iter_ad8eff43010a2d3e0f30945ede9286521}{Corruption\-Error} ()
+\item 
+bool \hyperlink{classleveldb_1_1_block_1_1_iter_abb8c89f7256e79148d942ddbc4351775}{Parse\-Next\-Key} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{structleveldb_1_1_comparator}{Comparator} $\ast$const \hyperlink{classleveldb_1_1_block_1_1_iter_a8d6a7b92f8871936961f03339f4f0599}{comparator\-\_\-}
+\item 
+const char $\ast$const \hyperlink{classleveldb_1_1_block_1_1_iter_a1c59db8f5db56e150aa59c43d8cb1976}{data\-\_\-}
+\item 
+\hyperlink{stdint_8h_a435d1572bf3f880d55459d9805097f62}{uint32\-\_\-t} const \hyperlink{classleveldb_1_1_block_1_1_iter_a29cd82a678d189009044c54c3e22ba24}{restarts\-\_\-}
+\item 
+\hyperlink{stdint_8h_a435d1572bf3f880d55459d9805097f62}{uint32\-\_\-t} const \hyperlink{classleveldb_1_1_block_1_1_iter_ac1ec61eae6825859a73d23302875fe11}{num\-\_\-restarts\-\_\-}
+\item 
+\hyperlink{stdint_8h_a435d1572bf3f880d55459d9805097f62}{uint32\-\_\-t} \hyperlink{classleveldb_1_1_block_1_1_iter_a138761b9a17e914cb938458231ea6420}{current\-\_\-}
+\item 
+\hyperlink{stdint_8h_a435d1572bf3f880d55459d9805097f62}{uint32\-\_\-t} \hyperlink{classleveldb_1_1_block_1_1_iter_aa4b7cc02f507cb8c6661a69a885e6e77}{restart\-\_\-index\-\_\-}
+\item 
+std\-::string \hyperlink{classleveldb_1_1_block_1_1_iter_a81757de8bc5414ccfe859e7387bee406}{key\-\_\-}
+\item 
+\hyperlink{classleveldb_1_1_slice}{Slice} \hyperlink{classleveldb_1_1_block_1_1_iter_a5af74baeadb7f39bb6fa5da621fe04e0}{value\-\_\-}
+\item 
+\hyperlink{classleveldb_1_1_status}{Status} \hyperlink{classleveldb_1_1_block_1_1_iter_a66460e3f29991e34d6435d2e13edd920}{status\-\_\-}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classleveldb_1_1_block_1_1_iter_a31b124ec1fc5750b31b182dc44282588}{\index{leveldb\-::\-Block\-::\-Iter@{leveldb\-::\-Block\-::\-Iter}!Iter@{Iter}}
+\index{Iter@{Iter}!leveldb::Block::Iter@{leveldb\-::\-Block\-::\-Iter}}
+\subsubsection[{Iter}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::\-Block\-::\-Iter\-::\-Iter (
+\begin{DoxyParamCaption}
+\item[{const {\bf Comparator} $\ast$}]{comparator, }
+\item[{const char $\ast$}]{data, }
+\item[{{\bf uint32\-\_\-t}}]{restarts, }
+\item[{{\bf uint32\-\_\-t}}]{num\-\_\-restarts}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_block_1_1_iter_a31b124ec1fc5750b31b182dc44282588}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classleveldb_1_1_block_1_1_iter_a62e08ca268db6be5bca9a1648f6f854e}{\index{leveldb\-::\-Block\-::\-Iter@{leveldb\-::\-Block\-::\-Iter}!Compare@{Compare}}
+\index{Compare@{Compare}!leveldb::Block::Iter@{leveldb\-::\-Block\-::\-Iter}}
+\subsubsection[{Compare}]{\setlength{\rightskip}{0pt plus 5cm}int leveldb\-::\-Block\-::\-Iter\-::\-Compare (
+\begin{DoxyParamCaption}
+\item[{const {\bf Slice} \&}]{a, }
+\item[{const {\bf Slice} \&}]{b}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{classleveldb_1_1_block_1_1_iter_a62e08ca268db6be5bca9a1648f6f854e}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_block_1_1_iter_ad8eff43010a2d3e0f30945ede9286521}{\index{leveldb\-::\-Block\-::\-Iter@{leveldb\-::\-Block\-::\-Iter}!Corruption\-Error@{Corruption\-Error}}
+\index{Corruption\-Error@{Corruption\-Error}!leveldb::Block::Iter@{leveldb\-::\-Block\-::\-Iter}}
+\subsubsection[{Corruption\-Error}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-Block\-::\-Iter\-::\-Corruption\-Error (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{classleveldb_1_1_block_1_1_iter_ad8eff43010a2d3e0f30945ede9286521}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_block_1_1_iter_a80e1396336c859c53790cad6c3cdd543}{\index{leveldb\-::\-Block\-::\-Iter@{leveldb\-::\-Block\-::\-Iter}!Get\-Restart\-Point@{Get\-Restart\-Point}}
+\index{Get\-Restart\-Point@{Get\-Restart\-Point}!leveldb::Block::Iter@{leveldb\-::\-Block\-::\-Iter}}
+\subsubsection[{Get\-Restart\-Point}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint32\-\_\-t} leveldb\-::\-Block\-::\-Iter\-::\-Get\-Restart\-Point (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\-\_\-t}}]{index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{classleveldb_1_1_block_1_1_iter_a80e1396336c859c53790cad6c3cdd543}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_block_1_1_iter_a1378d5e1fb17638427fd0a0f7fc7a010}{\index{leveldb\-::\-Block\-::\-Iter@{leveldb\-::\-Block\-::\-Iter}!key@{key}}
+\index{key@{key}!leveldb::Block::Iter@{leveldb\-::\-Block\-::\-Iter}}
+\subsubsection[{key}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Slice} leveldb\-::\-Block\-::\-Iter\-::key (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classleveldb_1_1_block_1_1_iter_a1378d5e1fb17638427fd0a0f7fc7a010}
+
+
+Implements \hyperlink{classleveldb_1_1_iterator_ad17feced6e24a1b21db5ae6940c1f220}{leveldb\-::\-Iterator}.
+
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_block_1_1_iter_a27dacbefa903333a5ad003ccd3e424b6}{\index{leveldb\-::\-Block\-::\-Iter@{leveldb\-::\-Block\-::\-Iter}!Next@{Next}}
+\index{Next@{Next}!leveldb::Block::Iter@{leveldb\-::\-Block\-::\-Iter}}
+\subsubsection[{Next}]{\setlength{\rightskip}{0pt plus 5cm}virtual void leveldb\-::\-Block\-::\-Iter\-::\-Next (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classleveldb_1_1_block_1_1_iter_a27dacbefa903333a5ad003ccd3e424b6}
+
+
+Implements \hyperlink{classleveldb_1_1_iterator_aea54a5ca7eb942eb15770820529410e7}{leveldb\-::\-Iterator}.
+
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_block_1_1_iter_a31bd42263cb99405a0d8fe7cc317fe16}{\index{leveldb\-::\-Block\-::\-Iter@{leveldb\-::\-Block\-::\-Iter}!Next\-Entry\-Offset@{Next\-Entry\-Offset}}
+\index{Next\-Entry\-Offset@{Next\-Entry\-Offset}!leveldb::Block::Iter@{leveldb\-::\-Block\-::\-Iter}}
+\subsubsection[{Next\-Entry\-Offset}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint32\-\_\-t} leveldb\-::\-Block\-::\-Iter\-::\-Next\-Entry\-Offset (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{classleveldb_1_1_block_1_1_iter_a31bd42263cb99405a0d8fe7cc317fe16}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_block_1_1_iter_abb8c89f7256e79148d942ddbc4351775}{\index{leveldb\-::\-Block\-::\-Iter@{leveldb\-::\-Block\-::\-Iter}!Parse\-Next\-Key@{Parse\-Next\-Key}}
+\index{Parse\-Next\-Key@{Parse\-Next\-Key}!leveldb::Block::Iter@{leveldb\-::\-Block\-::\-Iter}}
+\subsubsection[{Parse\-Next\-Key}]{\setlength{\rightskip}{0pt plus 5cm}bool leveldb\-::\-Block\-::\-Iter\-::\-Parse\-Next\-Key (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{classleveldb_1_1_block_1_1_iter_abb8c89f7256e79148d942ddbc4351775}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_block_1_1_iter_a096747ff77d5090579fe4cd4e464a3c9}{\index{leveldb\-::\-Block\-::\-Iter@{leveldb\-::\-Block\-::\-Iter}!Prev@{Prev}}
+\index{Prev@{Prev}!leveldb::Block::Iter@{leveldb\-::\-Block\-::\-Iter}}
+\subsubsection[{Prev}]{\setlength{\rightskip}{0pt plus 5cm}virtual void leveldb\-::\-Block\-::\-Iter\-::\-Prev (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classleveldb_1_1_block_1_1_iter_a096747ff77d5090579fe4cd4e464a3c9}
+
+
+Implements \hyperlink{classleveldb_1_1_iterator_a28798d802a203788587dc6adc5bc729e}{leveldb\-::\-Iterator}.
+
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_block_1_1_iter_a3dcefc0609937b33c046ac7fafb52ad7}{\index{leveldb\-::\-Block\-::\-Iter@{leveldb\-::\-Block\-::\-Iter}!Seek@{Seek}}
+\index{Seek@{Seek}!leveldb::Block::Iter@{leveldb\-::\-Block\-::\-Iter}}
+\subsubsection[{Seek}]{\setlength{\rightskip}{0pt plus 5cm}virtual void leveldb\-::\-Block\-::\-Iter\-::\-Seek (
+\begin{DoxyParamCaption}
+\item[{const {\bf Slice} \&}]{target}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classleveldb_1_1_block_1_1_iter_a3dcefc0609937b33c046ac7fafb52ad7}
+
+
+Implements \hyperlink{classleveldb_1_1_iterator_a97a556e97ded60c677fbf4de7321ec44}{leveldb\-::\-Iterator}.
+
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_block_1_1_iter_aecc19bb6d8a219e7fb8e695fb5b57bd3}{\index{leveldb\-::\-Block\-::\-Iter@{leveldb\-::\-Block\-::\-Iter}!Seek\-To\-First@{Seek\-To\-First}}
+\index{Seek\-To\-First@{Seek\-To\-First}!leveldb::Block::Iter@{leveldb\-::\-Block\-::\-Iter}}
+\subsubsection[{Seek\-To\-First}]{\setlength{\rightskip}{0pt plus 5cm}virtual void leveldb\-::\-Block\-::\-Iter\-::\-Seek\-To\-First (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classleveldb_1_1_block_1_1_iter_aecc19bb6d8a219e7fb8e695fb5b57bd3}
+
+
+Implements \hyperlink{classleveldb_1_1_iterator_a3594967cf26ddf1d37c7b886bb48627e}{leveldb\-::\-Iterator}.
+
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_block_1_1_iter_a3007d98d17a03138c629fc2b2eb56204}{\index{leveldb\-::\-Block\-::\-Iter@{leveldb\-::\-Block\-::\-Iter}!Seek\-To\-Last@{Seek\-To\-Last}}
+\index{Seek\-To\-Last@{Seek\-To\-Last}!leveldb::Block::Iter@{leveldb\-::\-Block\-::\-Iter}}
+\subsubsection[{Seek\-To\-Last}]{\setlength{\rightskip}{0pt plus 5cm}virtual void leveldb\-::\-Block\-::\-Iter\-::\-Seek\-To\-Last (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classleveldb_1_1_block_1_1_iter_a3007d98d17a03138c629fc2b2eb56204}
+
+
+Implements \hyperlink{classleveldb_1_1_iterator_a8ad637f0a759e6d94cca6c5b4db440d3}{leveldb\-::\-Iterator}.
+
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_block_1_1_iter_a356a5cae58d7f0f816fa366acf0722f5}{\index{leveldb\-::\-Block\-::\-Iter@{leveldb\-::\-Block\-::\-Iter}!Seek\-To\-Restart\-Point@{Seek\-To\-Restart\-Point}}
+\index{Seek\-To\-Restart\-Point@{Seek\-To\-Restart\-Point}!leveldb::Block::Iter@{leveldb\-::\-Block\-::\-Iter}}
+\subsubsection[{Seek\-To\-Restart\-Point}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-Block\-::\-Iter\-::\-Seek\-To\-Restart\-Point (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\-\_\-t}}]{index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{classleveldb_1_1_block_1_1_iter_a356a5cae58d7f0f816fa366acf0722f5}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_block_1_1_iter_a39f400b72dc79931145600a702b71c61}{\index{leveldb\-::\-Block\-::\-Iter@{leveldb\-::\-Block\-::\-Iter}!status@{status}}
+\index{status@{status}!leveldb::Block::Iter@{leveldb\-::\-Block\-::\-Iter}}
+\subsubsection[{status}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Status} leveldb\-::\-Block\-::\-Iter\-::status (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classleveldb_1_1_block_1_1_iter_a39f400b72dc79931145600a702b71c61}
+
+
+Implements \hyperlink{classleveldb_1_1_iterator_ac84f34623a031b7eeb23409320f76376}{leveldb\-::\-Iterator}.
+
+\hypertarget{classleveldb_1_1_block_1_1_iter_ac4be155bfc93e1d2b90cfd670f22c1ba}{\index{leveldb\-::\-Block\-::\-Iter@{leveldb\-::\-Block\-::\-Iter}!Valid@{Valid}}
+\index{Valid@{Valid}!leveldb::Block::Iter@{leveldb\-::\-Block\-::\-Iter}}
+\subsubsection[{Valid}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool leveldb\-::\-Block\-::\-Iter\-::\-Valid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classleveldb_1_1_block_1_1_iter_ac4be155bfc93e1d2b90cfd670f22c1ba}
+
+
+Implements \hyperlink{classleveldb_1_1_iterator_a38614978bfa0586327b8e237bcb46012}{leveldb\-::\-Iterator}.
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_block_1_1_iter_afb28e69efec54ca9306fc504e139bf3f}{\index{leveldb\-::\-Block\-::\-Iter@{leveldb\-::\-Block\-::\-Iter}!value@{value}}
+\index{value@{value}!leveldb::Block::Iter@{leveldb\-::\-Block\-::\-Iter}}
+\subsubsection[{value}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Slice} leveldb\-::\-Block\-::\-Iter\-::value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classleveldb_1_1_block_1_1_iter_afb28e69efec54ca9306fc504e139bf3f}
+
+
+Implements \hyperlink{classleveldb_1_1_iterator_a613ac2e965518aad7a064c64c72bcf7c}{leveldb\-::\-Iterator}.
+
+
+
+Here is the call graph for this function\-:
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classleveldb_1_1_block_1_1_iter_a8d6a7b92f8871936961f03339f4f0599}{\index{leveldb\-::\-Block\-::\-Iter@{leveldb\-::\-Block\-::\-Iter}!comparator\-\_\-@{comparator\-\_\-}}
+\index{comparator\-\_\-@{comparator\-\_\-}!leveldb::Block::Iter@{leveldb\-::\-Block\-::\-Iter}}
+\subsubsection[{comparator\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Comparator}$\ast$ const leveldb\-::\-Block\-::\-Iter\-::comparator\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_block_1_1_iter_a8d6a7b92f8871936961f03339f4f0599}
+\hypertarget{classleveldb_1_1_block_1_1_iter_a138761b9a17e914cb938458231ea6420}{\index{leveldb\-::\-Block\-::\-Iter@{leveldb\-::\-Block\-::\-Iter}!current\-\_\-@{current\-\_\-}}
+\index{current\-\_\-@{current\-\_\-}!leveldb::Block::Iter@{leveldb\-::\-Block\-::\-Iter}}
+\subsubsection[{current\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint32\-\_\-t} leveldb\-::\-Block\-::\-Iter\-::current\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_block_1_1_iter_a138761b9a17e914cb938458231ea6420}
+\hypertarget{classleveldb_1_1_block_1_1_iter_a1c59db8f5db56e150aa59c43d8cb1976}{\index{leveldb\-::\-Block\-::\-Iter@{leveldb\-::\-Block\-::\-Iter}!data\-\_\-@{data\-\_\-}}
+\index{data\-\_\-@{data\-\_\-}!leveldb::Block::Iter@{leveldb\-::\-Block\-::\-Iter}}
+\subsubsection[{data\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ const leveldb\-::\-Block\-::\-Iter\-::data\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_block_1_1_iter_a1c59db8f5db56e150aa59c43d8cb1976}
+\hypertarget{classleveldb_1_1_block_1_1_iter_a81757de8bc5414ccfe859e7387bee406}{\index{leveldb\-::\-Block\-::\-Iter@{leveldb\-::\-Block\-::\-Iter}!key\-\_\-@{key\-\_\-}}
+\index{key\-\_\-@{key\-\_\-}!leveldb::Block::Iter@{leveldb\-::\-Block\-::\-Iter}}
+\subsubsection[{key\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string leveldb\-::\-Block\-::\-Iter\-::key\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_block_1_1_iter_a81757de8bc5414ccfe859e7387bee406}
+\hypertarget{classleveldb_1_1_block_1_1_iter_ac1ec61eae6825859a73d23302875fe11}{\index{leveldb\-::\-Block\-::\-Iter@{leveldb\-::\-Block\-::\-Iter}!num\-\_\-restarts\-\_\-@{num\-\_\-restarts\-\_\-}}
+\index{num\-\_\-restarts\-\_\-@{num\-\_\-restarts\-\_\-}!leveldb::Block::Iter@{leveldb\-::\-Block\-::\-Iter}}
+\subsubsection[{num\-\_\-restarts\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint32\-\_\-t} const leveldb\-::\-Block\-::\-Iter\-::num\-\_\-restarts\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_block_1_1_iter_ac1ec61eae6825859a73d23302875fe11}
+\hypertarget{classleveldb_1_1_block_1_1_iter_aa4b7cc02f507cb8c6661a69a885e6e77}{\index{leveldb\-::\-Block\-::\-Iter@{leveldb\-::\-Block\-::\-Iter}!restart\-\_\-index\-\_\-@{restart\-\_\-index\-\_\-}}
+\index{restart\-\_\-index\-\_\-@{restart\-\_\-index\-\_\-}!leveldb::Block::Iter@{leveldb\-::\-Block\-::\-Iter}}
+\subsubsection[{restart\-\_\-index\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint32\-\_\-t} leveldb\-::\-Block\-::\-Iter\-::restart\-\_\-index\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_block_1_1_iter_aa4b7cc02f507cb8c6661a69a885e6e77}
+\hypertarget{classleveldb_1_1_block_1_1_iter_a29cd82a678d189009044c54c3e22ba24}{\index{leveldb\-::\-Block\-::\-Iter@{leveldb\-::\-Block\-::\-Iter}!restarts\-\_\-@{restarts\-\_\-}}
+\index{restarts\-\_\-@{restarts\-\_\-}!leveldb::Block::Iter@{leveldb\-::\-Block\-::\-Iter}}
+\subsubsection[{restarts\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint32\-\_\-t} const leveldb\-::\-Block\-::\-Iter\-::restarts\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_block_1_1_iter_a29cd82a678d189009044c54c3e22ba24}
+\hypertarget{classleveldb_1_1_block_1_1_iter_a66460e3f29991e34d6435d2e13edd920}{\index{leveldb\-::\-Block\-::\-Iter@{leveldb\-::\-Block\-::\-Iter}!status\-\_\-@{status\-\_\-}}
+\index{status\-\_\-@{status\-\_\-}!leveldb::Block::Iter@{leveldb\-::\-Block\-::\-Iter}}
+\subsubsection[{status\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Status} leveldb\-::\-Block\-::\-Iter\-::status\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_block_1_1_iter_a66460e3f29991e34d6435d2e13edd920}
+\hypertarget{classleveldb_1_1_block_1_1_iter_a5af74baeadb7f39bb6fa5da621fe04e0}{\index{leveldb\-::\-Block\-::\-Iter@{leveldb\-::\-Block\-::\-Iter}!value\-\_\-@{value\-\_\-}}
+\index{value\-\_\-@{value\-\_\-}!leveldb::Block::Iter@{leveldb\-::\-Block\-::\-Iter}}
+\subsubsection[{value\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Slice} leveldb\-::\-Block\-::\-Iter\-::value\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_block_1_1_iter_a5af74baeadb7f39bb6fa5da621fe04e0}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+table/\hyperlink{block_8cc}{block.\-cc}\end{DoxyCompactItemize}

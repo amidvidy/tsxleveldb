@@ -1,0 +1,10 @@
+digraph "leveldb_readoptions_t"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="leveldb_readoptions_t",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" rep" ];
+  Node2 [label="leveldb::ReadOptions",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structleveldb_1_1_read_options.html"];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" snapshot" ];
+  Node3 [label="leveldb::Snapshot",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_snapshot.html"];
+}

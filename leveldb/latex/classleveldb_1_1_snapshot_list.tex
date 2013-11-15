@@ -1,0 +1,119 @@
+\hypertarget{classleveldb_1_1_snapshot_list}{\section{leveldb\-:\-:Snapshot\-List Class Reference}
+\label{classleveldb_1_1_snapshot_list}\index{leveldb\-::\-Snapshot\-List@{leveldb\-::\-Snapshot\-List}}
+}
+
+
+{\ttfamily \#include $<$snapshot.\-h$>$}
+
+
+
+Collaboration diagram for leveldb\-:\-:Snapshot\-List\-:
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classleveldb_1_1_snapshot_list_a8e312959c2c2e2e64e9bb7eaca2459ae}{Snapshot\-List} ()
+\item 
+bool \hyperlink{classleveldb_1_1_snapshot_list_a27da501f33ea4aff4bb13c3443f98f70}{empty} () const 
+\item 
+\hyperlink{classleveldb_1_1_snapshot_impl}{Snapshot\-Impl} $\ast$ \hyperlink{classleveldb_1_1_snapshot_list_ad5990de13c4afa6877f8f3c641d8e72d}{oldest} () const 
+\item 
+\hyperlink{classleveldb_1_1_snapshot_impl}{Snapshot\-Impl} $\ast$ \hyperlink{classleveldb_1_1_snapshot_list_a783918fabc82113d6ffb014ce67395dc}{newest} () const 
+\item 
+const \hyperlink{classleveldb_1_1_snapshot_impl}{Snapshot\-Impl} $\ast$ \hyperlink{classleveldb_1_1_snapshot_list_adfd5d9c7cb888e711d83a48299141994}{New} (\hyperlink{namespaceleveldb_a5481ededd221c36d652c371249f869fa}{Sequence\-Number} seq)
+\item 
+void \hyperlink{classleveldb_1_1_snapshot_list_aa16863f35b8bb6dbc44f4528fab6790a}{Delete} (const \hyperlink{classleveldb_1_1_snapshot_impl}{Snapshot\-Impl} $\ast$s)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classleveldb_1_1_snapshot_impl}{Snapshot\-Impl} \hyperlink{classleveldb_1_1_snapshot_list_a7c45d05759fcc3853c140816da181b0c}{list\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classleveldb_1_1_snapshot_list_a8e312959c2c2e2e64e9bb7eaca2459ae}{\index{leveldb\-::\-Snapshot\-List@{leveldb\-::\-Snapshot\-List}!Snapshot\-List@{Snapshot\-List}}
+\index{Snapshot\-List@{Snapshot\-List}!leveldb::SnapshotList@{leveldb\-::\-Snapshot\-List}}
+\subsubsection[{Snapshot\-List}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::\-Snapshot\-List\-::\-Snapshot\-List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_snapshot_list_a8e312959c2c2e2e64e9bb7eaca2459ae}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classleveldb_1_1_snapshot_list_aa16863f35b8bb6dbc44f4528fab6790a}{\index{leveldb\-::\-Snapshot\-List@{leveldb\-::\-Snapshot\-List}!Delete@{Delete}}
+\index{Delete@{Delete}!leveldb::SnapshotList@{leveldb\-::\-Snapshot\-List}}
+\subsubsection[{Delete}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-Snapshot\-List\-::\-Delete (
+\begin{DoxyParamCaption}
+\item[{const {\bf Snapshot\-Impl} $\ast$}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_snapshot_list_aa16863f35b8bb6dbc44f4528fab6790a}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_snapshot_list_a27da501f33ea4aff4bb13c3443f98f70}{\index{leveldb\-::\-Snapshot\-List@{leveldb\-::\-Snapshot\-List}!empty@{empty}}
+\index{empty@{empty}!leveldb::SnapshotList@{leveldb\-::\-Snapshot\-List}}
+\subsubsection[{empty}]{\setlength{\rightskip}{0pt plus 5cm}bool leveldb\-::\-Snapshot\-List\-::empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_snapshot_list_a27da501f33ea4aff4bb13c3443f98f70}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_snapshot_list_adfd5d9c7cb888e711d83a48299141994}{\index{leveldb\-::\-Snapshot\-List@{leveldb\-::\-Snapshot\-List}!New@{New}}
+\index{New@{New}!leveldb::SnapshotList@{leveldb\-::\-Snapshot\-List}}
+\subsubsection[{New}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Snapshot\-Impl}$\ast$ leveldb\-::\-Snapshot\-List\-::\-New (
+\begin{DoxyParamCaption}
+\item[{{\bf Sequence\-Number}}]{seq}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_snapshot_list_adfd5d9c7cb888e711d83a48299141994}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_snapshot_list_a783918fabc82113d6ffb014ce67395dc}{\index{leveldb\-::\-Snapshot\-List@{leveldb\-::\-Snapshot\-List}!newest@{newest}}
+\index{newest@{newest}!leveldb::SnapshotList@{leveldb\-::\-Snapshot\-List}}
+\subsubsection[{newest}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Snapshot\-Impl}$\ast$ leveldb\-::\-Snapshot\-List\-::newest (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_snapshot_list_a783918fabc82113d6ffb014ce67395dc}
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_snapshot_list_ad5990de13c4afa6877f8f3c641d8e72d}{\index{leveldb\-::\-Snapshot\-List@{leveldb\-::\-Snapshot\-List}!oldest@{oldest}}
+\index{oldest@{oldest}!leveldb::SnapshotList@{leveldb\-::\-Snapshot\-List}}
+\subsubsection[{oldest}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Snapshot\-Impl}$\ast$ leveldb\-::\-Snapshot\-List\-::oldest (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_snapshot_list_ad5990de13c4afa6877f8f3c641d8e72d}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classleveldb_1_1_snapshot_list_a7c45d05759fcc3853c140816da181b0c}{\index{leveldb\-::\-Snapshot\-List@{leveldb\-::\-Snapshot\-List}!list\-\_\-@{list\-\_\-}}
+\index{list\-\_\-@{list\-\_\-}!leveldb::SnapshotList@{leveldb\-::\-Snapshot\-List}}
+\subsubsection[{list\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Snapshot\-Impl} leveldb\-::\-Snapshot\-List\-::list\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_snapshot_list_a7c45d05759fcc3853c140816da181b0c}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+db/\hyperlink{snapshot_8h}{snapshot.\-h}\end{DoxyCompactItemize}

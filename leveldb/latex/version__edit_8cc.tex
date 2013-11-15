@@ -1,0 +1,34 @@
+\hypertarget{version__edit_8cc}{\section{db/version\-\_\-edit.cc File Reference}
+\label{version__edit_8cc}\index{db/version\-\_\-edit.\-cc@{db/version\-\_\-edit.\-cc}}
+}
+{\ttfamily \#include \char`\"{}db/version\-\_\-edit.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}db/version\-\_\-set.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}util/coding.\-h\char`\"{}}\\*
+Include dependency graph for version\-\_\-edit.\-cc\-:
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespaceleveldb}{leveldb}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{namespaceleveldb_afa685d3afc34bc4ec96f33792276bc3f}{leveldb\-::\-Tag} \{ \\*
+\hyperlink{namespaceleveldb_afa685d3afc34bc4ec96f33792276bc3fac541e987bd5d939b35bc39df1796e681}{leveldb\-::k\-Comparator} = 1, 
+\hyperlink{namespaceleveldb_afa685d3afc34bc4ec96f33792276bc3fa04978e732995d33663db37d802a7e72c}{leveldb\-::k\-Log\-Number} = 2, 
+\hyperlink{namespaceleveldb_afa685d3afc34bc4ec96f33792276bc3fab6c83de82972300808bc8fcf6d42fa9b}{leveldb\-::k\-Next\-File\-Number} = 3, 
+\hyperlink{namespaceleveldb_afa685d3afc34bc4ec96f33792276bc3fab010832d8064a41609fd4812d486d1e8}{leveldb\-::k\-Last\-Sequence} = 4, 
+\\*
+\hyperlink{namespaceleveldb_afa685d3afc34bc4ec96f33792276bc3fa417aba67b6cb00757eff9c2d95230557}{leveldb\-::k\-Compact\-Pointer} = 5, 
+\hyperlink{namespaceleveldb_afa685d3afc34bc4ec96f33792276bc3fa6e96d3006bc411c9c461cb3b4dc67a96}{leveldb\-::k\-Deleted\-File} = 6, 
+\hyperlink{namespaceleveldb_afa685d3afc34bc4ec96f33792276bc3fae265c5eb525120ef5fd3284cd8b35220}{leveldb\-::k\-New\-File} = 7, 
+\hyperlink{namespaceleveldb_afa685d3afc34bc4ec96f33792276bc3fa3918f2a3f22eb62352c8e31f1ec161f3}{leveldb\-::k\-Prev\-Log\-Number} = 9
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \hyperlink{namespaceleveldb_a83eb9464b52905f9a56f8f0d5437c3c2}{leveldb\-::\-Get\-Internal\-Key} (Slice $\ast$input, Internal\-Key $\ast$dst)
+\item 
+static bool \hyperlink{namespaceleveldb_afc2dfe267c7cd8d678021e2752f336e9}{leveldb\-::\-Get\-Level} (Slice $\ast$input, int $\ast$level)
+\end{DoxyCompactItemize}

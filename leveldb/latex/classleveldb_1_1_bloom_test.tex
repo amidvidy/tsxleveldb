@@ -1,0 +1,157 @@
+\hypertarget{classleveldb_1_1_bloom_test}{\section{leveldb\-:\-:Bloom\-Test Class Reference}
+\label{classleveldb_1_1_bloom_test}\index{leveldb\-::\-Bloom\-Test@{leveldb\-::\-Bloom\-Test}}
+}
+
+
+Collaboration diagram for leveldb\-:\-:Bloom\-Test\-:
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classleveldb_1_1_bloom_test_a339a382294295be3e78dfccd25b945fc}{Bloom\-Test} ()
+\item 
+\hyperlink{classleveldb_1_1_bloom_test_a3370b88a1df119a64ced88ac71bfb6e2}{$\sim$\-Bloom\-Test} ()
+\item 
+void \hyperlink{classleveldb_1_1_bloom_test_a067ba6753890a5a924edd7efaad7187a}{Reset} ()
+\item 
+void \hyperlink{classleveldb_1_1_bloom_test_a2f7777014cec7c35f85373e2832bfd88}{Add} (const \hyperlink{classleveldb_1_1_slice}{Slice} \&s)
+\item 
+void \hyperlink{classleveldb_1_1_bloom_test_ad4fc802152c68599c919d33917523d31}{Build} ()
+\item 
+size\-\_\-t \hyperlink{classleveldb_1_1_bloom_test_accd2f436396b2324d89043c2a97f0c3a}{Filter\-Size} () const 
+\item 
+void \hyperlink{classleveldb_1_1_bloom_test_a6f210bc2f2e69c0aeb570fa4dbe4d0da}{Dump\-Filter} ()
+\item 
+bool \hyperlink{classleveldb_1_1_bloom_test_a1d2a9794bd26ac0124a18511689ef211}{Matches} (const \hyperlink{classleveldb_1_1_slice}{Slice} \&s)
+\item 
+double \hyperlink{classleveldb_1_1_bloom_test_abf887498db753825b308933df22c0bbb}{False\-Positive\-Rate} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{classleveldb_1_1_filter_policy}{Filter\-Policy} $\ast$ \hyperlink{classleveldb_1_1_bloom_test_aad08549895e8878b853205916a074cde}{policy\-\_\-}
+\item 
+std\-::string \hyperlink{classleveldb_1_1_bloom_test_a13fbea63f8f60fd3987745a5110084f1}{filter\-\_\-}
+\item 
+std\-::vector$<$ std\-::string $>$ \hyperlink{classleveldb_1_1_bloom_test_ad368ca79808b8350f679bb5f049d8095}{keys\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classleveldb_1_1_bloom_test_a339a382294295be3e78dfccd25b945fc}{\index{leveldb\-::\-Bloom\-Test@{leveldb\-::\-Bloom\-Test}!Bloom\-Test@{Bloom\-Test}}
+\index{Bloom\-Test@{Bloom\-Test}!leveldb::BloomTest@{leveldb\-::\-Bloom\-Test}}
+\subsubsection[{Bloom\-Test}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::\-Bloom\-Test\-::\-Bloom\-Test (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_bloom_test_a339a382294295be3e78dfccd25b945fc}
+\hypertarget{classleveldb_1_1_bloom_test_a3370b88a1df119a64ced88ac71bfb6e2}{\index{leveldb\-::\-Bloom\-Test@{leveldb\-::\-Bloom\-Test}!$\sim$\-Bloom\-Test@{$\sim$\-Bloom\-Test}}
+\index{$\sim$\-Bloom\-Test@{$\sim$\-Bloom\-Test}!leveldb::BloomTest@{leveldb\-::\-Bloom\-Test}}
+\subsubsection[{$\sim$\-Bloom\-Test}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::\-Bloom\-Test\-::$\sim$\-Bloom\-Test (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_bloom_test_a3370b88a1df119a64ced88ac71bfb6e2}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classleveldb_1_1_bloom_test_a2f7777014cec7c35f85373e2832bfd88}{\index{leveldb\-::\-Bloom\-Test@{leveldb\-::\-Bloom\-Test}!Add@{Add}}
+\index{Add@{Add}!leveldb::BloomTest@{leveldb\-::\-Bloom\-Test}}
+\subsubsection[{Add}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-Bloom\-Test\-::\-Add (
+\begin{DoxyParamCaption}
+\item[{const {\bf Slice} \&}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_bloom_test_a2f7777014cec7c35f85373e2832bfd88}
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_bloom_test_ad4fc802152c68599c919d33917523d31}{\index{leveldb\-::\-Bloom\-Test@{leveldb\-::\-Bloom\-Test}!Build@{Build}}
+\index{Build@{Build}!leveldb::BloomTest@{leveldb\-::\-Bloom\-Test}}
+\subsubsection[{Build}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-Bloom\-Test\-::\-Build (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_bloom_test_ad4fc802152c68599c919d33917523d31}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_bloom_test_a6f210bc2f2e69c0aeb570fa4dbe4d0da}{\index{leveldb\-::\-Bloom\-Test@{leveldb\-::\-Bloom\-Test}!Dump\-Filter@{Dump\-Filter}}
+\index{Dump\-Filter@{Dump\-Filter}!leveldb::BloomTest@{leveldb\-::\-Bloom\-Test}}
+\subsubsection[{Dump\-Filter}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-Bloom\-Test\-::\-Dump\-Filter (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_bloom_test_a6f210bc2f2e69c0aeb570fa4dbe4d0da}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_bloom_test_abf887498db753825b308933df22c0bbb}{\index{leveldb\-::\-Bloom\-Test@{leveldb\-::\-Bloom\-Test}!False\-Positive\-Rate@{False\-Positive\-Rate}}
+\index{False\-Positive\-Rate@{False\-Positive\-Rate}!leveldb::BloomTest@{leveldb\-::\-Bloom\-Test}}
+\subsubsection[{False\-Positive\-Rate}]{\setlength{\rightskip}{0pt plus 5cm}double leveldb\-::\-Bloom\-Test\-::\-False\-Positive\-Rate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_bloom_test_abf887498db753825b308933df22c0bbb}
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_bloom_test_accd2f436396b2324d89043c2a97f0c3a}{\index{leveldb\-::\-Bloom\-Test@{leveldb\-::\-Bloom\-Test}!Filter\-Size@{Filter\-Size}}
+\index{Filter\-Size@{Filter\-Size}!leveldb::BloomTest@{leveldb\-::\-Bloom\-Test}}
+\subsubsection[{Filter\-Size}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t leveldb\-::\-Bloom\-Test\-::\-Filter\-Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_bloom_test_accd2f436396b2324d89043c2a97f0c3a}
+\hypertarget{classleveldb_1_1_bloom_test_a1d2a9794bd26ac0124a18511689ef211}{\index{leveldb\-::\-Bloom\-Test@{leveldb\-::\-Bloom\-Test}!Matches@{Matches}}
+\index{Matches@{Matches}!leveldb::BloomTest@{leveldb\-::\-Bloom\-Test}}
+\subsubsection[{Matches}]{\setlength{\rightskip}{0pt plus 5cm}bool leveldb\-::\-Bloom\-Test\-::\-Matches (
+\begin{DoxyParamCaption}
+\item[{const {\bf Slice} \&}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_bloom_test_a1d2a9794bd26ac0124a18511689ef211}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_bloom_test_a067ba6753890a5a924edd7efaad7187a}{\index{leveldb\-::\-Bloom\-Test@{leveldb\-::\-Bloom\-Test}!Reset@{Reset}}
+\index{Reset@{Reset}!leveldb::BloomTest@{leveldb\-::\-Bloom\-Test}}
+\subsubsection[{Reset}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-Bloom\-Test\-::\-Reset (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_bloom_test_a067ba6753890a5a924edd7efaad7187a}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classleveldb_1_1_bloom_test_a13fbea63f8f60fd3987745a5110084f1}{\index{leveldb\-::\-Bloom\-Test@{leveldb\-::\-Bloom\-Test}!filter\-\_\-@{filter\-\_\-}}
+\index{filter\-\_\-@{filter\-\_\-}!leveldb::BloomTest@{leveldb\-::\-Bloom\-Test}}
+\subsubsection[{filter\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string leveldb\-::\-Bloom\-Test\-::filter\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_bloom_test_a13fbea63f8f60fd3987745a5110084f1}
+\hypertarget{classleveldb_1_1_bloom_test_ad368ca79808b8350f679bb5f049d8095}{\index{leveldb\-::\-Bloom\-Test@{leveldb\-::\-Bloom\-Test}!keys\-\_\-@{keys\-\_\-}}
+\index{keys\-\_\-@{keys\-\_\-}!leveldb::BloomTest@{leveldb\-::\-Bloom\-Test}}
+\subsubsection[{keys\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$std\-::string$>$ leveldb\-::\-Bloom\-Test\-::keys\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_bloom_test_ad368ca79808b8350f679bb5f049d8095}
+\hypertarget{classleveldb_1_1_bloom_test_aad08549895e8878b853205916a074cde}{\index{leveldb\-::\-Bloom\-Test@{leveldb\-::\-Bloom\-Test}!policy\-\_\-@{policy\-\_\-}}
+\index{policy\-\_\-@{policy\-\_\-}!leveldb::BloomTest@{leveldb\-::\-Bloom\-Test}}
+\subsubsection[{policy\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Filter\-Policy}$\ast$ leveldb\-::\-Bloom\-Test\-::policy\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_bloom_test_aad08549895e8878b853205916a074cde}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+util/\hyperlink{bloom__test_8cc}{bloom\-\_\-test.\-cc}\end{DoxyCompactItemize}

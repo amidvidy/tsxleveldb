@@ -1,0 +1,130 @@
+\hypertarget{structleveldb__filterpolicy__t}{\section{leveldb\-\_\-filterpolicy\-\_\-t Struct Reference}
+\label{structleveldb__filterpolicy__t}\index{leveldb\-\_\-filterpolicy\-\_\-t@{leveldb\-\_\-filterpolicy\-\_\-t}}
+}
+
+
+Inheritance diagram for leveldb\-\_\-filterpolicy\-\_\-t\-:
+
+
+Collaboration diagram for leveldb\-\_\-filterpolicy\-\_\-t\-:
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{structleveldb__filterpolicy__t_afea40a87cf4123be464f22d021dec9f3}{$\sim$leveldb\-\_\-filterpolicy\-\_\-t} ()
+\item 
+virtual const char $\ast$ \hyperlink{structleveldb__filterpolicy__t_a2d2e4bed02de91075ce921005c851a3e}{Name} () const 
+\item 
+virtual void \hyperlink{structleveldb__filterpolicy__t_a8b5b77b6a8d1c526905c7eb57d78558b}{Create\-Filter} (const \hyperlink{classleveldb_1_1_slice}{Slice} $\ast$keys, int n, std\-::string $\ast$dst) const 
+\item 
+virtual bool \hyperlink{structleveldb__filterpolicy__t_aa3006a26cac563bb5115d27d83b6865f}{Key\-May\-Match} (const \hyperlink{classleveldb_1_1_slice}{Slice} \&key, const \hyperlink{classleveldb_1_1_slice}{Slice} \&filter) const 
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \hyperlink{structleveldb__filterpolicy__t_a35aa5dd2f350f6eafa4ae904e55dcbe2}{state\-\_\-}
+\item 
+void($\ast$ \hyperlink{structleveldb__filterpolicy__t_a4d73739bd834e5c7364a91e1a0a377ed}{destructor\-\_\-} )(void $\ast$)
+\item 
+const char $\ast$($\ast$ \hyperlink{structleveldb__filterpolicy__t_a931dfc74b3cb6cb91c1aca19ac523661}{name\-\_\-} )(void $\ast$)
+\item 
+char $\ast$($\ast$ \hyperlink{structleveldb__filterpolicy__t_a7135a30801b44a977db41404df3a11c1}{create\-\_\-} )(void $\ast$, const char $\ast$const $\ast$key\-\_\-array, const size\-\_\-t $\ast$key\-\_\-length\-\_\-array, int num\-\_\-keys, size\-\_\-t $\ast$filter\-\_\-length)
+\item 
+unsigned char($\ast$ \hyperlink{structleveldb__filterpolicy__t_a78bd1d4fbf62e505b921bb0e1bcf38f1}{key\-\_\-match\-\_\-} )(void $\ast$, const char $\ast$key, size\-\_\-t length, const char $\ast$filter, size\-\_\-t filter\-\_\-length)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{structleveldb__filterpolicy__t_afea40a87cf4123be464f22d021dec9f3}{\index{leveldb\-\_\-filterpolicy\-\_\-t@{leveldb\-\_\-filterpolicy\-\_\-t}!$\sim$leveldb\-\_\-filterpolicy\-\_\-t@{$\sim$leveldb\-\_\-filterpolicy\-\_\-t}}
+\index{$\sim$leveldb\-\_\-filterpolicy\-\_\-t@{$\sim$leveldb\-\_\-filterpolicy\-\_\-t}!leveldb_filterpolicy_t@{leveldb\-\_\-filterpolicy\-\_\-t}}
+\subsubsection[{$\sim$leveldb\-\_\-filterpolicy\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}virtual leveldb\-\_\-filterpolicy\-\_\-t\-::$\sim$leveldb\-\_\-filterpolicy\-\_\-t (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{structleveldb__filterpolicy__t_afea40a87cf4123be464f22d021dec9f3}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{structleveldb__filterpolicy__t_a8b5b77b6a8d1c526905c7eb57d78558b}{\index{leveldb\-\_\-filterpolicy\-\_\-t@{leveldb\-\_\-filterpolicy\-\_\-t}!Create\-Filter@{Create\-Filter}}
+\index{Create\-Filter@{Create\-Filter}!leveldb_filterpolicy_t@{leveldb\-\_\-filterpolicy\-\_\-t}}
+\subsubsection[{Create\-Filter}]{\setlength{\rightskip}{0pt plus 5cm}virtual void leveldb\-\_\-filterpolicy\-\_\-t\-::\-Create\-Filter (
+\begin{DoxyParamCaption}
+\item[{const {\bf Slice} $\ast$}]{keys, }
+\item[{int}]{n, }
+\item[{std\-::string $\ast$}]{dst}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{structleveldb__filterpolicy__t_a8b5b77b6a8d1c526905c7eb57d78558b}
+
+
+Implements \hyperlink{classleveldb_1_1_filter_policy_a355e9797e16dd16b93d19056781126b2}{leveldb\-::\-Filter\-Policy}.
+
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{structleveldb__filterpolicy__t_aa3006a26cac563bb5115d27d83b6865f}{\index{leveldb\-\_\-filterpolicy\-\_\-t@{leveldb\-\_\-filterpolicy\-\_\-t}!Key\-May\-Match@{Key\-May\-Match}}
+\index{Key\-May\-Match@{Key\-May\-Match}!leveldb_filterpolicy_t@{leveldb\-\_\-filterpolicy\-\_\-t}}
+\subsubsection[{Key\-May\-Match}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool leveldb\-\_\-filterpolicy\-\_\-t\-::\-Key\-May\-Match (
+\begin{DoxyParamCaption}
+\item[{const {\bf Slice} \&}]{key, }
+\item[{const {\bf Slice} \&}]{filter}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{structleveldb__filterpolicy__t_aa3006a26cac563bb5115d27d83b6865f}
+
+
+Implements \hyperlink{classleveldb_1_1_filter_policy_a6f8ba10ea25e0b4b8d0a6607c361c718}{leveldb\-::\-Filter\-Policy}.
+
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{structleveldb__filterpolicy__t_a2d2e4bed02de91075ce921005c851a3e}{\index{leveldb\-\_\-filterpolicy\-\_\-t@{leveldb\-\_\-filterpolicy\-\_\-t}!Name@{Name}}
+\index{Name@{Name}!leveldb_filterpolicy_t@{leveldb\-\_\-filterpolicy\-\_\-t}}
+\subsubsection[{Name}]{\setlength{\rightskip}{0pt plus 5cm}virtual const char$\ast$ leveldb\-\_\-filterpolicy\-\_\-t\-::\-Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{structleveldb__filterpolicy__t_a2d2e4bed02de91075ce921005c851a3e}
+
+
+Implements \hyperlink{classleveldb_1_1_filter_policy_afd5e951892a2e740f186c0658913ea1b}{leveldb\-::\-Filter\-Policy}.
+
+
+
+Here is the caller graph for this function\-:
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{structleveldb__filterpolicy__t_a7135a30801b44a977db41404df3a11c1}{\index{leveldb\-\_\-filterpolicy\-\_\-t@{leveldb\-\_\-filterpolicy\-\_\-t}!create\-\_\-@{create\-\_\-}}
+\index{create\-\_\-@{create\-\_\-}!leveldb_filterpolicy_t@{leveldb\-\_\-filterpolicy\-\_\-t}}
+\subsubsection[{create\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$($\ast$ leveldb\-\_\-filterpolicy\-\_\-t\-::create\-\_\-)(void $\ast$, const char $\ast$const $\ast$key\-\_\-array, const size\-\_\-t $\ast$key\-\_\-length\-\_\-array, int num\-\_\-keys, size\-\_\-t $\ast$filter\-\_\-length)}}\label{structleveldb__filterpolicy__t_a7135a30801b44a977db41404df3a11c1}
+\hypertarget{structleveldb__filterpolicy__t_a4d73739bd834e5c7364a91e1a0a377ed}{\index{leveldb\-\_\-filterpolicy\-\_\-t@{leveldb\-\_\-filterpolicy\-\_\-t}!destructor\-\_\-@{destructor\-\_\-}}
+\index{destructor\-\_\-@{destructor\-\_\-}!leveldb_filterpolicy_t@{leveldb\-\_\-filterpolicy\-\_\-t}}
+\subsubsection[{destructor\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}void($\ast$ leveldb\-\_\-filterpolicy\-\_\-t\-::destructor\-\_\-)(void $\ast$)}}\label{structleveldb__filterpolicy__t_a4d73739bd834e5c7364a91e1a0a377ed}
+\hypertarget{structleveldb__filterpolicy__t_a78bd1d4fbf62e505b921bb0e1bcf38f1}{\index{leveldb\-\_\-filterpolicy\-\_\-t@{leveldb\-\_\-filterpolicy\-\_\-t}!key\-\_\-match\-\_\-@{key\-\_\-match\-\_\-}}
+\index{key\-\_\-match\-\_\-@{key\-\_\-match\-\_\-}!leveldb_filterpolicy_t@{leveldb\-\_\-filterpolicy\-\_\-t}}
+\subsubsection[{key\-\_\-match\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char($\ast$ leveldb\-\_\-filterpolicy\-\_\-t\-::key\-\_\-match\-\_\-)(void $\ast$, const char $\ast$key, size\-\_\-t length, const char $\ast$filter, size\-\_\-t filter\-\_\-length)}}\label{structleveldb__filterpolicy__t_a78bd1d4fbf62e505b921bb0e1bcf38f1}
+\hypertarget{structleveldb__filterpolicy__t_a931dfc74b3cb6cb91c1aca19ac523661}{\index{leveldb\-\_\-filterpolicy\-\_\-t@{leveldb\-\_\-filterpolicy\-\_\-t}!name\-\_\-@{name\-\_\-}}
+\index{name\-\_\-@{name\-\_\-}!leveldb_filterpolicy_t@{leveldb\-\_\-filterpolicy\-\_\-t}}
+\subsubsection[{name\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$($\ast$ leveldb\-\_\-filterpolicy\-\_\-t\-::name\-\_\-)(void $\ast$)}}\label{structleveldb__filterpolicy__t_a931dfc74b3cb6cb91c1aca19ac523661}
+\hypertarget{structleveldb__filterpolicy__t_a35aa5dd2f350f6eafa4ae904e55dcbe2}{\index{leveldb\-\_\-filterpolicy\-\_\-t@{leveldb\-\_\-filterpolicy\-\_\-t}!state\-\_\-@{state\-\_\-}}
+\index{state\-\_\-@{state\-\_\-}!leveldb_filterpolicy_t@{leveldb\-\_\-filterpolicy\-\_\-t}}
+\subsubsection[{state\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ leveldb\-\_\-filterpolicy\-\_\-t\-::state\-\_\-}}\label{structleveldb__filterpolicy__t_a35aa5dd2f350f6eafa4ae904e55dcbe2}
+
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+db/\hyperlink{c_8cc}{c.\-cc}\end{DoxyCompactItemize}

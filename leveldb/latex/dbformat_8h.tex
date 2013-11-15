@@ -1,0 +1,77 @@
+\hypertarget{dbformat_8h}{\section{db/dbformat.h File Reference}
+\label{dbformat_8h}\index{db/dbformat.\-h@{db/dbformat.\-h}}
+}
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}leveldb/comparator.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}leveldb/db.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}leveldb/filter\-\_\-policy.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}leveldb/slice.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}leveldb/table\-\_\-builder.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}util/coding.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}util/logging.\-h\char`\"{}}\\*
+Include dependency graph for dbformat.\-h\-:
+This graph shows which files directly or indirectly include this file\-:
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structleveldb_1_1_parsed_internal_key}{leveldb\-::\-Parsed\-Internal\-Key}
+\item 
+class \hyperlink{classleveldb_1_1_internal_key_comparator}{leveldb\-::\-Internal\-Key\-Comparator}
+\item 
+class \hyperlink{classleveldb_1_1_internal_filter_policy}{leveldb\-::\-Internal\-Filter\-Policy}
+\item 
+class \hyperlink{classleveldb_1_1_internal_key}{leveldb\-::\-Internal\-Key}
+\item 
+class \hyperlink{classleveldb_1_1_lookup_key}{leveldb\-::\-Lookup\-Key}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespaceleveldb}{leveldb}
+\item 
+\hyperlink{namespaceleveldb_1_1config}{leveldb\-::config}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} \hyperlink{namespaceleveldb_a5481ededd221c36d652c371249f869fa}{leveldb\-::\-Sequence\-Number}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{namespaceleveldb_acc038cb0d608414730cafa459a4ba866}{leveldb\-::\-Value\-Type} \{ \hyperlink{namespaceleveldb_acc038cb0d608414730cafa459a4ba866aca5f2147a76c932346e15d86668d4ed3}{leveldb\-::k\-Type\-Deletion} = 0x0, 
+\hyperlink{namespaceleveldb_acc038cb0d608414730cafa459a4ba866a97725c1d8e3317d1bac1f3b14fbfa281}{leveldb\-::k\-Type\-Value} = 0x1
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+size\-\_\-t \hyperlink{namespaceleveldb_a8406e76939e7e97465acf293f1585581}{leveldb\-::\-Internal\-Key\-Encoding\-Length} (const Parsed\-Internal\-Key \&key)
+\item 
+void \hyperlink{namespaceleveldb_a7192bb79e7fa6ba01490473941386534}{leveldb\-::\-Append\-Internal\-Key} (std\-::string $\ast$result, const Parsed\-Internal\-Key \&key)
+\item 
+bool \hyperlink{namespaceleveldb_a5a173b622e86c7a2f9beae3ac8818ac3}{leveldb\-::\-Parse\-Internal\-Key} (const Slice \&internal\-\_\-key, Parsed\-Internal\-Key $\ast$result)
+\item 
+Slice \hyperlink{namespaceleveldb_a1c889869840312393b805ad91a41b94f}{leveldb\-::\-Extract\-User\-Key} (const Slice \&internal\-\_\-key)
+\item 
+Value\-Type \hyperlink{namespaceleveldb_a0c5a6ea40d7c0e87060a6e6d3ee393ec}{leveldb\-::\-Extract\-Value\-Type} (const Slice \&internal\-\_\-key)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static const int \hyperlink{namespaceleveldb_1_1config_ab6017947ae68898c606643bddc0f5b9c}{leveldb\-::config\-::k\-Num\-Levels} = 7
+\item 
+static const int \hyperlink{namespaceleveldb_1_1config_adfd6a021e9c77747ec38714c45ef017e}{leveldb\-::config\-::k\-L0\-\_\-\-Compaction\-Trigger} = 4
+\item 
+static const int \hyperlink{namespaceleveldb_1_1config_a95d0f42e5c266f803d0ab649a0a1929e}{leveldb\-::config\-::k\-L0\-\_\-\-Slowdown\-Writes\-Trigger} = 8
+\item 
+static const int \hyperlink{namespaceleveldb_1_1config_a5541eb2b38aa4cd4046e8f2c714525ec}{leveldb\-::config\-::k\-L0\-\_\-\-Stop\-Writes\-Trigger} = 12
+\item 
+static const int \hyperlink{namespaceleveldb_1_1config_a430b64b6904a624a515357cdfadba700}{leveldb\-::config\-::k\-Max\-Mem\-Compact\-Level} = 2
+\item 
+static const int \hyperlink{namespaceleveldb_1_1config_a95c3d6a12072502a6b94bf3a412e714f}{leveldb\-::config\-::k\-Read\-Bytes\-Period} = 1048576
+\item 
+static const Value\-Type \hyperlink{namespaceleveldb_a0b7840e7de67fb0f7905955c02f75cfa}{leveldb\-::k\-Value\-Type\-For\-Seek} = k\-Type\-Value
+\item 
+static const Sequence\-Number \hyperlink{namespaceleveldb_adf59027c8c0dcc54c9d8c3e5ba090463}{leveldb\-::k\-Max\-Sequence\-Number}
+\end{DoxyCompactItemize}

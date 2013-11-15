@@ -1,0 +1,37 @@
+digraph "leveldb::Benchmark::DoWrite"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="leveldb::Benchmark\l::DoWrite",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="leveldb::WriteBatch\l::Clear",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_write_batch.html#afd5058344dc9be113919a5110129006f"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="leveldb::WriteBatch::Put",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_write_batch.html#a30770379143a7ccb4ede18ddf0e45bf3"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="leveldb::WriteBatchInternal\l::SetCount",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_write_batch_internal.html#ae03d20619da53aae175dd28d61c90bd9"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="leveldb::EncodeFixed32",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceleveldb.html#a265d1eea2e5d8e42cf86372ed4904886"];
+  Node3 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="leveldb::WriteBatchInternal\l::Count",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_write_batch_internal.html#a5270ca4567dbae1524005ad14e0698e3"];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="leveldb::DecodeFixed32",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceleveldb.html#adae574304f9d1ed3e95742167cd449a9"];
+  Node3 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="leveldb::PutLengthPrefixed\lSlice",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceleveldb.html#a98eaeea7300aa4f9b56303ffa27581af"];
+  Node8 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="leveldb::PutVarint32",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceleveldb.html#ab00e282f3fd7058b8a41afcf4b56e685"];
+  Node9 -> Node10 [color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="leveldb::EncodeVarint32",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceleveldb.html#ac5e7a0e0356b856317349a870e3bfb41"];
+  Node8 -> Node11 [color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="leveldb::Slice::size",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_slice.html#a947d3173f04f8a30553e89046daf91d5"];
+  Node8 -> Node12 [color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="leveldb::Slice::data",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_slice.html#aa64861043d9deee6889461bf0593cf73"];
+  Node1 -> Node13 [color="midnightblue",fontsize="10",style="solid"];
+  Node13 [label="leveldb::DB::Write",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_d_b.html#ae0b6ded8c8e0b88ff70190bf7a0c086c"];
+  Node1 -> Node14 [color="midnightblue",fontsize="10",style="solid"];
+  Node14 [label="leveldb::Status::ok",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_status.html#ab31e89a858c766716e3dc952be857c65"];
+  Node1 -> Node15 [color="midnightblue",fontsize="10",style="solid"];
+  Node15 [label="leveldb::Status::ToString",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_status.html#aa8b56d8fe2cd1873778de5d1e5407866"];
+  Node15 -> Node16 [color="midnightblue",fontsize="10",style="solid"];
+  Node16 [label="leveldb::Status::code",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_status.html#a7e1c5239636c9e0ffff6df6144f32af3"];
+}

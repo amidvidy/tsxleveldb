@@ -1,0 +1,126 @@
+\hypertarget{env__posix_8cc}{\section{util/env\-\_\-posix.cc File Reference}
+\label{env__posix_8cc}\index{util/env\-\_\-posix.\-cc@{util/env\-\_\-posix.\-cc}}
+}
+{\ttfamily \#include $<$deque$>$}\\*
+{\ttfamily \#include $<$set$>$}\\*
+{\ttfamily \#include $<$dirent.\-h$>$}\\*
+{\ttfamily \#include $<$errno.\-h$>$}\\*
+{\ttfamily \#include $<$fcntl.\-h$>$}\\*
+{\ttfamily \#include $<$pthread.\-h$>$}\\*
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include $<$string.\-h$>$}\\*
+{\ttfamily \#include $<$sys/mman.\-h$>$}\\*
+{\ttfamily \#include $<$sys/stat.\-h$>$}\\*
+{\ttfamily \#include $<$sys/time.\-h$>$}\\*
+{\ttfamily \#include $<$sys/types.\-h$>$}\\*
+{\ttfamily \#include $<$time.\-h$>$}\\*
+{\ttfamily \#include $<$unistd.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}leveldb/env.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}leveldb/slice.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}port/port.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}util/logging.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}util/mutexlock.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}util/posix\-\_\-logger.\-h\char`\"{}}\\*
+Include dependency graph for env\-\_\-posix.\-cc\-:
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespaceleveldb}{leveldb}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{namespaceleveldb_a14d29112491310d7a38d7b07fc5084f0}{leveldb\-::\-Init\-Default\-Env} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static pthread\-\_\-once\-\_\-t \hyperlink{namespaceleveldb_ae0ee2b9a8da60ad51918137eba9ffedb}{leveldb\-::once} = P\-T\-H\-R\-E\-A\-D\-\_\-\-O\-N\-C\-E\-\_\-\-I\-N\-I\-T
+\item 
+static Env $\ast$ \hyperlink{namespaceleveldb_a9ade93809ff59d5e6da0adc55c326a84}{leveldb\-::default\-\_\-env}
+\end{DoxyCompactItemize}
+
+
+\subsection{Variable Documentation}
+\hypertarget{env__posix_8cc_ab5ef24bd3fb0c72774cb411e363133d5}{\index{env\-\_\-posix.\-cc@{env\-\_\-posix.\-cc}!allowed\-\_\-@{allowed\-\_\-}}
+\index{allowed\-\_\-@{allowed\-\_\-}!env_posix.cc@{env\-\_\-posix.\-cc}}
+\subsubsection[{allowed\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}port\-::\-Atomic\-Pointer allowed\-\_\-}}\label{env__posix_8cc_ab5ef24bd3fb0c72774cb411e363133d5}
+\hypertarget{env__posix_8cc_a9ce2ec4812a92cb6ab39f6e81e9173a9}{\index{env\-\_\-posix.\-cc@{env\-\_\-posix.\-cc}!arg@{arg}}
+\index{arg@{arg}!env_posix.cc@{env\-\_\-posix.\-cc}}
+\subsubsection[{arg}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ arg}}\label{env__posix_8cc_a9ce2ec4812a92cb6ab39f6e81e9173a9}
+\hypertarget{env__posix_8cc_acd44a494bb0b39e0df719a789627e2f4}{\index{env\-\_\-posix.\-cc@{env\-\_\-posix.\-cc}!base\-\_\-@{base\-\_\-}}
+\index{base\-\_\-@{base\-\_\-}!env_posix.cc@{env\-\_\-posix.\-cc}}
+\subsubsection[{base\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ base\-\_\-}}\label{env__posix_8cc_acd44a494bb0b39e0df719a789627e2f4}
+\hypertarget{env__posix_8cc_ab892dc9d78ff888bb052f2396488402b}{\index{env\-\_\-posix.\-cc@{env\-\_\-posix.\-cc}!bgsignal\-\_\-@{bgsignal\-\_\-}}
+\index{bgsignal\-\_\-@{bgsignal\-\_\-}!env_posix.cc@{env\-\_\-posix.\-cc}}
+\subsubsection[{bgsignal\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}pthread\-\_\-cond\-\_\-t bgsignal\-\_\-}}\label{env__posix_8cc_ab892dc9d78ff888bb052f2396488402b}
+\hypertarget{env__posix_8cc_af210418dd7dbf5064d5e536c16f71b30}{\index{env\-\_\-posix.\-cc@{env\-\_\-posix.\-cc}!bgthread\-\_\-@{bgthread\-\_\-}}
+\index{bgthread\-\_\-@{bgthread\-\_\-}!env_posix.cc@{env\-\_\-posix.\-cc}}
+\subsubsection[{bgthread\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}pthread\-\_\-t bgthread\-\_\-}}\label{env__posix_8cc_af210418dd7dbf5064d5e536c16f71b30}
+\hypertarget{env__posix_8cc_ad556ab06fc1a09e1ca2252b68766cbe7}{\index{env\-\_\-posix.\-cc@{env\-\_\-posix.\-cc}!dst\-\_\-@{dst\-\_\-}}
+\index{dst\-\_\-@{dst\-\_\-}!env_posix.cc@{env\-\_\-posix.\-cc}}
+\subsubsection[{dst\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ dst\-\_\-}}\label{env__posix_8cc_ad556ab06fc1a09e1ca2252b68766cbe7}
+\hypertarget{env__posix_8cc_a4d16b31e09a7202f94eb934cde5372e5}{\index{env\-\_\-posix.\-cc@{env\-\_\-posix.\-cc}!fd\-\_\-@{fd\-\_\-}}
+\index{fd\-\_\-@{fd\-\_\-}!env_posix.cc@{env\-\_\-posix.\-cc}}
+\subsubsection[{fd\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int fd\-\_\-}}\label{env__posix_8cc_a4d16b31e09a7202f94eb934cde5372e5}
+\hypertarget{env__posix_8cc_a715b2a1d4ad04ec0c950d1467f91964e}{\index{env\-\_\-posix.\-cc@{env\-\_\-posix.\-cc}!file\-\_\-@{file\-\_\-}}
+\index{file\-\_\-@{file\-\_\-}!env_posix.cc@{env\-\_\-posix.\-cc}}
+\subsubsection[{file\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}F\-I\-L\-E$\ast$ file\-\_\-}}\label{env__posix_8cc_a715b2a1d4ad04ec0c950d1467f91964e}
+\hypertarget{env__posix_8cc_af361d9a0a31b168efcd9e944b8f3bcfd}{\index{env\-\_\-posix.\-cc@{env\-\_\-posix.\-cc}!file\-\_\-offset\-\_\-@{file\-\_\-offset\-\_\-}}
+\index{file\-\_\-offset\-\_\-@{file\-\_\-offset\-\_\-}!env_posix.cc@{env\-\_\-posix.\-cc}}
+\subsubsection[{file\-\_\-offset\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint64\-\_\-t} file\-\_\-offset\-\_\-}}\label{env__posix_8cc_af361d9a0a31b168efcd9e944b8f3bcfd}
+\hypertarget{env__posix_8cc_a1987d426278f7aa44643e6b36f6ea1d3}{\index{env\-\_\-posix.\-cc@{env\-\_\-posix.\-cc}!filename\-\_\-@{filename\-\_\-}}
+\index{filename\-\_\-@{filename\-\_\-}!env_posix.cc@{env\-\_\-posix.\-cc}}
+\subsubsection[{filename\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string filename\-\_\-}}\label{env__posix_8cc_a1987d426278f7aa44643e6b36f6ea1d3}
+\hypertarget{env__posix_8cc_a3af771e282b88e6dca0215c6c890ae75}{\index{env\-\_\-posix.\-cc@{env\-\_\-posix.\-cc}!function@{function}}
+\index{function@{function}!env_posix.cc@{env\-\_\-posix.\-cc}}
+\subsubsection[{function}]{\setlength{\rightskip}{0pt plus 5cm}void($\ast$ function)(void $\ast$)}}\label{env__posix_8cc_a3af771e282b88e6dca0215c6c890ae75}
+\hypertarget{env__posix_8cc_a7eaf19639ea750a2b8c49549bad67822}{\index{env\-\_\-posix.\-cc@{env\-\_\-posix.\-cc}!last\-\_\-sync\-\_\-@{last\-\_\-sync\-\_\-}}
+\index{last\-\_\-sync\-\_\-@{last\-\_\-sync\-\_\-}!env_posix.cc@{env\-\_\-posix.\-cc}}
+\subsubsection[{last\-\_\-sync\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ last\-\_\-sync\-\_\-}}\label{env__posix_8cc_a7eaf19639ea750a2b8c49549bad67822}
+\hypertarget{env__posix_8cc_af0c9b7dcc98dce1d0edf7cb6ce49103b}{\index{env\-\_\-posix.\-cc@{env\-\_\-posix.\-cc}!length\-\_\-@{length\-\_\-}}
+\index{length\-\_\-@{length\-\_\-}!env_posix.cc@{env\-\_\-posix.\-cc}}
+\subsubsection[{length\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t length\-\_\-}}\label{env__posix_8cc_af0c9b7dcc98dce1d0edf7cb6ce49103b}
+\hypertarget{env__posix_8cc_a025b27ebecf551b1a9de77f01a2d955e}{\index{env\-\_\-posix.\-cc@{env\-\_\-posix.\-cc}!limit\-\_\-@{limit\-\_\-}}
+\index{limit\-\_\-@{limit\-\_\-}!env_posix.cc@{env\-\_\-posix.\-cc}}
+\subsubsection[{limit\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ limit\-\_\-}}\label{env__posix_8cc_a025b27ebecf551b1a9de77f01a2d955e}
+\hypertarget{env__posix_8cc_a6e347260761afe0ac28005237e50e6d3}{\index{env\-\_\-posix.\-cc@{env\-\_\-posix.\-cc}!limiter\-\_\-@{limiter\-\_\-}}
+\index{limiter\-\_\-@{limiter\-\_\-}!env_posix.cc@{env\-\_\-posix.\-cc}}
+\subsubsection[{limiter\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}Mmap\-Limiter$\ast$ limiter\-\_\-}}\label{env__posix_8cc_a6e347260761afe0ac28005237e50e6d3}
+\hypertarget{env__posix_8cc_a284228cce12278f0110cc0bab2987b43}{\index{env\-\_\-posix.\-cc@{env\-\_\-posix.\-cc}!locked\-\_\-files\-\_\-@{locked\-\_\-files\-\_\-}}
+\index{locked\-\_\-files\-\_\-@{locked\-\_\-files\-\_\-}!env_posix.cc@{env\-\_\-posix.\-cc}}
+\subsubsection[{locked\-\_\-files\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::set$<$std\-::string$>$ locked\-\_\-files\-\_\-}}\label{env__posix_8cc_a284228cce12278f0110cc0bab2987b43}
+\hypertarget{env__posix_8cc_aae5261541c1148abfd5f43cb063de23b}{\index{env\-\_\-posix.\-cc@{env\-\_\-posix.\-cc}!locks\-\_\-@{locks\-\_\-}}
+\index{locks\-\_\-@{locks\-\_\-}!env_posix.cc@{env\-\_\-posix.\-cc}}
+\subsubsection[{locks\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}Posix\-Lock\-Table locks\-\_\-}}\label{env__posix_8cc_aae5261541c1148abfd5f43cb063de23b}
+\hypertarget{env__posix_8cc_afc2333aa293dbc0048fe24b05d6e4d24}{\index{env\-\_\-posix.\-cc@{env\-\_\-posix.\-cc}!map\-\_\-size\-\_\-@{map\-\_\-size\-\_\-}}
+\index{map\-\_\-size\-\_\-@{map\-\_\-size\-\_\-}!env_posix.cc@{env\-\_\-posix.\-cc}}
+\subsubsection[{map\-\_\-size\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t map\-\_\-size\-\_\-}}\label{env__posix_8cc_afc2333aa293dbc0048fe24b05d6e4d24}
+\hypertarget{env__posix_8cc_a57c9fb72d197eaf1623e8358f8b21e51}{\index{env\-\_\-posix.\-cc@{env\-\_\-posix.\-cc}!mmap\-\_\-limit\-\_\-@{mmap\-\_\-limit\-\_\-}}
+\index{mmap\-\_\-limit\-\_\-@{mmap\-\_\-limit\-\_\-}!env_posix.cc@{env\-\_\-posix.\-cc}}
+\subsubsection[{mmap\-\_\-limit\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}Mmap\-Limiter mmap\-\_\-limit\-\_\-}}\label{env__posix_8cc_a57c9fb72d197eaf1623e8358f8b21e51}
+\hypertarget{env__posix_8cc_a4bb89a699daa501a5694723cd99a7794}{\index{env\-\_\-posix.\-cc@{env\-\_\-posix.\-cc}!mmapped\-\_\-region\-\_\-@{mmapped\-\_\-region\-\_\-}}
+\index{mmapped\-\_\-region\-\_\-@{mmapped\-\_\-region\-\_\-}!env_posix.cc@{env\-\_\-posix.\-cc}}
+\subsubsection[{mmapped\-\_\-region\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ mmapped\-\_\-region\-\_\-}}\label{env__posix_8cc_a4bb89a699daa501a5694723cd99a7794}
+\hypertarget{env__posix_8cc_aae5944739f606040f5247bf6aa8edb82}{\index{env\-\_\-posix.\-cc@{env\-\_\-posix.\-cc}!mu\-\_\-@{mu\-\_\-}}
+\index{mu\-\_\-@{mu\-\_\-}!env_posix.cc@{env\-\_\-posix.\-cc}}
+\subsubsection[{mu\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}pthread\-\_\-mutex\-\_\-t mu\-\_\-}}\label{env__posix_8cc_aae5944739f606040f5247bf6aa8edb82}
+\hypertarget{env__posix_8cc_a4d739cc5d335052eb9f5b2ca559b81d1}{\index{env\-\_\-posix.\-cc@{env\-\_\-posix.\-cc}!name\-\_\-@{name\-\_\-}}
+\index{name\-\_\-@{name\-\_\-}!env_posix.cc@{env\-\_\-posix.\-cc}}
+\subsubsection[{name\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string name\-\_\-}}\label{env__posix_8cc_a4d739cc5d335052eb9f5b2ca559b81d1}
+\hypertarget{env__posix_8cc_ab56ad83bfa0bd054bb564c94cb7604c7}{\index{env\-\_\-posix.\-cc@{env\-\_\-posix.\-cc}!page\-\_\-size\-\_\-@{page\-\_\-size\-\_\-}}
+\index{page\-\_\-size\-\_\-@{page\-\_\-size\-\_\-}!env_posix.cc@{env\-\_\-posix.\-cc}}
+\subsubsection[{page\-\_\-size\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t page\-\_\-size\-\_\-}}\label{env__posix_8cc_ab56ad83bfa0bd054bb564c94cb7604c7}
+\hypertarget{env__posix_8cc_a22d7973ac6ca97d5749b53da92816897}{\index{env\-\_\-posix.\-cc@{env\-\_\-posix.\-cc}!pending\-\_\-sync\-\_\-@{pending\-\_\-sync\-\_\-}}
+\index{pending\-\_\-sync\-\_\-@{pending\-\_\-sync\-\_\-}!env_posix.cc@{env\-\_\-posix.\-cc}}
+\subsubsection[{pending\-\_\-sync\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}bool pending\-\_\-sync\-\_\-}}\label{env__posix_8cc_a22d7973ac6ca97d5749b53da92816897}
+\hypertarget{env__posix_8cc_a6bbe30ef170743c2e9f7f90da39bc71b}{\index{env\-\_\-posix.\-cc@{env\-\_\-posix.\-cc}!queue\-\_\-@{queue\-\_\-}}
+\index{queue\-\_\-@{queue\-\_\-}!env_posix.cc@{env\-\_\-posix.\-cc}}
+\subsubsection[{queue\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}B\-G\-Queue queue\-\_\-}}\label{env__posix_8cc_a6bbe30ef170743c2e9f7f90da39bc71b}
+\hypertarget{env__posix_8cc_ae4cc898d9a5c43b8210dc46bdfd42c33}{\index{env\-\_\-posix.\-cc@{env\-\_\-posix.\-cc}!started\-\_\-bgthread\-\_\-@{started\-\_\-bgthread\-\_\-}}
+\index{started\-\_\-bgthread\-\_\-@{started\-\_\-bgthread\-\_\-}!env_posix.cc@{env\-\_\-posix.\-cc}}
+\subsubsection[{started\-\_\-bgthread\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}bool started\-\_\-bgthread\-\_\-}}\label{env__posix_8cc_ae4cc898d9a5c43b8210dc46bdfd42c33}
+\hypertarget{env__posix_8cc_af979fdc384a4b76ab4101929b2cfdd9b}{\index{env\-\_\-posix.\-cc@{env\-\_\-posix.\-cc}!user\-\_\-function@{user\-\_\-function}}
+\index{user\-\_\-function@{user\-\_\-function}!env_posix.cc@{env\-\_\-posix.\-cc}}
+\subsubsection[{user\-\_\-function}]{\setlength{\rightskip}{0pt plus 5cm}void($\ast$ user\-\_\-function)(void $\ast$)}}\label{env__posix_8cc_af979fdc384a4b76ab4101929b2cfdd9b}

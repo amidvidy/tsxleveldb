@@ -1,0 +1,224 @@
+\hypertarget{classleveldb_1_1_concurrent_test}{\section{leveldb\-:\-:Concurrent\-Test Class Reference}
+\label{classleveldb_1_1_concurrent_test}\index{leveldb\-::\-Concurrent\-Test@{leveldb\-::\-Concurrent\-Test}}
+}
+
+
+Collaboration diagram for leveldb\-:\-:Concurrent\-Test\-:
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structleveldb_1_1_concurrent_test_1_1_state}{State}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classleveldb_1_1_concurrent_test_acd93a8fa57d9a10871ec24c419f5ea88}{Concurrent\-Test} ()
+\item 
+void \hyperlink{classleveldb_1_1_concurrent_test_a43dc8afb9124c364d6e97dc3d421131f}{Write\-Step} (\hyperlink{classleveldb_1_1_random}{Random} $\ast$rnd)
+\item 
+void \hyperlink{classleveldb_1_1_concurrent_test_a9dcaf11ec747ad37150526f891627c50}{Read\-Step} (\hyperlink{classleveldb_1_1_random}{Random} $\ast$rnd)
+\end{DoxyCompactItemize}
+\subsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} \hyperlink{classleveldb_1_1_concurrent_test_adba70cd10ddb3502b9fa1c0d786ed663}{key} (\hyperlink{namespaceleveldb_a7e9a9725b13fa0bd922d885280dfab95}{Key} key)
+\item 
+static \hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} \hyperlink{classleveldb_1_1_concurrent_test_a1c24fb7a08e031f98660083c5a9115b6}{gen} (\hyperlink{namespaceleveldb_a7e9a9725b13fa0bd922d885280dfab95}{Key} \hyperlink{classleveldb_1_1_concurrent_test_adba70cd10ddb3502b9fa1c0d786ed663}{key})
+\item 
+static \hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} \hyperlink{classleveldb_1_1_concurrent_test_a5f2f74d12efd42ece051f1490fb696d6}{hash} (\hyperlink{namespaceleveldb_a7e9a9725b13fa0bd922d885280dfab95}{Key} \hyperlink{classleveldb_1_1_concurrent_test_adba70cd10ddb3502b9fa1c0d786ed663}{key})
+\item 
+static \hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} \hyperlink{classleveldb_1_1_concurrent_test_a3a66612dc277bfeeef89a652613c54fd}{Hash\-Numbers} (\hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} k, \hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} g)
+\item 
+static \hyperlink{namespaceleveldb_a7e9a9725b13fa0bd922d885280dfab95}{Key} \hyperlink{classleveldb_1_1_concurrent_test_a34289dc46ae379b294f064d3adccb5a1}{Make\-Key} (\hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} k, \hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} g)
+\item 
+static bool \hyperlink{classleveldb_1_1_concurrent_test_a85227fd5130383ebcea6e4a45a52d0ba}{Is\-Valid\-Key} (\hyperlink{namespaceleveldb_a7e9a9725b13fa0bd922d885280dfab95}{Key} k)
+\item 
+static \hyperlink{namespaceleveldb_a7e9a9725b13fa0bd922d885280dfab95}{Key} \hyperlink{classleveldb_1_1_concurrent_test_a09cc30d1c5af529ed234721f0f9f86a0}{Random\-Target} (\hyperlink{classleveldb_1_1_random}{Random} $\ast$rnd)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structleveldb_1_1_concurrent_test_1_1_state}{State} \hyperlink{classleveldb_1_1_concurrent_test_a11c5013d5af02237e637b6013efbdf8b}{current\-\_\-}
+\item 
+\hyperlink{classleveldb_1_1_arena}{Arena} \hyperlink{classleveldb_1_1_concurrent_test_ae067606a3961c13de52700428dcbfd5c}{arena\-\_\-}
+\item 
+\hyperlink{classleveldb_1_1_skip_list}{Skip\-List}$<$ \hyperlink{namespaceleveldb_a7e9a9725b13fa0bd922d885280dfab95}{Key}, \hyperlink{structleveldb_1_1_comparator}{Comparator} $>$ \hyperlink{classleveldb_1_1_concurrent_test_a464336022164fd66379851cec882f237}{list\-\_\-}
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const \hyperlink{stdint_8h_a435d1572bf3f880d55459d9805097f62}{uint32\-\_\-t} \hyperlink{classleveldb_1_1_concurrent_test_a7ec0efa701eb4bc34cff1f7a9c6ba6bd}{K} = 4
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classleveldb_1_1_concurrent_test_acd93a8fa57d9a10871ec24c419f5ea88}{\index{leveldb\-::\-Concurrent\-Test@{leveldb\-::\-Concurrent\-Test}!Concurrent\-Test@{Concurrent\-Test}}
+\index{Concurrent\-Test@{Concurrent\-Test}!leveldb::ConcurrentTest@{leveldb\-::\-Concurrent\-Test}}
+\subsubsection[{Concurrent\-Test}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::\-Concurrent\-Test\-::\-Concurrent\-Test (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_concurrent_test_acd93a8fa57d9a10871ec24c419f5ea88}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classleveldb_1_1_concurrent_test_a1c24fb7a08e031f98660083c5a9115b6}{\index{leveldb\-::\-Concurrent\-Test@{leveldb\-::\-Concurrent\-Test}!gen@{gen}}
+\index{gen@{gen}!leveldb::ConcurrentTest@{leveldb\-::\-Concurrent\-Test}}
+\subsubsection[{gen}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf uint64\-\_\-t} leveldb\-::\-Concurrent\-Test\-::gen (
+\begin{DoxyParamCaption}
+\item[{{\bf Key}}]{key}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}}\label{classleveldb_1_1_concurrent_test_a1c24fb7a08e031f98660083c5a9115b6}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_concurrent_test_a5f2f74d12efd42ece051f1490fb696d6}{\index{leveldb\-::\-Concurrent\-Test@{leveldb\-::\-Concurrent\-Test}!hash@{hash}}
+\index{hash@{hash}!leveldb::ConcurrentTest@{leveldb\-::\-Concurrent\-Test}}
+\subsubsection[{hash}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf uint64\-\_\-t} leveldb\-::\-Concurrent\-Test\-::hash (
+\begin{DoxyParamCaption}
+\item[{{\bf Key}}]{key}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}}\label{classleveldb_1_1_concurrent_test_a5f2f74d12efd42ece051f1490fb696d6}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_concurrent_test_a3a66612dc277bfeeef89a652613c54fd}{\index{leveldb\-::\-Concurrent\-Test@{leveldb\-::\-Concurrent\-Test}!Hash\-Numbers@{Hash\-Numbers}}
+\index{Hash\-Numbers@{Hash\-Numbers}!leveldb::ConcurrentTest@{leveldb\-::\-Concurrent\-Test}}
+\subsubsection[{Hash\-Numbers}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf uint64\-\_\-t} leveldb\-::\-Concurrent\-Test\-::\-Hash\-Numbers (
+\begin{DoxyParamCaption}
+\item[{{\bf uint64\-\_\-t}}]{k, }
+\item[{{\bf uint64\-\_\-t}}]{g}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}}\label{classleveldb_1_1_concurrent_test_a3a66612dc277bfeeef89a652613c54fd}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_concurrent_test_a85227fd5130383ebcea6e4a45a52d0ba}{\index{leveldb\-::\-Concurrent\-Test@{leveldb\-::\-Concurrent\-Test}!Is\-Valid\-Key@{Is\-Valid\-Key}}
+\index{Is\-Valid\-Key@{Is\-Valid\-Key}!leveldb::ConcurrentTest@{leveldb\-::\-Concurrent\-Test}}
+\subsubsection[{Is\-Valid\-Key}]{\setlength{\rightskip}{0pt plus 5cm}static bool leveldb\-::\-Concurrent\-Test\-::\-Is\-Valid\-Key (
+\begin{DoxyParamCaption}
+\item[{{\bf Key}}]{k}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}}\label{classleveldb_1_1_concurrent_test_a85227fd5130383ebcea6e4a45a52d0ba}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_concurrent_test_adba70cd10ddb3502b9fa1c0d786ed663}{\index{leveldb\-::\-Concurrent\-Test@{leveldb\-::\-Concurrent\-Test}!key@{key}}
+\index{key@{key}!leveldb::ConcurrentTest@{leveldb\-::\-Concurrent\-Test}}
+\subsubsection[{key}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf uint64\-\_\-t} leveldb\-::\-Concurrent\-Test\-::key (
+\begin{DoxyParamCaption}
+\item[{{\bf Key}}]{key}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}}\label{classleveldb_1_1_concurrent_test_adba70cd10ddb3502b9fa1c0d786ed663}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_concurrent_test_a34289dc46ae379b294f064d3adccb5a1}{\index{leveldb\-::\-Concurrent\-Test@{leveldb\-::\-Concurrent\-Test}!Make\-Key@{Make\-Key}}
+\index{Make\-Key@{Make\-Key}!leveldb::ConcurrentTest@{leveldb\-::\-Concurrent\-Test}}
+\subsubsection[{Make\-Key}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Key} leveldb\-::\-Concurrent\-Test\-::\-Make\-Key (
+\begin{DoxyParamCaption}
+\item[{{\bf uint64\-\_\-t}}]{k, }
+\item[{{\bf uint64\-\_\-t}}]{g}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}}\label{classleveldb_1_1_concurrent_test_a34289dc46ae379b294f064d3adccb5a1}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_concurrent_test_a09cc30d1c5af529ed234721f0f9f86a0}{\index{leveldb\-::\-Concurrent\-Test@{leveldb\-::\-Concurrent\-Test}!Random\-Target@{Random\-Target}}
+\index{Random\-Target@{Random\-Target}!leveldb::ConcurrentTest@{leveldb\-::\-Concurrent\-Test}}
+\subsubsection[{Random\-Target}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Key} leveldb\-::\-Concurrent\-Test\-::\-Random\-Target (
+\begin{DoxyParamCaption}
+\item[{{\bf Random} $\ast$}]{rnd}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}}\label{classleveldb_1_1_concurrent_test_a09cc30d1c5af529ed234721f0f9f86a0}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_concurrent_test_a9dcaf11ec747ad37150526f891627c50}{\index{leveldb\-::\-Concurrent\-Test@{leveldb\-::\-Concurrent\-Test}!Read\-Step@{Read\-Step}}
+\index{Read\-Step@{Read\-Step}!leveldb::ConcurrentTest@{leveldb\-::\-Concurrent\-Test}}
+\subsubsection[{Read\-Step}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-Concurrent\-Test\-::\-Read\-Step (
+\begin{DoxyParamCaption}
+\item[{{\bf Random} $\ast$}]{rnd}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_concurrent_test_a9dcaf11ec747ad37150526f891627c50}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_concurrent_test_a43dc8afb9124c364d6e97dc3d421131f}{\index{leveldb\-::\-Concurrent\-Test@{leveldb\-::\-Concurrent\-Test}!Write\-Step@{Write\-Step}}
+\index{Write\-Step@{Write\-Step}!leveldb::ConcurrentTest@{leveldb\-::\-Concurrent\-Test}}
+\subsubsection[{Write\-Step}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-Concurrent\-Test\-::\-Write\-Step (
+\begin{DoxyParamCaption}
+\item[{{\bf Random} $\ast$}]{rnd}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_concurrent_test_a43dc8afb9124c364d6e97dc3d421131f}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classleveldb_1_1_concurrent_test_ae067606a3961c13de52700428dcbfd5c}{\index{leveldb\-::\-Concurrent\-Test@{leveldb\-::\-Concurrent\-Test}!arena\-\_\-@{arena\-\_\-}}
+\index{arena\-\_\-@{arena\-\_\-}!leveldb::ConcurrentTest@{leveldb\-::\-Concurrent\-Test}}
+\subsubsection[{arena\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Arena} leveldb\-::\-Concurrent\-Test\-::arena\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_concurrent_test_ae067606a3961c13de52700428dcbfd5c}
+\hypertarget{classleveldb_1_1_concurrent_test_a11c5013d5af02237e637b6013efbdf8b}{\index{leveldb\-::\-Concurrent\-Test@{leveldb\-::\-Concurrent\-Test}!current\-\_\-@{current\-\_\-}}
+\index{current\-\_\-@{current\-\_\-}!leveldb::ConcurrentTest@{leveldb\-::\-Concurrent\-Test}}
+\subsubsection[{current\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf State} leveldb\-::\-Concurrent\-Test\-::current\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_concurrent_test_a11c5013d5af02237e637b6013efbdf8b}
+\hypertarget{classleveldb_1_1_concurrent_test_a7ec0efa701eb4bc34cff1f7a9c6ba6bd}{\index{leveldb\-::\-Concurrent\-Test@{leveldb\-::\-Concurrent\-Test}!K@{K}}
+\index{K@{K}!leveldb::ConcurrentTest@{leveldb\-::\-Concurrent\-Test}}
+\subsubsection[{K}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf uint32\-\_\-t} leveldb\-::\-Concurrent\-Test\-::\-K = 4\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classleveldb_1_1_concurrent_test_a7ec0efa701eb4bc34cff1f7a9c6ba6bd}
+\hypertarget{classleveldb_1_1_concurrent_test_a464336022164fd66379851cec882f237}{\index{leveldb\-::\-Concurrent\-Test@{leveldb\-::\-Concurrent\-Test}!list\-\_\-@{list\-\_\-}}
+\index{list\-\_\-@{list\-\_\-}!leveldb::ConcurrentTest@{leveldb\-::\-Concurrent\-Test}}
+\subsubsection[{list\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Skip\-List}$<${\bf Key}, {\bf Comparator}$>$ leveldb\-::\-Concurrent\-Test\-::list\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_concurrent_test_a464336022164fd66379851cec882f237}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+db/\hyperlink{skiplist__test_8cc}{skiplist\-\_\-test.\-cc}\end{DoxyCompactItemize}

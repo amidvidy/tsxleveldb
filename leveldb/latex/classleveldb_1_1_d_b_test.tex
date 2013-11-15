@@ -1,0 +1,502 @@
+\hypertarget{classleveldb_1_1_d_b_test}{\section{leveldb\-:\-:D\-B\-Test Class Reference}
+\label{classleveldb_1_1_d_b_test}\index{leveldb\-::\-D\-B\-Test@{leveldb\-::\-D\-B\-Test}}
+}
+
+
+Collaboration diagram for leveldb\-:\-:D\-B\-Test\-:
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classleveldb_1_1_d_b_test_afc6fc9512e900de6ee10c5db15b22930}{D\-B\-Test} ()
+\item 
+\hyperlink{classleveldb_1_1_d_b_test_a2268045d59c3a74bba03877819e36b55}{$\sim$\-D\-B\-Test} ()
+\item 
+bool \hyperlink{classleveldb_1_1_d_b_test_a587534fe403016f15cf1997ef7a40836}{Change\-Options} ()
+\item 
+\hyperlink{structleveldb_1_1_options}{Options} \hyperlink{classleveldb_1_1_d_b_test_a68db410e16195a3b67822bec05c06547}{Current\-Options} ()
+\item 
+\hyperlink{classleveldb_1_1_d_b_impl}{D\-B\-Impl} $\ast$ \hyperlink{classleveldb_1_1_d_b_test_a67de35d247ea077c1e4fdf2a7a0f0514}{dbfull} ()
+\item 
+void \hyperlink{classleveldb_1_1_d_b_test_a38170a082cbc71fb446408ff5634c797}{Reopen} (\hyperlink{structleveldb_1_1_options}{Options} $\ast$options=N\-U\-L\-L)
+\item 
+void \hyperlink{classleveldb_1_1_d_b_test_aee76446bbb9c34cdb1ae00318689aead}{Close} ()
+\item 
+void \hyperlink{classleveldb_1_1_d_b_test_ab798a43e7feab6dddc8fa1eb7a5f61f6}{Destroy\-And\-Reopen} (\hyperlink{structleveldb_1_1_options}{Options} $\ast$options=N\-U\-L\-L)
+\item 
+\hyperlink{classleveldb_1_1_status}{Status} \hyperlink{classleveldb_1_1_d_b_test_aee588b2d13db6be2a651a8fabeac5c79}{Try\-Reopen} (\hyperlink{structleveldb_1_1_options}{Options} $\ast$options)
+\item 
+\hyperlink{classleveldb_1_1_status}{Status} \hyperlink{classleveldb_1_1_d_b_test_a5ec1a1d5ecc1744f325159eb81e46514}{Put} (const std\-::string \&k, const std\-::string \&v)
+\item 
+\hyperlink{classleveldb_1_1_status}{Status} \hyperlink{classleveldb_1_1_d_b_test_a25716ec93d525adbeea8ff71e8f3a9f4}{Delete} (const std\-::string \&k)
+\item 
+std\-::string \hyperlink{classleveldb_1_1_d_b_test_a6af558e1fca4a9f1bbf86d72d3d4aa6c}{Get} (const std\-::string \&k, const \hyperlink{classleveldb_1_1_snapshot}{Snapshot} $\ast$snapshot=N\-U\-L\-L)
+\item 
+std\-::string \hyperlink{classleveldb_1_1_d_b_test_a3cf871664bd22c6ed2d6c2a8834b49fc}{Contents} ()
+\item 
+std\-::string \hyperlink{classleveldb_1_1_d_b_test_adaf171601eaaf2cd24edaa394752f733}{All\-Entries\-For} (const \hyperlink{classleveldb_1_1_slice}{Slice} \&\hyperlink{version__set_8cc_afced2118ae0bf03db7c7e75a21cfd004}{user\-\_\-key})
+\item 
+int \hyperlink{classleveldb_1_1_d_b_test_aa7c845810f6d57b0655eda370e8de33f}{Num\-Table\-Files\-At\-Level} (int level)
+\item 
+int \hyperlink{classleveldb_1_1_d_b_test_a05fa745351a41ecc0165b391a605b79e}{Total\-Table\-Files} ()
+\item 
+std\-::string \hyperlink{classleveldb_1_1_d_b_test_a0e4d6292bcbe450d34b558d48a51a331}{Files\-Per\-Level} ()
+\item 
+int \hyperlink{classleveldb_1_1_d_b_test_a0c6c0c1d470a50fdcb6cdbc54977e907}{Count\-Files} ()
+\item 
+\hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} \hyperlink{classleveldb_1_1_d_b_test_a2b16106ccbd302127b5c0575e74e6be1}{Size} (const \hyperlink{classleveldb_1_1_slice}{Slice} \&\hyperlink{db__bench_8cc_ab376b87f96a574a793c03c53e75afec8}{start}, const \hyperlink{classleveldb_1_1_slice}{Slice} \&limit)
+\item 
+void \hyperlink{classleveldb_1_1_d_b_test_a9b6cd10fd7c8fc54127b0c40c0ac7db5}{Compact} (const \hyperlink{classleveldb_1_1_slice}{Slice} \&\hyperlink{db__bench_8cc_ab376b87f96a574a793c03c53e75afec8}{start}, const \hyperlink{classleveldb_1_1_slice}{Slice} \&limit)
+\item 
+void \hyperlink{classleveldb_1_1_d_b_test_ace931478fa5ad2c48a8aa95a344e19fd}{Make\-Tables} (int n, const std\-::string \&small, const std\-::string \&large)
+\item 
+void \hyperlink{classleveldb_1_1_d_b_test_ac291d06db907f5fee7caf04f44f65493}{Fill\-Levels} (const std\-::string \&smallest, const std\-::string \&largest)
+\item 
+void \hyperlink{classleveldb_1_1_d_b_test_ad045c5203b4ea785ab335ffc3ea833b3}{Dump\-File\-Counts} (const char $\ast$label)
+\item 
+std\-::string \hyperlink{classleveldb_1_1_d_b_test_afdfc077be555dea7eac220623f6d4deb}{Dump\-S\-S\-Table\-List} ()
+\item 
+std\-::string \hyperlink{classleveldb_1_1_d_b_test_ad162fa0f5a31e61ee94ba9f45af716f8}{Iter\-Status} (\hyperlink{classleveldb_1_1_iterator}{Iterator} $\ast$iter)
+\item 
+bool \hyperlink{classleveldb_1_1_d_b_test_abcb2ebeb0733670d7634079c587426d2}{Delete\-An\-S\-S\-T\-File} ()
+\item 
+int \hyperlink{classleveldb_1_1_d_b_test_a104ae4b9292787d0cfc9a9fb93cc5fa8}{Rename\-L\-D\-B\-To\-S\-S\-T} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\-::string \hyperlink{classleveldb_1_1_d_b_test_ab7eb9815f522ad154816d72d1cc23a86}{dbname\-\_\-}
+\item 
+\hyperlink{classleveldb_1_1_special_env}{Special\-Env} $\ast$ \hyperlink{classleveldb_1_1_d_b_test_ae6bb66675fe5419ed647efd1bfd332f8}{env\-\_\-}
+\item 
+\hyperlink{classleveldb_1_1_d_b}{D\-B} $\ast$ \hyperlink{classleveldb_1_1_d_b_test_a2c3db8773f1aa15128432a87489b0d5a}{db\-\_\-}
+\item 
+\hyperlink{structleveldb_1_1_options}{Options} \hyperlink{classleveldb_1_1_d_b_test_adc05df912917d8de411d0672af04330f}{last\-\_\-options\-\_\-}
+\end{DoxyCompactItemize}
+\subsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classleveldb_1_1_d_b_test_ade8d30892ac3c99c2a0488c119ef25e7}{Option\-Config} \{ \hyperlink{classleveldb_1_1_d_b_test_ade8d30892ac3c99c2a0488c119ef25e7a163b47baf2cf721dd67803249ea82afe}{k\-Default}, 
+\hyperlink{classleveldb_1_1_d_b_test_ade8d30892ac3c99c2a0488c119ef25e7a649624cfa983dc6f8cc4374f936a8e65}{k\-Filter}, 
+\hyperlink{classleveldb_1_1_d_b_test_ade8d30892ac3c99c2a0488c119ef25e7a7ca42a127723e396d8ae74dd46d3515e}{k\-Uncompressed}, 
+\hyperlink{classleveldb_1_1_d_b_test_ade8d30892ac3c99c2a0488c119ef25e7a9139cb3a45f68d68e214eeaebb8c60d9}{k\-End}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{classleveldb_1_1_filter_policy}{Filter\-Policy} $\ast$ \hyperlink{classleveldb_1_1_d_b_test_aa4bc31daa4cd4def3163c638f623d101}{filter\-\_\-policy\-\_\-}
+\item 
+int \hyperlink{classleveldb_1_1_d_b_test_a3cc39d9674e4e47e2be82b023f791bd0}{option\-\_\-config\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classleveldb_1_1_d_b_test_ade8d30892ac3c99c2a0488c119ef25e7}{\index{leveldb\-::\-D\-B\-Test@{leveldb\-::\-D\-B\-Test}!Option\-Config@{Option\-Config}}
+\index{Option\-Config@{Option\-Config}!leveldb::DBTest@{leveldb\-::\-D\-B\-Test}}
+\subsubsection[{Option\-Config}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf leveldb\-::\-D\-B\-Test\-::\-Option\-Config}\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_d_b_test_ade8d30892ac3c99c2a0488c119ef25e7}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{k\-Default@{k\-Default}!leveldb\-::\-D\-B\-Test@{leveldb\-::\-D\-B\-Test}}\index{leveldb\-::\-D\-B\-Test@{leveldb\-::\-D\-B\-Test}!k\-Default@{k\-Default}}\item[{\em 
+\hypertarget{classleveldb_1_1_d_b_test_ade8d30892ac3c99c2a0488c119ef25e7a163b47baf2cf721dd67803249ea82afe}{k\-Default}\label{classleveldb_1_1_d_b_test_ade8d30892ac3c99c2a0488c119ef25e7a163b47baf2cf721dd67803249ea82afe}
+}]\index{k\-Filter@{k\-Filter}!leveldb\-::\-D\-B\-Test@{leveldb\-::\-D\-B\-Test}}\index{leveldb\-::\-D\-B\-Test@{leveldb\-::\-D\-B\-Test}!k\-Filter@{k\-Filter}}\item[{\em 
+\hypertarget{classleveldb_1_1_d_b_test_ade8d30892ac3c99c2a0488c119ef25e7a649624cfa983dc6f8cc4374f936a8e65}{k\-Filter}\label{classleveldb_1_1_d_b_test_ade8d30892ac3c99c2a0488c119ef25e7a649624cfa983dc6f8cc4374f936a8e65}
+}]\index{k\-Uncompressed@{k\-Uncompressed}!leveldb\-::\-D\-B\-Test@{leveldb\-::\-D\-B\-Test}}\index{leveldb\-::\-D\-B\-Test@{leveldb\-::\-D\-B\-Test}!k\-Uncompressed@{k\-Uncompressed}}\item[{\em 
+\hypertarget{classleveldb_1_1_d_b_test_ade8d30892ac3c99c2a0488c119ef25e7a7ca42a127723e396d8ae74dd46d3515e}{k\-Uncompressed}\label{classleveldb_1_1_d_b_test_ade8d30892ac3c99c2a0488c119ef25e7a7ca42a127723e396d8ae74dd46d3515e}
+}]\index{k\-End@{k\-End}!leveldb\-::\-D\-B\-Test@{leveldb\-::\-D\-B\-Test}}\index{leveldb\-::\-D\-B\-Test@{leveldb\-::\-D\-B\-Test}!k\-End@{k\-End}}\item[{\em 
+\hypertarget{classleveldb_1_1_d_b_test_ade8d30892ac3c99c2a0488c119ef25e7a9139cb3a45f68d68e214eeaebb8c60d9}{k\-End}\label{classleveldb_1_1_d_b_test_ade8d30892ac3c99c2a0488c119ef25e7a9139cb3a45f68d68e214eeaebb8c60d9}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classleveldb_1_1_d_b_test_afc6fc9512e900de6ee10c5db15b22930}{\index{leveldb\-::\-D\-B\-Test@{leveldb\-::\-D\-B\-Test}!D\-B\-Test@{D\-B\-Test}}
+\index{D\-B\-Test@{D\-B\-Test}!leveldb::DBTest@{leveldb\-::\-D\-B\-Test}}
+\subsubsection[{D\-B\-Test}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::\-D\-B\-Test\-::\-D\-B\-Test (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_d_b_test_afc6fc9512e900de6ee10c5db15b22930}
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_d_b_test_a2268045d59c3a74bba03877819e36b55}{\index{leveldb\-::\-D\-B\-Test@{leveldb\-::\-D\-B\-Test}!$\sim$\-D\-B\-Test@{$\sim$\-D\-B\-Test}}
+\index{$\sim$\-D\-B\-Test@{$\sim$\-D\-B\-Test}!leveldb::DBTest@{leveldb\-::\-D\-B\-Test}}
+\subsubsection[{$\sim$\-D\-B\-Test}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::\-D\-B\-Test\-::$\sim$\-D\-B\-Test (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_d_b_test_a2268045d59c3a74bba03877819e36b55}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classleveldb_1_1_d_b_test_adaf171601eaaf2cd24edaa394752f733}{\index{leveldb\-::\-D\-B\-Test@{leveldb\-::\-D\-B\-Test}!All\-Entries\-For@{All\-Entries\-For}}
+\index{All\-Entries\-For@{All\-Entries\-For}!leveldb::DBTest@{leveldb\-::\-D\-B\-Test}}
+\subsubsection[{All\-Entries\-For}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string leveldb\-::\-D\-B\-Test\-::\-All\-Entries\-For (
+\begin{DoxyParamCaption}
+\item[{const {\bf Slice} \&}]{user\-\_\-key}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_d_b_test_adaf171601eaaf2cd24edaa394752f733}
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_d_b_test_a587534fe403016f15cf1997ef7a40836}{\index{leveldb\-::\-D\-B\-Test@{leveldb\-::\-D\-B\-Test}!Change\-Options@{Change\-Options}}
+\index{Change\-Options@{Change\-Options}!leveldb::DBTest@{leveldb\-::\-D\-B\-Test}}
+\subsubsection[{Change\-Options}]{\setlength{\rightskip}{0pt plus 5cm}bool leveldb\-::\-D\-B\-Test\-::\-Change\-Options (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_d_b_test_a587534fe403016f15cf1997ef7a40836}
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_d_b_test_aee76446bbb9c34cdb1ae00318689aead}{\index{leveldb\-::\-D\-B\-Test@{leveldb\-::\-D\-B\-Test}!Close@{Close}}
+\index{Close@{Close}!leveldb::DBTest@{leveldb\-::\-D\-B\-Test}}
+\subsubsection[{Close}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-D\-B\-Test\-::\-Close (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_d_b_test_aee76446bbb9c34cdb1ae00318689aead}
+\hypertarget{classleveldb_1_1_d_b_test_a9b6cd10fd7c8fc54127b0c40c0ac7db5}{\index{leveldb\-::\-D\-B\-Test@{leveldb\-::\-D\-B\-Test}!Compact@{Compact}}
+\index{Compact@{Compact}!leveldb::DBTest@{leveldb\-::\-D\-B\-Test}}
+\subsubsection[{Compact}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-D\-B\-Test\-::\-Compact (
+\begin{DoxyParamCaption}
+\item[{const {\bf Slice} \&}]{start, }
+\item[{const {\bf Slice} \&}]{limit}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_d_b_test_a9b6cd10fd7c8fc54127b0c40c0ac7db5}
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_d_b_test_a3cf871664bd22c6ed2d6c2a8834b49fc}{\index{leveldb\-::\-D\-B\-Test@{leveldb\-::\-D\-B\-Test}!Contents@{Contents}}
+\index{Contents@{Contents}!leveldb::DBTest@{leveldb\-::\-D\-B\-Test}}
+\subsubsection[{Contents}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string leveldb\-::\-D\-B\-Test\-::\-Contents (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_d_b_test_a3cf871664bd22c6ed2d6c2a8834b49fc}
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_d_b_test_a0c6c0c1d470a50fdcb6cdbc54977e907}{\index{leveldb\-::\-D\-B\-Test@{leveldb\-::\-D\-B\-Test}!Count\-Files@{Count\-Files}}
+\index{Count\-Files@{Count\-Files}!leveldb::DBTest@{leveldb\-::\-D\-B\-Test}}
+\subsubsection[{Count\-Files}]{\setlength{\rightskip}{0pt plus 5cm}int leveldb\-::\-D\-B\-Test\-::\-Count\-Files (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_d_b_test_a0c6c0c1d470a50fdcb6cdbc54977e907}
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_d_b_test_a68db410e16195a3b67822bec05c06547}{\index{leveldb\-::\-D\-B\-Test@{leveldb\-::\-D\-B\-Test}!Current\-Options@{Current\-Options}}
+\index{Current\-Options@{Current\-Options}!leveldb::DBTest@{leveldb\-::\-D\-B\-Test}}
+\subsubsection[{Current\-Options}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Options} leveldb\-::\-D\-B\-Test\-::\-Current\-Options (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_d_b_test_a68db410e16195a3b67822bec05c06547}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_d_b_test_a67de35d247ea077c1e4fdf2a7a0f0514}{\index{leveldb\-::\-D\-B\-Test@{leveldb\-::\-D\-B\-Test}!dbfull@{dbfull}}
+\index{dbfull@{dbfull}!leveldb::DBTest@{leveldb\-::\-D\-B\-Test}}
+\subsubsection[{dbfull}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-B\-Impl}$\ast$ leveldb\-::\-D\-B\-Test\-::dbfull (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_d_b_test_a67de35d247ea077c1e4fdf2a7a0f0514}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_d_b_test_a25716ec93d525adbeea8ff71e8f3a9f4}{\index{leveldb\-::\-D\-B\-Test@{leveldb\-::\-D\-B\-Test}!Delete@{Delete}}
+\index{Delete@{Delete}!leveldb::DBTest@{leveldb\-::\-D\-B\-Test}}
+\subsubsection[{Delete}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Status} leveldb\-::\-D\-B\-Test\-::\-Delete (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{k}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_d_b_test_a25716ec93d525adbeea8ff71e8f3a9f4}
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_d_b_test_abcb2ebeb0733670d7634079c587426d2}{\index{leveldb\-::\-D\-B\-Test@{leveldb\-::\-D\-B\-Test}!Delete\-An\-S\-S\-T\-File@{Delete\-An\-S\-S\-T\-File}}
+\index{Delete\-An\-S\-S\-T\-File@{Delete\-An\-S\-S\-T\-File}!leveldb::DBTest@{leveldb\-::\-D\-B\-Test}}
+\subsubsection[{Delete\-An\-S\-S\-T\-File}]{\setlength{\rightskip}{0pt plus 5cm}bool leveldb\-::\-D\-B\-Test\-::\-Delete\-An\-S\-S\-T\-File (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_d_b_test_abcb2ebeb0733670d7634079c587426d2}
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_d_b_test_ab798a43e7feab6dddc8fa1eb7a5f61f6}{\index{leveldb\-::\-D\-B\-Test@{leveldb\-::\-D\-B\-Test}!Destroy\-And\-Reopen@{Destroy\-And\-Reopen}}
+\index{Destroy\-And\-Reopen@{Destroy\-And\-Reopen}!leveldb::DBTest@{leveldb\-::\-D\-B\-Test}}
+\subsubsection[{Destroy\-And\-Reopen}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-D\-B\-Test\-::\-Destroy\-And\-Reopen (
+\begin{DoxyParamCaption}
+\item[{{\bf Options} $\ast$}]{options = {\ttfamily NULL}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_d_b_test_ab798a43e7feab6dddc8fa1eb7a5f61f6}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_d_b_test_ad045c5203b4ea785ab335ffc3ea833b3}{\index{leveldb\-::\-D\-B\-Test@{leveldb\-::\-D\-B\-Test}!Dump\-File\-Counts@{Dump\-File\-Counts}}
+\index{Dump\-File\-Counts@{Dump\-File\-Counts}!leveldb::DBTest@{leveldb\-::\-D\-B\-Test}}
+\subsubsection[{Dump\-File\-Counts}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-D\-B\-Test\-::\-Dump\-File\-Counts (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{label}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_d_b_test_ad045c5203b4ea785ab335ffc3ea833b3}
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_d_b_test_afdfc077be555dea7eac220623f6d4deb}{\index{leveldb\-::\-D\-B\-Test@{leveldb\-::\-D\-B\-Test}!Dump\-S\-S\-Table\-List@{Dump\-S\-S\-Table\-List}}
+\index{Dump\-S\-S\-Table\-List@{Dump\-S\-S\-Table\-List}!leveldb::DBTest@{leveldb\-::\-D\-B\-Test}}
+\subsubsection[{Dump\-S\-S\-Table\-List}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string leveldb\-::\-D\-B\-Test\-::\-Dump\-S\-S\-Table\-List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_d_b_test_afdfc077be555dea7eac220623f6d4deb}
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_d_b_test_a0e4d6292bcbe450d34b558d48a51a331}{\index{leveldb\-::\-D\-B\-Test@{leveldb\-::\-D\-B\-Test}!Files\-Per\-Level@{Files\-Per\-Level}}
+\index{Files\-Per\-Level@{Files\-Per\-Level}!leveldb::DBTest@{leveldb\-::\-D\-B\-Test}}
+\subsubsection[{Files\-Per\-Level}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string leveldb\-::\-D\-B\-Test\-::\-Files\-Per\-Level (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_d_b_test_a0e4d6292bcbe450d34b558d48a51a331}
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_d_b_test_ac291d06db907f5fee7caf04f44f65493}{\index{leveldb\-::\-D\-B\-Test@{leveldb\-::\-D\-B\-Test}!Fill\-Levels@{Fill\-Levels}}
+\index{Fill\-Levels@{Fill\-Levels}!leveldb::DBTest@{leveldb\-::\-D\-B\-Test}}
+\subsubsection[{Fill\-Levels}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-D\-B\-Test\-::\-Fill\-Levels (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{smallest, }
+\item[{const std\-::string \&}]{largest}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_d_b_test_ac291d06db907f5fee7caf04f44f65493}
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_d_b_test_a6af558e1fca4a9f1bbf86d72d3d4aa6c}{\index{leveldb\-::\-D\-B\-Test@{leveldb\-::\-D\-B\-Test}!Get@{Get}}
+\index{Get@{Get}!leveldb::DBTest@{leveldb\-::\-D\-B\-Test}}
+\subsubsection[{Get}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string leveldb\-::\-D\-B\-Test\-::\-Get (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{k, }
+\item[{const {\bf Snapshot} $\ast$}]{snapshot = {\ttfamily NULL}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_d_b_test_a6af558e1fca4a9f1bbf86d72d3d4aa6c}
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_d_b_test_ad162fa0f5a31e61ee94ba9f45af716f8}{\index{leveldb\-::\-D\-B\-Test@{leveldb\-::\-D\-B\-Test}!Iter\-Status@{Iter\-Status}}
+\index{Iter\-Status@{Iter\-Status}!leveldb::DBTest@{leveldb\-::\-D\-B\-Test}}
+\subsubsection[{Iter\-Status}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string leveldb\-::\-D\-B\-Test\-::\-Iter\-Status (
+\begin{DoxyParamCaption}
+\item[{{\bf Iterator} $\ast$}]{iter}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_d_b_test_ad162fa0f5a31e61ee94ba9f45af716f8}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_d_b_test_ace931478fa5ad2c48a8aa95a344e19fd}{\index{leveldb\-::\-D\-B\-Test@{leveldb\-::\-D\-B\-Test}!Make\-Tables@{Make\-Tables}}
+\index{Make\-Tables@{Make\-Tables}!leveldb::DBTest@{leveldb\-::\-D\-B\-Test}}
+\subsubsection[{Make\-Tables}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-D\-B\-Test\-::\-Make\-Tables (
+\begin{DoxyParamCaption}
+\item[{int}]{n, }
+\item[{const std\-::string \&}]{small, }
+\item[{const std\-::string \&}]{large}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_d_b_test_ace931478fa5ad2c48a8aa95a344e19fd}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_d_b_test_aa7c845810f6d57b0655eda370e8de33f}{\index{leveldb\-::\-D\-B\-Test@{leveldb\-::\-D\-B\-Test}!Num\-Table\-Files\-At\-Level@{Num\-Table\-Files\-At\-Level}}
+\index{Num\-Table\-Files\-At\-Level@{Num\-Table\-Files\-At\-Level}!leveldb::DBTest@{leveldb\-::\-D\-B\-Test}}
+\subsubsection[{Num\-Table\-Files\-At\-Level}]{\setlength{\rightskip}{0pt plus 5cm}int leveldb\-::\-D\-B\-Test\-::\-Num\-Table\-Files\-At\-Level (
+\begin{DoxyParamCaption}
+\item[{int}]{level}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_d_b_test_aa7c845810f6d57b0655eda370e8de33f}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_d_b_test_a5ec1a1d5ecc1744f325159eb81e46514}{\index{leveldb\-::\-D\-B\-Test@{leveldb\-::\-D\-B\-Test}!Put@{Put}}
+\index{Put@{Put}!leveldb::DBTest@{leveldb\-::\-D\-B\-Test}}
+\subsubsection[{Put}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Status} leveldb\-::\-D\-B\-Test\-::\-Put (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{k, }
+\item[{const std\-::string \&}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_d_b_test_a5ec1a1d5ecc1744f325159eb81e46514}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_d_b_test_a104ae4b9292787d0cfc9a9fb93cc5fa8}{\index{leveldb\-::\-D\-B\-Test@{leveldb\-::\-D\-B\-Test}!Rename\-L\-D\-B\-To\-S\-S\-T@{Rename\-L\-D\-B\-To\-S\-S\-T}}
+\index{Rename\-L\-D\-B\-To\-S\-S\-T@{Rename\-L\-D\-B\-To\-S\-S\-T}!leveldb::DBTest@{leveldb\-::\-D\-B\-Test}}
+\subsubsection[{Rename\-L\-D\-B\-To\-S\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}int leveldb\-::\-D\-B\-Test\-::\-Rename\-L\-D\-B\-To\-S\-S\-T (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_d_b_test_a104ae4b9292787d0cfc9a9fb93cc5fa8}
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_d_b_test_a38170a082cbc71fb446408ff5634c797}{\index{leveldb\-::\-D\-B\-Test@{leveldb\-::\-D\-B\-Test}!Reopen@{Reopen}}
+\index{Reopen@{Reopen}!leveldb::DBTest@{leveldb\-::\-D\-B\-Test}}
+\subsubsection[{Reopen}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-D\-B\-Test\-::\-Reopen (
+\begin{DoxyParamCaption}
+\item[{{\bf Options} $\ast$}]{options = {\ttfamily NULL}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_d_b_test_a38170a082cbc71fb446408ff5634c797}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_d_b_test_a2b16106ccbd302127b5c0575e74e6be1}{\index{leveldb\-::\-D\-B\-Test@{leveldb\-::\-D\-B\-Test}!Size@{Size}}
+\index{Size@{Size}!leveldb::DBTest@{leveldb\-::\-D\-B\-Test}}
+\subsubsection[{Size}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint64\-\_\-t} leveldb\-::\-D\-B\-Test\-::\-Size (
+\begin{DoxyParamCaption}
+\item[{const {\bf Slice} \&}]{start, }
+\item[{const {\bf Slice} \&}]{limit}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_d_b_test_a2b16106ccbd302127b5c0575e74e6be1}
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_d_b_test_a05fa745351a41ecc0165b391a605b79e}{\index{leveldb\-::\-D\-B\-Test@{leveldb\-::\-D\-B\-Test}!Total\-Table\-Files@{Total\-Table\-Files}}
+\index{Total\-Table\-Files@{Total\-Table\-Files}!leveldb::DBTest@{leveldb\-::\-D\-B\-Test}}
+\subsubsection[{Total\-Table\-Files}]{\setlength{\rightskip}{0pt plus 5cm}int leveldb\-::\-D\-B\-Test\-::\-Total\-Table\-Files (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_d_b_test_a05fa745351a41ecc0165b391a605b79e}
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_d_b_test_aee588b2d13db6be2a651a8fabeac5c79}{\index{leveldb\-::\-D\-B\-Test@{leveldb\-::\-D\-B\-Test}!Try\-Reopen@{Try\-Reopen}}
+\index{Try\-Reopen@{Try\-Reopen}!leveldb::DBTest@{leveldb\-::\-D\-B\-Test}}
+\subsubsection[{Try\-Reopen}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Status} leveldb\-::\-D\-B\-Test\-::\-Try\-Reopen (
+\begin{DoxyParamCaption}
+\item[{{\bf Options} $\ast$}]{options}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_d_b_test_aee588b2d13db6be2a651a8fabeac5c79}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classleveldb_1_1_d_b_test_a2c3db8773f1aa15128432a87489b0d5a}{\index{leveldb\-::\-D\-B\-Test@{leveldb\-::\-D\-B\-Test}!db\-\_\-@{db\-\_\-}}
+\index{db\-\_\-@{db\-\_\-}!leveldb::DBTest@{leveldb\-::\-D\-B\-Test}}
+\subsubsection[{db\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-B}$\ast$ leveldb\-::\-D\-B\-Test\-::db\-\_\-}}\label{classleveldb_1_1_d_b_test_a2c3db8773f1aa15128432a87489b0d5a}
+\hypertarget{classleveldb_1_1_d_b_test_ab7eb9815f522ad154816d72d1cc23a86}{\index{leveldb\-::\-D\-B\-Test@{leveldb\-::\-D\-B\-Test}!dbname\-\_\-@{dbname\-\_\-}}
+\index{dbname\-\_\-@{dbname\-\_\-}!leveldb::DBTest@{leveldb\-::\-D\-B\-Test}}
+\subsubsection[{dbname\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string leveldb\-::\-D\-B\-Test\-::dbname\-\_\-}}\label{classleveldb_1_1_d_b_test_ab7eb9815f522ad154816d72d1cc23a86}
+\hypertarget{classleveldb_1_1_d_b_test_ae6bb66675fe5419ed647efd1bfd332f8}{\index{leveldb\-::\-D\-B\-Test@{leveldb\-::\-D\-B\-Test}!env\-\_\-@{env\-\_\-}}
+\index{env\-\_\-@{env\-\_\-}!leveldb::DBTest@{leveldb\-::\-D\-B\-Test}}
+\subsubsection[{env\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Special\-Env}$\ast$ leveldb\-::\-D\-B\-Test\-::env\-\_\-}}\label{classleveldb_1_1_d_b_test_ae6bb66675fe5419ed647efd1bfd332f8}
+\hypertarget{classleveldb_1_1_d_b_test_aa4bc31daa4cd4def3163c638f623d101}{\index{leveldb\-::\-D\-B\-Test@{leveldb\-::\-D\-B\-Test}!filter\-\_\-policy\-\_\-@{filter\-\_\-policy\-\_\-}}
+\index{filter\-\_\-policy\-\_\-@{filter\-\_\-policy\-\_\-}!leveldb::DBTest@{leveldb\-::\-D\-B\-Test}}
+\subsubsection[{filter\-\_\-policy\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Filter\-Policy}$\ast$ leveldb\-::\-D\-B\-Test\-::filter\-\_\-policy\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_d_b_test_aa4bc31daa4cd4def3163c638f623d101}
+\hypertarget{classleveldb_1_1_d_b_test_adc05df912917d8de411d0672af04330f}{\index{leveldb\-::\-D\-B\-Test@{leveldb\-::\-D\-B\-Test}!last\-\_\-options\-\_\-@{last\-\_\-options\-\_\-}}
+\index{last\-\_\-options\-\_\-@{last\-\_\-options\-\_\-}!leveldb::DBTest@{leveldb\-::\-D\-B\-Test}}
+\subsubsection[{last\-\_\-options\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Options} leveldb\-::\-D\-B\-Test\-::last\-\_\-options\-\_\-}}\label{classleveldb_1_1_d_b_test_adc05df912917d8de411d0672af04330f}
+\hypertarget{classleveldb_1_1_d_b_test_a3cc39d9674e4e47e2be82b023f791bd0}{\index{leveldb\-::\-D\-B\-Test@{leveldb\-::\-D\-B\-Test}!option\-\_\-config\-\_\-@{option\-\_\-config\-\_\-}}
+\index{option\-\_\-config\-\_\-@{option\-\_\-config\-\_\-}!leveldb::DBTest@{leveldb\-::\-D\-B\-Test}}
+\subsubsection[{option\-\_\-config\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int leveldb\-::\-D\-B\-Test\-::option\-\_\-config\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_d_b_test_a3cc39d9674e4e47e2be82b023f791bd0}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+db/\hyperlink{db__test_8cc}{db\-\_\-test.\-cc}\end{DoxyCompactItemize}

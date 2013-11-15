@@ -1,0 +1,66 @@
+\hypertarget{crc32c_8cc}{\section{util/crc32c.cc File Reference}
+\label{crc32c_8cc}\index{util/crc32c.\-cc@{util/crc32c.\-cc}}
+}
+{\ttfamily \#include \char`\"{}util/crc32c.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$stdint.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}util/coding.\-h\char`\"{}}\\*
+Include dependency graph for crc32c.\-cc\-:
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespaceleveldb}{leveldb}
+\item 
+\hyperlink{namespaceleveldb_1_1crc32c}{leveldb\-::crc32c}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{crc32c_8cc_aa0e8b80aa29135a83d096ec150fb9a2d}{S\-T\-E\-P1}
+\item 
+\#define \hyperlink{crc32c_8cc_a43fdcab6f1ea325d70bc60eb117f394c}{S\-T\-E\-P4}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{stdint_8h_a435d1572bf3f880d55459d9805097f62}{uint32\-\_\-t} \hyperlink{namespaceleveldb_1_1crc32c_a45e9ab8064b6960bef8f04eaa34fc957}{leveldb\-::crc32c\-::\-L\-E\-\_\-\-L\-O\-A\-D32} (const \hyperlink{stdint_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\-\_\-t} $\ast$p)
+\item 
+\hyperlink{stdint_8h_a435d1572bf3f880d55459d9805097f62}{uint32\-\_\-t} \hyperlink{namespaceleveldb_1_1crc32c_ac42fd0618afe635356d722fd29f5ff10}{leveldb\-::crc32c\-::\-Extend} (\hyperlink{stdint_8h_a435d1572bf3f880d55459d9805097f62}{uint32\-\_\-t} crc, const char $\ast$buf, size\-\_\-t size)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static const \hyperlink{stdint_8h_a435d1572bf3f880d55459d9805097f62}{uint32\-\_\-t} \hyperlink{namespaceleveldb_1_1crc32c_ade0c8f1e2098799a8924d05b30411817}{leveldb\-::crc32c\-::table0\-\_\-} \mbox{[}256\mbox{]}
+\item 
+static const \hyperlink{stdint_8h_a435d1572bf3f880d55459d9805097f62}{uint32\-\_\-t} \hyperlink{namespaceleveldb_1_1crc32c_af456bfb794e6108a828e5d3a2a58700c}{leveldb\-::crc32c\-::table1\-\_\-} \mbox{[}256\mbox{]}
+\item 
+static const \hyperlink{stdint_8h_a435d1572bf3f880d55459d9805097f62}{uint32\-\_\-t} \hyperlink{namespaceleveldb_1_1crc32c_af5be8e058bd89cbd43972aa986910599}{leveldb\-::crc32c\-::table2\-\_\-} \mbox{[}256\mbox{]}
+\item 
+static const \hyperlink{stdint_8h_a435d1572bf3f880d55459d9805097f62}{uint32\-\_\-t} \hyperlink{namespaceleveldb_1_1crc32c_a212c50cb25082d3d84471483d26ac2f5}{leveldb\-::crc32c\-::table3\-\_\-} \mbox{[}256\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{crc32c_8cc_aa0e8b80aa29135a83d096ec150fb9a2d}{\index{crc32c.\-cc@{crc32c.\-cc}!S\-T\-E\-P1@{S\-T\-E\-P1}}
+\index{S\-T\-E\-P1@{S\-T\-E\-P1}!crc32c.cc@{crc32c.\-cc}}
+\subsubsection[{S\-T\-E\-P1}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-T\-E\-P1}}\label{crc32c_8cc_aa0e8b80aa29135a83d096ec150fb9a2d}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{                              \(\backslash\)
+    int c = (l & 0xff) ^ *p++;                  \(\backslash\)
+    l = \hyperlink{namespaceleveldb_1_1crc32c_ade0c8f1e2098799a8924d05b30411817}{table0\_}[c] ^ (l >> 8);                  \(\backslash\)
+\} \textcolor{keywordflow}{while} (0)
+\end{DoxyCode}
+\hypertarget{crc32c_8cc_a43fdcab6f1ea325d70bc60eb117f394c}{\index{crc32c.\-cc@{crc32c.\-cc}!S\-T\-E\-P4@{S\-T\-E\-P4}}
+\index{S\-T\-E\-P4@{S\-T\-E\-P4}!crc32c.cc@{crc32c.\-cc}}
+\subsubsection[{S\-T\-E\-P4}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-T\-E\-P4}}\label{crc32c_8cc_a43fdcab6f1ea325d70bc60eb117f394c}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{                              \hyperlink{stdint_8h_a435d1572bf3f880d55459d9805097f62}{\(\backslash\)}
+\hyperlink{stdint_8h_a435d1572bf3f880d55459d9805097f62}{    uint32\_t} c = l ^ \hyperlink{namespaceleveldb_1_1crc32c_a45e9ab8064b6960bef8f04eaa34fc957}{LE\_LOAD32}(p);              \(\backslash\)
+    p += 4;                                     \(\backslash\)
+    l = \hyperlink{namespaceleveldb_1_1crc32c_a212c50cb25082d3d84471483d26ac2f5}{table3\_}[c & 0xff] ^                     \hyperlink{namespaceleveldb_1_1crc32c_af5be8e058bd89cbd43972aa986910599}{\(\backslash\)}
+\hyperlink{namespaceleveldb_1_1crc32c_af5be8e058bd89cbd43972aa986910599}{        table2\_}[(c >> 8) & 0xff] ^              \(\backslash\)
+        \hyperlink{namespaceleveldb_1_1crc32c_af456bfb794e6108a828e5d3a2a58700c}{table1\_}[(c >> 16) & 0xff] ^             \hyperlink{namespaceleveldb_1_1crc32c_ade0c8f1e2098799a8924d05b30411817}{\(\backslash\)}
+\hyperlink{namespaceleveldb_1_1crc32c_ade0c8f1e2098799a8924d05b30411817}{        table0\_}[c >> 24];                       \(\backslash\)
+\} \textcolor{keywordflow}{while} (0)
+\end{DoxyCode}
