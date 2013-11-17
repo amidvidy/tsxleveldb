@@ -79,6 +79,8 @@ int RTMFineConcurrentCounter::get(std::size_t index) {
   return storage[index];
 }
 
+/* For some reason, optimizations result in lost writes here. Probably a compiler bug. */
+#pragma optimize("", off)
 void RTMConcurrentCounter::increment(std::size_t index) {
   do { 
     _xbegin();
@@ -88,6 +90,8 @@ void RTMConcurrentCounter::increment(std::size_t index) {
   _xend();
 }
 
+/* For some reason, optimizations result in lost writes here. Probably a compiler bug. */
+#pragma optimize("", off)
 int RTMConcurrentCounter::get(std::size_t index) {
   int ret = -1;
   do {
