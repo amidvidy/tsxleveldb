@@ -1,0 +1,76 @@
+\hypertarget{db__impl_8cc}{\section{db/db\-\_\-impl.cc File Reference}
+\label{db__impl_8cc}\index{db/db\-\_\-impl.\-cc@{db/db\-\_\-impl.\-cc}}
+}
+{\ttfamily \#include \char`\"{}db/db\-\_\-impl.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$algorithm$>$}\\*
+{\ttfamily \#include $<$set$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$stdint.\-h$>$}\\*
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include \char`\"{}db/builder.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}db/db\-\_\-iter.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}db/dbformat.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}db/filename.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}db/log\-\_\-reader.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}db/log\-\_\-writer.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}db/memtable.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}db/table\-\_\-cache.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}db/version\-\_\-set.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}db/write\-\_\-batch\-\_\-internal.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}leveldb/db.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}leveldb/env.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}leveldb/status.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}leveldb/table.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}leveldb/table\-\_\-builder.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}port/port.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}table/block.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}table/merger.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}table/two\-\_\-level\-\_\-iterator.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}util/coding.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}util/logging.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}util/mutexlock.\-h\char`\"{}}\\*
+Include dependency graph for db\-\_\-impl.\-cc\-:
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structleveldb_1_1_d_b_impl_1_1_writer}{leveldb\-::\-D\-B\-Impl\-::\-Writer}
+\item 
+struct \hyperlink{structleveldb_1_1_d_b_impl_1_1_compaction_state}{leveldb\-::\-D\-B\-Impl\-::\-Compaction\-State}
+\item 
+struct \hyperlink{structleveldb_1_1_d_b_impl_1_1_compaction_state_1_1_output}{leveldb\-::\-D\-B\-Impl\-::\-Compaction\-State\-::\-Output}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespaceleveldb}{leveldb}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class T , class V $>$ }\\static void \hyperlink{namespaceleveldb_aa571d50e762e410ba1558c7972800caa}{leveldb\-::\-Clip\-To\-Range} (T $\ast$ptr, V minvalue, V maxvalue)
+\item 
+Options \hyperlink{namespaceleveldb_aa4783e598841dca4393a97d360d10f56}{leveldb\-::\-Sanitize\-Options} (const std\-::string \&\hyperlink{c__test_8c_a75d845559336df6843f3b599960f89d2}{dbname}, const Internal\-Key\-Comparator $\ast$icmp, const Internal\-Filter\-Policy $\ast$ipolicy, const Options \&src)
+\item 
+Status \hyperlink{namespaceleveldb_a5b0819d4d4adc2147b5e91a5553fd7dc}{leveldb\-::\-Destroy\-D\-B} (const std\-::string \&\hyperlink{c__test_8c_a75d845559336df6843f3b599960f89d2}{dbname}, const Options \&options)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const int \hyperlink{namespaceleveldb_a550686b2c442f4c3011d68dd12c38662}{leveldb\-::k\-Num\-Non\-Table\-Cache\-Files} = 10
+\end{DoxyCompactItemize}
+
+
+\subsection{Variable Documentation}
+\hypertarget{db__impl_8cc_aaa0d6be8984fcd39f26c0d2dadacd870}{\index{db\-\_\-impl.\-cc@{db\-\_\-impl.\-cc}!imm@{imm}}
+\index{imm@{imm}!db_impl.cc@{db\-\_\-impl.\-cc}}
+\subsubsection[{imm}]{\setlength{\rightskip}{0pt plus 5cm}Mem\-Table$\ast$ imm}}\label{db__impl_8cc_aaa0d6be8984fcd39f26c0d2dadacd870}
+\hypertarget{db__impl_8cc_a1a1fa02d49bbc4c0896ff1cb12618dc3}{\index{db\-\_\-impl.\-cc@{db\-\_\-impl.\-cc}!mem@{mem}}
+\index{mem@{mem}!db_impl.cc@{db\-\_\-impl.\-cc}}
+\subsubsection[{mem}]{\setlength{\rightskip}{0pt plus 5cm}Mem\-Table$\ast$ mem}}\label{db__impl_8cc_a1a1fa02d49bbc4c0896ff1cb12618dc3}
+\hypertarget{db__impl_8cc_a900dad9ea326bf70a183d88a8ab50a13}{\index{db\-\_\-impl.\-cc@{db\-\_\-impl.\-cc}!mu@{mu}}
+\index{mu@{mu}!db_impl.cc@{db\-\_\-impl.\-cc}}
+\subsubsection[{mu}]{\setlength{\rightskip}{0pt plus 5cm}port\-::\-Mutex$\ast$ mu}}\label{db__impl_8cc_a900dad9ea326bf70a183d88a8ab50a13}
+\hypertarget{db__impl_8cc_afc25f30ab1a6d04798c360a2ce70b87d}{\index{db\-\_\-impl.\-cc@{db\-\_\-impl.\-cc}!version@{version}}
+\index{version@{version}!db_impl.cc@{db\-\_\-impl.\-cc}}
+\subsubsection[{version}]{\setlength{\rightskip}{0pt plus 5cm}Version$\ast$ version}}\label{db__impl_8cc_afc25f30ab1a6d04798c360a2ce70b87d}

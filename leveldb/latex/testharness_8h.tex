@@ -1,0 +1,183 @@
+\hypertarget{testharness_8h}{\section{util/testharness.h File Reference}
+\label{testharness_8h}\index{util/testharness.\-h@{util/testharness.\-h}}
+}
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include $<$sstream$>$}\\*
+{\ttfamily \#include \char`\"{}leveldb/env.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}leveldb/slice.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}util/random.\-h\char`\"{}}\\*
+Include dependency graph for testharness.\-h\-:
+This graph shows which files directly or indirectly include this file\-:
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classleveldb_1_1test_1_1_tester}{leveldb\-::test\-::\-Tester}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespaceleveldb}{leveldb}
+\item 
+\hyperlink{namespaceleveldb_1_1test}{leveldb\-::test}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{testharness_8h_a345ef8ff080f08123c7d688a4eaf5a59}{B\-I\-N\-A\-R\-Y\-\_\-\-O\-P}(\hyperlink{testharness_8cc_a8f8f80d37794cde9472343e4487ba3eb}{name}, op)
+\item 
+\#define \hyperlink{testharness_8h_ac2101fb1ffd0c81c17520b82f0fcfe21}{A\-S\-S\-E\-R\-T\-\_\-\-T\-R\-U\-E}(c)~\-::\hyperlink{classleveldb_1_1test_1_1_tester}{leveldb\-::test\-::\-Tester}(\-\_\-\-\_\-\-F\-I\-L\-E\-\_\-\-\_\-, \-\_\-\-\_\-\-L\-I\-N\-E\-\_\-\-\_\-).Is((c), \#c)
+\item 
+\#define \hyperlink{testharness_8h_a6892e90ee417adfb0c66aa7a49769895}{A\-S\-S\-E\-R\-T\-\_\-\-O\-K}(s)~\-::\hyperlink{classleveldb_1_1test_1_1_tester}{leveldb\-::test\-::\-Tester}(\-\_\-\-\_\-\-F\-I\-L\-E\-\_\-\-\_\-, \-\_\-\-\_\-\-L\-I\-N\-E\-\_\-\-\_\-).Is\-Ok((s))
+\item 
+\#define \hyperlink{testharness_8h_a9cc34fd87cb865c77439a5d39b3b111b}{A\-S\-S\-E\-R\-T\-\_\-\-E\-Q}(a, b)~\-::\hyperlink{classleveldb_1_1test_1_1_tester}{leveldb\-::test\-::\-Tester}(\-\_\-\-\_\-\-F\-I\-L\-E\-\_\-\-\_\-, \-\_\-\-\_\-\-L\-I\-N\-E\-\_\-\-\_\-).Is\-Eq((a),(b))
+\item 
+\#define \hyperlink{testharness_8h_a0086e0b898cbf7a680ba24ed898edb1f}{A\-S\-S\-E\-R\-T\-\_\-\-N\-E}(a, b)~\-::\hyperlink{classleveldb_1_1test_1_1_tester}{leveldb\-::test\-::\-Tester}(\-\_\-\-\_\-\-F\-I\-L\-E\-\_\-\-\_\-, \-\_\-\-\_\-\-L\-I\-N\-E\-\_\-\-\_\-).Is\-Ne((a),(b))
+\item 
+\#define \hyperlink{testharness_8h_a82e45a6098aa7dbbfbcb250fc4722a0a}{A\-S\-S\-E\-R\-T\-\_\-\-G\-E}(a, b)~\-::\hyperlink{classleveldb_1_1test_1_1_tester}{leveldb\-::test\-::\-Tester}(\-\_\-\-\_\-\-F\-I\-L\-E\-\_\-\-\_\-, \-\_\-\-\_\-\-L\-I\-N\-E\-\_\-\-\_\-).Is\-Ge((a),(b))
+\item 
+\#define \hyperlink{testharness_8h_aa4d066944b45f437a1b72d586fff3b1c}{A\-S\-S\-E\-R\-T\-\_\-\-G\-T}(a, b)~\-::\hyperlink{classleveldb_1_1test_1_1_tester}{leveldb\-::test\-::\-Tester}(\-\_\-\-\_\-\-F\-I\-L\-E\-\_\-\-\_\-, \-\_\-\-\_\-\-L\-I\-N\-E\-\_\-\-\_\-).Is\-Gt((a),(b))
+\item 
+\#define \hyperlink{testharness_8h_ad71f56861528c854666f15f4bad921c2}{A\-S\-S\-E\-R\-T\-\_\-\-L\-E}(a, b)~\-::\hyperlink{classleveldb_1_1test_1_1_tester}{leveldb\-::test\-::\-Tester}(\-\_\-\-\_\-\-F\-I\-L\-E\-\_\-\-\_\-, \-\_\-\-\_\-\-L\-I\-N\-E\-\_\-\-\_\-).Is\-Le((a),(b))
+\item 
+\#define \hyperlink{testharness_8h_a6058af464aa1533b961936d5f6c5aea0}{A\-S\-S\-E\-R\-T\-\_\-\-L\-T}(a, b)~\-::\hyperlink{classleveldb_1_1test_1_1_tester}{leveldb\-::test\-::\-Tester}(\-\_\-\-\_\-\-F\-I\-L\-E\-\_\-\-\_\-, \-\_\-\-\_\-\-L\-I\-N\-E\-\_\-\-\_\-).Is\-Lt((a),(b))
+\item 
+\#define \hyperlink{testharness_8h_a1633c3c934cb68a1e7dffcb2565c76c2}{T\-C\-O\-N\-C\-A\-T}(a, b)~\hyperlink{testharness_8h_a367981cf5bc052d00509d2039f23c5ce}{T\-C\-O\-N\-C\-A\-T1}(a,b)
+\item 
+\#define \hyperlink{testharness_8h_a367981cf5bc052d00509d2039f23c5ce}{T\-C\-O\-N\-C\-A\-T1}(a, b)~a\#\#b
+\item 
+\#define \hyperlink{testharness_8h_a3c428ed0cddb46f6075333cf640029ec}{T\-E\-S\-T}(\hyperlink{testharness_8cc_a70ff0f6c026c3dd1ef6aaf504e7fddc3}{base}, \hyperlink{testharness_8cc_a8f8f80d37794cde9472343e4487ba3eb}{name})
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{namespaceleveldb_1_1test_a3329162c54a0bff42d41c2ac86b2580a}{leveldb\-::test\-::\-Run\-All\-Tests} ()
+\item 
+std\-::string \hyperlink{namespaceleveldb_1_1test_ac259aab85eedba03d163bb3a86ae4645}{leveldb\-::test\-::\-Tmp\-Dir} ()
+\item 
+int \hyperlink{namespaceleveldb_1_1test_a0d48ce23bccd2763df90789cb3aac03c}{leveldb\-::test\-::\-Random\-Seed} ()
+\item 
+bool \hyperlink{namespaceleveldb_1_1test_aecde3e0440c4462e8d73aad728e3e819}{leveldb\-::test\-::\-Register\-Test} (const char $\ast$\hyperlink{testharness_8cc_a70ff0f6c026c3dd1ef6aaf504e7fddc3}{base}, const char $\ast$\hyperlink{testharness_8cc_a8f8f80d37794cde9472343e4487ba3eb}{name}, void($\ast$\hyperlink{testharness_8cc_a0a8271b25a6a647b48a0be0bc49c9409}{func})())
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{testharness_8h_a9cc34fd87cb865c77439a5d39b3b111b}{\index{testharness.\-h@{testharness.\-h}!A\-S\-S\-E\-R\-T\-\_\-\-E\-Q@{A\-S\-S\-E\-R\-T\-\_\-\-E\-Q}}
+\index{A\-S\-S\-E\-R\-T\-\_\-\-E\-Q@{A\-S\-S\-E\-R\-T\-\_\-\-E\-Q}!testharness.h@{testharness.\-h}}
+\subsubsection[{A\-S\-S\-E\-R\-T\-\_\-\-E\-Q}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S\-S\-E\-R\-T\-\_\-\-E\-Q(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~\-::{\bf leveldb\-::test\-::\-Tester}(\-\_\-\-\_\-\-F\-I\-L\-E\-\_\-\-\_\-, \-\_\-\-\_\-\-L\-I\-N\-E\-\_\-\-\_\-).Is\-Eq((a),(b))}}\label{testharness_8h_a9cc34fd87cb865c77439a5d39b3b111b}
+\hypertarget{testharness_8h_a82e45a6098aa7dbbfbcb250fc4722a0a}{\index{testharness.\-h@{testharness.\-h}!A\-S\-S\-E\-R\-T\-\_\-\-G\-E@{A\-S\-S\-E\-R\-T\-\_\-\-G\-E}}
+\index{A\-S\-S\-E\-R\-T\-\_\-\-G\-E@{A\-S\-S\-E\-R\-T\-\_\-\-G\-E}!testharness.h@{testharness.\-h}}
+\subsubsection[{A\-S\-S\-E\-R\-T\-\_\-\-G\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S\-S\-E\-R\-T\-\_\-\-G\-E(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~\-::{\bf leveldb\-::test\-::\-Tester}(\-\_\-\-\_\-\-F\-I\-L\-E\-\_\-\-\_\-, \-\_\-\-\_\-\-L\-I\-N\-E\-\_\-\-\_\-).Is\-Ge((a),(b))}}\label{testharness_8h_a82e45a6098aa7dbbfbcb250fc4722a0a}
+\hypertarget{testharness_8h_aa4d066944b45f437a1b72d586fff3b1c}{\index{testharness.\-h@{testharness.\-h}!A\-S\-S\-E\-R\-T\-\_\-\-G\-T@{A\-S\-S\-E\-R\-T\-\_\-\-G\-T}}
+\index{A\-S\-S\-E\-R\-T\-\_\-\-G\-T@{A\-S\-S\-E\-R\-T\-\_\-\-G\-T}!testharness.h@{testharness.\-h}}
+\subsubsection[{A\-S\-S\-E\-R\-T\-\_\-\-G\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S\-S\-E\-R\-T\-\_\-\-G\-T(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~\-::{\bf leveldb\-::test\-::\-Tester}(\-\_\-\-\_\-\-F\-I\-L\-E\-\_\-\-\_\-, \-\_\-\-\_\-\-L\-I\-N\-E\-\_\-\-\_\-).Is\-Gt((a),(b))}}\label{testharness_8h_aa4d066944b45f437a1b72d586fff3b1c}
+\hypertarget{testharness_8h_ad71f56861528c854666f15f4bad921c2}{\index{testharness.\-h@{testharness.\-h}!A\-S\-S\-E\-R\-T\-\_\-\-L\-E@{A\-S\-S\-E\-R\-T\-\_\-\-L\-E}}
+\index{A\-S\-S\-E\-R\-T\-\_\-\-L\-E@{A\-S\-S\-E\-R\-T\-\_\-\-L\-E}!testharness.h@{testharness.\-h}}
+\subsubsection[{A\-S\-S\-E\-R\-T\-\_\-\-L\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S\-S\-E\-R\-T\-\_\-\-L\-E(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~\-::{\bf leveldb\-::test\-::\-Tester}(\-\_\-\-\_\-\-F\-I\-L\-E\-\_\-\-\_\-, \-\_\-\-\_\-\-L\-I\-N\-E\-\_\-\-\_\-).Is\-Le((a),(b))}}\label{testharness_8h_ad71f56861528c854666f15f4bad921c2}
+\hypertarget{testharness_8h_a6058af464aa1533b961936d5f6c5aea0}{\index{testharness.\-h@{testharness.\-h}!A\-S\-S\-E\-R\-T\-\_\-\-L\-T@{A\-S\-S\-E\-R\-T\-\_\-\-L\-T}}
+\index{A\-S\-S\-E\-R\-T\-\_\-\-L\-T@{A\-S\-S\-E\-R\-T\-\_\-\-L\-T}!testharness.h@{testharness.\-h}}
+\subsubsection[{A\-S\-S\-E\-R\-T\-\_\-\-L\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S\-S\-E\-R\-T\-\_\-\-L\-T(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~\-::{\bf leveldb\-::test\-::\-Tester}(\-\_\-\-\_\-\-F\-I\-L\-E\-\_\-\-\_\-, \-\_\-\-\_\-\-L\-I\-N\-E\-\_\-\-\_\-).Is\-Lt((a),(b))}}\label{testharness_8h_a6058af464aa1533b961936d5f6c5aea0}
+\hypertarget{testharness_8h_a0086e0b898cbf7a680ba24ed898edb1f}{\index{testharness.\-h@{testharness.\-h}!A\-S\-S\-E\-R\-T\-\_\-\-N\-E@{A\-S\-S\-E\-R\-T\-\_\-\-N\-E}}
+\index{A\-S\-S\-E\-R\-T\-\_\-\-N\-E@{A\-S\-S\-E\-R\-T\-\_\-\-N\-E}!testharness.h@{testharness.\-h}}
+\subsubsection[{A\-S\-S\-E\-R\-T\-\_\-\-N\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S\-S\-E\-R\-T\-\_\-\-N\-E(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~\-::{\bf leveldb\-::test\-::\-Tester}(\-\_\-\-\_\-\-F\-I\-L\-E\-\_\-\-\_\-, \-\_\-\-\_\-\-L\-I\-N\-E\-\_\-\-\_\-).Is\-Ne((a),(b))}}\label{testharness_8h_a0086e0b898cbf7a680ba24ed898edb1f}
+\hypertarget{testharness_8h_a6892e90ee417adfb0c66aa7a49769895}{\index{testharness.\-h@{testharness.\-h}!A\-S\-S\-E\-R\-T\-\_\-\-O\-K@{A\-S\-S\-E\-R\-T\-\_\-\-O\-K}}
+\index{A\-S\-S\-E\-R\-T\-\_\-\-O\-K@{A\-S\-S\-E\-R\-T\-\_\-\-O\-K}!testharness.h@{testharness.\-h}}
+\subsubsection[{A\-S\-S\-E\-R\-T\-\_\-\-O\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S\-S\-E\-R\-T\-\_\-\-O\-K(
+\begin{DoxyParamCaption}
+\item[{}]{s}
+\end{DoxyParamCaption}
+)~\-::{\bf leveldb\-::test\-::\-Tester}(\-\_\-\-\_\-\-F\-I\-L\-E\-\_\-\-\_\-, \-\_\-\-\_\-\-L\-I\-N\-E\-\_\-\-\_\-).Is\-Ok((s))}}\label{testharness_8h_a6892e90ee417adfb0c66aa7a49769895}
+\hypertarget{testharness_8h_ac2101fb1ffd0c81c17520b82f0fcfe21}{\index{testharness.\-h@{testharness.\-h}!A\-S\-S\-E\-R\-T\-\_\-\-T\-R\-U\-E@{A\-S\-S\-E\-R\-T\-\_\-\-T\-R\-U\-E}}
+\index{A\-S\-S\-E\-R\-T\-\_\-\-T\-R\-U\-E@{A\-S\-S\-E\-R\-T\-\_\-\-T\-R\-U\-E}!testharness.h@{testharness.\-h}}
+\subsubsection[{A\-S\-S\-E\-R\-T\-\_\-\-T\-R\-U\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S\-S\-E\-R\-T\-\_\-\-T\-R\-U\-E(
+\begin{DoxyParamCaption}
+\item[{}]{c}
+\end{DoxyParamCaption}
+)~\-::{\bf leveldb\-::test\-::\-Tester}(\-\_\-\-\_\-\-F\-I\-L\-E\-\_\-\-\_\-, \-\_\-\-\_\-\-L\-I\-N\-E\-\_\-\-\_\-).Is((c), \#c)}}\label{testharness_8h_ac2101fb1ffd0c81c17520b82f0fcfe21}
+\hypertarget{testharness_8h_a345ef8ff080f08123c7d688a4eaf5a59}{\index{testharness.\-h@{testharness.\-h}!B\-I\-N\-A\-R\-Y\-\_\-\-O\-P@{B\-I\-N\-A\-R\-Y\-\_\-\-O\-P}}
+\index{B\-I\-N\-A\-R\-Y\-\_\-\-O\-P@{B\-I\-N\-A\-R\-Y\-\_\-\-O\-P}!testharness.h@{testharness.\-h}}
+\subsubsection[{B\-I\-N\-A\-R\-Y\-\_\-\-O\-P}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-I\-N\-A\-R\-Y\-\_\-\-O\-P(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf name}, }
+\item[{}]{op}
+\end{DoxyParamCaption}
+)}}\label{testharness_8h_a345ef8ff080f08123c7d688a4eaf5a59}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\textcolor{keyword}{template} <\textcolor{keyword}{class} X, \textcolor{keyword}{class} Y>                           \(\backslash\)
+  Tester& \hyperlink{testharness_8cc_a8f8f80d37794cde9472343e4487ba3eb}{name}(\textcolor{keyword}{const} X& x, \textcolor{keyword}{const} Y& y) \{                \(\backslash\)
+    if (! (x op y)) \{                                   \(\backslash\)
+      ss\_ << \textcolor{stringliteral}{" failed: "} << x << (\textcolor{stringliteral}{" "} #op \textcolor{stringliteral}{" "}) << y;    \(\backslash\)
+      ok\_ = \textcolor{keyword}{false};                                      \(\backslash\)
+    \}                                                   \(\backslash\)
+    return *\textcolor{keyword}{this};                                       \(\backslash\)
+  \}
+\end{DoxyCode}
+\hypertarget{testharness_8h_a1633c3c934cb68a1e7dffcb2565c76c2}{\index{testharness.\-h@{testharness.\-h}!T\-C\-O\-N\-C\-A\-T@{T\-C\-O\-N\-C\-A\-T}}
+\index{T\-C\-O\-N\-C\-A\-T@{T\-C\-O\-N\-C\-A\-T}!testharness.h@{testharness.\-h}}
+\subsubsection[{T\-C\-O\-N\-C\-A\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-C\-O\-N\-C\-A\-T(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~{\bf T\-C\-O\-N\-C\-A\-T1}(a,b)}}\label{testharness_8h_a1633c3c934cb68a1e7dffcb2565c76c2}
+\hypertarget{testharness_8h_a367981cf5bc052d00509d2039f23c5ce}{\index{testharness.\-h@{testharness.\-h}!T\-C\-O\-N\-C\-A\-T1@{T\-C\-O\-N\-C\-A\-T1}}
+\index{T\-C\-O\-N\-C\-A\-T1@{T\-C\-O\-N\-C\-A\-T1}!testharness.h@{testharness.\-h}}
+\subsubsection[{T\-C\-O\-N\-C\-A\-T1}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-C\-O\-N\-C\-A\-T1(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~a\#\#b}}\label{testharness_8h_a367981cf5bc052d00509d2039f23c5ce}
+\hypertarget{testharness_8h_a3c428ed0cddb46f6075333cf640029ec}{\index{testharness.\-h@{testharness.\-h}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!testharness.h@{testharness.\-h}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-E\-S\-T(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf base}, }
+\item[{}]{{\bf name}}
+\end{DoxyParamCaption}
+)}}\label{testharness_8h_a3c428ed0cddb46f6075333cf640029ec}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\textcolor{keyword}{class }\hyperlink{testharness_8h_a1633c3c934cb68a1e7dffcb2565c76c2}{TCONCAT}(\_Test\_,\hyperlink{testharness_8cc_a8f8f80d37794cde9472343e4487ba3eb}{name}) : \textcolor{keyword}{public} \hyperlink{testharness_8cc_a70ff0f6c026c3dd1ef6aaf504e7fddc3}{base} \{                              \(\backslash\)
+ public:                                                                \(\backslash\)
+  void \_Run();                                                          \(\backslash\)
+  static \textcolor{keywordtype}{void} \_RunIt() \{                                                \hyperlink{testharness_8h_a1633c3c934cb68a1e7dffcb2565c76c2}{\(\backslash\)}
+\hyperlink{testharness_8h_a1633c3c934cb68a1e7dffcb2565c76c2}{    TCONCAT}(\_Test\_,\hyperlink{testharness_8cc_a8f8f80d37794cde9472343e4487ba3eb}{name}) t;                                             \(\backslash\)
+    t.\_Run();                                                           \(\backslash\)
+  \}                                                                     \(\backslash\)
+\};                                                                      \(\backslash\)
+\textcolor{keywordtype}{bool} \hyperlink{testharness_8h_a1633c3c934cb68a1e7dffcb2565c76c2}{TCONCAT}(\_Test\_ignored\_,\hyperlink{testharness_8cc_a8f8f80d37794cde9472343e4487ba3eb}{name}) =                                     \(\backslash\)
+  ::leveldb::\hyperlink{db__test_8cc_a9cc668c18debdbcad21b45fdd8158648}{test}::\hyperlink{namespaceleveldb_1_1test_aecde3e0440c4462e8d73aad728e3e819}{RegisterTest}(\textcolor{preprocessor}{#base, #name, &TCONCAT(\_Test\_,name)::\_RunIt); \(\backslash\)}
+\textcolor{preprocessor}{void TCONCAT(\_Test\_,name)::\_Run()}
+\end{DoxyCode}

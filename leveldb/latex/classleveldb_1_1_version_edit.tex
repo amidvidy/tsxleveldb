@@ -1,0 +1,330 @@
+\hypertarget{classleveldb_1_1_version_edit}{\section{leveldb\-:\-:Version\-Edit Class Reference}
+\label{classleveldb_1_1_version_edit}\index{leveldb\-::\-Version\-Edit@{leveldb\-::\-Version\-Edit}}
+}
+
+
+{\ttfamily \#include $<$version\-\_\-edit.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classleveldb_1_1_version_edit_a60dd9c72d256ed1bda68597a9263333e}{Version\-Edit} ()
+\item 
+\hyperlink{classleveldb_1_1_version_edit_a8863bc7fa645c4bc2518910429447fbe}{$\sim$\-Version\-Edit} ()
+\item 
+void \hyperlink{classleveldb_1_1_version_edit_a259c9de14d58e231178904c1559e4b5e}{Clear} ()
+\item 
+void \hyperlink{classleveldb_1_1_version_edit_ab562147cdd82b184e86e88bd375a718c}{Set\-Comparator\-Name} (const \hyperlink{classleveldb_1_1_slice}{Slice} \&\hyperlink{testharness_8cc_a8f8f80d37794cde9472343e4487ba3eb}{name})
+\item 
+void \hyperlink{classleveldb_1_1_version_edit_a47e5c58d34b0e27dc8990687e0c5477a}{Set\-Log\-Number} (\hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} num)
+\item 
+void \hyperlink{classleveldb_1_1_version_edit_ac1b5689f62e7a8f63c4eefa437a4f2f3}{Set\-Prev\-Log\-Number} (\hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} num)
+\item 
+void \hyperlink{classleveldb_1_1_version_edit_a4c104515adf573be0ead29e6835f14fb}{Set\-Next\-File} (\hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} num)
+\item 
+void \hyperlink{classleveldb_1_1_version_edit_abd6e841ed400672d33d26f4b187a66bf}{Set\-Last\-Sequence} (\hyperlink{namespaceleveldb_a5481ededd221c36d652c371249f869fa}{Sequence\-Number} seq)
+\item 
+void \hyperlink{classleveldb_1_1_version_edit_ac9b26dfba1188705d7fc4deaf047271c}{Set\-Compact\-Pointer} (int level, const \hyperlink{classleveldb_1_1_internal_key}{Internal\-Key} \&key)
+\item 
+void \hyperlink{classleveldb_1_1_version_edit_a4cd5cc92761b7ae5b5f9cff46cb88263}{Add\-File} (int level, \hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} file, \hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} file\-\_\-size, const \hyperlink{classleveldb_1_1_internal_key}{Internal\-Key} \&smallest, const \hyperlink{classleveldb_1_1_internal_key}{Internal\-Key} \&largest)
+\item 
+void \hyperlink{classleveldb_1_1_version_edit_ac222bfd1055114d57aadbd124f24ad0c}{Delete\-File} (int level, \hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} file)
+\item 
+void \hyperlink{classleveldb_1_1_version_edit_aa3161c67223f6c5e843be579a8456086}{Encode\-To} (std\-::string $\ast$dst) const 
+\item 
+\hyperlink{classleveldb_1_1_status}{Status} \hyperlink{classleveldb_1_1_version_edit_ac0f431c5e8f08c74c697d8480f7c005f}{Decode\-From} (const \hyperlink{classleveldb_1_1_slice}{Slice} \&src)
+\item 
+std\-::string \hyperlink{classleveldb_1_1_version_edit_aa186529f0124867251964b2346b58b1f}{Debug\-String} () const 
+\end{DoxyCompactItemize}
+\subsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\-::set$<$ std\-::pair\\*
+$<$ int, \hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} $>$ $>$ \hyperlink{classleveldb_1_1_version_edit_af4a08c41c6232dbca0dd31c2e3fa7a9b}{Deleted\-File\-Set}
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\-::string \hyperlink{classleveldb_1_1_version_edit_abc12f1138eab74643342b6a5de10521c}{comparator\-\_\-}
+\item 
+\hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} \hyperlink{classleveldb_1_1_version_edit_a526b91059db8175f1f4f56d00a5bf4d4}{log\-\_\-number\-\_\-}
+\item 
+\hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} \hyperlink{classleveldb_1_1_version_edit_ac8762934b27315cb0ba897c306412562}{prev\-\_\-log\-\_\-number\-\_\-}
+\item 
+\hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} \hyperlink{classleveldb_1_1_version_edit_a8da3ef0a05e96034b2cc5d32fd06bccb}{next\-\_\-file\-\_\-number\-\_\-}
+\item 
+\hyperlink{namespaceleveldb_a5481ededd221c36d652c371249f869fa}{Sequence\-Number} \hyperlink{classleveldb_1_1_version_edit_af7718924a84a2a655a27104070580d09}{last\-\_\-sequence\-\_\-}
+\item 
+bool \hyperlink{classleveldb_1_1_version_edit_a2363546c6ba6b79162058c9d8d9980af}{has\-\_\-comparator\-\_\-}
+\item 
+bool \hyperlink{classleveldb_1_1_version_edit_a72cf0203239ea5cfcb231c99ad430df1}{has\-\_\-log\-\_\-number\-\_\-}
+\item 
+bool \hyperlink{classleveldb_1_1_version_edit_aede87f4a703e74d16890ef4fa96df7fc}{has\-\_\-prev\-\_\-log\-\_\-number\-\_\-}
+\item 
+bool \hyperlink{classleveldb_1_1_version_edit_a71f032cd98934d100d84363c08f033d8}{has\-\_\-next\-\_\-file\-\_\-number\-\_\-}
+\item 
+bool \hyperlink{classleveldb_1_1_version_edit_aa7e36bdcdd10c4e17b9bc86281cd7cb8}{has\-\_\-last\-\_\-sequence\-\_\-}
+\item 
+std\-::vector$<$ std\-::pair$<$ int, \\*
+\hyperlink{classleveldb_1_1_internal_key}{Internal\-Key} $>$ $>$ \hyperlink{classleveldb_1_1_version_edit_a26d90b4b4924dc53222177be1770062e}{compact\-\_\-pointers\-\_\-}
+\item 
+\hyperlink{classleveldb_1_1_version_edit_af4a08c41c6232dbca0dd31c2e3fa7a9b}{Deleted\-File\-Set} \hyperlink{classleveldb_1_1_version_edit_a8d824f3b31d232c58aface3621730c94}{deleted\-\_\-files\-\_\-}
+\item 
+std\-::vector$<$ std\-::pair$<$ int, \\*
+\hyperlink{structleveldb_1_1_file_meta_data}{File\-Meta\-Data} $>$ $>$ \hyperlink{classleveldb_1_1_version_edit_ae53f738806bc6e1e17a8c128129832a6}{new\-\_\-files\-\_\-}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classleveldb_1_1_version_edit_a1827cd1b4d6e9e3c378ce37ca3cce635}{Version\-Set}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classleveldb_1_1_version_edit_af4a08c41c6232dbca0dd31c2e3fa7a9b}{\index{leveldb\-::\-Version\-Edit@{leveldb\-::\-Version\-Edit}!Deleted\-File\-Set@{Deleted\-File\-Set}}
+\index{Deleted\-File\-Set@{Deleted\-File\-Set}!leveldb::VersionEdit@{leveldb\-::\-Version\-Edit}}
+\subsubsection[{Deleted\-File\-Set}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\-::set$<$ std\-::pair$<$int, {\bf uint64\-\_\-t}$>$ $>$ {\bf leveldb\-::\-Version\-Edit\-::\-Deleted\-File\-Set}\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_version_edit_af4a08c41c6232dbca0dd31c2e3fa7a9b}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classleveldb_1_1_version_edit_a60dd9c72d256ed1bda68597a9263333e}{\index{leveldb\-::\-Version\-Edit@{leveldb\-::\-Version\-Edit}!Version\-Edit@{Version\-Edit}}
+\index{Version\-Edit@{Version\-Edit}!leveldb::VersionEdit@{leveldb\-::\-Version\-Edit}}
+\subsubsection[{Version\-Edit}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::\-Version\-Edit\-::\-Version\-Edit (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_version_edit_a60dd9c72d256ed1bda68597a9263333e}
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_version_edit_a8863bc7fa645c4bc2518910429447fbe}{\index{leveldb\-::\-Version\-Edit@{leveldb\-::\-Version\-Edit}!$\sim$\-Version\-Edit@{$\sim$\-Version\-Edit}}
+\index{$\sim$\-Version\-Edit@{$\sim$\-Version\-Edit}!leveldb::VersionEdit@{leveldb\-::\-Version\-Edit}}
+\subsubsection[{$\sim$\-Version\-Edit}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::\-Version\-Edit\-::$\sim$\-Version\-Edit (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_version_edit_a8863bc7fa645c4bc2518910429447fbe}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classleveldb_1_1_version_edit_a4cd5cc92761b7ae5b5f9cff46cb88263}{\index{leveldb\-::\-Version\-Edit@{leveldb\-::\-Version\-Edit}!Add\-File@{Add\-File}}
+\index{Add\-File@{Add\-File}!leveldb::VersionEdit@{leveldb\-::\-Version\-Edit}}
+\subsubsection[{Add\-File}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-Version\-Edit\-::\-Add\-File (
+\begin{DoxyParamCaption}
+\item[{int}]{level, }
+\item[{{\bf uint64\-\_\-t}}]{file, }
+\item[{{\bf uint64\-\_\-t}}]{file\-\_\-size, }
+\item[{const {\bf Internal\-Key} \&}]{smallest, }
+\item[{const {\bf Internal\-Key} \&}]{largest}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_version_edit_a4cd5cc92761b7ae5b5f9cff46cb88263}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_version_edit_a259c9de14d58e231178904c1559e4b5e}{\index{leveldb\-::\-Version\-Edit@{leveldb\-::\-Version\-Edit}!Clear@{Clear}}
+\index{Clear@{Clear}!leveldb::VersionEdit@{leveldb\-::\-Version\-Edit}}
+\subsubsection[{Clear}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-Version\-Edit\-::\-Clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classleveldb_1_1_version_edit_a259c9de14d58e231178904c1559e4b5e}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_version_edit_aa186529f0124867251964b2346b58b1f}{\index{leveldb\-::\-Version\-Edit@{leveldb\-::\-Version\-Edit}!Debug\-String@{Debug\-String}}
+\index{Debug\-String@{Debug\-String}!leveldb::VersionEdit@{leveldb\-::\-Version\-Edit}}
+\subsubsection[{Debug\-String}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string leveldb\-::\-Version\-Edit\-::\-Debug\-String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classleveldb_1_1_version_edit_aa186529f0124867251964b2346b58b1f}
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_version_edit_ac0f431c5e8f08c74c697d8480f7c005f}{\index{leveldb\-::\-Version\-Edit@{leveldb\-::\-Version\-Edit}!Decode\-From@{Decode\-From}}
+\index{Decode\-From@{Decode\-From}!leveldb::VersionEdit@{leveldb\-::\-Version\-Edit}}
+\subsubsection[{Decode\-From}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Status} leveldb\-::\-Version\-Edit\-::\-Decode\-From (
+\begin{DoxyParamCaption}
+\item[{const {\bf Slice} \&}]{src}
+\end{DoxyParamCaption}
+)}}\label{classleveldb_1_1_version_edit_ac0f431c5e8f08c74c697d8480f7c005f}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_version_edit_ac222bfd1055114d57aadbd124f24ad0c}{\index{leveldb\-::\-Version\-Edit@{leveldb\-::\-Version\-Edit}!Delete\-File@{Delete\-File}}
+\index{Delete\-File@{Delete\-File}!leveldb::VersionEdit@{leveldb\-::\-Version\-Edit}}
+\subsubsection[{Delete\-File}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-Version\-Edit\-::\-Delete\-File (
+\begin{DoxyParamCaption}
+\item[{int}]{level, }
+\item[{{\bf uint64\-\_\-t}}]{file}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_version_edit_ac222bfd1055114d57aadbd124f24ad0c}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_version_edit_aa3161c67223f6c5e843be579a8456086}{\index{leveldb\-::\-Version\-Edit@{leveldb\-::\-Version\-Edit}!Encode\-To@{Encode\-To}}
+\index{Encode\-To@{Encode\-To}!leveldb::VersionEdit@{leveldb\-::\-Version\-Edit}}
+\subsubsection[{Encode\-To}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-Version\-Edit\-::\-Encode\-To (
+\begin{DoxyParamCaption}
+\item[{std\-::string $\ast$}]{dst}
+\end{DoxyParamCaption}
+) const}}\label{classleveldb_1_1_version_edit_aa3161c67223f6c5e843be579a8456086}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_version_edit_ac9b26dfba1188705d7fc4deaf047271c}{\index{leveldb\-::\-Version\-Edit@{leveldb\-::\-Version\-Edit}!Set\-Compact\-Pointer@{Set\-Compact\-Pointer}}
+\index{Set\-Compact\-Pointer@{Set\-Compact\-Pointer}!leveldb::VersionEdit@{leveldb\-::\-Version\-Edit}}
+\subsubsection[{Set\-Compact\-Pointer}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-Version\-Edit\-::\-Set\-Compact\-Pointer (
+\begin{DoxyParamCaption}
+\item[{int}]{level, }
+\item[{const {\bf Internal\-Key} \&}]{key}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_version_edit_ac9b26dfba1188705d7fc4deaf047271c}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_version_edit_ab562147cdd82b184e86e88bd375a718c}{\index{leveldb\-::\-Version\-Edit@{leveldb\-::\-Version\-Edit}!Set\-Comparator\-Name@{Set\-Comparator\-Name}}
+\index{Set\-Comparator\-Name@{Set\-Comparator\-Name}!leveldb::VersionEdit@{leveldb\-::\-Version\-Edit}}
+\subsubsection[{Set\-Comparator\-Name}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-Version\-Edit\-::\-Set\-Comparator\-Name (
+\begin{DoxyParamCaption}
+\item[{const {\bf Slice} \&}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_version_edit_ab562147cdd82b184e86e88bd375a718c}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_version_edit_abd6e841ed400672d33d26f4b187a66bf}{\index{leveldb\-::\-Version\-Edit@{leveldb\-::\-Version\-Edit}!Set\-Last\-Sequence@{Set\-Last\-Sequence}}
+\index{Set\-Last\-Sequence@{Set\-Last\-Sequence}!leveldb::VersionEdit@{leveldb\-::\-Version\-Edit}}
+\subsubsection[{Set\-Last\-Sequence}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-Version\-Edit\-::\-Set\-Last\-Sequence (
+\begin{DoxyParamCaption}
+\item[{{\bf Sequence\-Number}}]{seq}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_version_edit_abd6e841ed400672d33d26f4b187a66bf}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_version_edit_a47e5c58d34b0e27dc8990687e0c5477a}{\index{leveldb\-::\-Version\-Edit@{leveldb\-::\-Version\-Edit}!Set\-Log\-Number@{Set\-Log\-Number}}
+\index{Set\-Log\-Number@{Set\-Log\-Number}!leveldb::VersionEdit@{leveldb\-::\-Version\-Edit}}
+\subsubsection[{Set\-Log\-Number}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-Version\-Edit\-::\-Set\-Log\-Number (
+\begin{DoxyParamCaption}
+\item[{{\bf uint64\-\_\-t}}]{num}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_version_edit_a47e5c58d34b0e27dc8990687e0c5477a}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_version_edit_a4c104515adf573be0ead29e6835f14fb}{\index{leveldb\-::\-Version\-Edit@{leveldb\-::\-Version\-Edit}!Set\-Next\-File@{Set\-Next\-File}}
+\index{Set\-Next\-File@{Set\-Next\-File}!leveldb::VersionEdit@{leveldb\-::\-Version\-Edit}}
+\subsubsection[{Set\-Next\-File}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-Version\-Edit\-::\-Set\-Next\-File (
+\begin{DoxyParamCaption}
+\item[{{\bf uint64\-\_\-t}}]{num}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_version_edit_a4c104515adf573be0ead29e6835f14fb}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_version_edit_ac1b5689f62e7a8f63c4eefa437a4f2f3}{\index{leveldb\-::\-Version\-Edit@{leveldb\-::\-Version\-Edit}!Set\-Prev\-Log\-Number@{Set\-Prev\-Log\-Number}}
+\index{Set\-Prev\-Log\-Number@{Set\-Prev\-Log\-Number}!leveldb::VersionEdit@{leveldb\-::\-Version\-Edit}}
+\subsubsection[{Set\-Prev\-Log\-Number}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-Version\-Edit\-::\-Set\-Prev\-Log\-Number (
+\begin{DoxyParamCaption}
+\item[{{\bf uint64\-\_\-t}}]{num}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_version_edit_ac1b5689f62e7a8f63c4eefa437a4f2f3}
+
+
+Here is the caller graph for this function\-:
+
+
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classleveldb_1_1_version_edit_a1827cd1b4d6e9e3c378ce37ca3cce635}{\index{leveldb\-::\-Version\-Edit@{leveldb\-::\-Version\-Edit}!Version\-Set@{Version\-Set}}
+\index{Version\-Set@{Version\-Set}!leveldb::VersionEdit@{leveldb\-::\-Version\-Edit}}
+\subsubsection[{Version\-Set}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Version\-Set}\hspace{0.3cm}{\ttfamily [friend]}}}\label{classleveldb_1_1_version_edit_a1827cd1b4d6e9e3c378ce37ca3cce635}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classleveldb_1_1_version_edit_a26d90b4b4924dc53222177be1770062e}{\index{leveldb\-::\-Version\-Edit@{leveldb\-::\-Version\-Edit}!compact\-\_\-pointers\-\_\-@{compact\-\_\-pointers\-\_\-}}
+\index{compact\-\_\-pointers\-\_\-@{compact\-\_\-pointers\-\_\-}!leveldb::VersionEdit@{leveldb\-::\-Version\-Edit}}
+\subsubsection[{compact\-\_\-pointers\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$ std\-::pair$<$int, {\bf Internal\-Key}$>$ $>$ leveldb\-::\-Version\-Edit\-::compact\-\_\-pointers\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_version_edit_a26d90b4b4924dc53222177be1770062e}
+\hypertarget{classleveldb_1_1_version_edit_abc12f1138eab74643342b6a5de10521c}{\index{leveldb\-::\-Version\-Edit@{leveldb\-::\-Version\-Edit}!comparator\-\_\-@{comparator\-\_\-}}
+\index{comparator\-\_\-@{comparator\-\_\-}!leveldb::VersionEdit@{leveldb\-::\-Version\-Edit}}
+\subsubsection[{comparator\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string leveldb\-::\-Version\-Edit\-::comparator\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_version_edit_abc12f1138eab74643342b6a5de10521c}
+\hypertarget{classleveldb_1_1_version_edit_a8d824f3b31d232c58aface3621730c94}{\index{leveldb\-::\-Version\-Edit@{leveldb\-::\-Version\-Edit}!deleted\-\_\-files\-\_\-@{deleted\-\_\-files\-\_\-}}
+\index{deleted\-\_\-files\-\_\-@{deleted\-\_\-files\-\_\-}!leveldb::VersionEdit@{leveldb\-::\-Version\-Edit}}
+\subsubsection[{deleted\-\_\-files\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Deleted\-File\-Set} leveldb\-::\-Version\-Edit\-::deleted\-\_\-files\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_version_edit_a8d824f3b31d232c58aface3621730c94}
+\hypertarget{classleveldb_1_1_version_edit_a2363546c6ba6b79162058c9d8d9980af}{\index{leveldb\-::\-Version\-Edit@{leveldb\-::\-Version\-Edit}!has\-\_\-comparator\-\_\-@{has\-\_\-comparator\-\_\-}}
+\index{has\-\_\-comparator\-\_\-@{has\-\_\-comparator\-\_\-}!leveldb::VersionEdit@{leveldb\-::\-Version\-Edit}}
+\subsubsection[{has\-\_\-comparator\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}bool leveldb\-::\-Version\-Edit\-::has\-\_\-comparator\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_version_edit_a2363546c6ba6b79162058c9d8d9980af}
+\hypertarget{classleveldb_1_1_version_edit_aa7e36bdcdd10c4e17b9bc86281cd7cb8}{\index{leveldb\-::\-Version\-Edit@{leveldb\-::\-Version\-Edit}!has\-\_\-last\-\_\-sequence\-\_\-@{has\-\_\-last\-\_\-sequence\-\_\-}}
+\index{has\-\_\-last\-\_\-sequence\-\_\-@{has\-\_\-last\-\_\-sequence\-\_\-}!leveldb::VersionEdit@{leveldb\-::\-Version\-Edit}}
+\subsubsection[{has\-\_\-last\-\_\-sequence\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}bool leveldb\-::\-Version\-Edit\-::has\-\_\-last\-\_\-sequence\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_version_edit_aa7e36bdcdd10c4e17b9bc86281cd7cb8}
+\hypertarget{classleveldb_1_1_version_edit_a72cf0203239ea5cfcb231c99ad430df1}{\index{leveldb\-::\-Version\-Edit@{leveldb\-::\-Version\-Edit}!has\-\_\-log\-\_\-number\-\_\-@{has\-\_\-log\-\_\-number\-\_\-}}
+\index{has\-\_\-log\-\_\-number\-\_\-@{has\-\_\-log\-\_\-number\-\_\-}!leveldb::VersionEdit@{leveldb\-::\-Version\-Edit}}
+\subsubsection[{has\-\_\-log\-\_\-number\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}bool leveldb\-::\-Version\-Edit\-::has\-\_\-log\-\_\-number\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_version_edit_a72cf0203239ea5cfcb231c99ad430df1}
+\hypertarget{classleveldb_1_1_version_edit_a71f032cd98934d100d84363c08f033d8}{\index{leveldb\-::\-Version\-Edit@{leveldb\-::\-Version\-Edit}!has\-\_\-next\-\_\-file\-\_\-number\-\_\-@{has\-\_\-next\-\_\-file\-\_\-number\-\_\-}}
+\index{has\-\_\-next\-\_\-file\-\_\-number\-\_\-@{has\-\_\-next\-\_\-file\-\_\-number\-\_\-}!leveldb::VersionEdit@{leveldb\-::\-Version\-Edit}}
+\subsubsection[{has\-\_\-next\-\_\-file\-\_\-number\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}bool leveldb\-::\-Version\-Edit\-::has\-\_\-next\-\_\-file\-\_\-number\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_version_edit_a71f032cd98934d100d84363c08f033d8}
+\hypertarget{classleveldb_1_1_version_edit_aede87f4a703e74d16890ef4fa96df7fc}{\index{leveldb\-::\-Version\-Edit@{leveldb\-::\-Version\-Edit}!has\-\_\-prev\-\_\-log\-\_\-number\-\_\-@{has\-\_\-prev\-\_\-log\-\_\-number\-\_\-}}
+\index{has\-\_\-prev\-\_\-log\-\_\-number\-\_\-@{has\-\_\-prev\-\_\-log\-\_\-number\-\_\-}!leveldb::VersionEdit@{leveldb\-::\-Version\-Edit}}
+\subsubsection[{has\-\_\-prev\-\_\-log\-\_\-number\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}bool leveldb\-::\-Version\-Edit\-::has\-\_\-prev\-\_\-log\-\_\-number\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_version_edit_aede87f4a703e74d16890ef4fa96df7fc}
+\hypertarget{classleveldb_1_1_version_edit_af7718924a84a2a655a27104070580d09}{\index{leveldb\-::\-Version\-Edit@{leveldb\-::\-Version\-Edit}!last\-\_\-sequence\-\_\-@{last\-\_\-sequence\-\_\-}}
+\index{last\-\_\-sequence\-\_\-@{last\-\_\-sequence\-\_\-}!leveldb::VersionEdit@{leveldb\-::\-Version\-Edit}}
+\subsubsection[{last\-\_\-sequence\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Sequence\-Number} leveldb\-::\-Version\-Edit\-::last\-\_\-sequence\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_version_edit_af7718924a84a2a655a27104070580d09}
+\hypertarget{classleveldb_1_1_version_edit_a526b91059db8175f1f4f56d00a5bf4d4}{\index{leveldb\-::\-Version\-Edit@{leveldb\-::\-Version\-Edit}!log\-\_\-number\-\_\-@{log\-\_\-number\-\_\-}}
+\index{log\-\_\-number\-\_\-@{log\-\_\-number\-\_\-}!leveldb::VersionEdit@{leveldb\-::\-Version\-Edit}}
+\subsubsection[{log\-\_\-number\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint64\-\_\-t} leveldb\-::\-Version\-Edit\-::log\-\_\-number\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_version_edit_a526b91059db8175f1f4f56d00a5bf4d4}
+\hypertarget{classleveldb_1_1_version_edit_ae53f738806bc6e1e17a8c128129832a6}{\index{leveldb\-::\-Version\-Edit@{leveldb\-::\-Version\-Edit}!new\-\_\-files\-\_\-@{new\-\_\-files\-\_\-}}
+\index{new\-\_\-files\-\_\-@{new\-\_\-files\-\_\-}!leveldb::VersionEdit@{leveldb\-::\-Version\-Edit}}
+\subsubsection[{new\-\_\-files\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$ std\-::pair$<$int, {\bf File\-Meta\-Data}$>$ $>$ leveldb\-::\-Version\-Edit\-::new\-\_\-files\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_version_edit_ae53f738806bc6e1e17a8c128129832a6}
+\hypertarget{classleveldb_1_1_version_edit_a8da3ef0a05e96034b2cc5d32fd06bccb}{\index{leveldb\-::\-Version\-Edit@{leveldb\-::\-Version\-Edit}!next\-\_\-file\-\_\-number\-\_\-@{next\-\_\-file\-\_\-number\-\_\-}}
+\index{next\-\_\-file\-\_\-number\-\_\-@{next\-\_\-file\-\_\-number\-\_\-}!leveldb::VersionEdit@{leveldb\-::\-Version\-Edit}}
+\subsubsection[{next\-\_\-file\-\_\-number\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint64\-\_\-t} leveldb\-::\-Version\-Edit\-::next\-\_\-file\-\_\-number\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_version_edit_a8da3ef0a05e96034b2cc5d32fd06bccb}
+\hypertarget{classleveldb_1_1_version_edit_ac8762934b27315cb0ba897c306412562}{\index{leveldb\-::\-Version\-Edit@{leveldb\-::\-Version\-Edit}!prev\-\_\-log\-\_\-number\-\_\-@{prev\-\_\-log\-\_\-number\-\_\-}}
+\index{prev\-\_\-log\-\_\-number\-\_\-@{prev\-\_\-log\-\_\-number\-\_\-}!leveldb::VersionEdit@{leveldb\-::\-Version\-Edit}}
+\subsubsection[{prev\-\_\-log\-\_\-number\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint64\-\_\-t} leveldb\-::\-Version\-Edit\-::prev\-\_\-log\-\_\-number\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_version_edit_ac8762934b27315cb0ba897c306412562}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+db/\hyperlink{version__edit_8h}{version\-\_\-edit.\-h}\item 
+db/\hyperlink{version__edit_8cc}{version\-\_\-edit.\-cc}\end{DoxyCompactItemize}

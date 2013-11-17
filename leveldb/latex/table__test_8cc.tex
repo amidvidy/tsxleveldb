@@ -1,0 +1,133 @@
+\hypertarget{table__test_8cc}{\section{table/table\-\_\-test.cc File Reference}
+\label{table__test_8cc}\index{table/table\-\_\-test.\-cc@{table/table\-\_\-test.\-cc}}
+}
+{\ttfamily \#include \char`\"{}leveldb/table.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$map$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include \char`\"{}db/dbformat.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}db/memtable.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}db/write\-\_\-batch\-\_\-internal.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}leveldb/db.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}leveldb/env.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}leveldb/iterator.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}leveldb/table\-\_\-builder.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}table/block.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}table/block\-\_\-builder.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}table/format.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}util/random.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}util/testharness.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}util/testutil.\-h\char`\"{}}\\*
+Include dependency graph for table\-\_\-test.\-cc\-:
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classleveldb_1_1_string_sink}{leveldb\-::\-String\-Sink}
+\item 
+class \hyperlink{classleveldb_1_1_string_source}{leveldb\-::\-String\-Source}
+\item 
+class \hyperlink{classleveldb_1_1_constructor}{leveldb\-::\-Constructor}
+\item 
+class \hyperlink{classleveldb_1_1_block_constructor}{leveldb\-::\-Block\-Constructor}
+\item 
+class \hyperlink{classleveldb_1_1_table_constructor}{leveldb\-::\-Table\-Constructor}
+\item 
+class \hyperlink{classleveldb_1_1_key_converting_iterator}{leveldb\-::\-Key\-Converting\-Iterator}
+\item 
+class \hyperlink{classleveldb_1_1_mem_table_constructor}{leveldb\-::\-Mem\-Table\-Constructor}
+\item 
+class \hyperlink{classleveldb_1_1_d_b_constructor}{leveldb\-::\-D\-B\-Constructor}
+\item 
+struct \hyperlink{structleveldb_1_1_test_args}{leveldb\-::\-Test\-Args}
+\item 
+class \hyperlink{classleveldb_1_1_harness}{leveldb\-::\-Harness}
+\item 
+class \hyperlink{classleveldb_1_1_mem_table_test}{leveldb\-::\-Mem\-Table\-Test}
+\item 
+class \hyperlink{classleveldb_1_1_table_test}{leveldb\-::\-Table\-Test}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespaceleveldb}{leveldb}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\-::map$<$ std\-::string, \\*
+std\-::string, S\-T\-L\-Less\-Than $>$ \hyperlink{namespaceleveldb_aac1e50450147be263e08252c6700f7a7}{leveldb\-::\-K\-V\-Map}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{namespaceleveldb_aefcb8349b9101fe6eeff98a1682f1342}{leveldb\-::\-Test\-Type} \{ \hyperlink{namespaceleveldb_aefcb8349b9101fe6eeff98a1682f1342afcbbb26886c91919805d694a85d7a7d0}{leveldb\-::\-T\-A\-B\-L\-E\-\_\-\-T\-E\-S\-T}, 
+\hyperlink{namespaceleveldb_aefcb8349b9101fe6eeff98a1682f1342aa6bc1b815c870f47c3c0288ab56ce3c9}{leveldb\-::\-B\-L\-O\-C\-K\-\_\-\-T\-E\-S\-T}, 
+\hyperlink{namespaceleveldb_aefcb8349b9101fe6eeff98a1682f1342a86f848bd8f163c760b4c661bdec7d46b}{leveldb\-::\-M\-E\-M\-T\-A\-B\-L\-E\-\_\-\-T\-E\-S\-T}, 
+\hyperlink{namespaceleveldb_aefcb8349b9101fe6eeff98a1682f1342aa533718fc4477e8662fb49275ff8c908}{leveldb\-::\-D\-B\-\_\-\-T\-E\-S\-T}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\-::string \hyperlink{namespaceleveldb_abecd41777b0a66591c13f6211a9c91df}{leveldb\-::\-Reverse} (const Slice \&key)
+\item 
+static void \hyperlink{namespaceleveldb_a7746f46abb723036dfe99697f22ebc6a}{leveldb\-::\-Increment} (const Comparator $\ast$\hyperlink{table__test_8cc_a87863e435922f0910ca8db43f02a6c0b}{cmp}, std\-::string $\ast$key)
+\item 
+\hyperlink{namespaceleveldb_a13cda371e30ed51c6ac118444cc30b67}{leveldb\-::\-T\-E\-S\-T} (Harness, Empty)
+\item 
+\hyperlink{namespaceleveldb_af55d0693f84c040c3bf5ef986c6ad27e}{leveldb\-::\-T\-E\-S\-T} (Harness, Zero\-Restart\-Points\-In\-Block)
+\item 
+\hyperlink{namespaceleveldb_a1311d3380969292aaeb1c4588b7633f6}{leveldb\-::\-T\-E\-S\-T} (Harness, Simple\-Empty\-Key)
+\item 
+\hyperlink{namespaceleveldb_ae9364038df96fa10c379139b73101bb3}{leveldb\-::\-T\-E\-S\-T} (Harness, Simple\-Single)
+\item 
+\hyperlink{namespaceleveldb_ac934d6413de1663dd440a0fb11e8e59d}{leveldb\-::\-T\-E\-S\-T} (Harness, Simple\-Multi)
+\item 
+\hyperlink{namespaceleveldb_a45ad3f5f5a3227d14fd3c2742820f10a}{leveldb\-::\-T\-E\-S\-T} (Harness, Simple\-Special\-Key)
+\item 
+\hyperlink{namespaceleveldb_adc90f6565a8de1839377305fcb97f70c}{leveldb\-::\-T\-E\-S\-T} (Harness, Randomized)
+\item 
+\hyperlink{namespaceleveldb_a175371052945d08563d145130faec721}{leveldb\-::\-T\-E\-S\-T} (Harness, Randomized\-Long\-D\-B)
+\item 
+\hyperlink{namespaceleveldb_a13d141d3f958b9ac30ef1a979d5b00f4}{leveldb\-::\-T\-E\-S\-T} (Mem\-Table\-Test, Simple)
+\item 
+static bool \hyperlink{namespaceleveldb_a891b358b4c0a10a44b24b8f473cc73fd}{leveldb\-::\-Between} (\hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} val, \hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} low, \hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} high)
+\item 
+\hyperlink{namespaceleveldb_a3c4934cad4099a61dd153fe6a1d5f85e}{leveldb\-::\-T\-E\-S\-T} (Table\-Test, Approximate\-Offset\-Of\-Plain)
+\item 
+static bool \hyperlink{namespaceleveldb_aae0ba466a002c3ae3541c5ca4e7bcbf7}{leveldb\-::\-Snappy\-Compression\-Supported} ()
+\item 
+\hyperlink{namespaceleveldb_a54db682b48044a62a1b681349c53defb}{leveldb\-::\-T\-E\-S\-T} (Table\-Test, Approximate\-Offset\-Of\-Compressed)
+\item 
+int \hyperlink{table__test_8cc_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static Reverse\-Key\-Comparator \hyperlink{namespaceleveldb_a4f7cb0b6f4da1c10852632bfdb7dd227}{leveldb\-::reverse\-\_\-key\-\_\-comparator}
+\item 
+static const Test\-Args \hyperlink{namespaceleveldb_a6d7e1fb11fbc0e83ef27e87007c8a425}{leveldb\-::k\-Test\-Arg\-List} \mbox{[}$\,$\mbox{]}
+\item 
+static const int \hyperlink{namespaceleveldb_a0bc857a7e9baff42f61503688957b6f5}{leveldb\-::k\-Num\-Test\-Args} = sizeof(k\-Test\-Arg\-List) / sizeof(k\-Test\-Arg\-List\mbox{[}0\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{table__test_8cc_a3c04138a5bfe5d72780bb7e82a18e627}{\index{table\-\_\-test.\-cc@{table\-\_\-test.\-cc}!main@{main}}
+\index{main@{main}!table_test.cc@{table\-\_\-test.\-cc}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}}\label{table__test_8cc_a3c04138a5bfe5d72780bb7e82a18e627}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{table__test_8cc_a87863e435922f0910ca8db43f02a6c0b}{\index{table\-\_\-test.\-cc@{table\-\_\-test.\-cc}!cmp@{cmp}}
+\index{cmp@{cmp}!table_test.cc@{table\-\_\-test.\-cc}}
+\subsubsection[{cmp}]{\setlength{\rightskip}{0pt plus 5cm}const Comparator$\ast$ cmp}}\label{table__test_8cc_a87863e435922f0910ca8db43f02a6c0b}

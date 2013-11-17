@@ -1,0 +1,36 @@
+\hypertarget{format_8h}{\section{table/format.h File Reference}
+\label{format_8h}\index{table/format.\-h@{table/format.\-h}}
+}
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$stdint.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}leveldb/slice.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}leveldb/status.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}leveldb/table\-\_\-builder.\-h\char`\"{}}\\*
+Include dependency graph for format.\-h\-:
+This graph shows which files directly or indirectly include this file\-:
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classleveldb_1_1_block_handle}{leveldb\-::\-Block\-Handle}
+\item 
+class \hyperlink{classleveldb_1_1_footer}{leveldb\-::\-Footer}
+\item 
+struct \hyperlink{structleveldb_1_1_block_contents}{leveldb\-::\-Block\-Contents}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespaceleveldb}{leveldb}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Status \hyperlink{namespaceleveldb_a63198fc7656081fd62695dade629790b}{leveldb\-::\-Read\-Block} (Random\-Access\-File $\ast$file, const Read\-Options \&options, const Block\-Handle \&handle, Block\-Contents $\ast$result)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static const \hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} \hyperlink{namespaceleveldb_a4ea4fa6917989c12324b715f1b3069f8}{leveldb\-::k\-Table\-Magic\-Number} = 0xdb4775248b80fb57ull
+\item 
+static const size\-\_\-t \hyperlink{namespaceleveldb_a4f00b102aae97cb0b0418b6f703a577e}{leveldb\-::k\-Block\-Trailer\-Size} = 5
+\end{DoxyCompactItemize}

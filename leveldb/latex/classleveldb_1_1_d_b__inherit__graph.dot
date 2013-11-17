@@ -1,0 +1,10 @@
+digraph "leveldb::DB"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="leveldb::DB",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="leveldb::DBImpl",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_d_b_impl.html"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="leveldb::ModelDB",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_model_d_b.html"];
+}

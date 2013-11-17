@@ -1,0 +1,11 @@
+digraph "leveldb::Arena::AllocateAligned"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="leveldb::Arena::Allocate\lAligned",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="leveldb::Arena::Allocate\lFallback",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_arena.html#ae2769aced236a3e28f0f6414f0a604d0"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="leveldb::Arena::Allocate\lNewBlock",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_arena.html#afb0a6d9d349dcc35ff0a0214062ebac8"];
+}

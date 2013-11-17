@@ -1,0 +1,9 @@
+digraph "leveldb::WriteBatch::WriteBatch"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="leveldb::WriteBatch\l::WriteBatch",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="leveldb::WriteBatch\l::Clear",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_write_batch.html#afd5058344dc9be113919a5110129006f"];
+}

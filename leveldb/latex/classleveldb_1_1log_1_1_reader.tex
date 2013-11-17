@@ -1,0 +1,255 @@
+\hypertarget{classleveldb_1_1log_1_1_reader}{\section{leveldb\-:\-:log\-:\-:Reader Class Reference}
+\label{classleveldb_1_1log_1_1_reader}\index{leveldb\-::log\-::\-Reader@{leveldb\-::log\-::\-Reader}}
+}
+
+
+{\ttfamily \#include $<$log\-\_\-reader.\-h$>$}
+
+
+
+Collaboration diagram for leveldb\-:\-:log\-:\-:Reader\-:
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classleveldb_1_1log_1_1_reader_1_1_reporter}{Reporter}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classleveldb_1_1log_1_1_reader_a38c1a9988741af5429dad60cf79f0556}{Reader} (\hyperlink{classleveldb_1_1_sequential_file}{Sequential\-File} $\ast$file, \hyperlink{classleveldb_1_1log_1_1_reader_1_1_reporter}{Reporter} $\ast$reporter, bool checksum, \hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} initial\-\_\-offset)
+\item 
+\hyperlink{classleveldb_1_1log_1_1_reader_a52bc3896f8a0baee92f8c699553e7841}{$\sim$\-Reader} ()
+\item 
+bool \hyperlink{classleveldb_1_1log_1_1_reader_a84059598c9367cb677a9d70d77993282}{Read\-Record} (\hyperlink{classleveldb_1_1_slice}{Slice} $\ast$record, std\-::string $\ast$scratch)
+\item 
+\hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} \hyperlink{classleveldb_1_1log_1_1_reader_a358c5545069d86a61948ac0a021aa7f6}{Last\-Record\-Offset} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \hyperlink{classleveldb_1_1log_1_1_reader_ad7bef0b8e83895e4145cd9c726482c31a092b38252c5b000ba43b38729810ef14}{k\-Eof} = k\-Max\-Record\-Type + 1, 
+\hyperlink{classleveldb_1_1log_1_1_reader_ad7bef0b8e83895e4145cd9c726482c31a82ce7f7fb8f153b170a640fe29384cfd}{k\-Bad\-Record} = k\-Max\-Record\-Type + 2
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classleveldb_1_1log_1_1_reader_ae11273725f413d19be1087f221a48ac7}{Skip\-To\-Initial\-Block} ()
+\item 
+unsigned int \hyperlink{classleveldb_1_1log_1_1_reader_a001a5d7b4f3cc86c29fc2b0d31a52c27}{Read\-Physical\-Record} (\hyperlink{classleveldb_1_1_slice}{Slice} $\ast$result)
+\item 
+void \hyperlink{classleveldb_1_1log_1_1_reader_a9ac87fa07d90bf350d2bbbacc3265931}{Report\-Corruption} (size\-\_\-t bytes, const char $\ast$reason)
+\item 
+void \hyperlink{classleveldb_1_1log_1_1_reader_afadf9a8b44005fd8e9fc798d35befb50}{Report\-Drop} (size\-\_\-t bytes, const \hyperlink{classleveldb_1_1_status}{Status} \&reason)
+\item 
+\hyperlink{classleveldb_1_1log_1_1_reader_a46b247c0cd5cb07a7304b991910f9f98}{Reader} (const \hyperlink{classleveldb_1_1log_1_1_reader}{Reader} \&)
+\item 
+void \hyperlink{classleveldb_1_1log_1_1_reader_a4afbb16aaea6a11a8be624b5d425b8a7}{operator=} (const \hyperlink{classleveldb_1_1log_1_1_reader}{Reader} \&)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classleveldb_1_1_sequential_file}{Sequential\-File} $\ast$const \hyperlink{classleveldb_1_1log_1_1_reader_a6e58e3ad57c4c1e3bae658c6bfd0dbe9}{file\-\_\-}
+\item 
+\hyperlink{classleveldb_1_1log_1_1_reader_1_1_reporter}{Reporter} $\ast$const \hyperlink{classleveldb_1_1log_1_1_reader_a1b678a3e93092d4c43a37e2042e7117f}{reporter\-\_\-}
+\item 
+bool const \hyperlink{classleveldb_1_1log_1_1_reader_a7eaa2d26bc056381d9abd8e08db352f3}{checksum\-\_\-}
+\item 
+char $\ast$const \hyperlink{classleveldb_1_1log_1_1_reader_ad02774743fb83dbc70d440b7f8e7e4da}{backing\-\_\-store\-\_\-}
+\item 
+\hyperlink{classleveldb_1_1_slice}{Slice} \hyperlink{classleveldb_1_1log_1_1_reader_a1d0eee5ed5354ccd3d35fd56b2daafb6}{buffer\-\_\-}
+\item 
+bool \hyperlink{classleveldb_1_1log_1_1_reader_a9bfab430cb87a2358e03600ed8dc1e73}{eof\-\_\-}
+\item 
+\hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} \hyperlink{classleveldb_1_1log_1_1_reader_adf95d56ac65b7d75b2aed71040f5cde6}{last\-\_\-record\-\_\-offset\-\_\-}
+\item 
+\hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} \hyperlink{classleveldb_1_1log_1_1_reader_a18cc9904e3b660e100b392722c6c67fb}{end\-\_\-of\-\_\-buffer\-\_\-offset\-\_\-}
+\item 
+\hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} const \hyperlink{classleveldb_1_1log_1_1_reader_a2de3030899a0d2803e983f7e567c5ca5}{initial\-\_\-offset\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classleveldb_1_1log_1_1_reader_ad7bef0b8e83895e4145cd9c726482c31}{\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1log_1_1_reader_ad7bef0b8e83895e4145cd9c726482c31}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{k\-Eof@{k\-Eof}!leveldb\-::log\-::\-Reader@{leveldb\-::log\-::\-Reader}}\index{leveldb\-::log\-::\-Reader@{leveldb\-::log\-::\-Reader}!k\-Eof@{k\-Eof}}\item[{\em 
+\hypertarget{classleveldb_1_1log_1_1_reader_ad7bef0b8e83895e4145cd9c726482c31a092b38252c5b000ba43b38729810ef14}{k\-Eof}\label{classleveldb_1_1log_1_1_reader_ad7bef0b8e83895e4145cd9c726482c31a092b38252c5b000ba43b38729810ef14}
+}]\index{k\-Bad\-Record@{k\-Bad\-Record}!leveldb\-::log\-::\-Reader@{leveldb\-::log\-::\-Reader}}\index{leveldb\-::log\-::\-Reader@{leveldb\-::log\-::\-Reader}!k\-Bad\-Record@{k\-Bad\-Record}}\item[{\em 
+\hypertarget{classleveldb_1_1log_1_1_reader_ad7bef0b8e83895e4145cd9c726482c31a82ce7f7fb8f153b170a640fe29384cfd}{k\-Bad\-Record}\label{classleveldb_1_1log_1_1_reader_ad7bef0b8e83895e4145cd9c726482c31a82ce7f7fb8f153b170a640fe29384cfd}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classleveldb_1_1log_1_1_reader_a38c1a9988741af5429dad60cf79f0556}{\index{leveldb\-::log\-::\-Reader@{leveldb\-::log\-::\-Reader}!Reader@{Reader}}
+\index{Reader@{Reader}!leveldb::log::Reader@{leveldb\-::log\-::\-Reader}}
+\subsubsection[{Reader}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::log\-::\-Reader\-::\-Reader (
+\begin{DoxyParamCaption}
+\item[{{\bf Sequential\-File} $\ast$}]{file, }
+\item[{{\bf Reporter} $\ast$}]{reporter, }
+\item[{bool}]{checksum, }
+\item[{{\bf uint64\-\_\-t}}]{initial\-\_\-offset}
+\end{DoxyParamCaption}
+)}}\label{classleveldb_1_1log_1_1_reader_a38c1a9988741af5429dad60cf79f0556}
+\hypertarget{classleveldb_1_1log_1_1_reader_a52bc3896f8a0baee92f8c699553e7841}{\index{leveldb\-::log\-::\-Reader@{leveldb\-::log\-::\-Reader}!$\sim$\-Reader@{$\sim$\-Reader}}
+\index{$\sim$\-Reader@{$\sim$\-Reader}!leveldb::log::Reader@{leveldb\-::log\-::\-Reader}}
+\subsubsection[{$\sim$\-Reader}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::log\-::\-Reader\-::$\sim$\-Reader (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classleveldb_1_1log_1_1_reader_a52bc3896f8a0baee92f8c699553e7841}
+\hypertarget{classleveldb_1_1log_1_1_reader_a46b247c0cd5cb07a7304b991910f9f98}{\index{leveldb\-::log\-::\-Reader@{leveldb\-::log\-::\-Reader}!Reader@{Reader}}
+\index{Reader@{Reader}!leveldb::log::Reader@{leveldb\-::log\-::\-Reader}}
+\subsubsection[{Reader}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::log\-::\-Reader\-::\-Reader (
+\begin{DoxyParamCaption}
+\item[{const {\bf Reader} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1log_1_1_reader_a46b247c0cd5cb07a7304b991910f9f98}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classleveldb_1_1log_1_1_reader_a358c5545069d86a61948ac0a021aa7f6}{\index{leveldb\-::log\-::\-Reader@{leveldb\-::log\-::\-Reader}!Last\-Record\-Offset@{Last\-Record\-Offset}}
+\index{Last\-Record\-Offset@{Last\-Record\-Offset}!leveldb::log::Reader@{leveldb\-::log\-::\-Reader}}
+\subsubsection[{Last\-Record\-Offset}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint64\-\_\-t} leveldb\-::log\-::\-Reader\-::\-Last\-Record\-Offset (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classleveldb_1_1log_1_1_reader_a358c5545069d86a61948ac0a021aa7f6}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1log_1_1_reader_a4afbb16aaea6a11a8be624b5d425b8a7}{\index{leveldb\-::log\-::\-Reader@{leveldb\-::log\-::\-Reader}!operator=@{operator=}}
+\index{operator=@{operator=}!leveldb::log::Reader@{leveldb\-::log\-::\-Reader}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::log\-::\-Reader\-::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Reader} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1log_1_1_reader_a4afbb16aaea6a11a8be624b5d425b8a7}
+\hypertarget{classleveldb_1_1log_1_1_reader_a001a5d7b4f3cc86c29fc2b0d31a52c27}{\index{leveldb\-::log\-::\-Reader@{leveldb\-::log\-::\-Reader}!Read\-Physical\-Record@{Read\-Physical\-Record}}
+\index{Read\-Physical\-Record@{Read\-Physical\-Record}!leveldb::log::Reader@{leveldb\-::log\-::\-Reader}}
+\subsubsection[{Read\-Physical\-Record}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int leveldb\-::log\-::\-Reader\-::\-Read\-Physical\-Record (
+\begin{DoxyParamCaption}
+\item[{{\bf Slice} $\ast$}]{result}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1log_1_1_reader_a001a5d7b4f3cc86c29fc2b0d31a52c27}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1log_1_1_reader_a84059598c9367cb677a9d70d77993282}{\index{leveldb\-::log\-::\-Reader@{leveldb\-::log\-::\-Reader}!Read\-Record@{Read\-Record}}
+\index{Read\-Record@{Read\-Record}!leveldb::log::Reader@{leveldb\-::log\-::\-Reader}}
+\subsubsection[{Read\-Record}]{\setlength{\rightskip}{0pt plus 5cm}bool leveldb\-::log\-::\-Reader\-::\-Read\-Record (
+\begin{DoxyParamCaption}
+\item[{{\bf Slice} $\ast$}]{record, }
+\item[{std\-::string $\ast$}]{scratch}
+\end{DoxyParamCaption}
+)}}\label{classleveldb_1_1log_1_1_reader_a84059598c9367cb677a9d70d77993282}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1log_1_1_reader_a9ac87fa07d90bf350d2bbbacc3265931}{\index{leveldb\-::log\-::\-Reader@{leveldb\-::log\-::\-Reader}!Report\-Corruption@{Report\-Corruption}}
+\index{Report\-Corruption@{Report\-Corruption}!leveldb::log::Reader@{leveldb\-::log\-::\-Reader}}
+\subsubsection[{Report\-Corruption}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::log\-::\-Reader\-::\-Report\-Corruption (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{bytes, }
+\item[{const char $\ast$}]{reason}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1log_1_1_reader_a9ac87fa07d90bf350d2bbbacc3265931}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1log_1_1_reader_afadf9a8b44005fd8e9fc798d35befb50}{\index{leveldb\-::log\-::\-Reader@{leveldb\-::log\-::\-Reader}!Report\-Drop@{Report\-Drop}}
+\index{Report\-Drop@{Report\-Drop}!leveldb::log::Reader@{leveldb\-::log\-::\-Reader}}
+\subsubsection[{Report\-Drop}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::log\-::\-Reader\-::\-Report\-Drop (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{bytes, }
+\item[{const {\bf Status} \&}]{reason}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1log_1_1_reader_afadf9a8b44005fd8e9fc798d35befb50}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1log_1_1_reader_ae11273725f413d19be1087f221a48ac7}{\index{leveldb\-::log\-::\-Reader@{leveldb\-::log\-::\-Reader}!Skip\-To\-Initial\-Block@{Skip\-To\-Initial\-Block}}
+\index{Skip\-To\-Initial\-Block@{Skip\-To\-Initial\-Block}!leveldb::log::Reader@{leveldb\-::log\-::\-Reader}}
+\subsubsection[{Skip\-To\-Initial\-Block}]{\setlength{\rightskip}{0pt plus 5cm}bool leveldb\-::log\-::\-Reader\-::\-Skip\-To\-Initial\-Block (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1log_1_1_reader_ae11273725f413d19be1087f221a48ac7}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classleveldb_1_1log_1_1_reader_ad02774743fb83dbc70d440b7f8e7e4da}{\index{leveldb\-::log\-::\-Reader@{leveldb\-::log\-::\-Reader}!backing\-\_\-store\-\_\-@{backing\-\_\-store\-\_\-}}
+\index{backing\-\_\-store\-\_\-@{backing\-\_\-store\-\_\-}!leveldb::log::Reader@{leveldb\-::log\-::\-Reader}}
+\subsubsection[{backing\-\_\-store\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ const leveldb\-::log\-::\-Reader\-::backing\-\_\-store\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1log_1_1_reader_ad02774743fb83dbc70d440b7f8e7e4da}
+\hypertarget{classleveldb_1_1log_1_1_reader_a1d0eee5ed5354ccd3d35fd56b2daafb6}{\index{leveldb\-::log\-::\-Reader@{leveldb\-::log\-::\-Reader}!buffer\-\_\-@{buffer\-\_\-}}
+\index{buffer\-\_\-@{buffer\-\_\-}!leveldb::log::Reader@{leveldb\-::log\-::\-Reader}}
+\subsubsection[{buffer\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Slice} leveldb\-::log\-::\-Reader\-::buffer\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1log_1_1_reader_a1d0eee5ed5354ccd3d35fd56b2daafb6}
+\hypertarget{classleveldb_1_1log_1_1_reader_a7eaa2d26bc056381d9abd8e08db352f3}{\index{leveldb\-::log\-::\-Reader@{leveldb\-::log\-::\-Reader}!checksum\-\_\-@{checksum\-\_\-}}
+\index{checksum\-\_\-@{checksum\-\_\-}!leveldb::log::Reader@{leveldb\-::log\-::\-Reader}}
+\subsubsection[{checksum\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}bool const leveldb\-::log\-::\-Reader\-::checksum\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1log_1_1_reader_a7eaa2d26bc056381d9abd8e08db352f3}
+\hypertarget{classleveldb_1_1log_1_1_reader_a18cc9904e3b660e100b392722c6c67fb}{\index{leveldb\-::log\-::\-Reader@{leveldb\-::log\-::\-Reader}!end\-\_\-of\-\_\-buffer\-\_\-offset\-\_\-@{end\-\_\-of\-\_\-buffer\-\_\-offset\-\_\-}}
+\index{end\-\_\-of\-\_\-buffer\-\_\-offset\-\_\-@{end\-\_\-of\-\_\-buffer\-\_\-offset\-\_\-}!leveldb::log::Reader@{leveldb\-::log\-::\-Reader}}
+\subsubsection[{end\-\_\-of\-\_\-buffer\-\_\-offset\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint64\-\_\-t} leveldb\-::log\-::\-Reader\-::end\-\_\-of\-\_\-buffer\-\_\-offset\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1log_1_1_reader_a18cc9904e3b660e100b392722c6c67fb}
+\hypertarget{classleveldb_1_1log_1_1_reader_a9bfab430cb87a2358e03600ed8dc1e73}{\index{leveldb\-::log\-::\-Reader@{leveldb\-::log\-::\-Reader}!eof\-\_\-@{eof\-\_\-}}
+\index{eof\-\_\-@{eof\-\_\-}!leveldb::log::Reader@{leveldb\-::log\-::\-Reader}}
+\subsubsection[{eof\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}bool leveldb\-::log\-::\-Reader\-::eof\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1log_1_1_reader_a9bfab430cb87a2358e03600ed8dc1e73}
+\hypertarget{classleveldb_1_1log_1_1_reader_a6e58e3ad57c4c1e3bae658c6bfd0dbe9}{\index{leveldb\-::log\-::\-Reader@{leveldb\-::log\-::\-Reader}!file\-\_\-@{file\-\_\-}}
+\index{file\-\_\-@{file\-\_\-}!leveldb::log::Reader@{leveldb\-::log\-::\-Reader}}
+\subsubsection[{file\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Sequential\-File}$\ast$ const leveldb\-::log\-::\-Reader\-::file\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1log_1_1_reader_a6e58e3ad57c4c1e3bae658c6bfd0dbe9}
+\hypertarget{classleveldb_1_1log_1_1_reader_a2de3030899a0d2803e983f7e567c5ca5}{\index{leveldb\-::log\-::\-Reader@{leveldb\-::log\-::\-Reader}!initial\-\_\-offset\-\_\-@{initial\-\_\-offset\-\_\-}}
+\index{initial\-\_\-offset\-\_\-@{initial\-\_\-offset\-\_\-}!leveldb::log::Reader@{leveldb\-::log\-::\-Reader}}
+\subsubsection[{initial\-\_\-offset\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint64\-\_\-t} const leveldb\-::log\-::\-Reader\-::initial\-\_\-offset\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1log_1_1_reader_a2de3030899a0d2803e983f7e567c5ca5}
+\hypertarget{classleveldb_1_1log_1_1_reader_adf95d56ac65b7d75b2aed71040f5cde6}{\index{leveldb\-::log\-::\-Reader@{leveldb\-::log\-::\-Reader}!last\-\_\-record\-\_\-offset\-\_\-@{last\-\_\-record\-\_\-offset\-\_\-}}
+\index{last\-\_\-record\-\_\-offset\-\_\-@{last\-\_\-record\-\_\-offset\-\_\-}!leveldb::log::Reader@{leveldb\-::log\-::\-Reader}}
+\subsubsection[{last\-\_\-record\-\_\-offset\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint64\-\_\-t} leveldb\-::log\-::\-Reader\-::last\-\_\-record\-\_\-offset\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1log_1_1_reader_adf95d56ac65b7d75b2aed71040f5cde6}
+\hypertarget{classleveldb_1_1log_1_1_reader_a1b678a3e93092d4c43a37e2042e7117f}{\index{leveldb\-::log\-::\-Reader@{leveldb\-::log\-::\-Reader}!reporter\-\_\-@{reporter\-\_\-}}
+\index{reporter\-\_\-@{reporter\-\_\-}!leveldb::log::Reader@{leveldb\-::log\-::\-Reader}}
+\subsubsection[{reporter\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Reporter}$\ast$ const leveldb\-::log\-::\-Reader\-::reporter\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1log_1_1_reader_a1b678a3e93092d4c43a37e2042e7117f}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+db/\hyperlink{log__reader_8h}{log\-\_\-reader.\-h}\item 
+db/\hyperlink{log__reader_8cc}{log\-\_\-reader.\-cc}\end{DoxyCompactItemize}

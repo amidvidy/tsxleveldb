@@ -1,0 +1,99 @@
+\hypertarget{classleveldb_1_1test_1_1_tester}{\section{leveldb\-:\-:test\-:\-:Tester Class Reference}
+\label{classleveldb_1_1test_1_1_tester}\index{leveldb\-::test\-::\-Tester@{leveldb\-::test\-::\-Tester}}
+}
+
+
+{\ttfamily \#include $<$testharness.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classleveldb_1_1test_1_1_tester_a166bc7b18483780292a44425ef5e64f7}{Tester} (const char $\ast$f, int l)
+\item 
+\hyperlink{classleveldb_1_1test_1_1_tester_a832d52d6aa29945cccdf762b54481295}{$\sim$\-Tester} ()
+\item 
+\hyperlink{classleveldb_1_1test_1_1_tester}{Tester} \& \hyperlink{classleveldb_1_1test_1_1_tester_ad75cd5ea132083b72e7fd7271ef1918a}{Is} (bool b, const char $\ast$msg)
+\item 
+\hyperlink{classleveldb_1_1test_1_1_tester}{Tester} \& \hyperlink{classleveldb_1_1test_1_1_tester_af0e4decc6f483a78af44926634d990c2}{Is\-Ok} (const \hyperlink{classleveldb_1_1_status}{Status} \&s)
+\item 
+{\footnotesize template$<$class V $>$ }\\\hyperlink{classleveldb_1_1test_1_1_tester}{Tester} \& \hyperlink{classleveldb_1_1test_1_1_tester_a4e776d487df19ac9daeed5527cd1d80e}{operator$<$$<$} (const V \&\hyperlink{cache_8cc_a0f61d63b009d0880a89c843bd50d8d76}{value})
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classleveldb_1_1test_1_1_tester_ae6eb51d7b83389a6c9c5dc46c53fb025}{ok\-\_\-}
+\item 
+const char $\ast$ \hyperlink{classleveldb_1_1test_1_1_tester_ac31d6b42290908b68f6bc1957cc972d7}{fname\-\_\-}
+\item 
+int \hyperlink{classleveldb_1_1test_1_1_tester_a6e4f6de0a9ec707e2d00a0671f605aa9}{line\-\_\-}
+\item 
+std\-::stringstream \hyperlink{classleveldb_1_1test_1_1_tester_abc209cb71659871eea9df987d61cf1e0}{ss\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classleveldb_1_1test_1_1_tester_a166bc7b18483780292a44425ef5e64f7}{\index{leveldb\-::test\-::\-Tester@{leveldb\-::test\-::\-Tester}!Tester@{Tester}}
+\index{Tester@{Tester}!leveldb::test::Tester@{leveldb\-::test\-::\-Tester}}
+\subsubsection[{Tester}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::test\-::\-Tester\-::\-Tester (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{f, }
+\item[{int}]{l}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1test_1_1_tester_a166bc7b18483780292a44425ef5e64f7}
+\hypertarget{classleveldb_1_1test_1_1_tester_a832d52d6aa29945cccdf762b54481295}{\index{leveldb\-::test\-::\-Tester@{leveldb\-::test\-::\-Tester}!$\sim$\-Tester@{$\sim$\-Tester}}
+\index{$\sim$\-Tester@{$\sim$\-Tester}!leveldb::test::Tester@{leveldb\-::test\-::\-Tester}}
+\subsubsection[{$\sim$\-Tester}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::test\-::\-Tester\-::$\sim$\-Tester (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1test_1_1_tester_a832d52d6aa29945cccdf762b54481295}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classleveldb_1_1test_1_1_tester_ad75cd5ea132083b72e7fd7271ef1918a}{\index{leveldb\-::test\-::\-Tester@{leveldb\-::test\-::\-Tester}!Is@{Is}}
+\index{Is@{Is}!leveldb::test::Tester@{leveldb\-::test\-::\-Tester}}
+\subsubsection[{Is}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Tester}\& leveldb\-::test\-::\-Tester\-::\-Is (
+\begin{DoxyParamCaption}
+\item[{bool}]{b, }
+\item[{const char $\ast$}]{msg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1test_1_1_tester_ad75cd5ea132083b72e7fd7271ef1918a}
+\hypertarget{classleveldb_1_1test_1_1_tester_af0e4decc6f483a78af44926634d990c2}{\index{leveldb\-::test\-::\-Tester@{leveldb\-::test\-::\-Tester}!Is\-Ok@{Is\-Ok}}
+\index{Is\-Ok@{Is\-Ok}!leveldb::test::Tester@{leveldb\-::test\-::\-Tester}}
+\subsubsection[{Is\-Ok}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Tester}\& leveldb\-::test\-::\-Tester\-::\-Is\-Ok (
+\begin{DoxyParamCaption}
+\item[{const {\bf Status} \&}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1test_1_1_tester_af0e4decc6f483a78af44926634d990c2}
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1test_1_1_tester_a4e776d487df19ac9daeed5527cd1d80e}{\index{leveldb\-::test\-::\-Tester@{leveldb\-::test\-::\-Tester}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!leveldb::test::Tester@{leveldb\-::test\-::\-Tester}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class V $>$ {\bf Tester}\& leveldb\-::test\-::\-Tester\-::operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{const V \&}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1test_1_1_tester_a4e776d487df19ac9daeed5527cd1d80e}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classleveldb_1_1test_1_1_tester_ac31d6b42290908b68f6bc1957cc972d7}{\index{leveldb\-::test\-::\-Tester@{leveldb\-::test\-::\-Tester}!fname\-\_\-@{fname\-\_\-}}
+\index{fname\-\_\-@{fname\-\_\-}!leveldb::test::Tester@{leveldb\-::test\-::\-Tester}}
+\subsubsection[{fname\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ leveldb\-::test\-::\-Tester\-::fname\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1test_1_1_tester_ac31d6b42290908b68f6bc1957cc972d7}
+\hypertarget{classleveldb_1_1test_1_1_tester_a6e4f6de0a9ec707e2d00a0671f605aa9}{\index{leveldb\-::test\-::\-Tester@{leveldb\-::test\-::\-Tester}!line\-\_\-@{line\-\_\-}}
+\index{line\-\_\-@{line\-\_\-}!leveldb::test::Tester@{leveldb\-::test\-::\-Tester}}
+\subsubsection[{line\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int leveldb\-::test\-::\-Tester\-::line\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1test_1_1_tester_a6e4f6de0a9ec707e2d00a0671f605aa9}
+\hypertarget{classleveldb_1_1test_1_1_tester_ae6eb51d7b83389a6c9c5dc46c53fb025}{\index{leveldb\-::test\-::\-Tester@{leveldb\-::test\-::\-Tester}!ok\-\_\-@{ok\-\_\-}}
+\index{ok\-\_\-@{ok\-\_\-}!leveldb::test::Tester@{leveldb\-::test\-::\-Tester}}
+\subsubsection[{ok\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}bool leveldb\-::test\-::\-Tester\-::ok\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1test_1_1_tester_ae6eb51d7b83389a6c9c5dc46c53fb025}
+\hypertarget{classleveldb_1_1test_1_1_tester_abc209cb71659871eea9df987d61cf1e0}{\index{leveldb\-::test\-::\-Tester@{leveldb\-::test\-::\-Tester}!ss\-\_\-@{ss\-\_\-}}
+\index{ss\-\_\-@{ss\-\_\-}!leveldb::test::Tester@{leveldb\-::test\-::\-Tester}}
+\subsubsection[{ss\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::stringstream leveldb\-::test\-::\-Tester\-::ss\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1test_1_1_tester_abc209cb71659871eea9df987d61cf1e0}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+util/\hyperlink{testharness_8h}{testharness.\-h}\end{DoxyCompactItemize}

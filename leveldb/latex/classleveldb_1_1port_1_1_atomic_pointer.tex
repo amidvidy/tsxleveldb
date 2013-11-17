@@ -1,0 +1,101 @@
+\hypertarget{classleveldb_1_1port_1_1_atomic_pointer}{\section{leveldb\-:\-:port\-:\-:Atomic\-Pointer Class Reference}
+\label{classleveldb_1_1port_1_1_atomic_pointer}\index{leveldb\-::port\-::\-Atomic\-Pointer@{leveldb\-::port\-::\-Atomic\-Pointer}}
+}
+
+
+{\ttfamily \#include $<$port\-\_\-example.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classleveldb_1_1port_1_1_atomic_pointer_a046bde8475164356d81353741b18a408}{Atomic\-Pointer} ()
+\item 
+\hyperlink{classleveldb_1_1port_1_1_atomic_pointer_aa8640431ad3d0ac2f0de62ef6090e89e}{Atomic\-Pointer} (void $\ast$v)
+\item 
+void $\ast$ \hyperlink{classleveldb_1_1port_1_1_atomic_pointer_a25b7cd07f114f6e59278d5523aff6140}{Acquire\-\_\-\-Load} () const 
+\item 
+void \hyperlink{classleveldb_1_1port_1_1_atomic_pointer_a8dfe51c125f71c09a363dae042be63a7}{Release\-\_\-\-Store} (void $\ast$v)
+\item 
+void $\ast$ \hyperlink{classleveldb_1_1port_1_1_atomic_pointer_ac11845e17d85f9de46b6c66979374f8f}{No\-Barrier\-\_\-\-Load} () const 
+\item 
+void \hyperlink{classleveldb_1_1port_1_1_atomic_pointer_aa7faab23777d1fe3c1a96d32a28ed20c}{No\-Barrier\-\_\-\-Store} (void $\ast$v)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+intptr\-\_\-t \hyperlink{classleveldb_1_1port_1_1_atomic_pointer_a3403f113d32302b77d328e53c6bafcb5}{rep\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classleveldb_1_1port_1_1_atomic_pointer_a046bde8475164356d81353741b18a408}{\index{leveldb\-::port\-::\-Atomic\-Pointer@{leveldb\-::port\-::\-Atomic\-Pointer}!Atomic\-Pointer@{Atomic\-Pointer}}
+\index{Atomic\-Pointer@{Atomic\-Pointer}!leveldb::port::AtomicPointer@{leveldb\-::port\-::\-Atomic\-Pointer}}
+\subsubsection[{Atomic\-Pointer}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::port\-::\-Atomic\-Pointer\-::\-Atomic\-Pointer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classleveldb_1_1port_1_1_atomic_pointer_a046bde8475164356d81353741b18a408}
+\hypertarget{classleveldb_1_1port_1_1_atomic_pointer_aa8640431ad3d0ac2f0de62ef6090e89e}{\index{leveldb\-::port\-::\-Atomic\-Pointer@{leveldb\-::port\-::\-Atomic\-Pointer}!Atomic\-Pointer@{Atomic\-Pointer}}
+\index{Atomic\-Pointer@{Atomic\-Pointer}!leveldb::port::AtomicPointer@{leveldb\-::port\-::\-Atomic\-Pointer}}
+\subsubsection[{Atomic\-Pointer}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::port\-::\-Atomic\-Pointer\-::\-Atomic\-Pointer (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}}\label{classleveldb_1_1port_1_1_atomic_pointer_aa8640431ad3d0ac2f0de62ef6090e89e}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classleveldb_1_1port_1_1_atomic_pointer_a25b7cd07f114f6e59278d5523aff6140}{\index{leveldb\-::port\-::\-Atomic\-Pointer@{leveldb\-::port\-::\-Atomic\-Pointer}!Acquire\-\_\-\-Load@{Acquire\-\_\-\-Load}}
+\index{Acquire\-\_\-\-Load@{Acquire\-\_\-\-Load}!leveldb::port::AtomicPointer@{leveldb\-::port\-::\-Atomic\-Pointer}}
+\subsubsection[{Acquire\-\_\-\-Load}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ leveldb\-::port\-::\-Atomic\-Pointer\-::\-Acquire\-\_\-\-Load (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classleveldb_1_1port_1_1_atomic_pointer_a25b7cd07f114f6e59278d5523aff6140}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1port_1_1_atomic_pointer_ac11845e17d85f9de46b6c66979374f8f}{\index{leveldb\-::port\-::\-Atomic\-Pointer@{leveldb\-::port\-::\-Atomic\-Pointer}!No\-Barrier\-\_\-\-Load@{No\-Barrier\-\_\-\-Load}}
+\index{No\-Barrier\-\_\-\-Load@{No\-Barrier\-\_\-\-Load}!leveldb::port::AtomicPointer@{leveldb\-::port\-::\-Atomic\-Pointer}}
+\subsubsection[{No\-Barrier\-\_\-\-Load}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ leveldb\-::port\-::\-Atomic\-Pointer\-::\-No\-Barrier\-\_\-\-Load (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classleveldb_1_1port_1_1_atomic_pointer_ac11845e17d85f9de46b6c66979374f8f}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1port_1_1_atomic_pointer_aa7faab23777d1fe3c1a96d32a28ed20c}{\index{leveldb\-::port\-::\-Atomic\-Pointer@{leveldb\-::port\-::\-Atomic\-Pointer}!No\-Barrier\-\_\-\-Store@{No\-Barrier\-\_\-\-Store}}
+\index{No\-Barrier\-\_\-\-Store@{No\-Barrier\-\_\-\-Store}!leveldb::port::AtomicPointer@{leveldb\-::port\-::\-Atomic\-Pointer}}
+\subsubsection[{No\-Barrier\-\_\-\-Store}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::port\-::\-Atomic\-Pointer\-::\-No\-Barrier\-\_\-\-Store (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{v}
+\end{DoxyParamCaption}
+)}}\label{classleveldb_1_1port_1_1_atomic_pointer_aa7faab23777d1fe3c1a96d32a28ed20c}
+\hypertarget{classleveldb_1_1port_1_1_atomic_pointer_a8dfe51c125f71c09a363dae042be63a7}{\index{leveldb\-::port\-::\-Atomic\-Pointer@{leveldb\-::port\-::\-Atomic\-Pointer}!Release\-\_\-\-Store@{Release\-\_\-\-Store}}
+\index{Release\-\_\-\-Store@{Release\-\_\-\-Store}!leveldb::port::AtomicPointer@{leveldb\-::port\-::\-Atomic\-Pointer}}
+\subsubsection[{Release\-\_\-\-Store}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::port\-::\-Atomic\-Pointer\-::\-Release\-\_\-\-Store (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{v}
+\end{DoxyParamCaption}
+)}}\label{classleveldb_1_1port_1_1_atomic_pointer_a8dfe51c125f71c09a363dae042be63a7}
+
+
+Here is the caller graph for this function\-:
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classleveldb_1_1port_1_1_atomic_pointer_a3403f113d32302b77d328e53c6bafcb5}{\index{leveldb\-::port\-::\-Atomic\-Pointer@{leveldb\-::port\-::\-Atomic\-Pointer}!rep\-\_\-@{rep\-\_\-}}
+\index{rep\-\_\-@{rep\-\_\-}!leveldb::port::AtomicPointer@{leveldb\-::port\-::\-Atomic\-Pointer}}
+\subsubsection[{rep\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}intptr\-\_\-t leveldb\-::port\-::\-Atomic\-Pointer\-::rep\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1port_1_1_atomic_pointer_a3403f113d32302b77d328e53c6bafcb5}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+port/\hyperlink{port__example_8h}{port\-\_\-example.\-h}\end{DoxyCompactItemize}

@@ -1,0 +1,105 @@
+\hypertarget{structleveldb_1_1_skip_list_1_1_node}{\section{leveldb\-:\-:Skip\-List$<$ Key, Comparator $>$\-:\-:Node Struct Reference}
+\label{structleveldb_1_1_skip_list_1_1_node}\index{leveldb\-::\-Skip\-List$<$ Key, Comparator $>$\-::\-Node@{leveldb\-::\-Skip\-List$<$ Key, Comparator $>$\-::\-Node}}
+}
+
+
+{\ttfamily \#include $<$skiplist.\-h$>$}
+
+
+
+Collaboration diagram for leveldb\-:\-:Skip\-List$<$ Key, Comparator $>$\-:\-:Node\-:
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structleveldb_1_1_skip_list_1_1_node_a7dec52445f4f05892239a77407d109b0}{Node} (const \hyperlink{namespaceleveldb_a7e9a9725b13fa0bd922d885280dfab95}{Key} \&k)
+\item 
+\hyperlink{structleveldb_1_1_skip_list_1_1_node}{Node} $\ast$ \hyperlink{structleveldb_1_1_skip_list_1_1_node_aca7f18fc57f6c8e8a8dfe176eedbde74}{Next} (int n)
+\item 
+void \hyperlink{structleveldb_1_1_skip_list_1_1_node_a46c7cc10db3d77c85df7e411b720a8f4}{Set\-Next} (int n, \hyperlink{structleveldb_1_1_skip_list_1_1_node}{Node} $\ast$x)
+\item 
+\hyperlink{structleveldb_1_1_skip_list_1_1_node}{Node} $\ast$ \hyperlink{structleveldb_1_1_skip_list_1_1_node_a96b7213d1fd9ef893f3a7baecc5c4801}{No\-Barrier\-\_\-\-Next} (int n)
+\item 
+void \hyperlink{structleveldb_1_1_skip_list_1_1_node_af93b362f5e38fcf645820e02377cca64}{No\-Barrier\-\_\-\-Set\-Next} (int n, \hyperlink{structleveldb_1_1_skip_list_1_1_node}{Node} $\ast$x)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespaceleveldb_a7e9a9725b13fa0bd922d885280dfab95}{Key} const \hyperlink{structleveldb_1_1_skip_list_1_1_node_a654f196e057edd294e4dbcbb6dabb844}{key}
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classleveldb_1_1port_1_1_atomic_pointer}{port\-::\-Atomic\-Pointer} \hyperlink{structleveldb_1_1_skip_list_1_1_node_ab05b7bdbc2bd10c867f02ee8fcb347e2}{next\-\_\-} \mbox{[}1\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{structleveldb_1_1_skip_list_1_1_node_a7dec52445f4f05892239a77407d109b0}{\index{leveldb\-::\-Skip\-List\-::\-Node@{leveldb\-::\-Skip\-List\-::\-Node}!Node@{Node}}
+\index{Node@{Node}!leveldb::SkipList::Node@{leveldb\-::\-Skip\-List\-::\-Node}}
+\subsubsection[{Node}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Key, class Comparator$>$ {\bf leveldb\-::\-Skip\-List}$<$ {\bf Key}, {\bf Comparator} $>$\-::Node\-::\-Node (
+\begin{DoxyParamCaption}
+\item[{const {\bf Key} \&}]{k}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}}\label{structleveldb_1_1_skip_list_1_1_node_a7dec52445f4f05892239a77407d109b0}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{structleveldb_1_1_skip_list_1_1_node_aca7f18fc57f6c8e8a8dfe176eedbde74}{\index{leveldb\-::\-Skip\-List\-::\-Node@{leveldb\-::\-Skip\-List\-::\-Node}!Next@{Next}}
+\index{Next@{Next}!leveldb::SkipList::Node@{leveldb\-::\-Skip\-List\-::\-Node}}
+\subsubsection[{Next}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Key, class Comparator$>$ {\bf Node}$\ast$ {\bf leveldb\-::\-Skip\-List}$<$ {\bf Key}, {\bf Comparator} $>$\-::Node\-::\-Next (
+\begin{DoxyParamCaption}
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structleveldb_1_1_skip_list_1_1_node_aca7f18fc57f6c8e8a8dfe176eedbde74}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{structleveldb_1_1_skip_list_1_1_node_a96b7213d1fd9ef893f3a7baecc5c4801}{\index{leveldb\-::\-Skip\-List\-::\-Node@{leveldb\-::\-Skip\-List\-::\-Node}!No\-Barrier\-\_\-\-Next@{No\-Barrier\-\_\-\-Next}}
+\index{No\-Barrier\-\_\-\-Next@{No\-Barrier\-\_\-\-Next}!leveldb::SkipList::Node@{leveldb\-::\-Skip\-List\-::\-Node}}
+\subsubsection[{No\-Barrier\-\_\-\-Next}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Key, class Comparator$>$ {\bf Node}$\ast$ {\bf leveldb\-::\-Skip\-List}$<$ {\bf Key}, {\bf Comparator} $>$\-::Node\-::\-No\-Barrier\-\_\-\-Next (
+\begin{DoxyParamCaption}
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structleveldb_1_1_skip_list_1_1_node_a96b7213d1fd9ef893f3a7baecc5c4801}
+\hypertarget{structleveldb_1_1_skip_list_1_1_node_af93b362f5e38fcf645820e02377cca64}{\index{leveldb\-::\-Skip\-List\-::\-Node@{leveldb\-::\-Skip\-List\-::\-Node}!No\-Barrier\-\_\-\-Set\-Next@{No\-Barrier\-\_\-\-Set\-Next}}
+\index{No\-Barrier\-\_\-\-Set\-Next@{No\-Barrier\-\_\-\-Set\-Next}!leveldb::SkipList::Node@{leveldb\-::\-Skip\-List\-::\-Node}}
+\subsubsection[{No\-Barrier\-\_\-\-Set\-Next}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Key, class Comparator$>$ void {\bf leveldb\-::\-Skip\-List}$<$ {\bf Key}, {\bf Comparator} $>$\-::Node\-::\-No\-Barrier\-\_\-\-Set\-Next (
+\begin{DoxyParamCaption}
+\item[{int}]{n, }
+\item[{{\bf Node} $\ast$}]{x}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structleveldb_1_1_skip_list_1_1_node_af93b362f5e38fcf645820e02377cca64}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{structleveldb_1_1_skip_list_1_1_node_a46c7cc10db3d77c85df7e411b720a8f4}{\index{leveldb\-::\-Skip\-List\-::\-Node@{leveldb\-::\-Skip\-List\-::\-Node}!Set\-Next@{Set\-Next}}
+\index{Set\-Next@{Set\-Next}!leveldb::SkipList::Node@{leveldb\-::\-Skip\-List\-::\-Node}}
+\subsubsection[{Set\-Next}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Key, class Comparator$>$ void {\bf leveldb\-::\-Skip\-List}$<$ {\bf Key}, {\bf Comparator} $>$\-::Node\-::\-Set\-Next (
+\begin{DoxyParamCaption}
+\item[{int}]{n, }
+\item[{{\bf Node} $\ast$}]{x}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structleveldb_1_1_skip_list_1_1_node_a46c7cc10db3d77c85df7e411b720a8f4}
+
+
+Here is the caller graph for this function\-:
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{structleveldb_1_1_skip_list_1_1_node_a654f196e057edd294e4dbcbb6dabb844}{\index{leveldb\-::\-Skip\-List\-::\-Node@{leveldb\-::\-Skip\-List\-::\-Node}!key@{key}}
+\index{key@{key}!leveldb::SkipList::Node@{leveldb\-::\-Skip\-List\-::\-Node}}
+\subsubsection[{key}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Key, class Comparator$>$ {\bf Key} const {\bf leveldb\-::\-Skip\-List}$<$ {\bf Key}, {\bf Comparator} $>$\-::Node\-::key}}\label{structleveldb_1_1_skip_list_1_1_node_a654f196e057edd294e4dbcbb6dabb844}
+\hypertarget{structleveldb_1_1_skip_list_1_1_node_ab05b7bdbc2bd10c867f02ee8fcb347e2}{\index{leveldb\-::\-Skip\-List\-::\-Node@{leveldb\-::\-Skip\-List\-::\-Node}!next\-\_\-@{next\-\_\-}}
+\index{next\-\_\-@{next\-\_\-}!leveldb::SkipList::Node@{leveldb\-::\-Skip\-List\-::\-Node}}
+\subsubsection[{next\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Key, class Comparator$>$ {\bf port\-::\-Atomic\-Pointer} {\bf leveldb\-::\-Skip\-List}$<$ {\bf Key}, {\bf Comparator} $>$\-::Node\-::next\-\_\-\mbox{[}1\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}}\label{structleveldb_1_1_skip_list_1_1_node_ab05b7bdbc2bd10c867f02ee8fcb347e2}
+
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+db/\hyperlink{skiplist_8h}{skiplist.\-h}\end{DoxyCompactItemize}

@@ -1,0 +1,191 @@
+\hypertarget{classleveldb_1_1_cache}{\section{leveldb\-:\-:Cache Class Reference}
+\label{classleveldb_1_1_cache}\index{leveldb\-::\-Cache@{leveldb\-::\-Cache}}
+}
+
+
+{\ttfamily \#include $<$cache.\-h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structleveldb_1_1_cache_1_1_handle}{Handle}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classleveldb_1_1_cache_ac9b129b21ba8eda181645fc3f6a8dfe6}{Cache} ()
+\item 
+virtual \hyperlink{classleveldb_1_1_cache_a1369f94b24a31099443f714b8b8ab527}{$\sim$\-Cache} ()
+\item 
+virtual \hyperlink{structleveldb_1_1_cache_1_1_handle}{Handle} $\ast$ \hyperlink{classleveldb_1_1_cache_af0b55b7fa0e64184fa62e0dbe9ba9eae}{Insert} (const \hyperlink{classleveldb_1_1_slice}{Slice} \&key, void $\ast$\hyperlink{cache_8cc_a0f61d63b009d0880a89c843bd50d8d76}{value}, size\-\_\-t \hyperlink{cache_8cc_a7476acc4f60747f9d9032e9cbdf5eb79}{charge}, void($\ast$\hyperlink{cache_8cc_a2de9431c71caf9c05081754cfe130a6d}{deleter})(const \hyperlink{classleveldb_1_1_slice}{Slice} \&key, void $\ast$\hyperlink{cache_8cc_a0f61d63b009d0880a89c843bd50d8d76}{value}))=0
+\item 
+virtual \hyperlink{structleveldb_1_1_cache_1_1_handle}{Handle} $\ast$ \hyperlink{classleveldb_1_1_cache_af90785205182a25cf741dc13a48d76cb}{Lookup} (const \hyperlink{classleveldb_1_1_slice}{Slice} \&key)=0
+\item 
+virtual void \hyperlink{classleveldb_1_1_cache_a712618c8bf3bfa48b7bab1fbc23c3002}{Release} (\hyperlink{structleveldb_1_1_cache_1_1_handle}{Handle} $\ast$handle)=0
+\item 
+virtual void $\ast$ \hyperlink{classleveldb_1_1_cache_a454920df8e68917adcf011dfb3538661}{Value} (\hyperlink{structleveldb_1_1_cache_1_1_handle}{Handle} $\ast$handle)=0
+\item 
+virtual void \hyperlink{classleveldb_1_1_cache_af833a38763598253338de37aba079db6}{Erase} (const \hyperlink{classleveldb_1_1_slice}{Slice} \&key)=0
+\item 
+virtual \hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} \hyperlink{classleveldb_1_1_cache_ae2d79bfe747fc6c165c77398cc31e125}{New\-Id} ()=0
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classleveldb_1_1_cache_ae92ff3b0f33bd9bf346928069974950a}{L\-R\-U\-\_\-\-Remove} (\hyperlink{structleveldb_1_1_cache_1_1_handle}{Handle} $\ast$e)
+\item 
+void \hyperlink{classleveldb_1_1_cache_acc07bab282052c2eb1310d098cd4f99e}{L\-R\-U\-\_\-\-Append} (\hyperlink{structleveldb_1_1_cache_1_1_handle}{Handle} $\ast$e)
+\item 
+void \hyperlink{classleveldb_1_1_cache_a1b1489f524cd29e05ae3f679a2552b98}{Unref} (\hyperlink{structleveldb_1_1_cache_1_1_handle}{Handle} $\ast$e)
+\item 
+\hyperlink{classleveldb_1_1_cache_aacc66de3a00854fa38fc53625aecc569}{Cache} (const \hyperlink{classleveldb_1_1_cache}{Cache} \&)
+\item 
+void \hyperlink{classleveldb_1_1_cache_a62c682ea6c99e53156229053b3fccb5f}{operator=} (const \hyperlink{classleveldb_1_1_cache}{Cache} \&)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Rep $\ast$ \hyperlink{classleveldb_1_1_cache_aceb7389e9fbb571dcab109d4824e9960}{rep\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classleveldb_1_1_cache_ac9b129b21ba8eda181645fc3f6a8dfe6}{\index{leveldb\-::\-Cache@{leveldb\-::\-Cache}!Cache@{Cache}}
+\index{Cache@{Cache}!leveldb::Cache@{leveldb\-::\-Cache}}
+\subsubsection[{Cache}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::\-Cache\-::\-Cache (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_cache_ac9b129b21ba8eda181645fc3f6a8dfe6}
+\hypertarget{classleveldb_1_1_cache_a1369f94b24a31099443f714b8b8ab527}{\index{leveldb\-::\-Cache@{leveldb\-::\-Cache}!$\sim$\-Cache@{$\sim$\-Cache}}
+\index{$\sim$\-Cache@{$\sim$\-Cache}!leveldb::Cache@{leveldb\-::\-Cache}}
+\subsubsection[{$\sim$\-Cache}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::\-Cache\-::$\sim$\-Cache (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classleveldb_1_1_cache_a1369f94b24a31099443f714b8b8ab527}
+\hypertarget{classleveldb_1_1_cache_aacc66de3a00854fa38fc53625aecc569}{\index{leveldb\-::\-Cache@{leveldb\-::\-Cache}!Cache@{Cache}}
+\index{Cache@{Cache}!leveldb::Cache@{leveldb\-::\-Cache}}
+\subsubsection[{Cache}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::\-Cache\-::\-Cache (
+\begin{DoxyParamCaption}
+\item[{const {\bf Cache} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_cache_aacc66de3a00854fa38fc53625aecc569}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classleveldb_1_1_cache_af833a38763598253338de37aba079db6}{\index{leveldb\-::\-Cache@{leveldb\-::\-Cache}!Erase@{Erase}}
+\index{Erase@{Erase}!leveldb::Cache@{leveldb\-::\-Cache}}
+\subsubsection[{Erase}]{\setlength{\rightskip}{0pt plus 5cm}virtual void leveldb\-::\-Cache\-::\-Erase (
+\begin{DoxyParamCaption}
+\item[{const {\bf Slice} \&}]{key}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classleveldb_1_1_cache_af833a38763598253338de37aba079db6}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_cache_af0b55b7fa0e64184fa62e0dbe9ba9eae}{\index{leveldb\-::\-Cache@{leveldb\-::\-Cache}!Insert@{Insert}}
+\index{Insert@{Insert}!leveldb::Cache@{leveldb\-::\-Cache}}
+\subsubsection[{Insert}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Handle}$\ast$ leveldb\-::\-Cache\-::\-Insert (
+\begin{DoxyParamCaption}
+\item[{const {\bf Slice} \&}]{key, }
+\item[{void $\ast$}]{value, }
+\item[{size\-\_\-t}]{charge, }
+\item[{void($\ast$)(const {\bf Slice} \&key, void $\ast${\bf value})}]{deleter}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classleveldb_1_1_cache_af0b55b7fa0e64184fa62e0dbe9ba9eae}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_cache_af90785205182a25cf741dc13a48d76cb}{\index{leveldb\-::\-Cache@{leveldb\-::\-Cache}!Lookup@{Lookup}}
+\index{Lookup@{Lookup}!leveldb::Cache@{leveldb\-::\-Cache}}
+\subsubsection[{Lookup}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Handle}$\ast$ leveldb\-::\-Cache\-::\-Lookup (
+\begin{DoxyParamCaption}
+\item[{const {\bf Slice} \&}]{key}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classleveldb_1_1_cache_af90785205182a25cf741dc13a48d76cb}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_cache_acc07bab282052c2eb1310d098cd4f99e}{\index{leveldb\-::\-Cache@{leveldb\-::\-Cache}!L\-R\-U\-\_\-\-Append@{L\-R\-U\-\_\-\-Append}}
+\index{L\-R\-U\-\_\-\-Append@{L\-R\-U\-\_\-\-Append}!leveldb::Cache@{leveldb\-::\-Cache}}
+\subsubsection[{L\-R\-U\-\_\-\-Append}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-Cache\-::\-L\-R\-U\-\_\-\-Append (
+\begin{DoxyParamCaption}
+\item[{{\bf Handle} $\ast$}]{e}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_cache_acc07bab282052c2eb1310d098cd4f99e}
+\hypertarget{classleveldb_1_1_cache_ae92ff3b0f33bd9bf346928069974950a}{\index{leveldb\-::\-Cache@{leveldb\-::\-Cache}!L\-R\-U\-\_\-\-Remove@{L\-R\-U\-\_\-\-Remove}}
+\index{L\-R\-U\-\_\-\-Remove@{L\-R\-U\-\_\-\-Remove}!leveldb::Cache@{leveldb\-::\-Cache}}
+\subsubsection[{L\-R\-U\-\_\-\-Remove}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-Cache\-::\-L\-R\-U\-\_\-\-Remove (
+\begin{DoxyParamCaption}
+\item[{{\bf Handle} $\ast$}]{e}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_cache_ae92ff3b0f33bd9bf346928069974950a}
+\hypertarget{classleveldb_1_1_cache_ae2d79bfe747fc6c165c77398cc31e125}{\index{leveldb\-::\-Cache@{leveldb\-::\-Cache}!New\-Id@{New\-Id}}
+\index{New\-Id@{New\-Id}!leveldb::Cache@{leveldb\-::\-Cache}}
+\subsubsection[{New\-Id}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf uint64\-\_\-t} leveldb\-::\-Cache\-::\-New\-Id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classleveldb_1_1_cache_ae2d79bfe747fc6c165c77398cc31e125}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_cache_a62c682ea6c99e53156229053b3fccb5f}{\index{leveldb\-::\-Cache@{leveldb\-::\-Cache}!operator=@{operator=}}
+\index{operator=@{operator=}!leveldb::Cache@{leveldb\-::\-Cache}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-Cache\-::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Cache} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_cache_a62c682ea6c99e53156229053b3fccb5f}
+\hypertarget{classleveldb_1_1_cache_a712618c8bf3bfa48b7bab1fbc23c3002}{\index{leveldb\-::\-Cache@{leveldb\-::\-Cache}!Release@{Release}}
+\index{Release@{Release}!leveldb::Cache@{leveldb\-::\-Cache}}
+\subsubsection[{Release}]{\setlength{\rightskip}{0pt plus 5cm}virtual void leveldb\-::\-Cache\-::\-Release (
+\begin{DoxyParamCaption}
+\item[{{\bf Handle} $\ast$}]{handle}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classleveldb_1_1_cache_a712618c8bf3bfa48b7bab1fbc23c3002}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_cache_a1b1489f524cd29e05ae3f679a2552b98}{\index{leveldb\-::\-Cache@{leveldb\-::\-Cache}!Unref@{Unref}}
+\index{Unref@{Unref}!leveldb::Cache@{leveldb\-::\-Cache}}
+\subsubsection[{Unref}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-Cache\-::\-Unref (
+\begin{DoxyParamCaption}
+\item[{{\bf Handle} $\ast$}]{e}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_cache_a1b1489f524cd29e05ae3f679a2552b98}
+\hypertarget{classleveldb_1_1_cache_a454920df8e68917adcf011dfb3538661}{\index{leveldb\-::\-Cache@{leveldb\-::\-Cache}!Value@{Value}}
+\index{Value@{Value}!leveldb::Cache@{leveldb\-::\-Cache}}
+\subsubsection[{Value}]{\setlength{\rightskip}{0pt plus 5cm}virtual void$\ast$ leveldb\-::\-Cache\-::\-Value (
+\begin{DoxyParamCaption}
+\item[{{\bf Handle} $\ast$}]{handle}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classleveldb_1_1_cache_a454920df8e68917adcf011dfb3538661}
+
+
+Here is the caller graph for this function\-:
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classleveldb_1_1_cache_aceb7389e9fbb571dcab109d4824e9960}{\index{leveldb\-::\-Cache@{leveldb\-::\-Cache}!rep\-\_\-@{rep\-\_\-}}
+\index{rep\-\_\-@{rep\-\_\-}!leveldb::Cache@{leveldb\-::\-Cache}}
+\subsubsection[{rep\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}Rep$\ast$ leveldb\-::\-Cache\-::rep\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_cache_aceb7389e9fbb571dcab109d4824e9960}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/leveldb/\hyperlink{cache_8h}{cache.\-h}\item 
+util/\hyperlink{cache_8cc}{cache.\-cc}\end{DoxyCompactItemize}

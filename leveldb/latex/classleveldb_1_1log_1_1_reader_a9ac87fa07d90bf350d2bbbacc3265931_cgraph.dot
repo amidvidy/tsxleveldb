@@ -1,0 +1,17 @@
+digraph "leveldb::log::Reader::ReportCorruption"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="leveldb::log::Reader\l::ReportCorruption",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="leveldb::log::Reader\l::ReportDrop",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1log_1_1_reader.html#afadf9a8b44005fd8e9fc798d35befb50"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="leveldb::Slice::size",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_slice.html#a947d3173f04f8a30553e89046daf91d5"];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="leveldb::log::Reader\l::Reporter::Corruption",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1log_1_1_reader_1_1_reporter.html#a2d28d30f9559d5fc9f94af41d239932e"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="leveldb::Status::Corruption",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_status.html#a755b1ee5b0029cf9ea1128f1cdff5855"];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="leveldb::Status::Status",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_status.html#a941ec793179e81df3032a612cfe5039f"];
+}

@@ -1,0 +1,959 @@
+\hypertarget{classleveldb_1_1_d_b_impl}{\section{leveldb\-:\-:D\-B\-Impl Class Reference}
+\label{classleveldb_1_1_d_b_impl}\index{leveldb\-::\-D\-B\-Impl@{leveldb\-::\-D\-B\-Impl}}
+}
+
+
+{\ttfamily \#include $<$db\-\_\-impl.\-h$>$}
+
+
+
+Inheritance diagram for leveldb\-:\-:D\-B\-Impl\-:
+
+
+Collaboration diagram for leveldb\-:\-:D\-B\-Impl\-:
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structleveldb_1_1_d_b_impl_1_1_compaction_state}{Compaction\-State}
+\item 
+struct \hyperlink{structleveldb_1_1_d_b_impl_1_1_compaction_stats}{Compaction\-Stats}
+\item 
+struct \hyperlink{structleveldb_1_1_d_b_impl_1_1_manual_compaction}{Manual\-Compaction}
+\item 
+struct \hyperlink{structleveldb_1_1_d_b_impl_1_1_writer}{Writer}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classleveldb_1_1_d_b_impl_a269b55605b27271d6ca5fee68af0d8f3}{D\-B\-Impl} (const \hyperlink{structleveldb_1_1_options}{Options} \&options, const std\-::string \&\hyperlink{c__test_8c_a75d845559336df6843f3b599960f89d2}{dbname})
+\item 
+virtual \hyperlink{classleveldb_1_1_d_b_impl_a07a233a94a2531aed9d3718c9b9ed40d}{$\sim$\-D\-B\-Impl} ()
+\item 
+virtual \hyperlink{classleveldb_1_1_status}{Status} \hyperlink{classleveldb_1_1_d_b_impl_ad0d56aeb4d84ff9632c9a7f3f1b7c4d5}{Put} (const \hyperlink{structleveldb_1_1_write_options}{Write\-Options} \&, const \hyperlink{classleveldb_1_1_slice}{Slice} \&key, const \hyperlink{classleveldb_1_1_slice}{Slice} \&\hyperlink{cache_8cc_a0f61d63b009d0880a89c843bd50d8d76}{value})
+\item 
+virtual \hyperlink{classleveldb_1_1_status}{Status} \hyperlink{classleveldb_1_1_d_b_impl_af050f77e8c22bd6638fed5a46a59399d}{Delete} (const \hyperlink{structleveldb_1_1_write_options}{Write\-Options} \&, const \hyperlink{classleveldb_1_1_slice}{Slice} \&key)
+\item 
+virtual \hyperlink{classleveldb_1_1_status}{Status} \hyperlink{classleveldb_1_1_d_b_impl_ac0d0b472717099d6a02ad9dace4e8ef4}{Write} (const \hyperlink{structleveldb_1_1_write_options}{Write\-Options} \&options, \hyperlink{classleveldb_1_1_write_batch}{Write\-Batch} $\ast$updates)
+\item 
+virtual \hyperlink{classleveldb_1_1_status}{Status} \hyperlink{classleveldb_1_1_d_b_impl_a089964ddcd1f5dc85e73499ae57be508}{Get} (const \hyperlink{structleveldb_1_1_read_options}{Read\-Options} \&options, const \hyperlink{classleveldb_1_1_slice}{Slice} \&key, std\-::string $\ast$\hyperlink{cache_8cc_a0f61d63b009d0880a89c843bd50d8d76}{value})
+\item 
+virtual \hyperlink{classleveldb_1_1_iterator}{Iterator} $\ast$ \hyperlink{classleveldb_1_1_d_b_impl_ae955dc8f2a1c38588723a0882653cb58}{New\-Iterator} (const \hyperlink{structleveldb_1_1_read_options}{Read\-Options} \&)
+\item 
+virtual const \hyperlink{classleveldb_1_1_snapshot}{Snapshot} $\ast$ \hyperlink{classleveldb_1_1_d_b_impl_a4bec3d8ffd65fec562b2dd1f6eaba137}{Get\-Snapshot} ()
+\item 
+virtual void \hyperlink{classleveldb_1_1_d_b_impl_a6c0b6abfc9a30cc8e5412d4fc3e8c886}{Release\-Snapshot} (const \hyperlink{classleveldb_1_1_snapshot}{Snapshot} $\ast$snapshot)
+\item 
+virtual bool \hyperlink{classleveldb_1_1_d_b_impl_ad1a2023ce171c8f8476664f5b1cbab4d}{Get\-Property} (const \hyperlink{classleveldb_1_1_slice}{Slice} \&property, std\-::string $\ast$\hyperlink{cache_8cc_a0f61d63b009d0880a89c843bd50d8d76}{value})
+\item 
+virtual void \hyperlink{classleveldb_1_1_d_b_impl_af08e218d92064699942c195ce0f06010}{Get\-Approximate\-Sizes} (const \hyperlink{structleveldb_1_1_range}{Range} $\ast$range, int n, \hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} $\ast$sizes)
+\item 
+virtual void \hyperlink{classleveldb_1_1_d_b_impl_aa6df0739fc0b49380c284347e411b8ed}{Compact\-Range} (const \hyperlink{classleveldb_1_1_slice}{Slice} $\ast$begin, const \hyperlink{classleveldb_1_1_slice}{Slice} $\ast$end)
+\item 
+void \hyperlink{classleveldb_1_1_d_b_impl_a63fcb49466b689a534ba77d32cf84f99}{T\-E\-S\-T\-\_\-\-Compact\-Range} (int level, const \hyperlink{classleveldb_1_1_slice}{Slice} $\ast$begin, const \hyperlink{classleveldb_1_1_slice}{Slice} $\ast$end)
+\item 
+\hyperlink{classleveldb_1_1_status}{Status} \hyperlink{classleveldb_1_1_d_b_impl_a8642703fd1398cd8e3f5f24ee0b9da23}{T\-E\-S\-T\-\_\-\-Compact\-Mem\-Table} ()
+\item 
+\hyperlink{classleveldb_1_1_iterator}{Iterator} $\ast$ \hyperlink{classleveldb_1_1_d_b_impl_adba5bf4252bd94f7db50e62921b7ba53}{T\-E\-S\-T\-\_\-\-New\-Internal\-Iterator} ()
+\item 
+\hyperlink{stdint_8h_adec1df1b8b51cb32b77e5b86fff46471}{int64\-\_\-t} \hyperlink{classleveldb_1_1_d_b_impl_af621636048b8d3cfaa21238fe26ef0ca}{T\-E\-S\-T\-\_\-\-Max\-Next\-Level\-Overlapping\-Bytes} ()
+\item 
+void \hyperlink{classleveldb_1_1_d_b_impl_a254ae98e3425046c28ed0aa6d78b37d8}{Record\-Read\-Sample} (\hyperlink{classleveldb_1_1_slice}{Slice} key)
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classleveldb_1_1_iterator}{Iterator} $\ast$ \hyperlink{classleveldb_1_1_d_b_impl_a49b0e6bbb2eaaa17b0869dc4d4fce49d}{New\-Internal\-Iterator} (const \hyperlink{structleveldb_1_1_read_options}{Read\-Options} \&, \hyperlink{namespaceleveldb_a5481ededd221c36d652c371249f869fa}{Sequence\-Number} $\ast$latest\-\_\-snapshot, \hyperlink{stdint_8h_a435d1572bf3f880d55459d9805097f62}{uint32\-\_\-t} $\ast$seed)
+\item 
+\hyperlink{classleveldb_1_1_status}{Status} \hyperlink{classleveldb_1_1_d_b_impl_acfd8ee23923b6a2afb3016831d751b9b}{New\-D\-B} ()
+\item 
+\hyperlink{classleveldb_1_1_status}{Status} \hyperlink{classleveldb_1_1_d_b_impl_aa9a573026c03e8485471f583316943b0}{Recover} (\hyperlink{classleveldb_1_1_version_edit}{Version\-Edit} $\ast$edit) \hyperlink{thread__annotations_8h_a0e2e86b0f11d9778240b0a0b263047b1}{E\-X\-C\-L\-U\-S\-I\-V\-E\-\_\-\-L\-O\-C\-K\-S\-\_\-\-R\-E\-Q\-U\-I\-R\-E\-D}(\hyperlink{classleveldb_1_1_d_b_impl_ac591585d5dea970b4bd1beb7553ce197}{mutex\-\_\-})
+\item 
+void \hyperlink{classleveldb_1_1_d_b_impl_ac957f408efe2e4a110ef3e45760bd5bf}{Maybe\-Ignore\-Error} (\hyperlink{classleveldb_1_1_status}{Status} $\ast$s) const 
+\item 
+void \hyperlink{classleveldb_1_1_d_b_impl_a193cbda79a60ec9d3b83991cf7be91cf}{Delete\-Obsolete\-Files} ()
+\item 
+\hyperlink{classleveldb_1_1_status}{Status} \hyperlink{classleveldb_1_1_d_b_impl_affe08e583b60dc854760d60f63db9364}{Compact\-Mem\-Table} () \hyperlink{thread__annotations_8h_a0e2e86b0f11d9778240b0a0b263047b1}{E\-X\-C\-L\-U\-S\-I\-V\-E\-\_\-\-L\-O\-C\-K\-S\-\_\-\-R\-E\-Q\-U\-I\-R\-E\-D}(\hyperlink{classleveldb_1_1_d_b_impl_ac591585d5dea970b4bd1beb7553ce197}{mutex\-\_\-})
+\item 
+\hyperlink{classleveldb_1_1_status}{Status} \hyperlink{classleveldb_1_1_d_b_impl_ac9e2ce8c5013d78ba19e8417f94fdad8}{Recover\-Log\-File} (\hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} log\-\_\-number, \hyperlink{classleveldb_1_1_version_edit}{Version\-Edit} $\ast$edit, \hyperlink{namespaceleveldb_a5481ededd221c36d652c371249f869fa}{Sequence\-Number} $\ast$\hyperlink{repair_8cc_a52c1b794512261f530db50c720acb0c4}{max\-\_\-sequence}) \hyperlink{thread__annotations_8h_a0e2e86b0f11d9778240b0a0b263047b1}{E\-X\-C\-L\-U\-S\-I\-V\-E\-\_\-\-L\-O\-C\-K\-S\-\_\-\-R\-E\-Q\-U\-I\-R\-E\-D}(\hyperlink{classleveldb_1_1_d_b_impl_ac591585d5dea970b4bd1beb7553ce197}{mutex\-\_\-})
+\item 
+\hyperlink{classleveldb_1_1_status}{Status} \hyperlink{classleveldb_1_1_d_b_impl_a6b1b87947df08e63ea9389722f943943}{Write\-Level0\-Table} (\hyperlink{classleveldb_1_1_mem_table}{Mem\-Table} $\ast$\hyperlink{db__impl_8cc_a1a1fa02d49bbc4c0896ff1cb12618dc3}{mem}, \hyperlink{classleveldb_1_1_version_edit}{Version\-Edit} $\ast$edit, \hyperlink{classleveldb_1_1_version}{Version} $\ast$\hyperlink{testharness_8cc_a70ff0f6c026c3dd1ef6aaf504e7fddc3}{base}) \hyperlink{thread__annotations_8h_a0e2e86b0f11d9778240b0a0b263047b1}{E\-X\-C\-L\-U\-S\-I\-V\-E\-\_\-\-L\-O\-C\-K\-S\-\_\-\-R\-E\-Q\-U\-I\-R\-E\-D}(\hyperlink{classleveldb_1_1_d_b_impl_ac591585d5dea970b4bd1beb7553ce197}{mutex\-\_\-})
+\item 
+\hyperlink{classleveldb_1_1_status}{Status} \hyperlink{classleveldb_1_1_d_b_impl_a9439d7de053315f2f2b59c6382db6f9b}{Make\-Room\-For\-Write} (bool force) \hyperlink{thread__annotations_8h_a0e2e86b0f11d9778240b0a0b263047b1}{E\-X\-C\-L\-U\-S\-I\-V\-E\-\_\-\-L\-O\-C\-K\-S\-\_\-\-R\-E\-Q\-U\-I\-R\-E\-D}(\hyperlink{classleveldb_1_1_d_b_impl_ac591585d5dea970b4bd1beb7553ce197}{mutex\-\_\-})
+\item 
+\hyperlink{classleveldb_1_1_write_batch}{Write\-Batch} $\ast$ \hyperlink{classleveldb_1_1_d_b_impl_a9e6ce4d7fffcf59575053f7d5c5e886b}{Build\-Batch\-Group} (\hyperlink{structleveldb_1_1_d_b_impl_1_1_writer}{Writer} $\ast$$\ast$last\-\_\-writer)
+\item 
+void \hyperlink{classleveldb_1_1_d_b_impl_a91134e3ca9d5c6220dd45f19d461a831}{Maybe\-Schedule\-Compaction} () \hyperlink{thread__annotations_8h_a0e2e86b0f11d9778240b0a0b263047b1}{E\-X\-C\-L\-U\-S\-I\-V\-E\-\_\-\-L\-O\-C\-K\-S\-\_\-\-R\-E\-Q\-U\-I\-R\-E\-D}(\hyperlink{classleveldb_1_1_d_b_impl_ac591585d5dea970b4bd1beb7553ce197}{mutex\-\_\-})
+\item 
+void \hyperlink{classleveldb_1_1_d_b_impl_a0b9829a3bc7b5a119819c6b04b557ab0}{Background\-Call} ()
+\item 
+\hyperlink{classleveldb_1_1_status}{Status} \hyperlink{classleveldb_1_1_d_b_impl_af8d8c2abc99da12f82a594b6a7d43e35}{Background\-Compaction} () \hyperlink{thread__annotations_8h_a0e2e86b0f11d9778240b0a0b263047b1}{E\-X\-C\-L\-U\-S\-I\-V\-E\-\_\-\-L\-O\-C\-K\-S\-\_\-\-R\-E\-Q\-U\-I\-R\-E\-D}(\hyperlink{classleveldb_1_1_d_b_impl_ac591585d5dea970b4bd1beb7553ce197}{mutex\-\_\-})
+\item 
+void \hyperlink{classleveldb_1_1_d_b_impl_ac92ebc16dda9d49a3e4cf085f5798c54}{Cleanup\-Compaction} (\hyperlink{structleveldb_1_1_d_b_impl_1_1_compaction_state}{Compaction\-State} $\ast$compact) \hyperlink{thread__annotations_8h_a0e2e86b0f11d9778240b0a0b263047b1}{E\-X\-C\-L\-U\-S\-I\-V\-E\-\_\-\-L\-O\-C\-K\-S\-\_\-\-R\-E\-Q\-U\-I\-R\-E\-D}(\hyperlink{classleveldb_1_1_d_b_impl_ac591585d5dea970b4bd1beb7553ce197}{mutex\-\_\-})
+\item 
+\hyperlink{classleveldb_1_1_status}{Status} \hyperlink{classleveldb_1_1_d_b_impl_a75d505d0959b9efda825cf07b078d0c6}{Do\-Compaction\-Work} (\hyperlink{structleveldb_1_1_d_b_impl_1_1_compaction_state}{Compaction\-State} $\ast$compact) \hyperlink{thread__annotations_8h_a0e2e86b0f11d9778240b0a0b263047b1}{E\-X\-C\-L\-U\-S\-I\-V\-E\-\_\-\-L\-O\-C\-K\-S\-\_\-\-R\-E\-Q\-U\-I\-R\-E\-D}(\hyperlink{classleveldb_1_1_d_b_impl_ac591585d5dea970b4bd1beb7553ce197}{mutex\-\_\-})
+\item 
+\hyperlink{classleveldb_1_1_status}{Status} \hyperlink{classleveldb_1_1_d_b_impl_ab82e1959ceac4c9f2057a590c7b3a230}{Open\-Compaction\-Output\-File} (\hyperlink{structleveldb_1_1_d_b_impl_1_1_compaction_state}{Compaction\-State} $\ast$compact)
+\item 
+\hyperlink{classleveldb_1_1_status}{Status} \hyperlink{classleveldb_1_1_d_b_impl_af4f178de1d55d5cf05b9a5cd17d07160}{Finish\-Compaction\-Output\-File} (\hyperlink{structleveldb_1_1_d_b_impl_1_1_compaction_state}{Compaction\-State} $\ast$compact, \hyperlink{classleveldb_1_1_iterator}{Iterator} $\ast$input)
+\item 
+\hyperlink{classleveldb_1_1_status}{Status} \hyperlink{classleveldb_1_1_d_b_impl_a2c3c024febfab909b6e0741a382178ad}{Install\-Compaction\-Results} (\hyperlink{structleveldb_1_1_d_b_impl_1_1_compaction_state}{Compaction\-State} $\ast$compact) \hyperlink{thread__annotations_8h_a0e2e86b0f11d9778240b0a0b263047b1}{E\-X\-C\-L\-U\-S\-I\-V\-E\-\_\-\-L\-O\-C\-K\-S\-\_\-\-R\-E\-Q\-U\-I\-R\-E\-D}(\hyperlink{classleveldb_1_1_d_b_impl_ac591585d5dea970b4bd1beb7553ce197}{mutex\-\_\-})
+\item 
+\hyperlink{classleveldb_1_1_d_b_impl_a25f61cb44189a339b48f476ae43ae8ec}{D\-B\-Impl} (const \hyperlink{classleveldb_1_1_d_b_impl}{D\-B\-Impl} \&)
+\item 
+void \hyperlink{classleveldb_1_1_d_b_impl_aaa6a4f28045def931aa3f1f424dce963}{operator=} (const \hyperlink{classleveldb_1_1_d_b_impl}{D\-B\-Impl} \&)
+\item 
+const \hyperlink{structleveldb_1_1_comparator}{Comparator} $\ast$ \hyperlink{classleveldb_1_1_d_b_impl_ae44e6e6aa990419f17ee990245d2b51d}{user\-\_\-comparator} () const 
+\end{DoxyCompactItemize}
+\subsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classleveldb_1_1_d_b_impl_ac5e1a8fcf9852a3b3f9712f135f13fa7}{B\-G\-Work} (void $\ast$db)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classleveldb_1_1_env}{Env} $\ast$const \hyperlink{classleveldb_1_1_d_b_impl_a7fb25ed1dcd76b241029e036d3d2fdf0}{env\-\_\-}
+\item 
+const \hyperlink{classleveldb_1_1_internal_key_comparator}{Internal\-Key\-Comparator} \hyperlink{classleveldb_1_1_d_b_impl_a2d1fd471ffca17ebfeabf19134d4fc65}{internal\-\_\-comparator\-\_\-}
+\item 
+const \hyperlink{classleveldb_1_1_internal_filter_policy}{Internal\-Filter\-Policy} \hyperlink{classleveldb_1_1_d_b_impl_a4851ba3817eeffd4a3777c2f7965177f}{internal\-\_\-filter\-\_\-policy\-\_\-}
+\item 
+const \hyperlink{structleveldb_1_1_options}{Options} \hyperlink{classleveldb_1_1_d_b_impl_a09b2c1705618db98346b53f16ff16b64}{options\-\_\-}
+\item 
+bool \hyperlink{classleveldb_1_1_d_b_impl_a9a8de086d118c52c8e6e8dd78eab01ef}{owns\-\_\-info\-\_\-log\-\_\-}
+\item 
+bool \hyperlink{classleveldb_1_1_d_b_impl_aa790324b036b59ee0d50c5683f336648}{owns\-\_\-cache\-\_\-}
+\item 
+const std\-::string \hyperlink{classleveldb_1_1_d_b_impl_a3201a4624ce75ecfaf67ebac29ca2697}{dbname\-\_\-}
+\item 
+\hyperlink{classleveldb_1_1_table_cache}{Table\-Cache} $\ast$ \hyperlink{classleveldb_1_1_d_b_impl_aa69f3829c65fc2a0149b29926fb6fefc}{table\-\_\-cache\-\_\-}
+\item 
+\hyperlink{classleveldb_1_1_file_lock}{File\-Lock} $\ast$ \hyperlink{classleveldb_1_1_d_b_impl_ab2f1418890b6cd48e748805378517a5e}{db\-\_\-lock\-\_\-}
+\item 
+\hyperlink{classleveldb_1_1port_1_1_mutex}{port\-::\-Mutex} \hyperlink{classleveldb_1_1_d_b_impl_ac591585d5dea970b4bd1beb7553ce197}{mutex\-\_\-}
+\item 
+\hyperlink{classleveldb_1_1port_1_1_atomic_pointer}{port\-::\-Atomic\-Pointer} \hyperlink{classleveldb_1_1_d_b_impl_a11435d0d1f43c76d34b3133c91c2afe4}{shutting\-\_\-down\-\_\-}
+\item 
+\hyperlink{classleveldb_1_1port_1_1_cond_var}{port\-::\-Cond\-Var} \hyperlink{classleveldb_1_1_d_b_impl_a44a499ab00f5139ffbca3a57707bd2d2}{bg\-\_\-cv\-\_\-}
+\item 
+\hyperlink{classleveldb_1_1_mem_table}{Mem\-Table} $\ast$ \hyperlink{classleveldb_1_1_d_b_impl_aefd884bca37cac9d0ca8e95bcfe3cf99}{mem\-\_\-}
+\item 
+\hyperlink{classleveldb_1_1_mem_table}{Mem\-Table} $\ast$ \hyperlink{classleveldb_1_1_d_b_impl_a30113cfca275feffb91d19c70e793877}{imm\-\_\-}
+\item 
+\hyperlink{classleveldb_1_1port_1_1_atomic_pointer}{port\-::\-Atomic\-Pointer} \hyperlink{classleveldb_1_1_d_b_impl_a9185615d9bbbee710a20a91fe2920840}{has\-\_\-imm\-\_\-}
+\item 
+\hyperlink{classleveldb_1_1_writable_file}{Writable\-File} $\ast$ \hyperlink{classleveldb_1_1_d_b_impl_aa4a09862f1997dfe4113660aff9faca3}{logfile\-\_\-}
+\item 
+\hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} \hyperlink{classleveldb_1_1_d_b_impl_afe73d34a9bf23ef0847a879ae697b49c}{logfile\-\_\-number\-\_\-}
+\item 
+\hyperlink{classleveldb_1_1log_1_1_writer}{log\-::\-Writer} $\ast$ \hyperlink{classleveldb_1_1_d_b_impl_a3e9f6cad8fa559b2afcee4774baee316}{log\-\_\-}
+\item 
+\hyperlink{stdint_8h_a435d1572bf3f880d55459d9805097f62}{uint32\-\_\-t} \hyperlink{classleveldb_1_1_d_b_impl_adf273f65cae24a966caeb59babe03870}{seed\-\_\-}
+\item 
+std\-::deque$<$ \hyperlink{structleveldb_1_1_d_b_impl_1_1_writer}{Writer} $\ast$ $>$ \hyperlink{classleveldb_1_1_d_b_impl_a6f810e4d78d7cae052c365dfd3ceea7f}{writers\-\_\-}
+\item 
+\hyperlink{classleveldb_1_1_write_batch}{Write\-Batch} $\ast$ \hyperlink{classleveldb_1_1_d_b_impl_a2d49c9995c09c4dffed36f4d913e66ef}{tmp\-\_\-batch\-\_\-}
+\item 
+\hyperlink{classleveldb_1_1_snapshot_list}{Snapshot\-List} \hyperlink{classleveldb_1_1_d_b_impl_ad8e023a20abe62817c3fad7fbff5bd00}{snapshots\-\_\-}
+\item 
+std\-::set$<$ \hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} $>$ \hyperlink{classleveldb_1_1_d_b_impl_ae4ac10358a8b616a0d1091489730b760}{pending\-\_\-outputs\-\_\-}
+\item 
+bool \hyperlink{classleveldb_1_1_d_b_impl_a0f9a6ce141d1aace77fc15538b0d7f63}{bg\-\_\-compaction\-\_\-scheduled\-\_\-}
+\item 
+\hyperlink{structleveldb_1_1_d_b_impl_1_1_manual_compaction}{Manual\-Compaction} $\ast$ \hyperlink{classleveldb_1_1_d_b_impl_a38883b690ab41bd95764a1008f2118c0}{manual\-\_\-compaction\-\_\-}
+\item 
+\hyperlink{classleveldb_1_1_version_set}{Version\-Set} $\ast$ \hyperlink{classleveldb_1_1_d_b_impl_a2de2ccb92789a687ba89765f39ec3b2f}{versions\-\_\-}
+\item 
+\hyperlink{classleveldb_1_1_status}{Status} \hyperlink{classleveldb_1_1_d_b_impl_aa44e740550e1b32342e647d1876ee640}{bg\-\_\-error\-\_\-}
+\item 
+int \hyperlink{classleveldb_1_1_d_b_impl_a0b2495d4568538481eb9ecfaa5ad3ca8}{consecutive\-\_\-compaction\-\_\-errors\-\_\-}
+\item 
+\hyperlink{structleveldb_1_1_d_b_impl_1_1_compaction_stats}{Compaction\-Stats} \hyperlink{classleveldb_1_1_d_b_impl_a74619130ba7f16b371202bff08346d18}{stats\-\_\-} \mbox{[}\hyperlink{namespaceleveldb_1_1config_ab6017947ae68898c606643bddc0f5b9c}{config\-::k\-Num\-Levels}\mbox{]}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classleveldb_1_1_d_b_impl_ad22eb7a23cbf34de526efa966c578d4a}{D\-B}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classleveldb_1_1_d_b_impl_a269b55605b27271d6ca5fee68af0d8f3}{\index{leveldb\-::\-D\-B\-Impl@{leveldb\-::\-D\-B\-Impl}!D\-B\-Impl@{D\-B\-Impl}}
+\index{D\-B\-Impl@{D\-B\-Impl}!leveldb::DBImpl@{leveldb\-::\-D\-B\-Impl}}
+\subsubsection[{D\-B\-Impl}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::\-D\-B\-Impl\-::\-D\-B\-Impl (
+\begin{DoxyParamCaption}
+\item[{const {\bf Options} \&}]{options, }
+\item[{const std\-::string \&}]{dbname}
+\end{DoxyParamCaption}
+)}}\label{classleveldb_1_1_d_b_impl_a269b55605b27271d6ca5fee68af0d8f3}
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_d_b_impl_a07a233a94a2531aed9d3718c9b9ed40d}{\index{leveldb\-::\-D\-B\-Impl@{leveldb\-::\-D\-B\-Impl}!$\sim$\-D\-B\-Impl@{$\sim$\-D\-B\-Impl}}
+\index{$\sim$\-D\-B\-Impl@{$\sim$\-D\-B\-Impl}!leveldb::DBImpl@{leveldb\-::\-D\-B\-Impl}}
+\subsubsection[{$\sim$\-D\-B\-Impl}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::\-D\-B\-Impl\-::$\sim$\-D\-B\-Impl (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classleveldb_1_1_d_b_impl_a07a233a94a2531aed9d3718c9b9ed40d}
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_d_b_impl_a25f61cb44189a339b48f476ae43ae8ec}{\index{leveldb\-::\-D\-B\-Impl@{leveldb\-::\-D\-B\-Impl}!D\-B\-Impl@{D\-B\-Impl}}
+\index{D\-B\-Impl@{D\-B\-Impl}!leveldb::DBImpl@{leveldb\-::\-D\-B\-Impl}}
+\subsubsection[{D\-B\-Impl}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::\-D\-B\-Impl\-::\-D\-B\-Impl (
+\begin{DoxyParamCaption}
+\item[{const {\bf D\-B\-Impl} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_d_b_impl_a25f61cb44189a339b48f476ae43ae8ec}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classleveldb_1_1_d_b_impl_a0b9829a3bc7b5a119819c6b04b557ab0}{\index{leveldb\-::\-D\-B\-Impl@{leveldb\-::\-D\-B\-Impl}!Background\-Call@{Background\-Call}}
+\index{Background\-Call@{Background\-Call}!leveldb::DBImpl@{leveldb\-::\-D\-B\-Impl}}
+\subsubsection[{Background\-Call}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-D\-B\-Impl\-::\-Background\-Call (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_d_b_impl_a0b9829a3bc7b5a119819c6b04b557ab0}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_d_b_impl_af8d8c2abc99da12f82a594b6a7d43e35}{\index{leveldb\-::\-D\-B\-Impl@{leveldb\-::\-D\-B\-Impl}!Background\-Compaction@{Background\-Compaction}}
+\index{Background\-Compaction@{Background\-Compaction}!leveldb::DBImpl@{leveldb\-::\-D\-B\-Impl}}
+\subsubsection[{Background\-Compaction}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Status} leveldb\-::\-D\-B\-Impl\-::\-Background\-Compaction (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_d_b_impl_af8d8c2abc99da12f82a594b6a7d43e35}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_d_b_impl_ac5e1a8fcf9852a3b3f9712f135f13fa7}{\index{leveldb\-::\-D\-B\-Impl@{leveldb\-::\-D\-B\-Impl}!B\-G\-Work@{B\-G\-Work}}
+\index{B\-G\-Work@{B\-G\-Work}!leveldb::DBImpl@{leveldb\-::\-D\-B\-Impl}}
+\subsubsection[{B\-G\-Work}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-D\-B\-Impl\-::\-B\-G\-Work (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{db}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classleveldb_1_1_d_b_impl_ac5e1a8fcf9852a3b3f9712f135f13fa7}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_d_b_impl_a9e6ce4d7fffcf59575053f7d5c5e886b}{\index{leveldb\-::\-D\-B\-Impl@{leveldb\-::\-D\-B\-Impl}!Build\-Batch\-Group@{Build\-Batch\-Group}}
+\index{Build\-Batch\-Group@{Build\-Batch\-Group}!leveldb::DBImpl@{leveldb\-::\-D\-B\-Impl}}
+\subsubsection[{Build\-Batch\-Group}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Write\-Batch} $\ast$ leveldb\-::\-D\-B\-Impl\-::\-Build\-Batch\-Group (
+\begin{DoxyParamCaption}
+\item[{{\bf Writer} $\ast$$\ast$}]{last\-\_\-writer}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_d_b_impl_a9e6ce4d7fffcf59575053f7d5c5e886b}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_d_b_impl_ac92ebc16dda9d49a3e4cf085f5798c54}{\index{leveldb\-::\-D\-B\-Impl@{leveldb\-::\-D\-B\-Impl}!Cleanup\-Compaction@{Cleanup\-Compaction}}
+\index{Cleanup\-Compaction@{Cleanup\-Compaction}!leveldb::DBImpl@{leveldb\-::\-D\-B\-Impl}}
+\subsubsection[{Cleanup\-Compaction}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-D\-B\-Impl\-::\-Cleanup\-Compaction (
+\begin{DoxyParamCaption}
+\item[{{\bf Compaction\-State} $\ast$}]{compact}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_d_b_impl_ac92ebc16dda9d49a3e4cf085f5798c54}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_d_b_impl_affe08e583b60dc854760d60f63db9364}{\index{leveldb\-::\-D\-B\-Impl@{leveldb\-::\-D\-B\-Impl}!Compact\-Mem\-Table@{Compact\-Mem\-Table}}
+\index{Compact\-Mem\-Table@{Compact\-Mem\-Table}!leveldb::DBImpl@{leveldb\-::\-D\-B\-Impl}}
+\subsubsection[{Compact\-Mem\-Table}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Status} leveldb\-::\-D\-B\-Impl\-::\-Compact\-Mem\-Table (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_d_b_impl_affe08e583b60dc854760d60f63db9364}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_d_b_impl_aa6df0739fc0b49380c284347e411b8ed}{\index{leveldb\-::\-D\-B\-Impl@{leveldb\-::\-D\-B\-Impl}!Compact\-Range@{Compact\-Range}}
+\index{Compact\-Range@{Compact\-Range}!leveldb::DBImpl@{leveldb\-::\-D\-B\-Impl}}
+\subsubsection[{Compact\-Range}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-D\-B\-Impl\-::\-Compact\-Range (
+\begin{DoxyParamCaption}
+\item[{const {\bf Slice} $\ast$}]{begin, }
+\item[{const {\bf Slice} $\ast$}]{end}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classleveldb_1_1_d_b_impl_aa6df0739fc0b49380c284347e411b8ed}
+
+
+Implements \hyperlink{classleveldb_1_1_d_b_aeea500cbc6704454b3be6908d5da8b3a}{leveldb\-::\-D\-B}.
+
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_d_b_impl_af050f77e8c22bd6638fed5a46a59399d}{\index{leveldb\-::\-D\-B\-Impl@{leveldb\-::\-D\-B\-Impl}!Delete@{Delete}}
+\index{Delete@{Delete}!leveldb::DBImpl@{leveldb\-::\-D\-B\-Impl}}
+\subsubsection[{Delete}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Status} leveldb\-::\-D\-B\-Impl\-::\-Delete (
+\begin{DoxyParamCaption}
+\item[{const {\bf Write\-Options} \&}]{options, }
+\item[{const {\bf Slice} \&}]{key}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classleveldb_1_1_d_b_impl_af050f77e8c22bd6638fed5a46a59399d}
+
+
+Implements \hyperlink{classleveldb_1_1_d_b_aff7577239799cd059464701c548090b9}{leveldb\-::\-D\-B}.
+
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_d_b_impl_a193cbda79a60ec9d3b83991cf7be91cf}{\index{leveldb\-::\-D\-B\-Impl@{leveldb\-::\-D\-B\-Impl}!Delete\-Obsolete\-Files@{Delete\-Obsolete\-Files}}
+\index{Delete\-Obsolete\-Files@{Delete\-Obsolete\-Files}!leveldb::DBImpl@{leveldb\-::\-D\-B\-Impl}}
+\subsubsection[{Delete\-Obsolete\-Files}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-D\-B\-Impl\-::\-Delete\-Obsolete\-Files (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_d_b_impl_a193cbda79a60ec9d3b83991cf7be91cf}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_d_b_impl_a75d505d0959b9efda825cf07b078d0c6}{\index{leveldb\-::\-D\-B\-Impl@{leveldb\-::\-D\-B\-Impl}!Do\-Compaction\-Work@{Do\-Compaction\-Work}}
+\index{Do\-Compaction\-Work@{Do\-Compaction\-Work}!leveldb::DBImpl@{leveldb\-::\-D\-B\-Impl}}
+\subsubsection[{Do\-Compaction\-Work}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Status} leveldb\-::\-D\-B\-Impl\-::\-Do\-Compaction\-Work (
+\begin{DoxyParamCaption}
+\item[{{\bf Compaction\-State} $\ast$}]{compact}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_d_b_impl_a75d505d0959b9efda825cf07b078d0c6}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_d_b_impl_af4f178de1d55d5cf05b9a5cd17d07160}{\index{leveldb\-::\-D\-B\-Impl@{leveldb\-::\-D\-B\-Impl}!Finish\-Compaction\-Output\-File@{Finish\-Compaction\-Output\-File}}
+\index{Finish\-Compaction\-Output\-File@{Finish\-Compaction\-Output\-File}!leveldb::DBImpl@{leveldb\-::\-D\-B\-Impl}}
+\subsubsection[{Finish\-Compaction\-Output\-File}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Status} leveldb\-::\-D\-B\-Impl\-::\-Finish\-Compaction\-Output\-File (
+\begin{DoxyParamCaption}
+\item[{{\bf Compaction\-State} $\ast$}]{compact, }
+\item[{{\bf Iterator} $\ast$}]{input}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_d_b_impl_af4f178de1d55d5cf05b9a5cd17d07160}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_d_b_impl_a089964ddcd1f5dc85e73499ae57be508}{\index{leveldb\-::\-D\-B\-Impl@{leveldb\-::\-D\-B\-Impl}!Get@{Get}}
+\index{Get@{Get}!leveldb::DBImpl@{leveldb\-::\-D\-B\-Impl}}
+\subsubsection[{Get}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Status} leveldb\-::\-D\-B\-Impl\-::\-Get (
+\begin{DoxyParamCaption}
+\item[{const {\bf Read\-Options} \&}]{options, }
+\item[{const {\bf Slice} \&}]{key, }
+\item[{std\-::string $\ast$}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classleveldb_1_1_d_b_impl_a089964ddcd1f5dc85e73499ae57be508}
+
+
+Implements \hyperlink{classleveldb_1_1_d_b_ad43bd7937b9af88ff856eb8158890911}{leveldb\-::\-D\-B}.
+
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_d_b_impl_af08e218d92064699942c195ce0f06010}{\index{leveldb\-::\-D\-B\-Impl@{leveldb\-::\-D\-B\-Impl}!Get\-Approximate\-Sizes@{Get\-Approximate\-Sizes}}
+\index{Get\-Approximate\-Sizes@{Get\-Approximate\-Sizes}!leveldb::DBImpl@{leveldb\-::\-D\-B\-Impl}}
+\subsubsection[{Get\-Approximate\-Sizes}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-D\-B\-Impl\-::\-Get\-Approximate\-Sizes (
+\begin{DoxyParamCaption}
+\item[{const {\bf Range} $\ast$}]{range, }
+\item[{int}]{n, }
+\item[{{\bf uint64\-\_\-t} $\ast$}]{sizes}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classleveldb_1_1_d_b_impl_af08e218d92064699942c195ce0f06010}
+
+
+Implements \hyperlink{classleveldb_1_1_d_b_ad4d54aa1dbcecc8583b013ab2d67aeff}{leveldb\-::\-D\-B}.
+
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_d_b_impl_ad1a2023ce171c8f8476664f5b1cbab4d}{\index{leveldb\-::\-D\-B\-Impl@{leveldb\-::\-D\-B\-Impl}!Get\-Property@{Get\-Property}}
+\index{Get\-Property@{Get\-Property}!leveldb::DBImpl@{leveldb\-::\-D\-B\-Impl}}
+\subsubsection[{Get\-Property}]{\setlength{\rightskip}{0pt plus 5cm}bool leveldb\-::\-D\-B\-Impl\-::\-Get\-Property (
+\begin{DoxyParamCaption}
+\item[{const {\bf Slice} \&}]{property, }
+\item[{std\-::string $\ast$}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classleveldb_1_1_d_b_impl_ad1a2023ce171c8f8476664f5b1cbab4d}
+
+
+Implements \hyperlink{classleveldb_1_1_d_b_afcd557d80bac6668f20372c9e737d807}{leveldb\-::\-D\-B}.
+
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_d_b_impl_a4bec3d8ffd65fec562b2dd1f6eaba137}{\index{leveldb\-::\-D\-B\-Impl@{leveldb\-::\-D\-B\-Impl}!Get\-Snapshot@{Get\-Snapshot}}
+\index{Get\-Snapshot@{Get\-Snapshot}!leveldb::DBImpl@{leveldb\-::\-D\-B\-Impl}}
+\subsubsection[{Get\-Snapshot}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Snapshot} $\ast$ leveldb\-::\-D\-B\-Impl\-::\-Get\-Snapshot (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classleveldb_1_1_d_b_impl_a4bec3d8ffd65fec562b2dd1f6eaba137}
+
+
+Implements \hyperlink{classleveldb_1_1_d_b_a7d13f6336c7c5f0bf79578d57c45568c}{leveldb\-::\-D\-B}.
+
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_d_b_impl_a2c3c024febfab909b6e0741a382178ad}{\index{leveldb\-::\-D\-B\-Impl@{leveldb\-::\-D\-B\-Impl}!Install\-Compaction\-Results@{Install\-Compaction\-Results}}
+\index{Install\-Compaction\-Results@{Install\-Compaction\-Results}!leveldb::DBImpl@{leveldb\-::\-D\-B\-Impl}}
+\subsubsection[{Install\-Compaction\-Results}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Status} leveldb\-::\-D\-B\-Impl\-::\-Install\-Compaction\-Results (
+\begin{DoxyParamCaption}
+\item[{{\bf Compaction\-State} $\ast$}]{compact}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_d_b_impl_a2c3c024febfab909b6e0741a382178ad}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_d_b_impl_a9439d7de053315f2f2b59c6382db6f9b}{\index{leveldb\-::\-D\-B\-Impl@{leveldb\-::\-D\-B\-Impl}!Make\-Room\-For\-Write@{Make\-Room\-For\-Write}}
+\index{Make\-Room\-For\-Write@{Make\-Room\-For\-Write}!leveldb::DBImpl@{leveldb\-::\-D\-B\-Impl}}
+\subsubsection[{Make\-Room\-For\-Write}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Status} leveldb\-::\-D\-B\-Impl\-::\-Make\-Room\-For\-Write (
+\begin{DoxyParamCaption}
+\item[{bool}]{force}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_d_b_impl_a9439d7de053315f2f2b59c6382db6f9b}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_d_b_impl_ac957f408efe2e4a110ef3e45760bd5bf}{\index{leveldb\-::\-D\-B\-Impl@{leveldb\-::\-D\-B\-Impl}!Maybe\-Ignore\-Error@{Maybe\-Ignore\-Error}}
+\index{Maybe\-Ignore\-Error@{Maybe\-Ignore\-Error}!leveldb::DBImpl@{leveldb\-::\-D\-B\-Impl}}
+\subsubsection[{Maybe\-Ignore\-Error}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-D\-B\-Impl\-::\-Maybe\-Ignore\-Error (
+\begin{DoxyParamCaption}
+\item[{{\bf Status} $\ast$}]{s}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_d_b_impl_ac957f408efe2e4a110ef3e45760bd5bf}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_d_b_impl_a91134e3ca9d5c6220dd45f19d461a831}{\index{leveldb\-::\-D\-B\-Impl@{leveldb\-::\-D\-B\-Impl}!Maybe\-Schedule\-Compaction@{Maybe\-Schedule\-Compaction}}
+\index{Maybe\-Schedule\-Compaction@{Maybe\-Schedule\-Compaction}!leveldb::DBImpl@{leveldb\-::\-D\-B\-Impl}}
+\subsubsection[{Maybe\-Schedule\-Compaction}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-D\-B\-Impl\-::\-Maybe\-Schedule\-Compaction (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_d_b_impl_a91134e3ca9d5c6220dd45f19d461a831}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_d_b_impl_acfd8ee23923b6a2afb3016831d751b9b}{\index{leveldb\-::\-D\-B\-Impl@{leveldb\-::\-D\-B\-Impl}!New\-D\-B@{New\-D\-B}}
+\index{New\-D\-B@{New\-D\-B}!leveldb::DBImpl@{leveldb\-::\-D\-B\-Impl}}
+\subsubsection[{New\-D\-B}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Status} leveldb\-::\-D\-B\-Impl\-::\-New\-D\-B (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_d_b_impl_acfd8ee23923b6a2afb3016831d751b9b}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_d_b_impl_a49b0e6bbb2eaaa17b0869dc4d4fce49d}{\index{leveldb\-::\-D\-B\-Impl@{leveldb\-::\-D\-B\-Impl}!New\-Internal\-Iterator@{New\-Internal\-Iterator}}
+\index{New\-Internal\-Iterator@{New\-Internal\-Iterator}!leveldb::DBImpl@{leveldb\-::\-D\-B\-Impl}}
+\subsubsection[{New\-Internal\-Iterator}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Iterator} $\ast$ leveldb\-::\-D\-B\-Impl\-::\-New\-Internal\-Iterator (
+\begin{DoxyParamCaption}
+\item[{const {\bf Read\-Options} \&}]{options, }
+\item[{{\bf Sequence\-Number} $\ast$}]{latest\-\_\-snapshot, }
+\item[{{\bf uint32\-\_\-t} $\ast$}]{seed}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_d_b_impl_a49b0e6bbb2eaaa17b0869dc4d4fce49d}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_d_b_impl_ae955dc8f2a1c38588723a0882653cb58}{\index{leveldb\-::\-D\-B\-Impl@{leveldb\-::\-D\-B\-Impl}!New\-Iterator@{New\-Iterator}}
+\index{New\-Iterator@{New\-Iterator}!leveldb::DBImpl@{leveldb\-::\-D\-B\-Impl}}
+\subsubsection[{New\-Iterator}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Iterator} $\ast$ leveldb\-::\-D\-B\-Impl\-::\-New\-Iterator (
+\begin{DoxyParamCaption}
+\item[{const {\bf Read\-Options} \&}]{options}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classleveldb_1_1_d_b_impl_ae955dc8f2a1c38588723a0882653cb58}
+
+
+Implements \hyperlink{classleveldb_1_1_d_b_a5629308235de24c05c286c353d4e7d32}{leveldb\-::\-D\-B}.
+
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_d_b_impl_ab82e1959ceac4c9f2057a590c7b3a230}{\index{leveldb\-::\-D\-B\-Impl@{leveldb\-::\-D\-B\-Impl}!Open\-Compaction\-Output\-File@{Open\-Compaction\-Output\-File}}
+\index{Open\-Compaction\-Output\-File@{Open\-Compaction\-Output\-File}!leveldb::DBImpl@{leveldb\-::\-D\-B\-Impl}}
+\subsubsection[{Open\-Compaction\-Output\-File}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Status} leveldb\-::\-D\-B\-Impl\-::\-Open\-Compaction\-Output\-File (
+\begin{DoxyParamCaption}
+\item[{{\bf Compaction\-State} $\ast$}]{compact}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_d_b_impl_ab82e1959ceac4c9f2057a590c7b3a230}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_d_b_impl_aaa6a4f28045def931aa3f1f424dce963}{\index{leveldb\-::\-D\-B\-Impl@{leveldb\-::\-D\-B\-Impl}!operator=@{operator=}}
+\index{operator=@{operator=}!leveldb::DBImpl@{leveldb\-::\-D\-B\-Impl}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-D\-B\-Impl\-::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf D\-B\-Impl} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_d_b_impl_aaa6a4f28045def931aa3f1f424dce963}
+\hypertarget{classleveldb_1_1_d_b_impl_ad0d56aeb4d84ff9632c9a7f3f1b7c4d5}{\index{leveldb\-::\-D\-B\-Impl@{leveldb\-::\-D\-B\-Impl}!Put@{Put}}
+\index{Put@{Put}!leveldb::DBImpl@{leveldb\-::\-D\-B\-Impl}}
+\subsubsection[{Put}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Status} leveldb\-::\-D\-B\-Impl\-::\-Put (
+\begin{DoxyParamCaption}
+\item[{const {\bf Write\-Options} \&}]{o, }
+\item[{const {\bf Slice} \&}]{key, }
+\item[{const {\bf Slice} \&}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classleveldb_1_1_d_b_impl_ad0d56aeb4d84ff9632c9a7f3f1b7c4d5}
+
+
+Implements \hyperlink{classleveldb_1_1_d_b_ac2e472812630ed74298df7b03b08c1ae}{leveldb\-::\-D\-B}.
+
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_d_b_impl_a254ae98e3425046c28ed0aa6d78b37d8}{\index{leveldb\-::\-D\-B\-Impl@{leveldb\-::\-D\-B\-Impl}!Record\-Read\-Sample@{Record\-Read\-Sample}}
+\index{Record\-Read\-Sample@{Record\-Read\-Sample}!leveldb::DBImpl@{leveldb\-::\-D\-B\-Impl}}
+\subsubsection[{Record\-Read\-Sample}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-D\-B\-Impl\-::\-Record\-Read\-Sample (
+\begin{DoxyParamCaption}
+\item[{{\bf Slice}}]{key}
+\end{DoxyParamCaption}
+)}}\label{classleveldb_1_1_d_b_impl_a254ae98e3425046c28ed0aa6d78b37d8}
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_d_b_impl_aa9a573026c03e8485471f583316943b0}{\index{leveldb\-::\-D\-B\-Impl@{leveldb\-::\-D\-B\-Impl}!Recover@{Recover}}
+\index{Recover@{Recover}!leveldb::DBImpl@{leveldb\-::\-D\-B\-Impl}}
+\subsubsection[{Recover}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Status} leveldb\-::\-D\-B\-Impl\-::\-Recover (
+\begin{DoxyParamCaption}
+\item[{{\bf Version\-Edit} $\ast$}]{edit}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_d_b_impl_aa9a573026c03e8485471f583316943b0}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_d_b_impl_ac9e2ce8c5013d78ba19e8417f94fdad8}{\index{leveldb\-::\-D\-B\-Impl@{leveldb\-::\-D\-B\-Impl}!Recover\-Log\-File@{Recover\-Log\-File}}
+\index{Recover\-Log\-File@{Recover\-Log\-File}!leveldb::DBImpl@{leveldb\-::\-D\-B\-Impl}}
+\subsubsection[{Recover\-Log\-File}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Status} leveldb\-::\-D\-B\-Impl\-::\-Recover\-Log\-File (
+\begin{DoxyParamCaption}
+\item[{{\bf uint64\-\_\-t}}]{log\-\_\-number, }
+\item[{{\bf Version\-Edit} $\ast$}]{edit, }
+\item[{{\bf Sequence\-Number} $\ast$}]{max\-\_\-sequence}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_d_b_impl_ac9e2ce8c5013d78ba19e8417f94fdad8}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_d_b_impl_a6c0b6abfc9a30cc8e5412d4fc3e8c886}{\index{leveldb\-::\-D\-B\-Impl@{leveldb\-::\-D\-B\-Impl}!Release\-Snapshot@{Release\-Snapshot}}
+\index{Release\-Snapshot@{Release\-Snapshot}!leveldb::DBImpl@{leveldb\-::\-D\-B\-Impl}}
+\subsubsection[{Release\-Snapshot}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-D\-B\-Impl\-::\-Release\-Snapshot (
+\begin{DoxyParamCaption}
+\item[{const {\bf Snapshot} $\ast$}]{snapshot}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classleveldb_1_1_d_b_impl_a6c0b6abfc9a30cc8e5412d4fc3e8c886}
+
+
+Implements \hyperlink{classleveldb_1_1_d_b_aa46de65e990bd179db0aee770af89144}{leveldb\-::\-D\-B}.
+
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_d_b_impl_a8642703fd1398cd8e3f5f24ee0b9da23}{\index{leveldb\-::\-D\-B\-Impl@{leveldb\-::\-D\-B\-Impl}!T\-E\-S\-T\-\_\-\-Compact\-Mem\-Table@{T\-E\-S\-T\-\_\-\-Compact\-Mem\-Table}}
+\index{T\-E\-S\-T\-\_\-\-Compact\-Mem\-Table@{T\-E\-S\-T\-\_\-\-Compact\-Mem\-Table}!leveldb::DBImpl@{leveldb\-::\-D\-B\-Impl}}
+\subsubsection[{T\-E\-S\-T\-\_\-\-Compact\-Mem\-Table}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Status} leveldb\-::\-D\-B\-Impl\-::\-T\-E\-S\-T\-\_\-\-Compact\-Mem\-Table (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classleveldb_1_1_d_b_impl_a8642703fd1398cd8e3f5f24ee0b9da23}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_d_b_impl_a63fcb49466b689a534ba77d32cf84f99}{\index{leveldb\-::\-D\-B\-Impl@{leveldb\-::\-D\-B\-Impl}!T\-E\-S\-T\-\_\-\-Compact\-Range@{T\-E\-S\-T\-\_\-\-Compact\-Range}}
+\index{T\-E\-S\-T\-\_\-\-Compact\-Range@{T\-E\-S\-T\-\_\-\-Compact\-Range}!leveldb::DBImpl@{leveldb\-::\-D\-B\-Impl}}
+\subsubsection[{T\-E\-S\-T\-\_\-\-Compact\-Range}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-D\-B\-Impl\-::\-T\-E\-S\-T\-\_\-\-Compact\-Range (
+\begin{DoxyParamCaption}
+\item[{int}]{level, }
+\item[{const {\bf Slice} $\ast$}]{begin, }
+\item[{const {\bf Slice} $\ast$}]{end}
+\end{DoxyParamCaption}
+)}}\label{classleveldb_1_1_d_b_impl_a63fcb49466b689a534ba77d32cf84f99}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_d_b_impl_af621636048b8d3cfaa21238fe26ef0ca}{\index{leveldb\-::\-D\-B\-Impl@{leveldb\-::\-D\-B\-Impl}!T\-E\-S\-T\-\_\-\-Max\-Next\-Level\-Overlapping\-Bytes@{T\-E\-S\-T\-\_\-\-Max\-Next\-Level\-Overlapping\-Bytes}}
+\index{T\-E\-S\-T\-\_\-\-Max\-Next\-Level\-Overlapping\-Bytes@{T\-E\-S\-T\-\_\-\-Max\-Next\-Level\-Overlapping\-Bytes}!leveldb::DBImpl@{leveldb\-::\-D\-B\-Impl}}
+\subsubsection[{T\-E\-S\-T\-\_\-\-Max\-Next\-Level\-Overlapping\-Bytes}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int64\-\_\-t} leveldb\-::\-D\-B\-Impl\-::\-T\-E\-S\-T\-\_\-\-Max\-Next\-Level\-Overlapping\-Bytes (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classleveldb_1_1_d_b_impl_af621636048b8d3cfaa21238fe26ef0ca}
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_d_b_impl_adba5bf4252bd94f7db50e62921b7ba53}{\index{leveldb\-::\-D\-B\-Impl@{leveldb\-::\-D\-B\-Impl}!T\-E\-S\-T\-\_\-\-New\-Internal\-Iterator@{T\-E\-S\-T\-\_\-\-New\-Internal\-Iterator}}
+\index{T\-E\-S\-T\-\_\-\-New\-Internal\-Iterator@{T\-E\-S\-T\-\_\-\-New\-Internal\-Iterator}!leveldb::DBImpl@{leveldb\-::\-D\-B\-Impl}}
+\subsubsection[{T\-E\-S\-T\-\_\-\-New\-Internal\-Iterator}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Iterator} $\ast$ leveldb\-::\-D\-B\-Impl\-::\-T\-E\-S\-T\-\_\-\-New\-Internal\-Iterator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classleveldb_1_1_d_b_impl_adba5bf4252bd94f7db50e62921b7ba53}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_d_b_impl_ae44e6e6aa990419f17ee990245d2b51d}{\index{leveldb\-::\-D\-B\-Impl@{leveldb\-::\-D\-B\-Impl}!user\-\_\-comparator@{user\-\_\-comparator}}
+\index{user\-\_\-comparator@{user\-\_\-comparator}!leveldb::DBImpl@{leveldb\-::\-D\-B\-Impl}}
+\subsubsection[{user\-\_\-comparator}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Comparator}$\ast$ leveldb\-::\-D\-B\-Impl\-::user\-\_\-comparator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{classleveldb_1_1_d_b_impl_ae44e6e6aa990419f17ee990245d2b51d}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_d_b_impl_ac0d0b472717099d6a02ad9dace4e8ef4}{\index{leveldb\-::\-D\-B\-Impl@{leveldb\-::\-D\-B\-Impl}!Write@{Write}}
+\index{Write@{Write}!leveldb::DBImpl@{leveldb\-::\-D\-B\-Impl}}
+\subsubsection[{Write}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Status} leveldb\-::\-D\-B\-Impl\-::\-Write (
+\begin{DoxyParamCaption}
+\item[{const {\bf Write\-Options} \&}]{options, }
+\item[{{\bf Write\-Batch} $\ast$}]{updates}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classleveldb_1_1_d_b_impl_ac0d0b472717099d6a02ad9dace4e8ef4}
+
+
+Implements \hyperlink{classleveldb_1_1_d_b_ae0b6ded8c8e0b88ff70190bf7a0c086c}{leveldb\-::\-D\-B}.
+
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_d_b_impl_a6b1b87947df08e63ea9389722f943943}{\index{leveldb\-::\-D\-B\-Impl@{leveldb\-::\-D\-B\-Impl}!Write\-Level0\-Table@{Write\-Level0\-Table}}
+\index{Write\-Level0\-Table@{Write\-Level0\-Table}!leveldb::DBImpl@{leveldb\-::\-D\-B\-Impl}}
+\subsubsection[{Write\-Level0\-Table}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Status} leveldb\-::\-D\-B\-Impl\-::\-Write\-Level0\-Table (
+\begin{DoxyParamCaption}
+\item[{{\bf Mem\-Table} $\ast$}]{mem, }
+\item[{{\bf Version\-Edit} $\ast$}]{edit, }
+\item[{{\bf Version} $\ast$}]{base}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_d_b_impl_a6b1b87947df08e63ea9389722f943943}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classleveldb_1_1_d_b_impl_ad22eb7a23cbf34de526efa966c578d4a}{\index{leveldb\-::\-D\-B\-Impl@{leveldb\-::\-D\-B\-Impl}!D\-B@{D\-B}}
+\index{D\-B@{D\-B}!leveldb::DBImpl@{leveldb\-::\-D\-B\-Impl}}
+\subsubsection[{D\-B}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf D\-B}\hspace{0.3cm}{\ttfamily [friend]}}}\label{classleveldb_1_1_d_b_impl_ad22eb7a23cbf34de526efa966c578d4a}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classleveldb_1_1_d_b_impl_a0f9a6ce141d1aace77fc15538b0d7f63}{\index{leveldb\-::\-D\-B\-Impl@{leveldb\-::\-D\-B\-Impl}!bg\-\_\-compaction\-\_\-scheduled\-\_\-@{bg\-\_\-compaction\-\_\-scheduled\-\_\-}}
+\index{bg\-\_\-compaction\-\_\-scheduled\-\_\-@{bg\-\_\-compaction\-\_\-scheduled\-\_\-}!leveldb::DBImpl@{leveldb\-::\-D\-B\-Impl}}
+\subsubsection[{bg\-\_\-compaction\-\_\-scheduled\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}bool leveldb\-::\-D\-B\-Impl\-::bg\-\_\-compaction\-\_\-scheduled\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_d_b_impl_a0f9a6ce141d1aace77fc15538b0d7f63}
+\hypertarget{classleveldb_1_1_d_b_impl_a44a499ab00f5139ffbca3a57707bd2d2}{\index{leveldb\-::\-D\-B\-Impl@{leveldb\-::\-D\-B\-Impl}!bg\-\_\-cv\-\_\-@{bg\-\_\-cv\-\_\-}}
+\index{bg\-\_\-cv\-\_\-@{bg\-\_\-cv\-\_\-}!leveldb::DBImpl@{leveldb\-::\-D\-B\-Impl}}
+\subsubsection[{bg\-\_\-cv\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf port\-::\-Cond\-Var} leveldb\-::\-D\-B\-Impl\-::bg\-\_\-cv\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_d_b_impl_a44a499ab00f5139ffbca3a57707bd2d2}
+\hypertarget{classleveldb_1_1_d_b_impl_aa44e740550e1b32342e647d1876ee640}{\index{leveldb\-::\-D\-B\-Impl@{leveldb\-::\-D\-B\-Impl}!bg\-\_\-error\-\_\-@{bg\-\_\-error\-\_\-}}
+\index{bg\-\_\-error\-\_\-@{bg\-\_\-error\-\_\-}!leveldb::DBImpl@{leveldb\-::\-D\-B\-Impl}}
+\subsubsection[{bg\-\_\-error\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Status} leveldb\-::\-D\-B\-Impl\-::bg\-\_\-error\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_d_b_impl_aa44e740550e1b32342e647d1876ee640}
+\hypertarget{classleveldb_1_1_d_b_impl_a0b2495d4568538481eb9ecfaa5ad3ca8}{\index{leveldb\-::\-D\-B\-Impl@{leveldb\-::\-D\-B\-Impl}!consecutive\-\_\-compaction\-\_\-errors\-\_\-@{consecutive\-\_\-compaction\-\_\-errors\-\_\-}}
+\index{consecutive\-\_\-compaction\-\_\-errors\-\_\-@{consecutive\-\_\-compaction\-\_\-errors\-\_\-}!leveldb::DBImpl@{leveldb\-::\-D\-B\-Impl}}
+\subsubsection[{consecutive\-\_\-compaction\-\_\-errors\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int leveldb\-::\-D\-B\-Impl\-::consecutive\-\_\-compaction\-\_\-errors\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_d_b_impl_a0b2495d4568538481eb9ecfaa5ad3ca8}
+\hypertarget{classleveldb_1_1_d_b_impl_ab2f1418890b6cd48e748805378517a5e}{\index{leveldb\-::\-D\-B\-Impl@{leveldb\-::\-D\-B\-Impl}!db\-\_\-lock\-\_\-@{db\-\_\-lock\-\_\-}}
+\index{db\-\_\-lock\-\_\-@{db\-\_\-lock\-\_\-}!leveldb::DBImpl@{leveldb\-::\-D\-B\-Impl}}
+\subsubsection[{db\-\_\-lock\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf File\-Lock}$\ast$ leveldb\-::\-D\-B\-Impl\-::db\-\_\-lock\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_d_b_impl_ab2f1418890b6cd48e748805378517a5e}
+\hypertarget{classleveldb_1_1_d_b_impl_a3201a4624ce75ecfaf67ebac29ca2697}{\index{leveldb\-::\-D\-B\-Impl@{leveldb\-::\-D\-B\-Impl}!dbname\-\_\-@{dbname\-\_\-}}
+\index{dbname\-\_\-@{dbname\-\_\-}!leveldb::DBImpl@{leveldb\-::\-D\-B\-Impl}}
+\subsubsection[{dbname\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::string leveldb\-::\-D\-B\-Impl\-::dbname\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_d_b_impl_a3201a4624ce75ecfaf67ebac29ca2697}
+\hypertarget{classleveldb_1_1_d_b_impl_a7fb25ed1dcd76b241029e036d3d2fdf0}{\index{leveldb\-::\-D\-B\-Impl@{leveldb\-::\-D\-B\-Impl}!env\-\_\-@{env\-\_\-}}
+\index{env\-\_\-@{env\-\_\-}!leveldb::DBImpl@{leveldb\-::\-D\-B\-Impl}}
+\subsubsection[{env\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Env}$\ast$ const leveldb\-::\-D\-B\-Impl\-::env\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_d_b_impl_a7fb25ed1dcd76b241029e036d3d2fdf0}
+\hypertarget{classleveldb_1_1_d_b_impl_a9185615d9bbbee710a20a91fe2920840}{\index{leveldb\-::\-D\-B\-Impl@{leveldb\-::\-D\-B\-Impl}!has\-\_\-imm\-\_\-@{has\-\_\-imm\-\_\-}}
+\index{has\-\_\-imm\-\_\-@{has\-\_\-imm\-\_\-}!leveldb::DBImpl@{leveldb\-::\-D\-B\-Impl}}
+\subsubsection[{has\-\_\-imm\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf port\-::\-Atomic\-Pointer} leveldb\-::\-D\-B\-Impl\-::has\-\_\-imm\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_d_b_impl_a9185615d9bbbee710a20a91fe2920840}
+\hypertarget{classleveldb_1_1_d_b_impl_a30113cfca275feffb91d19c70e793877}{\index{leveldb\-::\-D\-B\-Impl@{leveldb\-::\-D\-B\-Impl}!imm\-\_\-@{imm\-\_\-}}
+\index{imm\-\_\-@{imm\-\_\-}!leveldb::DBImpl@{leveldb\-::\-D\-B\-Impl}}
+\subsubsection[{imm\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Mem\-Table}$\ast$ leveldb\-::\-D\-B\-Impl\-::imm\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_d_b_impl_a30113cfca275feffb91d19c70e793877}
+\hypertarget{classleveldb_1_1_d_b_impl_a2d1fd471ffca17ebfeabf19134d4fc65}{\index{leveldb\-::\-D\-B\-Impl@{leveldb\-::\-D\-B\-Impl}!internal\-\_\-comparator\-\_\-@{internal\-\_\-comparator\-\_\-}}
+\index{internal\-\_\-comparator\-\_\-@{internal\-\_\-comparator\-\_\-}!leveldb::DBImpl@{leveldb\-::\-D\-B\-Impl}}
+\subsubsection[{internal\-\_\-comparator\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Internal\-Key\-Comparator} leveldb\-::\-D\-B\-Impl\-::internal\-\_\-comparator\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_d_b_impl_a2d1fd471ffca17ebfeabf19134d4fc65}
+\hypertarget{classleveldb_1_1_d_b_impl_a4851ba3817eeffd4a3777c2f7965177f}{\index{leveldb\-::\-D\-B\-Impl@{leveldb\-::\-D\-B\-Impl}!internal\-\_\-filter\-\_\-policy\-\_\-@{internal\-\_\-filter\-\_\-policy\-\_\-}}
+\index{internal\-\_\-filter\-\_\-policy\-\_\-@{internal\-\_\-filter\-\_\-policy\-\_\-}!leveldb::DBImpl@{leveldb\-::\-D\-B\-Impl}}
+\subsubsection[{internal\-\_\-filter\-\_\-policy\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Internal\-Filter\-Policy} leveldb\-::\-D\-B\-Impl\-::internal\-\_\-filter\-\_\-policy\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_d_b_impl_a4851ba3817eeffd4a3777c2f7965177f}
+\hypertarget{classleveldb_1_1_d_b_impl_a3e9f6cad8fa559b2afcee4774baee316}{\index{leveldb\-::\-D\-B\-Impl@{leveldb\-::\-D\-B\-Impl}!log\-\_\-@{log\-\_\-}}
+\index{log\-\_\-@{log\-\_\-}!leveldb::DBImpl@{leveldb\-::\-D\-B\-Impl}}
+\subsubsection[{log\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf log\-::\-Writer}$\ast$ leveldb\-::\-D\-B\-Impl\-::log\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_d_b_impl_a3e9f6cad8fa559b2afcee4774baee316}
+\hypertarget{classleveldb_1_1_d_b_impl_aa4a09862f1997dfe4113660aff9faca3}{\index{leveldb\-::\-D\-B\-Impl@{leveldb\-::\-D\-B\-Impl}!logfile\-\_\-@{logfile\-\_\-}}
+\index{logfile\-\_\-@{logfile\-\_\-}!leveldb::DBImpl@{leveldb\-::\-D\-B\-Impl}}
+\subsubsection[{logfile\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Writable\-File}$\ast$ leveldb\-::\-D\-B\-Impl\-::logfile\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_d_b_impl_aa4a09862f1997dfe4113660aff9faca3}
+\hypertarget{classleveldb_1_1_d_b_impl_afe73d34a9bf23ef0847a879ae697b49c}{\index{leveldb\-::\-D\-B\-Impl@{leveldb\-::\-D\-B\-Impl}!logfile\-\_\-number\-\_\-@{logfile\-\_\-number\-\_\-}}
+\index{logfile\-\_\-number\-\_\-@{logfile\-\_\-number\-\_\-}!leveldb::DBImpl@{leveldb\-::\-D\-B\-Impl}}
+\subsubsection[{logfile\-\_\-number\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint64\-\_\-t} leveldb\-::\-D\-B\-Impl\-::logfile\-\_\-number\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_d_b_impl_afe73d34a9bf23ef0847a879ae697b49c}
+\hypertarget{classleveldb_1_1_d_b_impl_a38883b690ab41bd95764a1008f2118c0}{\index{leveldb\-::\-D\-B\-Impl@{leveldb\-::\-D\-B\-Impl}!manual\-\_\-compaction\-\_\-@{manual\-\_\-compaction\-\_\-}}
+\index{manual\-\_\-compaction\-\_\-@{manual\-\_\-compaction\-\_\-}!leveldb::DBImpl@{leveldb\-::\-D\-B\-Impl}}
+\subsubsection[{manual\-\_\-compaction\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Manual\-Compaction}$\ast$ leveldb\-::\-D\-B\-Impl\-::manual\-\_\-compaction\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_d_b_impl_a38883b690ab41bd95764a1008f2118c0}
+\hypertarget{classleveldb_1_1_d_b_impl_aefd884bca37cac9d0ca8e95bcfe3cf99}{\index{leveldb\-::\-D\-B\-Impl@{leveldb\-::\-D\-B\-Impl}!mem\-\_\-@{mem\-\_\-}}
+\index{mem\-\_\-@{mem\-\_\-}!leveldb::DBImpl@{leveldb\-::\-D\-B\-Impl}}
+\subsubsection[{mem\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Mem\-Table}$\ast$ leveldb\-::\-D\-B\-Impl\-::mem\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_d_b_impl_aefd884bca37cac9d0ca8e95bcfe3cf99}
+\hypertarget{classleveldb_1_1_d_b_impl_ac591585d5dea970b4bd1beb7553ce197}{\index{leveldb\-::\-D\-B\-Impl@{leveldb\-::\-D\-B\-Impl}!mutex\-\_\-@{mutex\-\_\-}}
+\index{mutex\-\_\-@{mutex\-\_\-}!leveldb::DBImpl@{leveldb\-::\-D\-B\-Impl}}
+\subsubsection[{mutex\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf port\-::\-Mutex} leveldb\-::\-D\-B\-Impl\-::mutex\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_d_b_impl_ac591585d5dea970b4bd1beb7553ce197}
+\hypertarget{classleveldb_1_1_d_b_impl_a09b2c1705618db98346b53f16ff16b64}{\index{leveldb\-::\-D\-B\-Impl@{leveldb\-::\-D\-B\-Impl}!options\-\_\-@{options\-\_\-}}
+\index{options\-\_\-@{options\-\_\-}!leveldb::DBImpl@{leveldb\-::\-D\-B\-Impl}}
+\subsubsection[{options\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Options} leveldb\-::\-D\-B\-Impl\-::options\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_d_b_impl_a09b2c1705618db98346b53f16ff16b64}
+\hypertarget{classleveldb_1_1_d_b_impl_aa790324b036b59ee0d50c5683f336648}{\index{leveldb\-::\-D\-B\-Impl@{leveldb\-::\-D\-B\-Impl}!owns\-\_\-cache\-\_\-@{owns\-\_\-cache\-\_\-}}
+\index{owns\-\_\-cache\-\_\-@{owns\-\_\-cache\-\_\-}!leveldb::DBImpl@{leveldb\-::\-D\-B\-Impl}}
+\subsubsection[{owns\-\_\-cache\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}bool leveldb\-::\-D\-B\-Impl\-::owns\-\_\-cache\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_d_b_impl_aa790324b036b59ee0d50c5683f336648}
+\hypertarget{classleveldb_1_1_d_b_impl_a9a8de086d118c52c8e6e8dd78eab01ef}{\index{leveldb\-::\-D\-B\-Impl@{leveldb\-::\-D\-B\-Impl}!owns\-\_\-info\-\_\-log\-\_\-@{owns\-\_\-info\-\_\-log\-\_\-}}
+\index{owns\-\_\-info\-\_\-log\-\_\-@{owns\-\_\-info\-\_\-log\-\_\-}!leveldb::DBImpl@{leveldb\-::\-D\-B\-Impl}}
+\subsubsection[{owns\-\_\-info\-\_\-log\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}bool leveldb\-::\-D\-B\-Impl\-::owns\-\_\-info\-\_\-log\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_d_b_impl_a9a8de086d118c52c8e6e8dd78eab01ef}
+\hypertarget{classleveldb_1_1_d_b_impl_ae4ac10358a8b616a0d1091489730b760}{\index{leveldb\-::\-D\-B\-Impl@{leveldb\-::\-D\-B\-Impl}!pending\-\_\-outputs\-\_\-@{pending\-\_\-outputs\-\_\-}}
+\index{pending\-\_\-outputs\-\_\-@{pending\-\_\-outputs\-\_\-}!leveldb::DBImpl@{leveldb\-::\-D\-B\-Impl}}
+\subsubsection[{pending\-\_\-outputs\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::set$<${\bf uint64\-\_\-t}$>$ leveldb\-::\-D\-B\-Impl\-::pending\-\_\-outputs\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_d_b_impl_ae4ac10358a8b616a0d1091489730b760}
+\hypertarget{classleveldb_1_1_d_b_impl_adf273f65cae24a966caeb59babe03870}{\index{leveldb\-::\-D\-B\-Impl@{leveldb\-::\-D\-B\-Impl}!seed\-\_\-@{seed\-\_\-}}
+\index{seed\-\_\-@{seed\-\_\-}!leveldb::DBImpl@{leveldb\-::\-D\-B\-Impl}}
+\subsubsection[{seed\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint32\-\_\-t} leveldb\-::\-D\-B\-Impl\-::seed\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_d_b_impl_adf273f65cae24a966caeb59babe03870}
+\hypertarget{classleveldb_1_1_d_b_impl_a11435d0d1f43c76d34b3133c91c2afe4}{\index{leveldb\-::\-D\-B\-Impl@{leveldb\-::\-D\-B\-Impl}!shutting\-\_\-down\-\_\-@{shutting\-\_\-down\-\_\-}}
+\index{shutting\-\_\-down\-\_\-@{shutting\-\_\-down\-\_\-}!leveldb::DBImpl@{leveldb\-::\-D\-B\-Impl}}
+\subsubsection[{shutting\-\_\-down\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf port\-::\-Atomic\-Pointer} leveldb\-::\-D\-B\-Impl\-::shutting\-\_\-down\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_d_b_impl_a11435d0d1f43c76d34b3133c91c2afe4}
+\hypertarget{classleveldb_1_1_d_b_impl_ad8e023a20abe62817c3fad7fbff5bd00}{\index{leveldb\-::\-D\-B\-Impl@{leveldb\-::\-D\-B\-Impl}!snapshots\-\_\-@{snapshots\-\_\-}}
+\index{snapshots\-\_\-@{snapshots\-\_\-}!leveldb::DBImpl@{leveldb\-::\-D\-B\-Impl}}
+\subsubsection[{snapshots\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Snapshot\-List} leveldb\-::\-D\-B\-Impl\-::snapshots\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_d_b_impl_ad8e023a20abe62817c3fad7fbff5bd00}
+\hypertarget{classleveldb_1_1_d_b_impl_a74619130ba7f16b371202bff08346d18}{\index{leveldb\-::\-D\-B\-Impl@{leveldb\-::\-D\-B\-Impl}!stats\-\_\-@{stats\-\_\-}}
+\index{stats\-\_\-@{stats\-\_\-}!leveldb::DBImpl@{leveldb\-::\-D\-B\-Impl}}
+\subsubsection[{stats\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Compaction\-Stats} leveldb\-::\-D\-B\-Impl\-::stats\-\_\-\mbox{[}{\bf config\-::k\-Num\-Levels}\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_d_b_impl_a74619130ba7f16b371202bff08346d18}
+\hypertarget{classleveldb_1_1_d_b_impl_aa69f3829c65fc2a0149b29926fb6fefc}{\index{leveldb\-::\-D\-B\-Impl@{leveldb\-::\-D\-B\-Impl}!table\-\_\-cache\-\_\-@{table\-\_\-cache\-\_\-}}
+\index{table\-\_\-cache\-\_\-@{table\-\_\-cache\-\_\-}!leveldb::DBImpl@{leveldb\-::\-D\-B\-Impl}}
+\subsubsection[{table\-\_\-cache\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Table\-Cache}$\ast$ leveldb\-::\-D\-B\-Impl\-::table\-\_\-cache\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_d_b_impl_aa69f3829c65fc2a0149b29926fb6fefc}
+\hypertarget{classleveldb_1_1_d_b_impl_a2d49c9995c09c4dffed36f4d913e66ef}{\index{leveldb\-::\-D\-B\-Impl@{leveldb\-::\-D\-B\-Impl}!tmp\-\_\-batch\-\_\-@{tmp\-\_\-batch\-\_\-}}
+\index{tmp\-\_\-batch\-\_\-@{tmp\-\_\-batch\-\_\-}!leveldb::DBImpl@{leveldb\-::\-D\-B\-Impl}}
+\subsubsection[{tmp\-\_\-batch\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Write\-Batch}$\ast$ leveldb\-::\-D\-B\-Impl\-::tmp\-\_\-batch\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_d_b_impl_a2d49c9995c09c4dffed36f4d913e66ef}
+\hypertarget{classleveldb_1_1_d_b_impl_a2de2ccb92789a687ba89765f39ec3b2f}{\index{leveldb\-::\-D\-B\-Impl@{leveldb\-::\-D\-B\-Impl}!versions\-\_\-@{versions\-\_\-}}
+\index{versions\-\_\-@{versions\-\_\-}!leveldb::DBImpl@{leveldb\-::\-D\-B\-Impl}}
+\subsubsection[{versions\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Version\-Set}$\ast$ leveldb\-::\-D\-B\-Impl\-::versions\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_d_b_impl_a2de2ccb92789a687ba89765f39ec3b2f}
+\hypertarget{classleveldb_1_1_d_b_impl_a6f810e4d78d7cae052c365dfd3ceea7f}{\index{leveldb\-::\-D\-B\-Impl@{leveldb\-::\-D\-B\-Impl}!writers\-\_\-@{writers\-\_\-}}
+\index{writers\-\_\-@{writers\-\_\-}!leveldb::DBImpl@{leveldb\-::\-D\-B\-Impl}}
+\subsubsection[{writers\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::deque$<${\bf Writer}$\ast$$>$ leveldb\-::\-D\-B\-Impl\-::writers\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_d_b_impl_a6f810e4d78d7cae052c365dfd3ceea7f}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+db/\hyperlink{db__impl_8h}{db\-\_\-impl.\-h}\item 
+db/\hyperlink{db__impl_8cc}{db\-\_\-impl.\-cc}\end{DoxyCompactItemize}

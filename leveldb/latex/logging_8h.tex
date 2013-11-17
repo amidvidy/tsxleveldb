@@ -1,0 +1,29 @@
+\hypertarget{logging_8h}{\section{util/logging.h File Reference}
+\label{logging_8h}\index{util/logging.\-h@{util/logging.\-h}}
+}
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$stdint.\-h$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include \char`\"{}port/port.\-h\char`\"{}}\\*
+Include dependency graph for logging.\-h\-:
+This graph shows which files directly or indirectly include this file\-:
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespaceleveldb}{leveldb}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{namespaceleveldb_a089617d12900e6fe5b712c31f651b5ff}{leveldb\-::\-Append\-Number\-To} (std\-::string $\ast$str, \hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} num)
+\item 
+void \hyperlink{namespaceleveldb_aa4dfa82a4c1a31fcb076f2ba59f13b19}{leveldb\-::\-Append\-Escaped\-String\-To} (std\-::string $\ast$str, const Slice \&\hyperlink{cache_8cc_a0f61d63b009d0880a89c843bd50d8d76}{value})
+\item 
+std\-::string \hyperlink{namespaceleveldb_a0a19109e7a2c8855c7565bd331d955b4}{leveldb\-::\-Number\-To\-String} (\hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} num)
+\item 
+std\-::string \hyperlink{namespaceleveldb_a6d50705a37d7459f152f8ad839513a73}{leveldb\-::\-Escape\-String} (const Slice \&\hyperlink{cache_8cc_a0f61d63b009d0880a89c843bd50d8d76}{value})
+\item 
+bool \hyperlink{namespaceleveldb_a1c27c36370b56adff9e152191b44e959}{leveldb\-::\-Consume\-Char} (Slice $\ast$in, char c)
+\item 
+bool \hyperlink{namespaceleveldb_a1bda628b65e834063ccc5fcaec8328f8}{leveldb\-::\-Consume\-Decimal\-Number} (Slice $\ast$in, \hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} $\ast$val)
+\end{DoxyCompactItemize}

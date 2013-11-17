@@ -1,0 +1,244 @@
+\hypertarget{classleveldb_1_1_histogram}{\section{leveldb\-:\-:Histogram Class Reference}
+\label{classleveldb_1_1_histogram}\index{leveldb\-::\-Histogram@{leveldb\-::\-Histogram}}
+}
+
+
+{\ttfamily \#include $<$histogram.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classleveldb_1_1_histogram_a2b4d29303598913c7021d077e5a8b10f}{Histogram} ()
+\item 
+\hyperlink{classleveldb_1_1_histogram_a3f6375d4ef50956a540262a3cf720f13}{$\sim$\-Histogram} ()
+\item 
+void \hyperlink{classleveldb_1_1_histogram_ab30a7e767693010656d90bfd361ecb91}{Clear} ()
+\item 
+void \hyperlink{classleveldb_1_1_histogram_a7dd7147b7f6548f0bebde25ca40e4457}{Add} (double \hyperlink{cache_8cc_a0f61d63b009d0880a89c843bd50d8d76}{value})
+\item 
+void \hyperlink{classleveldb_1_1_histogram_a22befd197208f0142b236917bcadf196}{Merge} (const \hyperlink{classleveldb_1_1_histogram}{Histogram} \&other)
+\item 
+std\-::string \hyperlink{classleveldb_1_1_histogram_a78fde129eef6d9072ff986afd18d1163}{To\-String} () const 
+\end{DoxyCompactItemize}
+\subsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \hyperlink{classleveldb_1_1_histogram_ab80178436a059da1cf5f6e9a5f76a747a6ea13d53f7e3910a6b7c293d48d0a0da}{k\-Num\-Buckets} = 154
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classleveldb_1_1_histogram_acb3844fbaeeed8998843a4314904121a}{Median} () const 
+\item 
+double \hyperlink{classleveldb_1_1_histogram_a58aaefb11df105f26e9da73148b85a47}{Percentile} (double p) const 
+\item 
+double \hyperlink{classleveldb_1_1_histogram_a72836120dc9000bd63048c2b53f21a64}{Average} () const 
+\item 
+double \hyperlink{classleveldb_1_1_histogram_a5eaea641e2c7c95364c98f5314e37d77}{Standard\-Deviation} () const 
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classleveldb_1_1_histogram_aa074ae70ad7abbdaf12b97282eb1b700}{min\-\_\-}
+\item 
+double \hyperlink{classleveldb_1_1_histogram_afd840834f24cdc85ee08fc6158495327}{max\-\_\-}
+\item 
+double \hyperlink{classleveldb_1_1_histogram_a3ec0c6cddbe0b040ee05d938f716e9b2}{num\-\_\-}
+\item 
+double \hyperlink{classleveldb_1_1_histogram_a5a2588e02237189eca8a1b2e8601e961}{sum\-\_\-}
+\item 
+double \hyperlink{classleveldb_1_1_histogram_a10c67c4ce34a29c17d000927f730632e}{sum\-\_\-squares\-\_\-}
+\item 
+double \hyperlink{classleveldb_1_1_histogram_a332d20f5b4811483f443a0fffde60a27}{buckets\-\_\-} \mbox{[}\hyperlink{classleveldb_1_1_histogram_ab80178436a059da1cf5f6e9a5f76a747a6ea13d53f7e3910a6b7c293d48d0a0da}{k\-Num\-Buckets}\mbox{]}
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const double \hyperlink{classleveldb_1_1_histogram_aaad18e83be993ecfe63a566869a9d3cc}{k\-Bucket\-Limit} \mbox{[}\hyperlink{classleveldb_1_1_histogram_ab80178436a059da1cf5f6e9a5f76a747a6ea13d53f7e3910a6b7c293d48d0a0da}{k\-Num\-Buckets}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classleveldb_1_1_histogram_ab80178436a059da1cf5f6e9a5f76a747}{\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_histogram_ab80178436a059da1cf5f6e9a5f76a747}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{k\-Num\-Buckets@{k\-Num\-Buckets}!leveldb\-::\-Histogram@{leveldb\-::\-Histogram}}\index{leveldb\-::\-Histogram@{leveldb\-::\-Histogram}!k\-Num\-Buckets@{k\-Num\-Buckets}}\item[{\em 
+\hypertarget{classleveldb_1_1_histogram_ab80178436a059da1cf5f6e9a5f76a747a6ea13d53f7e3910a6b7c293d48d0a0da}{k\-Num\-Buckets}\label{classleveldb_1_1_histogram_ab80178436a059da1cf5f6e9a5f76a747a6ea13d53f7e3910a6b7c293d48d0a0da}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classleveldb_1_1_histogram_a2b4d29303598913c7021d077e5a8b10f}{\index{leveldb\-::\-Histogram@{leveldb\-::\-Histogram}!Histogram@{Histogram}}
+\index{Histogram@{Histogram}!leveldb::Histogram@{leveldb\-::\-Histogram}}
+\subsubsection[{Histogram}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::\-Histogram\-::\-Histogram (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_histogram_a2b4d29303598913c7021d077e5a8b10f}
+\hypertarget{classleveldb_1_1_histogram_a3f6375d4ef50956a540262a3cf720f13}{\index{leveldb\-::\-Histogram@{leveldb\-::\-Histogram}!$\sim$\-Histogram@{$\sim$\-Histogram}}
+\index{$\sim$\-Histogram@{$\sim$\-Histogram}!leveldb::Histogram@{leveldb\-::\-Histogram}}
+\subsubsection[{$\sim$\-Histogram}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::\-Histogram\-::$\sim$\-Histogram (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_histogram_a3f6375d4ef50956a540262a3cf720f13}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classleveldb_1_1_histogram_a7dd7147b7f6548f0bebde25ca40e4457}{\index{leveldb\-::\-Histogram@{leveldb\-::\-Histogram}!Add@{Add}}
+\index{Add@{Add}!leveldb::Histogram@{leveldb\-::\-Histogram}}
+\subsubsection[{Add}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-Histogram\-::\-Add (
+\begin{DoxyParamCaption}
+\item[{double}]{value}
+\end{DoxyParamCaption}
+)}}\label{classleveldb_1_1_histogram_a7dd7147b7f6548f0bebde25ca40e4457}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_histogram_a72836120dc9000bd63048c2b53f21a64}{\index{leveldb\-::\-Histogram@{leveldb\-::\-Histogram}!Average@{Average}}
+\index{Average@{Average}!leveldb::Histogram@{leveldb\-::\-Histogram}}
+\subsubsection[{Average}]{\setlength{\rightskip}{0pt plus 5cm}double leveldb\-::\-Histogram\-::\-Average (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_histogram_a72836120dc9000bd63048c2b53f21a64}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_histogram_ab30a7e767693010656d90bfd361ecb91}{\index{leveldb\-::\-Histogram@{leveldb\-::\-Histogram}!Clear@{Clear}}
+\index{Clear@{Clear}!leveldb::Histogram@{leveldb\-::\-Histogram}}
+\subsubsection[{Clear}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-Histogram\-::\-Clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classleveldb_1_1_histogram_ab30a7e767693010656d90bfd361ecb91}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_histogram_acb3844fbaeeed8998843a4314904121a}{\index{leveldb\-::\-Histogram@{leveldb\-::\-Histogram}!Median@{Median}}
+\index{Median@{Median}!leveldb::Histogram@{leveldb\-::\-Histogram}}
+\subsubsection[{Median}]{\setlength{\rightskip}{0pt plus 5cm}double leveldb\-::\-Histogram\-::\-Median (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_histogram_acb3844fbaeeed8998843a4314904121a}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_histogram_a22befd197208f0142b236917bcadf196}{\index{leveldb\-::\-Histogram@{leveldb\-::\-Histogram}!Merge@{Merge}}
+\index{Merge@{Merge}!leveldb::Histogram@{leveldb\-::\-Histogram}}
+\subsubsection[{Merge}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-Histogram\-::\-Merge (
+\begin{DoxyParamCaption}
+\item[{const {\bf Histogram} \&}]{other}
+\end{DoxyParamCaption}
+)}}\label{classleveldb_1_1_histogram_a22befd197208f0142b236917bcadf196}
+\hypertarget{classleveldb_1_1_histogram_a58aaefb11df105f26e9da73148b85a47}{\index{leveldb\-::\-Histogram@{leveldb\-::\-Histogram}!Percentile@{Percentile}}
+\index{Percentile@{Percentile}!leveldb::Histogram@{leveldb\-::\-Histogram}}
+\subsubsection[{Percentile}]{\setlength{\rightskip}{0pt plus 5cm}double leveldb\-::\-Histogram\-::\-Percentile (
+\begin{DoxyParamCaption}
+\item[{double}]{p}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_histogram_a58aaefb11df105f26e9da73148b85a47}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_histogram_a5eaea641e2c7c95364c98f5314e37d77}{\index{leveldb\-::\-Histogram@{leveldb\-::\-Histogram}!Standard\-Deviation@{Standard\-Deviation}}
+\index{Standard\-Deviation@{Standard\-Deviation}!leveldb::Histogram@{leveldb\-::\-Histogram}}
+\subsubsection[{Standard\-Deviation}]{\setlength{\rightskip}{0pt plus 5cm}double leveldb\-::\-Histogram\-::\-Standard\-Deviation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_histogram_a5eaea641e2c7c95364c98f5314e37d77}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_histogram_a78fde129eef6d9072ff986afd18d1163}{\index{leveldb\-::\-Histogram@{leveldb\-::\-Histogram}!To\-String@{To\-String}}
+\index{To\-String@{To\-String}!leveldb::Histogram@{leveldb\-::\-Histogram}}
+\subsubsection[{To\-String}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string leveldb\-::\-Histogram\-::\-To\-String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classleveldb_1_1_histogram_a78fde129eef6d9072ff986afd18d1163}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classleveldb_1_1_histogram_a332d20f5b4811483f443a0fffde60a27}{\index{leveldb\-::\-Histogram@{leveldb\-::\-Histogram}!buckets\-\_\-@{buckets\-\_\-}}
+\index{buckets\-\_\-@{buckets\-\_\-}!leveldb::Histogram@{leveldb\-::\-Histogram}}
+\subsubsection[{buckets\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}double leveldb\-::\-Histogram\-::buckets\-\_\-\mbox{[}{\bf k\-Num\-Buckets}\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_histogram_a332d20f5b4811483f443a0fffde60a27}
+\hypertarget{classleveldb_1_1_histogram_aaad18e83be993ecfe63a566869a9d3cc}{\index{leveldb\-::\-Histogram@{leveldb\-::\-Histogram}!k\-Bucket\-Limit@{k\-Bucket\-Limit}}
+\index{k\-Bucket\-Limit@{k\-Bucket\-Limit}!leveldb::Histogram@{leveldb\-::\-Histogram}}
+\subsubsection[{k\-Bucket\-Limit}]{\setlength{\rightskip}{0pt plus 5cm}const double leveldb\-::\-Histogram\-::k\-Bucket\-Limit\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classleveldb_1_1_histogram_aaad18e83be993ecfe63a566869a9d3cc}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+= \{
+  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 16, 18, 20, 25, 30, 35, 40, 45,
+  50, 60, 70, 80, 90, 100, 120, 140, 160, 180, 200, 250, 300, 350, 400, 450,
+  500, 600, 700, 800, 900, 1000, 1200, 1400, 1600, 1800, 2000, 2500, 3000,
+  3500, 4000, 4500, 5000, 6000, 7000, 8000, 9000, 10000, 12000, 14000,
+  16000, 18000, 20000, 25000, 30000, 35000, 40000, 45000, 50000, 60000,
+  70000, 80000, 90000, 100000, 120000, 140000, 160000, 180000, 200000,
+  250000, 300000, 350000, 400000, 450000, 500000, 600000, 700000, 800000,
+  900000, 1000000, 1200000, 1400000, 1600000, 1800000, 2000000, 2500000,
+  3000000, 3500000, 4000000, 4500000, 5000000, 6000000, 7000000, 8000000,
+  9000000, 10000000, 12000000, 14000000, 16000000, 18000000, 20000000,
+  25000000, 30000000, 35000000, 40000000, 45000000, 50000000, 60000000,
+  70000000, 80000000, 90000000, 100000000, 120000000, 140000000, 160000000,
+  180000000, 200000000, 250000000, 300000000, 350000000, 400000000,
+  450000000, 500000000, 600000000, 700000000, 800000000, 900000000,
+  1000000000, 1200000000, 1400000000, 1600000000, 1800000000, 2000000000,
+  2500000000.0, 3000000000.0, 3500000000.0, 4000000000.0, 4500000000.0,
+  5000000000.0, 6000000000.0, 7000000000.0, 8000000000.0, 9000000000.0,
+  1e200,
+\}
+\end{DoxyCode}
+\hypertarget{classleveldb_1_1_histogram_afd840834f24cdc85ee08fc6158495327}{\index{leveldb\-::\-Histogram@{leveldb\-::\-Histogram}!max\-\_\-@{max\-\_\-}}
+\index{max\-\_\-@{max\-\_\-}!leveldb::Histogram@{leveldb\-::\-Histogram}}
+\subsubsection[{max\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}double leveldb\-::\-Histogram\-::max\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_histogram_afd840834f24cdc85ee08fc6158495327}
+\hypertarget{classleveldb_1_1_histogram_aa074ae70ad7abbdaf12b97282eb1b700}{\index{leveldb\-::\-Histogram@{leveldb\-::\-Histogram}!min\-\_\-@{min\-\_\-}}
+\index{min\-\_\-@{min\-\_\-}!leveldb::Histogram@{leveldb\-::\-Histogram}}
+\subsubsection[{min\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}double leveldb\-::\-Histogram\-::min\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_histogram_aa074ae70ad7abbdaf12b97282eb1b700}
+\hypertarget{classleveldb_1_1_histogram_a3ec0c6cddbe0b040ee05d938f716e9b2}{\index{leveldb\-::\-Histogram@{leveldb\-::\-Histogram}!num\-\_\-@{num\-\_\-}}
+\index{num\-\_\-@{num\-\_\-}!leveldb::Histogram@{leveldb\-::\-Histogram}}
+\subsubsection[{num\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}double leveldb\-::\-Histogram\-::num\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_histogram_a3ec0c6cddbe0b040ee05d938f716e9b2}
+\hypertarget{classleveldb_1_1_histogram_a5a2588e02237189eca8a1b2e8601e961}{\index{leveldb\-::\-Histogram@{leveldb\-::\-Histogram}!sum\-\_\-@{sum\-\_\-}}
+\index{sum\-\_\-@{sum\-\_\-}!leveldb::Histogram@{leveldb\-::\-Histogram}}
+\subsubsection[{sum\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}double leveldb\-::\-Histogram\-::sum\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_histogram_a5a2588e02237189eca8a1b2e8601e961}
+\hypertarget{classleveldb_1_1_histogram_a10c67c4ce34a29c17d000927f730632e}{\index{leveldb\-::\-Histogram@{leveldb\-::\-Histogram}!sum\-\_\-squares\-\_\-@{sum\-\_\-squares\-\_\-}}
+\index{sum\-\_\-squares\-\_\-@{sum\-\_\-squares\-\_\-}!leveldb::Histogram@{leveldb\-::\-Histogram}}
+\subsubsection[{sum\-\_\-squares\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}double leveldb\-::\-Histogram\-::sum\-\_\-squares\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_histogram_a10c67c4ce34a29c17d000927f730632e}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+util/\hyperlink{histogram_8h}{histogram.\-h}\item 
+util/\hyperlink{histogram_8cc}{histogram.\-cc}\end{DoxyCompactItemize}

@@ -1,0 +1,29 @@
+\hypertarget{write__batch_8cc}{\section{db/write\-\_\-batch.cc File Reference}
+\label{write__batch_8cc}\index{db/write\-\_\-batch.\-cc@{db/write\-\_\-batch.\-cc}}
+}
+{\ttfamily \#include \char`\"{}leveldb/write\-\_\-batch.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}leveldb/db.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}db/dbformat.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}db/memtable.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}db/write\-\_\-batch\-\_\-internal.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}util/coding.\-h\char`\"{}}\\*
+Include dependency graph for write\-\_\-batch.\-cc\-:
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespaceleveldb}{leveldb}
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static const size\-\_\-t \hyperlink{namespaceleveldb_a0c307b86a9e098703aa8aa0a55ce504a}{leveldb\-::k\-Header} = 12
+\end{DoxyCompactItemize}
+
+
+\subsection{Variable Documentation}
+\hypertarget{write__batch_8cc_a2283818d68088365bff4c006b75d4cfb}{\index{write\-\_\-batch.\-cc@{write\-\_\-batch.\-cc}!mem\-\_\-@{mem\-\_\-}}
+\index{mem\-\_\-@{mem\-\_\-}!write_batch.cc@{write\-\_\-batch.\-cc}}
+\subsubsection[{mem\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}Mem\-Table$\ast$ mem\-\_\-}}\label{write__batch_8cc_a2283818d68088365bff4c006b75d4cfb}
+\hypertarget{write__batch_8cc_a756b64344e9cb50cf424e6ca9053004b}{\index{write\-\_\-batch.\-cc@{write\-\_\-batch.\-cc}!sequence\-\_\-@{sequence\-\_\-}}
+\index{sequence\-\_\-@{sequence\-\_\-}!write_batch.cc@{write\-\_\-batch.\-cc}}
+\subsubsection[{sequence\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}Sequence\-Number sequence\-\_\-}}\label{write__batch_8cc_a756b64344e9cb50cf424e6ca9053004b}

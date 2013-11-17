@@ -1,0 +1,33 @@
+digraph "leveldb::TableBuilder"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="leveldb::TableBuilder",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" rep_" ,fontname="Helvetica"];
+  Node2 [label="leveldb::TableBuilder::Rep",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structleveldb_1_1_table_builder_1_1_rep.html"];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" file" ,fontname="Helvetica"];
+  Node3 [label="leveldb::WritableFile",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_writable_file.html"];
+  Node4 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" status" ,fontname="Helvetica"];
+  Node4 [label="leveldb::Status",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_status.html"];
+  Node5 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" options\nindex_block_options" ,fontname="Helvetica"];
+  Node5 [label="leveldb::Options",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structleveldb_1_1_options.html"];
+  Node6 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" filter_policy" ,fontname="Helvetica"];
+  Node6 [label="leveldb::FilterPolicy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_filter_policy.html"];
+  Node7 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" info_log" ,fontname="Helvetica"];
+  Node7 [label="leveldb::Logger",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_logger.html"];
+  Node8 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" env" ,fontname="Helvetica"];
+  Node8 [label="leveldb::Env",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_env.html"];
+  Node9 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" comparator" ,fontname="Helvetica"];
+  Node9 [label="leveldb::Comparator",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structleveldb_1_1_comparator.html"];
+  Node10 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" block_cache" ,fontname="Helvetica"];
+  Node10 [label="leveldb::Cache",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_cache.html"];
+  Node11 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" index_block\ndata_block" ,fontname="Helvetica"];
+  Node11 [label="leveldb::BlockBuilder",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_block_builder.html"];
+  Node5 -> Node11 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" options_" ,fontname="Helvetica"];
+  Node12 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" filter_block" ,fontname="Helvetica"];
+  Node12 [label="leveldb::FilterBlockBuilder",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_filter_block_builder.html"];
+  Node6 -> Node12 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" policy_" ,fontname="Helvetica"];
+  Node13 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pending_handle" ,fontname="Helvetica"];
+  Node13 [label="leveldb::BlockHandle",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_block_handle.html"];
+}

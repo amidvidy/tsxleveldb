@@ -1,0 +1,238 @@
+\hypertarget{classleveldb_1_1_table}{\section{leveldb\-:\-:Table Class Reference}
+\label{classleveldb_1_1_table}\index{leveldb\-::\-Table@{leveldb\-::\-Table}}
+}
+
+
+{\ttfamily \#include $<$table.\-h$>$}
+
+
+
+Collaboration diagram for leveldb\-:\-:Table\-:
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structleveldb_1_1_table_1_1_rep}{Rep}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classleveldb_1_1_table_a945f1f97b4f53402f5d55422a4dd3af2}{$\sim$\-Table} ()
+\item 
+\hyperlink{classleveldb_1_1_iterator}{Iterator} $\ast$ \hyperlink{classleveldb_1_1_table_ad354f57ece050ca0c5f42669b7c01cc2}{New\-Iterator} (const \hyperlink{structleveldb_1_1_read_options}{Read\-Options} \&) const 
+\item 
+\hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} \hyperlink{classleveldb_1_1_table_a1795d45c54945ee7652b19e6ad6c030b}{Approximate\-Offset\-Of} (const \hyperlink{classleveldb_1_1_slice}{Slice} \&key) const 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classleveldb_1_1_status}{Status} \hyperlink{classleveldb_1_1_table_aa25d0e074ab4de46e583522a8c0e9582}{Open} (const \hyperlink{structleveldb_1_1_options}{Options} \&options, \hyperlink{classleveldb_1_1_random_access_file}{Random\-Access\-File} $\ast$file, \hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} file\-\_\-size, \hyperlink{classleveldb_1_1_table}{Table} $\ast$$\ast$table)
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classleveldb_1_1_table_a145d0ed70dfb8cb92956bb554db222e5}{Table} (\hyperlink{structleveldb_1_1_table_1_1_rep}{Rep} $\ast$rep)
+\item 
+\hyperlink{classleveldb_1_1_status}{Status} \hyperlink{classleveldb_1_1_table_aea7233eff55aec8dad19befe6de5bd99}{Internal\-Get} (const \hyperlink{structleveldb_1_1_read_options}{Read\-Options} \&, const \hyperlink{classleveldb_1_1_slice}{Slice} \&key, void $\ast$\hyperlink{env__posix_8cc_a9ce2ec4812a92cb6ab39f6e81e9173a9}{arg}, void($\ast$handle\-\_\-result)(void $\ast$\hyperlink{env__posix_8cc_a9ce2ec4812a92cb6ab39f6e81e9173a9}{arg}, const \hyperlink{classleveldb_1_1_slice}{Slice} \&k, const \hyperlink{classleveldb_1_1_slice}{Slice} \&v))
+\item 
+void \hyperlink{classleveldb_1_1_table_ac7b765e08d8285b2019e1faa6905368e}{Read\-Meta} (const \hyperlink{classleveldb_1_1_footer}{Footer} \&footer)
+\item 
+void \hyperlink{classleveldb_1_1_table_abe6a44b25318fa50b8e73b5570ef3911}{Read\-Filter} (const \hyperlink{classleveldb_1_1_slice}{Slice} \&filter\-\_\-handle\-\_\-value)
+\item 
+\hyperlink{classleveldb_1_1_table_ae65d769b917c37227f66221dbd3fe850}{Table} (const \hyperlink{classleveldb_1_1_table}{Table} \&)
+\item 
+void \hyperlink{classleveldb_1_1_table_a859ec9ca8d2745df17559b0613ac9cba}{operator=} (const \hyperlink{classleveldb_1_1_table}{Table} \&)
+\end{DoxyCompactItemize}
+\subsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classleveldb_1_1_iterator}{Iterator} $\ast$ \hyperlink{classleveldb_1_1_table_a93b3e7e277493cbc63a55e2b141b1f30}{Block\-Reader} (void $\ast$, const \hyperlink{structleveldb_1_1_read_options}{Read\-Options} \&, const \hyperlink{classleveldb_1_1_slice}{Slice} \&)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structleveldb_1_1_table_1_1_rep}{Rep} $\ast$ \hyperlink{classleveldb_1_1_table_a5f452efeff7114793e2943215d4c6121}{rep\-\_\-}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classleveldb_1_1_table_ae1e5f7bae4682672cfcc68d0add43199}{Table\-Cache}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classleveldb_1_1_table_a945f1f97b4f53402f5d55422a4dd3af2}{\index{leveldb\-::\-Table@{leveldb\-::\-Table}!$\sim$\-Table@{$\sim$\-Table}}
+\index{$\sim$\-Table@{$\sim$\-Table}!leveldb::Table@{leveldb\-::\-Table}}
+\subsubsection[{$\sim$\-Table}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::\-Table\-::$\sim$\-Table (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classleveldb_1_1_table_a945f1f97b4f53402f5d55422a4dd3af2}
+\hypertarget{classleveldb_1_1_table_a145d0ed70dfb8cb92956bb554db222e5}{\index{leveldb\-::\-Table@{leveldb\-::\-Table}!Table@{Table}}
+\index{Table@{Table}!leveldb::Table@{leveldb\-::\-Table}}
+\subsubsection[{Table}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::\-Table\-::\-Table (
+\begin{DoxyParamCaption}
+\item[{{\bf Rep} $\ast$}]{rep}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}, {\ttfamily [private]}}}\label{classleveldb_1_1_table_a145d0ed70dfb8cb92956bb554db222e5}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_table_ae65d769b917c37227f66221dbd3fe850}{\index{leveldb\-::\-Table@{leveldb\-::\-Table}!Table@{Table}}
+\index{Table@{Table}!leveldb::Table@{leveldb\-::\-Table}}
+\subsubsection[{Table}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::\-Table\-::\-Table (
+\begin{DoxyParamCaption}
+\item[{const {\bf Table} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_table_ae65d769b917c37227f66221dbd3fe850}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classleveldb_1_1_table_a1795d45c54945ee7652b19e6ad6c030b}{\index{leveldb\-::\-Table@{leveldb\-::\-Table}!Approximate\-Offset\-Of@{Approximate\-Offset\-Of}}
+\index{Approximate\-Offset\-Of@{Approximate\-Offset\-Of}!leveldb::Table@{leveldb\-::\-Table}}
+\subsubsection[{Approximate\-Offset\-Of}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint64\-\_\-t} leveldb\-::\-Table\-::\-Approximate\-Offset\-Of (
+\begin{DoxyParamCaption}
+\item[{const {\bf Slice} \&}]{key}
+\end{DoxyParamCaption}
+) const}}\label{classleveldb_1_1_table_a1795d45c54945ee7652b19e6ad6c030b}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_table_a93b3e7e277493cbc63a55e2b141b1f30}{\index{leveldb\-::\-Table@{leveldb\-::\-Table}!Block\-Reader@{Block\-Reader}}
+\index{Block\-Reader@{Block\-Reader}!leveldb::Table@{leveldb\-::\-Table}}
+\subsubsection[{Block\-Reader}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Iterator} $\ast$ leveldb\-::\-Table\-::\-Block\-Reader (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{arg, }
+\item[{const {\bf Read\-Options} \&}]{options, }
+\item[{const {\bf Slice} \&}]{index\-\_\-value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classleveldb_1_1_table_a93b3e7e277493cbc63a55e2b141b1f30}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_table_aea7233eff55aec8dad19befe6de5bd99}{\index{leveldb\-::\-Table@{leveldb\-::\-Table}!Internal\-Get@{Internal\-Get}}
+\index{Internal\-Get@{Internal\-Get}!leveldb::Table@{leveldb\-::\-Table}}
+\subsubsection[{Internal\-Get}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Status} leveldb\-::\-Table\-::\-Internal\-Get (
+\begin{DoxyParamCaption}
+\item[{const {\bf Read\-Options} \&}]{, }
+\item[{const {\bf Slice} \&}]{key, }
+\item[{void $\ast$}]{arg, }
+\item[{void($\ast$)(void $\ast${\bf arg}, const {\bf Slice} \&k, const {\bf Slice} \&v)}]{handle\-\_\-result}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_table_aea7233eff55aec8dad19befe6de5bd99}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_table_ad354f57ece050ca0c5f42669b7c01cc2}{\index{leveldb\-::\-Table@{leveldb\-::\-Table}!New\-Iterator@{New\-Iterator}}
+\index{New\-Iterator@{New\-Iterator}!leveldb::Table@{leveldb\-::\-Table}}
+\subsubsection[{New\-Iterator}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Iterator} $\ast$ leveldb\-::\-Table\-::\-New\-Iterator (
+\begin{DoxyParamCaption}
+\item[{const {\bf Read\-Options} \&}]{options}
+\end{DoxyParamCaption}
+) const}}\label{classleveldb_1_1_table_ad354f57ece050ca0c5f42669b7c01cc2}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_table_aa25d0e074ab4de46e583522a8c0e9582}{\index{leveldb\-::\-Table@{leveldb\-::\-Table}!Open@{Open}}
+\index{Open@{Open}!leveldb::Table@{leveldb\-::\-Table}}
+\subsubsection[{Open}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Status} leveldb\-::\-Table\-::\-Open (
+\begin{DoxyParamCaption}
+\item[{const {\bf Options} \&}]{options, }
+\item[{{\bf Random\-Access\-File} $\ast$}]{file, }
+\item[{{\bf uint64\-\_\-t}}]{file\-\_\-size, }
+\item[{{\bf Table} $\ast$$\ast$}]{table}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classleveldb_1_1_table_aa25d0e074ab4de46e583522a8c0e9582}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_table_a859ec9ca8d2745df17559b0613ac9cba}{\index{leveldb\-::\-Table@{leveldb\-::\-Table}!operator=@{operator=}}
+\index{operator=@{operator=}!leveldb::Table@{leveldb\-::\-Table}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-Table\-::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Table} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_table_a859ec9ca8d2745df17559b0613ac9cba}
+\hypertarget{classleveldb_1_1_table_abe6a44b25318fa50b8e73b5570ef3911}{\index{leveldb\-::\-Table@{leveldb\-::\-Table}!Read\-Filter@{Read\-Filter}}
+\index{Read\-Filter@{Read\-Filter}!leveldb::Table@{leveldb\-::\-Table}}
+\subsubsection[{Read\-Filter}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-Table\-::\-Read\-Filter (
+\begin{DoxyParamCaption}
+\item[{const {\bf Slice} \&}]{filter\-\_\-handle\-\_\-value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_table_abe6a44b25318fa50b8e73b5570ef3911}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_table_ac7b765e08d8285b2019e1faa6905368e}{\index{leveldb\-::\-Table@{leveldb\-::\-Table}!Read\-Meta@{Read\-Meta}}
+\index{Read\-Meta@{Read\-Meta}!leveldb::Table@{leveldb\-::\-Table}}
+\subsubsection[{Read\-Meta}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-Table\-::\-Read\-Meta (
+\begin{DoxyParamCaption}
+\item[{const {\bf Footer} \&}]{footer}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_table_ac7b765e08d8285b2019e1faa6905368e}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classleveldb_1_1_table_ae1e5f7bae4682672cfcc68d0add43199}{\index{leveldb\-::\-Table@{leveldb\-::\-Table}!Table\-Cache@{Table\-Cache}}
+\index{Table\-Cache@{Table\-Cache}!leveldb::Table@{leveldb\-::\-Table}}
+\subsubsection[{Table\-Cache}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Table\-Cache}\hspace{0.3cm}{\ttfamily [friend]}}}\label{classleveldb_1_1_table_ae1e5f7bae4682672cfcc68d0add43199}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classleveldb_1_1_table_a5f452efeff7114793e2943215d4c6121}{\index{leveldb\-::\-Table@{leveldb\-::\-Table}!rep\-\_\-@{rep\-\_\-}}
+\index{rep\-\_\-@{rep\-\_\-}!leveldb::Table@{leveldb\-::\-Table}}
+\subsubsection[{rep\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Rep}$\ast$ leveldb\-::\-Table\-::rep\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_table_a5f452efeff7114793e2943215d4c6121}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/leveldb/\hyperlink{table_8h}{table.\-h}\item 
+table/\hyperlink{table_8cc}{table.\-cc}\end{DoxyCompactItemize}

@@ -1,0 +1,54 @@
+\hypertarget{filename_8h}{\section{db/filename.h File Reference}
+\label{filename_8h}\index{db/filename.\-h@{db/filename.\-h}}
+}
+{\ttfamily \#include $<$stdint.\-h$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include \char`\"{}leveldb/slice.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}leveldb/status.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}port/port.\-h\char`\"{}}\\*
+Include dependency graph for filename.\-h\-:
+This graph shows which files directly or indirectly include this file\-:
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespaceleveldb}{leveldb}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{namespaceleveldb_ab8e559ac5cadcb2b5dd531c60df944f1}{leveldb\-::\-File\-Type} \{ \\*
+\hyperlink{namespaceleveldb_ab8e559ac5cadcb2b5dd531c60df944f1a9aa7599d651d74892a611835cb90f1a8}{leveldb\-::k\-Log\-File}, 
+\hyperlink{namespaceleveldb_ab8e559ac5cadcb2b5dd531c60df944f1abbb39081ce3d1fa7397c074443910235}{leveldb\-::k\-D\-B\-Lock\-File}, 
+\hyperlink{namespaceleveldb_ab8e559ac5cadcb2b5dd531c60df944f1aa5055e5d888b92fd695bbb24c22ca8be}{leveldb\-::k\-Table\-File}, 
+\hyperlink{namespaceleveldb_ab8e559ac5cadcb2b5dd531c60df944f1af941d0365407ca03ed62ad30696c78da}{leveldb\-::k\-Descriptor\-File}, 
+\\*
+\hyperlink{namespaceleveldb_ab8e559ac5cadcb2b5dd531c60df944f1a77227e6519db508a8baf96907bed69fb}{leveldb\-::k\-Current\-File}, 
+\hyperlink{namespaceleveldb_ab8e559ac5cadcb2b5dd531c60df944f1a485201937a3d025c7a5fe0e3517733d6}{leveldb\-::k\-Temp\-File}, 
+\hyperlink{namespaceleveldb_ab8e559ac5cadcb2b5dd531c60df944f1a0e4c1f07a2b307bc47531e94007c34b2}{leveldb\-::k\-Info\-Log\-File}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\-::string \hyperlink{namespaceleveldb_ae5aadcd574cc5186e7821177d44f4c6c}{leveldb\-::\-Log\-File\-Name} (const std\-::string \&\hyperlink{testharness_8cc_a8f8f80d37794cde9472343e4487ba3eb}{name}, \hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} number)
+\item 
+std\-::string \hyperlink{namespaceleveldb_ac9107e52d0ead114d749dc4b06dfd3ec}{leveldb\-::\-Table\-File\-Name} (const std\-::string \&\hyperlink{testharness_8cc_a8f8f80d37794cde9472343e4487ba3eb}{name}, \hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} number)
+\item 
+std\-::string \hyperlink{namespaceleveldb_aa3f12c506ffc9bf556b6cc2185313c1a}{leveldb\-::\-S\-S\-T\-Table\-File\-Name} (const std\-::string \&\hyperlink{testharness_8cc_a8f8f80d37794cde9472343e4487ba3eb}{name}, \hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} number)
+\item 
+std\-::string \hyperlink{namespaceleveldb_a1ea160b70b18dc85b537e16db3d6ddd0}{leveldb\-::\-Descriptor\-File\-Name} (const std\-::string \&\hyperlink{c__test_8c_a75d845559336df6843f3b599960f89d2}{dbname}, \hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} number)
+\item 
+std\-::string \hyperlink{namespaceleveldb_affcb2d434f2a772d7c764cd5d1797a9a}{leveldb\-::\-Current\-File\-Name} (const std\-::string \&\hyperlink{c__test_8c_a75d845559336df6843f3b599960f89d2}{dbname})
+\item 
+std\-::string \hyperlink{namespaceleveldb_a9f772d88ab2d47dec0d68e5eb85c579e}{leveldb\-::\-Lock\-File\-Name} (const std\-::string \&\hyperlink{c__test_8c_a75d845559336df6843f3b599960f89d2}{dbname})
+\item 
+std\-::string \hyperlink{namespaceleveldb_a0563c700d6ff17e88f429464c1442da1}{leveldb\-::\-Temp\-File\-Name} (const std\-::string \&\hyperlink{c__test_8c_a75d845559336df6843f3b599960f89d2}{dbname}, \hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} number)
+\item 
+std\-::string \hyperlink{namespaceleveldb_ac40453ca7f9c0bd723873ffe32dc12a2}{leveldb\-::\-Info\-Log\-File\-Name} (const std\-::string \&\hyperlink{c__test_8c_a75d845559336df6843f3b599960f89d2}{dbname})
+\item 
+std\-::string \hyperlink{namespaceleveldb_a2964797a29cbda9d37cce54109eefdc6}{leveldb\-::\-Old\-Info\-Log\-File\-Name} (const std\-::string \&\hyperlink{c__test_8c_a75d845559336df6843f3b599960f89d2}{dbname})
+\item 
+bool \hyperlink{namespaceleveldb_af18fdbbcb483d40c35b4aaa4f00d3f6c}{leveldb\-::\-Parse\-File\-Name} (const std\-::string \&fname, \hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} $\ast$number, File\-Type $\ast$type)
+\item 
+Status \hyperlink{namespaceleveldb_a73133aa2e18928553d14913491b094e7}{leveldb\-::\-Set\-Current\-File} (Env $\ast$env, const std\-::string \&\hyperlink{c__test_8c_a75d845559336df6843f3b599960f89d2}{dbname}, \hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} descriptor\-\_\-number)
+\end{DoxyCompactItemize}

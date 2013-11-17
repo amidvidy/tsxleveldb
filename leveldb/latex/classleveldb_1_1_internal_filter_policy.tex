@@ -1,0 +1,105 @@
+\hypertarget{classleveldb_1_1_internal_filter_policy}{\section{leveldb\-:\-:Internal\-Filter\-Policy Class Reference}
+\label{classleveldb_1_1_internal_filter_policy}\index{leveldb\-::\-Internal\-Filter\-Policy@{leveldb\-::\-Internal\-Filter\-Policy}}
+}
+
+
+{\ttfamily \#include $<$dbformat.\-h$>$}
+
+
+
+Inheritance diagram for leveldb\-:\-:Internal\-Filter\-Policy\-:
+
+
+Collaboration diagram for leveldb\-:\-:Internal\-Filter\-Policy\-:
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classleveldb_1_1_internal_filter_policy_a55469eb6ea941243cd1c65eb14bd8978}{Internal\-Filter\-Policy} (const \hyperlink{classleveldb_1_1_filter_policy}{Filter\-Policy} $\ast$p)
+\item 
+virtual const char $\ast$ \hyperlink{classleveldb_1_1_internal_filter_policy_ab7f6002d74ba6a2838e1fc826e2095fc}{Name} () const 
+\item 
+virtual void \hyperlink{classleveldb_1_1_internal_filter_policy_a1c7c7b7eecdfb872e35708793d82ab40}{Create\-Filter} (const \hyperlink{classleveldb_1_1_slice}{Slice} $\ast$keys, int n, std\-::string $\ast$dst) const 
+\item 
+virtual bool \hyperlink{classleveldb_1_1_internal_filter_policy_a42dc5124aa139c68bec2efa7417a7373}{Key\-May\-Match} (const \hyperlink{classleveldb_1_1_slice}{Slice} \&key, const \hyperlink{classleveldb_1_1_slice}{Slice} \&filter) const 
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{classleveldb_1_1_filter_policy}{Filter\-Policy} $\ast$const \hyperlink{classleveldb_1_1_internal_filter_policy_ab8fddd1a2c3c5325e92d6e19ee024f62}{user\-\_\-policy\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classleveldb_1_1_internal_filter_policy_a55469eb6ea941243cd1c65eb14bd8978}{\index{leveldb\-::\-Internal\-Filter\-Policy@{leveldb\-::\-Internal\-Filter\-Policy}!Internal\-Filter\-Policy@{Internal\-Filter\-Policy}}
+\index{Internal\-Filter\-Policy@{Internal\-Filter\-Policy}!leveldb::InternalFilterPolicy@{leveldb\-::\-Internal\-Filter\-Policy}}
+\subsubsection[{Internal\-Filter\-Policy}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::\-Internal\-Filter\-Policy\-::\-Internal\-Filter\-Policy (
+\begin{DoxyParamCaption}
+\item[{const {\bf Filter\-Policy} $\ast$}]{p}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}}\label{classleveldb_1_1_internal_filter_policy_a55469eb6ea941243cd1c65eb14bd8978}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classleveldb_1_1_internal_filter_policy_a1c7c7b7eecdfb872e35708793d82ab40}{\index{leveldb\-::\-Internal\-Filter\-Policy@{leveldb\-::\-Internal\-Filter\-Policy}!Create\-Filter@{Create\-Filter}}
+\index{Create\-Filter@{Create\-Filter}!leveldb::InternalFilterPolicy@{leveldb\-::\-Internal\-Filter\-Policy}}
+\subsubsection[{Create\-Filter}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-Internal\-Filter\-Policy\-::\-Create\-Filter (
+\begin{DoxyParamCaption}
+\item[{const {\bf Slice} $\ast$}]{keys, }
+\item[{int}]{n, }
+\item[{std\-::string $\ast$}]{dst}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classleveldb_1_1_internal_filter_policy_a1c7c7b7eecdfb872e35708793d82ab40}
+
+
+Implements \hyperlink{classleveldb_1_1_filter_policy_a355e9797e16dd16b93d19056781126b2}{leveldb\-::\-Filter\-Policy}.
+
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_internal_filter_policy_a42dc5124aa139c68bec2efa7417a7373}{\index{leveldb\-::\-Internal\-Filter\-Policy@{leveldb\-::\-Internal\-Filter\-Policy}!Key\-May\-Match@{Key\-May\-Match}}
+\index{Key\-May\-Match@{Key\-May\-Match}!leveldb::InternalFilterPolicy@{leveldb\-::\-Internal\-Filter\-Policy}}
+\subsubsection[{Key\-May\-Match}]{\setlength{\rightskip}{0pt plus 5cm}bool leveldb\-::\-Internal\-Filter\-Policy\-::\-Key\-May\-Match (
+\begin{DoxyParamCaption}
+\item[{const {\bf Slice} \&}]{key, }
+\item[{const {\bf Slice} \&}]{filter}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classleveldb_1_1_internal_filter_policy_a42dc5124aa139c68bec2efa7417a7373}
+
+
+Implements \hyperlink{classleveldb_1_1_filter_policy_a6f8ba10ea25e0b4b8d0a6607c361c718}{leveldb\-::\-Filter\-Policy}.
+
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_internal_filter_policy_ab7f6002d74ba6a2838e1fc826e2095fc}{\index{leveldb\-::\-Internal\-Filter\-Policy@{leveldb\-::\-Internal\-Filter\-Policy}!Name@{Name}}
+\index{Name@{Name}!leveldb::InternalFilterPolicy@{leveldb\-::\-Internal\-Filter\-Policy}}
+\subsubsection[{Name}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$ leveldb\-::\-Internal\-Filter\-Policy\-::\-Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classleveldb_1_1_internal_filter_policy_ab7f6002d74ba6a2838e1fc826e2095fc}
+
+
+Implements \hyperlink{classleveldb_1_1_filter_policy_afd5e951892a2e740f186c0658913ea1b}{leveldb\-::\-Filter\-Policy}.
+
+
+
+Here is the call graph for this function\-:
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classleveldb_1_1_internal_filter_policy_ab8fddd1a2c3c5325e92d6e19ee024f62}{\index{leveldb\-::\-Internal\-Filter\-Policy@{leveldb\-::\-Internal\-Filter\-Policy}!user\-\_\-policy\-\_\-@{user\-\_\-policy\-\_\-}}
+\index{user\-\_\-policy\-\_\-@{user\-\_\-policy\-\_\-}!leveldb::InternalFilterPolicy@{leveldb\-::\-Internal\-Filter\-Policy}}
+\subsubsection[{user\-\_\-policy\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Filter\-Policy}$\ast$ const leveldb\-::\-Internal\-Filter\-Policy\-::user\-\_\-policy\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_internal_filter_policy_ab8fddd1a2c3c5325e92d6e19ee024f62}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+db/\hyperlink{dbformat_8h}{dbformat.\-h}\item 
+db/\hyperlink{dbformat_8cc}{dbformat.\-cc}\end{DoxyCompactItemize}

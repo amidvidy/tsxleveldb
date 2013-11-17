@@ -1,0 +1,15 @@
+digraph "leveldb::Version::UpdateStats"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="leveldb::Version::Update\lStats",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="leveldb::DBImpl::Get",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_d_b_impl.html#a089964ddcd1f5dc85e73499ae57be508"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="leveldb::TEST",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceleveldb.html#acc1b0ed2e8e9e4e6b930a1727d9fe0f8"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="leveldb::Version::Record\lReadSample",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_version.html#a8b9e51b3d0503fe5868f656356557ded"];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="leveldb::DBImpl::RecordRead\lSample",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_d_b_impl.html#a254ae98e3425046c28ed0aa6d78b37d8"];
+}

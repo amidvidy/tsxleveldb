@@ -1,0 +1,42 @@
+digraph "leveldb::Version"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="leveldb::Version",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" vset_" ];
+  Node2 [label="leveldb::VersionSet",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_version_set.html"];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" descriptor_file_" ];
+  Node3 [label="leveldb::WritableFile",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_writable_file.html"];
+  Node4 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" descriptor_log_" ];
+  Node4 [label="leveldb::log::Writer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1log_1_1_writer.html"];
+  Node3 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" dest_" ];
+  Node5 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" options_" ];
+  Node5 [label="leveldb::Options",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structleveldb_1_1_options.html"];
+  Node6 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" filter_policy" ];
+  Node6 [label="leveldb::FilterPolicy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_filter_policy.html"];
+  Node7 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" info_log" ];
+  Node7 [label="leveldb::Logger",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_logger.html"];
+  Node8 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" env" ];
+  Node8 [label="leveldb::Env",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_env.html"];
+  Node9 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" comparator" ];
+  Node9 [label="leveldb::Comparator",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structleveldb_1_1_comparator.html"];
+  Node10 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" block_cache" ];
+  Node10 [label="leveldb::Cache",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_cache.html"];
+  Node11 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" icmp_" ];
+  Node11 [label="leveldb::InternalKeyComparator",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_internal_key_comparator.html"];
+  Node9 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node9 -> Node11 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" user_comparator_" ];
+  Node8 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" env_" ];
+  Node12 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" table_cache_" ];
+  Node12 [label="leveldb::TableCache",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_table_cache.html"];
+  Node5 -> Node12 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" options_" ];
+  Node8 -> Node12 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" env_" ];
+  Node10 -> Node12 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" cache_" ];
+  Node1 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" dummy_versions_\ncurrent_" ];
+  Node13 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" file_to_compact_" ];
+  Node13 [label="leveldb::FileMetaData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structleveldb_1_1_file_meta_data.html"];
+  Node14 -> Node13 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" largest\nsmallest" ];
+  Node14 [label="leveldb::InternalKey",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_internal_key.html"];
+  Node1 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" next_\nprev_" ];
+}

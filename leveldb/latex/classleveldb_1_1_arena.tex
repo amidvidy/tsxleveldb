@@ -1,0 +1,172 @@
+\hypertarget{classleveldb_1_1_arena}{\section{leveldb\-:\-:Arena Class Reference}
+\label{classleveldb_1_1_arena}\index{leveldb\-::\-Arena@{leveldb\-::\-Arena}}
+}
+
+
+{\ttfamily \#include $<$arena.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classleveldb_1_1_arena_a612fe3668024ddf7b92f632afa1361ca}{Arena} ()
+\item 
+\hyperlink{classleveldb_1_1_arena_a39130691c948dec339cd4649b39c965c}{$\sim$\-Arena} ()
+\item 
+char $\ast$ \hyperlink{classleveldb_1_1_arena_add4bc4b1c8fdf5be7a96a7ec00a0732e}{Allocate} (size\-\_\-t bytes)
+\item 
+char $\ast$ \hyperlink{classleveldb_1_1_arena_a9c1e8e695fe25ac96063f9fbacefee9e}{Allocate\-Aligned} (size\-\_\-t bytes)
+\item 
+size\-\_\-t \hyperlink{classleveldb_1_1_arena_aaf8db075d5d1130106bbbf66b1d267b2}{Memory\-Usage} () const 
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{classleveldb_1_1_arena_ae2769aced236a3e28f0f6414f0a604d0}{Allocate\-Fallback} (size\-\_\-t bytes)
+\item 
+char $\ast$ \hyperlink{classleveldb_1_1_arena_afb0a6d9d349dcc35ff0a0214062ebac8}{Allocate\-New\-Block} (size\-\_\-t block\-\_\-bytes)
+\item 
+\hyperlink{classleveldb_1_1_arena_a83bcebfd75ada453cebe554675046500}{Arena} (const \hyperlink{classleveldb_1_1_arena}{Arena} \&)
+\item 
+void \hyperlink{classleveldb_1_1_arena_a1ac27375d43dd5378aabea3f73108ca2}{operator=} (const \hyperlink{classleveldb_1_1_arena}{Arena} \&)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{classleveldb_1_1_arena_ac2fcfb7ce7f511f431ac5c900bacb16c}{alloc\-\_\-ptr\-\_\-}
+\item 
+size\-\_\-t \hyperlink{classleveldb_1_1_arena_a420bcdcf5af6bdc48e279cb81766664b}{alloc\-\_\-bytes\-\_\-remaining\-\_\-}
+\item 
+std\-::vector$<$ char $\ast$ $>$ \hyperlink{classleveldb_1_1_arena_a7b1488a669cd4d8e7ef6dfa04cc0e267}{blocks\-\_\-}
+\item 
+size\-\_\-t \hyperlink{classleveldb_1_1_arena_a9f79fd19ba98968cd89bbd9097848f22}{blocks\-\_\-memory\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classleveldb_1_1_arena_a612fe3668024ddf7b92f632afa1361ca}{\index{leveldb\-::\-Arena@{leveldb\-::\-Arena}!Arena@{Arena}}
+\index{Arena@{Arena}!leveldb::Arena@{leveldb\-::\-Arena}}
+\subsubsection[{Arena}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::\-Arena\-::\-Arena (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classleveldb_1_1_arena_a612fe3668024ddf7b92f632afa1361ca}
+\hypertarget{classleveldb_1_1_arena_a39130691c948dec339cd4649b39c965c}{\index{leveldb\-::\-Arena@{leveldb\-::\-Arena}!$\sim$\-Arena@{$\sim$\-Arena}}
+\index{$\sim$\-Arena@{$\sim$\-Arena}!leveldb::Arena@{leveldb\-::\-Arena}}
+\subsubsection[{$\sim$\-Arena}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::\-Arena\-::$\sim$\-Arena (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classleveldb_1_1_arena_a39130691c948dec339cd4649b39c965c}
+\hypertarget{classleveldb_1_1_arena_a83bcebfd75ada453cebe554675046500}{\index{leveldb\-::\-Arena@{leveldb\-::\-Arena}!Arena@{Arena}}
+\index{Arena@{Arena}!leveldb::Arena@{leveldb\-::\-Arena}}
+\subsubsection[{Arena}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::\-Arena\-::\-Arena (
+\begin{DoxyParamCaption}
+\item[{const {\bf Arena} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_arena_a83bcebfd75ada453cebe554675046500}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classleveldb_1_1_arena_add4bc4b1c8fdf5be7a96a7ec00a0732e}{\index{leveldb\-::\-Arena@{leveldb\-::\-Arena}!Allocate@{Allocate}}
+\index{Allocate@{Allocate}!leveldb::Arena@{leveldb\-::\-Arena}}
+\subsubsection[{Allocate}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ leveldb\-::\-Arena\-::\-Allocate (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{bytes}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_arena_add4bc4b1c8fdf5be7a96a7ec00a0732e}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_arena_a9c1e8e695fe25ac96063f9fbacefee9e}{\index{leveldb\-::\-Arena@{leveldb\-::\-Arena}!Allocate\-Aligned@{Allocate\-Aligned}}
+\index{Allocate\-Aligned@{Allocate\-Aligned}!leveldb::Arena@{leveldb\-::\-Arena}}
+\subsubsection[{Allocate\-Aligned}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ leveldb\-::\-Arena\-::\-Allocate\-Aligned (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{bytes}
+\end{DoxyParamCaption}
+)}}\label{classleveldb_1_1_arena_a9c1e8e695fe25ac96063f9fbacefee9e}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_arena_ae2769aced236a3e28f0f6414f0a604d0}{\index{leveldb\-::\-Arena@{leveldb\-::\-Arena}!Allocate\-Fallback@{Allocate\-Fallback}}
+\index{Allocate\-Fallback@{Allocate\-Fallback}!leveldb::Arena@{leveldb\-::\-Arena}}
+\subsubsection[{Allocate\-Fallback}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ leveldb\-::\-Arena\-::\-Allocate\-Fallback (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{bytes}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_arena_ae2769aced236a3e28f0f6414f0a604d0}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_arena_afb0a6d9d349dcc35ff0a0214062ebac8}{\index{leveldb\-::\-Arena@{leveldb\-::\-Arena}!Allocate\-New\-Block@{Allocate\-New\-Block}}
+\index{Allocate\-New\-Block@{Allocate\-New\-Block}!leveldb::Arena@{leveldb\-::\-Arena}}
+\subsubsection[{Allocate\-New\-Block}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ leveldb\-::\-Arena\-::\-Allocate\-New\-Block (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{block\-\_\-bytes}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_arena_afb0a6d9d349dcc35ff0a0214062ebac8}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_arena_aaf8db075d5d1130106bbbf66b1d267b2}{\index{leveldb\-::\-Arena@{leveldb\-::\-Arena}!Memory\-Usage@{Memory\-Usage}}
+\index{Memory\-Usage@{Memory\-Usage}!leveldb::Arena@{leveldb\-::\-Arena}}
+\subsubsection[{Memory\-Usage}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t leveldb\-::\-Arena\-::\-Memory\-Usage (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_arena_aaf8db075d5d1130106bbbf66b1d267b2}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_arena_a1ac27375d43dd5378aabea3f73108ca2}{\index{leveldb\-::\-Arena@{leveldb\-::\-Arena}!operator=@{operator=}}
+\index{operator=@{operator=}!leveldb::Arena@{leveldb\-::\-Arena}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-Arena\-::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Arena} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_arena_a1ac27375d43dd5378aabea3f73108ca2}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classleveldb_1_1_arena_a420bcdcf5af6bdc48e279cb81766664b}{\index{leveldb\-::\-Arena@{leveldb\-::\-Arena}!alloc\-\_\-bytes\-\_\-remaining\-\_\-@{alloc\-\_\-bytes\-\_\-remaining\-\_\-}}
+\index{alloc\-\_\-bytes\-\_\-remaining\-\_\-@{alloc\-\_\-bytes\-\_\-remaining\-\_\-}!leveldb::Arena@{leveldb\-::\-Arena}}
+\subsubsection[{alloc\-\_\-bytes\-\_\-remaining\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t leveldb\-::\-Arena\-::alloc\-\_\-bytes\-\_\-remaining\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_arena_a420bcdcf5af6bdc48e279cb81766664b}
+\hypertarget{classleveldb_1_1_arena_ac2fcfb7ce7f511f431ac5c900bacb16c}{\index{leveldb\-::\-Arena@{leveldb\-::\-Arena}!alloc\-\_\-ptr\-\_\-@{alloc\-\_\-ptr\-\_\-}}
+\index{alloc\-\_\-ptr\-\_\-@{alloc\-\_\-ptr\-\_\-}!leveldb::Arena@{leveldb\-::\-Arena}}
+\subsubsection[{alloc\-\_\-ptr\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ leveldb\-::\-Arena\-::alloc\-\_\-ptr\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_arena_ac2fcfb7ce7f511f431ac5c900bacb16c}
+\hypertarget{classleveldb_1_1_arena_a7b1488a669cd4d8e7ef6dfa04cc0e267}{\index{leveldb\-::\-Arena@{leveldb\-::\-Arena}!blocks\-\_\-@{blocks\-\_\-}}
+\index{blocks\-\_\-@{blocks\-\_\-}!leveldb::Arena@{leveldb\-::\-Arena}}
+\subsubsection[{blocks\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$char$\ast$$>$ leveldb\-::\-Arena\-::blocks\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_arena_a7b1488a669cd4d8e7ef6dfa04cc0e267}
+\hypertarget{classleveldb_1_1_arena_a9f79fd19ba98968cd89bbd9097848f22}{\index{leveldb\-::\-Arena@{leveldb\-::\-Arena}!blocks\-\_\-memory\-\_\-@{blocks\-\_\-memory\-\_\-}}
+\index{blocks\-\_\-memory\-\_\-@{blocks\-\_\-memory\-\_\-}!leveldb::Arena@{leveldb\-::\-Arena}}
+\subsubsection[{blocks\-\_\-memory\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t leveldb\-::\-Arena\-::blocks\-\_\-memory\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_arena_a9f79fd19ba98968cd89bbd9097848f22}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+util/\hyperlink{arena_8h}{arena.\-h}\item 
+util/\hyperlink{arena_8cc}{arena.\-cc}\end{DoxyCompactItemize}

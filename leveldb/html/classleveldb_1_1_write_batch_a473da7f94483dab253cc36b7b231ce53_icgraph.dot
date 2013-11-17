@@ -1,0 +1,43 @@
+digraph "leveldb::WriteBatch::Delete"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="leveldb::WriteBatch\l::Delete",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="leveldb_writebatch\l_delete",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$c_8h.html#a593cea62db6cf16cbcdfc3668493d277"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="main",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$c__test_8c.html#a3c04138a5bfe5d72780bb7e82a18e627"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="leveldb::Benchmark\l::DoDelete",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_benchmark.html#a987ec13830ab5ac11f152b23c6bddc95"];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="leveldb::Benchmark\l::DeleteSeq",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_benchmark.html#a56edb0a3157cbc6c4d53b7c2bba7500d"];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="leveldb::Benchmark::Run",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_benchmark.html#a2f262afa0c7d10fcf531fe9657fba490"];
+  Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="main",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db__bench_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627"];
+  Node4 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="leveldb::Benchmark\l::DeleteRandom",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_benchmark.html#a3c8a9018862c652e48830cdb38269060"];
+  Node8 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="leveldb::DB::Delete",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_d_b.html#aff7577239799cd059464701c548090b9"];
+  Node9 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="leveldb::AutoCompactTest\l::DoReads",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_auto_compact_test.html#a1d1feea1aef1257e461c35eb5b51fa52"];
+  Node9 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="leveldb_delete",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$c_8h.html#a3878ffaf68a4addb31266ac81ce8c36f"];
+  Node11 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="leveldb::DBImpl::Delete",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_d_b_impl.html#af050f77e8c22bd6638fed5a46a59399d"];
+  Node12 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="leveldb::TEST",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceleveldb.html#a4d273f5f0d313440832363179e28e010"];
+  Node9 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="leveldb::DBTest::Delete",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_d_b_test.html#a25716ec93d525adbeea8ff71e8f3a9f4"];
+  Node9 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="leveldb::ModelDB::Delete",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_model_d_b.html#a2c2690e07a206fd2197f592dd4478ff6"];
+  Node15 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="leveldb::ModelDB::Write",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_model_d_b.html#ae3a20d2fc971376349b142b9c2d159be"];
+  Node16 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="leveldb::TEST",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceleveldb.html#a028ed215c12e1998d7073b18fce4c24c"];
+  Node15 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

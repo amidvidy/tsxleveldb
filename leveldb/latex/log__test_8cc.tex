@@ -1,0 +1,120 @@
+\hypertarget{log__test_8cc}{\section{db/log\-\_\-test.cc File Reference}
+\label{log__test_8cc}\index{db/log\-\_\-test.\-cc@{db/log\-\_\-test.\-cc}}
+}
+{\ttfamily \#include \char`\"{}db/log\-\_\-reader.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}db/log\-\_\-writer.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}leveldb/env.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}util/coding.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}util/crc32c.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}util/random.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}util/testharness.\-h\char`\"{}}\\*
+Include dependency graph for log\-\_\-test.\-cc\-:
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classleveldb_1_1log_1_1_log_test}{leveldb\-::log\-::\-Log\-Test}
+\item 
+class \hyperlink{classleveldb_1_1log_1_1_log_test_1_1_string_dest}{leveldb\-::log\-::\-Log\-Test\-::\-String\-Dest}
+\item 
+class \hyperlink{classleveldb_1_1log_1_1_log_test_1_1_string_source}{leveldb\-::log\-::\-Log\-Test\-::\-String\-Source}
+\item 
+class \hyperlink{classleveldb_1_1log_1_1_log_test_1_1_report_collector}{leveldb\-::log\-::\-Log\-Test\-::\-Report\-Collector}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespaceleveldb}{leveldb}
+\item 
+\hyperlink{namespaceleveldb_1_1log}{leveldb\-::log}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\-::string \hyperlink{namespaceleveldb_1_1log_a211dcbca77b4ff487c70016c09af674e}{leveldb\-::log\-::\-Big\-String} (const std\-::string \&partial\-\_\-string, size\-\_\-t n)
+\item 
+static std\-::string \hyperlink{namespaceleveldb_1_1log_a851536d606f5ecc9857ee45430a23465}{leveldb\-::log\-::\-Number\-String} (int n)
+\item 
+static std\-::string \hyperlink{namespaceleveldb_1_1log_a4f28769ffa840923fea43c6825a6a0e2}{leveldb\-::log\-::\-Random\-Skewed\-String} (int i, Random $\ast$rnd)
+\item 
+\hyperlink{namespaceleveldb_1_1log_ab8a02b9419477420eca51cfd47d5f172}{leveldb\-::log\-::\-T\-E\-S\-T} (Log\-Test, Empty)
+\item 
+\hyperlink{namespaceleveldb_1_1log_aabca07adceffd87baf38b81665d92bb4}{leveldb\-::log\-::\-T\-E\-S\-T} (Log\-Test, Read\-Write)
+\item 
+\hyperlink{namespaceleveldb_1_1log_a60249ea325a8656fdc31898d7c5f4ad9}{leveldb\-::log\-::\-T\-E\-S\-T} (Log\-Test, Many\-Blocks)
+\item 
+\hyperlink{namespaceleveldb_1_1log_ac15e5779ff43d83522727b8cc44882a2}{leveldb\-::log\-::\-T\-E\-S\-T} (Log\-Test, Fragmentation)
+\item 
+\hyperlink{namespaceleveldb_1_1log_a9721de928c01ac50b5770b8b4cbb98e1}{leveldb\-::log\-::\-T\-E\-S\-T} (Log\-Test, Marginal\-Trailer)
+\item 
+\hyperlink{namespaceleveldb_1_1log_aad9c4a11c674359115f4d16c97e33ad1}{leveldb\-::log\-::\-T\-E\-S\-T} (Log\-Test, Marginal\-Trailer2)
+\item 
+\hyperlink{namespaceleveldb_1_1log_a1a1972ff9493353cfb4546cacd33ddb7}{leveldb\-::log\-::\-T\-E\-S\-T} (Log\-Test, Short\-Trailer)
+\item 
+\hyperlink{namespaceleveldb_1_1log_a55d554f8c576d9d4d99e35d3fe0c169f}{leveldb\-::log\-::\-T\-E\-S\-T} (Log\-Test, Aligned\-Eof)
+\item 
+\hyperlink{namespaceleveldb_1_1log_a52d33034be964c0d0e40efdf4b423452}{leveldb\-::log\-::\-T\-E\-S\-T} (Log\-Test, Random\-Read)
+\item 
+\hyperlink{namespaceleveldb_1_1log_a47ffd653cde9cb9bc00c0a9914da48fd}{leveldb\-::log\-::\-T\-E\-S\-T} (Log\-Test, Read\-Error)
+\item 
+\hyperlink{namespaceleveldb_1_1log_a4fd335e6dbc3a27ea10e985387f69d6d}{leveldb\-::log\-::\-T\-E\-S\-T} (Log\-Test, Bad\-Record\-Type)
+\item 
+\hyperlink{namespaceleveldb_1_1log_aab1ee21bc512e6a9415ee8170d14dfce}{leveldb\-::log\-::\-T\-E\-S\-T} (Log\-Test, Truncated\-Trailing\-Record)
+\item 
+\hyperlink{namespaceleveldb_1_1log_a024a8bc0f558ffe46b3a15ab43018402}{leveldb\-::log\-::\-T\-E\-S\-T} (Log\-Test, Bad\-Length)
+\item 
+\hyperlink{namespaceleveldb_1_1log_a2dccd9d88a61eb0f59fdea07edfe2022}{leveldb\-::log\-::\-T\-E\-S\-T} (Log\-Test, Checksum\-Mismatch)
+\item 
+\hyperlink{namespaceleveldb_1_1log_ae2aa67608715051976e4cbb2008e3b52}{leveldb\-::log\-::\-T\-E\-S\-T} (Log\-Test, Unexpected\-Middle\-Type)
+\item 
+\hyperlink{namespaceleveldb_1_1log_ad618b3ff1dc35a8641c019d8eb4a4e8b}{leveldb\-::log\-::\-T\-E\-S\-T} (Log\-Test, Unexpected\-Last\-Type)
+\item 
+\hyperlink{namespaceleveldb_1_1log_a178460e2ee7a665f0aef08a28217a6d3}{leveldb\-::log\-::\-T\-E\-S\-T} (Log\-Test, Unexpected\-Full\-Type)
+\item 
+\hyperlink{namespaceleveldb_1_1log_a7c8a46287bbb1e185ccfcb78c5ae94e3}{leveldb\-::log\-::\-T\-E\-S\-T} (Log\-Test, Unexpected\-First\-Type)
+\item 
+\hyperlink{namespaceleveldb_1_1log_a2ea9cc0af9f5d8b6bdc74e3126bd389a}{leveldb\-::log\-::\-T\-E\-S\-T} (Log\-Test, Error\-Joins\-Records)
+\item 
+\hyperlink{namespaceleveldb_1_1log_a6ee7068a33cb134e26e7d1cf58327064}{leveldb\-::log\-::\-T\-E\-S\-T} (Log\-Test, Read\-Start)
+\item 
+\hyperlink{namespaceleveldb_1_1log_af9cc8dffe50b0cefff163fdca58d1a08}{leveldb\-::log\-::\-T\-E\-S\-T} (Log\-Test, Read\-Second\-One\-Off)
+\item 
+\hyperlink{namespaceleveldb_1_1log_ab734bca6b78216dc41b112075258dbe7}{leveldb\-::log\-::\-T\-E\-S\-T} (Log\-Test, Read\-Second\-Ten\-Thousand)
+\item 
+\hyperlink{namespaceleveldb_1_1log_aa9e212a334431228c79a843316480db0}{leveldb\-::log\-::\-T\-E\-S\-T} (Log\-Test, Read\-Second\-Start)
+\item 
+\hyperlink{namespaceleveldb_1_1log_af5f8505f08225382f290158f5175cca0}{leveldb\-::log\-::\-T\-E\-S\-T} (Log\-Test, Read\-Third\-One\-Off)
+\item 
+\hyperlink{namespaceleveldb_1_1log_a87cfcd7bb0a248dc72d9856e1d00d519}{leveldb\-::log\-::\-T\-E\-S\-T} (Log\-Test, Read\-Third\-Start)
+\item 
+\hyperlink{namespaceleveldb_1_1log_abbda151ff0e2439ac1dfa823a6089439}{leveldb\-::log\-::\-T\-E\-S\-T} (Log\-Test, Read\-Fourth\-One\-Off)
+\item 
+\hyperlink{namespaceleveldb_1_1log_a85f6833939c09f181924774403bfbe4f}{leveldb\-::log\-::\-T\-E\-S\-T} (Log\-Test, Read\-Fourth\-First\-Block\-Trailer)
+\item 
+\hyperlink{namespaceleveldb_1_1log_a6fb47c0abe5c036d95a4f9aeb1d62174}{leveldb\-::log\-::\-T\-E\-S\-T} (Log\-Test, Read\-Fourth\-Middle\-Block)
+\item 
+\hyperlink{namespaceleveldb_1_1log_a9c80a844e21aec7c6fbde209e99c1ad8}{leveldb\-::log\-::\-T\-E\-S\-T} (Log\-Test, Read\-Fourth\-Last\-Block)
+\item 
+\hyperlink{namespaceleveldb_1_1log_aa652940a4e7bff7fa21f0d1c941712d7}{leveldb\-::log\-::\-T\-E\-S\-T} (Log\-Test, Read\-Fourth\-Start)
+\item 
+\hyperlink{namespaceleveldb_1_1log_a74e0fb6c39041d1ef2193114b0a2275b}{leveldb\-::log\-::\-T\-E\-S\-T} (Log\-Test, Read\-End)
+\item 
+\hyperlink{namespaceleveldb_1_1log_ae1081d375c33d8b2f01d5593ecd5f4a7}{leveldb\-::log\-::\-T\-E\-S\-T} (Log\-Test, Read\-Past\-End)
+\item 
+int \hyperlink{log__test_8cc_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{log__test_8cc_a3c04138a5bfe5d72780bb7e82a18e627}{\index{log\-\_\-test.\-cc@{log\-\_\-test.\-cc}!main@{main}}
+\index{main@{main}!log_test.cc@{log\-\_\-test.\-cc}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}}\label{log__test_8cc_a3c04138a5bfe5d72780bb7e82a18e627}
+
+
+Here is the call graph for this function\-:
+
+

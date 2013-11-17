@@ -1,0 +1,254 @@
+\hypertarget{classleveldb_1_1_skip_list}{\section{leveldb\-:\-:Skip\-List$<$ Key, Comparator $>$ Class Template Reference}
+\label{classleveldb_1_1_skip_list}\index{leveldb\-::\-Skip\-List$<$ Key, Comparator $>$@{leveldb\-::\-Skip\-List$<$ Key, Comparator $>$}}
+}
+
+
+{\ttfamily \#include $<$skiplist.\-h$>$}
+
+
+
+Collaboration diagram for leveldb\-:\-:Skip\-List$<$ Key, Comparator $>$\-:
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classleveldb_1_1_skip_list_1_1_iterator}{Iterator}
+\item 
+struct \hyperlink{structleveldb_1_1_skip_list_1_1_node}{Node}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classleveldb_1_1_skip_list_a793060fb1b44b01c6f510aa16387c6ee}{Skip\-List} (\hyperlink{structleveldb_1_1_comparator}{Comparator} \hyperlink{table__test_8cc_a87863e435922f0910ca8db43f02a6c0b}{cmp}, \hyperlink{classleveldb_1_1_arena}{Arena} $\ast$arena)
+\item 
+void \hyperlink{classleveldb_1_1_skip_list_af1ed755f0825f38272aafe3cae4da644}{Insert} (const \hyperlink{namespaceleveldb_a7e9a9725b13fa0bd922d885280dfab95}{Key} \&key)
+\item 
+bool \hyperlink{classleveldb_1_1_skip_list_a134b36bafbfecf325bb7b57bc2490f87}{Contains} (const \hyperlink{namespaceleveldb_a7e9a9725b13fa0bd922d885280dfab95}{Key} \&key) const 
+\end{DoxyCompactItemize}
+\subsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \hyperlink{classleveldb_1_1_skip_list_a2e64dde7e3a6df57e1b4a43ff4ab0ef8a60ca280962bbbc6e8055b14fb11a81b5}{k\-Max\-Height} = 12
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classleveldb_1_1_skip_list_a7820710f000cf55fc053b50e683a8bab}{Get\-Max\-Height} () const 
+\item 
+\hyperlink{structleveldb_1_1_skip_list_1_1_node}{Node} $\ast$ \hyperlink{classleveldb_1_1_skip_list_a23405bab83b4d978887961deff9d0463}{New\-Node} (const \hyperlink{namespaceleveldb_a7e9a9725b13fa0bd922d885280dfab95}{Key} \&key, int height)
+\item 
+int \hyperlink{classleveldb_1_1_skip_list_a43d757e80d1a4f36c97dbb43ca92cbfc}{Random\-Height} ()
+\item 
+bool \hyperlink{classleveldb_1_1_skip_list_a3e92dac7be899964ee57e2d81593c55f}{Equal} (const \hyperlink{namespaceleveldb_a7e9a9725b13fa0bd922d885280dfab95}{Key} \&a, const \hyperlink{namespaceleveldb_a7e9a9725b13fa0bd922d885280dfab95}{Key} \&b) const 
+\item 
+bool \hyperlink{classleveldb_1_1_skip_list_a24eabc6719de6d2df1d9f104667b84d5}{Key\-Is\-After\-Node} (const \hyperlink{namespaceleveldb_a7e9a9725b13fa0bd922d885280dfab95}{Key} \&key, \hyperlink{structleveldb_1_1_skip_list_1_1_node}{Node} $\ast$n) const 
+\item 
+\hyperlink{structleveldb_1_1_skip_list_1_1_node}{Node} $\ast$ \hyperlink{classleveldb_1_1_skip_list_a6b9fbc50fe94ffc52c2db181ecd32a97}{Find\-Greater\-Or\-Equal} (const \hyperlink{namespaceleveldb_a7e9a9725b13fa0bd922d885280dfab95}{Key} \&key, \hyperlink{structleveldb_1_1_skip_list_1_1_node}{Node} $\ast$$\ast$\hyperlink{cache_8cc_aabbd2f01bb8ec4a7a0128bce5f8cdb1b}{prev}) const 
+\item 
+\hyperlink{structleveldb_1_1_skip_list_1_1_node}{Node} $\ast$ \hyperlink{classleveldb_1_1_skip_list_af276177e6a17c21a7a26f425eefc46e3}{Find\-Less\-Than} (const \hyperlink{namespaceleveldb_a7e9a9725b13fa0bd922d885280dfab95}{Key} \&key) const 
+\item 
+\hyperlink{structleveldb_1_1_skip_list_1_1_node}{Node} $\ast$ \hyperlink{classleveldb_1_1_skip_list_acfda915a018c2f918477f48cf12bcc10}{Find\-Last} () const 
+\item 
+\hyperlink{classleveldb_1_1_skip_list_afb4f491cba16d06b82e96ac6bfcb5fb7}{Skip\-List} (const \hyperlink{classleveldb_1_1_skip_list}{Skip\-List} \&)
+\item 
+void \hyperlink{classleveldb_1_1_skip_list_a0185293e08c7e581693ba7491298cda9}{operator=} (const \hyperlink{classleveldb_1_1_skip_list}{Skip\-List} \&)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structleveldb_1_1_comparator}{Comparator} const \hyperlink{classleveldb_1_1_skip_list_ab59a01d670b82316fd0532c17cb45a37}{compare\-\_\-}
+\item 
+\hyperlink{classleveldb_1_1_arena}{Arena} $\ast$const \hyperlink{classleveldb_1_1_skip_list_ae5eb0912ac01174439bc009ab74e366c}{arena\-\_\-}
+\item 
+\hyperlink{structleveldb_1_1_skip_list_1_1_node}{Node} $\ast$const \hyperlink{classleveldb_1_1_skip_list_abe0e7aa843a469bf63d1d1c9b64582f0}{head\-\_\-}
+\item 
+\hyperlink{classleveldb_1_1port_1_1_atomic_pointer}{port\-::\-Atomic\-Pointer} \hyperlink{classleveldb_1_1_skip_list_a08b97b9da8e1fd93d2c6ae4915dc132f}{max\-\_\-height\-\_\-}
+\item 
+\hyperlink{classleveldb_1_1_random}{Random} \hyperlink{classleveldb_1_1_skip_list_ae418eb7ce6b8e0a4ea95b8b782e02c9e}{rnd\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classleveldb_1_1_skip_list_a2e64dde7e3a6df57e1b4a43ff4ab0ef8}{\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Key, class Comparator$>$ anonymous enum\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_skip_list_a2e64dde7e3a6df57e1b4a43ff4ab0ef8}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{k\-Max\-Height@{k\-Max\-Height}!leveldb\-::\-Skip\-List@{leveldb\-::\-Skip\-List}}\index{leveldb\-::\-Skip\-List@{leveldb\-::\-Skip\-List}!k\-Max\-Height@{k\-Max\-Height}}\item[{\em 
+\hypertarget{classleveldb_1_1_skip_list_a2e64dde7e3a6df57e1b4a43ff4ab0ef8a60ca280962bbbc6e8055b14fb11a81b5}{k\-Max\-Height}\label{classleveldb_1_1_skip_list_a2e64dde7e3a6df57e1b4a43ff4ab0ef8a60ca280962bbbc6e8055b14fb11a81b5}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classleveldb_1_1_skip_list_a793060fb1b44b01c6f510aa16387c6ee}{\index{leveldb\-::\-Skip\-List@{leveldb\-::\-Skip\-List}!Skip\-List@{Skip\-List}}
+\index{Skip\-List@{Skip\-List}!leveldb::SkipList@{leveldb\-::\-Skip\-List}}
+\subsubsection[{Skip\-List}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Key , class Comparator$>$ {\bf leveldb\-::\-Skip\-List}$<$ {\bf Key}, {\bf Comparator} $>$\-::{\bf Skip\-List} (
+\begin{DoxyParamCaption}
+\item[{{\bf Comparator}}]{cmp, }
+\item[{{\bf Arena} $\ast$}]{arena}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}}\label{classleveldb_1_1_skip_list_a793060fb1b44b01c6f510aa16387c6ee}
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_skip_list_afb4f491cba16d06b82e96ac6bfcb5fb7}{\index{leveldb\-::\-Skip\-List@{leveldb\-::\-Skip\-List}!Skip\-List@{Skip\-List}}
+\index{Skip\-List@{Skip\-List}!leveldb::SkipList@{leveldb\-::\-Skip\-List}}
+\subsubsection[{Skip\-List}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Key, class Comparator$>$ {\bf leveldb\-::\-Skip\-List}$<$ {\bf Key}, {\bf Comparator} $>$\-::{\bf Skip\-List} (
+\begin{DoxyParamCaption}
+\item[{const {\bf Skip\-List}$<$ {\bf Key}, {\bf Comparator} $>$ \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_skip_list_afb4f491cba16d06b82e96ac6bfcb5fb7}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classleveldb_1_1_skip_list_a134b36bafbfecf325bb7b57bc2490f87}{\index{leveldb\-::\-Skip\-List@{leveldb\-::\-Skip\-List}!Contains@{Contains}}
+\index{Contains@{Contains}!leveldb::SkipList@{leveldb\-::\-Skip\-List}}
+\subsubsection[{Contains}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Key, class Comparator $>$ bool {\bf leveldb\-::\-Skip\-List}$<$ {\bf Key}, {\bf Comparator} $>$\-::Contains (
+\begin{DoxyParamCaption}
+\item[{const {\bf Key} \&}]{key}
+\end{DoxyParamCaption}
+) const}}\label{classleveldb_1_1_skip_list_a134b36bafbfecf325bb7b57bc2490f87}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_skip_list_a3e92dac7be899964ee57e2d81593c55f}{\index{leveldb\-::\-Skip\-List@{leveldb\-::\-Skip\-List}!Equal@{Equal}}
+\index{Equal@{Equal}!leveldb::SkipList@{leveldb\-::\-Skip\-List}}
+\subsubsection[{Equal}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Key, class Comparator$>$ bool {\bf leveldb\-::\-Skip\-List}$<$ {\bf Key}, {\bf Comparator} $>$\-::Equal (
+\begin{DoxyParamCaption}
+\item[{const {\bf Key} \&}]{a, }
+\item[{const {\bf Key} \&}]{b}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{classleveldb_1_1_skip_list_a3e92dac7be899964ee57e2d81593c55f}
+\hypertarget{classleveldb_1_1_skip_list_a6b9fbc50fe94ffc52c2db181ecd32a97}{\index{leveldb\-::\-Skip\-List@{leveldb\-::\-Skip\-List}!Find\-Greater\-Or\-Equal@{Find\-Greater\-Or\-Equal}}
+\index{Find\-Greater\-Or\-Equal@{Find\-Greater\-Or\-Equal}!leveldb::SkipList@{leveldb\-::\-Skip\-List}}
+\subsubsection[{Find\-Greater\-Or\-Equal}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Key, class Comparator $>$ {\bf Skip\-List}$<$ {\bf Key}, {\bf Comparator} $>$\-::{\bf Node} $\ast$ {\bf leveldb\-::\-Skip\-List}$<$ {\bf Key}, {\bf Comparator} $>$\-::Find\-Greater\-Or\-Equal (
+\begin{DoxyParamCaption}
+\item[{const {\bf Key} \&}]{key, }
+\item[{{\bf Node} $\ast$$\ast$}]{prev}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_skip_list_a6b9fbc50fe94ffc52c2db181ecd32a97}
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_skip_list_acfda915a018c2f918477f48cf12bcc10}{\index{leveldb\-::\-Skip\-List@{leveldb\-::\-Skip\-List}!Find\-Last@{Find\-Last}}
+\index{Find\-Last@{Find\-Last}!leveldb::SkipList@{leveldb\-::\-Skip\-List}}
+\subsubsection[{Find\-Last}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Key , class Comparator $>$ {\bf Skip\-List}$<$ {\bf Key}, {\bf Comparator} $>$\-::{\bf Node} $\ast$ {\bf leveldb\-::\-Skip\-List}$<$ {\bf Key}, {\bf Comparator} $>$\-::Find\-Last (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_skip_list_acfda915a018c2f918477f48cf12bcc10}
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_skip_list_af276177e6a17c21a7a26f425eefc46e3}{\index{leveldb\-::\-Skip\-List@{leveldb\-::\-Skip\-List}!Find\-Less\-Than@{Find\-Less\-Than}}
+\index{Find\-Less\-Than@{Find\-Less\-Than}!leveldb::SkipList@{leveldb\-::\-Skip\-List}}
+\subsubsection[{Find\-Less\-Than}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Key, class Comparator $>$ {\bf Skip\-List}$<$ {\bf Key}, {\bf Comparator} $>$\-::{\bf Node} $\ast$ {\bf leveldb\-::\-Skip\-List}$<$ {\bf Key}, {\bf Comparator} $>$\-::Find\-Less\-Than (
+\begin{DoxyParamCaption}
+\item[{const {\bf Key} \&}]{key}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_skip_list_af276177e6a17c21a7a26f425eefc46e3}
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_skip_list_a7820710f000cf55fc053b50e683a8bab}{\index{leveldb\-::\-Skip\-List@{leveldb\-::\-Skip\-List}!Get\-Max\-Height@{Get\-Max\-Height}}
+\index{Get\-Max\-Height@{Get\-Max\-Height}!leveldb::SkipList@{leveldb\-::\-Skip\-List}}
+\subsubsection[{Get\-Max\-Height}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Key, class Comparator$>$ int {\bf leveldb\-::\-Skip\-List}$<$ {\bf Key}, {\bf Comparator} $>$\-::Get\-Max\-Height (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{classleveldb_1_1_skip_list_a7820710f000cf55fc053b50e683a8bab}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_skip_list_af1ed755f0825f38272aafe3cae4da644}{\index{leveldb\-::\-Skip\-List@{leveldb\-::\-Skip\-List}!Insert@{Insert}}
+\index{Insert@{Insert}!leveldb::SkipList@{leveldb\-::\-Skip\-List}}
+\subsubsection[{Insert}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Key, class Comparator $>$ void {\bf leveldb\-::\-Skip\-List}$<$ {\bf Key}, {\bf Comparator} $>$\-::Insert (
+\begin{DoxyParamCaption}
+\item[{const {\bf Key} \&}]{key}
+\end{DoxyParamCaption}
+)}}\label{classleveldb_1_1_skip_list_af1ed755f0825f38272aafe3cae4da644}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_skip_list_a24eabc6719de6d2df1d9f104667b84d5}{\index{leveldb\-::\-Skip\-List@{leveldb\-::\-Skip\-List}!Key\-Is\-After\-Node@{Key\-Is\-After\-Node}}
+\index{Key\-Is\-After\-Node@{Key\-Is\-After\-Node}!leveldb::SkipList@{leveldb\-::\-Skip\-List}}
+\subsubsection[{Key\-Is\-After\-Node}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Key, class Comparator $>$ bool {\bf leveldb\-::\-Skip\-List}$<$ {\bf Key}, {\bf Comparator} $>$\-::Key\-Is\-After\-Node (
+\begin{DoxyParamCaption}
+\item[{const {\bf Key} \&}]{key, }
+\item[{{\bf Node} $\ast$}]{n}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_skip_list_a24eabc6719de6d2df1d9f104667b84d5}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_skip_list_a23405bab83b4d978887961deff9d0463}{\index{leveldb\-::\-Skip\-List@{leveldb\-::\-Skip\-List}!New\-Node@{New\-Node}}
+\index{New\-Node@{New\-Node}!leveldb::SkipList@{leveldb\-::\-Skip\-List}}
+\subsubsection[{New\-Node}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Key, class Comparator $>$ {\bf Skip\-List}$<$ {\bf Key}, {\bf Comparator} $>$\-::{\bf Node} $\ast$ {\bf leveldb\-::\-Skip\-List}$<$ {\bf Key}, {\bf Comparator} $>$\-::New\-Node (
+\begin{DoxyParamCaption}
+\item[{const {\bf Key} \&}]{key, }
+\item[{int}]{height}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_skip_list_a23405bab83b4d978887961deff9d0463}
+\hypertarget{classleveldb_1_1_skip_list_a0185293e08c7e581693ba7491298cda9}{\index{leveldb\-::\-Skip\-List@{leveldb\-::\-Skip\-List}!operator=@{operator=}}
+\index{operator=@{operator=}!leveldb::SkipList@{leveldb\-::\-Skip\-List}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Key, class Comparator$>$ void {\bf leveldb\-::\-Skip\-List}$<$ {\bf Key}, {\bf Comparator} $>$\-::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Skip\-List}$<$ {\bf Key}, {\bf Comparator} $>$ \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_skip_list_a0185293e08c7e581693ba7491298cda9}
+\hypertarget{classleveldb_1_1_skip_list_a43d757e80d1a4f36c97dbb43ca92cbfc}{\index{leveldb\-::\-Skip\-List@{leveldb\-::\-Skip\-List}!Random\-Height@{Random\-Height}}
+\index{Random\-Height@{Random\-Height}!leveldb::SkipList@{leveldb\-::\-Skip\-List}}
+\subsubsection[{Random\-Height}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Key , class Comparator $>$ int {\bf leveldb\-::\-Skip\-List}$<$ {\bf Key}, {\bf Comparator} $>$\-::Random\-Height (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_skip_list_a43d757e80d1a4f36c97dbb43ca92cbfc}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classleveldb_1_1_skip_list_ae5eb0912ac01174439bc009ab74e366c}{\index{leveldb\-::\-Skip\-List@{leveldb\-::\-Skip\-List}!arena\-\_\-@{arena\-\_\-}}
+\index{arena\-\_\-@{arena\-\_\-}!leveldb::SkipList@{leveldb\-::\-Skip\-List}}
+\subsubsection[{arena\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Key, class Comparator$>$ {\bf Arena}$\ast$ const {\bf leveldb\-::\-Skip\-List}$<$ {\bf Key}, {\bf Comparator} $>$\-::arena\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_skip_list_ae5eb0912ac01174439bc009ab74e366c}
+\hypertarget{classleveldb_1_1_skip_list_ab59a01d670b82316fd0532c17cb45a37}{\index{leveldb\-::\-Skip\-List@{leveldb\-::\-Skip\-List}!compare\-\_\-@{compare\-\_\-}}
+\index{compare\-\_\-@{compare\-\_\-}!leveldb::SkipList@{leveldb\-::\-Skip\-List}}
+\subsubsection[{compare\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Key, class Comparator$>$ {\bf Comparator} const {\bf leveldb\-::\-Skip\-List}$<$ {\bf Key}, {\bf Comparator} $>$\-::compare\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_skip_list_ab59a01d670b82316fd0532c17cb45a37}
+\hypertarget{classleveldb_1_1_skip_list_abe0e7aa843a469bf63d1d1c9b64582f0}{\index{leveldb\-::\-Skip\-List@{leveldb\-::\-Skip\-List}!head\-\_\-@{head\-\_\-}}
+\index{head\-\_\-@{head\-\_\-}!leveldb::SkipList@{leveldb\-::\-Skip\-List}}
+\subsubsection[{head\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Key, class Comparator$>$ {\bf Node}$\ast$ const {\bf leveldb\-::\-Skip\-List}$<$ {\bf Key}, {\bf Comparator} $>$\-::head\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_skip_list_abe0e7aa843a469bf63d1d1c9b64582f0}
+\hypertarget{classleveldb_1_1_skip_list_a08b97b9da8e1fd93d2c6ae4915dc132f}{\index{leveldb\-::\-Skip\-List@{leveldb\-::\-Skip\-List}!max\-\_\-height\-\_\-@{max\-\_\-height\-\_\-}}
+\index{max\-\_\-height\-\_\-@{max\-\_\-height\-\_\-}!leveldb::SkipList@{leveldb\-::\-Skip\-List}}
+\subsubsection[{max\-\_\-height\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Key, class Comparator$>$ {\bf port\-::\-Atomic\-Pointer} {\bf leveldb\-::\-Skip\-List}$<$ {\bf Key}, {\bf Comparator} $>$\-::max\-\_\-height\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_skip_list_a08b97b9da8e1fd93d2c6ae4915dc132f}
+\hypertarget{classleveldb_1_1_skip_list_ae418eb7ce6b8e0a4ea95b8b782e02c9e}{\index{leveldb\-::\-Skip\-List@{leveldb\-::\-Skip\-List}!rnd\-\_\-@{rnd\-\_\-}}
+\index{rnd\-\_\-@{rnd\-\_\-}!leveldb::SkipList@{leveldb\-::\-Skip\-List}}
+\subsubsection[{rnd\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Key, class Comparator$>$ {\bf Random} {\bf leveldb\-::\-Skip\-List}$<$ {\bf Key}, {\bf Comparator} $>$\-::rnd\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_skip_list_ae418eb7ce6b8e0a4ea95b8b782e02c9e}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+db/\hyperlink{skiplist_8h}{skiplist.\-h}\end{DoxyCompactItemize}

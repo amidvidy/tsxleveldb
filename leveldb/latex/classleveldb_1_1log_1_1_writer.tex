@@ -1,0 +1,130 @@
+\hypertarget{classleveldb_1_1log_1_1_writer}{\section{leveldb\-:\-:log\-:\-:Writer Class Reference}
+\label{classleveldb_1_1log_1_1_writer}\index{leveldb\-::log\-::\-Writer@{leveldb\-::log\-::\-Writer}}
+}
+
+
+{\ttfamily \#include $<$log\-\_\-writer.\-h$>$}
+
+
+
+Collaboration diagram for leveldb\-:\-:log\-:\-:Writer\-:
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classleveldb_1_1log_1_1_writer_a424f67be4485fdf3ef8ba55c9c559c90}{Writer} (\hyperlink{classleveldb_1_1_writable_file}{Writable\-File} $\ast$dest)
+\item 
+\hyperlink{classleveldb_1_1log_1_1_writer_a71bcdee2a87eb535fd60a3fe047e66be}{$\sim$\-Writer} ()
+\item 
+\hyperlink{classleveldb_1_1_status}{Status} \hyperlink{classleveldb_1_1log_1_1_writer_acb4abda5a5348ac1771657ff01bf2fad}{Add\-Record} (const \hyperlink{classleveldb_1_1_slice}{Slice} \&slice)
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classleveldb_1_1_status}{Status} \hyperlink{classleveldb_1_1log_1_1_writer_a0ca13201d9f4aa2231a1144bad4f1908}{Emit\-Physical\-Record} (\hyperlink{namespaceleveldb_1_1log_a01bdc1b51beb634f14f8fbb70fbd8d2a}{Record\-Type} type, const char $\ast$ptr, size\-\_\-t length)
+\item 
+\hyperlink{classleveldb_1_1log_1_1_writer_a89df944ee585c726563eb3deb43a24cc}{Writer} (const \hyperlink{classleveldb_1_1log_1_1_writer}{Writer} \&)
+\item 
+void \hyperlink{classleveldb_1_1log_1_1_writer_a26d4fb5471d0e17bb17a8b644279a3c3}{operator=} (const \hyperlink{classleveldb_1_1log_1_1_writer}{Writer} \&)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classleveldb_1_1_writable_file}{Writable\-File} $\ast$ \hyperlink{classleveldb_1_1log_1_1_writer_ac72f17a670167f08a8b87d6ffe205f46}{dest\-\_\-}
+\item 
+int \hyperlink{classleveldb_1_1log_1_1_writer_acf53922c11753a1b22add27ca588b885}{block\-\_\-offset\-\_\-}
+\item 
+\hyperlink{stdint_8h_a435d1572bf3f880d55459d9805097f62}{uint32\-\_\-t} \hyperlink{classleveldb_1_1log_1_1_writer_a0e09a993f3d477abe96288297e8094b1}{type\-\_\-crc\-\_\-} \mbox{[}\hyperlink{namespaceleveldb_1_1log_a45cb8306b6156236656172086c1394df}{k\-Max\-Record\-Type}+1\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classleveldb_1_1log_1_1_writer_a424f67be4485fdf3ef8ba55c9c559c90}{\index{leveldb\-::log\-::\-Writer@{leveldb\-::log\-::\-Writer}!Writer@{Writer}}
+\index{Writer@{Writer}!leveldb::log::Writer@{leveldb\-::log\-::\-Writer}}
+\subsubsection[{Writer}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::log\-::\-Writer\-::\-Writer (
+\begin{DoxyParamCaption}
+\item[{{\bf Writable\-File} $\ast$}]{dest}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}}\label{classleveldb_1_1log_1_1_writer_a424f67be4485fdf3ef8ba55c9c559c90}
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1log_1_1_writer_a71bcdee2a87eb535fd60a3fe047e66be}{\index{leveldb\-::log\-::\-Writer@{leveldb\-::log\-::\-Writer}!$\sim$\-Writer@{$\sim$\-Writer}}
+\index{$\sim$\-Writer@{$\sim$\-Writer}!leveldb::log::Writer@{leveldb\-::log\-::\-Writer}}
+\subsubsection[{$\sim$\-Writer}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::log\-::\-Writer\-::$\sim$\-Writer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classleveldb_1_1log_1_1_writer_a71bcdee2a87eb535fd60a3fe047e66be}
+\hypertarget{classleveldb_1_1log_1_1_writer_a89df944ee585c726563eb3deb43a24cc}{\index{leveldb\-::log\-::\-Writer@{leveldb\-::log\-::\-Writer}!Writer@{Writer}}
+\index{Writer@{Writer}!leveldb::log::Writer@{leveldb\-::log\-::\-Writer}}
+\subsubsection[{Writer}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::log\-::\-Writer\-::\-Writer (
+\begin{DoxyParamCaption}
+\item[{const {\bf Writer} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1log_1_1_writer_a89df944ee585c726563eb3deb43a24cc}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classleveldb_1_1log_1_1_writer_acb4abda5a5348ac1771657ff01bf2fad}{\index{leveldb\-::log\-::\-Writer@{leveldb\-::log\-::\-Writer}!Add\-Record@{Add\-Record}}
+\index{Add\-Record@{Add\-Record}!leveldb::log::Writer@{leveldb\-::log\-::\-Writer}}
+\subsubsection[{Add\-Record}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Status} leveldb\-::log\-::\-Writer\-::\-Add\-Record (
+\begin{DoxyParamCaption}
+\item[{const {\bf Slice} \&}]{slice}
+\end{DoxyParamCaption}
+)}}\label{classleveldb_1_1log_1_1_writer_acb4abda5a5348ac1771657ff01bf2fad}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1log_1_1_writer_a0ca13201d9f4aa2231a1144bad4f1908}{\index{leveldb\-::log\-::\-Writer@{leveldb\-::log\-::\-Writer}!Emit\-Physical\-Record@{Emit\-Physical\-Record}}
+\index{Emit\-Physical\-Record@{Emit\-Physical\-Record}!leveldb::log::Writer@{leveldb\-::log\-::\-Writer}}
+\subsubsection[{Emit\-Physical\-Record}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Status} leveldb\-::log\-::\-Writer\-::\-Emit\-Physical\-Record (
+\begin{DoxyParamCaption}
+\item[{{\bf Record\-Type}}]{type, }
+\item[{const char $\ast$}]{ptr, }
+\item[{size\-\_\-t}]{length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1log_1_1_writer_a0ca13201d9f4aa2231a1144bad4f1908}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1log_1_1_writer_a26d4fb5471d0e17bb17a8b644279a3c3}{\index{leveldb\-::log\-::\-Writer@{leveldb\-::log\-::\-Writer}!operator=@{operator=}}
+\index{operator=@{operator=}!leveldb::log::Writer@{leveldb\-::log\-::\-Writer}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::log\-::\-Writer\-::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Writer} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1log_1_1_writer_a26d4fb5471d0e17bb17a8b644279a3c3}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classleveldb_1_1log_1_1_writer_acf53922c11753a1b22add27ca588b885}{\index{leveldb\-::log\-::\-Writer@{leveldb\-::log\-::\-Writer}!block\-\_\-offset\-\_\-@{block\-\_\-offset\-\_\-}}
+\index{block\-\_\-offset\-\_\-@{block\-\_\-offset\-\_\-}!leveldb::log::Writer@{leveldb\-::log\-::\-Writer}}
+\subsubsection[{block\-\_\-offset\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int leveldb\-::log\-::\-Writer\-::block\-\_\-offset\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1log_1_1_writer_acf53922c11753a1b22add27ca588b885}
+\hypertarget{classleveldb_1_1log_1_1_writer_ac72f17a670167f08a8b87d6ffe205f46}{\index{leveldb\-::log\-::\-Writer@{leveldb\-::log\-::\-Writer}!dest\-\_\-@{dest\-\_\-}}
+\index{dest\-\_\-@{dest\-\_\-}!leveldb::log::Writer@{leveldb\-::log\-::\-Writer}}
+\subsubsection[{dest\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Writable\-File}$\ast$ leveldb\-::log\-::\-Writer\-::dest\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1log_1_1_writer_ac72f17a670167f08a8b87d6ffe205f46}
+\hypertarget{classleveldb_1_1log_1_1_writer_a0e09a993f3d477abe96288297e8094b1}{\index{leveldb\-::log\-::\-Writer@{leveldb\-::log\-::\-Writer}!type\-\_\-crc\-\_\-@{type\-\_\-crc\-\_\-}}
+\index{type\-\_\-crc\-\_\-@{type\-\_\-crc\-\_\-}!leveldb::log::Writer@{leveldb\-::log\-::\-Writer}}
+\subsubsection[{type\-\_\-crc\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint32\-\_\-t} leveldb\-::log\-::\-Writer\-::type\-\_\-crc\-\_\-\mbox{[}{\bf k\-Max\-Record\-Type}+1\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1log_1_1_writer_a0e09a993f3d477abe96288297e8094b1}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+db/\hyperlink{log__writer_8h}{log\-\_\-writer.\-h}\item 
+db/\hyperlink{log__writer_8cc}{log\-\_\-writer.\-cc}\end{DoxyCompactItemize}

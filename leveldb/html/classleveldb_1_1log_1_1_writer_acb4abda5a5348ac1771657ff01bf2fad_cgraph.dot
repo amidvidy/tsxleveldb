@@ -1,0 +1,27 @@
+digraph "leveldb::log::Writer::AddRecord"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="leveldb::log::Writer\l::AddRecord",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="leveldb::Slice::data",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_slice.html#aa64861043d9deee6889461bf0593cf73"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="leveldb::Slice::size",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_slice.html#a947d3173f04f8a30553e89046daf91d5"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="leveldb::WritableFile\l::Append",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_writable_file.html#a53b41841d9577d28f65d4d90e1660de8"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="leveldb::log::Writer\l::EmitPhysicalRecord",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1log_1_1_writer.html#a0ca13201d9f4aa2231a1144bad4f1908"];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="leveldb::crc32c::Extend",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceleveldb_1_1crc32c.html#ac42fd0618afe635356d722fd29f5ff10"];
+  Node5 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="leveldb::crc32c::Mask",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceleveldb_1_1crc32c.html#a3790e1e939714a29609e46383aafd6cf"];
+  Node5 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="leveldb::EncodeFixed32",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceleveldb.html#a265d1eea2e5d8e42cf86372ed4904886"];
+  Node5 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="leveldb::Status::ok",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_status.html#ab31e89a858c766716e3dc952be857c65"];
+  Node5 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="leveldb::WritableFile\l::Flush",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_writable_file.html#ab95759ad32f6a05b0ee4266969fa265e"];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

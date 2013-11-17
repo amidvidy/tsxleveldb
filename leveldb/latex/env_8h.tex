@@ -1,0 +1,41 @@
+\hypertarget{env_8h}{\section{include/leveldb/env.h File Reference}
+\label{env_8h}\index{include/leveldb/env.\-h@{include/leveldb/env.\-h}}
+}
+{\ttfamily \#include $<$cstdarg$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$stdint.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}leveldb/status.\-h\char`\"{}}\\*
+Include dependency graph for env.\-h\-:
+This graph shows which files directly or indirectly include this file\-:
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classleveldb_1_1_env}{leveldb\-::\-Env}
+\item 
+class \hyperlink{classleveldb_1_1_sequential_file}{leveldb\-::\-Sequential\-File}
+\item 
+class \hyperlink{classleveldb_1_1_random_access_file}{leveldb\-::\-Random\-Access\-File}
+\item 
+class \hyperlink{classleveldb_1_1_writable_file}{leveldb\-::\-Writable\-File}
+\item 
+class \hyperlink{classleveldb_1_1_logger}{leveldb\-::\-Logger}
+\item 
+class \hyperlink{classleveldb_1_1_file_lock}{leveldb\-::\-File\-Lock}
+\item 
+class \hyperlink{classleveldb_1_1_env_wrapper}{leveldb\-::\-Env\-Wrapper}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespaceleveldb}{leveldb}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{namespaceleveldb_aeba9623ceee38be99bed2bc1ae082954}{leveldb\-::\-Log} (Logger $\ast$info\-\_\-log, const char $\ast$format,...)
+\item 
+Status \hyperlink{namespaceleveldb_ae01563eb18a8527096b54d60251351cb}{leveldb\-::\-Write\-String\-To\-File} (Env $\ast$env, const Slice \&data, const std\-::string \&fname)
+\item 
+Status \hyperlink{namespaceleveldb_aa47a20ae782e9ad537692c3202cd652d}{leveldb\-::\-Read\-File\-To\-String} (Env $\ast$env, const std\-::string \&fname, std\-::string $\ast$data)
+\end{DoxyCompactItemize}

@@ -1,0 +1,82 @@
+\hypertarget{classleveldb_1_1_string_source}{\section{leveldb\-:\-:String\-Source Class Reference}
+\label{classleveldb_1_1_string_source}\index{leveldb\-::\-String\-Source@{leveldb\-::\-String\-Source}}
+}
+
+
+Inheritance diagram for leveldb\-:\-:String\-Source\-:
+
+
+Collaboration diagram for leveldb\-:\-:String\-Source\-:
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classleveldb_1_1_string_source_a4f85ccda6f37775d790834de05284fda}{String\-Source} (const \hyperlink{classleveldb_1_1_slice}{Slice} \&contents)
+\item 
+virtual \hyperlink{classleveldb_1_1_string_source_a0d468686fe633d0cbb04ec58be474cc8}{$\sim$\-String\-Source} ()
+\item 
+\hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} \hyperlink{classleveldb_1_1_string_source_af31de6d789ba2427c98673fd1eae0778}{Size} () const 
+\item 
+virtual \hyperlink{classleveldb_1_1_status}{Status} \hyperlink{classleveldb_1_1_string_source_a7cf8d6ee4cd01cf514ce68326e6ec3c2}{Read} (\hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} offset, size\-\_\-t n, \hyperlink{classleveldb_1_1_slice}{Slice} $\ast$result, char $\ast$scratch) const 
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\-::string \hyperlink{classleveldb_1_1_string_source_afd2a04d238d79fbe4087b30f8d9b4675}{contents\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classleveldb_1_1_string_source_a4f85ccda6f37775d790834de05284fda}{\index{leveldb\-::\-String\-Source@{leveldb\-::\-String\-Source}!String\-Source@{String\-Source}}
+\index{String\-Source@{String\-Source}!leveldb::StringSource@{leveldb\-::\-String\-Source}}
+\subsubsection[{String\-Source}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::\-String\-Source\-::\-String\-Source (
+\begin{DoxyParamCaption}
+\item[{const {\bf Slice} \&}]{contents}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_string_source_a4f85ccda6f37775d790834de05284fda}
+\hypertarget{classleveldb_1_1_string_source_a0d468686fe633d0cbb04ec58be474cc8}{\index{leveldb\-::\-String\-Source@{leveldb\-::\-String\-Source}!$\sim$\-String\-Source@{$\sim$\-String\-Source}}
+\index{$\sim$\-String\-Source@{$\sim$\-String\-Source}!leveldb::StringSource@{leveldb\-::\-String\-Source}}
+\subsubsection[{$\sim$\-String\-Source}]{\setlength{\rightskip}{0pt plus 5cm}virtual leveldb\-::\-String\-Source\-::$\sim$\-String\-Source (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classleveldb_1_1_string_source_a0d468686fe633d0cbb04ec58be474cc8}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classleveldb_1_1_string_source_a7cf8d6ee4cd01cf514ce68326e6ec3c2}{\index{leveldb\-::\-String\-Source@{leveldb\-::\-String\-Source}!Read@{Read}}
+\index{Read@{Read}!leveldb::StringSource@{leveldb\-::\-String\-Source}}
+\subsubsection[{Read}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Status} leveldb\-::\-String\-Source\-::\-Read (
+\begin{DoxyParamCaption}
+\item[{{\bf uint64\-\_\-t}}]{offset, }
+\item[{size\-\_\-t}]{n, }
+\item[{{\bf Slice} $\ast$}]{result, }
+\item[{char $\ast$}]{scratch}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classleveldb_1_1_string_source_a7cf8d6ee4cd01cf514ce68326e6ec3c2}
+
+
+Implements \hyperlink{classleveldb_1_1_random_access_file_a1a09fadcec904d9791a968acabca98d0}{leveldb\-::\-Random\-Access\-File}.
+
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_string_source_af31de6d789ba2427c98673fd1eae0778}{\index{leveldb\-::\-String\-Source@{leveldb\-::\-String\-Source}!Size@{Size}}
+\index{Size@{Size}!leveldb::StringSource@{leveldb\-::\-String\-Source}}
+\subsubsection[{Size}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint64\-\_\-t} leveldb\-::\-String\-Source\-::\-Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_string_source_af31de6d789ba2427c98673fd1eae0778}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classleveldb_1_1_string_source_afd2a04d238d79fbe4087b30f8d9b4675}{\index{leveldb\-::\-String\-Source@{leveldb\-::\-String\-Source}!contents\-\_\-@{contents\-\_\-}}
+\index{contents\-\_\-@{contents\-\_\-}!leveldb::StringSource@{leveldb\-::\-String\-Source}}
+\subsubsection[{contents\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string leveldb\-::\-String\-Source\-::contents\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_string_source_afd2a04d238d79fbe4087b30f8d9b4675}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+table/\hyperlink{table__test_8cc}{table\-\_\-test.\-cc}\end{DoxyCompactItemize}

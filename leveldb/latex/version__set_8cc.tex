@@ -1,0 +1,86 @@
+\hypertarget{version__set_8cc}{\section{db/version\-\_\-set.cc File Reference}
+\label{version__set_8cc}\index{db/version\-\_\-set.\-cc@{db/version\-\_\-set.\-cc}}
+}
+{\ttfamily \#include \char`\"{}db/version\-\_\-set.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$algorithm$>$}\\*
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}db/filename.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}db/log\-\_\-reader.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}db/log\-\_\-writer.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}db/memtable.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}db/table\-\_\-cache.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}leveldb/env.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}leveldb/table\-\_\-builder.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}table/merger.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}table/two\-\_\-level\-\_\-iterator.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}util/coding.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}util/logging.\-h\char`\"{}}\\*
+Include dependency graph for version\-\_\-set.\-cc\-:
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classleveldb_1_1_version_1_1_level_file_num_iterator}{leveldb\-::\-Version\-::\-Level\-File\-Num\-Iterator}
+\item 
+class \hyperlink{classleveldb_1_1_version_set_1_1_builder}{leveldb\-::\-Version\-Set\-::\-Builder}
+\item 
+struct \hyperlink{structleveldb_1_1_version_set_1_1_builder_1_1_by_smallest_key}{leveldb\-::\-Version\-Set\-::\-Builder\-::\-By\-Smallest\-Key}
+\item 
+struct \hyperlink{structleveldb_1_1_version_set_1_1_builder_1_1_level_state}{leveldb\-::\-Version\-Set\-::\-Builder\-::\-Level\-State}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespaceleveldb}{leveldb}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bfseries Saver\-State} 
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static double \hyperlink{namespaceleveldb_ad627c8c010aab67e9ea44dd73f98e31d}{leveldb\-::\-Max\-Bytes\-For\-Level} (int level)
+\item 
+static \hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} \hyperlink{namespaceleveldb_a670e043671728f7aa2dd991c2b2b7139}{leveldb\-::\-Max\-File\-Size\-For\-Level} (int level)
+\item 
+static \hyperlink{stdint_8h_adec1df1b8b51cb32b77e5b86fff46471}{int64\-\_\-t} \hyperlink{namespaceleveldb_a8d7291b08be6643bcfb46c475f779f9e}{leveldb\-::\-Total\-File\-Size} (const std\-::vector$<$ File\-Meta\-Data $\ast$ $>$ \&files)
+\item 
+int \hyperlink{namespaceleveldb_a812c4c6cf8299e767535a59f2205df0c}{leveldb\-::\-Find\-File} (const Internal\-Key\-Comparator \&icmp, const std\-::vector$<$ File\-Meta\-Data $\ast$ $>$ \&files, const Slice \&key)
+\item 
+static bool \hyperlink{namespaceleveldb_a7f9c247b8bae634426f95a6a4443ebfc}{leveldb\-::\-After\-File} (const Comparator $\ast$\hyperlink{version__set_8cc_a598e50ba29b234ea6ee753e383e79452}{ucmp}, const Slice $\ast$\hyperlink{version__set_8cc_afced2118ae0bf03db7c7e75a21cfd004}{user\-\_\-key}, const File\-Meta\-Data $\ast$f)
+\item 
+static bool \hyperlink{namespaceleveldb_ad320b62435f131ca2217d00425cae151}{leveldb\-::\-Before\-File} (const Comparator $\ast$\hyperlink{version__set_8cc_a598e50ba29b234ea6ee753e383e79452}{ucmp}, const Slice $\ast$\hyperlink{version__set_8cc_afced2118ae0bf03db7c7e75a21cfd004}{user\-\_\-key}, const File\-Meta\-Data $\ast$f)
+\item 
+bool \hyperlink{namespaceleveldb_a1a6a370f17b20667b885b5b91159c5a9}{leveldb\-::\-Some\-File\-Overlaps\-Range} (const Internal\-Key\-Comparator \&icmp, bool disjoint\-\_\-sorted\-\_\-files, const std\-::vector$<$ File\-Meta\-Data $\ast$ $>$ \&files, const Slice $\ast$smallest\-\_\-user\-\_\-key, const Slice $\ast$largest\-\_\-user\-\_\-key)
+\item 
+static Iterator $\ast$ \hyperlink{namespaceleveldb_a90825bb2cdcea64469b179f6d9c5de00}{leveldb\-::\-Get\-File\-Iterator} (void $\ast$\hyperlink{env__posix_8cc_a9ce2ec4812a92cb6ab39f6e81e9173a9}{arg}, const Read\-Options \&options, const Slice \&file\-\_\-value)
+\item 
+static void \hyperlink{namespaceleveldb_a10c2a57fa55323ee1cb072a74c15bf24}{leveldb\-::\-Save\-Value} (void $\ast$\hyperlink{env__posix_8cc_a9ce2ec4812a92cb6ab39f6e81e9173a9}{arg}, const Slice \&ikey, const Slice \&v)
+\item 
+static bool \hyperlink{namespaceleveldb_ab65191269f2a256a310edf82d56ed842}{leveldb\-::\-Newest\-First} (File\-Meta\-Data $\ast$a, File\-Meta\-Data $\ast$b)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static const int \hyperlink{namespaceleveldb_aa8eab3a12c3da0efefd9fe53f904440b}{leveldb\-::k\-Target\-File\-Size} = 2 $\ast$ 1048576
+\item 
+static const \hyperlink{stdint_8h_adec1df1b8b51cb32b77e5b86fff46471}{int64\-\_\-t} \hyperlink{namespaceleveldb_a68616c3e44088cbae698a3c2b385082f}{leveldb\-::k\-Max\-Grand\-Parent\-Overlap\-Bytes} = 10 $\ast$ k\-Target\-File\-Size
+\item 
+static const \hyperlink{stdint_8h_adec1df1b8b51cb32b77e5b86fff46471}{int64\-\_\-t} \hyperlink{namespaceleveldb_a226c83695ff13a8d8bc5a248bdd4bd29}{leveldb\-::k\-Expanded\-Compaction\-Byte\-Size\-Limit} = 25 $\ast$ k\-Target\-File\-Size
+\end{DoxyCompactItemize}
+
+
+\subsection{Variable Documentation}
+\hypertarget{version__set_8cc_a6aad002d0db5e5e85dc31927a5a6f503}{\index{version\-\_\-set.\-cc@{version\-\_\-set.\-cc}!state@{state}}
+\index{state@{state}!version_set.cc@{version\-\_\-set.\-cc}}
+\subsubsection[{state}]{\setlength{\rightskip}{0pt plus 5cm}Saver\-State state}}\label{version__set_8cc_a6aad002d0db5e5e85dc31927a5a6f503}
+\hypertarget{version__set_8cc_a598e50ba29b234ea6ee753e383e79452}{\index{version\-\_\-set.\-cc@{version\-\_\-set.\-cc}!ucmp@{ucmp}}
+\index{ucmp@{ucmp}!version_set.cc@{version\-\_\-set.\-cc}}
+\subsubsection[{ucmp}]{\setlength{\rightskip}{0pt plus 5cm}const Comparator$\ast$ ucmp}}\label{version__set_8cc_a598e50ba29b234ea6ee753e383e79452}
+\hypertarget{version__set_8cc_afced2118ae0bf03db7c7e75a21cfd004}{\index{version\-\_\-set.\-cc@{version\-\_\-set.\-cc}!user\-\_\-key@{user\-\_\-key}}
+\index{user\-\_\-key@{user\-\_\-key}!version_set.cc@{version\-\_\-set.\-cc}}
+\subsubsection[{user\-\_\-key}]{\setlength{\rightskip}{0pt plus 5cm}Slice user\-\_\-key}}\label{version__set_8cc_afced2118ae0bf03db7c7e75a21cfd004}
+\hypertarget{version__set_8cc_a38c8b88c432e666ad10b0c5573e1160a}{\index{version\-\_\-set.\-cc@{version\-\_\-set.\-cc}!value@{value}}
+\index{value@{value}!version_set.cc@{version\-\_\-set.\-cc}}
+\subsubsection[{value}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string$\ast$ value}}\label{version__set_8cc_a38c8b88c432e666ad10b0c5573e1160a}
