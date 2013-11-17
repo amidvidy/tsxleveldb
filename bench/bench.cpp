@@ -1,96 +1,76 @@
 #include <iostream>
-#include <string>
+#include <cstdlib>
 #include <thread>
-#include <iomanip>
+#include <map>
+#include <chrono>
 #include <ctime>
-#include "db.hpp"
+#include "concurrent_counter.hpp"
 
-using namespace std;
+typedef std::chrono::high_resolution_clock timer;
 
- void log(std::string msg) {
-  cout << msg << endl;
-}
-
-typedef chrono::high_resolution_clock timer;
-
-void hammerDB(DB *db, int nthreads, int nkeys) {
-  thread threads[nthreads];
-  
-  timer::time_point tstarts[nthreads];
-  timer::time_point tends[nthreads];
-  
-  log("Starting Benchmark!");
+long hammerArray(counter::ConcurrentCounter *arr, int nthreads, int nwrites) {
+  std::thread threads[nthreads];
 
   timer::time_point start_time = timer::now();
+  
+  // seed prng with time
+  srand((unsigned)time(nullptr));
 
   for (int thread_id = 0; thread_id < nthreads; ++thread_id) {
-    threads[thread_id] = thread([thread_id, nkeys, &tstarts, &tends, db]() {
-	tstarts[thread_id] = timer::now();
-	for (int times = 0; times < nkeys; ++times) {
-	  string gets = (times > 0) ? db->get(to_string(thread_id + times)) : to_string(thread_id);
-	  db->put(to_string(thread_id + times), to_string(thread_id) + gets);
+
+    threads[thread_id] = std::thread([thread_id, nwrites, arr]() {
+	int sz = arr->size();
+	for (int times = 0; times < nwrites;  ++times) {
+	  int idx = rand() % sz;
+	  arr->increment(idx);
 	}
-        tends[thread_id] = timer::now();
+
     });
+    
   }
 
   for (int i = 0; i < nthreads; ++i) {
     threads[i].join();
   }
+
+  timer::time_point end_time = timer::now();
+  return std::chrono::duration_cast<std::chrono::microseconds>(end_time - start_time).count();
   
-  auto end_time = timer::now();
-
-  auto timeMicros = chrono::duration_cast<chrono::microseconds>(end_time - start_time).count();
-  
-  log("Finishing Benchmark!");
-  log(string("Total Duration: ")+to_string(timeMicros)+string(" us"));
-
-  auto DELIM = setw(20);
-  
-  cout << "tid" << DELIM;
-  cout << "start time(us)" << DELIM;
-  cout << "end time(us)" << DELIM;
-  cout << "duration(ms)" << DELIM;
-  cout << "avg per write(us)" << endl;
-
-  for (int i = 0; i < nthreads; ++i) {
-
-    auto duration = chrono::duration_cast<chrono::milliseconds>(tends[i] - tstarts[i]).count();
-    auto tstart = chrono::duration_cast<chrono::microseconds>(tstarts[i] - start_time).count();
-    auto tend = chrono::duration_cast<chrono::microseconds>(tends[i] - start_time).count();
-    auto avg = chrono::duration_cast<chrono::microseconds>(tends[i] - tstarts[i]).count() / nkeys;
-
-    cout << i << DELIM;
-
-    cout << tstart << DELIM;
-    cout << tend << DELIM;
-    cout << duration << DELIM;
-    cout << avg << endl;
-  }
-}
-
-void timeStats(timer::time_point *start_times, timer::time_point *end_times, int nthreads) {
-}
-
-void dbStats(DB *db, int nthreads) {
-  cout << "DB size = " << db->size() << endl;
-  // TODO refactor
-  CoarseGrainedDB *db2 = static_cast<CoarseGrainedDB*>(db);
-  long waitTime = db2->waitTime();
-  long lockCount = db2->getLockCount();
-  cout << "Time spent waiting to acquire lock (total) = " << waitTime << " us" << endl;
-  cout << "Total lock acquisitions = " << lockCount << endl;
-  cout << "Time spnt waiting to acquire lock (average) = " << waitTime / (double)lockCount << " us" << endl;
-  cout << "Waiting time per thread = " << waitTime / nthreads << " us" << endl;
 }
 
 int main(void) {
-  DB *db = new CoarseGrainedDB;
-  int nthreads = 8;
-  hammerDB(db, nthreads, 10000);
-  dbStats(db, nthreads);
-  return 0;
+  std::size_t num_elements = 1000;
+  int nthreads = 8, nwrites = 1000000;
+
+  // Initialize all impls for testing
+  std::map<std::string, counter::ConcurrentCounter*> impls;
+  impls[std::string("nosync")] = new counter::IncorrectConcurrentCounter(num_elements);
+  impls[std::string("coarse")] = new counter::CoarseConcurrentCounter(num_elements);
+  impls[std::string("fine")] = new counter::CoarseConcurrentCounter(num_elements);
+  impls[std::string("rtm_coarse")] = new counter::RTMCoarseConcurrentCounter(num_elements);
+  impls[std::string("rtm_fine")] = new counter::RTMFineConcurrentCounter(num_elements);
+  impls[std::string("rtm")] = new counter::RTMConcurrentCounter(num_elements);
+
+  // run benchmarks on each array and print output
+  for (auto& impl : impls) {
+    auto run_time = hammerArray(impl.second, nthreads, nwrites);
+    int total_recorded = impl.second->total();
+    int total_expected = nthreads * nwrites;
+
+    // i should really be using the std::chrono time conversions but this code is low priority
+    auto avg = run_time / (double)total_recorded;
+
+    int missing = total_recorded - total_expected;
+    std::cout << "Implementation: " << impl.first << std::endl;
+    std::cout << "Elapsed Time (ms): " << (double)run_time * 0.001 << std::endl;
+    std::cout << "Avg (ns): " << avg * 1000 << std::endl;
+    std::cout << "Total = " << total_recorded << "\tExpected = " << total_expected << std::endl;
+    std::cout << ((total_recorded == total_expected) ? 
+		  "All writes were recorded." : 
+                     ((missing<0) ?
+		      (std::string("There were ") + std::to_string(-missing) + std::string(" missing writes!")) :
+		      (std::string("There were ") + std::to_string(missing) + std::string(" writes that should NOT have occured. This should never happen.")))) << std::endl;
+  }
+
+
 }
-
-
-

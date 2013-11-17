@@ -1,0 +1,289 @@
+\hypertarget{classleveldb_1_1_compaction}{\section{leveldb\-:\-:Compaction Class Reference}
+\label{classleveldb_1_1_compaction}\index{leveldb\-::\-Compaction@{leveldb\-::\-Compaction}}
+}
+
+
+{\ttfamily \#include $<$version\-\_\-set.\-h$>$}
+
+
+
+Collaboration diagram for leveldb\-:\-:Compaction\-:
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classleveldb_1_1_compaction_ad29d60feea9dd53f54a2bd9301dbd9c4}{$\sim$\-Compaction} ()
+\item 
+int \hyperlink{classleveldb_1_1_compaction_aaf72769cc8dabece3e513399425f91fa}{level} () const 
+\item 
+\hyperlink{classleveldb_1_1_version_edit}{Version\-Edit} $\ast$ \hyperlink{classleveldb_1_1_compaction_a122e4f7b4fdb6c0d1862624742b34b3d}{edit} ()
+\item 
+int \hyperlink{classleveldb_1_1_compaction_a75bcfebad0f838380ef7f63dc083e992}{num\-\_\-input\-\_\-files} (int which) const 
+\item 
+\hyperlink{structleveldb_1_1_file_meta_data}{File\-Meta\-Data} $\ast$ \hyperlink{classleveldb_1_1_compaction_a989d147c33f2993d4503c56ea0ee3a78}{input} (int which, int i) const 
+\item 
+\hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} \hyperlink{classleveldb_1_1_compaction_a02ecf935a684691ef864a8997bfab793}{Max\-Output\-File\-Size} () const 
+\item 
+bool \hyperlink{classleveldb_1_1_compaction_a9d88e4a33ba63749cb0f0f04fbc74968}{Is\-Trivial\-Move} () const 
+\item 
+void \hyperlink{classleveldb_1_1_compaction_abb1acdc9b882a7497603b13386e7e1a7}{Add\-Input\-Deletions} (\hyperlink{classleveldb_1_1_version_edit}{Version\-Edit} $\ast$\hyperlink{classleveldb_1_1_compaction_a122e4f7b4fdb6c0d1862624742b34b3d}{edit})
+\item 
+bool \hyperlink{classleveldb_1_1_compaction_ae982beb6ee52d92de76a363ef0eefc29}{Is\-Base\-Level\-For\-Key} (const \hyperlink{classleveldb_1_1_slice}{Slice} \&\hyperlink{version__set_8cc_afced2118ae0bf03db7c7e75a21cfd004}{user\-\_\-key})
+\item 
+bool \hyperlink{classleveldb_1_1_compaction_a07624423bb512fedb358a008a38fa0b9}{Should\-Stop\-Before} (const \hyperlink{classleveldb_1_1_slice}{Slice} \&internal\-\_\-key)
+\item 
+void \hyperlink{classleveldb_1_1_compaction_a87ec90747d22dce0d103149db1ecf709}{Release\-Inputs} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classleveldb_1_1_compaction_adc68ea88defa6187764838e73836b9e6}{Compaction} (int \hyperlink{classleveldb_1_1_compaction_aaf72769cc8dabece3e513399425f91fa}{level})
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classleveldb_1_1_compaction_a773153291660bb827362f2290dcc54c1}{level\-\_\-}
+\item 
+\hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} \hyperlink{classleveldb_1_1_compaction_a15c8ad7b57cd233f1c712ad12aa65163}{max\-\_\-output\-\_\-file\-\_\-size\-\_\-}
+\item 
+\hyperlink{classleveldb_1_1_version}{Version} $\ast$ \hyperlink{classleveldb_1_1_compaction_a8671451e616a9553121d554c096f90ad}{input\-\_\-version\-\_\-}
+\item 
+\hyperlink{classleveldb_1_1_version_edit}{Version\-Edit} \hyperlink{classleveldb_1_1_compaction_a425d0ea6460c070e11711a8ca06c68fa}{edit\-\_\-}
+\item 
+std\-::vector$<$ \hyperlink{structleveldb_1_1_file_meta_data}{File\-Meta\-Data} $\ast$ $>$ \hyperlink{classleveldb_1_1_compaction_ae4134d8076b7b3657151e077c394acfc}{inputs\-\_\-} \mbox{[}2\mbox{]}
+\item 
+std\-::vector$<$ \hyperlink{structleveldb_1_1_file_meta_data}{File\-Meta\-Data} $\ast$ $>$ \hyperlink{classleveldb_1_1_compaction_a7b2b689910416375addbeeef11d4b01d}{grandparents\-\_\-}
+\item 
+size\-\_\-t \hyperlink{classleveldb_1_1_compaction_a852631569cc903b8b37f524a86a397e1}{grandparent\-\_\-index\-\_\-}
+\item 
+bool \hyperlink{classleveldb_1_1_compaction_adb523506dfa03c896a813d1248899da8}{seen\-\_\-key\-\_\-}
+\item 
+\hyperlink{stdint_8h_adec1df1b8b51cb32b77e5b86fff46471}{int64\-\_\-t} \hyperlink{classleveldb_1_1_compaction_ae70f3aa618e8db3610726f6684b80335}{overlapped\-\_\-bytes\-\_\-}
+\item 
+size\-\_\-t \hyperlink{classleveldb_1_1_compaction_a64265c8ae55ac34be8e81d9cb1ea22b5}{level\-\_\-ptrs\-\_\-} \mbox{[}\hyperlink{namespaceleveldb_1_1config_ab6017947ae68898c606643bddc0f5b9c}{config\-::k\-Num\-Levels}\mbox{]}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classleveldb_1_1_compaction_ace162f32d4abb584945d3a55a389b0a3}{Version}
+\item 
+class \hyperlink{classleveldb_1_1_compaction_a1827cd1b4d6e9e3c378ce37ca3cce635}{Version\-Set}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classleveldb_1_1_compaction_ad29d60feea9dd53f54a2bd9301dbd9c4}{\index{leveldb\-::\-Compaction@{leveldb\-::\-Compaction}!$\sim$\-Compaction@{$\sim$\-Compaction}}
+\index{$\sim$\-Compaction@{$\sim$\-Compaction}!leveldb::Compaction@{leveldb\-::\-Compaction}}
+\subsubsection[{$\sim$\-Compaction}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::\-Compaction\-::$\sim$\-Compaction (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classleveldb_1_1_compaction_ad29d60feea9dd53f54a2bd9301dbd9c4}
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_compaction_adc68ea88defa6187764838e73836b9e6}{\index{leveldb\-::\-Compaction@{leveldb\-::\-Compaction}!Compaction@{Compaction}}
+\index{Compaction@{Compaction}!leveldb::Compaction@{leveldb\-::\-Compaction}}
+\subsubsection[{Compaction}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::\-Compaction\-::\-Compaction (
+\begin{DoxyParamCaption}
+\item[{int}]{level}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [private]}}}\label{classleveldb_1_1_compaction_adc68ea88defa6187764838e73836b9e6}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classleveldb_1_1_compaction_abb1acdc9b882a7497603b13386e7e1a7}{\index{leveldb\-::\-Compaction@{leveldb\-::\-Compaction}!Add\-Input\-Deletions@{Add\-Input\-Deletions}}
+\index{Add\-Input\-Deletions@{Add\-Input\-Deletions}!leveldb::Compaction@{leveldb\-::\-Compaction}}
+\subsubsection[{Add\-Input\-Deletions}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-Compaction\-::\-Add\-Input\-Deletions (
+\begin{DoxyParamCaption}
+\item[{{\bf Version\-Edit} $\ast$}]{edit}
+\end{DoxyParamCaption}
+)}}\label{classleveldb_1_1_compaction_abb1acdc9b882a7497603b13386e7e1a7}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_compaction_a122e4f7b4fdb6c0d1862624742b34b3d}{\index{leveldb\-::\-Compaction@{leveldb\-::\-Compaction}!edit@{edit}}
+\index{edit@{edit}!leveldb::Compaction@{leveldb\-::\-Compaction}}
+\subsubsection[{edit}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Version\-Edit}$\ast$ leveldb\-::\-Compaction\-::edit (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_compaction_a122e4f7b4fdb6c0d1862624742b34b3d}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_compaction_a989d147c33f2993d4503c56ea0ee3a78}{\index{leveldb\-::\-Compaction@{leveldb\-::\-Compaction}!input@{input}}
+\index{input@{input}!leveldb::Compaction@{leveldb\-::\-Compaction}}
+\subsubsection[{input}]{\setlength{\rightskip}{0pt plus 5cm}{\bf File\-Meta\-Data}$\ast$ leveldb\-::\-Compaction\-::input (
+\begin{DoxyParamCaption}
+\item[{int}]{which, }
+\item[{int}]{i}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_compaction_a989d147c33f2993d4503c56ea0ee3a78}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_compaction_ae982beb6ee52d92de76a363ef0eefc29}{\index{leveldb\-::\-Compaction@{leveldb\-::\-Compaction}!Is\-Base\-Level\-For\-Key@{Is\-Base\-Level\-For\-Key}}
+\index{Is\-Base\-Level\-For\-Key@{Is\-Base\-Level\-For\-Key}!leveldb::Compaction@{leveldb\-::\-Compaction}}
+\subsubsection[{Is\-Base\-Level\-For\-Key}]{\setlength{\rightskip}{0pt plus 5cm}bool leveldb\-::\-Compaction\-::\-Is\-Base\-Level\-For\-Key (
+\begin{DoxyParamCaption}
+\item[{const {\bf Slice} \&}]{user\-\_\-key}
+\end{DoxyParamCaption}
+)}}\label{classleveldb_1_1_compaction_ae982beb6ee52d92de76a363ef0eefc29}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_compaction_a9d88e4a33ba63749cb0f0f04fbc74968}{\index{leveldb\-::\-Compaction@{leveldb\-::\-Compaction}!Is\-Trivial\-Move@{Is\-Trivial\-Move}}
+\index{Is\-Trivial\-Move@{Is\-Trivial\-Move}!leveldb::Compaction@{leveldb\-::\-Compaction}}
+\subsubsection[{Is\-Trivial\-Move}]{\setlength{\rightskip}{0pt plus 5cm}bool leveldb\-::\-Compaction\-::\-Is\-Trivial\-Move (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classleveldb_1_1_compaction_a9d88e4a33ba63749cb0f0f04fbc74968}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_compaction_aaf72769cc8dabece3e513399425f91fa}{\index{leveldb\-::\-Compaction@{leveldb\-::\-Compaction}!level@{level}}
+\index{level@{level}!leveldb::Compaction@{leveldb\-::\-Compaction}}
+\subsubsection[{level}]{\setlength{\rightskip}{0pt plus 5cm}int leveldb\-::\-Compaction\-::level (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_compaction_aaf72769cc8dabece3e513399425f91fa}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_compaction_a02ecf935a684691ef864a8997bfab793}{\index{leveldb\-::\-Compaction@{leveldb\-::\-Compaction}!Max\-Output\-File\-Size@{Max\-Output\-File\-Size}}
+\index{Max\-Output\-File\-Size@{Max\-Output\-File\-Size}!leveldb::Compaction@{leveldb\-::\-Compaction}}
+\subsubsection[{Max\-Output\-File\-Size}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint64\-\_\-t} leveldb\-::\-Compaction\-::\-Max\-Output\-File\-Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_compaction_a02ecf935a684691ef864a8997bfab793}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_compaction_a75bcfebad0f838380ef7f63dc083e992}{\index{leveldb\-::\-Compaction@{leveldb\-::\-Compaction}!num\-\_\-input\-\_\-files@{num\-\_\-input\-\_\-files}}
+\index{num\-\_\-input\-\_\-files@{num\-\_\-input\-\_\-files}!leveldb::Compaction@{leveldb\-::\-Compaction}}
+\subsubsection[{num\-\_\-input\-\_\-files}]{\setlength{\rightskip}{0pt plus 5cm}int leveldb\-::\-Compaction\-::num\-\_\-input\-\_\-files (
+\begin{DoxyParamCaption}
+\item[{int}]{which}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_compaction_a75bcfebad0f838380ef7f63dc083e992}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_compaction_a87ec90747d22dce0d103149db1ecf709}{\index{leveldb\-::\-Compaction@{leveldb\-::\-Compaction}!Release\-Inputs@{Release\-Inputs}}
+\index{Release\-Inputs@{Release\-Inputs}!leveldb::Compaction@{leveldb\-::\-Compaction}}
+\subsubsection[{Release\-Inputs}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-Compaction\-::\-Release\-Inputs (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classleveldb_1_1_compaction_a87ec90747d22dce0d103149db1ecf709}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_compaction_a07624423bb512fedb358a008a38fa0b9}{\index{leveldb\-::\-Compaction@{leveldb\-::\-Compaction}!Should\-Stop\-Before@{Should\-Stop\-Before}}
+\index{Should\-Stop\-Before@{Should\-Stop\-Before}!leveldb::Compaction@{leveldb\-::\-Compaction}}
+\subsubsection[{Should\-Stop\-Before}]{\setlength{\rightskip}{0pt plus 5cm}bool leveldb\-::\-Compaction\-::\-Should\-Stop\-Before (
+\begin{DoxyParamCaption}
+\item[{const {\bf Slice} \&}]{internal\-\_\-key}
+\end{DoxyParamCaption}
+)}}\label{classleveldb_1_1_compaction_a07624423bb512fedb358a008a38fa0b9}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classleveldb_1_1_compaction_ace162f32d4abb584945d3a55a389b0a3}{\index{leveldb\-::\-Compaction@{leveldb\-::\-Compaction}!Version@{Version}}
+\index{Version@{Version}!leveldb::Compaction@{leveldb\-::\-Compaction}}
+\subsubsection[{Version}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Version}\hspace{0.3cm}{\ttfamily [friend]}}}\label{classleveldb_1_1_compaction_ace162f32d4abb584945d3a55a389b0a3}
+\hypertarget{classleveldb_1_1_compaction_a1827cd1b4d6e9e3c378ce37ca3cce635}{\index{leveldb\-::\-Compaction@{leveldb\-::\-Compaction}!Version\-Set@{Version\-Set}}
+\index{Version\-Set@{Version\-Set}!leveldb::Compaction@{leveldb\-::\-Compaction}}
+\subsubsection[{Version\-Set}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Version\-Set}\hspace{0.3cm}{\ttfamily [friend]}}}\label{classleveldb_1_1_compaction_a1827cd1b4d6e9e3c378ce37ca3cce635}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classleveldb_1_1_compaction_a425d0ea6460c070e11711a8ca06c68fa}{\index{leveldb\-::\-Compaction@{leveldb\-::\-Compaction}!edit\-\_\-@{edit\-\_\-}}
+\index{edit\-\_\-@{edit\-\_\-}!leveldb::Compaction@{leveldb\-::\-Compaction}}
+\subsubsection[{edit\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Version\-Edit} leveldb\-::\-Compaction\-::edit\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_compaction_a425d0ea6460c070e11711a8ca06c68fa}
+\hypertarget{classleveldb_1_1_compaction_a852631569cc903b8b37f524a86a397e1}{\index{leveldb\-::\-Compaction@{leveldb\-::\-Compaction}!grandparent\-\_\-index\-\_\-@{grandparent\-\_\-index\-\_\-}}
+\index{grandparent\-\_\-index\-\_\-@{grandparent\-\_\-index\-\_\-}!leveldb::Compaction@{leveldb\-::\-Compaction}}
+\subsubsection[{grandparent\-\_\-index\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t leveldb\-::\-Compaction\-::grandparent\-\_\-index\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_compaction_a852631569cc903b8b37f524a86a397e1}
+\hypertarget{classleveldb_1_1_compaction_a7b2b689910416375addbeeef11d4b01d}{\index{leveldb\-::\-Compaction@{leveldb\-::\-Compaction}!grandparents\-\_\-@{grandparents\-\_\-}}
+\index{grandparents\-\_\-@{grandparents\-\_\-}!leveldb::Compaction@{leveldb\-::\-Compaction}}
+\subsubsection[{grandparents\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<${\bf File\-Meta\-Data}$\ast$$>$ leveldb\-::\-Compaction\-::grandparents\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_compaction_a7b2b689910416375addbeeef11d4b01d}
+\hypertarget{classleveldb_1_1_compaction_a8671451e616a9553121d554c096f90ad}{\index{leveldb\-::\-Compaction@{leveldb\-::\-Compaction}!input\-\_\-version\-\_\-@{input\-\_\-version\-\_\-}}
+\index{input\-\_\-version\-\_\-@{input\-\_\-version\-\_\-}!leveldb::Compaction@{leveldb\-::\-Compaction}}
+\subsubsection[{input\-\_\-version\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Version}$\ast$ leveldb\-::\-Compaction\-::input\-\_\-version\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_compaction_a8671451e616a9553121d554c096f90ad}
+\hypertarget{classleveldb_1_1_compaction_ae4134d8076b7b3657151e077c394acfc}{\index{leveldb\-::\-Compaction@{leveldb\-::\-Compaction}!inputs\-\_\-@{inputs\-\_\-}}
+\index{inputs\-\_\-@{inputs\-\_\-}!leveldb::Compaction@{leveldb\-::\-Compaction}}
+\subsubsection[{inputs\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<${\bf File\-Meta\-Data}$\ast$$>$ leveldb\-::\-Compaction\-::inputs\-\_\-\mbox{[}2\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_compaction_ae4134d8076b7b3657151e077c394acfc}
+\hypertarget{classleveldb_1_1_compaction_a773153291660bb827362f2290dcc54c1}{\index{leveldb\-::\-Compaction@{leveldb\-::\-Compaction}!level\-\_\-@{level\-\_\-}}
+\index{level\-\_\-@{level\-\_\-}!leveldb::Compaction@{leveldb\-::\-Compaction}}
+\subsubsection[{level\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int leveldb\-::\-Compaction\-::level\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_compaction_a773153291660bb827362f2290dcc54c1}
+\hypertarget{classleveldb_1_1_compaction_a64265c8ae55ac34be8e81d9cb1ea22b5}{\index{leveldb\-::\-Compaction@{leveldb\-::\-Compaction}!level\-\_\-ptrs\-\_\-@{level\-\_\-ptrs\-\_\-}}
+\index{level\-\_\-ptrs\-\_\-@{level\-\_\-ptrs\-\_\-}!leveldb::Compaction@{leveldb\-::\-Compaction}}
+\subsubsection[{level\-\_\-ptrs\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t leveldb\-::\-Compaction\-::level\-\_\-ptrs\-\_\-\mbox{[}{\bf config\-::k\-Num\-Levels}\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_compaction_a64265c8ae55ac34be8e81d9cb1ea22b5}
+\hypertarget{classleveldb_1_1_compaction_a15c8ad7b57cd233f1c712ad12aa65163}{\index{leveldb\-::\-Compaction@{leveldb\-::\-Compaction}!max\-\_\-output\-\_\-file\-\_\-size\-\_\-@{max\-\_\-output\-\_\-file\-\_\-size\-\_\-}}
+\index{max\-\_\-output\-\_\-file\-\_\-size\-\_\-@{max\-\_\-output\-\_\-file\-\_\-size\-\_\-}!leveldb::Compaction@{leveldb\-::\-Compaction}}
+\subsubsection[{max\-\_\-output\-\_\-file\-\_\-size\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint64\-\_\-t} leveldb\-::\-Compaction\-::max\-\_\-output\-\_\-file\-\_\-size\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_compaction_a15c8ad7b57cd233f1c712ad12aa65163}
+\hypertarget{classleveldb_1_1_compaction_ae70f3aa618e8db3610726f6684b80335}{\index{leveldb\-::\-Compaction@{leveldb\-::\-Compaction}!overlapped\-\_\-bytes\-\_\-@{overlapped\-\_\-bytes\-\_\-}}
+\index{overlapped\-\_\-bytes\-\_\-@{overlapped\-\_\-bytes\-\_\-}!leveldb::Compaction@{leveldb\-::\-Compaction}}
+\subsubsection[{overlapped\-\_\-bytes\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int64\-\_\-t} leveldb\-::\-Compaction\-::overlapped\-\_\-bytes\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_compaction_ae70f3aa618e8db3610726f6684b80335}
+\hypertarget{classleveldb_1_1_compaction_adb523506dfa03c896a813d1248899da8}{\index{leveldb\-::\-Compaction@{leveldb\-::\-Compaction}!seen\-\_\-key\-\_\-@{seen\-\_\-key\-\_\-}}
+\index{seen\-\_\-key\-\_\-@{seen\-\_\-key\-\_\-}!leveldb::Compaction@{leveldb\-::\-Compaction}}
+\subsubsection[{seen\-\_\-key\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}bool leveldb\-::\-Compaction\-::seen\-\_\-key\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_compaction_adb523506dfa03c896a813d1248899da8}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+db/\hyperlink{version__set_8h}{version\-\_\-set.\-h}\item 
+db/\hyperlink{version__set_8cc}{version\-\_\-set.\-cc}\end{DoxyCompactItemize}

@@ -1,0 +1,258 @@
+\hypertarget{classleveldb_1_1_iterator_wrapper}{\section{leveldb\-:\-:Iterator\-Wrapper Class Reference}
+\label{classleveldb_1_1_iterator_wrapper}\index{leveldb\-::\-Iterator\-Wrapper@{leveldb\-::\-Iterator\-Wrapper}}
+}
+
+
+{\ttfamily \#include $<$iterator\-\_\-wrapper.\-h$>$}
+
+
+
+Collaboration diagram for leveldb\-:\-:Iterator\-Wrapper\-:
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classleveldb_1_1_iterator_wrapper_a8fba8a05ace9ed7a4f0a32f2c8eab73d}{Iterator\-Wrapper} ()
+\item 
+\hyperlink{classleveldb_1_1_iterator_wrapper_ab4714f21809e357b4d5b6bdbec4fe98f}{Iterator\-Wrapper} (\hyperlink{classleveldb_1_1_iterator}{Iterator} $\ast$\hyperlink{classleveldb_1_1_iterator_wrapper_a692d580f1e3deb50cd3dc52e68c6d83e}{iter})
+\item 
+\hyperlink{classleveldb_1_1_iterator_wrapper_acbee07d5d34bbd2e2b5590d77a4e105c}{$\sim$\-Iterator\-Wrapper} ()
+\item 
+\hyperlink{classleveldb_1_1_iterator}{Iterator} $\ast$ \hyperlink{classleveldb_1_1_iterator_wrapper_a692d580f1e3deb50cd3dc52e68c6d83e}{iter} () const 
+\item 
+void \hyperlink{classleveldb_1_1_iterator_wrapper_ae14dd8ac682dd596ba2a3d2407e1a4fd}{Set} (\hyperlink{classleveldb_1_1_iterator}{Iterator} $\ast$\hyperlink{classleveldb_1_1_iterator_wrapper_a692d580f1e3deb50cd3dc52e68c6d83e}{iter})
+\item 
+bool \hyperlink{classleveldb_1_1_iterator_wrapper_a42a21e1d067c50de69f1385ea65e0fc1}{Valid} () const 
+\item 
+\hyperlink{classleveldb_1_1_slice}{Slice} \hyperlink{classleveldb_1_1_iterator_wrapper_a1c37e4c009e2d3b58f2085022c966470}{key} () const 
+\item 
+\hyperlink{classleveldb_1_1_slice}{Slice} \hyperlink{classleveldb_1_1_iterator_wrapper_ae9a12c8e016afc20b493de0bfcdaac21}{value} () const 
+\item 
+\hyperlink{classleveldb_1_1_status}{Status} \hyperlink{classleveldb_1_1_iterator_wrapper_a1aaa880e200db3226cbf1e7373ffb6a8}{status} () const 
+\item 
+void \hyperlink{classleveldb_1_1_iterator_wrapper_abcd48a4cbd0466c8566f2c12ad8a1038}{Next} ()
+\item 
+void \hyperlink{classleveldb_1_1_iterator_wrapper_abfd17dc9aef7f4d59603b2edab2ffb77}{Prev} ()
+\item 
+void \hyperlink{classleveldb_1_1_iterator_wrapper_a5dc3cd4e168e8ec0ab3a094cf36ae5d0}{Seek} (const \hyperlink{classleveldb_1_1_slice}{Slice} \&k)
+\item 
+void \hyperlink{classleveldb_1_1_iterator_wrapper_a06923cd8c121cf7491cc2b043a479445}{Seek\-To\-First} ()
+\item 
+void \hyperlink{classleveldb_1_1_iterator_wrapper_ae09179113b28aa3ea1da70b3a7a5f04b}{Seek\-To\-Last} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classleveldb_1_1_iterator_wrapper_ac89a9cfb38bbcaea2dc1c71e754ce73f}{Update} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classleveldb_1_1_iterator}{Iterator} $\ast$ \hyperlink{classleveldb_1_1_iterator_wrapper_a167c198349e18c74de31f3b5041ab5eb}{iter\-\_\-}
+\item 
+bool \hyperlink{classleveldb_1_1_iterator_wrapper_ab55d69f29a486d72c29319245cece3e9}{valid\-\_\-}
+\item 
+\hyperlink{classleveldb_1_1_slice}{Slice} \hyperlink{classleveldb_1_1_iterator_wrapper_a2f21505d8ed93356a2290526d8894850}{key\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classleveldb_1_1_iterator_wrapper_a8fba8a05ace9ed7a4f0a32f2c8eab73d}{\index{leveldb\-::\-Iterator\-Wrapper@{leveldb\-::\-Iterator\-Wrapper}!Iterator\-Wrapper@{Iterator\-Wrapper}}
+\index{Iterator\-Wrapper@{Iterator\-Wrapper}!leveldb::IteratorWrapper@{leveldb\-::\-Iterator\-Wrapper}}
+\subsubsection[{Iterator\-Wrapper}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::\-Iterator\-Wrapper\-::\-Iterator\-Wrapper (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_iterator_wrapper_a8fba8a05ace9ed7a4f0a32f2c8eab73d}
+\hypertarget{classleveldb_1_1_iterator_wrapper_ab4714f21809e357b4d5b6bdbec4fe98f}{\index{leveldb\-::\-Iterator\-Wrapper@{leveldb\-::\-Iterator\-Wrapper}!Iterator\-Wrapper@{Iterator\-Wrapper}}
+\index{Iterator\-Wrapper@{Iterator\-Wrapper}!leveldb::IteratorWrapper@{leveldb\-::\-Iterator\-Wrapper}}
+\subsubsection[{Iterator\-Wrapper}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::\-Iterator\-Wrapper\-::\-Iterator\-Wrapper (
+\begin{DoxyParamCaption}
+\item[{{\bf Iterator} $\ast$}]{iter}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}}\label{classleveldb_1_1_iterator_wrapper_ab4714f21809e357b4d5b6bdbec4fe98f}
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_iterator_wrapper_acbee07d5d34bbd2e2b5590d77a4e105c}{\index{leveldb\-::\-Iterator\-Wrapper@{leveldb\-::\-Iterator\-Wrapper}!$\sim$\-Iterator\-Wrapper@{$\sim$\-Iterator\-Wrapper}}
+\index{$\sim$\-Iterator\-Wrapper@{$\sim$\-Iterator\-Wrapper}!leveldb::IteratorWrapper@{leveldb\-::\-Iterator\-Wrapper}}
+\subsubsection[{$\sim$\-Iterator\-Wrapper}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::\-Iterator\-Wrapper\-::$\sim$\-Iterator\-Wrapper (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_iterator_wrapper_acbee07d5d34bbd2e2b5590d77a4e105c}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classleveldb_1_1_iterator_wrapper_a692d580f1e3deb50cd3dc52e68c6d83e}{\index{leveldb\-::\-Iterator\-Wrapper@{leveldb\-::\-Iterator\-Wrapper}!iter@{iter}}
+\index{iter@{iter}!leveldb::IteratorWrapper@{leveldb\-::\-Iterator\-Wrapper}}
+\subsubsection[{iter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Iterator}$\ast$ leveldb\-::\-Iterator\-Wrapper\-::iter (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_iterator_wrapper_a692d580f1e3deb50cd3dc52e68c6d83e}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_iterator_wrapper_a1c37e4c009e2d3b58f2085022c966470}{\index{leveldb\-::\-Iterator\-Wrapper@{leveldb\-::\-Iterator\-Wrapper}!key@{key}}
+\index{key@{key}!leveldb::IteratorWrapper@{leveldb\-::\-Iterator\-Wrapper}}
+\subsubsection[{key}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Slice} leveldb\-::\-Iterator\-Wrapper\-::key (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_iterator_wrapper_a1c37e4c009e2d3b58f2085022c966470}
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_iterator_wrapper_abcd48a4cbd0466c8566f2c12ad8a1038}{\index{leveldb\-::\-Iterator\-Wrapper@{leveldb\-::\-Iterator\-Wrapper}!Next@{Next}}
+\index{Next@{Next}!leveldb::IteratorWrapper@{leveldb\-::\-Iterator\-Wrapper}}
+\subsubsection[{Next}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-Iterator\-Wrapper\-::\-Next (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_iterator_wrapper_abcd48a4cbd0466c8566f2c12ad8a1038}
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_iterator_wrapper_abfd17dc9aef7f4d59603b2edab2ffb77}{\index{leveldb\-::\-Iterator\-Wrapper@{leveldb\-::\-Iterator\-Wrapper}!Prev@{Prev}}
+\index{Prev@{Prev}!leveldb::IteratorWrapper@{leveldb\-::\-Iterator\-Wrapper}}
+\subsubsection[{Prev}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-Iterator\-Wrapper\-::\-Prev (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_iterator_wrapper_abfd17dc9aef7f4d59603b2edab2ffb77}
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_iterator_wrapper_a5dc3cd4e168e8ec0ab3a094cf36ae5d0}{\index{leveldb\-::\-Iterator\-Wrapper@{leveldb\-::\-Iterator\-Wrapper}!Seek@{Seek}}
+\index{Seek@{Seek}!leveldb::IteratorWrapper@{leveldb\-::\-Iterator\-Wrapper}}
+\subsubsection[{Seek}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-Iterator\-Wrapper\-::\-Seek (
+\begin{DoxyParamCaption}
+\item[{const {\bf Slice} \&}]{k}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_iterator_wrapper_a5dc3cd4e168e8ec0ab3a094cf36ae5d0}
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_iterator_wrapper_a06923cd8c121cf7491cc2b043a479445}{\index{leveldb\-::\-Iterator\-Wrapper@{leveldb\-::\-Iterator\-Wrapper}!Seek\-To\-First@{Seek\-To\-First}}
+\index{Seek\-To\-First@{Seek\-To\-First}!leveldb::IteratorWrapper@{leveldb\-::\-Iterator\-Wrapper}}
+\subsubsection[{Seek\-To\-First}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-Iterator\-Wrapper\-::\-Seek\-To\-First (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_iterator_wrapper_a06923cd8c121cf7491cc2b043a479445}
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_iterator_wrapper_ae09179113b28aa3ea1da70b3a7a5f04b}{\index{leveldb\-::\-Iterator\-Wrapper@{leveldb\-::\-Iterator\-Wrapper}!Seek\-To\-Last@{Seek\-To\-Last}}
+\index{Seek\-To\-Last@{Seek\-To\-Last}!leveldb::IteratorWrapper@{leveldb\-::\-Iterator\-Wrapper}}
+\subsubsection[{Seek\-To\-Last}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-Iterator\-Wrapper\-::\-Seek\-To\-Last (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_iterator_wrapper_ae09179113b28aa3ea1da70b3a7a5f04b}
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_iterator_wrapper_ae14dd8ac682dd596ba2a3d2407e1a4fd}{\index{leveldb\-::\-Iterator\-Wrapper@{leveldb\-::\-Iterator\-Wrapper}!Set@{Set}}
+\index{Set@{Set}!leveldb::IteratorWrapper@{leveldb\-::\-Iterator\-Wrapper}}
+\subsubsection[{Set}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-Iterator\-Wrapper\-::\-Set (
+\begin{DoxyParamCaption}
+\item[{{\bf Iterator} $\ast$}]{iter}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_iterator_wrapper_ae14dd8ac682dd596ba2a3d2407e1a4fd}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_iterator_wrapper_a1aaa880e200db3226cbf1e7373ffb6a8}{\index{leveldb\-::\-Iterator\-Wrapper@{leveldb\-::\-Iterator\-Wrapper}!status@{status}}
+\index{status@{status}!leveldb::IteratorWrapper@{leveldb\-::\-Iterator\-Wrapper}}
+\subsubsection[{status}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Status} leveldb\-::\-Iterator\-Wrapper\-::status (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_iterator_wrapper_a1aaa880e200db3226cbf1e7373ffb6a8}
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_iterator_wrapper_ac89a9cfb38bbcaea2dc1c71e754ce73f}{\index{leveldb\-::\-Iterator\-Wrapper@{leveldb\-::\-Iterator\-Wrapper}!Update@{Update}}
+\index{Update@{Update}!leveldb::IteratorWrapper@{leveldb\-::\-Iterator\-Wrapper}}
+\subsubsection[{Update}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-Iterator\-Wrapper\-::\-Update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{classleveldb_1_1_iterator_wrapper_ac89a9cfb38bbcaea2dc1c71e754ce73f}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_iterator_wrapper_a42a21e1d067c50de69f1385ea65e0fc1}{\index{leveldb\-::\-Iterator\-Wrapper@{leveldb\-::\-Iterator\-Wrapper}!Valid@{Valid}}
+\index{Valid@{Valid}!leveldb::IteratorWrapper@{leveldb\-::\-Iterator\-Wrapper}}
+\subsubsection[{Valid}]{\setlength{\rightskip}{0pt plus 5cm}bool leveldb\-::\-Iterator\-Wrapper\-::\-Valid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_iterator_wrapper_a42a21e1d067c50de69f1385ea65e0fc1}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_iterator_wrapper_ae9a12c8e016afc20b493de0bfcdaac21}{\index{leveldb\-::\-Iterator\-Wrapper@{leveldb\-::\-Iterator\-Wrapper}!value@{value}}
+\index{value@{value}!leveldb::IteratorWrapper@{leveldb\-::\-Iterator\-Wrapper}}
+\subsubsection[{value}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Slice} leveldb\-::\-Iterator\-Wrapper\-::value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_iterator_wrapper_ae9a12c8e016afc20b493de0bfcdaac21}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classleveldb_1_1_iterator_wrapper_a167c198349e18c74de31f3b5041ab5eb}{\index{leveldb\-::\-Iterator\-Wrapper@{leveldb\-::\-Iterator\-Wrapper}!iter\-\_\-@{iter\-\_\-}}
+\index{iter\-\_\-@{iter\-\_\-}!leveldb::IteratorWrapper@{leveldb\-::\-Iterator\-Wrapper}}
+\subsubsection[{iter\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Iterator}$\ast$ leveldb\-::\-Iterator\-Wrapper\-::iter\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_iterator_wrapper_a167c198349e18c74de31f3b5041ab5eb}
+\hypertarget{classleveldb_1_1_iterator_wrapper_a2f21505d8ed93356a2290526d8894850}{\index{leveldb\-::\-Iterator\-Wrapper@{leveldb\-::\-Iterator\-Wrapper}!key\-\_\-@{key\-\_\-}}
+\index{key\-\_\-@{key\-\_\-}!leveldb::IteratorWrapper@{leveldb\-::\-Iterator\-Wrapper}}
+\subsubsection[{key\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Slice} leveldb\-::\-Iterator\-Wrapper\-::key\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_iterator_wrapper_a2f21505d8ed93356a2290526d8894850}
+\hypertarget{classleveldb_1_1_iterator_wrapper_ab55d69f29a486d72c29319245cece3e9}{\index{leveldb\-::\-Iterator\-Wrapper@{leveldb\-::\-Iterator\-Wrapper}!valid\-\_\-@{valid\-\_\-}}
+\index{valid\-\_\-@{valid\-\_\-}!leveldb::IteratorWrapper@{leveldb\-::\-Iterator\-Wrapper}}
+\subsubsection[{valid\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}bool leveldb\-::\-Iterator\-Wrapper\-::valid\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_iterator_wrapper_ab55d69f29a486d72c29319245cece3e9}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+table/\hyperlink{iterator__wrapper_8h}{iterator\-\_\-wrapper.\-h}\end{DoxyCompactItemize}

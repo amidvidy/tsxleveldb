@@ -1,0 +1,48 @@
+digraph "leveldb_destroy_db"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="leveldb_destroy_db",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="SaveError",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$c_8cc.html#a497964a40fe68ed7ddcc377832253a6b"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="leveldb::Status::ok",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_status.html#ab31e89a858c766716e3dc952be857c65"];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="leveldb::Status::ToString",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_status.html#aa8b56d8fe2cd1873778de5d1e5407866"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="leveldb::Status::code",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_status.html#a7e1c5239636c9e0ffff6df6144f32af3"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="leveldb::DestroyDB",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceleveldb.html#a5b0819d4d4adc2147b5e91a5553fd7dc"];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="leveldb::Env::GetChildren",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_env.html#a53028e3112d7bb3bf6574ddaab18d6f6"];
+  Node6 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="leveldb::Status::OK",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_status.html#a8e3720d233281c874a53c17e081f51b3"];
+  Node8 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="leveldb::Status::Status",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_status.html#a941ec793179e81df3032a612cfe5039f"];
+  Node6 -> Node10 [color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="leveldb::LockFileName",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceleveldb.html#a9f772d88ab2d47dec0d68e5eb85c579e"];
+  Node6 -> Node11 [color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="leveldb::Env::LockFile",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_env.html#a9b7266f0444f832e428328ff19b7b54c"];
+  Node6 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 -> Node12 [color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="leveldb::ParseFileName",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceleveldb.html#af18fdbbcb483d40c35b4aaa4f00d3f6c"];
+  Node12 -> Node13 [color="midnightblue",fontsize="10",style="solid"];
+  Node13 [label="leveldb::Slice::starts_with",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_slice.html#aac9a3ee9b05567c8c93793e7593a5f13"];
+  Node12 -> Node14 [color="midnightblue",fontsize="10",style="solid"];
+  Node14 [label="leveldb::Slice::remove\l_prefix",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_slice.html#a1be5b22958a115ebecb2b017aad2b3f6"];
+  Node14 -> Node15 [color="midnightblue",fontsize="10",style="solid"];
+  Node15 [label="leveldb::Slice::size",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_slice.html#a947d3173f04f8a30553e89046daf91d5"];
+  Node12 -> Node16 [color="midnightblue",fontsize="10",style="solid"];
+  Node16 [label="leveldb::ConsumeDecimalNumber",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceleveldb.html#a1bda628b65e834063ccc5fcaec8328f8"];
+  Node16 -> Node17 [color="midnightblue",fontsize="10",style="solid"];
+  Node17 [label="leveldb::Slice::empty",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_slice.html#a7d0b93d5801bff5656068647759dcb8f"];
+  Node16 -> Node14 [color="midnightblue",fontsize="10",style="solid"];
+  Node12 -> Node17 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 -> Node18 [color="midnightblue",fontsize="10",style="solid"];
+  Node18 [label="leveldb::Env::DeleteFile",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_env.html#ac956b984466d5f09309664177687f9af"];
+  Node6 -> Node19 [color="midnightblue",fontsize="10",style="solid"];
+  Node19 [label="leveldb::Env::UnlockFile",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_env.html#a194a2ee3c21bc0b204ad0e5bc3b81d4b"];
+  Node6 -> Node20 [color="midnightblue",fontsize="10",style="solid"];
+  Node20 [label="leveldb::Env::DeleteDir",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_env.html#a4e1a1c4495541e426b146cba56c59627"];
+}

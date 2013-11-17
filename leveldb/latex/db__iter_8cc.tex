@@ -1,0 +1,60 @@
+\hypertarget{db__iter_8cc}{\section{db/db\-\_\-iter.cc File Reference}
+\label{db__iter_8cc}\index{db/db\-\_\-iter.\-cc@{db/db\-\_\-iter.\-cc}}
+}
+{\ttfamily \#include \char`\"{}db/db\-\_\-iter.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}db/filename.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}db/db\-\_\-impl.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}db/dbformat.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}leveldb/env.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}leveldb/iterator.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}port/port.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}util/logging.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}util/mutexlock.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}util/random.\-h\char`\"{}}\\*
+Include dependency graph for db\-\_\-iter.\-cc\-:
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespaceleveldb}{leveldb}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Iterator $\ast$ \hyperlink{namespaceleveldb_a0d4b256207f27afbf4ad03976fe0fae8}{leveldb\-::\-New\-D\-B\-Iterator} (D\-B\-Impl $\ast$db, const Comparator $\ast$user\-\_\-key\-\_\-comparator, Iterator $\ast$internal\-\_\-iter, Sequence\-Number sequence, \hyperlink{stdint_8h_a435d1572bf3f880d55459d9805097f62}{uint32\-\_\-t} seed)
+\end{DoxyCompactItemize}
+
+
+\subsection{Variable Documentation}
+\hypertarget{db__iter_8cc_ad7b04f495c81548797ac6e571217e641}{\index{db\-\_\-iter.\-cc@{db\-\_\-iter.\-cc}!bytes\-\_\-counter\-\_\-@{bytes\-\_\-counter\-\_\-}}
+\index{bytes\-\_\-counter\-\_\-@{bytes\-\_\-counter\-\_\-}!db_iter.cc@{db\-\_\-iter.\-cc}}
+\subsubsection[{bytes\-\_\-counter\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}ssize\-\_\-t bytes\-\_\-counter\-\_\-}}\label{db__iter_8cc_ad7b04f495c81548797ac6e571217e641}
+\hypertarget{db__iter_8cc_a800a4b7944923551d5251c8a5ab7e12d}{\index{db\-\_\-iter.\-cc@{db\-\_\-iter.\-cc}!db\-\_\-@{db\-\_\-}}
+\index{db\-\_\-@{db\-\_\-}!db_iter.cc@{db\-\_\-iter.\-cc}}
+\subsubsection[{db\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}D\-B\-Impl$\ast$ db\-\_\-}}\label{db__iter_8cc_a800a4b7944923551d5251c8a5ab7e12d}
+\hypertarget{db__iter_8cc_a5810761555d70cb3d0a00e18a953c51d}{\index{db\-\_\-iter.\-cc@{db\-\_\-iter.\-cc}!direction\-\_\-@{direction\-\_\-}}
+\index{direction\-\_\-@{direction\-\_\-}!db_iter.cc@{db\-\_\-iter.\-cc}}
+\subsubsection[{direction\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}Direction direction\-\_\-}}\label{db__iter_8cc_a5810761555d70cb3d0a00e18a953c51d}
+\hypertarget{db__iter_8cc_adcd6787cae081feb1d6a04d18a1ed50f}{\index{db\-\_\-iter.\-cc@{db\-\_\-iter.\-cc}!iter\-\_\-@{iter\-\_\-}}
+\index{iter\-\_\-@{iter\-\_\-}!db_iter.cc@{db\-\_\-iter.\-cc}}
+\subsubsection[{iter\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}Iterator$\ast$ const iter\-\_\-}}\label{db__iter_8cc_adcd6787cae081feb1d6a04d18a1ed50f}
+\hypertarget{db__iter_8cc_a4a7f9c93f6051e1ccfa5882a018edef3}{\index{db\-\_\-iter.\-cc@{db\-\_\-iter.\-cc}!rnd\-\_\-@{rnd\-\_\-}}
+\index{rnd\-\_\-@{rnd\-\_\-}!db_iter.cc@{db\-\_\-iter.\-cc}}
+\subsubsection[{rnd\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}Random rnd\-\_\-}}\label{db__iter_8cc_a4a7f9c93f6051e1ccfa5882a018edef3}
+\hypertarget{db__iter_8cc_a3312b47cd5efcc60f693e074b6c71674}{\index{db\-\_\-iter.\-cc@{db\-\_\-iter.\-cc}!saved\-\_\-key\-\_\-@{saved\-\_\-key\-\_\-}}
+\index{saved\-\_\-key\-\_\-@{saved\-\_\-key\-\_\-}!db_iter.cc@{db\-\_\-iter.\-cc}}
+\subsubsection[{saved\-\_\-key\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string saved\-\_\-key\-\_\-}}\label{db__iter_8cc_a3312b47cd5efcc60f693e074b6c71674}
+\hypertarget{db__iter_8cc_a605fff7e8df0858fba7242efa0823d18}{\index{db\-\_\-iter.\-cc@{db\-\_\-iter.\-cc}!saved\-\_\-value\-\_\-@{saved\-\_\-value\-\_\-}}
+\index{saved\-\_\-value\-\_\-@{saved\-\_\-value\-\_\-}!db_iter.cc@{db\-\_\-iter.\-cc}}
+\subsubsection[{saved\-\_\-value\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string saved\-\_\-value\-\_\-}}\label{db__iter_8cc_a605fff7e8df0858fba7242efa0823d18}
+\hypertarget{db__iter_8cc_ad3dada019e9d76eafa6aeb8a9d8aaa69}{\index{db\-\_\-iter.\-cc@{db\-\_\-iter.\-cc}!sequence\-\_\-@{sequence\-\_\-}}
+\index{sequence\-\_\-@{sequence\-\_\-}!db_iter.cc@{db\-\_\-iter.\-cc}}
+\subsubsection[{sequence\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}Sequence\-Number const sequence\-\_\-}}\label{db__iter_8cc_ad3dada019e9d76eafa6aeb8a9d8aaa69}
+\hypertarget{db__iter_8cc_abf8c6fcb7d9c9fa39e283d086f0bb345}{\index{db\-\_\-iter.\-cc@{db\-\_\-iter.\-cc}!status\-\_\-@{status\-\_\-}}
+\index{status\-\_\-@{status\-\_\-}!db_iter.cc@{db\-\_\-iter.\-cc}}
+\subsubsection[{status\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}Status status\-\_\-}}\label{db__iter_8cc_abf8c6fcb7d9c9fa39e283d086f0bb345}
+\hypertarget{db__iter_8cc_a16f87dfda542ddfe797fe5137c4feb7d}{\index{db\-\_\-iter.\-cc@{db\-\_\-iter.\-cc}!user\-\_\-comparator\-\_\-@{user\-\_\-comparator\-\_\-}}
+\index{user\-\_\-comparator\-\_\-@{user\-\_\-comparator\-\_\-}!db_iter.cc@{db\-\_\-iter.\-cc}}
+\subsubsection[{user\-\_\-comparator\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}const Comparator$\ast$ const user\-\_\-comparator\-\_\-}}\label{db__iter_8cc_a16f87dfda542ddfe797fe5137c4feb7d}
+\hypertarget{db__iter_8cc_a2dd81c85c0b7f68b59750ae4441f7da4}{\index{db\-\_\-iter.\-cc@{db\-\_\-iter.\-cc}!valid\-\_\-@{valid\-\_\-}}
+\index{valid\-\_\-@{valid\-\_\-}!db_iter.cc@{db\-\_\-iter.\-cc}}
+\subsubsection[{valid\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}bool valid\-\_\-}}\label{db__iter_8cc_a2dd81c85c0b7f68b59750ae4441f7da4}

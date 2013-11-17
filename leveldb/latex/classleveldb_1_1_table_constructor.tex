@@ -1,0 +1,144 @@
+\hypertarget{classleveldb_1_1_table_constructor}{\section{leveldb\-:\-:Table\-Constructor Class Reference}
+\label{classleveldb_1_1_table_constructor}\index{leveldb\-::\-Table\-Constructor@{leveldb\-::\-Table\-Constructor}}
+}
+
+
+Inheritance diagram for leveldb\-:\-:Table\-Constructor\-:
+
+
+Collaboration diagram for leveldb\-:\-:Table\-Constructor\-:
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classleveldb_1_1_table_constructor_acfc791dc15a8fac77f9715fda659eb19}{Table\-Constructor} (const \hyperlink{structleveldb_1_1_comparator}{Comparator} $\ast$\hyperlink{table__test_8cc_a87863e435922f0910ca8db43f02a6c0b}{cmp})
+\item 
+\hyperlink{classleveldb_1_1_table_constructor_a4be60433281b7d5e6aa37688be8d1631}{$\sim$\-Table\-Constructor} ()
+\item 
+virtual \hyperlink{classleveldb_1_1_status}{Status} \hyperlink{classleveldb_1_1_table_constructor_aa8ce3799a55859c2dee50d3e08f56ef2}{Finish\-Impl} (const \hyperlink{structleveldb_1_1_options}{Options} \&options, const \hyperlink{namespaceleveldb_aac1e50450147be263e08252c6700f7a7}{K\-V\-Map} \&\hyperlink{classleveldb_1_1_constructor_a55a0363200d6e86d8beb3b15b75e3824}{data})
+\item 
+virtual \hyperlink{classleveldb_1_1_iterator}{Iterator} $\ast$ \hyperlink{classleveldb_1_1_table_constructor_a4897f3cb58fed2bd3a9f7f6468b6a105}{New\-Iterator} () const 
+\item 
+\hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} \hyperlink{classleveldb_1_1_table_constructor_a798ee199e8fdc5ec020725dba32a4cb6}{Approximate\-Offset\-Of} (const \hyperlink{classleveldb_1_1_slice}{Slice} \&key) const 
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classleveldb_1_1_table_constructor_abec5d786710e07f6c97d303760de5c59}{Reset} ()
+\item 
+\hyperlink{classleveldb_1_1_table_constructor_abb22915c3e423fbdbe8484516e9ad1e9}{Table\-Constructor} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classleveldb_1_1_string_source}{String\-Source} $\ast$ \hyperlink{classleveldb_1_1_table_constructor_ac578b58d0fc6aa7dbcc0528593230ffc}{source\-\_\-}
+\item 
+\hyperlink{classleveldb_1_1_table}{Table} $\ast$ \hyperlink{classleveldb_1_1_table_constructor_a502747db59d0b700d4e61e2ee558f053}{table\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classleveldb_1_1_table_constructor_acfc791dc15a8fac77f9715fda659eb19}{\index{leveldb\-::\-Table\-Constructor@{leveldb\-::\-Table\-Constructor}!Table\-Constructor@{Table\-Constructor}}
+\index{Table\-Constructor@{Table\-Constructor}!leveldb::TableConstructor@{leveldb\-::\-Table\-Constructor}}
+\subsubsection[{Table\-Constructor}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::\-Table\-Constructor\-::\-Table\-Constructor (
+\begin{DoxyParamCaption}
+\item[{const {\bf Comparator} $\ast$}]{cmp}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_table_constructor_acfc791dc15a8fac77f9715fda659eb19}
+\hypertarget{classleveldb_1_1_table_constructor_a4be60433281b7d5e6aa37688be8d1631}{\index{leveldb\-::\-Table\-Constructor@{leveldb\-::\-Table\-Constructor}!$\sim$\-Table\-Constructor@{$\sim$\-Table\-Constructor}}
+\index{$\sim$\-Table\-Constructor@{$\sim$\-Table\-Constructor}!leveldb::TableConstructor@{leveldb\-::\-Table\-Constructor}}
+\subsubsection[{$\sim$\-Table\-Constructor}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::\-Table\-Constructor\-::$\sim$\-Table\-Constructor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_table_constructor_a4be60433281b7d5e6aa37688be8d1631}
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_table_constructor_abb22915c3e423fbdbe8484516e9ad1e9}{\index{leveldb\-::\-Table\-Constructor@{leveldb\-::\-Table\-Constructor}!Table\-Constructor@{Table\-Constructor}}
+\index{Table\-Constructor@{Table\-Constructor}!leveldb::TableConstructor@{leveldb\-::\-Table\-Constructor}}
+\subsubsection[{Table\-Constructor}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::\-Table\-Constructor\-::\-Table\-Constructor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_table_constructor_abb22915c3e423fbdbe8484516e9ad1e9}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classleveldb_1_1_table_constructor_a798ee199e8fdc5ec020725dba32a4cb6}{\index{leveldb\-::\-Table\-Constructor@{leveldb\-::\-Table\-Constructor}!Approximate\-Offset\-Of@{Approximate\-Offset\-Of}}
+\index{Approximate\-Offset\-Of@{Approximate\-Offset\-Of}!leveldb::TableConstructor@{leveldb\-::\-Table\-Constructor}}
+\subsubsection[{Approximate\-Offset\-Of}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint64\-\_\-t} leveldb\-::\-Table\-Constructor\-::\-Approximate\-Offset\-Of (
+\begin{DoxyParamCaption}
+\item[{const {\bf Slice} \&}]{key}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_table_constructor_a798ee199e8fdc5ec020725dba32a4cb6}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_table_constructor_aa8ce3799a55859c2dee50d3e08f56ef2}{\index{leveldb\-::\-Table\-Constructor@{leveldb\-::\-Table\-Constructor}!Finish\-Impl@{Finish\-Impl}}
+\index{Finish\-Impl@{Finish\-Impl}!leveldb::TableConstructor@{leveldb\-::\-Table\-Constructor}}
+\subsubsection[{Finish\-Impl}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Status} leveldb\-::\-Table\-Constructor\-::\-Finish\-Impl (
+\begin{DoxyParamCaption}
+\item[{const {\bf Options} \&}]{options, }
+\item[{const {\bf K\-V\-Map} \&}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classleveldb_1_1_table_constructor_aa8ce3799a55859c2dee50d3e08f56ef2}
+
+
+Implements \hyperlink{classleveldb_1_1_constructor_a0f11e251cfbe990b5b0a4e7040923189}{leveldb\-::\-Constructor}.
+
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_table_constructor_a4897f3cb58fed2bd3a9f7f6468b6a105}{\index{leveldb\-::\-Table\-Constructor@{leveldb\-::\-Table\-Constructor}!New\-Iterator@{New\-Iterator}}
+\index{New\-Iterator@{New\-Iterator}!leveldb::TableConstructor@{leveldb\-::\-Table\-Constructor}}
+\subsubsection[{New\-Iterator}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Iterator}$\ast$ leveldb\-::\-Table\-Constructor\-::\-New\-Iterator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classleveldb_1_1_table_constructor_a4897f3cb58fed2bd3a9f7f6468b6a105}
+
+
+Implements \hyperlink{classleveldb_1_1_constructor_a362b24b7194f605b655f5a136e0ae43c}{leveldb\-::\-Constructor}.
+
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_table_constructor_abec5d786710e07f6c97d303760de5c59}{\index{leveldb\-::\-Table\-Constructor@{leveldb\-::\-Table\-Constructor}!Reset@{Reset}}
+\index{Reset@{Reset}!leveldb::TableConstructor@{leveldb\-::\-Table\-Constructor}}
+\subsubsection[{Reset}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-Table\-Constructor\-::\-Reset (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{classleveldb_1_1_table_constructor_abec5d786710e07f6c97d303760de5c59}
+
+
+Here is the caller graph for this function\-:
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classleveldb_1_1_table_constructor_ac578b58d0fc6aa7dbcc0528593230ffc}{\index{leveldb\-::\-Table\-Constructor@{leveldb\-::\-Table\-Constructor}!source\-\_\-@{source\-\_\-}}
+\index{source\-\_\-@{source\-\_\-}!leveldb::TableConstructor@{leveldb\-::\-Table\-Constructor}}
+\subsubsection[{source\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf String\-Source}$\ast$ leveldb\-::\-Table\-Constructor\-::source\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_table_constructor_ac578b58d0fc6aa7dbcc0528593230ffc}
+\hypertarget{classleveldb_1_1_table_constructor_a502747db59d0b700d4e61e2ee558f053}{\index{leveldb\-::\-Table\-Constructor@{leveldb\-::\-Table\-Constructor}!table\-\_\-@{table\-\_\-}}
+\index{table\-\_\-@{table\-\_\-}!leveldb::TableConstructor@{leveldb\-::\-Table\-Constructor}}
+\subsubsection[{table\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Table}$\ast$ leveldb\-::\-Table\-Constructor\-::table\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_table_constructor_a502747db59d0b700d4e61e2ee558f053}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+table/\hyperlink{table__test_8cc}{table\-\_\-test.\-cc}\end{DoxyCompactItemize}

@@ -1,0 +1,131 @@
+\hypertarget{classleveldb_1_1_test_state}{\section{leveldb\-:\-:Test\-State Class Reference}
+\label{classleveldb_1_1_test_state}\index{leveldb\-::\-Test\-State@{leveldb\-::\-Test\-State}}
+}
+
+
+Collaboration diagram for leveldb\-:\-:Test\-State\-:
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classleveldb_1_1_test_state_a1bf1f0a16815237ff1f29d2925d9a4ad}{Reader\-State} \{ \hyperlink{classleveldb_1_1_test_state_a1bf1f0a16815237ff1f29d2925d9a4ada93ff507fceeb18ff487d343ce24e49fb}{S\-T\-A\-R\-T\-I\-N\-G}, 
+\hyperlink{classleveldb_1_1_test_state_a1bf1f0a16815237ff1f29d2925d9a4adab21481f14b9bab70778076d33ea574da}{R\-U\-N\-N\-I\-N\-G}, 
+\hyperlink{classleveldb_1_1_test_state_a1bf1f0a16815237ff1f29d2925d9a4ada5d7f032453f326a46f7ebd8b3f0c7d83}{D\-O\-N\-E}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classleveldb_1_1_test_state_a777f2182bef5c524d580dc26ec589c2d}{Test\-State} (int s)
+\item 
+void \hyperlink{classleveldb_1_1_test_state_ab11f5574ad50202e18e8274e16953f0a}{Wait} (\hyperlink{classleveldb_1_1_test_state_a1bf1f0a16815237ff1f29d2925d9a4ad}{Reader\-State} s)
+\item 
+void \hyperlink{classleveldb_1_1_test_state_ae63a695f700220714efa0e622511740c}{Change} (\hyperlink{classleveldb_1_1_test_state_a1bf1f0a16815237ff1f29d2925d9a4ad}{Reader\-State} s)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classleveldb_1_1_concurrent_test}{Concurrent\-Test} \hyperlink{classleveldb_1_1_test_state_a090fd0c59fb141c4843511b4020f05e9}{t\-\_\-}
+\item 
+int \hyperlink{classleveldb_1_1_test_state_aa44f519b574945b0061c88df42fd4725}{seed\-\_\-}
+\item 
+\hyperlink{classleveldb_1_1port_1_1_atomic_pointer}{port\-::\-Atomic\-Pointer} \hyperlink{classleveldb_1_1_test_state_a04e07cf69866e925db3fafd5cf9fa23f}{quit\-\_\-flag\-\_\-}
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classleveldb_1_1port_1_1_mutex}{port\-::\-Mutex} \hyperlink{classleveldb_1_1_test_state_a52f2e84b88c3c8f7f958a2879dce5f59}{mu\-\_\-}
+\item 
+\hyperlink{classleveldb_1_1_test_state_a1bf1f0a16815237ff1f29d2925d9a4ad}{Reader\-State} \hyperlink{classleveldb_1_1_test_state_abfbcdedcb6b61445e42231a7d766dc3d}{state\-\_\-}
+\item 
+\hyperlink{classleveldb_1_1port_1_1_cond_var}{port\-::\-Cond\-Var} \hyperlink{classleveldb_1_1_test_state_a57e246c3b9588ae25bc647cf079e2cdd}{state\-\_\-cv\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classleveldb_1_1_test_state_a1bf1f0a16815237ff1f29d2925d9a4ad}{\index{leveldb\-::\-Test\-State@{leveldb\-::\-Test\-State}!Reader\-State@{Reader\-State}}
+\index{Reader\-State@{Reader\-State}!leveldb::TestState@{leveldb\-::\-Test\-State}}
+\subsubsection[{Reader\-State}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf leveldb\-::\-Test\-State\-::\-Reader\-State}}}\label{classleveldb_1_1_test_state_a1bf1f0a16815237ff1f29d2925d9a4ad}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{S\-T\-A\-R\-T\-I\-N\-G@{S\-T\-A\-R\-T\-I\-N\-G}!leveldb\-::\-Test\-State@{leveldb\-::\-Test\-State}}\index{leveldb\-::\-Test\-State@{leveldb\-::\-Test\-State}!S\-T\-A\-R\-T\-I\-N\-G@{S\-T\-A\-R\-T\-I\-N\-G}}\item[{\em 
+\hypertarget{classleveldb_1_1_test_state_a1bf1f0a16815237ff1f29d2925d9a4ada93ff507fceeb18ff487d343ce24e49fb}{S\-T\-A\-R\-T\-I\-N\-G}\label{classleveldb_1_1_test_state_a1bf1f0a16815237ff1f29d2925d9a4ada93ff507fceeb18ff487d343ce24e49fb}
+}]\index{R\-U\-N\-N\-I\-N\-G@{R\-U\-N\-N\-I\-N\-G}!leveldb\-::\-Test\-State@{leveldb\-::\-Test\-State}}\index{leveldb\-::\-Test\-State@{leveldb\-::\-Test\-State}!R\-U\-N\-N\-I\-N\-G@{R\-U\-N\-N\-I\-N\-G}}\item[{\em 
+\hypertarget{classleveldb_1_1_test_state_a1bf1f0a16815237ff1f29d2925d9a4adab21481f14b9bab70778076d33ea574da}{R\-U\-N\-N\-I\-N\-G}\label{classleveldb_1_1_test_state_a1bf1f0a16815237ff1f29d2925d9a4adab21481f14b9bab70778076d33ea574da}
+}]\index{D\-O\-N\-E@{D\-O\-N\-E}!leveldb\-::\-Test\-State@{leveldb\-::\-Test\-State}}\index{leveldb\-::\-Test\-State@{leveldb\-::\-Test\-State}!D\-O\-N\-E@{D\-O\-N\-E}}\item[{\em 
+\hypertarget{classleveldb_1_1_test_state_a1bf1f0a16815237ff1f29d2925d9a4ada5d7f032453f326a46f7ebd8b3f0c7d83}{D\-O\-N\-E}\label{classleveldb_1_1_test_state_a1bf1f0a16815237ff1f29d2925d9a4ada5d7f032453f326a46f7ebd8b3f0c7d83}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classleveldb_1_1_test_state_a777f2182bef5c524d580dc26ec589c2d}{\index{leveldb\-::\-Test\-State@{leveldb\-::\-Test\-State}!Test\-State@{Test\-State}}
+\index{Test\-State@{Test\-State}!leveldb::TestState@{leveldb\-::\-Test\-State}}
+\subsubsection[{Test\-State}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::\-Test\-State\-::\-Test\-State (
+\begin{DoxyParamCaption}
+\item[{int}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}}\label{classleveldb_1_1_test_state_a777f2182bef5c524d580dc26ec589c2d}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classleveldb_1_1_test_state_ae63a695f700220714efa0e622511740c}{\index{leveldb\-::\-Test\-State@{leveldb\-::\-Test\-State}!Change@{Change}}
+\index{Change@{Change}!leveldb::TestState@{leveldb\-::\-Test\-State}}
+\subsubsection[{Change}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-Test\-State\-::\-Change (
+\begin{DoxyParamCaption}
+\item[{{\bf Reader\-State}}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_test_state_ae63a695f700220714efa0e622511740c}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_test_state_ab11f5574ad50202e18e8274e16953f0a}{\index{leveldb\-::\-Test\-State@{leveldb\-::\-Test\-State}!Wait@{Wait}}
+\index{Wait@{Wait}!leveldb::TestState@{leveldb\-::\-Test\-State}}
+\subsubsection[{Wait}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-Test\-State\-::\-Wait (
+\begin{DoxyParamCaption}
+\item[{{\bf Reader\-State}}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_test_state_ab11f5574ad50202e18e8274e16953f0a}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classleveldb_1_1_test_state_a52f2e84b88c3c8f7f958a2879dce5f59}{\index{leveldb\-::\-Test\-State@{leveldb\-::\-Test\-State}!mu\-\_\-@{mu\-\_\-}}
+\index{mu\-\_\-@{mu\-\_\-}!leveldb::TestState@{leveldb\-::\-Test\-State}}
+\subsubsection[{mu\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf port\-::\-Mutex} leveldb\-::\-Test\-State\-::mu\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_test_state_a52f2e84b88c3c8f7f958a2879dce5f59}
+\hypertarget{classleveldb_1_1_test_state_a04e07cf69866e925db3fafd5cf9fa23f}{\index{leveldb\-::\-Test\-State@{leveldb\-::\-Test\-State}!quit\-\_\-flag\-\_\-@{quit\-\_\-flag\-\_\-}}
+\index{quit\-\_\-flag\-\_\-@{quit\-\_\-flag\-\_\-}!leveldb::TestState@{leveldb\-::\-Test\-State}}
+\subsubsection[{quit\-\_\-flag\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf port\-::\-Atomic\-Pointer} leveldb\-::\-Test\-State\-::quit\-\_\-flag\-\_\-}}\label{classleveldb_1_1_test_state_a04e07cf69866e925db3fafd5cf9fa23f}
+\hypertarget{classleveldb_1_1_test_state_aa44f519b574945b0061c88df42fd4725}{\index{leveldb\-::\-Test\-State@{leveldb\-::\-Test\-State}!seed\-\_\-@{seed\-\_\-}}
+\index{seed\-\_\-@{seed\-\_\-}!leveldb::TestState@{leveldb\-::\-Test\-State}}
+\subsubsection[{seed\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int leveldb\-::\-Test\-State\-::seed\-\_\-}}\label{classleveldb_1_1_test_state_aa44f519b574945b0061c88df42fd4725}
+\hypertarget{classleveldb_1_1_test_state_abfbcdedcb6b61445e42231a7d766dc3d}{\index{leveldb\-::\-Test\-State@{leveldb\-::\-Test\-State}!state\-\_\-@{state\-\_\-}}
+\index{state\-\_\-@{state\-\_\-}!leveldb::TestState@{leveldb\-::\-Test\-State}}
+\subsubsection[{state\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Reader\-State} leveldb\-::\-Test\-State\-::state\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_test_state_abfbcdedcb6b61445e42231a7d766dc3d}
+\hypertarget{classleveldb_1_1_test_state_a57e246c3b9588ae25bc647cf079e2cdd}{\index{leveldb\-::\-Test\-State@{leveldb\-::\-Test\-State}!state\-\_\-cv\-\_\-@{state\-\_\-cv\-\_\-}}
+\index{state\-\_\-cv\-\_\-@{state\-\_\-cv\-\_\-}!leveldb::TestState@{leveldb\-::\-Test\-State}}
+\subsubsection[{state\-\_\-cv\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf port\-::\-Cond\-Var} leveldb\-::\-Test\-State\-::state\-\_\-cv\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_test_state_a57e246c3b9588ae25bc647cf079e2cdd}
+\hypertarget{classleveldb_1_1_test_state_a090fd0c59fb141c4843511b4020f05e9}{\index{leveldb\-::\-Test\-State@{leveldb\-::\-Test\-State}!t\-\_\-@{t\-\_\-}}
+\index{t\-\_\-@{t\-\_\-}!leveldb::TestState@{leveldb\-::\-Test\-State}}
+\subsubsection[{t\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Concurrent\-Test} leveldb\-::\-Test\-State\-::t\-\_\-}}\label{classleveldb_1_1_test_state_a090fd0c59fb141c4843511b4020f05e9}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+db/\hyperlink{skiplist__test_8cc}{skiplist\-\_\-test.\-cc}\end{DoxyCompactItemize}

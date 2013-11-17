@@ -1,0 +1,104 @@
+\hypertarget{classleveldb_1_1_mem_table_constructor}{\section{leveldb\-:\-:Mem\-Table\-Constructor Class Reference}
+\label{classleveldb_1_1_mem_table_constructor}\index{leveldb\-::\-Mem\-Table\-Constructor@{leveldb\-::\-Mem\-Table\-Constructor}}
+}
+
+
+Inheritance diagram for leveldb\-:\-:Mem\-Table\-Constructor\-:
+
+
+Collaboration diagram for leveldb\-:\-:Mem\-Table\-Constructor\-:
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classleveldb_1_1_mem_table_constructor_a5f4c341eb97e6e3938ec05b98455664a}{Mem\-Table\-Constructor} (const \hyperlink{structleveldb_1_1_comparator}{Comparator} $\ast$\hyperlink{table__test_8cc_a87863e435922f0910ca8db43f02a6c0b}{cmp})
+\item 
+\hyperlink{classleveldb_1_1_mem_table_constructor_a893a3f902a8dbbe7c2548c3ab46512c1}{$\sim$\-Mem\-Table\-Constructor} ()
+\item 
+virtual \hyperlink{classleveldb_1_1_status}{Status} \hyperlink{classleveldb_1_1_mem_table_constructor_a78851e48bd187f231934e128ab050624}{Finish\-Impl} (const \hyperlink{structleveldb_1_1_options}{Options} \&options, const \hyperlink{namespaceleveldb_aac1e50450147be263e08252c6700f7a7}{K\-V\-Map} \&\hyperlink{classleveldb_1_1_constructor_a55a0363200d6e86d8beb3b15b75e3824}{data})
+\item 
+virtual \hyperlink{classleveldb_1_1_iterator}{Iterator} $\ast$ \hyperlink{classleveldb_1_1_mem_table_constructor_ae6eca097713c07eed6f630cca780fedd}{New\-Iterator} () const 
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classleveldb_1_1_internal_key_comparator}{Internal\-Key\-Comparator} \hyperlink{classleveldb_1_1_mem_table_constructor_a77fb87fcc606b862e0aa997d97dd8275}{internal\-\_\-comparator\-\_\-}
+\item 
+\hyperlink{classleveldb_1_1_mem_table}{Mem\-Table} $\ast$ \hyperlink{classleveldb_1_1_mem_table_constructor_aee8e2d856ed9333890cce216b425edb8}{memtable\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classleveldb_1_1_mem_table_constructor_a5f4c341eb97e6e3938ec05b98455664a}{\index{leveldb\-::\-Mem\-Table\-Constructor@{leveldb\-::\-Mem\-Table\-Constructor}!Mem\-Table\-Constructor@{Mem\-Table\-Constructor}}
+\index{Mem\-Table\-Constructor@{Mem\-Table\-Constructor}!leveldb::MemTableConstructor@{leveldb\-::\-Mem\-Table\-Constructor}}
+\subsubsection[{Mem\-Table\-Constructor}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::\-Mem\-Table\-Constructor\-::\-Mem\-Table\-Constructor (
+\begin{DoxyParamCaption}
+\item[{const {\bf Comparator} $\ast$}]{cmp}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}}\label{classleveldb_1_1_mem_table_constructor_a5f4c341eb97e6e3938ec05b98455664a}
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_mem_table_constructor_a893a3f902a8dbbe7c2548c3ab46512c1}{\index{leveldb\-::\-Mem\-Table\-Constructor@{leveldb\-::\-Mem\-Table\-Constructor}!$\sim$\-Mem\-Table\-Constructor@{$\sim$\-Mem\-Table\-Constructor}}
+\index{$\sim$\-Mem\-Table\-Constructor@{$\sim$\-Mem\-Table\-Constructor}!leveldb::MemTableConstructor@{leveldb\-::\-Mem\-Table\-Constructor}}
+\subsubsection[{$\sim$\-Mem\-Table\-Constructor}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::\-Mem\-Table\-Constructor\-::$\sim$\-Mem\-Table\-Constructor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_mem_table_constructor_a893a3f902a8dbbe7c2548c3ab46512c1}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classleveldb_1_1_mem_table_constructor_a78851e48bd187f231934e128ab050624}{\index{leveldb\-::\-Mem\-Table\-Constructor@{leveldb\-::\-Mem\-Table\-Constructor}!Finish\-Impl@{Finish\-Impl}}
+\index{Finish\-Impl@{Finish\-Impl}!leveldb::MemTableConstructor@{leveldb\-::\-Mem\-Table\-Constructor}}
+\subsubsection[{Finish\-Impl}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Status} leveldb\-::\-Mem\-Table\-Constructor\-::\-Finish\-Impl (
+\begin{DoxyParamCaption}
+\item[{const {\bf Options} \&}]{options, }
+\item[{const {\bf K\-V\-Map} \&}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classleveldb_1_1_mem_table_constructor_a78851e48bd187f231934e128ab050624}
+
+
+Implements \hyperlink{classleveldb_1_1_constructor_a0f11e251cfbe990b5b0a4e7040923189}{leveldb\-::\-Constructor}.
+
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_mem_table_constructor_ae6eca097713c07eed6f630cca780fedd}{\index{leveldb\-::\-Mem\-Table\-Constructor@{leveldb\-::\-Mem\-Table\-Constructor}!New\-Iterator@{New\-Iterator}}
+\index{New\-Iterator@{New\-Iterator}!leveldb::MemTableConstructor@{leveldb\-::\-Mem\-Table\-Constructor}}
+\subsubsection[{New\-Iterator}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Iterator}$\ast$ leveldb\-::\-Mem\-Table\-Constructor\-::\-New\-Iterator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classleveldb_1_1_mem_table_constructor_ae6eca097713c07eed6f630cca780fedd}
+
+
+Implements \hyperlink{classleveldb_1_1_constructor_a362b24b7194f605b655f5a136e0ae43c}{leveldb\-::\-Constructor}.
+
+
+
+Here is the call graph for this function\-:
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classleveldb_1_1_mem_table_constructor_a77fb87fcc606b862e0aa997d97dd8275}{\index{leveldb\-::\-Mem\-Table\-Constructor@{leveldb\-::\-Mem\-Table\-Constructor}!internal\-\_\-comparator\-\_\-@{internal\-\_\-comparator\-\_\-}}
+\index{internal\-\_\-comparator\-\_\-@{internal\-\_\-comparator\-\_\-}!leveldb::MemTableConstructor@{leveldb\-::\-Mem\-Table\-Constructor}}
+\subsubsection[{internal\-\_\-comparator\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Internal\-Key\-Comparator} leveldb\-::\-Mem\-Table\-Constructor\-::internal\-\_\-comparator\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_mem_table_constructor_a77fb87fcc606b862e0aa997d97dd8275}
+\hypertarget{classleveldb_1_1_mem_table_constructor_aee8e2d856ed9333890cce216b425edb8}{\index{leveldb\-::\-Mem\-Table\-Constructor@{leveldb\-::\-Mem\-Table\-Constructor}!memtable\-\_\-@{memtable\-\_\-}}
+\index{memtable\-\_\-@{memtable\-\_\-}!leveldb::MemTableConstructor@{leveldb\-::\-Mem\-Table\-Constructor}}
+\subsubsection[{memtable\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Mem\-Table}$\ast$ leveldb\-::\-Mem\-Table\-Constructor\-::memtable\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_mem_table_constructor_aee8e2d856ed9333890cce216b425edb8}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+table/\hyperlink{table__test_8cc}{table\-\_\-test.\-cc}\end{DoxyCompactItemize}

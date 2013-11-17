@@ -1,0 +1,24 @@
+var searchData=
+[
+  ['ucmp',['ucmp',['../version__set_8cc.html#a598e50ba29b234ea6ee753e383e79452',1,'version_set.cc']]],
+  ['uint16_5ft',['uint16_t',['../stdint_8h.html#a273cf69d639a59973b6019625df33e30',1,'stdint.h']]],
+  ['uint32_5ft',['uint32_t',['../stdint_8h.html#a435d1572bf3f880d55459d9805097f62',1,'stdint.h']]],
+  ['uint64_5ft',['uint64_t',['../stdint_8h.html#aaa5d1cd013383c889537491c3cfd9aad',1,'stdint.h']]],
+  ['uint8_5ft',['uint8_t',['../stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5',1,'stdint.h']]],
+  ['uniform',['Uniform',['../classleveldb_1_1_random.html#a9281323c3f115fa47a0f329f72ad2a80',1,'leveldb::Random']]],
+  ['unlock',['Unlock',['../classleveldb_1_1port_1_1_mutex.html#a9d69a21c53dad7732b2006acf87f006b',1,'leveldb::port::Mutex::Unlock()'],['../classleveldb_1_1port_1_1_mutex.html#a9d69a21c53dad7732b2006acf87f006b',1,'leveldb::port::Mutex::Unlock()']]],
+  ['unlock_5ffunction',['UNLOCK_FUNCTION',['../thread__annotations_8h.html#abd56e19f9b4781b1a5212a46951cf5c3',1,'thread_annotations.h']]],
+  ['unlockfile',['UnlockFile',['../classleveldb_1_1_env.html#a194a2ee3c21bc0b204ad0e5bc3b81d4b',1,'leveldb::Env::UnlockFile()'],['../classleveldb_1_1_env_wrapper.html#ab1779dda39167eaa38e660bcc69988c4',1,'leveldb::EnvWrapper::UnlockFile()']]],
+  ['unmask',['Unmask',['../namespaceleveldb_1_1crc32c.html#aef7889069ea26dd145509fff4c4e6b66',1,'leveldb::crc32c']]],
+  ['unref',['Unref',['../classleveldb_1_1_mem_table.html#a5dcbf17d1477e6098a30dadd0745cfb2',1,'leveldb::MemTable::Unref()'],['../classleveldb_1_1_version.html#a3f623697f625d4740d5b273c0bf6223a',1,'leveldb::Version::Unref()'],['../classleveldb_1_1_cache.html#a1b1489f524cd29e05ae3f679a2552b98',1,'leveldb::Cache::Unref()']]],
+  ['unrefentry',['UnrefEntry',['../namespaceleveldb.html#a623e7ee79df088f3d37ebf5b55c906ba',1,'leveldb']]],
+  ['update',['Update',['../classleveldb_1_1_iterator_wrapper.html#ac89a9cfb38bbcaea2dc1c71e754ce73f',1,'leveldb::IteratorWrapper']]],
+  ['updatestats',['UpdateStats',['../classleveldb_1_1_version.html#a7e5b8451deb7c4b9006fd9d5ccfc2cef',1,'leveldb::Version']]],
+  ['usage',['Usage',['../leveldb__main_8cc.html#ae28fba57a1edfa47dfb0ed05fb38131c',1,'leveldb_main.cc']]],
+  ['usage_5f',['usage_',['../cache_8cc.html#a428ee80699f3b7e005b52f1be7ecc438',1,'cache.cc']]],
+  ['user_5fcomparator',['user_comparator',['../classleveldb_1_1_d_b_impl.html#ae44e6e6aa990419f17ee990245d2b51d',1,'leveldb::DBImpl::user_comparator()'],['../classleveldb_1_1_internal_key_comparator.html#a86ca575a4560bb76e2bcebc0618abd31',1,'leveldb::InternalKeyComparator::user_comparator()']]],
+  ['user_5fcomparator_5f',['user_comparator_',['../classleveldb_1_1_internal_key_comparator.html#a1011c83522345c023e740c9fc900d536',1,'leveldb::InternalKeyComparator::user_comparator_()'],['../db__iter_8cc.html#a16f87dfda542ddfe797fe5137c4feb7d',1,'user_comparator_():&#160;db_iter.cc']]],
+  ['user_5ffunction',['user_function',['../env__posix_8cc.html#af979fdc384a4b76ab4101929b2cfdd9b',1,'env_posix.cc']]],
+  ['user_5fkey',['user_key',['../structleveldb_1_1_parsed_internal_key.html#aa6e30fcf3c95fc1485d60fa08efe2b9d',1,'leveldb::ParsedInternalKey::user_key()'],['../classleveldb_1_1_internal_key.html#a8eeee76862e806006549784fe21fff61',1,'leveldb::InternalKey::user_key()'],['../classleveldb_1_1_lookup_key.html#adf91e9804383dd1b2bfd8545df45342f',1,'leveldb::LookupKey::user_key()'],['../version__set_8cc.html#afced2118ae0bf03db7c7e75a21cfd004',1,'user_key():&#160;version_set.cc']]],
+  ['user_5fpolicy_5f',['user_policy_',['../classleveldb_1_1_internal_filter_policy.html#ab8fddd1a2c3c5325e92d6e19ee024f62',1,'leveldb::InternalFilterPolicy']]]
+];

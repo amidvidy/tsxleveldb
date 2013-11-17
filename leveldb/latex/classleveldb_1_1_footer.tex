@@ -1,0 +1,161 @@
+\hypertarget{classleveldb_1_1_footer}{\section{leveldb\-:\-:Footer Class Reference}
+\label{classleveldb_1_1_footer}\index{leveldb\-::\-Footer@{leveldb\-::\-Footer}}
+}
+
+
+{\ttfamily \#include $<$format.\-h$>$}
+
+
+
+Collaboration diagram for leveldb\-:\-:Footer\-:
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \hyperlink{classleveldb_1_1_footer_a991d6146eb5c455db47f91e378cf489ba52c5b622f817edcfaf2bb274851a3791}{k\-Encoded\-Length} = 2$\ast$\-Block\-Handle\-:\-:k\-Max\-Encoded\-Length + 8
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classleveldb_1_1_footer_ab549912506721bad11eda55be5a04a82}{Footer} ()
+\item 
+const \hyperlink{classleveldb_1_1_block_handle}{Block\-Handle} \& \hyperlink{classleveldb_1_1_footer_a44f2334ed064f7045d76b898f5fadb6a}{metaindex\-\_\-handle} () const 
+\item 
+void \hyperlink{classleveldb_1_1_footer_ac937207010f61550c703b2d732422566}{set\-\_\-metaindex\-\_\-handle} (const \hyperlink{classleveldb_1_1_block_handle}{Block\-Handle} \&h)
+\item 
+const \hyperlink{classleveldb_1_1_block_handle}{Block\-Handle} \& \hyperlink{classleveldb_1_1_footer_aae1a72a668da9eae3fa2f6620e3ea559}{index\-\_\-handle} () const 
+\item 
+void \hyperlink{classleveldb_1_1_footer_ae2f4be5947f5e4983a160d6d01edea68}{set\-\_\-index\-\_\-handle} (const \hyperlink{classleveldb_1_1_block_handle}{Block\-Handle} \&h)
+\item 
+void \hyperlink{classleveldb_1_1_footer_ac0148e441c2f25d7d24ec14ba2099f58}{Encode\-To} (std\-::string $\ast$dst) const 
+\item 
+\hyperlink{classleveldb_1_1_status}{Status} \hyperlink{classleveldb_1_1_footer_a3cbcb311694e4cf410358f97d53d94e3}{Decode\-From} (\hyperlink{classleveldb_1_1_slice}{Slice} $\ast$input)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classleveldb_1_1_block_handle}{Block\-Handle} \hyperlink{classleveldb_1_1_footer_acd0ebf81829a0717e2dc832638fc0558}{metaindex\-\_\-handle\-\_\-}
+\item 
+\hyperlink{classleveldb_1_1_block_handle}{Block\-Handle} \hyperlink{classleveldb_1_1_footer_ab930d9087cd95d58531d7698354f0b7b}{index\-\_\-handle\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classleveldb_1_1_footer_a991d6146eb5c455db47f91e378cf489b}{\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}}\label{classleveldb_1_1_footer_a991d6146eb5c455db47f91e378cf489b}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{k\-Encoded\-Length@{k\-Encoded\-Length}!leveldb\-::\-Footer@{leveldb\-::\-Footer}}\index{leveldb\-::\-Footer@{leveldb\-::\-Footer}!k\-Encoded\-Length@{k\-Encoded\-Length}}\item[{\em 
+\hypertarget{classleveldb_1_1_footer_a991d6146eb5c455db47f91e378cf489ba52c5b622f817edcfaf2bb274851a3791}{k\-Encoded\-Length}\label{classleveldb_1_1_footer_a991d6146eb5c455db47f91e378cf489ba52c5b622f817edcfaf2bb274851a3791}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classleveldb_1_1_footer_ab549912506721bad11eda55be5a04a82}{\index{leveldb\-::\-Footer@{leveldb\-::\-Footer}!Footer@{Footer}}
+\index{Footer@{Footer}!leveldb::Footer@{leveldb\-::\-Footer}}
+\subsubsection[{Footer}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::\-Footer\-::\-Footer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_footer_ab549912506721bad11eda55be5a04a82}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classleveldb_1_1_footer_a3cbcb311694e4cf410358f97d53d94e3}{\index{leveldb\-::\-Footer@{leveldb\-::\-Footer}!Decode\-From@{Decode\-From}}
+\index{Decode\-From@{Decode\-From}!leveldb::Footer@{leveldb\-::\-Footer}}
+\subsubsection[{Decode\-From}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Status} leveldb\-::\-Footer\-::\-Decode\-From (
+\begin{DoxyParamCaption}
+\item[{{\bf Slice} $\ast$}]{input}
+\end{DoxyParamCaption}
+)}}\label{classleveldb_1_1_footer_a3cbcb311694e4cf410358f97d53d94e3}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_footer_ac0148e441c2f25d7d24ec14ba2099f58}{\index{leveldb\-::\-Footer@{leveldb\-::\-Footer}!Encode\-To@{Encode\-To}}
+\index{Encode\-To@{Encode\-To}!leveldb::Footer@{leveldb\-::\-Footer}}
+\subsubsection[{Encode\-To}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-Footer\-::\-Encode\-To (
+\begin{DoxyParamCaption}
+\item[{std\-::string $\ast$}]{dst}
+\end{DoxyParamCaption}
+) const}}\label{classleveldb_1_1_footer_ac0148e441c2f25d7d24ec14ba2099f58}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_footer_aae1a72a668da9eae3fa2f6620e3ea559}{\index{leveldb\-::\-Footer@{leveldb\-::\-Footer}!index\-\_\-handle@{index\-\_\-handle}}
+\index{index\-\_\-handle@{index\-\_\-handle}!leveldb::Footer@{leveldb\-::\-Footer}}
+\subsubsection[{index\-\_\-handle}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Block\-Handle}\& leveldb\-::\-Footer\-::index\-\_\-handle (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_footer_aae1a72a668da9eae3fa2f6620e3ea559}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_footer_a44f2334ed064f7045d76b898f5fadb6a}{\index{leveldb\-::\-Footer@{leveldb\-::\-Footer}!metaindex\-\_\-handle@{metaindex\-\_\-handle}}
+\index{metaindex\-\_\-handle@{metaindex\-\_\-handle}!leveldb::Footer@{leveldb\-::\-Footer}}
+\subsubsection[{metaindex\-\_\-handle}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Block\-Handle}\& leveldb\-::\-Footer\-::metaindex\-\_\-handle (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_footer_a44f2334ed064f7045d76b898f5fadb6a}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_footer_ae2f4be5947f5e4983a160d6d01edea68}{\index{leveldb\-::\-Footer@{leveldb\-::\-Footer}!set\-\_\-index\-\_\-handle@{set\-\_\-index\-\_\-handle}}
+\index{set\-\_\-index\-\_\-handle@{set\-\_\-index\-\_\-handle}!leveldb::Footer@{leveldb\-::\-Footer}}
+\subsubsection[{set\-\_\-index\-\_\-handle}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-Footer\-::set\-\_\-index\-\_\-handle (
+\begin{DoxyParamCaption}
+\item[{const {\bf Block\-Handle} \&}]{h}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_footer_ae2f4be5947f5e4983a160d6d01edea68}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_footer_ac937207010f61550c703b2d732422566}{\index{leveldb\-::\-Footer@{leveldb\-::\-Footer}!set\-\_\-metaindex\-\_\-handle@{set\-\_\-metaindex\-\_\-handle}}
+\index{set\-\_\-metaindex\-\_\-handle@{set\-\_\-metaindex\-\_\-handle}!leveldb::Footer@{leveldb\-::\-Footer}}
+\subsubsection[{set\-\_\-metaindex\-\_\-handle}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-Footer\-::set\-\_\-metaindex\-\_\-handle (
+\begin{DoxyParamCaption}
+\item[{const {\bf Block\-Handle} \&}]{h}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_footer_ac937207010f61550c703b2d732422566}
+
+
+Here is the caller graph for this function\-:
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classleveldb_1_1_footer_ab930d9087cd95d58531d7698354f0b7b}{\index{leveldb\-::\-Footer@{leveldb\-::\-Footer}!index\-\_\-handle\-\_\-@{index\-\_\-handle\-\_\-}}
+\index{index\-\_\-handle\-\_\-@{index\-\_\-handle\-\_\-}!leveldb::Footer@{leveldb\-::\-Footer}}
+\subsubsection[{index\-\_\-handle\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Block\-Handle} leveldb\-::\-Footer\-::index\-\_\-handle\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_footer_ab930d9087cd95d58531d7698354f0b7b}
+\hypertarget{classleveldb_1_1_footer_acd0ebf81829a0717e2dc832638fc0558}{\index{leveldb\-::\-Footer@{leveldb\-::\-Footer}!metaindex\-\_\-handle\-\_\-@{metaindex\-\_\-handle\-\_\-}}
+\index{metaindex\-\_\-handle\-\_\-@{metaindex\-\_\-handle\-\_\-}!leveldb::Footer@{leveldb\-::\-Footer}}
+\subsubsection[{metaindex\-\_\-handle\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Block\-Handle} leveldb\-::\-Footer\-::metaindex\-\_\-handle\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_footer_acd0ebf81829a0717e2dc832638fc0558}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+table/\hyperlink{format_8h}{format.\-h}\item 
+table/\hyperlink{format_8cc}{format.\-cc}\end{DoxyCompactItemize}

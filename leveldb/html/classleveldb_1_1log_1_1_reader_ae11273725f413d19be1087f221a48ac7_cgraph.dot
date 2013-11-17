@@ -1,0 +1,17 @@
+digraph "leveldb::log::Reader::SkipToInitialBlock"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="leveldb::log::Reader\l::SkipToInitialBlock",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="leveldb::SequentialFile\l::Skip",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_sequential_file.html#a18c94279fc058cad4d03cdfe04b12179"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="leveldb::Status::ok",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_status.html#ab31e89a858c766716e3dc952be857c65"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="leveldb::log::Reader\l::ReportDrop",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1log_1_1_reader.html#afadf9a8b44005fd8e9fc798d35befb50"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="leveldb::Slice::size",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_slice.html#a947d3173f04f8a30553e89046daf91d5"];
+  Node4 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="leveldb::log::Reader\l::Reporter::Corruption",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1log_1_1_reader_1_1_reporter.html#a2d28d30f9559d5fc9f94af41d239932e"];
+}

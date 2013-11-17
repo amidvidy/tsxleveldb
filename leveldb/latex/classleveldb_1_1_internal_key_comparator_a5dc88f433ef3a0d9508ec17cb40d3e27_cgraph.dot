@@ -1,0 +1,35 @@
+digraph "leveldb::InternalKeyComparator::FindShortSuccessor"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="leveldb::InternalKeyComparator\l::FindShortSuccessor",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="leveldb::ExtractUserKey",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceleveldb.html#a1c889869840312393b805ad91a41b94f"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="leveldb::Slice::size",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_slice.html#a947d3173f04f8a30553e89046daf91d5"];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="leveldb::Slice::data",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_slice.html#aa64861043d9deee6889461bf0593cf73"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="leveldb::Comparator\l::FindShortSuccessor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structleveldb_1_1_comparator.html#a49751dd906595633161dfad943d24b3b"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="leveldb::Comparator\l::Compare",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structleveldb_1_1_comparator.html#a05dae6edcad3c7db23827c0233d74039"];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="leveldb::PutFixed64",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceleveldb.html#a720cd9030ba5f867ded835b57caa1d06"];
+  Node7 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="leveldb::EncodeFixed64",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceleveldb.html#a725a2c0ebf763116b4ca3fb78564ff70"];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="leveldb::PackSequenceAndType",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceleveldb.html#aefa1c5ac4d405fe1077c19fa2fe68647"];
+  Node1 -> Node10 [color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="leveldb::InternalKeyComparator\l::Compare",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_internal_key_comparator.html#a6469a0d67a9025173d31ec6e1cd5f80e"];
+  Node10 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node10 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node10 -> Node11 [color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="leveldb::DecodeFixed64",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceleveldb.html#a239098b0291873752d0be16633652825"];
+  Node11 -> Node12 [color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="leveldb::DecodeFixed32",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceleveldb.html#adae574304f9d1ed3e95742167cd449a9"];
+  Node10 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node10 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+}

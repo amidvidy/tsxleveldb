@@ -1,0 +1,25 @@
+digraph "leveldb::DBImpl::MakeRoomForWrite"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="leveldb::DBImpl::MakeRoom\lForWrite",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="leveldb::DBImpl::Write",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_d_b_impl.html#ac0d0b472717099d6a02ad9dace4e8ef4"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="leveldb::TEST",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceleveldb.html#a25dbda5a48ec782778d331e4ccb81b6b"];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="leveldb::DBImpl::TEST\l_CompactMemTable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_d_b_impl.html#a8642703fd1398cd8e3f5f24ee0b9da23"];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="leveldb::AutoCompactTest\l::DoReads",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_auto_compact_test.html#a1d1feea1aef1257e461c35eb5b51fa52"];
+  Node4 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="leveldb::TEST",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceleveldb.html#a1da99cee14629599882010198aabfa2a"];
+  Node4 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="leveldb::DBImpl::Compact\lRange",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_d_b_impl.html#aa6df0739fc0b49380c284347e411b8ed"];
+  Node7 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="leveldb::TEST",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceleveldb.html#a2bb2a098a32d42044e6be132020b29b0"];
+  Node4 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="leveldb::DBTest::MakeTables",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_d_b_test.html#ace931478fa5ad2c48a8aa95a344e19fd"];
+  Node9 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="leveldb::DBTest::FillLevels",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_d_b_test.html#ac291d06db907f5fee7caf04f44f65493"];
+}

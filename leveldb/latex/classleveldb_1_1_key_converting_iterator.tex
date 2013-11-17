@@ -1,0 +1,246 @@
+\hypertarget{classleveldb_1_1_key_converting_iterator}{\section{leveldb\-:\-:Key\-Converting\-Iterator Class Reference}
+\label{classleveldb_1_1_key_converting_iterator}\index{leveldb\-::\-Key\-Converting\-Iterator@{leveldb\-::\-Key\-Converting\-Iterator}}
+}
+
+
+Inheritance diagram for leveldb\-:\-:Key\-Converting\-Iterator\-:
+
+
+Collaboration diagram for leveldb\-:\-:Key\-Converting\-Iterator\-:
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classleveldb_1_1_key_converting_iterator_a7b5c28a94749f2e02ecc9021bb9adb51}{Key\-Converting\-Iterator} (\hyperlink{classleveldb_1_1_iterator}{Iterator} $\ast$iter)
+\item 
+virtual \hyperlink{classleveldb_1_1_key_converting_iterator_a2a774b0a90768168394ca0c35ba3a87e}{$\sim$\-Key\-Converting\-Iterator} ()
+\item 
+virtual bool \hyperlink{classleveldb_1_1_key_converting_iterator_a941cabf2e0b1c9647faa037b7ad55668}{Valid} () const 
+\item 
+virtual void \hyperlink{classleveldb_1_1_key_converting_iterator_a6af9b763a5831c2fdcd8c3bebfef6ae4}{Seek} (const \hyperlink{classleveldb_1_1_slice}{Slice} \&target)
+\item 
+virtual void \hyperlink{classleveldb_1_1_key_converting_iterator_a56a6b7b97747d5e33981a66c28670cc9}{Seek\-To\-First} ()
+\item 
+virtual void \hyperlink{classleveldb_1_1_key_converting_iterator_a9db639879c442a67234fc345887b19fc}{Seek\-To\-Last} ()
+\item 
+virtual void \hyperlink{classleveldb_1_1_key_converting_iterator_a6b468c158da3f6abbc697f7728811da8}{Next} ()
+\item 
+virtual void \hyperlink{classleveldb_1_1_key_converting_iterator_adff607836b7b3d117a524b3d440bc55a}{Prev} ()
+\item 
+virtual \hyperlink{classleveldb_1_1_slice}{Slice} \hyperlink{classleveldb_1_1_key_converting_iterator_a46402aaa27d57c5b2bee4f560c2dc04b}{key} () const 
+\item 
+virtual \hyperlink{classleveldb_1_1_slice}{Slice} \hyperlink{classleveldb_1_1_key_converting_iterator_aa7a0281f93fbd520bf54d94bac77197a}{value} () const 
+\item 
+virtual \hyperlink{classleveldb_1_1_status}{Status} \hyperlink{classleveldb_1_1_key_converting_iterator_a10d0f5b6b83bc967ba5c73d6bfc919f3}{status} () const 
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classleveldb_1_1_key_converting_iterator_a33bd543eacf7dc1a9820c0c8e47d8786}{Key\-Converting\-Iterator} (const \hyperlink{classleveldb_1_1_key_converting_iterator}{Key\-Converting\-Iterator} \&)
+\item 
+void \hyperlink{classleveldb_1_1_key_converting_iterator_a33c88b1339f4ea2e21517c3ef87d3fa9}{operator=} (const \hyperlink{classleveldb_1_1_key_converting_iterator}{Key\-Converting\-Iterator} \&)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classleveldb_1_1_status}{Status} \hyperlink{classleveldb_1_1_key_converting_iterator_a0d1a57e8266f4f10b1ad730a98c39836}{status\-\_\-}
+\item 
+\hyperlink{classleveldb_1_1_iterator}{Iterator} $\ast$ \hyperlink{classleveldb_1_1_key_converting_iterator_a1aabeddf10287809ee449cbbe1422956}{iter\-\_\-}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classleveldb_1_1_key_converting_iterator_a7b5c28a94749f2e02ecc9021bb9adb51}{\index{leveldb\-::\-Key\-Converting\-Iterator@{leveldb\-::\-Key\-Converting\-Iterator}!Key\-Converting\-Iterator@{Key\-Converting\-Iterator}}
+\index{Key\-Converting\-Iterator@{Key\-Converting\-Iterator}!leveldb::KeyConvertingIterator@{leveldb\-::\-Key\-Converting\-Iterator}}
+\subsubsection[{Key\-Converting\-Iterator}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::\-Key\-Converting\-Iterator\-::\-Key\-Converting\-Iterator (
+\begin{DoxyParamCaption}
+\item[{{\bf Iterator} $\ast$}]{iter}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}}\label{classleveldb_1_1_key_converting_iterator_a7b5c28a94749f2e02ecc9021bb9adb51}
+\hypertarget{classleveldb_1_1_key_converting_iterator_a2a774b0a90768168394ca0c35ba3a87e}{\index{leveldb\-::\-Key\-Converting\-Iterator@{leveldb\-::\-Key\-Converting\-Iterator}!$\sim$\-Key\-Converting\-Iterator@{$\sim$\-Key\-Converting\-Iterator}}
+\index{$\sim$\-Key\-Converting\-Iterator@{$\sim$\-Key\-Converting\-Iterator}!leveldb::KeyConvertingIterator@{leveldb\-::\-Key\-Converting\-Iterator}}
+\subsubsection[{$\sim$\-Key\-Converting\-Iterator}]{\setlength{\rightskip}{0pt plus 5cm}virtual leveldb\-::\-Key\-Converting\-Iterator\-::$\sim$\-Key\-Converting\-Iterator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classleveldb_1_1_key_converting_iterator_a2a774b0a90768168394ca0c35ba3a87e}
+\hypertarget{classleveldb_1_1_key_converting_iterator_a33bd543eacf7dc1a9820c0c8e47d8786}{\index{leveldb\-::\-Key\-Converting\-Iterator@{leveldb\-::\-Key\-Converting\-Iterator}!Key\-Converting\-Iterator@{Key\-Converting\-Iterator}}
+\index{Key\-Converting\-Iterator@{Key\-Converting\-Iterator}!leveldb::KeyConvertingIterator@{leveldb\-::\-Key\-Converting\-Iterator}}
+\subsubsection[{Key\-Converting\-Iterator}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::\-Key\-Converting\-Iterator\-::\-Key\-Converting\-Iterator (
+\begin{DoxyParamCaption}
+\item[{const {\bf Key\-Converting\-Iterator} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_key_converting_iterator_a33bd543eacf7dc1a9820c0c8e47d8786}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classleveldb_1_1_key_converting_iterator_a46402aaa27d57c5b2bee4f560c2dc04b}{\index{leveldb\-::\-Key\-Converting\-Iterator@{leveldb\-::\-Key\-Converting\-Iterator}!key@{key}}
+\index{key@{key}!leveldb::KeyConvertingIterator@{leveldb\-::\-Key\-Converting\-Iterator}}
+\subsubsection[{key}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Slice} leveldb\-::\-Key\-Converting\-Iterator\-::key (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classleveldb_1_1_key_converting_iterator_a46402aaa27d57c5b2bee4f560c2dc04b}
+
+
+Implements \hyperlink{classleveldb_1_1_iterator_ad17feced6e24a1b21db5ae6940c1f220}{leveldb\-::\-Iterator}.
+
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_key_converting_iterator_a6b468c158da3f6abbc697f7728811da8}{\index{leveldb\-::\-Key\-Converting\-Iterator@{leveldb\-::\-Key\-Converting\-Iterator}!Next@{Next}}
+\index{Next@{Next}!leveldb::KeyConvertingIterator@{leveldb\-::\-Key\-Converting\-Iterator}}
+\subsubsection[{Next}]{\setlength{\rightskip}{0pt plus 5cm}virtual void leveldb\-::\-Key\-Converting\-Iterator\-::\-Next (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classleveldb_1_1_key_converting_iterator_a6b468c158da3f6abbc697f7728811da8}
+
+
+Implements \hyperlink{classleveldb_1_1_iterator_aea54a5ca7eb942eb15770820529410e7}{leveldb\-::\-Iterator}.
+
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_key_converting_iterator_a33c88b1339f4ea2e21517c3ef87d3fa9}{\index{leveldb\-::\-Key\-Converting\-Iterator@{leveldb\-::\-Key\-Converting\-Iterator}!operator=@{operator=}}
+\index{operator=@{operator=}!leveldb::KeyConvertingIterator@{leveldb\-::\-Key\-Converting\-Iterator}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-Key\-Converting\-Iterator\-::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Key\-Converting\-Iterator} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_key_converting_iterator_a33c88b1339f4ea2e21517c3ef87d3fa9}
+\hypertarget{classleveldb_1_1_key_converting_iterator_adff607836b7b3d117a524b3d440bc55a}{\index{leveldb\-::\-Key\-Converting\-Iterator@{leveldb\-::\-Key\-Converting\-Iterator}!Prev@{Prev}}
+\index{Prev@{Prev}!leveldb::KeyConvertingIterator@{leveldb\-::\-Key\-Converting\-Iterator}}
+\subsubsection[{Prev}]{\setlength{\rightskip}{0pt plus 5cm}virtual void leveldb\-::\-Key\-Converting\-Iterator\-::\-Prev (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classleveldb_1_1_key_converting_iterator_adff607836b7b3d117a524b3d440bc55a}
+
+
+Implements \hyperlink{classleveldb_1_1_iterator_a28798d802a203788587dc6adc5bc729e}{leveldb\-::\-Iterator}.
+
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_key_converting_iterator_a6af9b763a5831c2fdcd8c3bebfef6ae4}{\index{leveldb\-::\-Key\-Converting\-Iterator@{leveldb\-::\-Key\-Converting\-Iterator}!Seek@{Seek}}
+\index{Seek@{Seek}!leveldb::KeyConvertingIterator@{leveldb\-::\-Key\-Converting\-Iterator}}
+\subsubsection[{Seek}]{\setlength{\rightskip}{0pt plus 5cm}virtual void leveldb\-::\-Key\-Converting\-Iterator\-::\-Seek (
+\begin{DoxyParamCaption}
+\item[{const {\bf Slice} \&}]{target}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classleveldb_1_1_key_converting_iterator_a6af9b763a5831c2fdcd8c3bebfef6ae4}
+
+
+Implements \hyperlink{classleveldb_1_1_iterator_a97a556e97ded60c677fbf4de7321ec44}{leveldb\-::\-Iterator}.
+
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_key_converting_iterator_a56a6b7b97747d5e33981a66c28670cc9}{\index{leveldb\-::\-Key\-Converting\-Iterator@{leveldb\-::\-Key\-Converting\-Iterator}!Seek\-To\-First@{Seek\-To\-First}}
+\index{Seek\-To\-First@{Seek\-To\-First}!leveldb::KeyConvertingIterator@{leveldb\-::\-Key\-Converting\-Iterator}}
+\subsubsection[{Seek\-To\-First}]{\setlength{\rightskip}{0pt plus 5cm}virtual void leveldb\-::\-Key\-Converting\-Iterator\-::\-Seek\-To\-First (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classleveldb_1_1_key_converting_iterator_a56a6b7b97747d5e33981a66c28670cc9}
+
+
+Implements \hyperlink{classleveldb_1_1_iterator_a3594967cf26ddf1d37c7b886bb48627e}{leveldb\-::\-Iterator}.
+
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_key_converting_iterator_a9db639879c442a67234fc345887b19fc}{\index{leveldb\-::\-Key\-Converting\-Iterator@{leveldb\-::\-Key\-Converting\-Iterator}!Seek\-To\-Last@{Seek\-To\-Last}}
+\index{Seek\-To\-Last@{Seek\-To\-Last}!leveldb::KeyConvertingIterator@{leveldb\-::\-Key\-Converting\-Iterator}}
+\subsubsection[{Seek\-To\-Last}]{\setlength{\rightskip}{0pt plus 5cm}virtual void leveldb\-::\-Key\-Converting\-Iterator\-::\-Seek\-To\-Last (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classleveldb_1_1_key_converting_iterator_a9db639879c442a67234fc345887b19fc}
+
+
+Implements \hyperlink{classleveldb_1_1_iterator_a8ad637f0a759e6d94cca6c5b4db440d3}{leveldb\-::\-Iterator}.
+
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_key_converting_iterator_a10d0f5b6b83bc967ba5c73d6bfc919f3}{\index{leveldb\-::\-Key\-Converting\-Iterator@{leveldb\-::\-Key\-Converting\-Iterator}!status@{status}}
+\index{status@{status}!leveldb::KeyConvertingIterator@{leveldb\-::\-Key\-Converting\-Iterator}}
+\subsubsection[{status}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Status} leveldb\-::\-Key\-Converting\-Iterator\-::status (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classleveldb_1_1_key_converting_iterator_a10d0f5b6b83bc967ba5c73d6bfc919f3}
+
+
+Implements \hyperlink{classleveldb_1_1_iterator_ac84f34623a031b7eeb23409320f76376}{leveldb\-::\-Iterator}.
+
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_key_converting_iterator_a941cabf2e0b1c9647faa037b7ad55668}{\index{leveldb\-::\-Key\-Converting\-Iterator@{leveldb\-::\-Key\-Converting\-Iterator}!Valid@{Valid}}
+\index{Valid@{Valid}!leveldb::KeyConvertingIterator@{leveldb\-::\-Key\-Converting\-Iterator}}
+\subsubsection[{Valid}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool leveldb\-::\-Key\-Converting\-Iterator\-::\-Valid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classleveldb_1_1_key_converting_iterator_a941cabf2e0b1c9647faa037b7ad55668}
+
+
+Implements \hyperlink{classleveldb_1_1_iterator_a38614978bfa0586327b8e237bcb46012}{leveldb\-::\-Iterator}.
+
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_key_converting_iterator_aa7a0281f93fbd520bf54d94bac77197a}{\index{leveldb\-::\-Key\-Converting\-Iterator@{leveldb\-::\-Key\-Converting\-Iterator}!value@{value}}
+\index{value@{value}!leveldb::KeyConvertingIterator@{leveldb\-::\-Key\-Converting\-Iterator}}
+\subsubsection[{value}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Slice} leveldb\-::\-Key\-Converting\-Iterator\-::value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classleveldb_1_1_key_converting_iterator_aa7a0281f93fbd520bf54d94bac77197a}
+
+
+Implements \hyperlink{classleveldb_1_1_iterator_a613ac2e965518aad7a064c64c72bcf7c}{leveldb\-::\-Iterator}.
+
+
+
+Here is the call graph for this function\-:
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classleveldb_1_1_key_converting_iterator_a1aabeddf10287809ee449cbbe1422956}{\index{leveldb\-::\-Key\-Converting\-Iterator@{leveldb\-::\-Key\-Converting\-Iterator}!iter\-\_\-@{iter\-\_\-}}
+\index{iter\-\_\-@{iter\-\_\-}!leveldb::KeyConvertingIterator@{leveldb\-::\-Key\-Converting\-Iterator}}
+\subsubsection[{iter\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Iterator}$\ast$ leveldb\-::\-Key\-Converting\-Iterator\-::iter\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_key_converting_iterator_a1aabeddf10287809ee449cbbe1422956}
+\hypertarget{classleveldb_1_1_key_converting_iterator_a0d1a57e8266f4f10b1ad730a98c39836}{\index{leveldb\-::\-Key\-Converting\-Iterator@{leveldb\-::\-Key\-Converting\-Iterator}!status\-\_\-@{status\-\_\-}}
+\index{status\-\_\-@{status\-\_\-}!leveldb::KeyConvertingIterator@{leveldb\-::\-Key\-Converting\-Iterator}}
+\subsubsection[{status\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Status} leveldb\-::\-Key\-Converting\-Iterator\-::status\-\_\-\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}}\label{classleveldb_1_1_key_converting_iterator_a0d1a57e8266f4f10b1ad730a98c39836}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+table/\hyperlink{table__test_8cc}{table\-\_\-test.\-cc}\end{DoxyCompactItemize}

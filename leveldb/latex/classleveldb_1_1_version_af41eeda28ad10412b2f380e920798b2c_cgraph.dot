@@ -1,0 +1,25 @@
+digraph "leveldb::Version::ForEachOverlapping"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="leveldb::Version::ForEach\lOverlapping",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="leveldb::InternalKeyComparator\l::user_comparator",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_internal_key_comparator.html#a86ca575a4560bb76e2bcebc0618abd31"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="leveldb::Comparator\l::Compare",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structleveldb_1_1_comparator.html#a05dae6edcad3c7db23827c0233d74039"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="leveldb::InternalKey\l::user_key",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_internal_key.html#a8eeee76862e806006549784fe21fff61"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="leveldb::ExtractUserKey",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceleveldb.html#a1c889869840312393b805ad91a41b94f"];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="leveldb::Slice::size",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_slice.html#a947d3173f04f8a30553e89046daf91d5"];
+  Node5 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="leveldb::Slice::data",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_slice.html#aa64861043d9deee6889461bf0593cf73"];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="leveldb::NewestFirst",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceleveldb.html#ab65191269f2a256a310edf82d56ed842"];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="leveldb::FindFile",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceleveldb.html#a812c4c6cf8299e767535a59f2205df0c"];
+  Node9 -> Node10 [color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="leveldb::InternalKey\l::Encode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_internal_key.html#aed986eb7cb360bd6955097235ad267b6"];
+}

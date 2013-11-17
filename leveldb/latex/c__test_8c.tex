@@ -1,0 +1,341 @@
+\hypertarget{c__test_8c}{\section{db/c\-\_\-test.c File Reference}
+\label{c__test_8c}\index{db/c\-\_\-test.\-c@{db/c\-\_\-test.\-c}}
+}
+{\ttfamily \#include \char`\"{}leveldb/c.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$stddef.\-h$>$}\\*
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include $<$string.\-h$>$}\\*
+{\ttfamily \#include $<$sys/types.\-h$>$}\\*
+{\ttfamily \#include $<$unistd.\-h$>$}\\*
+Include dependency graph for c\-\_\-test.\-c\-:
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{c__test_8c_af3270e97d4196e9f0d1fba6d99720822}{Check\-No\-Error}(err)
+\item 
+\#define \hyperlink{c__test_8c_a7a32a221eb96896ffcfcdfcd0f691252}{Check\-Condition}(cond)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{c__test_8c_ae709feabd7cd9086d09fa9645947495b}{Start\-Phase} (const char $\ast$\hyperlink{testharness_8cc_a8f8f80d37794cde9472343e4487ba3eb}{name})
+\item 
+static const char $\ast$ \hyperlink{c__test_8c_a474185666870022f6b947a83d846e5b0}{Get\-Temp\-Dir} (void)
+\item 
+static void \hyperlink{c__test_8c_adaf7d5a4701c924ec7af85cc6313c316}{Check\-Equal} (const char $\ast$expected, const char $\ast$v, size\-\_\-t n)
+\item 
+static void \hyperlink{c__test_8c_a4128c2d5aea1a3a2ce7ccfaece74059f}{Free} (char $\ast$$\ast$ptr)
+\item 
+static void \hyperlink{c__test_8c_aa1d56b02039c62385ea46a3a6f4d57da}{Check\-Get} (\hyperlink{structleveldb__t}{leveldb\-\_\-t} $\ast$db, const \hyperlink{structleveldb__readoptions__t}{leveldb\-\_\-readoptions\-\_\-t} $\ast$options, const char $\ast$key, const char $\ast$expected)
+\item 
+static void \hyperlink{c__test_8c_ac08fa58eb494b6cebe91b615b0fb32f4}{Check\-Iter} (\hyperlink{structleveldb__iterator__t}{leveldb\-\_\-iterator\-\_\-t} $\ast$iter, const char $\ast$key, const char $\ast$val)
+\item 
+static void \hyperlink{c__test_8c_a7d9af759bc1d7704529040aef3098eac}{Check\-Put} (void $\ast$ptr, const char $\ast$k, size\-\_\-t klen, const char $\ast$v, size\-\_\-t vlen)
+\item 
+static void \hyperlink{c__test_8c_a1cbef0020c54952ed8e0960c05c7bead}{Check\-Del} (void $\ast$ptr, const char $\ast$k, size\-\_\-t klen)
+\item 
+static void \hyperlink{c__test_8c_acca8773dfe3d375dadad2ca2d498000a}{Cmp\-Destroy} (void $\ast$\hyperlink{env__posix_8cc_a9ce2ec4812a92cb6ab39f6e81e9173a9}{arg})
+\item 
+static int \hyperlink{c__test_8c_affb6b6b32c4620c069aa90051356d5f0}{Cmp\-Compare} (void $\ast$\hyperlink{env__posix_8cc_a9ce2ec4812a92cb6ab39f6e81e9173a9}{arg}, const char $\ast$a, size\-\_\-t alen, const char $\ast$b, size\-\_\-t blen)
+\item 
+static const char $\ast$ \hyperlink{c__test_8c_a575f08f306298321b1310e168a1e9886}{Cmp\-Name} (void $\ast$\hyperlink{env__posix_8cc_a9ce2ec4812a92cb6ab39f6e81e9173a9}{arg})
+\item 
+static void \hyperlink{c__test_8c_ad8129a456644cb194583e4ad7209977a}{Filter\-Destroy} (void $\ast$\hyperlink{env__posix_8cc_a9ce2ec4812a92cb6ab39f6e81e9173a9}{arg})
+\item 
+static const char $\ast$ \hyperlink{c__test_8c_a320a4fba647222e9d3d0cadefbaaeebf}{Filter\-Name} (void $\ast$\hyperlink{env__posix_8cc_a9ce2ec4812a92cb6ab39f6e81e9173a9}{arg})
+\item 
+static char $\ast$ \hyperlink{c__test_8c_aa931e52670b2335a6dc9145ccef9c0e1}{Filter\-Create} (void $\ast$\hyperlink{env__posix_8cc_a9ce2ec4812a92cb6ab39f6e81e9173a9}{arg}, const char $\ast$const $\ast$key\-\_\-array, const size\-\_\-t $\ast$key\-\_\-length\-\_\-array, int num\-\_\-keys, size\-\_\-t $\ast$filter\-\_\-length)
+\item 
+unsigned char \hyperlink{c__test_8c_a117a386d47165a2d2c5ef9beda9bde94}{Filter\-Key\-Match} (void $\ast$\hyperlink{env__posix_8cc_a9ce2ec4812a92cb6ab39f6e81e9173a9}{arg}, const char $\ast$key, size\-\_\-t length, const char $\ast$filter, size\-\_\-t filter\-\_\-length)
+\item 
+int \hyperlink{c__test_8c_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const char $\ast$ \hyperlink{c__test_8c_aa66920db8e335b57326a73d5592f1273}{phase} = \char`\"{}\char`\"{}
+\item 
+static char \hyperlink{c__test_8c_a75d845559336df6843f3b599960f89d2}{dbname} \mbox{[}200\mbox{]}
+\item 
+static unsigned char \hyperlink{c__test_8c_abe13938271040f30eae981dc3d93583c}{fake\-\_\-filter\-\_\-result} = 1
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{c__test_8c_a7a32a221eb96896ffcfcdfcd0f691252}{\index{c\-\_\-test.\-c@{c\-\_\-test.\-c}!Check\-Condition@{Check\-Condition}}
+\index{Check\-Condition@{Check\-Condition}!c_test.c@{c\-\_\-test.\-c}}
+\subsubsection[{Check\-Condition}]{\setlength{\rightskip}{0pt plus 5cm}\#define Check\-Condition(
+\begin{DoxyParamCaption}
+\item[{}]{cond}
+\end{DoxyParamCaption}
+)}}\label{c__test_8c_a7a32a221eb96896ffcfcdfcd0f691252}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{if} (!(cond)) \{                                                        \(\backslash\)
+    fprintf(stderr, \textcolor{stringliteral}{"%s:%d: %s: %s\(\backslash\)n"}, \_\_FILE\_\_, \_\_LINE\_\_, \hyperlink{c__test_8c_aa66920db8e335b57326a73d5592f1273}{phase}, #cond); \(\backslash\)
+    abort();                                                            \(\backslash\)
+  \}
+\end{DoxyCode}
+\hypertarget{c__test_8c_af3270e97d4196e9f0d1fba6d99720822}{\index{c\-\_\-test.\-c@{c\-\_\-test.\-c}!Check\-No\-Error@{Check\-No\-Error}}
+\index{Check\-No\-Error@{Check\-No\-Error}!c_test.c@{c\-\_\-test.\-c}}
+\subsubsection[{Check\-No\-Error}]{\setlength{\rightskip}{0pt plus 5cm}\#define Check\-No\-Error(
+\begin{DoxyParamCaption}
+\item[{}]{err}
+\end{DoxyParamCaption}
+)}}\label{c__test_8c_af3270e97d4196e9f0d1fba6d99720822}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{if} ((err) != NULL) \{                                                  \(\backslash\)
+    fprintf(stderr, \textcolor{stringliteral}{"%s:%d: %s: %s\(\backslash\)n"}, \_\_FILE\_\_, \_\_LINE\_\_, \hyperlink{c__test_8c_aa66920db8e335b57326a73d5592f1273}{phase}, (err)); \(\backslash\)
+    abort();                                                            \(\backslash\)
+  \}
+\end{DoxyCode}
+
+
+\subsection{Function Documentation}
+\hypertarget{c__test_8c_a1cbef0020c54952ed8e0960c05c7bead}{\index{c\-\_\-test.\-c@{c\-\_\-test.\-c}!Check\-Del@{Check\-Del}}
+\index{Check\-Del@{Check\-Del}!c_test.c@{c\-\_\-test.\-c}}
+\subsubsection[{Check\-Del}]{\setlength{\rightskip}{0pt plus 5cm}static void Check\-Del (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{ptr, }
+\item[{const char $\ast$}]{k, }
+\item[{size\-\_\-t}]{klen}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{c__test_8c_a1cbef0020c54952ed8e0960c05c7bead}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c__test_8c_adaf7d5a4701c924ec7af85cc6313c316}{\index{c\-\_\-test.\-c@{c\-\_\-test.\-c}!Check\-Equal@{Check\-Equal}}
+\index{Check\-Equal@{Check\-Equal}!c_test.c@{c\-\_\-test.\-c}}
+\subsubsection[{Check\-Equal}]{\setlength{\rightskip}{0pt plus 5cm}static void Check\-Equal (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{expected, }
+\item[{const char $\ast$}]{v, }
+\item[{size\-\_\-t}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{c__test_8c_adaf7d5a4701c924ec7af85cc6313c316}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c__test_8c_aa1d56b02039c62385ea46a3a6f4d57da}{\index{c\-\_\-test.\-c@{c\-\_\-test.\-c}!Check\-Get@{Check\-Get}}
+\index{Check\-Get@{Check\-Get}!c_test.c@{c\-\_\-test.\-c}}
+\subsubsection[{Check\-Get}]{\setlength{\rightskip}{0pt plus 5cm}static void Check\-Get (
+\begin{DoxyParamCaption}
+\item[{{\bf leveldb\-\_\-t} $\ast$}]{db, }
+\item[{const {\bf leveldb\-\_\-readoptions\-\_\-t} $\ast$}]{options, }
+\item[{const char $\ast$}]{key, }
+\item[{const char $\ast$}]{expected}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{c__test_8c_aa1d56b02039c62385ea46a3a6f4d57da}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c__test_8c_ac08fa58eb494b6cebe91b615b0fb32f4}{\index{c\-\_\-test.\-c@{c\-\_\-test.\-c}!Check\-Iter@{Check\-Iter}}
+\index{Check\-Iter@{Check\-Iter}!c_test.c@{c\-\_\-test.\-c}}
+\subsubsection[{Check\-Iter}]{\setlength{\rightskip}{0pt plus 5cm}static void Check\-Iter (
+\begin{DoxyParamCaption}
+\item[{{\bf leveldb\-\_\-iterator\-\_\-t} $\ast$}]{iter, }
+\item[{const char $\ast$}]{key, }
+\item[{const char $\ast$}]{val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{c__test_8c_ac08fa58eb494b6cebe91b615b0fb32f4}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c__test_8c_a7d9af759bc1d7704529040aef3098eac}{\index{c\-\_\-test.\-c@{c\-\_\-test.\-c}!Check\-Put@{Check\-Put}}
+\index{Check\-Put@{Check\-Put}!c_test.c@{c\-\_\-test.\-c}}
+\subsubsection[{Check\-Put}]{\setlength{\rightskip}{0pt plus 5cm}static void Check\-Put (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{ptr, }
+\item[{const char $\ast$}]{k, }
+\item[{size\-\_\-t}]{klen, }
+\item[{const char $\ast$}]{v, }
+\item[{size\-\_\-t}]{vlen}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{c__test_8c_a7d9af759bc1d7704529040aef3098eac}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c__test_8c_affb6b6b32c4620c069aa90051356d5f0}{\index{c\-\_\-test.\-c@{c\-\_\-test.\-c}!Cmp\-Compare@{Cmp\-Compare}}
+\index{Cmp\-Compare@{Cmp\-Compare}!c_test.c@{c\-\_\-test.\-c}}
+\subsubsection[{Cmp\-Compare}]{\setlength{\rightskip}{0pt plus 5cm}static int Cmp\-Compare (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{arg, }
+\item[{const char $\ast$}]{a, }
+\item[{size\-\_\-t}]{alen, }
+\item[{const char $\ast$}]{b, }
+\item[{size\-\_\-t}]{blen}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{c__test_8c_affb6b6b32c4620c069aa90051356d5f0}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c__test_8c_acca8773dfe3d375dadad2ca2d498000a}{\index{c\-\_\-test.\-c@{c\-\_\-test.\-c}!Cmp\-Destroy@{Cmp\-Destroy}}
+\index{Cmp\-Destroy@{Cmp\-Destroy}!c_test.c@{c\-\_\-test.\-c}}
+\subsubsection[{Cmp\-Destroy}]{\setlength{\rightskip}{0pt plus 5cm}static void Cmp\-Destroy (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{arg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{c__test_8c_acca8773dfe3d375dadad2ca2d498000a}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c__test_8c_a575f08f306298321b1310e168a1e9886}{\index{c\-\_\-test.\-c@{c\-\_\-test.\-c}!Cmp\-Name@{Cmp\-Name}}
+\index{Cmp\-Name@{Cmp\-Name}!c_test.c@{c\-\_\-test.\-c}}
+\subsubsection[{Cmp\-Name}]{\setlength{\rightskip}{0pt plus 5cm}static const char$\ast$ Cmp\-Name (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{arg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{c__test_8c_a575f08f306298321b1310e168a1e9886}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c__test_8c_aa931e52670b2335a6dc9145ccef9c0e1}{\index{c\-\_\-test.\-c@{c\-\_\-test.\-c}!Filter\-Create@{Filter\-Create}}
+\index{Filter\-Create@{Filter\-Create}!c_test.c@{c\-\_\-test.\-c}}
+\subsubsection[{Filter\-Create}]{\setlength{\rightskip}{0pt plus 5cm}static char$\ast$ Filter\-Create (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{arg, }
+\item[{const char $\ast$const $\ast$}]{key\-\_\-array, }
+\item[{const size\-\_\-t $\ast$}]{key\-\_\-length\-\_\-array, }
+\item[{int}]{num\-\_\-keys, }
+\item[{size\-\_\-t $\ast$}]{filter\-\_\-length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{c__test_8c_aa931e52670b2335a6dc9145ccef9c0e1}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c__test_8c_ad8129a456644cb194583e4ad7209977a}{\index{c\-\_\-test.\-c@{c\-\_\-test.\-c}!Filter\-Destroy@{Filter\-Destroy}}
+\index{Filter\-Destroy@{Filter\-Destroy}!c_test.c@{c\-\_\-test.\-c}}
+\subsubsection[{Filter\-Destroy}]{\setlength{\rightskip}{0pt plus 5cm}static void Filter\-Destroy (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{arg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{c__test_8c_ad8129a456644cb194583e4ad7209977a}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c__test_8c_a117a386d47165a2d2c5ef9beda9bde94}{\index{c\-\_\-test.\-c@{c\-\_\-test.\-c}!Filter\-Key\-Match@{Filter\-Key\-Match}}
+\index{Filter\-Key\-Match@{Filter\-Key\-Match}!c_test.c@{c\-\_\-test.\-c}}
+\subsubsection[{Filter\-Key\-Match}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char Filter\-Key\-Match (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{arg, }
+\item[{const char $\ast$}]{key, }
+\item[{size\-\_\-t}]{length, }
+\item[{const char $\ast$}]{filter, }
+\item[{size\-\_\-t}]{filter\-\_\-length}
+\end{DoxyParamCaption}
+)}}\label{c__test_8c_a117a386d47165a2d2c5ef9beda9bde94}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c__test_8c_a320a4fba647222e9d3d0cadefbaaeebf}{\index{c\-\_\-test.\-c@{c\-\_\-test.\-c}!Filter\-Name@{Filter\-Name}}
+\index{Filter\-Name@{Filter\-Name}!c_test.c@{c\-\_\-test.\-c}}
+\subsubsection[{Filter\-Name}]{\setlength{\rightskip}{0pt plus 5cm}static const char$\ast$ Filter\-Name (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{arg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{c__test_8c_a320a4fba647222e9d3d0cadefbaaeebf}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c__test_8c_a4128c2d5aea1a3a2ce7ccfaece74059f}{\index{c\-\_\-test.\-c@{c\-\_\-test.\-c}!Free@{Free}}
+\index{Free@{Free}!c_test.c@{c\-\_\-test.\-c}}
+\subsubsection[{Free}]{\setlength{\rightskip}{0pt plus 5cm}static void Free (
+\begin{DoxyParamCaption}
+\item[{char $\ast$$\ast$}]{ptr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{c__test_8c_a4128c2d5aea1a3a2ce7ccfaece74059f}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c__test_8c_a474185666870022f6b947a83d846e5b0}{\index{c\-\_\-test.\-c@{c\-\_\-test.\-c}!Get\-Temp\-Dir@{Get\-Temp\-Dir}}
+\index{Get\-Temp\-Dir@{Get\-Temp\-Dir}!c_test.c@{c\-\_\-test.\-c}}
+\subsubsection[{Get\-Temp\-Dir}]{\setlength{\rightskip}{0pt plus 5cm}static const char$\ast$ Get\-Temp\-Dir (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{c__test_8c_a474185666870022f6b947a83d846e5b0}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c__test_8c_a3c04138a5bfe5d72780bb7e82a18e627}{\index{c\-\_\-test.\-c@{c\-\_\-test.\-c}!main@{main}}
+\index{main@{main}!c_test.c@{c\-\_\-test.\-c}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}}\label{c__test_8c_a3c04138a5bfe5d72780bb7e82a18e627}
+\hypertarget{c__test_8c_ae709feabd7cd9086d09fa9645947495b}{\index{c\-\_\-test.\-c@{c\-\_\-test.\-c}!Start\-Phase@{Start\-Phase}}
+\index{Start\-Phase@{Start\-Phase}!c_test.c@{c\-\_\-test.\-c}}
+\subsubsection[{Start\-Phase}]{\setlength{\rightskip}{0pt plus 5cm}static void Start\-Phase (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{c__test_8c_ae709feabd7cd9086d09fa9645947495b}
+
+
+Here is the caller graph for this function\-:
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{c__test_8c_a75d845559336df6843f3b599960f89d2}{\index{c\-\_\-test.\-c@{c\-\_\-test.\-c}!dbname@{dbname}}
+\index{dbname@{dbname}!c_test.c@{c\-\_\-test.\-c}}
+\subsubsection[{dbname}]{\setlength{\rightskip}{0pt plus 5cm}char dbname\mbox{[}200\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}}\label{c__test_8c_a75d845559336df6843f3b599960f89d2}
+\hypertarget{c__test_8c_abe13938271040f30eae981dc3d93583c}{\index{c\-\_\-test.\-c@{c\-\_\-test.\-c}!fake\-\_\-filter\-\_\-result@{fake\-\_\-filter\-\_\-result}}
+\index{fake\-\_\-filter\-\_\-result@{fake\-\_\-filter\-\_\-result}!c_test.c@{c\-\_\-test.\-c}}
+\subsubsection[{fake\-\_\-filter\-\_\-result}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char fake\-\_\-filter\-\_\-result = 1\hspace{0.3cm}{\ttfamily [static]}}}\label{c__test_8c_abe13938271040f30eae981dc3d93583c}
+\hypertarget{c__test_8c_aa66920db8e335b57326a73d5592f1273}{\index{c\-\_\-test.\-c@{c\-\_\-test.\-c}!phase@{phase}}
+\index{phase@{phase}!c_test.c@{c\-\_\-test.\-c}}
+\subsubsection[{phase}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ phase = \char`\"{}\char`\"{}}}\label{c__test_8c_aa66920db8e335b57326a73d5592f1273}

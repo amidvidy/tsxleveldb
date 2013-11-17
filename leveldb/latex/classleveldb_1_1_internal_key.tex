@@ -1,0 +1,157 @@
+\hypertarget{classleveldb_1_1_internal_key}{\section{leveldb\-:\-:Internal\-Key Class Reference}
+\label{classleveldb_1_1_internal_key}\index{leveldb\-::\-Internal\-Key@{leveldb\-::\-Internal\-Key}}
+}
+
+
+{\ttfamily \#include $<$dbformat.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classleveldb_1_1_internal_key_a277b997aadb14d0a65314187a1e6adf6}{Internal\-Key} ()
+\item 
+\hyperlink{classleveldb_1_1_internal_key_af436814d1667db55e93b6bd583619617}{Internal\-Key} (const \hyperlink{classleveldb_1_1_slice}{Slice} \&\hyperlink{classleveldb_1_1_internal_key_a8eeee76862e806006549784fe21fff61}{user\-\_\-key}, \hyperlink{namespaceleveldb_a5481ededd221c36d652c371249f869fa}{Sequence\-Number} s, \hyperlink{namespaceleveldb_acc038cb0d608414730cafa459a4ba866}{Value\-Type} t)
+\item 
+void \hyperlink{classleveldb_1_1_internal_key_a5a8c9bced0ba968b6b62d91cfb19a82a}{Decode\-From} (const \hyperlink{classleveldb_1_1_slice}{Slice} \&s)
+\item 
+\hyperlink{classleveldb_1_1_slice}{Slice} \hyperlink{classleveldb_1_1_internal_key_aed986eb7cb360bd6955097235ad267b6}{Encode} () const 
+\item 
+\hyperlink{classleveldb_1_1_slice}{Slice} \hyperlink{classleveldb_1_1_internal_key_a8eeee76862e806006549784fe21fff61}{user\-\_\-key} () const 
+\item 
+void \hyperlink{classleveldb_1_1_internal_key_ada9566cd92b6b9784ab7f2f6f71d0a4e}{Set\-From} (const \hyperlink{structleveldb_1_1_parsed_internal_key}{Parsed\-Internal\-Key} \&p)
+\item 
+void \hyperlink{classleveldb_1_1_internal_key_ab6e9ebec1bf567de89d8dd34fdc51f86}{Clear} ()
+\item 
+std\-::string \hyperlink{classleveldb_1_1_internal_key_a737053e1b02c3eb8361e960f7fe5befb}{Debug\-String} () const 
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\-::string \hyperlink{classleveldb_1_1_internal_key_a8962500b3e5c1f7d2fad13eabdb69368}{rep\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classleveldb_1_1_internal_key_a277b997aadb14d0a65314187a1e6adf6}{\index{leveldb\-::\-Internal\-Key@{leveldb\-::\-Internal\-Key}!Internal\-Key@{Internal\-Key}}
+\index{Internal\-Key@{Internal\-Key}!leveldb::InternalKey@{leveldb\-::\-Internal\-Key}}
+\subsubsection[{Internal\-Key}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::\-Internal\-Key\-::\-Internal\-Key (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_internal_key_a277b997aadb14d0a65314187a1e6adf6}
+\hypertarget{classleveldb_1_1_internal_key_af436814d1667db55e93b6bd583619617}{\index{leveldb\-::\-Internal\-Key@{leveldb\-::\-Internal\-Key}!Internal\-Key@{Internal\-Key}}
+\index{Internal\-Key@{Internal\-Key}!leveldb::InternalKey@{leveldb\-::\-Internal\-Key}}
+\subsubsection[{Internal\-Key}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::\-Internal\-Key\-::\-Internal\-Key (
+\begin{DoxyParamCaption}
+\item[{const {\bf Slice} \&}]{user\-\_\-key, }
+\item[{{\bf Sequence\-Number}}]{s, }
+\item[{{\bf Value\-Type}}]{t}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_internal_key_af436814d1667db55e93b6bd583619617}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classleveldb_1_1_internal_key_ab6e9ebec1bf567de89d8dd34fdc51f86}{\index{leveldb\-::\-Internal\-Key@{leveldb\-::\-Internal\-Key}!Clear@{Clear}}
+\index{Clear@{Clear}!leveldb::InternalKey@{leveldb\-::\-Internal\-Key}}
+\subsubsection[{Clear}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-Internal\-Key\-::\-Clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_internal_key_ab6e9ebec1bf567de89d8dd34fdc51f86}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_internal_key_a737053e1b02c3eb8361e960f7fe5befb}{\index{leveldb\-::\-Internal\-Key@{leveldb\-::\-Internal\-Key}!Debug\-String@{Debug\-String}}
+\index{Debug\-String@{Debug\-String}!leveldb::InternalKey@{leveldb\-::\-Internal\-Key}}
+\subsubsection[{Debug\-String}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string leveldb\-::\-Internal\-Key\-::\-Debug\-String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classleveldb_1_1_internal_key_a737053e1b02c3eb8361e960f7fe5befb}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_internal_key_a5a8c9bced0ba968b6b62d91cfb19a82a}{\index{leveldb\-::\-Internal\-Key@{leveldb\-::\-Internal\-Key}!Decode\-From@{Decode\-From}}
+\index{Decode\-From@{Decode\-From}!leveldb::InternalKey@{leveldb\-::\-Internal\-Key}}
+\subsubsection[{Decode\-From}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-Internal\-Key\-::\-Decode\-From (
+\begin{DoxyParamCaption}
+\item[{const {\bf Slice} \&}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_internal_key_a5a8c9bced0ba968b6b62d91cfb19a82a}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_internal_key_aed986eb7cb360bd6955097235ad267b6}{\index{leveldb\-::\-Internal\-Key@{leveldb\-::\-Internal\-Key}!Encode@{Encode}}
+\index{Encode@{Encode}!leveldb::InternalKey@{leveldb\-::\-Internal\-Key}}
+\subsubsection[{Encode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Slice} leveldb\-::\-Internal\-Key\-::\-Encode (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_internal_key_aed986eb7cb360bd6955097235ad267b6}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_internal_key_ada9566cd92b6b9784ab7f2f6f71d0a4e}{\index{leveldb\-::\-Internal\-Key@{leveldb\-::\-Internal\-Key}!Set\-From@{Set\-From}}
+\index{Set\-From@{Set\-From}!leveldb::InternalKey@{leveldb\-::\-Internal\-Key}}
+\subsubsection[{Set\-From}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-Internal\-Key\-::\-Set\-From (
+\begin{DoxyParamCaption}
+\item[{const {\bf Parsed\-Internal\-Key} \&}]{p}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_internal_key_ada9566cd92b6b9784ab7f2f6f71d0a4e}
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_internal_key_a8eeee76862e806006549784fe21fff61}{\index{leveldb\-::\-Internal\-Key@{leveldb\-::\-Internal\-Key}!user\-\_\-key@{user\-\_\-key}}
+\index{user\-\_\-key@{user\-\_\-key}!leveldb::InternalKey@{leveldb\-::\-Internal\-Key}}
+\subsubsection[{user\-\_\-key}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Slice} leveldb\-::\-Internal\-Key\-::user\-\_\-key (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_internal_key_a8eeee76862e806006549784fe21fff61}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classleveldb_1_1_internal_key_a8962500b3e5c1f7d2fad13eabdb69368}{\index{leveldb\-::\-Internal\-Key@{leveldb\-::\-Internal\-Key}!rep\-\_\-@{rep\-\_\-}}
+\index{rep\-\_\-@{rep\-\_\-}!leveldb::InternalKey@{leveldb\-::\-Internal\-Key}}
+\subsubsection[{rep\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string leveldb\-::\-Internal\-Key\-::rep\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_internal_key_a8962500b3e5c1f7d2fad13eabdb69368}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+db/\hyperlink{dbformat_8h}{dbformat.\-h}\item 
+db/\hyperlink{dbformat_8cc}{dbformat.\-cc}\end{DoxyCompactItemize}

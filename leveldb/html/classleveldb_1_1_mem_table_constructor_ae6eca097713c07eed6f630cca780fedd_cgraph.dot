@@ -1,0 +1,9 @@
+digraph "leveldb::MemTableConstructor::NewIterator"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="leveldb::MemTableConstructor\l::NewIterator",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="leveldb::MemTable::\lNewIterator",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_mem_table.html#a396b8ba5e2ea0de25b666026f3b9235f"];
+}

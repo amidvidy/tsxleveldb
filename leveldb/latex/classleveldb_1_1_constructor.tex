@@ -1,0 +1,154 @@
+\hypertarget{classleveldb_1_1_constructor}{\section{leveldb\-:\-:Constructor Class Reference}
+\label{classleveldb_1_1_constructor}\index{leveldb\-::\-Constructor@{leveldb\-::\-Constructor}}
+}
+
+
+Inheritance diagram for leveldb\-:\-:Constructor\-:
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classleveldb_1_1_constructor_a5f4d21512e279769e881b2ae85129f08}{Constructor} (const \hyperlink{structleveldb_1_1_comparator}{Comparator} $\ast$\hyperlink{table__test_8cc_a87863e435922f0910ca8db43f02a6c0b}{cmp})
+\item 
+virtual \hyperlink{classleveldb_1_1_constructor_a643f9e1fc58b988f41b2a081398b04a1}{$\sim$\-Constructor} ()
+\item 
+void \hyperlink{classleveldb_1_1_constructor_a5bb35f87d196065b8357200922aae69f}{Add} (const std\-::string \&key, const \hyperlink{classleveldb_1_1_slice}{Slice} \&\hyperlink{cache_8cc_a0f61d63b009d0880a89c843bd50d8d76}{value})
+\item 
+void \hyperlink{classleveldb_1_1_constructor_a5c7f63378f8834cac3be93040e0e49fc}{Finish} (const \hyperlink{structleveldb_1_1_options}{Options} \&options, std\-::vector$<$ std\-::string $>$ $\ast$keys, \hyperlink{namespaceleveldb_aac1e50450147be263e08252c6700f7a7}{K\-V\-Map} $\ast$kvmap)
+\item 
+virtual \hyperlink{classleveldb_1_1_status}{Status} \hyperlink{classleveldb_1_1_constructor_a0f11e251cfbe990b5b0a4e7040923189}{Finish\-Impl} (const \hyperlink{structleveldb_1_1_options}{Options} \&options, const \hyperlink{namespaceleveldb_aac1e50450147be263e08252c6700f7a7}{K\-V\-Map} \&\hyperlink{classleveldb_1_1_constructor_a55a0363200d6e86d8beb3b15b75e3824}{data})=0
+\item 
+virtual \hyperlink{classleveldb_1_1_iterator}{Iterator} $\ast$ \hyperlink{classleveldb_1_1_constructor_a362b24b7194f605b655f5a136e0ae43c}{New\-Iterator} () const =0
+\item 
+virtual const \hyperlink{namespaceleveldb_aac1e50450147be263e08252c6700f7a7}{K\-V\-Map} \& \hyperlink{classleveldb_1_1_constructor_a55a0363200d6e86d8beb3b15b75e3824}{data} ()
+\item 
+virtual \hyperlink{classleveldb_1_1_d_b}{D\-B} $\ast$ \hyperlink{classleveldb_1_1_constructor_a207d6002cdb7ead23cecf6cfb4350a80}{db} () const 
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespaceleveldb_aac1e50450147be263e08252c6700f7a7}{K\-V\-Map} \hyperlink{classleveldb_1_1_constructor_ab7a0cf797b5c3e45824162152b900c9d}{data\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classleveldb_1_1_constructor_a5f4d21512e279769e881b2ae85129f08}{\index{leveldb\-::\-Constructor@{leveldb\-::\-Constructor}!Constructor@{Constructor}}
+\index{Constructor@{Constructor}!leveldb::Constructor@{leveldb\-::\-Constructor}}
+\subsubsection[{Constructor}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::\-Constructor\-::\-Constructor (
+\begin{DoxyParamCaption}
+\item[{const {\bf Comparator} $\ast$}]{cmp}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}}\label{classleveldb_1_1_constructor_a5f4d21512e279769e881b2ae85129f08}
+\hypertarget{classleveldb_1_1_constructor_a643f9e1fc58b988f41b2a081398b04a1}{\index{leveldb\-::\-Constructor@{leveldb\-::\-Constructor}!$\sim$\-Constructor@{$\sim$\-Constructor}}
+\index{$\sim$\-Constructor@{$\sim$\-Constructor}!leveldb::Constructor@{leveldb\-::\-Constructor}}
+\subsubsection[{$\sim$\-Constructor}]{\setlength{\rightskip}{0pt plus 5cm}virtual leveldb\-::\-Constructor\-::$\sim$\-Constructor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classleveldb_1_1_constructor_a643f9e1fc58b988f41b2a081398b04a1}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classleveldb_1_1_constructor_a5bb35f87d196065b8357200922aae69f}{\index{leveldb\-::\-Constructor@{leveldb\-::\-Constructor}!Add@{Add}}
+\index{Add@{Add}!leveldb::Constructor@{leveldb\-::\-Constructor}}
+\subsubsection[{Add}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-Constructor\-::\-Add (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{key, }
+\item[{const {\bf Slice} \&}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_constructor_a5bb35f87d196065b8357200922aae69f}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_constructor_a55a0363200d6e86d8beb3b15b75e3824}{\index{leveldb\-::\-Constructor@{leveldb\-::\-Constructor}!data@{data}}
+\index{data@{data}!leveldb::Constructor@{leveldb\-::\-Constructor}}
+\subsubsection[{data}]{\setlength{\rightskip}{0pt plus 5cm}virtual const {\bf K\-V\-Map}\& leveldb\-::\-Constructor\-::data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classleveldb_1_1_constructor_a55a0363200d6e86d8beb3b15b75e3824}
+\hypertarget{classleveldb_1_1_constructor_a207d6002cdb7ead23cecf6cfb4350a80}{\index{leveldb\-::\-Constructor@{leveldb\-::\-Constructor}!db@{db}}
+\index{db@{db}!leveldb::Constructor@{leveldb\-::\-Constructor}}
+\subsubsection[{db}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf D\-B}$\ast$ leveldb\-::\-Constructor\-::db (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classleveldb_1_1_constructor_a207d6002cdb7ead23cecf6cfb4350a80}
+
+
+Reimplemented in \hyperlink{classleveldb_1_1_d_b_constructor_a2bec14f01bb0fc459e0a09a70f06210d}{leveldb\-::\-D\-B\-Constructor}.
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_constructor_a5c7f63378f8834cac3be93040e0e49fc}{\index{leveldb\-::\-Constructor@{leveldb\-::\-Constructor}!Finish@{Finish}}
+\index{Finish@{Finish}!leveldb::Constructor@{leveldb\-::\-Constructor}}
+\subsubsection[{Finish}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-Constructor\-::\-Finish (
+\begin{DoxyParamCaption}
+\item[{const {\bf Options} \&}]{options, }
+\item[{std\-::vector$<$ std\-::string $>$ $\ast$}]{keys, }
+\item[{{\bf K\-V\-Map} $\ast$}]{kvmap}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_constructor_a5c7f63378f8834cac3be93040e0e49fc}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_constructor_a0f11e251cfbe990b5b0a4e7040923189}{\index{leveldb\-::\-Constructor@{leveldb\-::\-Constructor}!Finish\-Impl@{Finish\-Impl}}
+\index{Finish\-Impl@{Finish\-Impl}!leveldb::Constructor@{leveldb\-::\-Constructor}}
+\subsubsection[{Finish\-Impl}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Status} leveldb\-::\-Constructor\-::\-Finish\-Impl (
+\begin{DoxyParamCaption}
+\item[{const {\bf Options} \&}]{options, }
+\item[{const {\bf K\-V\-Map} \&}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classleveldb_1_1_constructor_a0f11e251cfbe990b5b0a4e7040923189}
+
+
+Implemented in \hyperlink{classleveldb_1_1_d_b_constructor_a554d8e348d9135ff72a43a03c647c261}{leveldb\-::\-D\-B\-Constructor}, \hyperlink{classleveldb_1_1_mem_table_constructor_a78851e48bd187f231934e128ab050624}{leveldb\-::\-Mem\-Table\-Constructor}, \hyperlink{classleveldb_1_1_table_constructor_aa8ce3799a55859c2dee50d3e08f56ef2}{leveldb\-::\-Table\-Constructor}, and \hyperlink{classleveldb_1_1_block_constructor_ae3f38f0769d34cb7d80776b8249f48ae}{leveldb\-::\-Block\-Constructor}.
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_constructor_a362b24b7194f605b655f5a136e0ae43c}{\index{leveldb\-::\-Constructor@{leveldb\-::\-Constructor}!New\-Iterator@{New\-Iterator}}
+\index{New\-Iterator@{New\-Iterator}!leveldb::Constructor@{leveldb\-::\-Constructor}}
+\subsubsection[{New\-Iterator}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Iterator}$\ast$ leveldb\-::\-Constructor\-::\-New\-Iterator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classleveldb_1_1_constructor_a362b24b7194f605b655f5a136e0ae43c}
+
+
+Implemented in \hyperlink{classleveldb_1_1_d_b_constructor_a51936c1c2cb31fe26f5fb2a237cfdeec}{leveldb\-::\-D\-B\-Constructor}, \hyperlink{classleveldb_1_1_mem_table_constructor_ae6eca097713c07eed6f630cca780fedd}{leveldb\-::\-Mem\-Table\-Constructor}, \hyperlink{classleveldb_1_1_table_constructor_a4897f3cb58fed2bd3a9f7f6468b6a105}{leveldb\-::\-Table\-Constructor}, and \hyperlink{classleveldb_1_1_block_constructor_a94b568e7f3aa7ad26eda141c3b4297ca}{leveldb\-::\-Block\-Constructor}.
+
+
+
+Here is the caller graph for this function\-:
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classleveldb_1_1_constructor_ab7a0cf797b5c3e45824162152b900c9d}{\index{leveldb\-::\-Constructor@{leveldb\-::\-Constructor}!data\-\_\-@{data\-\_\-}}
+\index{data\-\_\-@{data\-\_\-}!leveldb::Constructor@{leveldb\-::\-Constructor}}
+\subsubsection[{data\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\-V\-Map} leveldb\-::\-Constructor\-::data\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_constructor_ab7a0cf797b5c3e45824162152b900c9d}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+table/\hyperlink{table__test_8cc}{table\-\_\-test.\-cc}\end{DoxyCompactItemize}

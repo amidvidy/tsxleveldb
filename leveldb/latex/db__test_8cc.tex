@@ -1,0 +1,194 @@
+\hypertarget{db__test_8cc}{\section{db/db\-\_\-test.cc File Reference}
+\label{db__test_8cc}\index{db/db\-\_\-test.\-cc@{db/db\-\_\-test.\-cc}}
+}
+{\ttfamily \#include \char`\"{}leveldb/db.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}leveldb/filter\-\_\-policy.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}db/db\-\_\-impl.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}db/filename.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}db/version\-\_\-set.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}db/write\-\_\-batch\-\_\-internal.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}leveldb/cache.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}leveldb/env.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}leveldb/table.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}util/hash.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}util/logging.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}util/mutexlock.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}util/testharness.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}util/testutil.\-h\char`\"{}}\\*
+Include dependency graph for db\-\_\-test.\-cc\-:
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classleveldb_1_1_special_env}{leveldb\-::\-Special\-Env}
+\item 
+class \hyperlink{classleveldb_1_1_d_b_test}{leveldb\-::\-D\-B\-Test}
+\item 
+class \hyperlink{classleveldb_1_1_model_d_b}{leveldb\-::\-Model\-D\-B}
+\item 
+class \hyperlink{classleveldb_1_1_model_d_b_1_1_model_snapshot}{leveldb\-::\-Model\-D\-B\-::\-Model\-Snapshot}
+\item 
+class \hyperlink{classleveldb_1_1_model_d_b_1_1_model_iter}{leveldb\-::\-Model\-D\-B\-::\-Model\-Iter}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespaceleveldb}{leveldb}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\-::string \hyperlink{namespaceleveldb_ab30792c0730ee094943e8242577454af}{leveldb\-::\-Random\-String} (Random $\ast$rnd, int len)
+\item 
+\hyperlink{namespaceleveldb_a5cdb2a977033415260acc09b4b1b7171}{leveldb\-::\-T\-E\-S\-T} (D\-B\-Test, Empty)
+\item 
+\hyperlink{namespaceleveldb_a2d427ecc9d7b712d8c5dd7ec8b6343fc}{leveldb\-::\-T\-E\-S\-T} (D\-B\-Test, Read\-Write)
+\item 
+\hyperlink{namespaceleveldb_a4d273f5f0d313440832363179e28e010}{leveldb\-::\-T\-E\-S\-T} (D\-B\-Test, Put\-Delete\-Get)
+\item 
+\hyperlink{namespaceleveldb_a21cac1755bd447df075909132bb964d4}{leveldb\-::\-T\-E\-S\-T} (D\-B\-Test, Get\-From\-Immutable\-Layer)
+\item 
+\hyperlink{namespaceleveldb_affd937ddc8c138fd0b5d020a396310c8}{leveldb\-::\-T\-E\-S\-T} (D\-B\-Test, Get\-From\-Versions)
+\item 
+\hyperlink{namespaceleveldb_ad6fac95495278565df640d4055b9c9f0}{leveldb\-::\-T\-E\-S\-T} (D\-B\-Test, Get\-Snapshot)
+\item 
+\hyperlink{namespaceleveldb_a2b333e6a496f74899c808279627f11a0}{leveldb\-::\-T\-E\-S\-T} (D\-B\-Test, Get\-Level0\-Ordering)
+\item 
+\hyperlink{namespaceleveldb_a8f54952904ed501131060691eb1b6970}{leveldb\-::\-T\-E\-S\-T} (D\-B\-Test, Get\-Ordered\-By\-Levels)
+\item 
+\hyperlink{namespaceleveldb_ac3d2a0e1b8553c3106c45ead7d6804bb}{leveldb\-::\-T\-E\-S\-T} (D\-B\-Test, Get\-Picks\-Correct\-File)
+\item 
+\hyperlink{namespaceleveldb_a0cec95f588ef6c5c121ac0d63eb4238f}{leveldb\-::\-T\-E\-S\-T} (D\-B\-Test, Get\-Encounters\-Empty\-Level)
+\item 
+\hyperlink{namespaceleveldb_a5ad106e9bbfcb5520b7dc344525f7cd2}{leveldb\-::\-T\-E\-S\-T} (D\-B\-Test, Iter\-Empty)
+\item 
+\hyperlink{namespaceleveldb_a8a6d5f729259c0f357f4dee533a5ce6a}{leveldb\-::\-T\-E\-S\-T} (D\-B\-Test, Iter\-Single)
+\item 
+\hyperlink{namespaceleveldb_a683bc77ccfd830fbe21a91c26ac91347}{leveldb\-::\-T\-E\-S\-T} (D\-B\-Test, Iter\-Multi)
+\item 
+\hyperlink{namespaceleveldb_a4044ccda7237640864995a0885ea6710}{leveldb\-::\-T\-E\-S\-T} (D\-B\-Test, Iter\-Small\-And\-Large\-Mix)
+\item 
+\hyperlink{namespaceleveldb_a3e41cdc91355438f57b9497b01c66e24}{leveldb\-::\-T\-E\-S\-T} (D\-B\-Test, Iter\-Multi\-With\-Delete)
+\item 
+\hyperlink{namespaceleveldb_ab1872cabf2fb215814f9a6f1bacacc80}{leveldb\-::\-T\-E\-S\-T} (D\-B\-Test, Recover)
+\item 
+\hyperlink{namespaceleveldb_a890ebffd31d77bc8acb760088d70ee8c}{leveldb\-::\-T\-E\-S\-T} (D\-B\-Test, Recovery\-With\-Empty\-Log)
+\item 
+\hyperlink{namespaceleveldb_a2e24806457c57e7dec22e3c05e46a82c}{leveldb\-::\-T\-E\-S\-T} (D\-B\-Test, Recover\-During\-Memtable\-Compaction)
+\item 
+static std\-::string \hyperlink{namespaceleveldb_af5ebf23c4f21b4986d6f8fb430739287}{leveldb\-::\-Key} (int i)
+\item 
+\hyperlink{namespaceleveldb_a1ff90ae7b19ecf46c5efb6e5af00fa0a}{leveldb\-::\-T\-E\-S\-T} (D\-B\-Test, Minor\-Compactions\-Happen)
+\item 
+\hyperlink{namespaceleveldb_a01bbbae1753711e8b7740ed8faa9efd6}{leveldb\-::\-T\-E\-S\-T} (D\-B\-Test, Recover\-With\-Large\-Log)
+\item 
+\hyperlink{namespaceleveldb_acd61524dbc544e8f1ca63fbdfac59791}{leveldb\-::\-T\-E\-S\-T} (D\-B\-Test, Compactions\-Generate\-Multiple\-Files)
+\item 
+\hyperlink{namespaceleveldb_acb51ac2eb77bd1af22372748f9fb44da}{leveldb\-::\-T\-E\-S\-T} (D\-B\-Test, Repeated\-Writes\-To\-Same\-Key)
+\item 
+\hyperlink{namespaceleveldb_a0ed510b8c03c1ca0216ffee81199d79e}{leveldb\-::\-T\-E\-S\-T} (D\-B\-Test, Sparse\-Merge)
+\item 
+static bool \hyperlink{namespaceleveldb_a891b358b4c0a10a44b24b8f473cc73fd}{leveldb\-::\-Between} (\hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} val, \hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} low, \hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} high)
+\item 
+\hyperlink{namespaceleveldb_a6b3f1122dc9d727f0c699ed3da2d6474}{leveldb\-::\-T\-E\-S\-T} (D\-B\-Test, Approximate\-Sizes)
+\item 
+\hyperlink{namespaceleveldb_a5c41c70ccd20279235316b8627f419da}{leveldb\-::\-T\-E\-S\-T} (D\-B\-Test, Approximate\-Sizes\-\_\-\-Mix\-Of\-Small\-And\-Large)
+\item 
+\hyperlink{namespaceleveldb_a899f7415195fa4d25d801246cdec721d}{leveldb\-::\-T\-E\-S\-T} (D\-B\-Test, Iterator\-Pins\-Ref)
+\item 
+\hyperlink{namespaceleveldb_ab09998970d1ace06b8082f49da0444f5}{leveldb\-::\-T\-E\-S\-T} (D\-B\-Test, Snapshot)
+\item 
+\hyperlink{namespaceleveldb_a94214aebbf6328e7ad9ba735c5e42f68}{leveldb\-::\-T\-E\-S\-T} (D\-B\-Test, Hidden\-Values\-Are\-Removed)
+\item 
+\hyperlink{namespaceleveldb_a216168df3713bb71f35038d91b5224f0}{leveldb\-::\-T\-E\-S\-T} (D\-B\-Test, Deletion\-Markers1)
+\item 
+\hyperlink{namespaceleveldb_a4188787b0b1e1e25475a2983374065b6}{leveldb\-::\-T\-E\-S\-T} (D\-B\-Test, Deletion\-Markers2)
+\item 
+\hyperlink{namespaceleveldb_a4fa4ffaab998ba44a1745937c1e9c55c}{leveldb\-::\-T\-E\-S\-T} (D\-B\-Test, Overlap\-In\-Level0)
+\item 
+\hyperlink{namespaceleveldb_a46665ff2f4f9bd25167f82d3be16f8b2}{leveldb\-::\-T\-E\-S\-T} (D\-B\-Test, L0\-\_\-\-Compaction\-Bug\-\_\-\-Issue44\-\_\-a)
+\item 
+\hyperlink{namespaceleveldb_a727df67090c63a0ca4b2effdc90a3da1}{leveldb\-::\-T\-E\-S\-T} (D\-B\-Test, L0\-\_\-\-Compaction\-Bug\-\_\-\-Issue44\-\_\-b)
+\item 
+\hyperlink{namespaceleveldb_a5cd6c2754610c66f4dd998874482c80b}{leveldb\-::\-T\-E\-S\-T} (D\-B\-Test, Comparator\-Check)
+\item 
+\hyperlink{namespaceleveldb_a38772a8b86ea7658430b1fa2f1a5d83e}{leveldb\-::\-T\-E\-S\-T} (D\-B\-Test, Custom\-Comparator)
+\item 
+\hyperlink{namespaceleveldb_a34a511836c47efe81202280115290934}{leveldb\-::\-T\-E\-S\-T} (D\-B\-Test, Manual\-Compaction)
+\item 
+\hyperlink{namespaceleveldb_a88d6fdcb16ed4edc65da40f383e6f23b}{leveldb\-::\-T\-E\-S\-T} (D\-B\-Test, D\-B\-Open\-\_\-\-Options)
+\item 
+\hyperlink{namespaceleveldb_a8470163c7e8b292085a5b60f989dc828}{leveldb\-::\-T\-E\-S\-T} (D\-B\-Test, Locking)
+\item 
+\hyperlink{namespaceleveldb_a11f56de4abca34391c0e60f311262b65}{leveldb\-::\-T\-E\-S\-T} (D\-B\-Test, No\-Space)
+\item 
+\hyperlink{namespaceleveldb_a2eb704bdb3447d5feea4c127b90b1192}{leveldb\-::\-T\-E\-S\-T} (D\-B\-Test, Exponential\-Backoff)
+\item 
+\hyperlink{namespaceleveldb_a9d69b380c464519a1b946fb1faa21cbd}{leveldb\-::\-T\-E\-S\-T} (D\-B\-Test, Non\-Writable\-File\-System)
+\item 
+\hyperlink{namespaceleveldb_a071c4940c40a4eed0d3e4e4044a227a6}{leveldb\-::\-T\-E\-S\-T} (D\-B\-Test, Manifest\-Write\-Error)
+\item 
+\hyperlink{namespaceleveldb_a8e750f4502e214132281fd755d26c175}{leveldb\-::\-T\-E\-S\-T} (D\-B\-Test, Missing\-S\-S\-T\-File)
+\item 
+\hyperlink{namespaceleveldb_ab4a8284a6c982c710e6e84af0d6040a9}{leveldb\-::\-T\-E\-S\-T} (D\-B\-Test, Still\-Read\-S\-S\-T)
+\item 
+\hyperlink{namespaceleveldb_a47755684dc15db851e0174ea9475e97c}{leveldb\-::\-T\-E\-S\-T} (D\-B\-Test, Files\-Deleted\-After\-Compaction)
+\item 
+\hyperlink{namespaceleveldb_a6d54978f51e046c170696cbb320f23f1}{leveldb\-::\-T\-E\-S\-T} (D\-B\-Test, Bloom\-Filter)
+\item 
+\hyperlink{namespaceleveldb_a9bee47c386abe6004d884f2552bd8184}{leveldb\-::\-T\-E\-S\-T} (D\-B\-Test, Multi\-Threaded)
+\item 
+static std\-::string \hyperlink{namespaceleveldb_a1c336258072dc26d61cabcda6bc2db75}{leveldb\-::\-Random\-Key} (Random $\ast$rnd)
+\item 
+static bool \hyperlink{namespaceleveldb_a5d2ddf843172352a05569e55d7b84a13}{leveldb\-::\-Compare\-Iterators} (int step, D\-B $\ast$model, D\-B $\ast$db, const Snapshot $\ast$model\-\_\-snap, const Snapshot $\ast$db\-\_\-snap)
+\item 
+\hyperlink{namespaceleveldb_a028ed215c12e1998d7073b18fce4c24c}{leveldb\-::\-T\-E\-S\-T} (D\-B\-Test, Randomized)
+\item 
+std\-::string \hyperlink{namespaceleveldb_a706c78e756ff2dcd2185cdf2265c0b8a}{leveldb\-::\-Make\-Key} (unsigned int num)
+\item 
+void \hyperlink{namespaceleveldb_af9cf6ec167c9b6f25fd050ab6fb67a90}{leveldb\-::\-B\-M\-\_\-\-Log\-And\-Apply} (int iters, int num\-\_\-base\-\_\-files)
+\item 
+int \hyperlink{db__test_8cc_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{db__test_8cc_a3c04138a5bfe5d72780bb7e82a18e627}{\index{db\-\_\-test.\-cc@{db\-\_\-test.\-cc}!main@{main}}
+\index{main@{main}!db_test.cc@{db\-\_\-test.\-cc}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}}\label{db__test_8cc_a3c04138a5bfe5d72780bb7e82a18e627}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{db__test_8cc_a9acf5084c965a76d24ec228412256bc3}{\index{db\-\_\-test.\-cc@{db\-\_\-test.\-cc}!count\-\_\-@{count\-\_\-}}
+\index{count\-\_\-@{count\-\_\-}!db_test.cc@{db\-\_\-test.\-cc}}
+\subsubsection[{count\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int count\-\_\-}}\label{db__test_8cc_a9acf5084c965a76d24ec228412256bc3}
+\hypertarget{db__test_8cc_a62ffeaac8bdc204faeb004239f7c04be}{\index{db\-\_\-test.\-cc@{db\-\_\-test.\-cc}!counter@{counter}}
+\index{counter@{counter}!db_test.cc@{db\-\_\-test.\-cc}}
+\subsubsection[{counter}]{\setlength{\rightskip}{0pt plus 5cm}port\-::\-Atomic\-Pointer counter\mbox{[}k\-Num\-Threads\mbox{]}}}\label{db__test_8cc_a62ffeaac8bdc204faeb004239f7c04be}
+\hypertarget{db__test_8cc_a7441ef0865bcb3db9b8064dd7375c1ea}{\index{db\-\_\-test.\-cc@{db\-\_\-test.\-cc}!id@{id}}
+\index{id@{id}!db_test.cc@{db\-\_\-test.\-cc}}
+\subsubsection[{id}]{\setlength{\rightskip}{0pt plus 5cm}int id}}\label{db__test_8cc_a7441ef0865bcb3db9b8064dd7375c1ea}
+\hypertarget{db__test_8cc_a7409a2fd2bde9ec649030b2513a568b8}{\index{db\-\_\-test.\-cc@{db\-\_\-test.\-cc}!mu\-\_\-@{mu\-\_\-}}
+\index{mu\-\_\-@{mu\-\_\-}!db_test.cc@{db\-\_\-test.\-cc}}
+\subsubsection[{mu\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}port\-::\-Mutex mu\-\_\-}}\label{db__test_8cc_a7409a2fd2bde9ec649030b2513a568b8}
+\hypertarget{db__test_8cc_a42432b4356adce5579ccf597f6e83e54}{\index{db\-\_\-test.\-cc@{db\-\_\-test.\-cc}!state@{state}}
+\index{state@{state}!db_test.cc@{db\-\_\-test.\-cc}}
+\subsubsection[{state}]{\setlength{\rightskip}{0pt plus 5cm}M\-T\-State$\ast$ state}}\label{db__test_8cc_a42432b4356adce5579ccf597f6e83e54}
+\hypertarget{db__test_8cc_af6130d1029661dab14372467f0453ffa}{\index{db\-\_\-test.\-cc@{db\-\_\-test.\-cc}!stop@{stop}}
+\index{stop@{stop}!db_test.cc@{db\-\_\-test.\-cc}}
+\subsubsection[{stop}]{\setlength{\rightskip}{0pt plus 5cm}port\-::\-Atomic\-Pointer stop}}\label{db__test_8cc_af6130d1029661dab14372467f0453ffa}
+\hypertarget{db__test_8cc_a9cc668c18debdbcad21b45fdd8158648}{\index{db\-\_\-test.\-cc@{db\-\_\-test.\-cc}!test@{test}}
+\index{test@{test}!db_test.cc@{db\-\_\-test.\-cc}}
+\subsubsection[{test}]{\setlength{\rightskip}{0pt plus 5cm}D\-B\-Test$\ast$ test}}\label{db__test_8cc_a9cc668c18debdbcad21b45fdd8158648}
+\hypertarget{db__test_8cc_a3eb5ea5acdb558ac205ffb1c56790fd3}{\index{db\-\_\-test.\-cc@{db\-\_\-test.\-cc}!thread\-\_\-done@{thread\-\_\-done}}
+\index{thread\-\_\-done@{thread\-\_\-done}!db_test.cc@{db\-\_\-test.\-cc}}
+\subsubsection[{thread\-\_\-done}]{\setlength{\rightskip}{0pt plus 5cm}port\-::\-Atomic\-Pointer thread\-\_\-done\mbox{[}k\-Num\-Threads\mbox{]}}}\label{db__test_8cc_a3eb5ea5acdb558ac205ffb1c56790fd3}

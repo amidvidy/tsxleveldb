@@ -1,0 +1,167 @@
+\hypertarget{classleveldb_1_1_filter_block_builder}{\section{leveldb\-:\-:Filter\-Block\-Builder Class Reference}
+\label{classleveldb_1_1_filter_block_builder}\index{leveldb\-::\-Filter\-Block\-Builder@{leveldb\-::\-Filter\-Block\-Builder}}
+}
+
+
+{\ttfamily \#include $<$filter\-\_\-block.\-h$>$}
+
+
+
+Collaboration diagram for leveldb\-:\-:Filter\-Block\-Builder\-:
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classleveldb_1_1_filter_block_builder_a8e8b5ae95df5a13c035bec85e22549ca}{Filter\-Block\-Builder} (const \hyperlink{classleveldb_1_1_filter_policy}{Filter\-Policy} $\ast$)
+\item 
+void \hyperlink{classleveldb_1_1_filter_block_builder_a766a753a200f7386196a68897e47c1c3}{Start\-Block} (\hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} block\-\_\-offset)
+\item 
+void \hyperlink{classleveldb_1_1_filter_block_builder_a4fd9db735c5c72973cec62e4fd98137d}{Add\-Key} (const \hyperlink{classleveldb_1_1_slice}{Slice} \&key)
+\item 
+\hyperlink{classleveldb_1_1_slice}{Slice} \hyperlink{classleveldb_1_1_filter_block_builder_a75fa127d8af42e749abdd235eed97cad}{Finish} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classleveldb_1_1_filter_block_builder_ab9141e1d64c8dc779a5fc9eae390407a}{Generate\-Filter} ()
+\item 
+\hyperlink{classleveldb_1_1_filter_block_builder_a5f999cf28b5cc91c8a79f64b40a7ff1a}{Filter\-Block\-Builder} (const \hyperlink{classleveldb_1_1_filter_block_builder}{Filter\-Block\-Builder} \&)
+\item 
+void \hyperlink{classleveldb_1_1_filter_block_builder_a14f852d72d7ebde56e0827f619ce796d}{operator=} (const \hyperlink{classleveldb_1_1_filter_block_builder}{Filter\-Block\-Builder} \&)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{classleveldb_1_1_filter_policy}{Filter\-Policy} $\ast$ \hyperlink{classleveldb_1_1_filter_block_builder_ae1fcb392ca7421a33699f516e3c724e0}{policy\-\_\-}
+\item 
+std\-::string \hyperlink{classleveldb_1_1_filter_block_builder_a948705862c1b6c371e6044f588de489a}{keys\-\_\-}
+\item 
+std\-::vector$<$ size\-\_\-t $>$ \hyperlink{classleveldb_1_1_filter_block_builder_a17f19fc8365e35a5808c97482f2fea3a}{start\-\_\-}
+\item 
+std\-::string \hyperlink{classleveldb_1_1_filter_block_builder_ad8230068e41814f72ad4097803dfe382}{result\-\_\-}
+\item 
+std\-::vector$<$ \hyperlink{classleveldb_1_1_slice}{Slice} $>$ \hyperlink{classleveldb_1_1_filter_block_builder_a3f111a41d738802bdd2a6c50892718f5}{tmp\-\_\-keys\-\_\-}
+\item 
+std\-::vector$<$ \hyperlink{stdint_8h_a435d1572bf3f880d55459d9805097f62}{uint32\-\_\-t} $>$ \hyperlink{classleveldb_1_1_filter_block_builder_ac53c5d18c650072ad09596bf8c3f0e7a}{filter\-\_\-offsets\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classleveldb_1_1_filter_block_builder_a8e8b5ae95df5a13c035bec85e22549ca}{\index{leveldb\-::\-Filter\-Block\-Builder@{leveldb\-::\-Filter\-Block\-Builder}!Filter\-Block\-Builder@{Filter\-Block\-Builder}}
+\index{Filter\-Block\-Builder@{Filter\-Block\-Builder}!leveldb::FilterBlockBuilder@{leveldb\-::\-Filter\-Block\-Builder}}
+\subsubsection[{Filter\-Block\-Builder}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::\-Filter\-Block\-Builder\-::\-Filter\-Block\-Builder (
+\begin{DoxyParamCaption}
+\item[{const {\bf Filter\-Policy} $\ast$}]{policy}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}}\label{classleveldb_1_1_filter_block_builder_a8e8b5ae95df5a13c035bec85e22549ca}
+\hypertarget{classleveldb_1_1_filter_block_builder_a5f999cf28b5cc91c8a79f64b40a7ff1a}{\index{leveldb\-::\-Filter\-Block\-Builder@{leveldb\-::\-Filter\-Block\-Builder}!Filter\-Block\-Builder@{Filter\-Block\-Builder}}
+\index{Filter\-Block\-Builder@{Filter\-Block\-Builder}!leveldb::FilterBlockBuilder@{leveldb\-::\-Filter\-Block\-Builder}}
+\subsubsection[{Filter\-Block\-Builder}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::\-Filter\-Block\-Builder\-::\-Filter\-Block\-Builder (
+\begin{DoxyParamCaption}
+\item[{const {\bf Filter\-Block\-Builder} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_filter_block_builder_a5f999cf28b5cc91c8a79f64b40a7ff1a}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classleveldb_1_1_filter_block_builder_a4fd9db735c5c72973cec62e4fd98137d}{\index{leveldb\-::\-Filter\-Block\-Builder@{leveldb\-::\-Filter\-Block\-Builder}!Add\-Key@{Add\-Key}}
+\index{Add\-Key@{Add\-Key}!leveldb::FilterBlockBuilder@{leveldb\-::\-Filter\-Block\-Builder}}
+\subsubsection[{Add\-Key}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-Filter\-Block\-Builder\-::\-Add\-Key (
+\begin{DoxyParamCaption}
+\item[{const {\bf Slice} \&}]{key}
+\end{DoxyParamCaption}
+)}}\label{classleveldb_1_1_filter_block_builder_a4fd9db735c5c72973cec62e4fd98137d}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_filter_block_builder_a75fa127d8af42e749abdd235eed97cad}{\index{leveldb\-::\-Filter\-Block\-Builder@{leveldb\-::\-Filter\-Block\-Builder}!Finish@{Finish}}
+\index{Finish@{Finish}!leveldb::FilterBlockBuilder@{leveldb\-::\-Filter\-Block\-Builder}}
+\subsubsection[{Finish}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Slice} leveldb\-::\-Filter\-Block\-Builder\-::\-Finish (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classleveldb_1_1_filter_block_builder_a75fa127d8af42e749abdd235eed97cad}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_filter_block_builder_ab9141e1d64c8dc779a5fc9eae390407a}{\index{leveldb\-::\-Filter\-Block\-Builder@{leveldb\-::\-Filter\-Block\-Builder}!Generate\-Filter@{Generate\-Filter}}
+\index{Generate\-Filter@{Generate\-Filter}!leveldb::FilterBlockBuilder@{leveldb\-::\-Filter\-Block\-Builder}}
+\subsubsection[{Generate\-Filter}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-Filter\-Block\-Builder\-::\-Generate\-Filter (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_filter_block_builder_ab9141e1d64c8dc779a5fc9eae390407a}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_filter_block_builder_a14f852d72d7ebde56e0827f619ce796d}{\index{leveldb\-::\-Filter\-Block\-Builder@{leveldb\-::\-Filter\-Block\-Builder}!operator=@{operator=}}
+\index{operator=@{operator=}!leveldb::FilterBlockBuilder@{leveldb\-::\-Filter\-Block\-Builder}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-Filter\-Block\-Builder\-::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Filter\-Block\-Builder} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_filter_block_builder_a14f852d72d7ebde56e0827f619ce796d}
+\hypertarget{classleveldb_1_1_filter_block_builder_a766a753a200f7386196a68897e47c1c3}{\index{leveldb\-::\-Filter\-Block\-Builder@{leveldb\-::\-Filter\-Block\-Builder}!Start\-Block@{Start\-Block}}
+\index{Start\-Block@{Start\-Block}!leveldb::FilterBlockBuilder@{leveldb\-::\-Filter\-Block\-Builder}}
+\subsubsection[{Start\-Block}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-Filter\-Block\-Builder\-::\-Start\-Block (
+\begin{DoxyParamCaption}
+\item[{{\bf uint64\-\_\-t}}]{block\-\_\-offset}
+\end{DoxyParamCaption}
+)}}\label{classleveldb_1_1_filter_block_builder_a766a753a200f7386196a68897e47c1c3}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classleveldb_1_1_filter_block_builder_ac53c5d18c650072ad09596bf8c3f0e7a}{\index{leveldb\-::\-Filter\-Block\-Builder@{leveldb\-::\-Filter\-Block\-Builder}!filter\-\_\-offsets\-\_\-@{filter\-\_\-offsets\-\_\-}}
+\index{filter\-\_\-offsets\-\_\-@{filter\-\_\-offsets\-\_\-}!leveldb::FilterBlockBuilder@{leveldb\-::\-Filter\-Block\-Builder}}
+\subsubsection[{filter\-\_\-offsets\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<${\bf uint32\-\_\-t}$>$ leveldb\-::\-Filter\-Block\-Builder\-::filter\-\_\-offsets\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_filter_block_builder_ac53c5d18c650072ad09596bf8c3f0e7a}
+\hypertarget{classleveldb_1_1_filter_block_builder_a948705862c1b6c371e6044f588de489a}{\index{leveldb\-::\-Filter\-Block\-Builder@{leveldb\-::\-Filter\-Block\-Builder}!keys\-\_\-@{keys\-\_\-}}
+\index{keys\-\_\-@{keys\-\_\-}!leveldb::FilterBlockBuilder@{leveldb\-::\-Filter\-Block\-Builder}}
+\subsubsection[{keys\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string leveldb\-::\-Filter\-Block\-Builder\-::keys\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_filter_block_builder_a948705862c1b6c371e6044f588de489a}
+\hypertarget{classleveldb_1_1_filter_block_builder_ae1fcb392ca7421a33699f516e3c724e0}{\index{leveldb\-::\-Filter\-Block\-Builder@{leveldb\-::\-Filter\-Block\-Builder}!policy\-\_\-@{policy\-\_\-}}
+\index{policy\-\_\-@{policy\-\_\-}!leveldb::FilterBlockBuilder@{leveldb\-::\-Filter\-Block\-Builder}}
+\subsubsection[{policy\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Filter\-Policy}$\ast$ leveldb\-::\-Filter\-Block\-Builder\-::policy\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_filter_block_builder_ae1fcb392ca7421a33699f516e3c724e0}
+\hypertarget{classleveldb_1_1_filter_block_builder_ad8230068e41814f72ad4097803dfe382}{\index{leveldb\-::\-Filter\-Block\-Builder@{leveldb\-::\-Filter\-Block\-Builder}!result\-\_\-@{result\-\_\-}}
+\index{result\-\_\-@{result\-\_\-}!leveldb::FilterBlockBuilder@{leveldb\-::\-Filter\-Block\-Builder}}
+\subsubsection[{result\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string leveldb\-::\-Filter\-Block\-Builder\-::result\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_filter_block_builder_ad8230068e41814f72ad4097803dfe382}
+\hypertarget{classleveldb_1_1_filter_block_builder_a17f19fc8365e35a5808c97482f2fea3a}{\index{leveldb\-::\-Filter\-Block\-Builder@{leveldb\-::\-Filter\-Block\-Builder}!start\-\_\-@{start\-\_\-}}
+\index{start\-\_\-@{start\-\_\-}!leveldb::FilterBlockBuilder@{leveldb\-::\-Filter\-Block\-Builder}}
+\subsubsection[{start\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$size\-\_\-t$>$ leveldb\-::\-Filter\-Block\-Builder\-::start\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_filter_block_builder_a17f19fc8365e35a5808c97482f2fea3a}
+\hypertarget{classleveldb_1_1_filter_block_builder_a3f111a41d738802bdd2a6c50892718f5}{\index{leveldb\-::\-Filter\-Block\-Builder@{leveldb\-::\-Filter\-Block\-Builder}!tmp\-\_\-keys\-\_\-@{tmp\-\_\-keys\-\_\-}}
+\index{tmp\-\_\-keys\-\_\-@{tmp\-\_\-keys\-\_\-}!leveldb::FilterBlockBuilder@{leveldb\-::\-Filter\-Block\-Builder}}
+\subsubsection[{tmp\-\_\-keys\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<${\bf Slice}$>$ leveldb\-::\-Filter\-Block\-Builder\-::tmp\-\_\-keys\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_filter_block_builder_a3f111a41d738802bdd2a6c50892718f5}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+table/\hyperlink{filter__block_8h}{filter\-\_\-block.\-h}\item 
+table/\hyperlink{filter__block_8cc}{filter\-\_\-block.\-cc}\end{DoxyCompactItemize}

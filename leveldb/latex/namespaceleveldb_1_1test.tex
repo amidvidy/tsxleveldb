@@ -1,0 +1,137 @@
+\hypertarget{namespaceleveldb_1_1test}{\section{leveldb\-:\-:test Namespace Reference}
+\label{namespaceleveldb_1_1test}\index{leveldb\-::test@{leveldb\-::test}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classleveldb_1_1test_1_1_tester}{Tester}
+\item 
+class \hyperlink{classleveldb_1_1test_1_1_error_env}{Error\-Env}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{namespaceleveldb_1_1test_aecde3e0440c4462e8d73aad728e3e819}{Register\-Test} (const char $\ast$\hyperlink{testharness_8cc_a70ff0f6c026c3dd1ef6aaf504e7fddc3}{base}, const char $\ast$\hyperlink{testharness_8cc_a8f8f80d37794cde9472343e4487ba3eb}{name}, void($\ast$\hyperlink{testharness_8cc_a0a8271b25a6a647b48a0be0bc49c9409}{func})())
+\item 
+int \hyperlink{namespaceleveldb_1_1test_a3329162c54a0bff42d41c2ac86b2580a}{Run\-All\-Tests} ()
+\item 
+std\-::string \hyperlink{namespaceleveldb_1_1test_ac259aab85eedba03d163bb3a86ae4645}{Tmp\-Dir} ()
+\item 
+int \hyperlink{namespaceleveldb_1_1test_a0d48ce23bccd2763df90789cb3aac03c}{Random\-Seed} ()
+\item 
+\hyperlink{classleveldb_1_1_slice}{Slice} \hyperlink{namespaceleveldb_1_1test_a2132c5f28cd21dcea4348246fa32b673}{Random\-String} (\hyperlink{classleveldb_1_1_random}{Random} $\ast$rnd, int len, std\-::string $\ast$dst)
+\item 
+std\-::string \hyperlink{namespaceleveldb_1_1test_ae6faec2042472bb9c3da124a677c4b96}{Random\-Key} (\hyperlink{classleveldb_1_1_random}{Random} $\ast$rnd, int len)
+\item 
+\hyperlink{classleveldb_1_1_slice}{Slice} \hyperlink{namespaceleveldb_1_1test_ad213d475feebfeb1c860151ed824f318}{Compressible\-String} (\hyperlink{classleveldb_1_1_random}{Random} $\ast$rnd, double compressed\-\_\-fraction, int len, std\-::string $\ast$dst)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{namespaceleveldb_1_1test_ad213d475feebfeb1c860151ed824f318}{\index{leveldb\-::test@{leveldb\-::test}!Compressible\-String@{Compressible\-String}}
+\index{Compressible\-String@{Compressible\-String}!leveldb::test@{leveldb\-::test}}
+\subsubsection[{Compressible\-String}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Slice} leveldb\-::test\-::\-Compressible\-String (
+\begin{DoxyParamCaption}
+\item[{Random $\ast$}]{rnd, }
+\item[{double}]{compressed\-\_\-fraction, }
+\item[{int}]{len, }
+\item[{std\-::string $\ast$}]{dst}
+\end{DoxyParamCaption}
+)}}\label{namespaceleveldb_1_1test_ad213d475feebfeb1c860151ed824f318}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{namespaceleveldb_1_1test_ae6faec2042472bb9c3da124a677c4b96}{\index{leveldb\-::test@{leveldb\-::test}!Random\-Key@{Random\-Key}}
+\index{Random\-Key@{Random\-Key}!leveldb::test@{leveldb\-::test}}
+\subsubsection[{Random\-Key}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string leveldb\-::test\-::\-Random\-Key (
+\begin{DoxyParamCaption}
+\item[{Random $\ast$}]{rnd, }
+\item[{int}]{len}
+\end{DoxyParamCaption}
+)}}\label{namespaceleveldb_1_1test_ae6faec2042472bb9c3da124a677c4b96}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{namespaceleveldb_1_1test_a0d48ce23bccd2763df90789cb3aac03c}{\index{leveldb\-::test@{leveldb\-::test}!Random\-Seed@{Random\-Seed}}
+\index{Random\-Seed@{Random\-Seed}!leveldb::test@{leveldb\-::test}}
+\subsubsection[{Random\-Seed}]{\setlength{\rightskip}{0pt plus 5cm}int leveldb\-::test\-::\-Random\-Seed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{namespaceleveldb_1_1test_a0d48ce23bccd2763df90789cb3aac03c}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{namespaceleveldb_1_1test_a2132c5f28cd21dcea4348246fa32b673}{\index{leveldb\-::test@{leveldb\-::test}!Random\-String@{Random\-String}}
+\index{Random\-String@{Random\-String}!leveldb::test@{leveldb\-::test}}
+\subsubsection[{Random\-String}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Slice} leveldb\-::test\-::\-Random\-String (
+\begin{DoxyParamCaption}
+\item[{Random $\ast$}]{rnd, }
+\item[{int}]{len, }
+\item[{std\-::string $\ast$}]{dst}
+\end{DoxyParamCaption}
+)}}\label{namespaceleveldb_1_1test_a2132c5f28cd21dcea4348246fa32b673}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{namespaceleveldb_1_1test_aecde3e0440c4462e8d73aad728e3e819}{\index{leveldb\-::test@{leveldb\-::test}!Register\-Test@{Register\-Test}}
+\index{Register\-Test@{Register\-Test}!leveldb::test@{leveldb\-::test}}
+\subsubsection[{Register\-Test}]{\setlength{\rightskip}{0pt plus 5cm}bool leveldb\-::test\-::\-Register\-Test (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{base, }
+\item[{const char $\ast$}]{name, }
+\item[{void($\ast$)()}]{func}
+\end{DoxyParamCaption}
+)}}\label{namespaceleveldb_1_1test_aecde3e0440c4462e8d73aad728e3e819}
+\hypertarget{namespaceleveldb_1_1test_a3329162c54a0bff42d41c2ac86b2580a}{\index{leveldb\-::test@{leveldb\-::test}!Run\-All\-Tests@{Run\-All\-Tests}}
+\index{Run\-All\-Tests@{Run\-All\-Tests}!leveldb::test@{leveldb\-::test}}
+\subsubsection[{Run\-All\-Tests}]{\setlength{\rightskip}{0pt plus 5cm}int leveldb\-::test\-::\-Run\-All\-Tests (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{namespaceleveldb_1_1test_a3329162c54a0bff42d41c2ac86b2580a}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{namespaceleveldb_1_1test_ac259aab85eedba03d163bb3a86ae4645}{\index{leveldb\-::test@{leveldb\-::test}!Tmp\-Dir@{Tmp\-Dir}}
+\index{Tmp\-Dir@{Tmp\-Dir}!leveldb::test@{leveldb\-::test}}
+\subsubsection[{Tmp\-Dir}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string leveldb\-::test\-::\-Tmp\-Dir (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{namespaceleveldb_1_1test_ac259aab85eedba03d163bb3a86ae4645}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+

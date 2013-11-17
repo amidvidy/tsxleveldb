@@ -1,0 +1,58 @@
+\hypertarget{port__posix_8h}{\section{port/port\-\_\-posix.h File Reference}
+\label{port__posix_8h}\index{port/port\-\_\-posix.\-h@{port/port\-\_\-posix.\-h}}
+}
+{\ttfamily \#include $<$endian.\-h$>$}\\*
+{\ttfamily \#include $<$pthread.\-h$>$}\\*
+{\ttfamily \#include $<$stdint.\-h$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include \char`\"{}port/atomic\-\_\-pointer.\-h\char`\"{}}\\*
+Include dependency graph for port\-\_\-posix.\-h\-:
+This graph shows which files directly or indirectly include this file\-:
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classleveldb_1_1port_1_1_mutex}{leveldb\-::port\-::\-Mutex}
+\item 
+class \hyperlink{classleveldb_1_1port_1_1_cond_var}{leveldb\-::port\-::\-Cond\-Var}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespaceleveldb}{leveldb}
+\item 
+\hyperlink{namespaceleveldb_1_1port}{leveldb\-::port}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{port__posix_8h_a70cdc2961c4e178e613d23a851e57f5d}{P\-L\-A\-T\-F\-O\-R\-M\-\_\-\-I\-S\-\_\-\-L\-I\-T\-T\-L\-E\-\_\-\-E\-N\-D\-I\-A\-N}~(\-\_\-\-\_\-\-B\-Y\-T\-E\-\_\-\-O\-R\-D\-E\-R == \-\_\-\-\_\-\-L\-I\-T\-T\-L\-E\-\_\-\-E\-N\-D\-I\-A\-N)
+\item 
+\#define \hyperlink{port__posix_8h_aa0f16c685b4ebb93ccc49f5ae36e1c9d}{L\-E\-V\-E\-L\-D\-B\-\_\-\-O\-N\-C\-E\-\_\-\-I\-N\-I\-T}~P\-T\-H\-R\-E\-A\-D\-\_\-\-O\-N\-C\-E\-\_\-\-I\-N\-I\-T
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{namespaceleveldb_1_1port_a1493e91d494e6f0ea086a743a562e983}{leveldb\-::port\-::\-Init\-Once} (port\-::\-Once\-Type $\ast$, void($\ast$initializer)())
+\item 
+bool \hyperlink{namespaceleveldb_1_1port_a64d0eafc3cfb484000e6afb5cbcc9d87}{leveldb\-::port\-::\-Snappy\-\_\-\-Compress} (const char $\ast$input, size\-\_\-t length,\-::std\-::string $\ast$output)
+\item 
+bool \hyperlink{namespaceleveldb_1_1port_aad536a786dfc1df63d14c6b74178a73b}{leveldb\-::port\-::\-Snappy\-\_\-\-Get\-Uncompressed\-Length} (const char $\ast$input, size\-\_\-t length, size\-\_\-t $\ast$result)
+\item 
+bool \hyperlink{namespaceleveldb_1_1port_ab6f0c4381b00450e06d3000a8cb48a55}{leveldb\-::port\-::\-Snappy\-\_\-\-Uncompress} (const char $\ast$input\-\_\-data, size\-\_\-t input\-\_\-length, char $\ast$output)
+\item 
+bool \hyperlink{namespaceleveldb_1_1port_a1686423180e60af953153121c615f5fe}{leveldb\-::port\-::\-Get\-Heap\-Profile} (void($\ast$\hyperlink{testharness_8cc_a0a8271b25a6a647b48a0be0bc49c9409}{func})(void $\ast$, const char $\ast$, int), void $\ast$\hyperlink{env__posix_8cc_a9ce2ec4812a92cb6ab39f6e81e9173a9}{arg})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static const bool \hyperlink{namespaceleveldb_1_1port_a1d2c52a3c3be0edb6562c9494b85bfec}{leveldb\-::port\-::k\-Little\-Endian} = \hyperlink{port__posix_8h_a70cdc2961c4e178e613d23a851e57f5d}{P\-L\-A\-T\-F\-O\-R\-M\-\_\-\-I\-S\-\_\-\-L\-I\-T\-T\-L\-E\-\_\-\-E\-N\-D\-I\-A\-N}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{port__posix_8h_aa0f16c685b4ebb93ccc49f5ae36e1c9d}{\index{port\-\_\-posix.\-h@{port\-\_\-posix.\-h}!L\-E\-V\-E\-L\-D\-B\-\_\-\-O\-N\-C\-E\-\_\-\-I\-N\-I\-T@{L\-E\-V\-E\-L\-D\-B\-\_\-\-O\-N\-C\-E\-\_\-\-I\-N\-I\-T}}
+\index{L\-E\-V\-E\-L\-D\-B\-\_\-\-O\-N\-C\-E\-\_\-\-I\-N\-I\-T@{L\-E\-V\-E\-L\-D\-B\-\_\-\-O\-N\-C\-E\-\_\-\-I\-N\-I\-T}!port_posix.h@{port\-\_\-posix.\-h}}
+\subsubsection[{L\-E\-V\-E\-L\-D\-B\-\_\-\-O\-N\-C\-E\-\_\-\-I\-N\-I\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-E\-V\-E\-L\-D\-B\-\_\-\-O\-N\-C\-E\-\_\-\-I\-N\-I\-T~P\-T\-H\-R\-E\-A\-D\-\_\-\-O\-N\-C\-E\-\_\-\-I\-N\-I\-T}}\label{port__posix_8h_aa0f16c685b4ebb93ccc49f5ae36e1c9d}
+\hypertarget{port__posix_8h_a70cdc2961c4e178e613d23a851e57f5d}{\index{port\-\_\-posix.\-h@{port\-\_\-posix.\-h}!P\-L\-A\-T\-F\-O\-R\-M\-\_\-\-I\-S\-\_\-\-L\-I\-T\-T\-L\-E\-\_\-\-E\-N\-D\-I\-A\-N@{P\-L\-A\-T\-F\-O\-R\-M\-\_\-\-I\-S\-\_\-\-L\-I\-T\-T\-L\-E\-\_\-\-E\-N\-D\-I\-A\-N}}
+\index{P\-L\-A\-T\-F\-O\-R\-M\-\_\-\-I\-S\-\_\-\-L\-I\-T\-T\-L\-E\-\_\-\-E\-N\-D\-I\-A\-N@{P\-L\-A\-T\-F\-O\-R\-M\-\_\-\-I\-S\-\_\-\-L\-I\-T\-T\-L\-E\-\_\-\-E\-N\-D\-I\-A\-N}!port_posix.h@{port\-\_\-posix.\-h}}
+\subsubsection[{P\-L\-A\-T\-F\-O\-R\-M\-\_\-\-I\-S\-\_\-\-L\-I\-T\-T\-L\-E\-\_\-\-E\-N\-D\-I\-A\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-L\-A\-T\-F\-O\-R\-M\-\_\-\-I\-S\-\_\-\-L\-I\-T\-T\-L\-E\-\_\-\-E\-N\-D\-I\-A\-N~(\-\_\-\-\_\-\-B\-Y\-T\-E\-\_\-\-O\-R\-D\-E\-R == \-\_\-\-\_\-\-L\-I\-T\-T\-L\-E\-\_\-\-E\-N\-D\-I\-A\-N)}}\label{port__posix_8h_a70cdc2961c4e178e613d23a851e57f5d}

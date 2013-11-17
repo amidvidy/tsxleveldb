@@ -1,0 +1,226 @@
+\hypertarget{classleveldb_1_1_harness}{\section{leveldb\-:\-:Harness Class Reference}
+\label{classleveldb_1_1_harness}\index{leveldb\-::\-Harness@{leveldb\-::\-Harness}}
+}
+
+
+Collaboration diagram for leveldb\-:\-:Harness\-:
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classleveldb_1_1_harness_a37601b2f232e45cb7607aa8d2ecb25db}{Harness} ()
+\item 
+void \hyperlink{classleveldb_1_1_harness_a2aba24255691eaad2a57ee43cbc9ddc1}{Init} (const \hyperlink{structleveldb_1_1_test_args}{Test\-Args} \&args)
+\item 
+\hyperlink{classleveldb_1_1_harness_a9956e6945c11e5024ae1f82fd8528343}{$\sim$\-Harness} ()
+\item 
+void \hyperlink{classleveldb_1_1_harness_a019ddc8e52dc5cfaac85f53993ab1ed4}{Add} (const std\-::string \&key, const std\-::string \&\hyperlink{cache_8cc_a0f61d63b009d0880a89c843bd50d8d76}{value})
+\item 
+void \hyperlink{classleveldb_1_1_harness_a78dbb5352b51e22bbc449bad7c1a9176}{Test} (\hyperlink{classleveldb_1_1_random}{Random} $\ast$rnd)
+\item 
+void \hyperlink{classleveldb_1_1_harness_ac5ff108406a08a6e3e22318246d206ef}{Test\-Forward\-Scan} (const std\-::vector$<$ std\-::string $>$ \&keys, const \hyperlink{namespaceleveldb_aac1e50450147be263e08252c6700f7a7}{K\-V\-Map} \&data)
+\item 
+void \hyperlink{classleveldb_1_1_harness_aba7a2c48101cd9d024be64080ebed363}{Test\-Backward\-Scan} (const std\-::vector$<$ std\-::string $>$ \&keys, const \hyperlink{namespaceleveldb_aac1e50450147be263e08252c6700f7a7}{K\-V\-Map} \&data)
+\item 
+void \hyperlink{classleveldb_1_1_harness_adb4b24bd89b600a67b0cd52ff64af9cd}{Test\-Random\-Access} (\hyperlink{classleveldb_1_1_random}{Random} $\ast$rnd, const std\-::vector$<$ std\-::string $>$ \&keys, const \hyperlink{namespaceleveldb_aac1e50450147be263e08252c6700f7a7}{K\-V\-Map} \&data)
+\item 
+std\-::string \hyperlink{classleveldb_1_1_harness_a69962f92cdd4fdc5d1f91d8c3cbebb3f}{To\-String} (const \hyperlink{namespaceleveldb_aac1e50450147be263e08252c6700f7a7}{K\-V\-Map} \&data, const K\-V\-Map\-::const\-\_\-iterator \&it)
+\item 
+std\-::string \hyperlink{classleveldb_1_1_harness_a7589308a4592b9edb4142825b743244c}{To\-String} (const \hyperlink{namespaceleveldb_aac1e50450147be263e08252c6700f7a7}{K\-V\-Map} \&data, const K\-V\-Map\-::const\-\_\-reverse\-\_\-iterator \&it)
+\item 
+std\-::string \hyperlink{classleveldb_1_1_harness_a1cdf351918a2e969bce1c29290317403}{To\-String} (const \hyperlink{classleveldb_1_1_iterator}{Iterator} $\ast$it)
+\item 
+std\-::string \hyperlink{classleveldb_1_1_harness_ab6f2d80f97eb56fc65d4a9177cd86c03}{Pick\-Random\-Key} (\hyperlink{classleveldb_1_1_random}{Random} $\ast$rnd, const std\-::vector$<$ std\-::string $>$ \&keys)
+\item 
+\hyperlink{classleveldb_1_1_d_b}{D\-B} $\ast$ \hyperlink{classleveldb_1_1_harness_ac278dc1cfc6a3b9f6ebc5ac93ccb42a7}{db} () const 
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structleveldb_1_1_options}{Options} \hyperlink{classleveldb_1_1_harness_a503838bed7ecbdec2d06f577e54f522c}{options\-\_\-}
+\item 
+\hyperlink{classleveldb_1_1_constructor}{Constructor} $\ast$ \hyperlink{classleveldb_1_1_harness_a04b2410b1da9c47dd78240702e68c826}{constructor\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classleveldb_1_1_harness_a37601b2f232e45cb7607aa8d2ecb25db}{\index{leveldb\-::\-Harness@{leveldb\-::\-Harness}!Harness@{Harness}}
+\index{Harness@{Harness}!leveldb::Harness@{leveldb\-::\-Harness}}
+\subsubsection[{Harness}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::\-Harness\-::\-Harness (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_harness_a37601b2f232e45cb7607aa8d2ecb25db}
+\hypertarget{classleveldb_1_1_harness_a9956e6945c11e5024ae1f82fd8528343}{\index{leveldb\-::\-Harness@{leveldb\-::\-Harness}!$\sim$\-Harness@{$\sim$\-Harness}}
+\index{$\sim$\-Harness@{$\sim$\-Harness}!leveldb::Harness@{leveldb\-::\-Harness}}
+\subsubsection[{$\sim$\-Harness}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::\-Harness\-::$\sim$\-Harness (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_harness_a9956e6945c11e5024ae1f82fd8528343}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classleveldb_1_1_harness_a019ddc8e52dc5cfaac85f53993ab1ed4}{\index{leveldb\-::\-Harness@{leveldb\-::\-Harness}!Add@{Add}}
+\index{Add@{Add}!leveldb::Harness@{leveldb\-::\-Harness}}
+\subsubsection[{Add}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-Harness\-::\-Add (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{key, }
+\item[{const std\-::string \&}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_harness_a019ddc8e52dc5cfaac85f53993ab1ed4}
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_harness_ac278dc1cfc6a3b9f6ebc5ac93ccb42a7}{\index{leveldb\-::\-Harness@{leveldb\-::\-Harness}!db@{db}}
+\index{db@{db}!leveldb::Harness@{leveldb\-::\-Harness}}
+\subsubsection[{db}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-B}$\ast$ leveldb\-::\-Harness\-::db (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_harness_ac278dc1cfc6a3b9f6ebc5ac93ccb42a7}
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_harness_a2aba24255691eaad2a57ee43cbc9ddc1}{\index{leveldb\-::\-Harness@{leveldb\-::\-Harness}!Init@{Init}}
+\index{Init@{Init}!leveldb::Harness@{leveldb\-::\-Harness}}
+\subsubsection[{Init}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-Harness\-::\-Init (
+\begin{DoxyParamCaption}
+\item[{const {\bf Test\-Args} \&}]{args}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_harness_a2aba24255691eaad2a57ee43cbc9ddc1}
+\hypertarget{classleveldb_1_1_harness_ab6f2d80f97eb56fc65d4a9177cd86c03}{\index{leveldb\-::\-Harness@{leveldb\-::\-Harness}!Pick\-Random\-Key@{Pick\-Random\-Key}}
+\index{Pick\-Random\-Key@{Pick\-Random\-Key}!leveldb::Harness@{leveldb\-::\-Harness}}
+\subsubsection[{Pick\-Random\-Key}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string leveldb\-::\-Harness\-::\-Pick\-Random\-Key (
+\begin{DoxyParamCaption}
+\item[{{\bf Random} $\ast$}]{rnd, }
+\item[{const std\-::vector$<$ std\-::string $>$ \&}]{keys}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_harness_ab6f2d80f97eb56fc65d4a9177cd86c03}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_harness_a78dbb5352b51e22bbc449bad7c1a9176}{\index{leveldb\-::\-Harness@{leveldb\-::\-Harness}!Test@{Test}}
+\index{Test@{Test}!leveldb::Harness@{leveldb\-::\-Harness}}
+\subsubsection[{Test}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-Harness\-::\-Test (
+\begin{DoxyParamCaption}
+\item[{{\bf Random} $\ast$}]{rnd}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_harness_a78dbb5352b51e22bbc449bad7c1a9176}
+
+
+Here is the call graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_harness_aba7a2c48101cd9d024be64080ebed363}{\index{leveldb\-::\-Harness@{leveldb\-::\-Harness}!Test\-Backward\-Scan@{Test\-Backward\-Scan}}
+\index{Test\-Backward\-Scan@{Test\-Backward\-Scan}!leveldb::Harness@{leveldb\-::\-Harness}}
+\subsubsection[{Test\-Backward\-Scan}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-Harness\-::\-Test\-Backward\-Scan (
+\begin{DoxyParamCaption}
+\item[{const std\-::vector$<$ std\-::string $>$ \&}]{keys, }
+\item[{const {\bf K\-V\-Map} \&}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_harness_aba7a2c48101cd9d024be64080ebed363}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_harness_ac5ff108406a08a6e3e22318246d206ef}{\index{leveldb\-::\-Harness@{leveldb\-::\-Harness}!Test\-Forward\-Scan@{Test\-Forward\-Scan}}
+\index{Test\-Forward\-Scan@{Test\-Forward\-Scan}!leveldb::Harness@{leveldb\-::\-Harness}}
+\subsubsection[{Test\-Forward\-Scan}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-Harness\-::\-Test\-Forward\-Scan (
+\begin{DoxyParamCaption}
+\item[{const std\-::vector$<$ std\-::string $>$ \&}]{keys, }
+\item[{const {\bf K\-V\-Map} \&}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_harness_ac5ff108406a08a6e3e22318246d206ef}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_harness_adb4b24bd89b600a67b0cd52ff64af9cd}{\index{leveldb\-::\-Harness@{leveldb\-::\-Harness}!Test\-Random\-Access@{Test\-Random\-Access}}
+\index{Test\-Random\-Access@{Test\-Random\-Access}!leveldb::Harness@{leveldb\-::\-Harness}}
+\subsubsection[{Test\-Random\-Access}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-Harness\-::\-Test\-Random\-Access (
+\begin{DoxyParamCaption}
+\item[{{\bf Random} $\ast$}]{rnd, }
+\item[{const std\-::vector$<$ std\-::string $>$ \&}]{keys, }
+\item[{const {\bf K\-V\-Map} \&}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_harness_adb4b24bd89b600a67b0cd52ff64af9cd}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_harness_a69962f92cdd4fdc5d1f91d8c3cbebb3f}{\index{leveldb\-::\-Harness@{leveldb\-::\-Harness}!To\-String@{To\-String}}
+\index{To\-String@{To\-String}!leveldb::Harness@{leveldb\-::\-Harness}}
+\subsubsection[{To\-String}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string leveldb\-::\-Harness\-::\-To\-String (
+\begin{DoxyParamCaption}
+\item[{const {\bf K\-V\-Map} \&}]{data, }
+\item[{const K\-V\-Map\-::const\-\_\-iterator \&}]{it}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_harness_a69962f92cdd4fdc5d1f91d8c3cbebb3f}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_harness_a7589308a4592b9edb4142825b743244c}{\index{leveldb\-::\-Harness@{leveldb\-::\-Harness}!To\-String@{To\-String}}
+\index{To\-String@{To\-String}!leveldb::Harness@{leveldb\-::\-Harness}}
+\subsubsection[{To\-String}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string leveldb\-::\-Harness\-::\-To\-String (
+\begin{DoxyParamCaption}
+\item[{const {\bf K\-V\-Map} \&}]{data, }
+\item[{const K\-V\-Map\-::const\-\_\-reverse\-\_\-iterator \&}]{it}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_harness_a7589308a4592b9edb4142825b743244c}
+\hypertarget{classleveldb_1_1_harness_a1cdf351918a2e969bce1c29290317403}{\index{leveldb\-::\-Harness@{leveldb\-::\-Harness}!To\-String@{To\-String}}
+\index{To\-String@{To\-String}!leveldb::Harness@{leveldb\-::\-Harness}}
+\subsubsection[{To\-String}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string leveldb\-::\-Harness\-::\-To\-String (
+\begin{DoxyParamCaption}
+\item[{const {\bf Iterator} $\ast$}]{it}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_harness_a1cdf351918a2e969bce1c29290317403}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classleveldb_1_1_harness_a04b2410b1da9c47dd78240702e68c826}{\index{leveldb\-::\-Harness@{leveldb\-::\-Harness}!constructor\-\_\-@{constructor\-\_\-}}
+\index{constructor\-\_\-@{constructor\-\_\-}!leveldb::Harness@{leveldb\-::\-Harness}}
+\subsubsection[{constructor\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Constructor}$\ast$ leveldb\-::\-Harness\-::constructor\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_harness_a04b2410b1da9c47dd78240702e68c826}
+\hypertarget{classleveldb_1_1_harness_a503838bed7ecbdec2d06f577e54f522c}{\index{leveldb\-::\-Harness@{leveldb\-::\-Harness}!options\-\_\-@{options\-\_\-}}
+\index{options\-\_\-@{options\-\_\-}!leveldb::Harness@{leveldb\-::\-Harness}}
+\subsubsection[{options\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Options} leveldb\-::\-Harness\-::options\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_harness_a503838bed7ecbdec2d06f577e54f522c}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+table/\hyperlink{table__test_8cc}{table\-\_\-test.\-cc}\end{DoxyCompactItemize}

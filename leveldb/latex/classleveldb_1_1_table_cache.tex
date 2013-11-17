@@ -1,0 +1,160 @@
+\hypertarget{classleveldb_1_1_table_cache}{\section{leveldb\-:\-:Table\-Cache Class Reference}
+\label{classleveldb_1_1_table_cache}\index{leveldb\-::\-Table\-Cache@{leveldb\-::\-Table\-Cache}}
+}
+
+
+{\ttfamily \#include $<$table\-\_\-cache.\-h$>$}
+
+
+
+Collaboration diagram for leveldb\-:\-:Table\-Cache\-:
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classleveldb_1_1_table_cache_acca8df0a6305b166a7c88f27d1b3e377}{Table\-Cache} (const std\-::string \&\hyperlink{c__test_8c_a75d845559336df6843f3b599960f89d2}{dbname}, const \hyperlink{structleveldb_1_1_options}{Options} $\ast$options, int entries)
+\item 
+\hyperlink{classleveldb_1_1_table_cache_a5690fd10ea7cc7f0d44c8e768bea872c}{$\sim$\-Table\-Cache} ()
+\item 
+\hyperlink{classleveldb_1_1_iterator}{Iterator} $\ast$ \hyperlink{classleveldb_1_1_table_cache_afe8c83b1cbbf3bfc06c66a69611aa250}{New\-Iterator} (const \hyperlink{structleveldb_1_1_read_options}{Read\-Options} \&options, \hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} file\-\_\-number, \hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} file\-\_\-size, \hyperlink{classleveldb_1_1_table}{Table} $\ast$$\ast$tableptr=N\-U\-L\-L)
+\item 
+\hyperlink{classleveldb_1_1_status}{Status} \hyperlink{classleveldb_1_1_table_cache_af43ba38b52742e9f5589321747535444}{Get} (const \hyperlink{structleveldb_1_1_read_options}{Read\-Options} \&options, \hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} file\-\_\-number, \hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} file\-\_\-size, const \hyperlink{classleveldb_1_1_slice}{Slice} \&k, void $\ast$\hyperlink{env__posix_8cc_a9ce2ec4812a92cb6ab39f6e81e9173a9}{arg}, void($\ast$handle\-\_\-result)(void $\ast$, const \hyperlink{classleveldb_1_1_slice}{Slice} \&, const \hyperlink{classleveldb_1_1_slice}{Slice} \&))
+\item 
+void \hyperlink{classleveldb_1_1_table_cache_a57b81c58ff0533514b3a5d1652f044bc}{Evict} (\hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} file\-\_\-number)
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classleveldb_1_1_status}{Status} \hyperlink{classleveldb_1_1_table_cache_a7bdef9bd0719fb33021e5a638b979309}{Find\-Table} (\hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} file\-\_\-number, \hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} file\-\_\-size, \hyperlink{structleveldb_1_1_cache_1_1_handle}{Cache\-::\-Handle} $\ast$$\ast$)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classleveldb_1_1_env}{Env} $\ast$const \hyperlink{classleveldb_1_1_table_cache_af5d435597adb6dccac9bd05958f24afb}{env\-\_\-}
+\item 
+const std\-::string \hyperlink{classleveldb_1_1_table_cache_adce6e6a7cfbf8822e5035ca44306c77b}{dbname\-\_\-}
+\item 
+const \hyperlink{structleveldb_1_1_options}{Options} $\ast$ \hyperlink{classleveldb_1_1_table_cache_ad24157b076d23fc18fe90d530241fd23}{options\-\_\-}
+\item 
+\hyperlink{classleveldb_1_1_cache}{Cache} $\ast$ \hyperlink{classleveldb_1_1_table_cache_a27afd704a6aa631d57c684e0b8c548c6}{cache\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classleveldb_1_1_table_cache_acca8df0a6305b166a7c88f27d1b3e377}{\index{leveldb\-::\-Table\-Cache@{leveldb\-::\-Table\-Cache}!Table\-Cache@{Table\-Cache}}
+\index{Table\-Cache@{Table\-Cache}!leveldb::TableCache@{leveldb\-::\-Table\-Cache}}
+\subsubsection[{Table\-Cache}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::\-Table\-Cache\-::\-Table\-Cache (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{dbname, }
+\item[{const {\bf Options} $\ast$}]{options, }
+\item[{int}]{entries}
+\end{DoxyParamCaption}
+)}}\label{classleveldb_1_1_table_cache_acca8df0a6305b166a7c88f27d1b3e377}
+\hypertarget{classleveldb_1_1_table_cache_a5690fd10ea7cc7f0d44c8e768bea872c}{\index{leveldb\-::\-Table\-Cache@{leveldb\-::\-Table\-Cache}!$\sim$\-Table\-Cache@{$\sim$\-Table\-Cache}}
+\index{$\sim$\-Table\-Cache@{$\sim$\-Table\-Cache}!leveldb::TableCache@{leveldb\-::\-Table\-Cache}}
+\subsubsection[{$\sim$\-Table\-Cache}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::\-Table\-Cache\-::$\sim$\-Table\-Cache (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classleveldb_1_1_table_cache_a5690fd10ea7cc7f0d44c8e768bea872c}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classleveldb_1_1_table_cache_a57b81c58ff0533514b3a5d1652f044bc}{\index{leveldb\-::\-Table\-Cache@{leveldb\-::\-Table\-Cache}!Evict@{Evict}}
+\index{Evict@{Evict}!leveldb::TableCache@{leveldb\-::\-Table\-Cache}}
+\subsubsection[{Evict}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-Table\-Cache\-::\-Evict (
+\begin{DoxyParamCaption}
+\item[{{\bf uint64\-\_\-t}}]{file\-\_\-number}
+\end{DoxyParamCaption}
+)}}\label{classleveldb_1_1_table_cache_a57b81c58ff0533514b3a5d1652f044bc}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_table_cache_a7bdef9bd0719fb33021e5a638b979309}{\index{leveldb\-::\-Table\-Cache@{leveldb\-::\-Table\-Cache}!Find\-Table@{Find\-Table}}
+\index{Find\-Table@{Find\-Table}!leveldb::TableCache@{leveldb\-::\-Table\-Cache}}
+\subsubsection[{Find\-Table}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Status} leveldb\-::\-Table\-Cache\-::\-Find\-Table (
+\begin{DoxyParamCaption}
+\item[{{\bf uint64\-\_\-t}}]{file\-\_\-number, }
+\item[{{\bf uint64\-\_\-t}}]{file\-\_\-size, }
+\item[{{\bf Cache\-::\-Handle} $\ast$$\ast$}]{handle}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_table_cache_a7bdef9bd0719fb33021e5a638b979309}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_table_cache_af43ba38b52742e9f5589321747535444}{\index{leveldb\-::\-Table\-Cache@{leveldb\-::\-Table\-Cache}!Get@{Get}}
+\index{Get@{Get}!leveldb::TableCache@{leveldb\-::\-Table\-Cache}}
+\subsubsection[{Get}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Status} leveldb\-::\-Table\-Cache\-::\-Get (
+\begin{DoxyParamCaption}
+\item[{const {\bf Read\-Options} \&}]{options, }
+\item[{{\bf uint64\-\_\-t}}]{file\-\_\-number, }
+\item[{{\bf uint64\-\_\-t}}]{file\-\_\-size, }
+\item[{const {\bf Slice} \&}]{k, }
+\item[{void $\ast$}]{arg, }
+\item[{void($\ast$)(void $\ast$, const {\bf Slice} \&, const {\bf Slice} \&)}]{handle\-\_\-result}
+\end{DoxyParamCaption}
+)}}\label{classleveldb_1_1_table_cache_af43ba38b52742e9f5589321747535444}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_table_cache_afe8c83b1cbbf3bfc06c66a69611aa250}{\index{leveldb\-::\-Table\-Cache@{leveldb\-::\-Table\-Cache}!New\-Iterator@{New\-Iterator}}
+\index{New\-Iterator@{New\-Iterator}!leveldb::TableCache@{leveldb\-::\-Table\-Cache}}
+\subsubsection[{New\-Iterator}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Iterator} $\ast$ leveldb\-::\-Table\-Cache\-::\-New\-Iterator (
+\begin{DoxyParamCaption}
+\item[{const {\bf Read\-Options} \&}]{options, }
+\item[{{\bf uint64\-\_\-t}}]{file\-\_\-number, }
+\item[{{\bf uint64\-\_\-t}}]{file\-\_\-size, }
+\item[{{\bf Table} $\ast$$\ast$}]{tableptr = {\ttfamily NULL}}
+\end{DoxyParamCaption}
+)}}\label{classleveldb_1_1_table_cache_afe8c83b1cbbf3bfc06c66a69611aa250}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classleveldb_1_1_table_cache_a27afd704a6aa631d57c684e0b8c548c6}{\index{leveldb\-::\-Table\-Cache@{leveldb\-::\-Table\-Cache}!cache\-\_\-@{cache\-\_\-}}
+\index{cache\-\_\-@{cache\-\_\-}!leveldb::TableCache@{leveldb\-::\-Table\-Cache}}
+\subsubsection[{cache\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Cache}$\ast$ leveldb\-::\-Table\-Cache\-::cache\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_table_cache_a27afd704a6aa631d57c684e0b8c548c6}
+\hypertarget{classleveldb_1_1_table_cache_adce6e6a7cfbf8822e5035ca44306c77b}{\index{leveldb\-::\-Table\-Cache@{leveldb\-::\-Table\-Cache}!dbname\-\_\-@{dbname\-\_\-}}
+\index{dbname\-\_\-@{dbname\-\_\-}!leveldb::TableCache@{leveldb\-::\-Table\-Cache}}
+\subsubsection[{dbname\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::string leveldb\-::\-Table\-Cache\-::dbname\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_table_cache_adce6e6a7cfbf8822e5035ca44306c77b}
+\hypertarget{classleveldb_1_1_table_cache_af5d435597adb6dccac9bd05958f24afb}{\index{leveldb\-::\-Table\-Cache@{leveldb\-::\-Table\-Cache}!env\-\_\-@{env\-\_\-}}
+\index{env\-\_\-@{env\-\_\-}!leveldb::TableCache@{leveldb\-::\-Table\-Cache}}
+\subsubsection[{env\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Env}$\ast$ const leveldb\-::\-Table\-Cache\-::env\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_table_cache_af5d435597adb6dccac9bd05958f24afb}
+\hypertarget{classleveldb_1_1_table_cache_ad24157b076d23fc18fe90d530241fd23}{\index{leveldb\-::\-Table\-Cache@{leveldb\-::\-Table\-Cache}!options\-\_\-@{options\-\_\-}}
+\index{options\-\_\-@{options\-\_\-}!leveldb::TableCache@{leveldb\-::\-Table\-Cache}}
+\subsubsection[{options\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Options}$\ast$ leveldb\-::\-Table\-Cache\-::options\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_table_cache_ad24157b076d23fc18fe90d530241fd23}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+db/\hyperlink{table__cache_8h}{table\-\_\-cache.\-h}\item 
+db/\hyperlink{table__cache_8cc}{table\-\_\-cache.\-cc}\end{DoxyCompactItemize}

@@ -1,0 +1,54 @@
+\hypertarget{coding_8h}{\section{util/coding.h File Reference}
+\label{coding_8h}\index{util/coding.\-h@{util/coding.\-h}}
+}
+{\ttfamily \#include $<$stdint.\-h$>$}\\*
+{\ttfamily \#include $<$string.\-h$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include \char`\"{}leveldb/slice.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}port/port.\-h\char`\"{}}\\*
+Include dependency graph for coding.\-h\-:
+This graph shows which files directly or indirectly include this file\-:
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespaceleveldb}{leveldb}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{namespaceleveldb_ac95f82421989b07d9d4993bdc2e2c555}{leveldb\-::\-Put\-Fixed32} (std\-::string $\ast$dst, \hyperlink{stdint_8h_a435d1572bf3f880d55459d9805097f62}{uint32\-\_\-t} \hyperlink{cache_8cc_a0f61d63b009d0880a89c843bd50d8d76}{value})
+\item 
+void \hyperlink{namespaceleveldb_a720cd9030ba5f867ded835b57caa1d06}{leveldb\-::\-Put\-Fixed64} (std\-::string $\ast$dst, \hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} \hyperlink{cache_8cc_a0f61d63b009d0880a89c843bd50d8d76}{value})
+\item 
+void \hyperlink{namespaceleveldb_ab00e282f3fd7058b8a41afcf4b56e685}{leveldb\-::\-Put\-Varint32} (std\-::string $\ast$dst, \hyperlink{stdint_8h_a435d1572bf3f880d55459d9805097f62}{uint32\-\_\-t} v)
+\item 
+void \hyperlink{namespaceleveldb_a17889b1733282d6e80cf03fc0dd207d4}{leveldb\-::\-Put\-Varint64} (std\-::string $\ast$dst, \hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} v)
+\item 
+void \hyperlink{namespaceleveldb_a98eaeea7300aa4f9b56303ffa27581af}{leveldb\-::\-Put\-Length\-Prefixed\-Slice} (std\-::string $\ast$dst, const Slice \&\hyperlink{cache_8cc_a0f61d63b009d0880a89c843bd50d8d76}{value})
+\item 
+bool \hyperlink{namespaceleveldb_a0ea18f49771b5d7eea6b35ec07294598}{leveldb\-::\-Get\-Varint32} (Slice $\ast$input, \hyperlink{stdint_8h_a435d1572bf3f880d55459d9805097f62}{uint32\-\_\-t} $\ast$\hyperlink{cache_8cc_a0f61d63b009d0880a89c843bd50d8d76}{value})
+\item 
+bool \hyperlink{namespaceleveldb_aeb35486038249293e9b823f97dd9df0c}{leveldb\-::\-Get\-Varint64} (Slice $\ast$input, \hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} $\ast$\hyperlink{cache_8cc_a0f61d63b009d0880a89c843bd50d8d76}{value})
+\item 
+bool \hyperlink{namespaceleveldb_a25de3c7216630fce2d4d1670bf59c825}{leveldb\-::\-Get\-Length\-Prefixed\-Slice} (Slice $\ast$input, Slice $\ast$result)
+\item 
+const char $\ast$ \hyperlink{namespaceleveldb_addd01473dddfbc70ba64956fe6fac20c}{leveldb\-::\-Get\-Varint32\-Ptr} (const char $\ast$p, const char $\ast$limit, \hyperlink{stdint_8h_a435d1572bf3f880d55459d9805097f62}{uint32\-\_\-t} $\ast$v)
+\item 
+const char $\ast$ \hyperlink{namespaceleveldb_ad4e90442ce919c86fb769bf138670d75}{leveldb\-::\-Get\-Varint64\-Ptr} (const char $\ast$p, const char $\ast$limit, \hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} $\ast$\hyperlink{cache_8cc_a0f61d63b009d0880a89c843bd50d8d76}{value})
+\item 
+int \hyperlink{namespaceleveldb_ac22b2a69554ed12ecf1bd4650282f307}{leveldb\-::\-Varint\-Length} (\hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} v)
+\item 
+void \hyperlink{namespaceleveldb_a265d1eea2e5d8e42cf86372ed4904886}{leveldb\-::\-Encode\-Fixed32} (char $\ast$buf, \hyperlink{stdint_8h_a435d1572bf3f880d55459d9805097f62}{uint32\-\_\-t} \hyperlink{cache_8cc_a0f61d63b009d0880a89c843bd50d8d76}{value})
+\item 
+void \hyperlink{namespaceleveldb_a725a2c0ebf763116b4ca3fb78564ff70}{leveldb\-::\-Encode\-Fixed64} (char $\ast$buf, \hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} \hyperlink{cache_8cc_a0f61d63b009d0880a89c843bd50d8d76}{value})
+\item 
+char $\ast$ \hyperlink{namespaceleveldb_ac5e7a0e0356b856317349a870e3bfb41}{leveldb\-::\-Encode\-Varint32} (char $\ast$dst, \hyperlink{stdint_8h_a435d1572bf3f880d55459d9805097f62}{uint32\-\_\-t} v)
+\item 
+char $\ast$ \hyperlink{namespaceleveldb_a81e3ab2e7387f236aaf068e9369a4e3d}{leveldb\-::\-Encode\-Varint64} (char $\ast$dst, \hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} v)
+\item 
+\hyperlink{stdint_8h_a435d1572bf3f880d55459d9805097f62}{uint32\-\_\-t} \hyperlink{namespaceleveldb_adae574304f9d1ed3e95742167cd449a9}{leveldb\-::\-Decode\-Fixed32} (const char $\ast$ptr)
+\item 
+\hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} \hyperlink{namespaceleveldb_a239098b0291873752d0be16633652825}{leveldb\-::\-Decode\-Fixed64} (const char $\ast$ptr)
+\item 
+const char $\ast$ \hyperlink{namespaceleveldb_abc68f00e57333a27e9ee4fb8d5033905}{leveldb\-::\-Get\-Varint32\-Ptr\-Fallback} (const char $\ast$p, const char $\ast$limit, \hyperlink{stdint_8h_a435d1572bf3f880d55459d9805097f62}{uint32\-\_\-t} $\ast$\hyperlink{cache_8cc_a0f61d63b009d0880a89c843bd50d8d76}{value})
+\end{DoxyCompactItemize}

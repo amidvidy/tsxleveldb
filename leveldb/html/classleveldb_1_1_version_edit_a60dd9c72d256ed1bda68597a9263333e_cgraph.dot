@@ -1,0 +1,9 @@
+digraph "leveldb::VersionEdit::VersionEdit"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="leveldb::VersionEdit\l::VersionEdit",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="leveldb::VersionEdit\l::Clear",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_version_edit.html#a259c9de14d58e231178904c1559e4b5e"];
+}

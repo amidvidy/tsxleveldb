@@ -1,0 +1,87 @@
+\hypertarget{cache_8cc}{\section{util/cache.cc File Reference}
+\label{cache_8cc}\index{util/cache.\-cc@{util/cache.\-cc}}
+}
+{\ttfamily \#include $<$assert.\-h$>$}\\*
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}leveldb/cache.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}port/port.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}util/hash.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}util/mutexlock.\-h\char`\"{}}\\*
+Include dependency graph for cache.\-cc\-:
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespaceleveldb}{leveldb}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Cache $\ast$ \hyperlink{namespaceleveldb_a231e1b41322a8b342c91a15a78e425d4}{leveldb\-::\-New\-L\-R\-U\-Cache} (size\-\_\-t capacity)
+\end{DoxyCompactItemize}
+
+
+\subsection{Variable Documentation}
+\hypertarget{cache_8cc_aa3099a4c2b0b3ab5ba4188b4a8f59b26}{\index{cache.\-cc@{cache.\-cc}!capacity\-\_\-@{capacity\-\_\-}}
+\index{capacity\-\_\-@{capacity\-\_\-}!cache.cc@{cache.\-cc}}
+\subsubsection[{capacity\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t capacity\-\_\-}}\label{cache_8cc_aa3099a4c2b0b3ab5ba4188b4a8f59b26}
+\hypertarget{cache_8cc_a7476acc4f60747f9d9032e9cbdf5eb79}{\index{cache.\-cc@{cache.\-cc}!charge@{charge}}
+\index{charge@{charge}!cache.cc@{cache.\-cc}}
+\subsubsection[{charge}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t charge}}\label{cache_8cc_a7476acc4f60747f9d9032e9cbdf5eb79}
+\hypertarget{cache_8cc_a2de9431c71caf9c05081754cfe130a6d}{\index{cache.\-cc@{cache.\-cc}!deleter@{deleter}}
+\index{deleter@{deleter}!cache.cc@{cache.\-cc}}
+\subsubsection[{deleter}]{\setlength{\rightskip}{0pt plus 5cm}void($\ast$ deleter)(const Slice \&, void $\ast${\bf value})}}\label{cache_8cc_a2de9431c71caf9c05081754cfe130a6d}
+\hypertarget{cache_8cc_aa67d7770b9a769983073ec2830d052e0}{\index{cache.\-cc@{cache.\-cc}!elems\-\_\-@{elems\-\_\-}}
+\index{elems\-\_\-@{elems\-\_\-}!cache.cc@{cache.\-cc}}
+\subsubsection[{elems\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint32\-\_\-t} elems\-\_\-}}\label{cache_8cc_aa67d7770b9a769983073ec2830d052e0}
+\hypertarget{cache_8cc_a11ecb029164e055f28f4123ce3748862}{\index{cache.\-cc@{cache.\-cc}!hash@{hash}}
+\index{hash@{hash}!cache.cc@{cache.\-cc}}
+\subsubsection[{hash}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint32\-\_\-t} hash}}\label{cache_8cc_a11ecb029164e055f28f4123ce3748862}
+\hypertarget{cache_8cc_ab411b7a934e7fcc7571beaf86fb24f30}{\index{cache.\-cc@{cache.\-cc}!id\-\_\-mutex\-\_\-@{id\-\_\-mutex\-\_\-}}
+\index{id\-\_\-mutex\-\_\-@{id\-\_\-mutex\-\_\-}!cache.cc@{cache.\-cc}}
+\subsubsection[{id\-\_\-mutex\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}port\-::\-Mutex id\-\_\-mutex\-\_\-}}\label{cache_8cc_ab411b7a934e7fcc7571beaf86fb24f30}
+\hypertarget{cache_8cc_ad7b582862f8a4e707af8207a34280e2d}{\index{cache.\-cc@{cache.\-cc}!key\-\_\-data@{key\-\_\-data}}
+\index{key\-\_\-data@{key\-\_\-data}!cache.cc@{cache.\-cc}}
+\subsubsection[{key\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}char key\-\_\-data\mbox{[}1\mbox{]}}}\label{cache_8cc_ad7b582862f8a4e707af8207a34280e2d}
+\hypertarget{cache_8cc_ab8d33547e1ef26613cc6d92a7909d99a}{\index{cache.\-cc@{cache.\-cc}!key\-\_\-length@{key\-\_\-length}}
+\index{key\-\_\-length@{key\-\_\-length}!cache.cc@{cache.\-cc}}
+\subsubsection[{key\-\_\-length}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t key\-\_\-length}}\label{cache_8cc_ab8d33547e1ef26613cc6d92a7909d99a}
+\hypertarget{cache_8cc_aaa0da5f07b10b4f5c469d76891acc621}{\index{cache.\-cc@{cache.\-cc}!last\-\_\-id\-\_\-@{last\-\_\-id\-\_\-}}
+\index{last\-\_\-id\-\_\-@{last\-\_\-id\-\_\-}!cache.cc@{cache.\-cc}}
+\subsubsection[{last\-\_\-id\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint64\-\_\-t} last\-\_\-id\-\_\-}}\label{cache_8cc_aaa0da5f07b10b4f5c469d76891acc621}
+\hypertarget{cache_8cc_a33a84d9f0ba0b3f27d549544aca2686f}{\index{cache.\-cc@{cache.\-cc}!length\-\_\-@{length\-\_\-}}
+\index{length\-\_\-@{length\-\_\-}!cache.cc@{cache.\-cc}}
+\subsubsection[{length\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint32\-\_\-t} length\-\_\-}}\label{cache_8cc_a33a84d9f0ba0b3f27d549544aca2686f}
+\hypertarget{cache_8cc_a2d97c9d385cbc36b0cb8e560f68f23ea}{\index{cache.\-cc@{cache.\-cc}!list\-\_\-@{list\-\_\-}}
+\index{list\-\_\-@{list\-\_\-}!cache.cc@{cache.\-cc}}
+\subsubsection[{list\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}L\-R\-U\-Handle$\ast$$\ast$ list\-\_\-}}\label{cache_8cc_a2d97c9d385cbc36b0cb8e560f68f23ea}
+\hypertarget{cache_8cc_a4a786aa336549943ac36df80baae2212}{\index{cache.\-cc@{cache.\-cc}!lru\-\_\-@{lru\-\_\-}}
+\index{lru\-\_\-@{lru\-\_\-}!cache.cc@{cache.\-cc}}
+\subsubsection[{lru\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}L\-R\-U\-Handle lru\-\_\-}}\label{cache_8cc_a4a786aa336549943ac36df80baae2212}
+\hypertarget{cache_8cc_ab1b7efa1bbe0578df2c74e7c31a79a92}{\index{cache.\-cc@{cache.\-cc}!mutex\-\_\-@{mutex\-\_\-}}
+\index{mutex\-\_\-@{mutex\-\_\-}!cache.cc@{cache.\-cc}}
+\subsubsection[{mutex\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}port\-::\-Mutex mutex\-\_\-}}\label{cache_8cc_ab1b7efa1bbe0578df2c74e7c31a79a92}
+\hypertarget{cache_8cc_a5211876d3837bbfa503cb931cb9cecbe}{\index{cache.\-cc@{cache.\-cc}!next@{next}}
+\index{next@{next}!cache.cc@{cache.\-cc}}
+\subsubsection[{next}]{\setlength{\rightskip}{0pt plus 5cm}L\-R\-U\-Handle$\ast$ next}}\label{cache_8cc_a5211876d3837bbfa503cb931cb9cecbe}
+\hypertarget{cache_8cc_a537c3b39a177d2f89a23c36cdb9bfc5c}{\index{cache.\-cc@{cache.\-cc}!next\-\_\-hash@{next\-\_\-hash}}
+\index{next\-\_\-hash@{next\-\_\-hash}!cache.cc@{cache.\-cc}}
+\subsubsection[{next\-\_\-hash}]{\setlength{\rightskip}{0pt plus 5cm}L\-R\-U\-Handle$\ast$ next\-\_\-hash}}\label{cache_8cc_a537c3b39a177d2f89a23c36cdb9bfc5c}
+\hypertarget{cache_8cc_aabbd2f01bb8ec4a7a0128bce5f8cdb1b}{\index{cache.\-cc@{cache.\-cc}!prev@{prev}}
+\index{prev@{prev}!cache.cc@{cache.\-cc}}
+\subsubsection[{prev}]{\setlength{\rightskip}{0pt plus 5cm}L\-R\-U\-Handle$\ast$ prev}}\label{cache_8cc_aabbd2f01bb8ec4a7a0128bce5f8cdb1b}
+\hypertarget{cache_8cc_a630e1e65f274486cd91266b349e043fa}{\index{cache.\-cc@{cache.\-cc}!refs@{refs}}
+\index{refs@{refs}!cache.cc@{cache.\-cc}}
+\subsubsection[{refs}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint32\-\_\-t} refs}}\label{cache_8cc_a630e1e65f274486cd91266b349e043fa}
+\hypertarget{cache_8cc_a2b45e355f2b466c51e196274d6cd4888}{\index{cache.\-cc@{cache.\-cc}!shard\-\_\-@{shard\-\_\-}}
+\index{shard\-\_\-@{shard\-\_\-}!cache.cc@{cache.\-cc}}
+\subsubsection[{shard\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}L\-R\-U\-Cache shard\-\_\-\mbox{[}k\-Num\-Shards\mbox{]}}}\label{cache_8cc_a2b45e355f2b466c51e196274d6cd4888}
+\hypertarget{cache_8cc_ae64a918efc86efd2537d69b8e5652d8e}{\index{cache.\-cc@{cache.\-cc}!table\-\_\-@{table\-\_\-}}
+\index{table\-\_\-@{table\-\_\-}!cache.cc@{cache.\-cc}}
+\subsubsection[{table\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}Handle\-Table table\-\_\-}}\label{cache_8cc_ae64a918efc86efd2537d69b8e5652d8e}
+\hypertarget{cache_8cc_a428ee80699f3b7e005b52f1be7ecc438}{\index{cache.\-cc@{cache.\-cc}!usage\-\_\-@{usage\-\_\-}}
+\index{usage\-\_\-@{usage\-\_\-}!cache.cc@{cache.\-cc}}
+\subsubsection[{usage\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t usage\-\_\-}}\label{cache_8cc_a428ee80699f3b7e005b52f1be7ecc438}
+\hypertarget{cache_8cc_a0f61d63b009d0880a89c843bd50d8d76}{\index{cache.\-cc@{cache.\-cc}!value@{value}}
+\index{value@{value}!cache.cc@{cache.\-cc}}
+\subsubsection[{value}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ value}}\label{cache_8cc_a0f61d63b009d0880a89c843bd50d8d76}

@@ -1,0 +1,78 @@
+\hypertarget{repair_8cc}{\section{db/repair.cc File Reference}
+\label{repair_8cc}\index{db/repair.\-cc@{db/repair.\-cc}}
+}
+{\ttfamily \#include \char`\"{}db/builder.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}db/db\-\_\-impl.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}db/dbformat.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}db/filename.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}db/log\-\_\-reader.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}db/log\-\_\-writer.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}db/memtable.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}db/table\-\_\-cache.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}db/version\-\_\-edit.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}db/write\-\_\-batch\-\_\-internal.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}leveldb/comparator.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}leveldb/db.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}leveldb/env.\-h\char`\"{}}\\*
+Include dependency graph for repair.\-cc\-:
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespaceleveldb}{leveldb}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Status \hyperlink{namespaceleveldb_afb65664fdacb30ab73da9414db5a4208}{leveldb\-::\-Repair\-D\-B} (const std\-::string \&\hyperlink{c__test_8c_a75d845559336df6843f3b599960f89d2}{dbname}, const Options \&options)
+\end{DoxyCompactItemize}
+
+
+\subsection{Variable Documentation}
+\hypertarget{repair_8cc_a2661128a4b7cbc28cec2dfc2fa13816f}{\index{repair.\-cc@{repair.\-cc}!dbname\-\_\-@{dbname\-\_\-}}
+\index{dbname\-\_\-@{dbname\-\_\-}!repair.cc@{repair.\-cc}}
+\subsubsection[{dbname\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string const dbname\-\_\-}}\label{repair_8cc_a2661128a4b7cbc28cec2dfc2fa13816f}
+\hypertarget{repair_8cc_a9876937f85aa6cf9b58d8ae0c99714f7}{\index{repair.\-cc@{repair.\-cc}!edit\-\_\-@{edit\-\_\-}}
+\index{edit\-\_\-@{edit\-\_\-}!repair.cc@{repair.\-cc}}
+\subsubsection[{edit\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}Version\-Edit edit\-\_\-}}\label{repair_8cc_a9876937f85aa6cf9b58d8ae0c99714f7}
+\hypertarget{repair_8cc_a35fd5bd2e765194573cc90809e6aca7b}{\index{repair.\-cc@{repair.\-cc}!env\-\_\-@{env\-\_\-}}
+\index{env\-\_\-@{env\-\_\-}!repair.cc@{repair.\-cc}}
+\subsubsection[{env\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}Env$\ast$ const env\-\_\-}}\label{repair_8cc_a35fd5bd2e765194573cc90809e6aca7b}
+\hypertarget{repair_8cc_a49fb5b3528eb4f2b72f03af0ddc271dc}{\index{repair.\-cc@{repair.\-cc}!icmp\-\_\-@{icmp\-\_\-}}
+\index{icmp\-\_\-@{icmp\-\_\-}!repair.cc@{repair.\-cc}}
+\subsubsection[{icmp\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}Internal\-Key\-Comparator const icmp\-\_\-}}\label{repair_8cc_a49fb5b3528eb4f2b72f03af0ddc271dc}
+\hypertarget{repair_8cc_aeb8be710704d8cbd54c3a9ad698bbf8b}{\index{repair.\-cc@{repair.\-cc}!ipolicy\-\_\-@{ipolicy\-\_\-}}
+\index{ipolicy\-\_\-@{ipolicy\-\_\-}!repair.cc@{repair.\-cc}}
+\subsubsection[{ipolicy\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}Internal\-Filter\-Policy const ipolicy\-\_\-}}\label{repair_8cc_aeb8be710704d8cbd54c3a9ad698bbf8b}
+\hypertarget{repair_8cc_abb20331347ae4fd3e6913c114a2a556b}{\index{repair.\-cc@{repair.\-cc}!logs\-\_\-@{logs\-\_\-}}
+\index{logs\-\_\-@{logs\-\_\-}!repair.cc@{repair.\-cc}}
+\subsubsection[{logs\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<${\bf uint64\-\_\-t}$>$ logs\-\_\-}}\label{repair_8cc_abb20331347ae4fd3e6913c114a2a556b}
+\hypertarget{repair_8cc_a54b8bb962b25645ee0f5cfec6365563b}{\index{repair.\-cc@{repair.\-cc}!manifests\-\_\-@{manifests\-\_\-}}
+\index{manifests\-\_\-@{manifests\-\_\-}!repair.cc@{repair.\-cc}}
+\subsubsection[{manifests\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$std\-::string$>$ manifests\-\_\-}}\label{repair_8cc_a54b8bb962b25645ee0f5cfec6365563b}
+\hypertarget{repair_8cc_a52c1b794512261f530db50c720acb0c4}{\index{repair.\-cc@{repair.\-cc}!max\-\_\-sequence@{max\-\_\-sequence}}
+\index{max\-\_\-sequence@{max\-\_\-sequence}!repair.cc@{repair.\-cc}}
+\subsubsection[{max\-\_\-sequence}]{\setlength{\rightskip}{0pt plus 5cm}Sequence\-Number max\-\_\-sequence}}\label{repair_8cc_a52c1b794512261f530db50c720acb0c4}
+\hypertarget{repair_8cc_a6b8f1f5fc8f36aa1678fff8fa5aecd0b}{\index{repair.\-cc@{repair.\-cc}!meta@{meta}}
+\index{meta@{meta}!repair.cc@{repair.\-cc}}
+\subsubsection[{meta}]{\setlength{\rightskip}{0pt plus 5cm}File\-Meta\-Data meta}}\label{repair_8cc_a6b8f1f5fc8f36aa1678fff8fa5aecd0b}
+\hypertarget{repair_8cc_ac836213121a88334277d0736717f3c51}{\index{repair.\-cc@{repair.\-cc}!next\-\_\-file\-\_\-number\-\_\-@{next\-\_\-file\-\_\-number\-\_\-}}
+\index{next\-\_\-file\-\_\-number\-\_\-@{next\-\_\-file\-\_\-number\-\_\-}!repair.cc@{repair.\-cc}}
+\subsubsection[{next\-\_\-file\-\_\-number\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint64\-\_\-t} next\-\_\-file\-\_\-number\-\_\-}}\label{repair_8cc_ac836213121a88334277d0736717f3c51}
+\hypertarget{repair_8cc_a277741aecbdc3655b3bde5df34d80513}{\index{repair.\-cc@{repair.\-cc}!options\-\_\-@{options\-\_\-}}
+\index{options\-\_\-@{options\-\_\-}!repair.cc@{repair.\-cc}}
+\subsubsection[{options\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}Options const options\-\_\-}}\label{repair_8cc_a277741aecbdc3655b3bde5df34d80513}
+\hypertarget{repair_8cc_aca5d7cdba901420c7476a4821272b65a}{\index{repair.\-cc@{repair.\-cc}!owns\-\_\-cache\-\_\-@{owns\-\_\-cache\-\_\-}}
+\index{owns\-\_\-cache\-\_\-@{owns\-\_\-cache\-\_\-}!repair.cc@{repair.\-cc}}
+\subsubsection[{owns\-\_\-cache\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}bool owns\-\_\-cache\-\_\-}}\label{repair_8cc_aca5d7cdba901420c7476a4821272b65a}
+\hypertarget{repair_8cc_a00e765ceb00e4ddd070299d67fd3a296}{\index{repair.\-cc@{repair.\-cc}!owns\-\_\-info\-\_\-log\-\_\-@{owns\-\_\-info\-\_\-log\-\_\-}}
+\index{owns\-\_\-info\-\_\-log\-\_\-@{owns\-\_\-info\-\_\-log\-\_\-}!repair.cc@{repair.\-cc}}
+\subsubsection[{owns\-\_\-info\-\_\-log\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}bool owns\-\_\-info\-\_\-log\-\_\-}}\label{repair_8cc_a00e765ceb00e4ddd070299d67fd3a296}
+\hypertarget{repair_8cc_a3a1b17e04f2f36697594146dfd0cdab1}{\index{repair.\-cc@{repair.\-cc}!table\-\_\-cache\-\_\-@{table\-\_\-cache\-\_\-}}
+\index{table\-\_\-cache\-\_\-@{table\-\_\-cache\-\_\-}!repair.cc@{repair.\-cc}}
+\subsubsection[{table\-\_\-cache\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}Table\-Cache$\ast$ table\-\_\-cache\-\_\-}}\label{repair_8cc_a3a1b17e04f2f36697594146dfd0cdab1}
+\hypertarget{repair_8cc_a7e51cf6fb5d40e12b96fe134f4bc8960}{\index{repair.\-cc@{repair.\-cc}!table\-\_\-numbers\-\_\-@{table\-\_\-numbers\-\_\-}}
+\index{table\-\_\-numbers\-\_\-@{table\-\_\-numbers\-\_\-}!repair.cc@{repair.\-cc}}
+\subsubsection[{table\-\_\-numbers\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<${\bf uint64\-\_\-t}$>$ table\-\_\-numbers\-\_\-}}\label{repair_8cc_a7e51cf6fb5d40e12b96fe134f4bc8960}
+\hypertarget{repair_8cc_aa8b6ddce48bca9f9cb56266005076803}{\index{repair.\-cc@{repair.\-cc}!tables\-\_\-@{tables\-\_\-}}
+\index{tables\-\_\-@{tables\-\_\-}!repair.cc@{repair.\-cc}}
+\subsubsection[{tables\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$Table\-Info$>$ tables\-\_\-}}\label{repair_8cc_aa8b6ddce48bca9f9cb56266005076803}

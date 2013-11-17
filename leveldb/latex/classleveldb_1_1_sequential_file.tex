@@ -1,0 +1,102 @@
+\hypertarget{classleveldb_1_1_sequential_file}{\section{leveldb\-:\-:Sequential\-File Class Reference}
+\label{classleveldb_1_1_sequential_file}\index{leveldb\-::\-Sequential\-File@{leveldb\-::\-Sequential\-File}}
+}
+
+
+{\ttfamily \#include $<$env.\-h$>$}
+
+
+
+Inheritance diagram for leveldb\-:\-:Sequential\-File\-:
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classleveldb_1_1_sequential_file_a5df57658966ccab71b01f5134497fcf6}{Sequential\-File} ()
+\item 
+virtual \hyperlink{classleveldb_1_1_sequential_file_a90e768998dedfb7e9b3fa176478a2462}{$\sim$\-Sequential\-File} ()
+\item 
+virtual \hyperlink{classleveldb_1_1_status}{Status} \hyperlink{classleveldb_1_1_sequential_file_a4136bef1546cdb9fbbd477a635460261}{Read} (size\-\_\-t n, \hyperlink{classleveldb_1_1_slice}{Slice} $\ast$result, char $\ast$scratch)=0
+\item 
+virtual \hyperlink{classleveldb_1_1_status}{Status} \hyperlink{classleveldb_1_1_sequential_file_a18c94279fc058cad4d03cdfe04b12179}{Skip} (\hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} n)=0
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classleveldb_1_1_sequential_file_afb228652afc2ff0e90fa6128dcdc0183}{Sequential\-File} (const \hyperlink{classleveldb_1_1_sequential_file}{Sequential\-File} \&)
+\item 
+void \hyperlink{classleveldb_1_1_sequential_file_a3ef59734da441c154f6287cf174347b4}{operator=} (const \hyperlink{classleveldb_1_1_sequential_file}{Sequential\-File} \&)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classleveldb_1_1_sequential_file_a5df57658966ccab71b01f5134497fcf6}{\index{leveldb\-::\-Sequential\-File@{leveldb\-::\-Sequential\-File}!Sequential\-File@{Sequential\-File}}
+\index{Sequential\-File@{Sequential\-File}!leveldb::SequentialFile@{leveldb\-::\-Sequential\-File}}
+\subsubsection[{Sequential\-File}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::\-Sequential\-File\-::\-Sequential\-File (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_sequential_file_a5df57658966ccab71b01f5134497fcf6}
+\hypertarget{classleveldb_1_1_sequential_file_a90e768998dedfb7e9b3fa176478a2462}{\index{leveldb\-::\-Sequential\-File@{leveldb\-::\-Sequential\-File}!$\sim$\-Sequential\-File@{$\sim$\-Sequential\-File}}
+\index{$\sim$\-Sequential\-File@{$\sim$\-Sequential\-File}!leveldb::SequentialFile@{leveldb\-::\-Sequential\-File}}
+\subsubsection[{$\sim$\-Sequential\-File}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::\-Sequential\-File\-::$\sim$\-Sequential\-File (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classleveldb_1_1_sequential_file_a90e768998dedfb7e9b3fa176478a2462}
+\hypertarget{classleveldb_1_1_sequential_file_afb228652afc2ff0e90fa6128dcdc0183}{\index{leveldb\-::\-Sequential\-File@{leveldb\-::\-Sequential\-File}!Sequential\-File@{Sequential\-File}}
+\index{Sequential\-File@{Sequential\-File}!leveldb::SequentialFile@{leveldb\-::\-Sequential\-File}}
+\subsubsection[{Sequential\-File}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::\-Sequential\-File\-::\-Sequential\-File (
+\begin{DoxyParamCaption}
+\item[{const {\bf Sequential\-File} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_sequential_file_afb228652afc2ff0e90fa6128dcdc0183}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classleveldb_1_1_sequential_file_a3ef59734da441c154f6287cf174347b4}{\index{leveldb\-::\-Sequential\-File@{leveldb\-::\-Sequential\-File}!operator=@{operator=}}
+\index{operator=@{operator=}!leveldb::SequentialFile@{leveldb\-::\-Sequential\-File}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-Sequential\-File\-::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Sequential\-File} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_sequential_file_a3ef59734da441c154f6287cf174347b4}
+\hypertarget{classleveldb_1_1_sequential_file_a4136bef1546cdb9fbbd477a635460261}{\index{leveldb\-::\-Sequential\-File@{leveldb\-::\-Sequential\-File}!Read@{Read}}
+\index{Read@{Read}!leveldb::SequentialFile@{leveldb\-::\-Sequential\-File}}
+\subsubsection[{Read}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Status} leveldb\-::\-Sequential\-File\-::\-Read (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{n, }
+\item[{{\bf Slice} $\ast$}]{result, }
+\item[{char $\ast$}]{scratch}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classleveldb_1_1_sequential_file_a4136bef1546cdb9fbbd477a635460261}
+
+
+Implemented in \hyperlink{classleveldb_1_1log_1_1_log_test_1_1_string_source_a9a0ece28d3cc701007e4c816730deb6e}{leveldb\-::log\-::\-Log\-Test\-::\-String\-Source}.
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_sequential_file_a18c94279fc058cad4d03cdfe04b12179}{\index{leveldb\-::\-Sequential\-File@{leveldb\-::\-Sequential\-File}!Skip@{Skip}}
+\index{Skip@{Skip}!leveldb::SequentialFile@{leveldb\-::\-Sequential\-File}}
+\subsubsection[{Skip}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Status} leveldb\-::\-Sequential\-File\-::\-Skip (
+\begin{DoxyParamCaption}
+\item[{{\bf uint64\-\_\-t}}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classleveldb_1_1_sequential_file_a18c94279fc058cad4d03cdfe04b12179}
+
+
+Implemented in \hyperlink{classleveldb_1_1log_1_1_log_test_1_1_string_source_a33266e2d1e98780bd6a2720857a88100}{leveldb\-::log\-::\-Log\-Test\-::\-String\-Source}.
+
+
+
+Here is the caller graph for this function\-:
+
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/leveldb/\hyperlink{env_8h}{env.\-h}\item 
+util/\hyperlink{env_8cc}{env.\-cc}\end{DoxyCompactItemize}

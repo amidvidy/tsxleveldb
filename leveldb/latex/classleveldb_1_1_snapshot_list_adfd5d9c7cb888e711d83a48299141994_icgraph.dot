@@ -1,0 +1,11 @@
+digraph "leveldb::SnapshotList::New"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="leveldb::SnapshotList::New",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="leveldb::DBImpl::GetSnapshot",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_d_b_impl.html#a4bec3d8ffd65fec562b2dd1f6eaba137"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="leveldb::TEST",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceleveldb.html#ad6fac95495278565df640d4055b9c9f0"];
+}

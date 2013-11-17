@@ -1,0 +1,19 @@
+digraph "leveldb::NewLRUCache"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="leveldb::NewLRUCache",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="leveldb::AutoCompactTest\l::AutoCompactTest",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_auto_compact_test.html#a31fe0ded855f188fac1650c70849760c"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="leveldb_cache_create_lru",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$c_8h.html#a309c755dd37602eeb743070b74c8ddbc"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="main",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$c__test_8c.html#a3c04138a5bfe5d72780bb7e82a18e627"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="leveldb::CorruptionTest\l::CorruptionTest",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classleveldb_1_1_corruption_test.html#a9940767db260b1e4e60b8bcedc50217c"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="leveldb::SanitizeOptions",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceleveldb.html#aa4783e598841dca4393a97d360d10f56"];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="leveldb::TEST",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceleveldb.html#a6d54978f51e046c170696cbb320f23f1"];
+}

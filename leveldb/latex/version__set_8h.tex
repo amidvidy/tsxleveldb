@@ -1,0 +1,39 @@
+\hypertarget{version__set_8h}{\section{db/version\-\_\-set.h File Reference}
+\label{version__set_8h}\index{db/version\-\_\-set.\-h@{db/version\-\_\-set.\-h}}
+}
+{\ttfamily \#include $<$map$>$}\\*
+{\ttfamily \#include $<$set$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include \char`\"{}db/dbformat.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}db/version\-\_\-edit.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}port/port.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}port/thread\-\_\-annotations.\-h\char`\"{}}\\*
+Include dependency graph for version\-\_\-set.\-h\-:
+This graph shows which files directly or indirectly include this file\-:
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classleveldb_1_1_version}{leveldb\-::\-Version}
+\item 
+struct \hyperlink{structleveldb_1_1_version_1_1_get_stats}{leveldb\-::\-Version\-::\-Get\-Stats}
+\item 
+class \hyperlink{classleveldb_1_1_version_set}{leveldb\-::\-Version\-Set}
+\item 
+struct \hyperlink{structleveldb_1_1_version_set_1_1_level_summary_storage}{leveldb\-::\-Version\-Set\-::\-Level\-Summary\-Storage}
+\item 
+class \hyperlink{classleveldb_1_1_compaction}{leveldb\-::\-Compaction}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespaceleveldb}{leveldb}
+\item 
+\hyperlink{namespaceleveldb_1_1log}{leveldb\-::log}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{namespaceleveldb_a812c4c6cf8299e767535a59f2205df0c}{leveldb\-::\-Find\-File} (const Internal\-Key\-Comparator \&icmp, const std\-::vector$<$ File\-Meta\-Data $\ast$ $>$ \&files, const Slice \&key)
+\item 
+bool \hyperlink{namespaceleveldb_a1a6a370f17b20667b885b5b91159c5a9}{leveldb\-::\-Some\-File\-Overlaps\-Range} (const Internal\-Key\-Comparator \&icmp, bool disjoint\-\_\-sorted\-\_\-files, const std\-::vector$<$ File\-Meta\-Data $\ast$ $>$ \&files, const Slice $\ast$smallest\-\_\-user\-\_\-key, const Slice $\ast$largest\-\_\-user\-\_\-key)
+\end{DoxyCompactItemize}

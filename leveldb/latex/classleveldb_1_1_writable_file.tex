@@ -1,0 +1,136 @@
+\hypertarget{classleveldb_1_1_writable_file}{\section{leveldb\-:\-:Writable\-File Class Reference}
+\label{classleveldb_1_1_writable_file}\index{leveldb\-::\-Writable\-File@{leveldb\-::\-Writable\-File}}
+}
+
+
+{\ttfamily \#include $<$env.\-h$>$}
+
+
+
+Inheritance diagram for leveldb\-:\-:Writable\-File\-:
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classleveldb_1_1_writable_file_a48e7bcecb75e0339f0dafedb41c058ee}{Writable\-File} ()
+\item 
+virtual \hyperlink{classleveldb_1_1_writable_file_a6a2f4698544f04288fbee6ef354dd71d}{$\sim$\-Writable\-File} ()
+\item 
+virtual \hyperlink{classleveldb_1_1_status}{Status} \hyperlink{classleveldb_1_1_writable_file_a53b41841d9577d28f65d4d90e1660de8}{Append} (const \hyperlink{classleveldb_1_1_slice}{Slice} \&data)=0
+\item 
+virtual \hyperlink{classleveldb_1_1_status}{Status} \hyperlink{classleveldb_1_1_writable_file_a2efbf9c02a26028b5002df73b4393915}{Close} ()=0
+\item 
+virtual \hyperlink{classleveldb_1_1_status}{Status} \hyperlink{classleveldb_1_1_writable_file_ab95759ad32f6a05b0ee4266969fa265e}{Flush} ()=0
+\item 
+virtual \hyperlink{classleveldb_1_1_status}{Status} \hyperlink{classleveldb_1_1_writable_file_a2d2dcef02a2c9e71f3d39125bcd5a606}{Sync} ()=0
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classleveldb_1_1_writable_file_a3ef8319de3675e06b3dc25e263ab7f0a}{Writable\-File} (const \hyperlink{classleveldb_1_1_writable_file}{Writable\-File} \&)
+\item 
+void \hyperlink{classleveldb_1_1_writable_file_a8fb35a929c018260e2302d6cf13ce38d}{operator=} (const \hyperlink{classleveldb_1_1_writable_file}{Writable\-File} \&)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classleveldb_1_1_writable_file_a48e7bcecb75e0339f0dafedb41c058ee}{\index{leveldb\-::\-Writable\-File@{leveldb\-::\-Writable\-File}!Writable\-File@{Writable\-File}}
+\index{Writable\-File@{Writable\-File}!leveldb::WritableFile@{leveldb\-::\-Writable\-File}}
+\subsubsection[{Writable\-File}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::\-Writable\-File\-::\-Writable\-File (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classleveldb_1_1_writable_file_a48e7bcecb75e0339f0dafedb41c058ee}
+\hypertarget{classleveldb_1_1_writable_file_a6a2f4698544f04288fbee6ef354dd71d}{\index{leveldb\-::\-Writable\-File@{leveldb\-::\-Writable\-File}!$\sim$\-Writable\-File@{$\sim$\-Writable\-File}}
+\index{$\sim$\-Writable\-File@{$\sim$\-Writable\-File}!leveldb::WritableFile@{leveldb\-::\-Writable\-File}}
+\subsubsection[{$\sim$\-Writable\-File}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::\-Writable\-File\-::$\sim$\-Writable\-File (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classleveldb_1_1_writable_file_a6a2f4698544f04288fbee6ef354dd71d}
+\hypertarget{classleveldb_1_1_writable_file_a3ef8319de3675e06b3dc25e263ab7f0a}{\index{leveldb\-::\-Writable\-File@{leveldb\-::\-Writable\-File}!Writable\-File@{Writable\-File}}
+\index{Writable\-File@{Writable\-File}!leveldb::WritableFile@{leveldb\-::\-Writable\-File}}
+\subsubsection[{Writable\-File}]{\setlength{\rightskip}{0pt plus 5cm}leveldb\-::\-Writable\-File\-::\-Writable\-File (
+\begin{DoxyParamCaption}
+\item[{const {\bf Writable\-File} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_writable_file_a3ef8319de3675e06b3dc25e263ab7f0a}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classleveldb_1_1_writable_file_a53b41841d9577d28f65d4d90e1660de8}{\index{leveldb\-::\-Writable\-File@{leveldb\-::\-Writable\-File}!Append@{Append}}
+\index{Append@{Append}!leveldb::WritableFile@{leveldb\-::\-Writable\-File}}
+\subsubsection[{Append}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Status} leveldb\-::\-Writable\-File\-::\-Append (
+\begin{DoxyParamCaption}
+\item[{const {\bf Slice} \&}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classleveldb_1_1_writable_file_a53b41841d9577d28f65d4d90e1660de8}
+
+
+Implemented in \hyperlink{classleveldb_1_1_string_sink_a10db68412947f16bde307677a663c241}{leveldb\-::\-String\-Sink}, and \hyperlink{classleveldb_1_1log_1_1_log_test_1_1_string_dest_a9760e8138f167b8b367232998cb53606}{leveldb\-::log\-::\-Log\-Test\-::\-String\-Dest}.
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_writable_file_a2efbf9c02a26028b5002df73b4393915}{\index{leveldb\-::\-Writable\-File@{leveldb\-::\-Writable\-File}!Close@{Close}}
+\index{Close@{Close}!leveldb::WritableFile@{leveldb\-::\-Writable\-File}}
+\subsubsection[{Close}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Status} leveldb\-::\-Writable\-File\-::\-Close (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classleveldb_1_1_writable_file_a2efbf9c02a26028b5002df73b4393915}
+
+
+Implemented in \hyperlink{classleveldb_1_1_string_sink_a40e2142f8078720ecbad8a1d48be6f48}{leveldb\-::\-String\-Sink}, and \hyperlink{classleveldb_1_1log_1_1_log_test_1_1_string_dest_a38df1bcf8935024e4f285a58659b2718}{leveldb\-::log\-::\-Log\-Test\-::\-String\-Dest}.
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_writable_file_ab95759ad32f6a05b0ee4266969fa265e}{\index{leveldb\-::\-Writable\-File@{leveldb\-::\-Writable\-File}!Flush@{Flush}}
+\index{Flush@{Flush}!leveldb::WritableFile@{leveldb\-::\-Writable\-File}}
+\subsubsection[{Flush}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Status} leveldb\-::\-Writable\-File\-::\-Flush (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classleveldb_1_1_writable_file_ab95759ad32f6a05b0ee4266969fa265e}
+
+
+Implemented in \hyperlink{classleveldb_1_1_string_sink_af8dc901a44e89b56726bde2782a41ab7}{leveldb\-::\-String\-Sink}, and \hyperlink{classleveldb_1_1log_1_1_log_test_1_1_string_dest_a697cde4f8abd492d7a00fc44254af051}{leveldb\-::log\-::\-Log\-Test\-::\-String\-Dest}.
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{classleveldb_1_1_writable_file_a8fb35a929c018260e2302d6cf13ce38d}{\index{leveldb\-::\-Writable\-File@{leveldb\-::\-Writable\-File}!operator=@{operator=}}
+\index{operator=@{operator=}!leveldb::WritableFile@{leveldb\-::\-Writable\-File}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-::\-Writable\-File\-::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Writable\-File} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classleveldb_1_1_writable_file_a8fb35a929c018260e2302d6cf13ce38d}
+\hypertarget{classleveldb_1_1_writable_file_a2d2dcef02a2c9e71f3d39125bcd5a606}{\index{leveldb\-::\-Writable\-File@{leveldb\-::\-Writable\-File}!Sync@{Sync}}
+\index{Sync@{Sync}!leveldb::WritableFile@{leveldb\-::\-Writable\-File}}
+\subsubsection[{Sync}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Status} leveldb\-::\-Writable\-File\-::\-Sync (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classleveldb_1_1_writable_file_a2d2dcef02a2c9e71f3d39125bcd5a606}
+
+
+Implemented in \hyperlink{classleveldb_1_1_string_sink_a77f1f2b9797737fbd89211ba0bb9a93e}{leveldb\-::\-String\-Sink}, and \hyperlink{classleveldb_1_1log_1_1_log_test_1_1_string_dest_a62d1a49e6d80f723dc28e8dca944b39a}{leveldb\-::log\-::\-Log\-Test\-::\-String\-Dest}.
+
+
+
+Here is the caller graph for this function\-:
+
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/leveldb/\hyperlink{env_8h}{env.\-h}\item 
+util/\hyperlink{env_8cc}{env.\-cc}\end{DoxyCompactItemize}

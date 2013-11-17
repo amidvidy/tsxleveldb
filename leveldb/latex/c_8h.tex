@@ -1,0 +1,1249 @@
+\hypertarget{c_8h}{\section{include/leveldb/c.h File Reference}
+\label{c_8h}\index{include/leveldb/c.\-h@{include/leveldb/c.\-h}}
+}
+{\ttfamily \#include $<$stdarg.\-h$>$}\\*
+{\ttfamily \#include $<$stddef.\-h$>$}\\*
+{\ttfamily \#include $<$stdint.\-h$>$}\\*
+Include dependency graph for c.\-h\-:
+This graph shows which files directly or indirectly include this file\-:
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structleveldb__t}{leveldb\-\_\-t} \hyperlink{c_8h_a636e4c8428a435ac0e40175843ee2f2d}{leveldb\-\_\-t}
+\item 
+typedef struct \hyperlink{structleveldb__cache__t}{leveldb\-\_\-cache\-\_\-t} \hyperlink{c_8h_ac73aa1ecc1d8a50707b4d9f7cd03f95f}{leveldb\-\_\-cache\-\_\-t}
+\item 
+typedef struct \hyperlink{structleveldb__comparator__t}{leveldb\-\_\-comparator\-\_\-t} \hyperlink{c_8h_ac9735683d97693fc5b36e3b61aaac736}{leveldb\-\_\-comparator\-\_\-t}
+\item 
+typedef struct \hyperlink{structleveldb__env__t}{leveldb\-\_\-env\-\_\-t} \hyperlink{c_8h_acb2785116fcacc02597f4b3f3dc4d1b7}{leveldb\-\_\-env\-\_\-t}
+\item 
+typedef struct \hyperlink{structleveldb__filelock__t}{leveldb\-\_\-filelock\-\_\-t} \hyperlink{c_8h_af33c8311c6cee88afb413b72eeb60725}{leveldb\-\_\-filelock\-\_\-t}
+\item 
+typedef struct \\*
+\hyperlink{structleveldb__filterpolicy__t}{leveldb\-\_\-filterpolicy\-\_\-t} \hyperlink{c_8h_a4619326a9cac2ba474081bba243961b5}{leveldb\-\_\-filterpolicy\-\_\-t}
+\item 
+typedef struct \hyperlink{structleveldb__iterator__t}{leveldb\-\_\-iterator\-\_\-t} \hyperlink{c_8h_aebf49c6a138b179689251fbf9fba41cd}{leveldb\-\_\-iterator\-\_\-t}
+\item 
+typedef struct \hyperlink{structleveldb__logger__t}{leveldb\-\_\-logger\-\_\-t} \hyperlink{c_8h_ac123f38ad65a300fa63d36c6526ccd41}{leveldb\-\_\-logger\-\_\-t}
+\item 
+typedef struct \hyperlink{structleveldb__options__t}{leveldb\-\_\-options\-\_\-t} \hyperlink{c_8h_a83bbdb1b9c03ef5b608626083b6d4a8a}{leveldb\-\_\-options\-\_\-t}
+\item 
+typedef struct \hyperlink{structleveldb__randomfile__t}{leveldb\-\_\-randomfile\-\_\-t} \hyperlink{c_8h_af9c808d2a14c978a1b907de90485702b}{leveldb\-\_\-randomfile\-\_\-t}
+\item 
+typedef struct \\*
+\hyperlink{structleveldb__readoptions__t}{leveldb\-\_\-readoptions\-\_\-t} \hyperlink{c_8h_a4ff993fcf94872656048929a8c829193}{leveldb\-\_\-readoptions\-\_\-t}
+\item 
+typedef struct \hyperlink{structleveldb__seqfile__t}{leveldb\-\_\-seqfile\-\_\-t} \hyperlink{c_8h_a5b253ebb76432befabcfa64b99dcb1c7}{leveldb\-\_\-seqfile\-\_\-t}
+\item 
+typedef struct \hyperlink{structleveldb__snapshot__t}{leveldb\-\_\-snapshot\-\_\-t} \hyperlink{c_8h_ab313e8ef3ccfd88f8c0f2bbfd3678b7d}{leveldb\-\_\-snapshot\-\_\-t}
+\item 
+typedef struct \\*
+\hyperlink{structleveldb__writablefile__t}{leveldb\-\_\-writablefile\-\_\-t} \hyperlink{c_8h_afe2d3c06c7c36d14e2e51e2573152432}{leveldb\-\_\-writablefile\-\_\-t}
+\item 
+typedef struct \hyperlink{structleveldb__writebatch__t}{leveldb\-\_\-writebatch\-\_\-t} \hyperlink{c_8h_a1dc1f4835950d84dfc6c93f4acb87650}{leveldb\-\_\-writebatch\-\_\-t}
+\item 
+typedef struct \\*
+\hyperlink{structleveldb__writeoptions__t}{leveldb\-\_\-writeoptions\-\_\-t} \hyperlink{c_8h_a8ec21871766c9e631de966d139641f85}{leveldb\-\_\-writeoptions\-\_\-t}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \hyperlink{c_8h_abc6126af1d45847bc59afa0aa3216b04acfeb0c8224005d87b097de4b65f376b9}{leveldb\-\_\-no\-\_\-compression} = 0, 
+\hyperlink{c_8h_abc6126af1d45847bc59afa0aa3216b04ae4ff77513d2ccd2aa8ede4e2227eed7d}{leveldb\-\_\-snappy\-\_\-compression} = 1
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structleveldb__t}{leveldb\-\_\-t} $\ast$ \hyperlink{c_8h_a2d912fff4d5decae6da014298b227a18}{leveldb\-\_\-open} (const \hyperlink{structleveldb__options__t}{leveldb\-\_\-options\-\_\-t} $\ast$options, const char $\ast$\hyperlink{testharness_8cc_a8f8f80d37794cde9472343e4487ba3eb}{name}, char $\ast$$\ast$errptr)
+\item 
+void \hyperlink{c_8h_a4f2ee24f30c834d2f54e48acaffb3412}{leveldb\-\_\-close} (\hyperlink{structleveldb__t}{leveldb\-\_\-t} $\ast$db)
+\item 
+void \hyperlink{c_8h_aacd7bf338f41054f34825b3669ace2f8}{leveldb\-\_\-put} (\hyperlink{structleveldb__t}{leveldb\-\_\-t} $\ast$db, const \hyperlink{structleveldb__writeoptions__t}{leveldb\-\_\-writeoptions\-\_\-t} $\ast$options, const char $\ast$key, size\-\_\-t keylen, const char $\ast$val, size\-\_\-t vallen, char $\ast$$\ast$errptr)
+\item 
+void \hyperlink{c_8h_a3878ffaf68a4addb31266ac81ce8c36f}{leveldb\-\_\-delete} (\hyperlink{structleveldb__t}{leveldb\-\_\-t} $\ast$db, const \hyperlink{structleveldb__writeoptions__t}{leveldb\-\_\-writeoptions\-\_\-t} $\ast$options, const char $\ast$key, size\-\_\-t keylen, char $\ast$$\ast$errptr)
+\item 
+void \hyperlink{c_8h_a7315a488fc8ddcfd9a58295f7d0bb636}{leveldb\-\_\-write} (\hyperlink{structleveldb__t}{leveldb\-\_\-t} $\ast$db, const \hyperlink{structleveldb__writeoptions__t}{leveldb\-\_\-writeoptions\-\_\-t} $\ast$options, \hyperlink{structleveldb__writebatch__t}{leveldb\-\_\-writebatch\-\_\-t} $\ast$batch, char $\ast$$\ast$errptr)
+\item 
+char $\ast$ \hyperlink{c_8h_af9b485534674367c01521a8192a74091}{leveldb\-\_\-get} (\hyperlink{structleveldb__t}{leveldb\-\_\-t} $\ast$db, const \hyperlink{structleveldb__readoptions__t}{leveldb\-\_\-readoptions\-\_\-t} $\ast$options, const char $\ast$key, size\-\_\-t keylen, size\-\_\-t $\ast$vallen, char $\ast$$\ast$errptr)
+\item 
+\hyperlink{structleveldb__iterator__t}{leveldb\-\_\-iterator\-\_\-t} $\ast$ \hyperlink{c_8h_a8b9d419b6e0753a1d6158605c821354a}{leveldb\-\_\-create\-\_\-iterator} (\hyperlink{structleveldb__t}{leveldb\-\_\-t} $\ast$db, const \hyperlink{structleveldb__readoptions__t}{leveldb\-\_\-readoptions\-\_\-t} $\ast$options)
+\item 
+const \hyperlink{structleveldb__snapshot__t}{leveldb\-\_\-snapshot\-\_\-t} $\ast$ \hyperlink{c_8h_af999ba27285e482f34df3821f9a04214}{leveldb\-\_\-create\-\_\-snapshot} (\hyperlink{structleveldb__t}{leveldb\-\_\-t} $\ast$db)
+\item 
+void \hyperlink{c_8h_ab1e5d825506969f12fcaff2bf824b6e5}{leveldb\-\_\-release\-\_\-snapshot} (\hyperlink{structleveldb__t}{leveldb\-\_\-t} $\ast$db, const \hyperlink{structleveldb__snapshot__t}{leveldb\-\_\-snapshot\-\_\-t} $\ast$snapshot)
+\item 
+char $\ast$ \hyperlink{c_8h_ad4ce08534d9ce95b4a7ddb0cf1796209}{leveldb\-\_\-property\-\_\-value} (\hyperlink{structleveldb__t}{leveldb\-\_\-t} $\ast$db, const char $\ast$propname)
+\item 
+void \hyperlink{c_8h_a876ad4220f0dbd55fbbe91714e271e98}{leveldb\-\_\-approximate\-\_\-sizes} (\hyperlink{structleveldb__t}{leveldb\-\_\-t} $\ast$db, int num\-\_\-ranges, const char $\ast$const $\ast$range\-\_\-start\-\_\-key, const size\-\_\-t $\ast$range\-\_\-start\-\_\-key\-\_\-len, const char $\ast$const $\ast$range\-\_\-limit\-\_\-key, const size\-\_\-t $\ast$range\-\_\-limit\-\_\-key\-\_\-len, \hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} $\ast$sizes)
+\item 
+void \hyperlink{c_8h_a2e579ef1579016b83b3fcb4038939517}{leveldb\-\_\-compact\-\_\-range} (\hyperlink{structleveldb__t}{leveldb\-\_\-t} $\ast$db, const char $\ast$start\-\_\-key, size\-\_\-t start\-\_\-key\-\_\-len, const char $\ast$limit\-\_\-key, size\-\_\-t limit\-\_\-key\-\_\-len)
+\item 
+void \hyperlink{c_8h_a265873c54a9e6080278da4f957a6a183}{leveldb\-\_\-destroy\-\_\-db} (const \hyperlink{structleveldb__options__t}{leveldb\-\_\-options\-\_\-t} $\ast$options, const char $\ast$\hyperlink{testharness_8cc_a8f8f80d37794cde9472343e4487ba3eb}{name}, char $\ast$$\ast$errptr)
+\item 
+void \hyperlink{c_8h_a255557af7bd3a589a75d38bbb674c21b}{leveldb\-\_\-repair\-\_\-db} (const \hyperlink{structleveldb__options__t}{leveldb\-\_\-options\-\_\-t} $\ast$options, const char $\ast$\hyperlink{testharness_8cc_a8f8f80d37794cde9472343e4487ba3eb}{name}, char $\ast$$\ast$errptr)
+\item 
+void \hyperlink{c_8h_a936dde4fa131d4ed7716692f2b096256}{leveldb\-\_\-iter\-\_\-destroy} (\hyperlink{structleveldb__iterator__t}{leveldb\-\_\-iterator\-\_\-t} $\ast$)
+\item 
+unsigned char \hyperlink{c_8h_ac82f6ccc07c42af80b78a5ea0af4264c}{leveldb\-\_\-iter\-\_\-valid} (const \hyperlink{structleveldb__iterator__t}{leveldb\-\_\-iterator\-\_\-t} $\ast$)
+\item 
+void \hyperlink{c_8h_a1c2f8c577197f9c4f915062076b13d98}{leveldb\-\_\-iter\-\_\-seek\-\_\-to\-\_\-first} (\hyperlink{structleveldb__iterator__t}{leveldb\-\_\-iterator\-\_\-t} $\ast$)
+\item 
+void \hyperlink{c_8h_a46f600db8620d29a75bb92f183d54d83}{leveldb\-\_\-iter\-\_\-seek\-\_\-to\-\_\-last} (\hyperlink{structleveldb__iterator__t}{leveldb\-\_\-iterator\-\_\-t} $\ast$)
+\item 
+void \hyperlink{c_8h_afc4e1dcd73bc857e29769413d07c7fb4}{leveldb\-\_\-iter\-\_\-seek} (\hyperlink{structleveldb__iterator__t}{leveldb\-\_\-iterator\-\_\-t} $\ast$, const char $\ast$k, size\-\_\-t klen)
+\item 
+void \hyperlink{c_8h_a46929304c15730552df83feab9ba57dd}{leveldb\-\_\-iter\-\_\-next} (\hyperlink{structleveldb__iterator__t}{leveldb\-\_\-iterator\-\_\-t} $\ast$)
+\item 
+void \hyperlink{c_8h_aa7517614991dcda272ce91dc1d69f353}{leveldb\-\_\-iter\-\_\-prev} (\hyperlink{structleveldb__iterator__t}{leveldb\-\_\-iterator\-\_\-t} $\ast$)
+\item 
+const char $\ast$ \hyperlink{c_8h_a8dae684bf7df21873ba3f17e4b942a62}{leveldb\-\_\-iter\-\_\-key} (const \hyperlink{structleveldb__iterator__t}{leveldb\-\_\-iterator\-\_\-t} $\ast$, size\-\_\-t $\ast$klen)
+\item 
+const char $\ast$ \hyperlink{c_8h_a16d18068e8fcb0dddd22a6d77ff5ad06}{leveldb\-\_\-iter\-\_\-value} (const \hyperlink{structleveldb__iterator__t}{leveldb\-\_\-iterator\-\_\-t} $\ast$, size\-\_\-t $\ast$vlen)
+\item 
+void \hyperlink{c_8h_a8c9b0b90b661935fadd4daa92648224c}{leveldb\-\_\-iter\-\_\-get\-\_\-error} (const \hyperlink{structleveldb__iterator__t}{leveldb\-\_\-iterator\-\_\-t} $\ast$, char $\ast$$\ast$errptr)
+\item 
+\hyperlink{structleveldb__writebatch__t}{leveldb\-\_\-writebatch\-\_\-t} $\ast$ \hyperlink{c_8h_a3b3468685c046cccacd077d9d3b8c6ce}{leveldb\-\_\-writebatch\-\_\-create} ()
+\item 
+void \hyperlink{c_8h_a096484e030477dbc4dbcc98073240a2d}{leveldb\-\_\-writebatch\-\_\-destroy} (\hyperlink{structleveldb__writebatch__t}{leveldb\-\_\-writebatch\-\_\-t} $\ast$)
+\item 
+void \hyperlink{c_8h_a2cc074ce444b0e49eaee257ccf44a599}{leveldb\-\_\-writebatch\-\_\-clear} (\hyperlink{structleveldb__writebatch__t}{leveldb\-\_\-writebatch\-\_\-t} $\ast$)
+\item 
+void \hyperlink{c_8h_a4a880279e403daebb5d179ff4bf52cce}{leveldb\-\_\-writebatch\-\_\-put} (\hyperlink{structleveldb__writebatch__t}{leveldb\-\_\-writebatch\-\_\-t} $\ast$, const char $\ast$key, size\-\_\-t klen, const char $\ast$val, size\-\_\-t vlen)
+\item 
+void \hyperlink{c_8h_a593cea62db6cf16cbcdfc3668493d277}{leveldb\-\_\-writebatch\-\_\-delete} (\hyperlink{structleveldb__writebatch__t}{leveldb\-\_\-writebatch\-\_\-t} $\ast$, const char $\ast$key, size\-\_\-t klen)
+\item 
+void \hyperlink{c_8h_aaba8eb336dc649672bfd273abc6c2514}{leveldb\-\_\-writebatch\-\_\-iterate} (\hyperlink{structleveldb__writebatch__t}{leveldb\-\_\-writebatch\-\_\-t} $\ast$, void $\ast$\hyperlink{version__set_8cc_a6aad002d0db5e5e85dc31927a5a6f503}{state}, void($\ast$put)(void $\ast$, const char $\ast$k, size\-\_\-t klen, const char $\ast$v, size\-\_\-t vlen), void($\ast$deleted)(void $\ast$, const char $\ast$k, size\-\_\-t klen))
+\item 
+\hyperlink{structleveldb__options__t}{leveldb\-\_\-options\-\_\-t} $\ast$ \hyperlink{c_8h_a68f63f58125bf60a609ea8fcb6d2aa3d}{leveldb\-\_\-options\-\_\-create} ()
+\item 
+void \hyperlink{c_8h_a47241bf88a3577db975984102091f146}{leveldb\-\_\-options\-\_\-destroy} (\hyperlink{structleveldb__options__t}{leveldb\-\_\-options\-\_\-t} $\ast$)
+\item 
+void \hyperlink{c_8h_aeed649e70fa671d0d895b117479ea98e}{leveldb\-\_\-options\-\_\-set\-\_\-comparator} (\hyperlink{structleveldb__options__t}{leveldb\-\_\-options\-\_\-t} $\ast$, \hyperlink{structleveldb__comparator__t}{leveldb\-\_\-comparator\-\_\-t} $\ast$)
+\item 
+void \hyperlink{c_8h_a601a991b97ad289fc382ac0c6c41529a}{leveldb\-\_\-options\-\_\-set\-\_\-filter\-\_\-policy} (\hyperlink{structleveldb__options__t}{leveldb\-\_\-options\-\_\-t} $\ast$, \hyperlink{structleveldb__filterpolicy__t}{leveldb\-\_\-filterpolicy\-\_\-t} $\ast$)
+\item 
+void \hyperlink{c_8h_a83dd99cbdae7875aa1d21440840a7d50}{leveldb\-\_\-options\-\_\-set\-\_\-create\-\_\-if\-\_\-missing} (\hyperlink{structleveldb__options__t}{leveldb\-\_\-options\-\_\-t} $\ast$, unsigned char)
+\item 
+void \hyperlink{c_8h_a2edd01291e4b05819f807b4fd9c9feff}{leveldb\-\_\-options\-\_\-set\-\_\-error\-\_\-if\-\_\-exists} (\hyperlink{structleveldb__options__t}{leveldb\-\_\-options\-\_\-t} $\ast$, unsigned char)
+\item 
+void \hyperlink{c_8h_aeff05d456eb19f2c5a9bd3d38998a5df}{leveldb\-\_\-options\-\_\-set\-\_\-paranoid\-\_\-checks} (\hyperlink{structleveldb__options__t}{leveldb\-\_\-options\-\_\-t} $\ast$, unsigned char)
+\item 
+void \hyperlink{c_8h_a44fc1d3a8be5874ded2f88acf6827c90}{leveldb\-\_\-options\-\_\-set\-\_\-env} (\hyperlink{structleveldb__options__t}{leveldb\-\_\-options\-\_\-t} $\ast$, \hyperlink{structleveldb__env__t}{leveldb\-\_\-env\-\_\-t} $\ast$)
+\item 
+void \hyperlink{c_8h_a33f33b785bcf3ca8302c3604f9445d09}{leveldb\-\_\-options\-\_\-set\-\_\-info\-\_\-log} (\hyperlink{structleveldb__options__t}{leveldb\-\_\-options\-\_\-t} $\ast$, \hyperlink{structleveldb__logger__t}{leveldb\-\_\-logger\-\_\-t} $\ast$)
+\item 
+void \hyperlink{c_8h_a3fb1b7506980bd564492c726c296880a}{leveldb\-\_\-options\-\_\-set\-\_\-write\-\_\-buffer\-\_\-size} (\hyperlink{structleveldb__options__t}{leveldb\-\_\-options\-\_\-t} $\ast$, size\-\_\-t)
+\item 
+void \hyperlink{c_8h_ada3e456754075db35e48c445c21702a5}{leveldb\-\_\-options\-\_\-set\-\_\-max\-\_\-open\-\_\-files} (\hyperlink{structleveldb__options__t}{leveldb\-\_\-options\-\_\-t} $\ast$, int)
+\item 
+void \hyperlink{c_8h_a84b46aad6163601c0608edbb8227b3bd}{leveldb\-\_\-options\-\_\-set\-\_\-cache} (\hyperlink{structleveldb__options__t}{leveldb\-\_\-options\-\_\-t} $\ast$, \hyperlink{structleveldb__cache__t}{leveldb\-\_\-cache\-\_\-t} $\ast$)
+\item 
+void \hyperlink{c_8h_a7c5d889fbaa1efa3003d21c9c8061667}{leveldb\-\_\-options\-\_\-set\-\_\-block\-\_\-size} (\hyperlink{structleveldb__options__t}{leveldb\-\_\-options\-\_\-t} $\ast$, size\-\_\-t)
+\item 
+void \hyperlink{c_8h_a8b8e2cf4905ae7ed0dff45b12b5459b8}{leveldb\-\_\-options\-\_\-set\-\_\-block\-\_\-restart\-\_\-interval} (\hyperlink{structleveldb__options__t}{leveldb\-\_\-options\-\_\-t} $\ast$, int)
+\item 
+void \hyperlink{c_8h_ab17603ff3be246437f3a9fe7f79e7809}{leveldb\-\_\-options\-\_\-set\-\_\-compression} (\hyperlink{structleveldb__options__t}{leveldb\-\_\-options\-\_\-t} $\ast$, int)
+\item 
+\hyperlink{structleveldb__comparator__t}{leveldb\-\_\-comparator\-\_\-t} $\ast$ \hyperlink{c_8h_ab6bf1f1e1ea55ecbbefc50231a17067c}{leveldb\-\_\-comparator\-\_\-create} (void $\ast$\hyperlink{version__set_8cc_a6aad002d0db5e5e85dc31927a5a6f503}{state}, void($\ast$destructor)(void $\ast$), int($\ast$compare)(void $\ast$, const char $\ast$a, size\-\_\-t alen, const char $\ast$b, size\-\_\-t blen), const char $\ast$($\ast$\hyperlink{testharness_8cc_a8f8f80d37794cde9472343e4487ba3eb}{name})(void $\ast$))
+\item 
+void \hyperlink{c_8h_a8a23d40edcae8ee2a9ed3f8b071d99da}{leveldb\-\_\-comparator\-\_\-destroy} (\hyperlink{structleveldb__comparator__t}{leveldb\-\_\-comparator\-\_\-t} $\ast$)
+\item 
+\hyperlink{structleveldb__filterpolicy__t}{leveldb\-\_\-filterpolicy\-\_\-t} $\ast$ \hyperlink{c_8h_a9225a13a94b45cfe2f00395dfcc1cb18}{leveldb\-\_\-filterpolicy\-\_\-create} (void $\ast$\hyperlink{version__set_8cc_a6aad002d0db5e5e85dc31927a5a6f503}{state}, void($\ast$destructor)(void $\ast$), char $\ast$($\ast$create\-\_\-filter)(void $\ast$, const char $\ast$const $\ast$key\-\_\-array, const size\-\_\-t $\ast$key\-\_\-length\-\_\-array, int num\-\_\-keys, size\-\_\-t $\ast$filter\-\_\-length), unsigned char($\ast$key\-\_\-may\-\_\-match)(void $\ast$, const char $\ast$key, size\-\_\-t length, const char $\ast$filter, size\-\_\-t filter\-\_\-length), const char $\ast$($\ast$\hyperlink{testharness_8cc_a8f8f80d37794cde9472343e4487ba3eb}{name})(void $\ast$))
+\item 
+void \hyperlink{c_8h_ac308f760ef7946421afbda77957005b0}{leveldb\-\_\-filterpolicy\-\_\-destroy} (\hyperlink{structleveldb__filterpolicy__t}{leveldb\-\_\-filterpolicy\-\_\-t} $\ast$)
+\item 
+\hyperlink{structleveldb__filterpolicy__t}{leveldb\-\_\-filterpolicy\-\_\-t} $\ast$ \hyperlink{c_8h_a1adc82e212c58033ec9b8cd05577525c}{leveldb\-\_\-filterpolicy\-\_\-create\-\_\-bloom} (int bits\-\_\-per\-\_\-key)
+\item 
+\hyperlink{structleveldb__readoptions__t}{leveldb\-\_\-readoptions\-\_\-t} $\ast$ \hyperlink{c_8h_af8f89fab57f571512d42c04ac5fd9cba}{leveldb\-\_\-readoptions\-\_\-create} ()
+\item 
+void \hyperlink{c_8h_ab42afdd4068f69d9c4fa0e63495d0248}{leveldb\-\_\-readoptions\-\_\-destroy} (\hyperlink{structleveldb__readoptions__t}{leveldb\-\_\-readoptions\-\_\-t} $\ast$)
+\item 
+void \hyperlink{c_8h_a3087c5263448f0fb4f1c0de34f9e9fcc}{leveldb\-\_\-readoptions\-\_\-set\-\_\-verify\-\_\-checksums} (\hyperlink{structleveldb__readoptions__t}{leveldb\-\_\-readoptions\-\_\-t} $\ast$, unsigned char)
+\item 
+void \hyperlink{c_8h_a363fbf58b27d03e2a44f74c8a843d044}{leveldb\-\_\-readoptions\-\_\-set\-\_\-fill\-\_\-cache} (\hyperlink{structleveldb__readoptions__t}{leveldb\-\_\-readoptions\-\_\-t} $\ast$, unsigned char)
+\item 
+void \hyperlink{c_8h_aa7081689247a65d5b48cbcf614094b16}{leveldb\-\_\-readoptions\-\_\-set\-\_\-snapshot} (\hyperlink{structleveldb__readoptions__t}{leveldb\-\_\-readoptions\-\_\-t} $\ast$, const \hyperlink{structleveldb__snapshot__t}{leveldb\-\_\-snapshot\-\_\-t} $\ast$)
+\item 
+\hyperlink{structleveldb__writeoptions__t}{leveldb\-\_\-writeoptions\-\_\-t} $\ast$ \hyperlink{c_8h_a899f2c70e9f6bb3144c64bd753a92ea7}{leveldb\-\_\-writeoptions\-\_\-create} ()
+\item 
+void \hyperlink{c_8h_af847eb6803d789820cc925dcd2da2a81}{leveldb\-\_\-writeoptions\-\_\-destroy} (\hyperlink{structleveldb__writeoptions__t}{leveldb\-\_\-writeoptions\-\_\-t} $\ast$)
+\item 
+void \hyperlink{c_8h_a7c2eec118749b898e461eb58109bfdcc}{leveldb\-\_\-writeoptions\-\_\-set\-\_\-sync} (\hyperlink{structleveldb__writeoptions__t}{leveldb\-\_\-writeoptions\-\_\-t} $\ast$, unsigned char)
+\item 
+\hyperlink{structleveldb__cache__t}{leveldb\-\_\-cache\-\_\-t} $\ast$ \hyperlink{c_8h_a309c755dd37602eeb743070b74c8ddbc}{leveldb\-\_\-cache\-\_\-create\-\_\-lru} (size\-\_\-t capacity)
+\item 
+void \hyperlink{c_8h_a53bc8f41c8acffd1bad8482b0772cd59}{leveldb\-\_\-cache\-\_\-destroy} (\hyperlink{structleveldb__cache__t}{leveldb\-\_\-cache\-\_\-t} $\ast$cache)
+\item 
+\hyperlink{structleveldb__env__t}{leveldb\-\_\-env\-\_\-t} $\ast$ \hyperlink{c_8h_ab62c16daa002d481d9408a3350da6f5d}{leveldb\-\_\-create\-\_\-default\-\_\-env} ()
+\item 
+void \hyperlink{c_8h_a7d2c3eea69c21b187b454aa458bc0772}{leveldb\-\_\-env\-\_\-destroy} (\hyperlink{structleveldb__env__t}{leveldb\-\_\-env\-\_\-t} $\ast$)
+\item 
+void \hyperlink{c_8h_a7bded8095662c329e4589468e434f353}{leveldb\-\_\-free} (void $\ast$ptr)
+\item 
+int \hyperlink{c_8h_a0e15a66133909795ca9230276956dafc}{leveldb\-\_\-major\-\_\-version} ()
+\item 
+int \hyperlink{c_8h_abc5ffc402fe86052ddad236dc3250f3d}{leveldb\-\_\-minor\-\_\-version} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{c_8h_ac73aa1ecc1d8a50707b4d9f7cd03f95f}{\index{c.\-h@{c.\-h}!leveldb\-\_\-cache\-\_\-t@{leveldb\-\_\-cache\-\_\-t}}
+\index{leveldb\-\_\-cache\-\_\-t@{leveldb\-\_\-cache\-\_\-t}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-cache\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf leveldb\-\_\-cache\-\_\-t} {\bf leveldb\-\_\-cache\-\_\-t}}}\label{c_8h_ac73aa1ecc1d8a50707b4d9f7cd03f95f}
+\hypertarget{c_8h_ac9735683d97693fc5b36e3b61aaac736}{\index{c.\-h@{c.\-h}!leveldb\-\_\-comparator\-\_\-t@{leveldb\-\_\-comparator\-\_\-t}}
+\index{leveldb\-\_\-comparator\-\_\-t@{leveldb\-\_\-comparator\-\_\-t}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-comparator\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf leveldb\-\_\-comparator\-\_\-t} {\bf leveldb\-\_\-comparator\-\_\-t}}}\label{c_8h_ac9735683d97693fc5b36e3b61aaac736}
+\hypertarget{c_8h_acb2785116fcacc02597f4b3f3dc4d1b7}{\index{c.\-h@{c.\-h}!leveldb\-\_\-env\-\_\-t@{leveldb\-\_\-env\-\_\-t}}
+\index{leveldb\-\_\-env\-\_\-t@{leveldb\-\_\-env\-\_\-t}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-env\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf leveldb\-\_\-env\-\_\-t} {\bf leveldb\-\_\-env\-\_\-t}}}\label{c_8h_acb2785116fcacc02597f4b3f3dc4d1b7}
+\hypertarget{c_8h_af33c8311c6cee88afb413b72eeb60725}{\index{c.\-h@{c.\-h}!leveldb\-\_\-filelock\-\_\-t@{leveldb\-\_\-filelock\-\_\-t}}
+\index{leveldb\-\_\-filelock\-\_\-t@{leveldb\-\_\-filelock\-\_\-t}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-filelock\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf leveldb\-\_\-filelock\-\_\-t} {\bf leveldb\-\_\-filelock\-\_\-t}}}\label{c_8h_af33c8311c6cee88afb413b72eeb60725}
+\hypertarget{c_8h_a4619326a9cac2ba474081bba243961b5}{\index{c.\-h@{c.\-h}!leveldb\-\_\-filterpolicy\-\_\-t@{leveldb\-\_\-filterpolicy\-\_\-t}}
+\index{leveldb\-\_\-filterpolicy\-\_\-t@{leveldb\-\_\-filterpolicy\-\_\-t}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-filterpolicy\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf leveldb\-\_\-filterpolicy\-\_\-t} {\bf leveldb\-\_\-filterpolicy\-\_\-t}}}\label{c_8h_a4619326a9cac2ba474081bba243961b5}
+\hypertarget{c_8h_aebf49c6a138b179689251fbf9fba41cd}{\index{c.\-h@{c.\-h}!leveldb\-\_\-iterator\-\_\-t@{leveldb\-\_\-iterator\-\_\-t}}
+\index{leveldb\-\_\-iterator\-\_\-t@{leveldb\-\_\-iterator\-\_\-t}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-iterator\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf leveldb\-\_\-iterator\-\_\-t} {\bf leveldb\-\_\-iterator\-\_\-t}}}\label{c_8h_aebf49c6a138b179689251fbf9fba41cd}
+\hypertarget{c_8h_ac123f38ad65a300fa63d36c6526ccd41}{\index{c.\-h@{c.\-h}!leveldb\-\_\-logger\-\_\-t@{leveldb\-\_\-logger\-\_\-t}}
+\index{leveldb\-\_\-logger\-\_\-t@{leveldb\-\_\-logger\-\_\-t}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-logger\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf leveldb\-\_\-logger\-\_\-t} {\bf leveldb\-\_\-logger\-\_\-t}}}\label{c_8h_ac123f38ad65a300fa63d36c6526ccd41}
+\hypertarget{c_8h_a83bbdb1b9c03ef5b608626083b6d4a8a}{\index{c.\-h@{c.\-h}!leveldb\-\_\-options\-\_\-t@{leveldb\-\_\-options\-\_\-t}}
+\index{leveldb\-\_\-options\-\_\-t@{leveldb\-\_\-options\-\_\-t}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-options\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf leveldb\-\_\-options\-\_\-t} {\bf leveldb\-\_\-options\-\_\-t}}}\label{c_8h_a83bbdb1b9c03ef5b608626083b6d4a8a}
+\hypertarget{c_8h_af9c808d2a14c978a1b907de90485702b}{\index{c.\-h@{c.\-h}!leveldb\-\_\-randomfile\-\_\-t@{leveldb\-\_\-randomfile\-\_\-t}}
+\index{leveldb\-\_\-randomfile\-\_\-t@{leveldb\-\_\-randomfile\-\_\-t}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-randomfile\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf leveldb\-\_\-randomfile\-\_\-t} {\bf leveldb\-\_\-randomfile\-\_\-t}}}\label{c_8h_af9c808d2a14c978a1b907de90485702b}
+\hypertarget{c_8h_a4ff993fcf94872656048929a8c829193}{\index{c.\-h@{c.\-h}!leveldb\-\_\-readoptions\-\_\-t@{leveldb\-\_\-readoptions\-\_\-t}}
+\index{leveldb\-\_\-readoptions\-\_\-t@{leveldb\-\_\-readoptions\-\_\-t}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-readoptions\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf leveldb\-\_\-readoptions\-\_\-t} {\bf leveldb\-\_\-readoptions\-\_\-t}}}\label{c_8h_a4ff993fcf94872656048929a8c829193}
+\hypertarget{c_8h_a5b253ebb76432befabcfa64b99dcb1c7}{\index{c.\-h@{c.\-h}!leveldb\-\_\-seqfile\-\_\-t@{leveldb\-\_\-seqfile\-\_\-t}}
+\index{leveldb\-\_\-seqfile\-\_\-t@{leveldb\-\_\-seqfile\-\_\-t}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-seqfile\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf leveldb\-\_\-seqfile\-\_\-t} {\bf leveldb\-\_\-seqfile\-\_\-t}}}\label{c_8h_a5b253ebb76432befabcfa64b99dcb1c7}
+\hypertarget{c_8h_ab313e8ef3ccfd88f8c0f2bbfd3678b7d}{\index{c.\-h@{c.\-h}!leveldb\-\_\-snapshot\-\_\-t@{leveldb\-\_\-snapshot\-\_\-t}}
+\index{leveldb\-\_\-snapshot\-\_\-t@{leveldb\-\_\-snapshot\-\_\-t}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-snapshot\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf leveldb\-\_\-snapshot\-\_\-t} {\bf leveldb\-\_\-snapshot\-\_\-t}}}\label{c_8h_ab313e8ef3ccfd88f8c0f2bbfd3678b7d}
+\hypertarget{c_8h_a636e4c8428a435ac0e40175843ee2f2d}{\index{c.\-h@{c.\-h}!leveldb\-\_\-t@{leveldb\-\_\-t}}
+\index{leveldb\-\_\-t@{leveldb\-\_\-t}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf leveldb\-\_\-t} {\bf leveldb\-\_\-t}}}\label{c_8h_a636e4c8428a435ac0e40175843ee2f2d}
+\hypertarget{c_8h_afe2d3c06c7c36d14e2e51e2573152432}{\index{c.\-h@{c.\-h}!leveldb\-\_\-writablefile\-\_\-t@{leveldb\-\_\-writablefile\-\_\-t}}
+\index{leveldb\-\_\-writablefile\-\_\-t@{leveldb\-\_\-writablefile\-\_\-t}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-writablefile\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf leveldb\-\_\-writablefile\-\_\-t} {\bf leveldb\-\_\-writablefile\-\_\-t}}}\label{c_8h_afe2d3c06c7c36d14e2e51e2573152432}
+\hypertarget{c_8h_a1dc1f4835950d84dfc6c93f4acb87650}{\index{c.\-h@{c.\-h}!leveldb\-\_\-writebatch\-\_\-t@{leveldb\-\_\-writebatch\-\_\-t}}
+\index{leveldb\-\_\-writebatch\-\_\-t@{leveldb\-\_\-writebatch\-\_\-t}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-writebatch\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf leveldb\-\_\-writebatch\-\_\-t} {\bf leveldb\-\_\-writebatch\-\_\-t}}}\label{c_8h_a1dc1f4835950d84dfc6c93f4acb87650}
+\hypertarget{c_8h_a8ec21871766c9e631de966d139641f85}{\index{c.\-h@{c.\-h}!leveldb\-\_\-writeoptions\-\_\-t@{leveldb\-\_\-writeoptions\-\_\-t}}
+\index{leveldb\-\_\-writeoptions\-\_\-t@{leveldb\-\_\-writeoptions\-\_\-t}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-writeoptions\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf leveldb\-\_\-writeoptions\-\_\-t} {\bf leveldb\-\_\-writeoptions\-\_\-t}}}\label{c_8h_a8ec21871766c9e631de966d139641f85}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{c_8h_abc6126af1d45847bc59afa0aa3216b04}{\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}}\label{c_8h_abc6126af1d45847bc59afa0aa3216b04}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{leveldb\-\_\-no\-\_\-compression@{leveldb\-\_\-no\-\_\-compression}!c.\-h@{c.\-h}}\index{c.\-h@{c.\-h}!leveldb\-\_\-no\-\_\-compression@{leveldb\-\_\-no\-\_\-compression}}\item[{\em 
+\hypertarget{c_8h_abc6126af1d45847bc59afa0aa3216b04acfeb0c8224005d87b097de4b65f376b9}{leveldb\-\_\-no\-\_\-compression}\label{c_8h_abc6126af1d45847bc59afa0aa3216b04acfeb0c8224005d87b097de4b65f376b9}
+}]\index{leveldb\-\_\-snappy\-\_\-compression@{leveldb\-\_\-snappy\-\_\-compression}!c.\-h@{c.\-h}}\index{c.\-h@{c.\-h}!leveldb\-\_\-snappy\-\_\-compression@{leveldb\-\_\-snappy\-\_\-compression}}\item[{\em 
+\hypertarget{c_8h_abc6126af1d45847bc59afa0aa3216b04ae4ff77513d2ccd2aa8ede4e2227eed7d}{leveldb\-\_\-snappy\-\_\-compression}\label{c_8h_abc6126af1d45847bc59afa0aa3216b04ae4ff77513d2ccd2aa8ede4e2227eed7d}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Function Documentation}
+\hypertarget{c_8h_a876ad4220f0dbd55fbbe91714e271e98}{\index{c.\-h@{c.\-h}!leveldb\-\_\-approximate\-\_\-sizes@{leveldb\-\_\-approximate\-\_\-sizes}}
+\index{leveldb\-\_\-approximate\-\_\-sizes@{leveldb\-\_\-approximate\-\_\-sizes}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-approximate\-\_\-sizes}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-\_\-approximate\-\_\-sizes (
+\begin{DoxyParamCaption}
+\item[{{\bf leveldb\-\_\-t} $\ast$}]{db, }
+\item[{int}]{num\-\_\-ranges, }
+\item[{const char $\ast$const $\ast$}]{range\-\_\-start\-\_\-key, }
+\item[{const size\-\_\-t $\ast$}]{range\-\_\-start\-\_\-key\-\_\-len, }
+\item[{const char $\ast$const $\ast$}]{range\-\_\-limit\-\_\-key, }
+\item[{const size\-\_\-t $\ast$}]{range\-\_\-limit\-\_\-key\-\_\-len, }
+\item[{{\bf uint64\-\_\-t} $\ast$}]{sizes}
+\end{DoxyParamCaption}
+)}}\label{c_8h_a876ad4220f0dbd55fbbe91714e271e98}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c_8h_a309c755dd37602eeb743070b74c8ddbc}{\index{c.\-h@{c.\-h}!leveldb\-\_\-cache\-\_\-create\-\_\-lru@{leveldb\-\_\-cache\-\_\-create\-\_\-lru}}
+\index{leveldb\-\_\-cache\-\_\-create\-\_\-lru@{leveldb\-\_\-cache\-\_\-create\-\_\-lru}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-cache\-\_\-create\-\_\-lru}]{\setlength{\rightskip}{0pt plus 5cm}{\bf leveldb\-\_\-cache\-\_\-t}$\ast$ leveldb\-\_\-cache\-\_\-create\-\_\-lru (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{capacity}
+\end{DoxyParamCaption}
+)}}\label{c_8h_a309c755dd37602eeb743070b74c8ddbc}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c_8h_a53bc8f41c8acffd1bad8482b0772cd59}{\index{c.\-h@{c.\-h}!leveldb\-\_\-cache\-\_\-destroy@{leveldb\-\_\-cache\-\_\-destroy}}
+\index{leveldb\-\_\-cache\-\_\-destroy@{leveldb\-\_\-cache\-\_\-destroy}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-cache\-\_\-destroy}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-\_\-cache\-\_\-destroy (
+\begin{DoxyParamCaption}
+\item[{{\bf leveldb\-\_\-cache\-\_\-t} $\ast$}]{cache}
+\end{DoxyParamCaption}
+)}}\label{c_8h_a53bc8f41c8acffd1bad8482b0772cd59}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c_8h_a4f2ee24f30c834d2f54e48acaffb3412}{\index{c.\-h@{c.\-h}!leveldb\-\_\-close@{leveldb\-\_\-close}}
+\index{leveldb\-\_\-close@{leveldb\-\_\-close}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-close}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-\_\-close (
+\begin{DoxyParamCaption}
+\item[{{\bf leveldb\-\_\-t} $\ast$}]{db}
+\end{DoxyParamCaption}
+)}}\label{c_8h_a4f2ee24f30c834d2f54e48acaffb3412}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c_8h_a2e579ef1579016b83b3fcb4038939517}{\index{c.\-h@{c.\-h}!leveldb\-\_\-compact\-\_\-range@{leveldb\-\_\-compact\-\_\-range}}
+\index{leveldb\-\_\-compact\-\_\-range@{leveldb\-\_\-compact\-\_\-range}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-compact\-\_\-range}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-\_\-compact\-\_\-range (
+\begin{DoxyParamCaption}
+\item[{{\bf leveldb\-\_\-t} $\ast$}]{db, }
+\item[{const char $\ast$}]{start\-\_\-key, }
+\item[{size\-\_\-t}]{start\-\_\-key\-\_\-len, }
+\item[{const char $\ast$}]{limit\-\_\-key, }
+\item[{size\-\_\-t}]{limit\-\_\-key\-\_\-len}
+\end{DoxyParamCaption}
+)}}\label{c_8h_a2e579ef1579016b83b3fcb4038939517}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c_8h_ab6bf1f1e1ea55ecbbefc50231a17067c}{\index{c.\-h@{c.\-h}!leveldb\-\_\-comparator\-\_\-create@{leveldb\-\_\-comparator\-\_\-create}}
+\index{leveldb\-\_\-comparator\-\_\-create@{leveldb\-\_\-comparator\-\_\-create}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-comparator\-\_\-create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf leveldb\-\_\-comparator\-\_\-t}$\ast$ leveldb\-\_\-comparator\-\_\-create (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{state, }
+\item[{void($\ast$)(void $\ast$)}]{destructor, }
+\item[{int($\ast$)(void $\ast$, const char $\ast$a, size\-\_\-t alen, const char $\ast$b, size\-\_\-t blen)}]{compare, }
+\item[{const char $\ast$($\ast$)(void $\ast$)}]{name}
+\end{DoxyParamCaption}
+)}}\label{c_8h_ab6bf1f1e1ea55ecbbefc50231a17067c}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c_8h_a8a23d40edcae8ee2a9ed3f8b071d99da}{\index{c.\-h@{c.\-h}!leveldb\-\_\-comparator\-\_\-destroy@{leveldb\-\_\-comparator\-\_\-destroy}}
+\index{leveldb\-\_\-comparator\-\_\-destroy@{leveldb\-\_\-comparator\-\_\-destroy}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-comparator\-\_\-destroy}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-\_\-comparator\-\_\-destroy (
+\begin{DoxyParamCaption}
+\item[{{\bf leveldb\-\_\-comparator\-\_\-t} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{c_8h_a8a23d40edcae8ee2a9ed3f8b071d99da}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c_8h_ab62c16daa002d481d9408a3350da6f5d}{\index{c.\-h@{c.\-h}!leveldb\-\_\-create\-\_\-default\-\_\-env@{leveldb\-\_\-create\-\_\-default\-\_\-env}}
+\index{leveldb\-\_\-create\-\_\-default\-\_\-env@{leveldb\-\_\-create\-\_\-default\-\_\-env}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-create\-\_\-default\-\_\-env}]{\setlength{\rightskip}{0pt plus 5cm}{\bf leveldb\-\_\-env\-\_\-t}$\ast$ leveldb\-\_\-create\-\_\-default\-\_\-env (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{c_8h_ab62c16daa002d481d9408a3350da6f5d}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c_8h_a8b9d419b6e0753a1d6158605c821354a}{\index{c.\-h@{c.\-h}!leveldb\-\_\-create\-\_\-iterator@{leveldb\-\_\-create\-\_\-iterator}}
+\index{leveldb\-\_\-create\-\_\-iterator@{leveldb\-\_\-create\-\_\-iterator}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-create\-\_\-iterator}]{\setlength{\rightskip}{0pt plus 5cm}{\bf leveldb\-\_\-iterator\-\_\-t}$\ast$ leveldb\-\_\-create\-\_\-iterator (
+\begin{DoxyParamCaption}
+\item[{{\bf leveldb\-\_\-t} $\ast$}]{db, }
+\item[{const {\bf leveldb\-\_\-readoptions\-\_\-t} $\ast$}]{options}
+\end{DoxyParamCaption}
+)}}\label{c_8h_a8b9d419b6e0753a1d6158605c821354a}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c_8h_af999ba27285e482f34df3821f9a04214}{\index{c.\-h@{c.\-h}!leveldb\-\_\-create\-\_\-snapshot@{leveldb\-\_\-create\-\_\-snapshot}}
+\index{leveldb\-\_\-create\-\_\-snapshot@{leveldb\-\_\-create\-\_\-snapshot}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-create\-\_\-snapshot}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf leveldb\-\_\-snapshot\-\_\-t}$\ast$ leveldb\-\_\-create\-\_\-snapshot (
+\begin{DoxyParamCaption}
+\item[{{\bf leveldb\-\_\-t} $\ast$}]{db}
+\end{DoxyParamCaption}
+)}}\label{c_8h_af999ba27285e482f34df3821f9a04214}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c_8h_a3878ffaf68a4addb31266ac81ce8c36f}{\index{c.\-h@{c.\-h}!leveldb\-\_\-delete@{leveldb\-\_\-delete}}
+\index{leveldb\-\_\-delete@{leveldb\-\_\-delete}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-delete}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-\_\-delete (
+\begin{DoxyParamCaption}
+\item[{{\bf leveldb\-\_\-t} $\ast$}]{db, }
+\item[{const {\bf leveldb\-\_\-writeoptions\-\_\-t} $\ast$}]{options, }
+\item[{const char $\ast$}]{key, }
+\item[{size\-\_\-t}]{keylen, }
+\item[{char $\ast$$\ast$}]{errptr}
+\end{DoxyParamCaption}
+)}}\label{c_8h_a3878ffaf68a4addb31266ac81ce8c36f}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c_8h_a265873c54a9e6080278da4f957a6a183}{\index{c.\-h@{c.\-h}!leveldb\-\_\-destroy\-\_\-db@{leveldb\-\_\-destroy\-\_\-db}}
+\index{leveldb\-\_\-destroy\-\_\-db@{leveldb\-\_\-destroy\-\_\-db}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-destroy\-\_\-db}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-\_\-destroy\-\_\-db (
+\begin{DoxyParamCaption}
+\item[{const {\bf leveldb\-\_\-options\-\_\-t} $\ast$}]{options, }
+\item[{const char $\ast$}]{name, }
+\item[{char $\ast$$\ast$}]{errptr}
+\end{DoxyParamCaption}
+)}}\label{c_8h_a265873c54a9e6080278da4f957a6a183}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c_8h_a7d2c3eea69c21b187b454aa458bc0772}{\index{c.\-h@{c.\-h}!leveldb\-\_\-env\-\_\-destroy@{leveldb\-\_\-env\-\_\-destroy}}
+\index{leveldb\-\_\-env\-\_\-destroy@{leveldb\-\_\-env\-\_\-destroy}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-env\-\_\-destroy}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-\_\-env\-\_\-destroy (
+\begin{DoxyParamCaption}
+\item[{{\bf leveldb\-\_\-env\-\_\-t} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{c_8h_a7d2c3eea69c21b187b454aa458bc0772}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c_8h_a9225a13a94b45cfe2f00395dfcc1cb18}{\index{c.\-h@{c.\-h}!leveldb\-\_\-filterpolicy\-\_\-create@{leveldb\-\_\-filterpolicy\-\_\-create}}
+\index{leveldb\-\_\-filterpolicy\-\_\-create@{leveldb\-\_\-filterpolicy\-\_\-create}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-filterpolicy\-\_\-create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf leveldb\-\_\-filterpolicy\-\_\-t}$\ast$ leveldb\-\_\-filterpolicy\-\_\-create (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{state, }
+\item[{void($\ast$)(void $\ast$)}]{destructor, }
+\item[{char $\ast$($\ast$)(void $\ast$, const char $\ast$const $\ast$key\-\_\-array, const size\-\_\-t $\ast$key\-\_\-length\-\_\-array, int num\-\_\-keys, size\-\_\-t $\ast$filter\-\_\-length)}]{create\-\_\-filter, }
+\item[{unsigned char($\ast$)(void $\ast$, const char $\ast$key, size\-\_\-t length, const char $\ast$filter, size\-\_\-t filter\-\_\-length)}]{key\-\_\-may\-\_\-match, }
+\item[{const char $\ast$($\ast$)(void $\ast$)}]{name}
+\end{DoxyParamCaption}
+)}}\label{c_8h_a9225a13a94b45cfe2f00395dfcc1cb18}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c_8h_a1adc82e212c58033ec9b8cd05577525c}{\index{c.\-h@{c.\-h}!leveldb\-\_\-filterpolicy\-\_\-create\-\_\-bloom@{leveldb\-\_\-filterpolicy\-\_\-create\-\_\-bloom}}
+\index{leveldb\-\_\-filterpolicy\-\_\-create\-\_\-bloom@{leveldb\-\_\-filterpolicy\-\_\-create\-\_\-bloom}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-filterpolicy\-\_\-create\-\_\-bloom}]{\setlength{\rightskip}{0pt plus 5cm}{\bf leveldb\-\_\-filterpolicy\-\_\-t}$\ast$ leveldb\-\_\-filterpolicy\-\_\-create\-\_\-bloom (
+\begin{DoxyParamCaption}
+\item[{int}]{bits\-\_\-per\-\_\-key}
+\end{DoxyParamCaption}
+)}}\label{c_8h_a1adc82e212c58033ec9b8cd05577525c}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c_8h_ac308f760ef7946421afbda77957005b0}{\index{c.\-h@{c.\-h}!leveldb\-\_\-filterpolicy\-\_\-destroy@{leveldb\-\_\-filterpolicy\-\_\-destroy}}
+\index{leveldb\-\_\-filterpolicy\-\_\-destroy@{leveldb\-\_\-filterpolicy\-\_\-destroy}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-filterpolicy\-\_\-destroy}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-\_\-filterpolicy\-\_\-destroy (
+\begin{DoxyParamCaption}
+\item[{{\bf leveldb\-\_\-filterpolicy\-\_\-t} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{c_8h_ac308f760ef7946421afbda77957005b0}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c_8h_a7bded8095662c329e4589468e434f353}{\index{c.\-h@{c.\-h}!leveldb\-\_\-free@{leveldb\-\_\-free}}
+\index{leveldb\-\_\-free@{leveldb\-\_\-free}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-free}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-\_\-free (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{ptr}
+\end{DoxyParamCaption}
+)}}\label{c_8h_a7bded8095662c329e4589468e434f353}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c_8h_af9b485534674367c01521a8192a74091}{\index{c.\-h@{c.\-h}!leveldb\-\_\-get@{leveldb\-\_\-get}}
+\index{leveldb\-\_\-get@{leveldb\-\_\-get}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-get}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ leveldb\-\_\-get (
+\begin{DoxyParamCaption}
+\item[{{\bf leveldb\-\_\-t} $\ast$}]{db, }
+\item[{const {\bf leveldb\-\_\-readoptions\-\_\-t} $\ast$}]{options, }
+\item[{const char $\ast$}]{key, }
+\item[{size\-\_\-t}]{keylen, }
+\item[{size\-\_\-t $\ast$}]{vallen, }
+\item[{char $\ast$$\ast$}]{errptr}
+\end{DoxyParamCaption}
+)}}\label{c_8h_af9b485534674367c01521a8192a74091}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c_8h_a936dde4fa131d4ed7716692f2b096256}{\index{c.\-h@{c.\-h}!leveldb\-\_\-iter\-\_\-destroy@{leveldb\-\_\-iter\-\_\-destroy}}
+\index{leveldb\-\_\-iter\-\_\-destroy@{leveldb\-\_\-iter\-\_\-destroy}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-iter\-\_\-destroy}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-\_\-iter\-\_\-destroy (
+\begin{DoxyParamCaption}
+\item[{{\bf leveldb\-\_\-iterator\-\_\-t} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{c_8h_a936dde4fa131d4ed7716692f2b096256}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c_8h_a8c9b0b90b661935fadd4daa92648224c}{\index{c.\-h@{c.\-h}!leveldb\-\_\-iter\-\_\-get\-\_\-error@{leveldb\-\_\-iter\-\_\-get\-\_\-error}}
+\index{leveldb\-\_\-iter\-\_\-get\-\_\-error@{leveldb\-\_\-iter\-\_\-get\-\_\-error}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-iter\-\_\-get\-\_\-error}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-\_\-iter\-\_\-get\-\_\-error (
+\begin{DoxyParamCaption}
+\item[{const {\bf leveldb\-\_\-iterator\-\_\-t} $\ast$}]{, }
+\item[{char $\ast$$\ast$}]{errptr}
+\end{DoxyParamCaption}
+)}}\label{c_8h_a8c9b0b90b661935fadd4daa92648224c}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c_8h_a8dae684bf7df21873ba3f17e4b942a62}{\index{c.\-h@{c.\-h}!leveldb\-\_\-iter\-\_\-key@{leveldb\-\_\-iter\-\_\-key}}
+\index{leveldb\-\_\-iter\-\_\-key@{leveldb\-\_\-iter\-\_\-key}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-iter\-\_\-key}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ leveldb\-\_\-iter\-\_\-key (
+\begin{DoxyParamCaption}
+\item[{const {\bf leveldb\-\_\-iterator\-\_\-t} $\ast$}]{, }
+\item[{size\-\_\-t $\ast$}]{klen}
+\end{DoxyParamCaption}
+)}}\label{c_8h_a8dae684bf7df21873ba3f17e4b942a62}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c_8h_a46929304c15730552df83feab9ba57dd}{\index{c.\-h@{c.\-h}!leveldb\-\_\-iter\-\_\-next@{leveldb\-\_\-iter\-\_\-next}}
+\index{leveldb\-\_\-iter\-\_\-next@{leveldb\-\_\-iter\-\_\-next}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-iter\-\_\-next}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-\_\-iter\-\_\-next (
+\begin{DoxyParamCaption}
+\item[{{\bf leveldb\-\_\-iterator\-\_\-t} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{c_8h_a46929304c15730552df83feab9ba57dd}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c_8h_aa7517614991dcda272ce91dc1d69f353}{\index{c.\-h@{c.\-h}!leveldb\-\_\-iter\-\_\-prev@{leveldb\-\_\-iter\-\_\-prev}}
+\index{leveldb\-\_\-iter\-\_\-prev@{leveldb\-\_\-iter\-\_\-prev}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-iter\-\_\-prev}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-\_\-iter\-\_\-prev (
+\begin{DoxyParamCaption}
+\item[{{\bf leveldb\-\_\-iterator\-\_\-t} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{c_8h_aa7517614991dcda272ce91dc1d69f353}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c_8h_afc4e1dcd73bc857e29769413d07c7fb4}{\index{c.\-h@{c.\-h}!leveldb\-\_\-iter\-\_\-seek@{leveldb\-\_\-iter\-\_\-seek}}
+\index{leveldb\-\_\-iter\-\_\-seek@{leveldb\-\_\-iter\-\_\-seek}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-iter\-\_\-seek}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-\_\-iter\-\_\-seek (
+\begin{DoxyParamCaption}
+\item[{{\bf leveldb\-\_\-iterator\-\_\-t} $\ast$}]{, }
+\item[{const char $\ast$}]{k, }
+\item[{size\-\_\-t}]{klen}
+\end{DoxyParamCaption}
+)}}\label{c_8h_afc4e1dcd73bc857e29769413d07c7fb4}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c_8h_a1c2f8c577197f9c4f915062076b13d98}{\index{c.\-h@{c.\-h}!leveldb\-\_\-iter\-\_\-seek\-\_\-to\-\_\-first@{leveldb\-\_\-iter\-\_\-seek\-\_\-to\-\_\-first}}
+\index{leveldb\-\_\-iter\-\_\-seek\-\_\-to\-\_\-first@{leveldb\-\_\-iter\-\_\-seek\-\_\-to\-\_\-first}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-iter\-\_\-seek\-\_\-to\-\_\-first}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-\_\-iter\-\_\-seek\-\_\-to\-\_\-first (
+\begin{DoxyParamCaption}
+\item[{{\bf leveldb\-\_\-iterator\-\_\-t} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{c_8h_a1c2f8c577197f9c4f915062076b13d98}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c_8h_a46f600db8620d29a75bb92f183d54d83}{\index{c.\-h@{c.\-h}!leveldb\-\_\-iter\-\_\-seek\-\_\-to\-\_\-last@{leveldb\-\_\-iter\-\_\-seek\-\_\-to\-\_\-last}}
+\index{leveldb\-\_\-iter\-\_\-seek\-\_\-to\-\_\-last@{leveldb\-\_\-iter\-\_\-seek\-\_\-to\-\_\-last}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-iter\-\_\-seek\-\_\-to\-\_\-last}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-\_\-iter\-\_\-seek\-\_\-to\-\_\-last (
+\begin{DoxyParamCaption}
+\item[{{\bf leveldb\-\_\-iterator\-\_\-t} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{c_8h_a46f600db8620d29a75bb92f183d54d83}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c_8h_ac82f6ccc07c42af80b78a5ea0af4264c}{\index{c.\-h@{c.\-h}!leveldb\-\_\-iter\-\_\-valid@{leveldb\-\_\-iter\-\_\-valid}}
+\index{leveldb\-\_\-iter\-\_\-valid@{leveldb\-\_\-iter\-\_\-valid}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-iter\-\_\-valid}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char leveldb\-\_\-iter\-\_\-valid (
+\begin{DoxyParamCaption}
+\item[{const {\bf leveldb\-\_\-iterator\-\_\-t} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{c_8h_ac82f6ccc07c42af80b78a5ea0af4264c}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c_8h_a16d18068e8fcb0dddd22a6d77ff5ad06}{\index{c.\-h@{c.\-h}!leveldb\-\_\-iter\-\_\-value@{leveldb\-\_\-iter\-\_\-value}}
+\index{leveldb\-\_\-iter\-\_\-value@{leveldb\-\_\-iter\-\_\-value}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-iter\-\_\-value}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ leveldb\-\_\-iter\-\_\-value (
+\begin{DoxyParamCaption}
+\item[{const {\bf leveldb\-\_\-iterator\-\_\-t} $\ast$}]{, }
+\item[{size\-\_\-t $\ast$}]{vlen}
+\end{DoxyParamCaption}
+)}}\label{c_8h_a16d18068e8fcb0dddd22a6d77ff5ad06}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c_8h_a0e15a66133909795ca9230276956dafc}{\index{c.\-h@{c.\-h}!leveldb\-\_\-major\-\_\-version@{leveldb\-\_\-major\-\_\-version}}
+\index{leveldb\-\_\-major\-\_\-version@{leveldb\-\_\-major\-\_\-version}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-major\-\_\-version}]{\setlength{\rightskip}{0pt plus 5cm}int leveldb\-\_\-major\-\_\-version (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{c_8h_a0e15a66133909795ca9230276956dafc}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c_8h_abc5ffc402fe86052ddad236dc3250f3d}{\index{c.\-h@{c.\-h}!leveldb\-\_\-minor\-\_\-version@{leveldb\-\_\-minor\-\_\-version}}
+\index{leveldb\-\_\-minor\-\_\-version@{leveldb\-\_\-minor\-\_\-version}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-minor\-\_\-version}]{\setlength{\rightskip}{0pt plus 5cm}int leveldb\-\_\-minor\-\_\-version (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{c_8h_abc5ffc402fe86052ddad236dc3250f3d}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c_8h_a2d912fff4d5decae6da014298b227a18}{\index{c.\-h@{c.\-h}!leveldb\-\_\-open@{leveldb\-\_\-open}}
+\index{leveldb\-\_\-open@{leveldb\-\_\-open}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-open}]{\setlength{\rightskip}{0pt plus 5cm}{\bf leveldb\-\_\-t}$\ast$ leveldb\-\_\-open (
+\begin{DoxyParamCaption}
+\item[{const {\bf leveldb\-\_\-options\-\_\-t} $\ast$}]{options, }
+\item[{const char $\ast$}]{name, }
+\item[{char $\ast$$\ast$}]{errptr}
+\end{DoxyParamCaption}
+)}}\label{c_8h_a2d912fff4d5decae6da014298b227a18}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c_8h_a68f63f58125bf60a609ea8fcb6d2aa3d}{\index{c.\-h@{c.\-h}!leveldb\-\_\-options\-\_\-create@{leveldb\-\_\-options\-\_\-create}}
+\index{leveldb\-\_\-options\-\_\-create@{leveldb\-\_\-options\-\_\-create}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-options\-\_\-create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf leveldb\-\_\-options\-\_\-t}$\ast$ leveldb\-\_\-options\-\_\-create (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{c_8h_a68f63f58125bf60a609ea8fcb6d2aa3d}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c_8h_a47241bf88a3577db975984102091f146}{\index{c.\-h@{c.\-h}!leveldb\-\_\-options\-\_\-destroy@{leveldb\-\_\-options\-\_\-destroy}}
+\index{leveldb\-\_\-options\-\_\-destroy@{leveldb\-\_\-options\-\_\-destroy}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-options\-\_\-destroy}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-\_\-options\-\_\-destroy (
+\begin{DoxyParamCaption}
+\item[{{\bf leveldb\-\_\-options\-\_\-t} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{c_8h_a47241bf88a3577db975984102091f146}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c_8h_a8b8e2cf4905ae7ed0dff45b12b5459b8}{\index{c.\-h@{c.\-h}!leveldb\-\_\-options\-\_\-set\-\_\-block\-\_\-restart\-\_\-interval@{leveldb\-\_\-options\-\_\-set\-\_\-block\-\_\-restart\-\_\-interval}}
+\index{leveldb\-\_\-options\-\_\-set\-\_\-block\-\_\-restart\-\_\-interval@{leveldb\-\_\-options\-\_\-set\-\_\-block\-\_\-restart\-\_\-interval}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-options\-\_\-set\-\_\-block\-\_\-restart\-\_\-interval}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-\_\-options\-\_\-set\-\_\-block\-\_\-restart\-\_\-interval (
+\begin{DoxyParamCaption}
+\item[{{\bf leveldb\-\_\-options\-\_\-t} $\ast$}]{, }
+\item[{int}]{}
+\end{DoxyParamCaption}
+)}}\label{c_8h_a8b8e2cf4905ae7ed0dff45b12b5459b8}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c_8h_a7c5d889fbaa1efa3003d21c9c8061667}{\index{c.\-h@{c.\-h}!leveldb\-\_\-options\-\_\-set\-\_\-block\-\_\-size@{leveldb\-\_\-options\-\_\-set\-\_\-block\-\_\-size}}
+\index{leveldb\-\_\-options\-\_\-set\-\_\-block\-\_\-size@{leveldb\-\_\-options\-\_\-set\-\_\-block\-\_\-size}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-options\-\_\-set\-\_\-block\-\_\-size}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-\_\-options\-\_\-set\-\_\-block\-\_\-size (
+\begin{DoxyParamCaption}
+\item[{{\bf leveldb\-\_\-options\-\_\-t} $\ast$}]{, }
+\item[{size\-\_\-t}]{}
+\end{DoxyParamCaption}
+)}}\label{c_8h_a7c5d889fbaa1efa3003d21c9c8061667}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c_8h_a84b46aad6163601c0608edbb8227b3bd}{\index{c.\-h@{c.\-h}!leveldb\-\_\-options\-\_\-set\-\_\-cache@{leveldb\-\_\-options\-\_\-set\-\_\-cache}}
+\index{leveldb\-\_\-options\-\_\-set\-\_\-cache@{leveldb\-\_\-options\-\_\-set\-\_\-cache}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-options\-\_\-set\-\_\-cache}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-\_\-options\-\_\-set\-\_\-cache (
+\begin{DoxyParamCaption}
+\item[{{\bf leveldb\-\_\-options\-\_\-t} $\ast$}]{, }
+\item[{{\bf leveldb\-\_\-cache\-\_\-t} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{c_8h_a84b46aad6163601c0608edbb8227b3bd}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c_8h_aeed649e70fa671d0d895b117479ea98e}{\index{c.\-h@{c.\-h}!leveldb\-\_\-options\-\_\-set\-\_\-comparator@{leveldb\-\_\-options\-\_\-set\-\_\-comparator}}
+\index{leveldb\-\_\-options\-\_\-set\-\_\-comparator@{leveldb\-\_\-options\-\_\-set\-\_\-comparator}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-options\-\_\-set\-\_\-comparator}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-\_\-options\-\_\-set\-\_\-comparator (
+\begin{DoxyParamCaption}
+\item[{{\bf leveldb\-\_\-options\-\_\-t} $\ast$}]{, }
+\item[{{\bf leveldb\-\_\-comparator\-\_\-t} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{c_8h_aeed649e70fa671d0d895b117479ea98e}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c_8h_ab17603ff3be246437f3a9fe7f79e7809}{\index{c.\-h@{c.\-h}!leveldb\-\_\-options\-\_\-set\-\_\-compression@{leveldb\-\_\-options\-\_\-set\-\_\-compression}}
+\index{leveldb\-\_\-options\-\_\-set\-\_\-compression@{leveldb\-\_\-options\-\_\-set\-\_\-compression}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-options\-\_\-set\-\_\-compression}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-\_\-options\-\_\-set\-\_\-compression (
+\begin{DoxyParamCaption}
+\item[{{\bf leveldb\-\_\-options\-\_\-t} $\ast$}]{, }
+\item[{int}]{}
+\end{DoxyParamCaption}
+)}}\label{c_8h_ab17603ff3be246437f3a9fe7f79e7809}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c_8h_a83dd99cbdae7875aa1d21440840a7d50}{\index{c.\-h@{c.\-h}!leveldb\-\_\-options\-\_\-set\-\_\-create\-\_\-if\-\_\-missing@{leveldb\-\_\-options\-\_\-set\-\_\-create\-\_\-if\-\_\-missing}}
+\index{leveldb\-\_\-options\-\_\-set\-\_\-create\-\_\-if\-\_\-missing@{leveldb\-\_\-options\-\_\-set\-\_\-create\-\_\-if\-\_\-missing}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-options\-\_\-set\-\_\-create\-\_\-if\-\_\-missing}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-\_\-options\-\_\-set\-\_\-create\-\_\-if\-\_\-missing (
+\begin{DoxyParamCaption}
+\item[{{\bf leveldb\-\_\-options\-\_\-t} $\ast$}]{, }
+\item[{unsigned}]{char}
+\end{DoxyParamCaption}
+)}}\label{c_8h_a83dd99cbdae7875aa1d21440840a7d50}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c_8h_a44fc1d3a8be5874ded2f88acf6827c90}{\index{c.\-h@{c.\-h}!leveldb\-\_\-options\-\_\-set\-\_\-env@{leveldb\-\_\-options\-\_\-set\-\_\-env}}
+\index{leveldb\-\_\-options\-\_\-set\-\_\-env@{leveldb\-\_\-options\-\_\-set\-\_\-env}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-options\-\_\-set\-\_\-env}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-\_\-options\-\_\-set\-\_\-env (
+\begin{DoxyParamCaption}
+\item[{{\bf leveldb\-\_\-options\-\_\-t} $\ast$}]{, }
+\item[{{\bf leveldb\-\_\-env\-\_\-t} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{c_8h_a44fc1d3a8be5874ded2f88acf6827c90}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c_8h_a2edd01291e4b05819f807b4fd9c9feff}{\index{c.\-h@{c.\-h}!leveldb\-\_\-options\-\_\-set\-\_\-error\-\_\-if\-\_\-exists@{leveldb\-\_\-options\-\_\-set\-\_\-error\-\_\-if\-\_\-exists}}
+\index{leveldb\-\_\-options\-\_\-set\-\_\-error\-\_\-if\-\_\-exists@{leveldb\-\_\-options\-\_\-set\-\_\-error\-\_\-if\-\_\-exists}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-options\-\_\-set\-\_\-error\-\_\-if\-\_\-exists}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-\_\-options\-\_\-set\-\_\-error\-\_\-if\-\_\-exists (
+\begin{DoxyParamCaption}
+\item[{{\bf leveldb\-\_\-options\-\_\-t} $\ast$}]{, }
+\item[{unsigned}]{char}
+\end{DoxyParamCaption}
+)}}\label{c_8h_a2edd01291e4b05819f807b4fd9c9feff}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c_8h_a601a991b97ad289fc382ac0c6c41529a}{\index{c.\-h@{c.\-h}!leveldb\-\_\-options\-\_\-set\-\_\-filter\-\_\-policy@{leveldb\-\_\-options\-\_\-set\-\_\-filter\-\_\-policy}}
+\index{leveldb\-\_\-options\-\_\-set\-\_\-filter\-\_\-policy@{leveldb\-\_\-options\-\_\-set\-\_\-filter\-\_\-policy}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-options\-\_\-set\-\_\-filter\-\_\-policy}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-\_\-options\-\_\-set\-\_\-filter\-\_\-policy (
+\begin{DoxyParamCaption}
+\item[{{\bf leveldb\-\_\-options\-\_\-t} $\ast$}]{, }
+\item[{{\bf leveldb\-\_\-filterpolicy\-\_\-t} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{c_8h_a601a991b97ad289fc382ac0c6c41529a}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c_8h_a33f33b785bcf3ca8302c3604f9445d09}{\index{c.\-h@{c.\-h}!leveldb\-\_\-options\-\_\-set\-\_\-info\-\_\-log@{leveldb\-\_\-options\-\_\-set\-\_\-info\-\_\-log}}
+\index{leveldb\-\_\-options\-\_\-set\-\_\-info\-\_\-log@{leveldb\-\_\-options\-\_\-set\-\_\-info\-\_\-log}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-options\-\_\-set\-\_\-info\-\_\-log}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-\_\-options\-\_\-set\-\_\-info\-\_\-log (
+\begin{DoxyParamCaption}
+\item[{{\bf leveldb\-\_\-options\-\_\-t} $\ast$}]{, }
+\item[{{\bf leveldb\-\_\-logger\-\_\-t} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{c_8h_a33f33b785bcf3ca8302c3604f9445d09}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c_8h_ada3e456754075db35e48c445c21702a5}{\index{c.\-h@{c.\-h}!leveldb\-\_\-options\-\_\-set\-\_\-max\-\_\-open\-\_\-files@{leveldb\-\_\-options\-\_\-set\-\_\-max\-\_\-open\-\_\-files}}
+\index{leveldb\-\_\-options\-\_\-set\-\_\-max\-\_\-open\-\_\-files@{leveldb\-\_\-options\-\_\-set\-\_\-max\-\_\-open\-\_\-files}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-options\-\_\-set\-\_\-max\-\_\-open\-\_\-files}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-\_\-options\-\_\-set\-\_\-max\-\_\-open\-\_\-files (
+\begin{DoxyParamCaption}
+\item[{{\bf leveldb\-\_\-options\-\_\-t} $\ast$}]{, }
+\item[{int}]{}
+\end{DoxyParamCaption}
+)}}\label{c_8h_ada3e456754075db35e48c445c21702a5}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c_8h_aeff05d456eb19f2c5a9bd3d38998a5df}{\index{c.\-h@{c.\-h}!leveldb\-\_\-options\-\_\-set\-\_\-paranoid\-\_\-checks@{leveldb\-\_\-options\-\_\-set\-\_\-paranoid\-\_\-checks}}
+\index{leveldb\-\_\-options\-\_\-set\-\_\-paranoid\-\_\-checks@{leveldb\-\_\-options\-\_\-set\-\_\-paranoid\-\_\-checks}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-options\-\_\-set\-\_\-paranoid\-\_\-checks}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-\_\-options\-\_\-set\-\_\-paranoid\-\_\-checks (
+\begin{DoxyParamCaption}
+\item[{{\bf leveldb\-\_\-options\-\_\-t} $\ast$}]{, }
+\item[{unsigned}]{char}
+\end{DoxyParamCaption}
+)}}\label{c_8h_aeff05d456eb19f2c5a9bd3d38998a5df}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c_8h_a3fb1b7506980bd564492c726c296880a}{\index{c.\-h@{c.\-h}!leveldb\-\_\-options\-\_\-set\-\_\-write\-\_\-buffer\-\_\-size@{leveldb\-\_\-options\-\_\-set\-\_\-write\-\_\-buffer\-\_\-size}}
+\index{leveldb\-\_\-options\-\_\-set\-\_\-write\-\_\-buffer\-\_\-size@{leveldb\-\_\-options\-\_\-set\-\_\-write\-\_\-buffer\-\_\-size}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-options\-\_\-set\-\_\-write\-\_\-buffer\-\_\-size}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-\_\-options\-\_\-set\-\_\-write\-\_\-buffer\-\_\-size (
+\begin{DoxyParamCaption}
+\item[{{\bf leveldb\-\_\-options\-\_\-t} $\ast$}]{, }
+\item[{size\-\_\-t}]{}
+\end{DoxyParamCaption}
+)}}\label{c_8h_a3fb1b7506980bd564492c726c296880a}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c_8h_ad4ce08534d9ce95b4a7ddb0cf1796209}{\index{c.\-h@{c.\-h}!leveldb\-\_\-property\-\_\-value@{leveldb\-\_\-property\-\_\-value}}
+\index{leveldb\-\_\-property\-\_\-value@{leveldb\-\_\-property\-\_\-value}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-property\-\_\-value}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ leveldb\-\_\-property\-\_\-value (
+\begin{DoxyParamCaption}
+\item[{{\bf leveldb\-\_\-t} $\ast$}]{db, }
+\item[{const char $\ast$}]{propname}
+\end{DoxyParamCaption}
+)}}\label{c_8h_ad4ce08534d9ce95b4a7ddb0cf1796209}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c_8h_aacd7bf338f41054f34825b3669ace2f8}{\index{c.\-h@{c.\-h}!leveldb\-\_\-put@{leveldb\-\_\-put}}
+\index{leveldb\-\_\-put@{leveldb\-\_\-put}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-put}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-\_\-put (
+\begin{DoxyParamCaption}
+\item[{{\bf leveldb\-\_\-t} $\ast$}]{db, }
+\item[{const {\bf leveldb\-\_\-writeoptions\-\_\-t} $\ast$}]{options, }
+\item[{const char $\ast$}]{key, }
+\item[{size\-\_\-t}]{keylen, }
+\item[{const char $\ast$}]{val, }
+\item[{size\-\_\-t}]{vallen, }
+\item[{char $\ast$$\ast$}]{errptr}
+\end{DoxyParamCaption}
+)}}\label{c_8h_aacd7bf338f41054f34825b3669ace2f8}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c_8h_af8f89fab57f571512d42c04ac5fd9cba}{\index{c.\-h@{c.\-h}!leveldb\-\_\-readoptions\-\_\-create@{leveldb\-\_\-readoptions\-\_\-create}}
+\index{leveldb\-\_\-readoptions\-\_\-create@{leveldb\-\_\-readoptions\-\_\-create}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-readoptions\-\_\-create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf leveldb\-\_\-readoptions\-\_\-t}$\ast$ leveldb\-\_\-readoptions\-\_\-create (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{c_8h_af8f89fab57f571512d42c04ac5fd9cba}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c_8h_ab42afdd4068f69d9c4fa0e63495d0248}{\index{c.\-h@{c.\-h}!leveldb\-\_\-readoptions\-\_\-destroy@{leveldb\-\_\-readoptions\-\_\-destroy}}
+\index{leveldb\-\_\-readoptions\-\_\-destroy@{leveldb\-\_\-readoptions\-\_\-destroy}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-readoptions\-\_\-destroy}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-\_\-readoptions\-\_\-destroy (
+\begin{DoxyParamCaption}
+\item[{{\bf leveldb\-\_\-readoptions\-\_\-t} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{c_8h_ab42afdd4068f69d9c4fa0e63495d0248}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c_8h_a363fbf58b27d03e2a44f74c8a843d044}{\index{c.\-h@{c.\-h}!leveldb\-\_\-readoptions\-\_\-set\-\_\-fill\-\_\-cache@{leveldb\-\_\-readoptions\-\_\-set\-\_\-fill\-\_\-cache}}
+\index{leveldb\-\_\-readoptions\-\_\-set\-\_\-fill\-\_\-cache@{leveldb\-\_\-readoptions\-\_\-set\-\_\-fill\-\_\-cache}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-readoptions\-\_\-set\-\_\-fill\-\_\-cache}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-\_\-readoptions\-\_\-set\-\_\-fill\-\_\-cache (
+\begin{DoxyParamCaption}
+\item[{{\bf leveldb\-\_\-readoptions\-\_\-t} $\ast$}]{, }
+\item[{unsigned}]{char}
+\end{DoxyParamCaption}
+)}}\label{c_8h_a363fbf58b27d03e2a44f74c8a843d044}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c_8h_aa7081689247a65d5b48cbcf614094b16}{\index{c.\-h@{c.\-h}!leveldb\-\_\-readoptions\-\_\-set\-\_\-snapshot@{leveldb\-\_\-readoptions\-\_\-set\-\_\-snapshot}}
+\index{leveldb\-\_\-readoptions\-\_\-set\-\_\-snapshot@{leveldb\-\_\-readoptions\-\_\-set\-\_\-snapshot}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-readoptions\-\_\-set\-\_\-snapshot}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-\_\-readoptions\-\_\-set\-\_\-snapshot (
+\begin{DoxyParamCaption}
+\item[{{\bf leveldb\-\_\-readoptions\-\_\-t} $\ast$}]{, }
+\item[{const {\bf leveldb\-\_\-snapshot\-\_\-t} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{c_8h_aa7081689247a65d5b48cbcf614094b16}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c_8h_a3087c5263448f0fb4f1c0de34f9e9fcc}{\index{c.\-h@{c.\-h}!leveldb\-\_\-readoptions\-\_\-set\-\_\-verify\-\_\-checksums@{leveldb\-\_\-readoptions\-\_\-set\-\_\-verify\-\_\-checksums}}
+\index{leveldb\-\_\-readoptions\-\_\-set\-\_\-verify\-\_\-checksums@{leveldb\-\_\-readoptions\-\_\-set\-\_\-verify\-\_\-checksums}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-readoptions\-\_\-set\-\_\-verify\-\_\-checksums}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-\_\-readoptions\-\_\-set\-\_\-verify\-\_\-checksums (
+\begin{DoxyParamCaption}
+\item[{{\bf leveldb\-\_\-readoptions\-\_\-t} $\ast$}]{, }
+\item[{unsigned}]{char}
+\end{DoxyParamCaption}
+)}}\label{c_8h_a3087c5263448f0fb4f1c0de34f9e9fcc}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c_8h_ab1e5d825506969f12fcaff2bf824b6e5}{\index{c.\-h@{c.\-h}!leveldb\-\_\-release\-\_\-snapshot@{leveldb\-\_\-release\-\_\-snapshot}}
+\index{leveldb\-\_\-release\-\_\-snapshot@{leveldb\-\_\-release\-\_\-snapshot}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-release\-\_\-snapshot}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-\_\-release\-\_\-snapshot (
+\begin{DoxyParamCaption}
+\item[{{\bf leveldb\-\_\-t} $\ast$}]{db, }
+\item[{const {\bf leveldb\-\_\-snapshot\-\_\-t} $\ast$}]{snapshot}
+\end{DoxyParamCaption}
+)}}\label{c_8h_ab1e5d825506969f12fcaff2bf824b6e5}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c_8h_a255557af7bd3a589a75d38bbb674c21b}{\index{c.\-h@{c.\-h}!leveldb\-\_\-repair\-\_\-db@{leveldb\-\_\-repair\-\_\-db}}
+\index{leveldb\-\_\-repair\-\_\-db@{leveldb\-\_\-repair\-\_\-db}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-repair\-\_\-db}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-\_\-repair\-\_\-db (
+\begin{DoxyParamCaption}
+\item[{const {\bf leveldb\-\_\-options\-\_\-t} $\ast$}]{options, }
+\item[{const char $\ast$}]{name, }
+\item[{char $\ast$$\ast$}]{errptr}
+\end{DoxyParamCaption}
+)}}\label{c_8h_a255557af7bd3a589a75d38bbb674c21b}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c_8h_a7315a488fc8ddcfd9a58295f7d0bb636}{\index{c.\-h@{c.\-h}!leveldb\-\_\-write@{leveldb\-\_\-write}}
+\index{leveldb\-\_\-write@{leveldb\-\_\-write}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-write}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-\_\-write (
+\begin{DoxyParamCaption}
+\item[{{\bf leveldb\-\_\-t} $\ast$}]{db, }
+\item[{const {\bf leveldb\-\_\-writeoptions\-\_\-t} $\ast$}]{options, }
+\item[{{\bf leveldb\-\_\-writebatch\-\_\-t} $\ast$}]{batch, }
+\item[{char $\ast$$\ast$}]{errptr}
+\end{DoxyParamCaption}
+)}}\label{c_8h_a7315a488fc8ddcfd9a58295f7d0bb636}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c_8h_a2cc074ce444b0e49eaee257ccf44a599}{\index{c.\-h@{c.\-h}!leveldb\-\_\-writebatch\-\_\-clear@{leveldb\-\_\-writebatch\-\_\-clear}}
+\index{leveldb\-\_\-writebatch\-\_\-clear@{leveldb\-\_\-writebatch\-\_\-clear}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-writebatch\-\_\-clear}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-\_\-writebatch\-\_\-clear (
+\begin{DoxyParamCaption}
+\item[{{\bf leveldb\-\_\-writebatch\-\_\-t} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{c_8h_a2cc074ce444b0e49eaee257ccf44a599}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c_8h_a3b3468685c046cccacd077d9d3b8c6ce}{\index{c.\-h@{c.\-h}!leveldb\-\_\-writebatch\-\_\-create@{leveldb\-\_\-writebatch\-\_\-create}}
+\index{leveldb\-\_\-writebatch\-\_\-create@{leveldb\-\_\-writebatch\-\_\-create}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-writebatch\-\_\-create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf leveldb\-\_\-writebatch\-\_\-t}$\ast$ leveldb\-\_\-writebatch\-\_\-create (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{c_8h_a3b3468685c046cccacd077d9d3b8c6ce}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c_8h_a593cea62db6cf16cbcdfc3668493d277}{\index{c.\-h@{c.\-h}!leveldb\-\_\-writebatch\-\_\-delete@{leveldb\-\_\-writebatch\-\_\-delete}}
+\index{leveldb\-\_\-writebatch\-\_\-delete@{leveldb\-\_\-writebatch\-\_\-delete}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-writebatch\-\_\-delete}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-\_\-writebatch\-\_\-delete (
+\begin{DoxyParamCaption}
+\item[{{\bf leveldb\-\_\-writebatch\-\_\-t} $\ast$}]{, }
+\item[{const char $\ast$}]{key, }
+\item[{size\-\_\-t}]{klen}
+\end{DoxyParamCaption}
+)}}\label{c_8h_a593cea62db6cf16cbcdfc3668493d277}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c_8h_a096484e030477dbc4dbcc98073240a2d}{\index{c.\-h@{c.\-h}!leveldb\-\_\-writebatch\-\_\-destroy@{leveldb\-\_\-writebatch\-\_\-destroy}}
+\index{leveldb\-\_\-writebatch\-\_\-destroy@{leveldb\-\_\-writebatch\-\_\-destroy}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-writebatch\-\_\-destroy}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-\_\-writebatch\-\_\-destroy (
+\begin{DoxyParamCaption}
+\item[{{\bf leveldb\-\_\-writebatch\-\_\-t} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{c_8h_a096484e030477dbc4dbcc98073240a2d}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c_8h_aaba8eb336dc649672bfd273abc6c2514}{\index{c.\-h@{c.\-h}!leveldb\-\_\-writebatch\-\_\-iterate@{leveldb\-\_\-writebatch\-\_\-iterate}}
+\index{leveldb\-\_\-writebatch\-\_\-iterate@{leveldb\-\_\-writebatch\-\_\-iterate}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-writebatch\-\_\-iterate}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-\_\-writebatch\-\_\-iterate (
+\begin{DoxyParamCaption}
+\item[{{\bf leveldb\-\_\-writebatch\-\_\-t} $\ast$}]{, }
+\item[{void $\ast$}]{state, }
+\item[{void($\ast$)(void $\ast$, const char $\ast$k, size\-\_\-t klen, const char $\ast$v, size\-\_\-t vlen)}]{put, }
+\item[{void($\ast$)(void $\ast$, const char $\ast$k, size\-\_\-t klen)}]{deleted}
+\end{DoxyParamCaption}
+)}}\label{c_8h_aaba8eb336dc649672bfd273abc6c2514}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c_8h_a4a880279e403daebb5d179ff4bf52cce}{\index{c.\-h@{c.\-h}!leveldb\-\_\-writebatch\-\_\-put@{leveldb\-\_\-writebatch\-\_\-put}}
+\index{leveldb\-\_\-writebatch\-\_\-put@{leveldb\-\_\-writebatch\-\_\-put}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-writebatch\-\_\-put}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-\_\-writebatch\-\_\-put (
+\begin{DoxyParamCaption}
+\item[{{\bf leveldb\-\_\-writebatch\-\_\-t} $\ast$}]{, }
+\item[{const char $\ast$}]{key, }
+\item[{size\-\_\-t}]{klen, }
+\item[{const char $\ast$}]{val, }
+\item[{size\-\_\-t}]{vlen}
+\end{DoxyParamCaption}
+)}}\label{c_8h_a4a880279e403daebb5d179ff4bf52cce}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c_8h_a899f2c70e9f6bb3144c64bd753a92ea7}{\index{c.\-h@{c.\-h}!leveldb\-\_\-writeoptions\-\_\-create@{leveldb\-\_\-writeoptions\-\_\-create}}
+\index{leveldb\-\_\-writeoptions\-\_\-create@{leveldb\-\_\-writeoptions\-\_\-create}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-writeoptions\-\_\-create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf leveldb\-\_\-writeoptions\-\_\-t}$\ast$ leveldb\-\_\-writeoptions\-\_\-create (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{c_8h_a899f2c70e9f6bb3144c64bd753a92ea7}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c_8h_af847eb6803d789820cc925dcd2da2a81}{\index{c.\-h@{c.\-h}!leveldb\-\_\-writeoptions\-\_\-destroy@{leveldb\-\_\-writeoptions\-\_\-destroy}}
+\index{leveldb\-\_\-writeoptions\-\_\-destroy@{leveldb\-\_\-writeoptions\-\_\-destroy}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-writeoptions\-\_\-destroy}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-\_\-writeoptions\-\_\-destroy (
+\begin{DoxyParamCaption}
+\item[{{\bf leveldb\-\_\-writeoptions\-\_\-t} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{c_8h_af847eb6803d789820cc925dcd2da2a81}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{c_8h_a7c2eec118749b898e461eb58109bfdcc}{\index{c.\-h@{c.\-h}!leveldb\-\_\-writeoptions\-\_\-set\-\_\-sync@{leveldb\-\_\-writeoptions\-\_\-set\-\_\-sync}}
+\index{leveldb\-\_\-writeoptions\-\_\-set\-\_\-sync@{leveldb\-\_\-writeoptions\-\_\-set\-\_\-sync}!c.h@{c.\-h}}
+\subsubsection[{leveldb\-\_\-writeoptions\-\_\-set\-\_\-sync}]{\setlength{\rightskip}{0pt plus 5cm}void leveldb\-\_\-writeoptions\-\_\-set\-\_\-sync (
+\begin{DoxyParamCaption}
+\item[{{\bf leveldb\-\_\-writeoptions\-\_\-t} $\ast$}]{, }
+\item[{unsigned}]{char}
+\end{DoxyParamCaption}
+)}}\label{c_8h_a7c2eec118749b898e461eb58109bfdcc}
+
+
+Here is the caller graph for this function\-:
+
+
