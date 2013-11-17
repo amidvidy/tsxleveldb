@@ -2,16 +2,17 @@
 #include <iostream>
 #include <emmintrin.h>
 #include <immintrin.h>
-#include "tbb/spin_rw_mutex.h"
+#include "lock.hpp"
 
-
-// todo refactor into types header
-typedef tbb::spin_rw_mutex_v3 spinlock_t;
+__thread threadstate_t TransactionalScope::ts = threadstate_t();
 
 TransactionalScope::TransactionalScope(spinlock_t *fallback_mutex) {
   unsigned int xact_status;
   
   spinlock = fallback_mutex; 
+
+  // we are already executing transactionally.
+  if (_xtest()) return;
 
   xact_status = _xbegin();
   if (xact_status == _XBEGIN_STARTED) {
@@ -29,7 +30,16 @@ TransactionalScope::TransactionalScope(spinlock_t *fallback_mutex) {
 
 TransactionalScope::~TransactionalScope() {
   if (_xtest()) {
-    _xend();
+    if (ts.curTxLen < ts.maxTxLen) {
+      ++ts.curTxLen;
+      return;
+    } else {
+      _xend();
+      //std::cout << ts.curTxLen << std::endl;
+      ts.maxTxLen++; 
+      ts.curTxLen = 0;
+    }
+
   } else {
     spinlock->unlock();
   }

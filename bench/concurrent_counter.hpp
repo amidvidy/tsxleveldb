@@ -1,10 +1,8 @@
 #include <array>
 #include <mutex>
-#include "tbb/spin_rw_mutex.h"
+#include "lock.hpp"
 
 namespace counter {
-
-typedef tbb::spin_rw_mutex_v3 spinlock_t;
 
 class ConcurrentCounter {
 public:
