@@ -1,3 +1,3 @@
-#include "tbb/spin_rw_mutex.h"
+#include "tbb/spin_mutex.h"
 
-typedef tbb::spin_rw_mutex_v3 spinlock_t;
+typedef tbb::spin_mutex spinlock_t;
