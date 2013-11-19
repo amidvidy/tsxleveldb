@@ -2,6 +2,7 @@
 #include <mutex>
 #include "lock.hpp"
 
+namespace bench {
 namespace counter {
 
 class ConcurrentCounter {
@@ -70,3 +71,4 @@ public:
 };
 
 } // namespace counter
+} // namespace bench

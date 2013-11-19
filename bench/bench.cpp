@@ -5,6 +5,9 @@
 #include <chrono>
 #include <ctime>
 #include "concurrent_counter.hpp"
+#include "transactional.hpp"
+
+using namespace bench;
 
 typedef std::chrono::high_resolution_clock timer;
 
@@ -24,7 +27,6 @@ long hammerArray(counter::ConcurrentCounter *arr, int nthreads, int nwrites) {
 	  int idx = rand() % sz;
 	  arr->increment(idx);
 	}
-
     });
     
   }
@@ -47,9 +49,9 @@ int main(void) {
   impls[std::string("nosync")] = new counter::IncorrectConcurrentCounter(num_elements);
   impls[std::string("coarse")] = new counter::CoarseConcurrentCounter(num_elements);
   impls[std::string("fine")] = new counter::CoarseConcurrentCounter(num_elements);
-  impls[std::string("rtm_coarse")] = new counter::RTMCoarseConcurrentCounter(num_elements);
-  impls[std::string("rtm_fine")] = new counter::RTMFineConcurrentCounter(num_elements);
-  impls[std::string("rtm")] = new counter::RTMConcurrentCounter(num_elements);
+  impls[std::string("rtm_adaptive_coarse")] = new counter::RTMCoarseConcurrentCounter(num_elements);
+  impls[std::string("rtm_adaptive_fine")] = new counter::RTMFineConcurrentCounter(num_elements);
+  impls[std::string("rtm_naiive")] = new counter::RTMConcurrentCounter(num_elements);
 
   // run benchmarks on each array and print output
   for (auto& impl : impls) {
