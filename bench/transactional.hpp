@@ -3,7 +3,7 @@
 
 namespace bench {
 
-// thread-local stats
+// thread-local state
 struct threadstate_t {
   /* How many times this thread has entered transactional scope. */
   int txCount = 0;
@@ -14,13 +14,20 @@ struct threadstate_t {
   /* The maximum amount of operations to coalesce into a single transaction. */
   int maxTxLen = 1;
 
+  /* the total number of transactional commits that have occurred during execution for this thread. */
+  int totalCommits = 0;
+
   /* The total number of transactional aborts that have occurred during execution for this thread. */
   int totalAborts = 0;
   
   /* The number of successive aborts that have occurred. */
   int successiveAborts = 0;
 
-  bool isLocked = false;
+  /* The maximum number of aborts that can occur before the lock is acquired. */
+  int maxAborts = 1;
+
+  /* How many times the fallback was taken. */
+  int fallbackTaken = 0;
 } __attribute__((aligned(64)));
 
 class TransactionalScope {
