@@ -110,6 +110,7 @@ class CondVar {
  private:
   pthread_cond_t cv_;
   Mutex* mu_;
+  // TransactionalScope xact_;
 };
 
 typedef pthread_once_t OnceType;
