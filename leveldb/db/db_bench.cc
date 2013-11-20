@@ -62,7 +62,7 @@ static const char* FLAGS_benchmarks =
     "snappyuncomp,"
     "acquireload,"
     //"asyncwrites,"
-    "syncwrites,"
+    //"syncwrites,"
     ;
 
 // Number of key/values to place in database
@@ -759,7 +759,7 @@ class Benchmark {
     // Write multiple times to the database
     for (int i = 0; i < nkeys; ++i) {
       leveldb::WriteOptions write_options;
-    write_options.sync = true;
+      write_options.sync = true;
 
       s = db->Put(write_options, key1, value1);
     }
