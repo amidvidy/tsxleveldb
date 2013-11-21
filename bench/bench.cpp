@@ -6,6 +6,7 @@
 #include <ctime>
 #include "concurrent_counter.hpp"
 #include "transactional.hpp"
+#include "lock.hpp"
 
 using namespace bench;
 
@@ -18,35 +19,45 @@ long hammerArray(counter::ConcurrentCounter *arr, int nthreads, int nwrites) {
   
   // seed prng with time
   srand((unsigned)time(nullptr));
+  
+  sync::ThreadState ts;
+  spinlock_t ts_lock;
 
   for (int thread_id = 0; thread_id < nthreads; ++thread_id) {
 
-    threads[thread_id] = std::thread([thread_id, nwrites, arr]() {
+    threads[thread_id] = std::thread([thread_id, nwrites, arr, &ts, &ts_lock]() {
 	int sz = arr->size();
 	for (int times = 0; times < nwrites;  ++times) {
 	  int idx = rand() % sz;
 	  arr->increment(idx);
 	}
-    });
-    
-  }
 
+	{
+	  sync::TransactionalScope addStats(ts_lock, true);
+	  ts += sync::TransactionalScope::getStats();
+	}
+
+      });
+
+  }
+  
   for (int i = 0; i < nthreads; ++i) {
     threads[i].join();
   }
 
   timer::time_point end_time = timer::now();
+  //sync::TransactionalScope::printStats(ts);
   return std::chrono::duration_cast<std::chrono::microseconds>(end_time - start_time).count();
   
 }
 
 int main(void) {
-  std::size_t num_elements = 1000;
-  int nthreads = 8, nwrites = 1000000;
+  std::size_t num_elements = 100;
+  int nthreads = 8, nwrites = 10000000;
 
   // Initialize all impls for testing
   std::map<std::string, counter::ConcurrentCounter*> impls;
-  impls[std::string("nosync")] = new counter::IncorrectConcurrentCounter(num_elements);
+  //impls[std::string("nosync")] = new counter::IncorrectConcurrentCounter(num_elements);
   impls[std::string("coarse")] = new counter::CoarseConcurrentCounter(num_elements);
   impls[std::string("fine")] = new counter::CoarseConcurrentCounter(num_elements);
   impls[std::string("rtm_adaptive_coarse")] = new counter::RTMCoarseConcurrentCounter(num_elements);

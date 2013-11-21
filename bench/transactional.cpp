@@ -3,17 +3,29 @@
 #include <iostream>
 #include <emmintrin.h>
 #include <immintrin.h>
-#include <tbb/spin_rw_mutex.h>
+#include "lock.hpp"
 
 namespace bench {
+namespace sync {
 
-__thread threadstate_t TransactionalScope::ts = threadstate_t();
+  __thread threadstate_t TransactionalScope::tstate = threadstate_t();
 
-  TransactionalScope::TransactionalScope(spin_rw_mutex &fallback_mutex, bool writeAccess) : 
+  __thread bool TransactionalScope::tstate_init = false;
+  
+  threadstate_t TransactionalScope::state() {
+    if (!tstate_init) {
+      tstate_init = true;
+      tstate = threadstate_t();
+    }
+    return tstate;
+  }
+
+  TransactionalScope::TransactionalScope(spinlock_t &fallback_mutex, bool writeAccess) : 
     // initializaer list
     spinlock(fallback_mutex) 
   {
   unsigned int xact_status;
+  threadstate_t &&ts = state();
   
   ts.txCount++;
 
@@ -64,6 +76,7 @@ __thread threadstate_t TransactionalScope::ts = threadstate_t();
 }
 
 TransactionalScope::~TransactionalScope() {
+  threadstate_t &&ts = state();
   if (_xtest()) {
        if (ts.curTxLen < ts.maxTxLen) {
       ++ts.curTxLen;
@@ -88,6 +101,7 @@ TransactionalScope::~TransactionalScope() {
 }
 
 void TransactionalScope::printStats() {
+  threadstate_t &&ts = state();
   std::cout << "Thread Id: " << std::this_thread::get_id() << std::endl;
   std::cout << "txCount: " << ts.txCount << std::endl;
   std::cout << "totalCommits: " << ts.totalCommits << std::endl;
@@ -95,5 +109,14 @@ void TransactionalScope::printStats() {
   std::cout << "fallbackTaken: " << ts.fallbackTaken << std::endl;
 }
 
+void TransactionalScope::printStats(ThreadState &ts) {
+  std::cout << "Thread Id: " << std::this_thread::get_id() << std::endl;
+  std::cout << "txCount: " << ts.txCount << std::endl;
+  std::cout << "totalCommits: " << ts.totalCommits << std::endl;
+  std::cout << "totalAborts: " << ts.totalAborts << std::endl;
+  std::cout << "fallbackTaken: " << ts.fallbackTaken << std::endl;
+}
+
+}  // namespace sync {
 }  // namespace bench {
 

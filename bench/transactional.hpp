@@ -2,9 +2,15 @@
 #include "lock.hpp"
 
 namespace bench {
+namespace sync {
 
-// thread-local state
+// Forward declarations  
+class TransactionalScope;
+class ThreadState;
+
+// lightweight thread-local state padded to the length of a cache line.
 struct threadstate_t {
+public:
   /* How many times this thread has entered transactional scope. */
   int txCount = 0;
 
@@ -28,17 +34,73 @@ struct threadstate_t {
 
   /* How many times the fallback was taken. */
   int fallbackTaken = 0;
+
 } __attribute__((aligned(64)));
+  
+
+
+
+class ThreadState : public threadstate_t {
+public:
+  ThreadState(const threadstate_t &state) {
+    txCount= state.txCount;
+    curTxLen = state.curTxLen; 
+    maxTxLen = state.maxTxLen; 
+    totalCommits = state.totalCommits;
+    totalAborts = state.totalAborts;
+    maxAborts = state.maxAborts;
+    fallbackTaken = fallbackTaken;
+  }
+  
+  ThreadState() { 
+    txCount = 0;
+    curTxLen = 0;
+    maxTxLen = 0;
+    totalCommits = 0;
+    totalAborts = 0;
+    maxAborts = 0;
+    fallbackTaken = 0;
+  }
+
+  ThreadState operator+(const ThreadState &other) {
+    ThreadState ts;
+    ts.txCount += other.txCount;
+    ts.curTxLen += other.curTxLen;
+    ts.maxTxLen += other.maxTxLen;
+    ts.totalCommits += other.totalCommits;
+    ts.totalAborts += other.totalAborts;
+    ts.maxAborts += other.maxAborts;
+    ts.fallbackTaken += other.fallbackTaken;
+    return ts;
+  }
+
+  ThreadState& operator+=(const ThreadState &other) {
+    txCount += other.txCount;
+    curTxLen += other.curTxLen;
+    maxTxLen += other.maxTxLen;
+    totalCommits += other.totalCommits;
+    totalAborts += other.totalAborts;
+    maxAborts += other.maxAborts;
+    fallbackTaken += other.fallbackTaken;
+    return *this;
+  }
+
+};
 
 class TransactionalScope {
 public:
-  TransactionalScope(spin_rw_mutex &fallback, bool writeAccess = false);
+  TransactionalScope(spinlock_t &fallback, bool writeAccess = false);
   ~TransactionalScope();
   static void printStats();
+  static void printStats(ThreadState &ts);
+  static ThreadState getStats() { return ThreadState(tstate); }
 private:
-  static __thread threadstate_t ts;
+  static threadstate_t state();
+  static __thread threadstate_t tstate;
+  static __thread bool tstate_init;
   spinlock_t &spinlock;
   int lockstate;
 };
 
+}  // namespace sync
 } // namespace bench

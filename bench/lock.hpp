@@ -1,5 +1,7 @@
 #include "tbb/spin_rw_mutex.h"
 
-using namespace tbb;
+namespace bench {
 
-typedef spin_rw_mutex_v3 spinlock_t;
+typedef tbb::spin_rw_mutex_v3 spinlock_t;
+
+}
