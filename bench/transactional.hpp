@@ -1,4 +1,5 @@
 #include "tbb/spin_rw_mutex.h"
+#include <iostream>
 #include "lock.hpp"
 
 namespace bench {
@@ -30,26 +31,17 @@ public:
   int successiveAborts = 0;
 
   /* The maximum number of aborts that can occur before the lock is acquired. */
-  int maxAborts = 1;
+  int maxAborts = 4;
 
   /* How many times the fallback was taken. */
   int fallbackTaken = 0;
 
 } __attribute__((aligned(64)));
-  
-
-
 
 class ThreadState : public threadstate_t {
 public:
-  ThreadState(const threadstate_t &state) {
-    txCount= state.txCount;
-    curTxLen = state.curTxLen; 
-    maxTxLen = state.maxTxLen; 
-    totalCommits = state.totalCommits;
-    totalAborts = state.totalAborts;
-    maxAborts = state.maxAborts;
-    fallbackTaken = fallbackTaken;
+  ThreadState(const threadstate_t &state) : threadstate_t(state) {
+    //std::cout << state.txCount << std::endl;
   }
   
   ThreadState() { 

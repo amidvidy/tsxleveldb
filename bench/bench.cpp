@@ -12,7 +12,7 @@ using namespace bench;
 
 typedef std::chrono::high_resolution_clock timer;
 
-long hammerArray(counter::ConcurrentCounter *arr, int nthreads, int nwrites) {
+long hammerArray(counter::ConcurrentCounter *arr, int nthreads, int nwrites, bool isTx) {
   std::thread threads[nthreads];
 
   timer::time_point start_time = timer::now();
@@ -32,28 +32,31 @@ long hammerArray(counter::ConcurrentCounter *arr, int nthreads, int nwrites) {
 	  arr->increment(idx);
 	}
 
-	{
-	  sync::TransactionalScope addStats(ts_lock, true);
-	  ts += sync::TransactionalScope::getStats();
-	}
+	 {
+	   //sync::TransactionalScope xact(ts_lock, true);
+	   ts += sync::TransactionalScope::getStats();
+	   //sync::TransactionalScope::printStats();
+	 }
 
       });
 
   }
-  
+    
   for (int i = 0; i < nthreads; ++i) {
     threads[i].join();
   }
 
   timer::time_point end_time = timer::now();
-  //sync::TransactionalScope::printStats(ts);
+  if (isTx) {
+    sync::TransactionalScope::printStats(ts);
+  }
   return std::chrono::duration_cast<std::chrono::microseconds>(end_time - start_time).count();
   
 }
 
 int main(void) {
-  std::size_t num_elements = 100;
-  int nthreads = 8, nwrites = 10000000;
+  std::size_t num_elements = 200;
+  int nthreads = 8, nwrites = 1000000;
 
   // Initialize all impls for testing
   std::map<std::string, counter::ConcurrentCounter*> impls;
@@ -66,7 +69,7 @@ int main(void) {
 
   // run benchmarks on each array and print output
   for (auto& impl : impls) {
-    auto run_time = hammerArray(impl.second, nthreads, nwrites);
+    auto run_time = hammerArray(impl.second, nthreads, nwrites, true);
     int total_recorded = impl.second->total();
     int total_expected = nthreads * nwrites;
 

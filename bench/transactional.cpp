@@ -10,22 +10,12 @@ namespace sync {
 
   __thread threadstate_t TransactionalScope::tstate = threadstate_t();
 
-  __thread bool TransactionalScope::tstate_init = false;
-  
-  threadstate_t TransactionalScope::state() {
-    if (!tstate_init) {
-      tstate_init = true;
-      tstate = threadstate_t();
-    }
-    return tstate;
-  }
-
   TransactionalScope::TransactionalScope(spinlock_t &fallback_mutex, bool writeAccess) : 
     // initializaer list
     spinlock(fallback_mutex) 
   {
   unsigned int xact_status;
-  threadstate_t &&ts = state();
+  threadstate_t &ts = tstate;
   
   ts.txCount++;
 
@@ -38,7 +28,7 @@ namespace sync {
     if (xact_status == _XBEGIN_STARTED) {
       
       if ( *(reinterpret_cast<int*>(&fallback_mutex)) == 0 ) { 
-	return; 
+	return;
       } else { 
 	_xabort(0xFF); 
       }
@@ -50,24 +40,28 @@ namespace sync {
 
       // if we xaborted because the lock was held, acquire the lock
       if ((xact_status & _XABORT_EXPLICIT) && _XABORT_CODE(xact_status) == 0xFF) {
+	ts.maxAborts = 1;
+	ts.maxTxLen = 1;
 	break;
       }
 
-      // if xabort:retry or xabort:conflict is set retry
+      //if xabort:retry or xabort:conflict is set retry
       if (xact_status & (_XABORT_RETRY | _XABORT_CONFLICT)) {
-	ts.maxTxLen = 1;
+		ts.maxAborts -= 1;
+	      	ts.maxTxLen = 1;
       }
 
-      // if we used too much buffer space inside the transaction half the max transaction length
+      // // if we used too much buffer space inside the transaction half the max transaction length
       if ((xact_status & _XABORT_CAPACITY)) {
-	ts.maxTxLen = 1;
+      	ts.maxTxLen >>= 1;
       }
       _mm_pause();
     }
   } while (ts.successiveAborts < ts.maxAborts);
 
-  ts.successiveAborts = 0;
   ts.fallbackTaken++;
+  
+  // Fallback to lock
   if (writeAccess) { 
     spinlock.lock(); 
   } else { 
@@ -76,32 +70,32 @@ namespace sync {
 }
 
 TransactionalScope::~TransactionalScope() {
-  threadstate_t &&ts = state();
+  threadstate_t &ts = tstate;
   if (_xtest()) {
-       if (ts.curTxLen < ts.maxTxLen) {
-      ++ts.curTxLen;
-      return;
-      } else {
-    
-      _xend();
+     if (ts.curTxLen < ts.maxTxLen) {
+       ++ts.curTxLen;
+       return;
+     }
+    _xend();
 
-      if (ts.successiveAborts == 0) {
-	ts.maxTxLen ++;
-      }
+     if (ts.successiveAborts > 0) {
+       ts.maxTxLen = 1;
+       ts.maxAborts = (ts.maxAborts / 2) + 1;
+    } else {
+       ts.maxTxLen += 1;
+       ts.maxAborts += 1;
+     }
 
-      ++ts.totalCommits;
-      ts.successiveAborts = 0;
-      ts.curTxLen = 0;
-      
-      }
+     ++ts.totalCommits;
+     ts.successiveAborts = 0;
   } else {
-    ts.maxAborts = 1;
     spinlock.unlock();
+    ts.maxAborts = 1;
  }
 }
 
 void TransactionalScope::printStats() {
-  threadstate_t &&ts = state();
+  threadstate_t &ts = tstate;
   std::cout << "Thread Id: " << std::this_thread::get_id() << std::endl;
   std::cout << "txCount: " << ts.txCount << std::endl;
   std::cout << "totalCommits: " << ts.totalCommits << std::endl;
