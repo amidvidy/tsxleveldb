@@ -12,7 +12,7 @@ using namespace bench;
 
 typedef std::chrono::high_resolution_clock timer;
 
-long hammerArray(counter::ConcurrentCounter *arr, int nthreads, int nwrites, bool isTx) {
+long hammerArray(counter::ConcurrentCounter *counter, int nthreads, int nwrites, bool isTx) {
   std::thread threads[nthreads];
 
   timer::time_point start_time = timer::now();
@@ -25,11 +25,11 @@ long hammerArray(counter::ConcurrentCounter *arr, int nthreads, int nwrites, boo
 
   for (int thread_id = 0; thread_id < nthreads; ++thread_id) {
 
-    threads[thread_id] = std::thread([thread_id, nwrites, arr, &ts, &ts_lock]() {
-	int sz = arr->size();
+    threads[thread_id] = std::thread([thread_id, nwrites, counter, &ts, &ts_lock]() {
+	int sz = counter->size();
 	for (int times = 0; times < nwrites;  ++times) {
 	  int idx = rand() % sz;
-	  arr->increment(idx);
+	  counter->increment(idx);
 	}
 
 	 {
@@ -54,22 +54,28 @@ long hammerArray(counter::ConcurrentCounter *arr, int nthreads, int nwrites, boo
   
 }
 
+enum Impl { Coarse, Fine, RTMAdaptiveCoarse, RTMAdaptiveFine, RTMNaive, NoSync };
+const char* ImplStr[] = { "Coarse", "Fine", "RTMAdaptiveCoarse", "RTMAdaptiveFine", "RTMNaive"};
+
 int main(void) {
-  std::size_t num_elements = 200;
+  std::size_t num_elements = 150;
+
   int nthreads = 8, nwrites = 1000000;
 
   // Initialize all impls for testing
-  std::map<std::string, counter::ConcurrentCounter*> impls;
-  //impls[std::string("nosync")] = new counter::IncorrectConcurrentCounter(num_elements);
-  impls[std::string("coarse")] = new counter::CoarseConcurrentCounter(num_elements);
-  impls[std::string("fine")] = new counter::CoarseConcurrentCounter(num_elements);
-  impls[std::string("rtm_adaptive_coarse")] = new counter::RTMCoarseConcurrentCounter(num_elements);
-  impls[std::string("rtm_adaptive_fine")] = new counter::RTMFineConcurrentCounter(num_elements);
-  impls[std::string("rtm_naiive")] = new counter::RTMConcurrentCounter(num_elements);
+  std::map<Impl, counter::ConcurrentCounter*> impls;
+
+  impls[NoSync] = new counter::IncorrectConcurrentCounter(num_elements);
+  impls[Coarse] = new counter::CoarseConcurrentCounter(num_elements);
+  impls[Fine] =  new counter::CoarseConcurrentCounter(num_elements);
+  impls[RTMAdaptiveCoarse] =  new counter::RTMCoarseConcurrentCounter(num_elements);
+  impls[RTMAdaptiveFine] =  new counter::RTMFineConcurrentCounter(num_elements);
+  impls[RTMNaive] = new counter::RTMConcurrentCounter(num_elements);
 
   // run benchmarks on each array and print output
   for (auto& impl : impls) {
-    auto run_time = hammerArray(impl.second, nthreads, nwrites, true);
+    bool isRTM = (impl.first >= RTMAdaptiveCoarse) && (impl.first <= RTMNaive);
+    auto run_time = hammerArray(impl.second, nthreads, nwrites, isRTM);
     int total_recorded = impl.second->total();
     int total_expected = nthreads * nwrites;
 
@@ -77,7 +83,7 @@ int main(void) {
     auto avg = run_time / (double)total_recorded;
 
     int missing = total_recorded - total_expected;
-    std::cout << "Implementation: " << impl.first << std::endl;
+    std::cout << "Implementation: " << ImplStr[impl.first] << std::endl;
     std::cout << "Elapsed Time (ms): " << (double)run_time * 0.001 << std::endl;
     std::cout << "Avg (ns): " << avg * 1000 << std::endl;
     std::cout << "Total = " << total_recorded << "\tExpected = " << total_expected << std::endl;
