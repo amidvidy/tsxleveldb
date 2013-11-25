@@ -25,47 +25,44 @@ Mutex::Mutex() { PthreadCall("init mutex", pthread_mutex_init(&mu_, NULL)); }
 Mutex::~Mutex() { PthreadCall("destroy mutex", pthread_mutex_destroy(&mu_)); }
 
 void Mutex::Lock() {
-    //PthreadCall("lock", pthread_mutex_lock(&mu_)); 
-    
-    // Attempt 1
-    // xact_ = new TransactionalScope(&mu_, true);
+  //PthreadCall("lock", pthread_mutex_lock(&mu_)); 
+  unsigned int xact_status;
+  int successiveAborts = 0, maxAborts = 10;
 
-    // Attempt 2
-    /*do {
-        _xbegin();
-    } while (!_xtest());*/
-    
-    // Attempt 3
-    unsigned int xact_status;
+  do {
     xact_status = _xbegin();
+
     if (xact_status == _XBEGIN_STARTED) {
-        if (pthread_mutex_trylock(&mu_)) {
-	    //pthread_mutex_unlock(&mu_);
-	    return;
-        } else {
-	    _xabort(0xFF);
-	}
-    } else {
-	pthread_mutex_lock(&mu_);
+      
+      if ( mu_.__data.__lock == 0 ) { 
+	return;
+      } else { 
+	_xabort(0xFF); 
+      }
+    
+    } else { 
+      successiveAborts++;
+      /** We have aborted. */
+
+      // if we xaborted because the lock was held, acquire the lock
+      if ((xact_status & _XABORT_EXPLICIT) && _XABORT_CODE(xact_status) == 0xFF) {
+	break;
+      }
+      _mm_pause();
     }
+  } while (successiveAborts < maxAborts);
+
+  // Fallback to lock
+  pthread_mutex_lock(&mu_);
 }
 
 void Mutex::Unlock() {
-    //PthreadCall("unlock", pthread_mutex_unlock(&mu_));
-    
-    // Attempt 1
-    // delete xact_; 
-
-    // Attempt 2
-    //_xend();
-
-    // Attempt 3
-    if (_xtest()) {
-    	_xend();
-	pthread_mutex_unlock(&mu_);
-    } else {
-	pthread_mutex_unlock(&mu_);
-    }
+  //    PthreadCall("unlock", pthread_mutex_unlock(&mu_));
+  if (_xtest()) {
+    _xend();
+  } else {
+    pthread_mutex_unlock(&mu_);
+  }
 }
 
 CondVar::CondVar(Mutex* mu)
