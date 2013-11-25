@@ -82,6 +82,34 @@ static const bool kLittleEndian = PLATFORM_IS_LITTLE_ENDIAN;
 
 class CondVar;
 
+struct threadstate_t {
+public:
+  /* How many times this thread has entered transactional scope. */
+  int txCount;
+
+  /* How many operations have been executed in the current transaction. */
+  int curTxLen;
+
+  /* The maximum amount of operations to coalesce into a single transaction. */
+  int maxTxLen;
+
+  /* the total number of transactional commits that have occurred during execution for this thread. */
+  int totalCommits;
+
+  /* The total number of transactional aborts that have occurred during execution for this thread. */
+  int totalAborts;
+  
+  /* The number of successive aborts that have occurred. */
+  int successiveAborts;
+
+  /* The maximum number of aborts that can occur before the lock is acquired. */
+  int maxAborts;
+
+  /* How many times the fallback was taken. */
+  int fallbackTaken;
+
+} __attribute__((aligned(64)));
+
 class Mutex {
  public:
   Mutex();
@@ -93,6 +121,7 @@ class Mutex {
 
  private:
   friend class CondVar;
+  static __thread threadstate_t ts_;
   pthread_mutex_t mu_;
 
   // No copying
