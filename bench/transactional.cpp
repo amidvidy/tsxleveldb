@@ -47,20 +47,19 @@ namespace sync {
 
       //if xabort:retry or xabort:conflict is set retry
       if (xact_status & (_XABORT_RETRY | _XABORT_CONFLICT)) {
-		ts.maxAborts -= 1;
-	      	ts.maxTxLen = 1;
+	ts.maxTxLen = 1;
       }
 
       // // if we used too much buffer space inside the transaction half the max transaction length
       if ((xact_status & _XABORT_CAPACITY)) {
-      	ts.maxTxLen >>= 1;
+	ts.maxTxLen = 1;
       }
       _mm_pause();
     }
   } while (ts.successiveAborts < ts.maxAborts);
 
   ts.fallbackTaken++;
-  
+
   // Fallback to lock
   if (writeAccess) { 
     spinlock.lock(); 
@@ -80,18 +79,20 @@ TransactionalScope::~TransactionalScope() {
 
      if (ts.successiveAborts > 0) {
        ts.maxTxLen = 1;
-       ts.maxAborts = (ts.maxAborts / 2) + 1;
+       ts.maxAborts = 8;
     } else {
        ts.maxTxLen += 1;
        ts.maxAborts += 1;
      }
 
      ++ts.totalCommits;
-     ts.successiveAborts = 0;
+
   } else {
     spinlock.unlock();
-    ts.maxAborts = 1;
+    ts.maxTxLen = 1;
+    ts.maxAborts = 8;
  }
+  ts.successiveAborts = 0;
 }
 
 void TransactionalScope::printStats() {

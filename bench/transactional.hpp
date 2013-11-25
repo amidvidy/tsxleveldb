@@ -31,7 +31,7 @@ public:
   int successiveAborts = 0;
 
   /* The maximum number of aborts that can occur before the lock is acquired. */
-  int maxAborts = 4;
+  int maxAborts = 10;
 
   /* How many times the fallback was taken. */
   int fallbackTaken = 0;
