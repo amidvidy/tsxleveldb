@@ -4,13 +4,13 @@
 #include <map>
 #include <chrono>
 #include <ctime>
+
+#include "bench.hpp"
 #include "concurrent_counter.hpp"
 #include "transactional.hpp"
 #include "lock.hpp"
 
 using namespace bench;
-
-typedef std::chrono::high_resolution_clock timer;
 
 long hammerArray(counter::ConcurrentCounter *counter, int nthreads, int nwrites, bool isTx) {
   std::thread threads[nthreads];
@@ -54,11 +54,8 @@ long hammerArray(counter::ConcurrentCounter *counter, int nthreads, int nwrites,
   
 }
 
-enum Impl { Coarse, Fine, RTMAdaptiveCoarse, RTMAdaptiveFine, RTMNaive, NoSync };
-const char* ImplStr[] = { "Coarse", "Fine", "RTMAdaptiveCoarse", "RTMAdaptiveFine", "RTMNaive"};
-
 int main(void) {
-  std::size_t num_elements = 150;
+  std::size_t num_elements = 200;
 
   int nthreads = 8, nwrites = 1000000;
 
@@ -74,7 +71,7 @@ int main(void) {
 
   // run benchmarks on each array and print output
   for (auto& impl : impls) {
-    bool isRTM = (impl.first >= RTMAdaptiveCoarse) && (impl.first <= RTMNaive);
+    bool isRTM = (impl.first >= RTMAdaptiveCoarse) && (impl.first <= RTMAdaptiveFine);
     auto run_time = hammerArray(impl.second, nthreads, nwrites, isRTM);
     int total_recorded = impl.second->total();
     int total_expected = nthreads * nwrites;
@@ -92,6 +89,7 @@ int main(void) {
                      ((missing<0) ?
 		      (std::string("There were ") + std::to_string(-missing) + std::string(" missing writes!")) :
 		      (std::string("There were ") + std::to_string(missing) + std::string(" writes that should NOT have occured. This should never happen.")))) << std::endl;
+    delete impl.second;
   }
 
 
