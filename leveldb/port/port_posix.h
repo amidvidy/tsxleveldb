@@ -47,6 +47,10 @@
 #endif
 #include <stdint.h>
 #include <string>
+#include <atomic>
+#include <queue>
+#include <thread>
+#include <tbb/spin_mutex.h>
 #include "port/atomic_pointer.h"
 
 #ifndef PLATFORM_IS_LITTLE_ENDIAN
@@ -140,6 +144,21 @@ class CondVar {
   pthread_cond_t cv_;
   Mutex* mu_;
   // TransactionalScope xact_;
+};
+
+class TSXCondVar {
+ public:
+  explicit TSXCondVar(Mutex* mu);
+  ~TSXCondVar();
+  void PrepareWait();
+  void CompleteWait();
+  void Signal();
+  void SignalAll();
+ private:
+  static __thread long tcount_; 
+  std::queue<std::thread> waiters_;  
+  tbb::spin_mutex spinlock_;
+  std::atomic<long> counter_;
 };
 
 typedef pthread_once_t OnceType;

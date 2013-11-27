@@ -20,18 +20,24 @@ static void PthreadCall(const char* label, int result) {
   }
 }
 
-__thread threadstate_t Mutex::ts_ = {0, 0, 1, 0, 0, 0, 5, 0};
+__thread threadstate_t Mutex::ts_ = {0, 0, 1, 0, 0, 0, 1, 0};
 
 Mutex::Mutex() { PthreadCall("init mutex", pthread_mutex_init(&mu_, NULL)); }
 
 Mutex::~Mutex() { PthreadCall("destroy mutex", pthread_mutex_destroy(&mu_)); }
 
+/* Abort amounts, depending on contention. If this was less hacky, it would be an enum. */
+#define HIGH 1
+#define MEDIUM 2
+#define LOW 4
+#define NONE 8
+
 void Mutex::Lock() {
   //PthreadCall("lock", pthread_mutex_lock(&mu_)); 
   unsigned int xact_status;
-  
+  ts_.successiveAborts = 0;
   //s we are already executing transactionally, continue.
-  //if (_xtest()) return;
+  if (_xtest()) return;
 
   do {
     xact_status = _xbegin();
@@ -51,19 +57,20 @@ void Mutex::Lock() {
 
       // if we xaborted because the lock was held, acquire the lock
       if ((xact_status & _XABORT_EXPLICIT) && _XABORT_CODE(xact_status) == 0xFF) {
-	ts_.maxAborts = 1;
-	ts_.maxTxLen = 1;
+	ts_.maxAborts = HIGH;
+	//ts_.maxTxLen = 1;
 	break;
       }
 
       //if xabort:retry or xabort:conflict is set retry
       if (xact_status & (_XABORT_RETRY | _XABORT_CONFLICT)) {
-	ts_.maxTxLen = 1;
+	ts_.maxAborts = MEDIUM;
+	//ts_.maxTxLen = 1; // be more conservative with coalescing
       }
 
       // // if we used too much buffer space inside the transaction half the max transaction length
       if ((xact_status & _XABORT_CAPACITY)) {
-	ts_.maxTxLen = 1;
+	//ts_.maxTxLen = 1;
       }
       _mm_pause();
     }
@@ -75,18 +82,28 @@ void Mutex::Lock() {
 
 void Mutex::Unlock() {
    if (_xtest()) {
-     //if (ts_.curTxLen < ts_.maxTxLen) {
-     //++ts_.curTxLen;
-     //return;
-     //}
+     
+     if (ts_.curTxLen < ts_.maxTxLen) {
+       ++ts_.curTxLen;
+       return;
+     }
+
      _xend();
 
-     if (ts_.successiveAborts > 0) {
+     int sa = ts_.successiveAborts;
+     
+     if (sa == 0) {
+       ts_.maxTxLen++;
+       ts_.maxAborts = NONE;
+     } else if (sa <= 2) { 
+       // leave maxTxlen steady
+       ts_.maxAborts = LOW;
+     } else if (sa <= 4) {
+       ts_.maxTxLen--;
+       ts_.maxAborts = MEDIUM;
+     } else if (sa <= 8) {
        ts_.maxTxLen = 1;
-       ts_.maxAborts = 8;
-     } else {
-       ts_.maxTxLen += 1;
-       ts_.maxAborts += 1;
+       ts_.maxAborts = HIGH;
      }
 
      ++ts_.totalCommits;
@@ -94,9 +111,9 @@ void Mutex::Unlock() {
    } else {
      pthread_mutex_unlock(&mu_);
      ts_.maxTxLen = 1;
-     ts_.maxAborts = 8;
+     ts_.maxAborts = MEDIUM;
    }
-   ts_.successiveAborts = 0;
+
 }
 
 CondVar::CondVar(Mutex* mu)
@@ -107,6 +124,7 @@ CondVar::CondVar(Mutex* mu)
 CondVar::~CondVar() { PthreadCall("destroy cv", pthread_cond_destroy(&cv_)); }
 
 void CondVar::Wait() {
+  if (_xtest()) return;
   PthreadCall("wait", pthread_cond_wait(&cv_, &mu_->mu_));
 }
 
@@ -121,6 +139,20 @@ void CondVar::SignalAll() {
 void InitOnce(OnceType* once, void (*initializer)()) {
   PthreadCall("once", pthread_once(once, initializer));
 }
+
+__thread long TSXCondVar::tcount_ = 0L;
+
+void TSXCondVar::PrepareWait() {
+  tcount_ = counter_.load(std::memory_order_relaxed);
+}
+
+void TSXCondVar::CompleteWait() {
+  int result = 0;
+  
+  
+}
+
+
 
 }  // namespace port
 }  // namespace leveldb
